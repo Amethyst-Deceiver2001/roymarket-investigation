@@ -116,6 +116,21 @@ def main():
         assert "b-never" in sb.pull_queue(rows, cap=1), "an old miss is retried"
     sb.MISSES = orig
 
+    # A second run on the same day takes only what is left of each cap.
+    never2 = b.bfo_flags({"inn": "7700000004", "financials": []})
+    rows2 = {"generated": "2026-10-02", "rows": [
+        {"kind": "entity", "slug": f"c{n}", "inn": f"770000000{n}", "tier": "manufacturer", "flags": never2}
+        for n in range(5, 9)]}
+    assert sb.pull_queue(rows2, cap=3).count("--inn") == 3
+    assert sb.pull_queue(rows2, cap=3, used={"bfo": 2}).count("--inn") == 1, "one slot left"
+    q = sb.pull_queue(rows2, cap=3, used={"bfo": 3})
+    assert "--inn" not in q and "caps are used up" in q, "cap used: no pull command, and it says why"
+    scr = {"generated": "2026-10-02", "rows": [
+        {"kind": "person", "slug": f"p{n}", "tier": "x", "flags": [{"kind": "screen", "code": "screen_never",
+         "text": "never", "due": ["opensanctions"]}]} for n in range(6)]}
+    assert "screen_opensanctions" not in sb.pull_queue(scr, used={"opensanctions": 4}), "screen cap used up"
+    assert "screen_opensanctions" in sb.pull_queue(scr, used={"opensanctions": 3}), "one screen left"
+
     # Every flag kind is a declared one.
     assert {f["kind"] for row in board["rows"] for f in row["flags"]} <= set(sb.KINDS)
     print("ok: status_board fixtures pass")

@@ -76,6 +76,22 @@ def tracked_changes():
     return [l for l in git("status", "--porcelain").stdout.splitlines() if not l.startswith("??")]
 
 
+# Files the round itself regenerates or appends to. A manual pull or ingest leaves these modified, and the
+# round commits them with its own outputs, so they must not block it; a hand-held file (corrections_*,
+# products.json, handovers.json, programs.json, ...) or any code file still does.
+GENERATED = {"data/registry/" + n for n in (
+    "_pull_misses.json", "source_archives.json", "_source_ids.json", "_source_content_cache.json",
+    "_bfo_financials.json", "_scaffold_leads.json", "entities.json", "people.json", "sources.json",
+    "quotes.json", "open_questions.json", "relationship_graph.json", "relationship_graph_views.json")}
+# A step in this chain reads what the one before wrote: after a failure the rest would run on stale input.
+INGEST = ("inventory_sources.py", "scan_sources.py", "parse_bfo_financials.py", "parse_egrul_vypiska.py",
+          "extract_registry.py", "build_relationship_graph.py", "check_registry.py")
+
+
+def hand_changes():
+    return [l for l in tracked_changes() if l[3:].strip() not in GENERATED and not l[3:].startswith("data/watch/")]
+
+
 def publish(day, summary):
     """Commit the round's mechanical outputs and push; returns a one-line outcome."""
     if any("corrections_" in l for l in tracked_changes()):
@@ -108,15 +124,16 @@ def main():
 
     blocked = None
     if a.publish and not a.dry_run:
-        if tracked_changes():
-            blocked = "not published: the working tree had uncommitted changes before the round"
+        if hand_changes():
+            blocked = ("not published: the working tree had uncommitted changes before the round ("
+                       + ", ".join(l[3:].strip() for l in hand_changes()[:4]) + ")")
         elif git("pull", "--rebase", "-q").returncode:
             blocked = "not published: could not update from origin"
 
     today = date.today()
     day = today.isoformat()
     before = board_now(today)
-    queue = [l for l in sb.pull_queue(before, a.cap).splitlines() if l.startswith("python3 ")]
+    queue = [l for l in sb.pull_queue(before, a.cap, sb.done_today(today)).splitlines() if l.startswith("python3 ")]
     has_pulls = any("_pull.py" in l or "/screen_" in l for l in queue)  # pulls or capped re-screens
     steps = queue if has_pulls and not a.skip_pulls else []
     if not any("first_reading.py export" in l for l in steps):  # the queue ends with one when it pulled
@@ -140,9 +157,16 @@ def main():
 
     DAILY.mkdir(parents=True, exist_ok=True)
     log, failed = [], []
+    ingest_broken = False
     for cmd in steps:
+        is_ingest = any(x in cmd for x in INGEST)
+        if is_ingest and ingest_broken:
+            print(f"\n$ {cmd}\nskipped: an earlier ingest step failed", flush=True)
+            log.append(f"$ {cmd}\n(skipped: an earlier ingest step failed)\n")
+            continue
         if run(cmd, log):
             failed.append(cmd.split()[1])
+            ingest_broken = ingest_broken or is_ingest
 
     reading = INBOX / day / "reading.md"
     if (INBOX / day / "manifest.json").exists():
