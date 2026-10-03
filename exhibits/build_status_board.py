@@ -76,6 +76,16 @@ PAGE_CSS = r"""
 .more { justify-self: start; font: 600 11px/1 var(--font-mono); letter-spacing: .05em; text-transform: uppercase;
   padding: 9px 12px; border: 1px solid var(--ink); background: var(--panel); color: var(--ink); border-radius: 3px; cursor: pointer; }
 .count { font-size: var(--t-note); color: var(--ink-3); margin: 0; }
+.cp { font: 600 10px/1 var(--font-mono); letter-spacing: .05em; text-transform: uppercase; padding: 4px 6px; margin-left: 4px;
+  border: 1px solid var(--ink-3); background: var(--panel); color: var(--ink); border-radius: 3px; cursor: pointer; white-space: nowrap; }
+.cp:hover { border-color: var(--ink); }
+.cp[data-done] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.queue { display: grid; gap: var(--space-2); }
+.qi { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; align-items: start; padding: 10px 12px;
+  background: var(--panel); border: 1px solid var(--rule); border-radius: var(--radius); }
+.qi .ql { font-size: var(--t-note); color: var(--ink-2); overflow-wrap: anywhere; }
+.qi pre { grid-column: 1; margin: 0; font: 400 12px/1.45 var(--font-mono); white-space: pre-wrap; overflow-wrap: anywhere; color: var(--ink); }
+.qi .cp { grid-column: 2; grid-row: 1 / span 2; align-self: center; padding: 8px 10px; }
 .how { font-size: var(--t-note); color: var(--ink-2); max-width: var(--measure); }
 .how code { font: 400 12px/1.4 var(--font-mono); background: var(--panel-2); padding: 1px 4px; border-radius: 2px; overflow-wrap: anywhere; }
 @media (max-width: 760px) {
@@ -98,8 +108,22 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const ru = d => d ? d.slice(8,10)+"."+d.slice(5,7)+"."+d.slice(0,4) : "";
 const age = d => d ? Math.round((new Date(B.generated) - new Date(d))/86400000) : null;
 
+// Copy a command to the clipboard (inside the click, so the browser allows it); select-text fallback.
+async function copyText(btn, text) {
+  let ok = false;
+  try { await navigator.clipboard.writeText(text); ok = true; } catch(e) {}
+  if (!ok) {
+    const ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.select(); try { ok = document.execCommand('copy'); } catch(e) {} ta.remove();
+  }
+  const was = btn.textContent; btn.textContent = ok ? "Copied" : "Copy failed"; btn.dataset.done = "";
+  setTimeout(() => { btn.textContent = was; delete btn.dataset.done; }, 1600);
+}
+const CMDS = [];
+const cpBtn = (cmd, label) => { CMDS.push(cmd); return `<button class="cp" type="button" data-c="${CMDS.length-1}" title="${esc(cmd)}">${label||"Copy cmd"}</button>`; };
 function chip(f) {
   let t = esc(f.text);
+  if (f.cmds) t += f.cmds.map(c => cpBtn(c.cmd, c.label)).join("");
   if (f.url) t += ` <a href="${esc(f.url)}" target="_blank" rel="noopener">post</a>`;
   if (f.code === "development" && f.archived) t += ` <span class="k">archived, not closed</span>`;
   return `<span class="chip ${f.kind}"><span class="k"><span class="mk" aria-hidden="true">${MARK[f.kind]}</span>${f.kind}</span><span>${t}</span></span>`;
@@ -145,6 +169,7 @@ const score = r => r.flags.reduce((s,f) => s + W[f.kind], 0);
 function render() {
   const rows = B.rows.filter(match).sort((a,b) => score(b)-score(a) || TIERS.indexOf(a.tier)-TIERS.indexOf(b.tier) || String(a.name).localeCompare(String(b.name),"ru"));
   const shown = rows.slice(0, st.shown);
+  CMDS.length = QN;
   document.getElementById('rows').innerHTML = `<div class="row hdr"><div>Record</div><div>Last pulls</div><div>Flags</div></div>` + shown.map(rowHTML).join("");
   document.getElementById('count').textContent = `${rows.length} record${rows.length===1?"":"s"} match` + (rows.length > shown.length ? `, showing ${shown.length}` : "");
   const m = document.getElementById('more'); m.hidden = rows.length <= shown.length;
@@ -153,6 +178,11 @@ function render() {
   document.getElementById('flagged').checked = st.flaggedOnly;
   document.getElementById('tier').value = st.tier;
 }
+// Today's capped queue, one copy button per command.
+const q = document.getElementById('queue');
+q.innerHTML = (B.queue||[]).map(it => `<div class="qi"><span class="ql">${esc(it.label)}</span><pre>${esc(it.cmd)}</pre>${cpBtn(it.cmd, "Copy")}</div>`).join("") || `<p class="count">Nothing queued today.</p>`;
+const QN = CMDS.length;
+document.addEventListener('click', e => { const b = e.target.closest('.cp'); if (!b) return; copyText(b, CMDS[+b.dataset.c]); });
 // Summary tiles: records carrying at least one flag of each kind.
 const strip = document.getElementById('strip');
 strip.innerHTML = Object.entries(B.kinds).map(([k,l]) => {
@@ -212,11 +242,58 @@ def dev_html(board):
     return "\n".join(out)
 
 
+FLAG_CMDS = {
+    "egrul_missing": ("ЕГРЮЛ", "python3 scripts/egrul_vypiska_pull.py --inn {inn}"),
+    "egrul_stale": ("ЕГРЮЛ", "python3 scripts/egrul_vypiska_pull.py --inn {inn}"),
+    "bfo_missing": ("БФО", "python3 scripts/bfo_pull.py --inn {inn}"),
+    "bfo_behind": ("БФО", "python3 scripts/bfo_pull.py --inn {inn}"),
+}
+
+
+def attach_commands(board):
+    """Give each pullable flag the exact command for that one record, and the page today's capped queue.
+
+    The page only copies these to the clipboard; nothing runs from it. The
+    commands are the same ones status_board.py --pull-queue prints, for one
+    record at a time (an OpenSanctions screen of one uses 1 of its monthly quota).
+    """
+    board = json.loads(json.dumps(board))
+    for r in board["rows"]:
+        for f in r["flags"]:
+            cmds = []
+            if f["code"] in FLAG_CMDS and r.get("inn"):
+                label, cmd = FLAG_CMDS[f["code"]]
+                cmds.append({"label": "Copy " + label, "cmd": cmd.format(inn=r["inn"])})
+            elif f["code"] in ("screen_never", "screen_stale"):
+                for key in f.get("due") or []:
+                    if key in sb.SCREEN_COMMANDS:
+                        cmds.append({"label": "Copy " + key,
+                                     "cmd": sb.SCREEN_COMMANDS[key].format(n=1, slugs=r["slug"])})
+            if cmds:
+                f["cmds"] = cmds
+    queue, label, chain = [], "", []
+    for line in sb.pull_queue(board).splitlines():
+        if line.startswith("#"):
+            label = line.lstrip("# ")
+        elif any(k in line for k in ("egrul_vypiska_pull", "bfo_pull", "screen_")):
+            queue.append({"label": label, "cmd": line})
+        else:
+            chain.append(line)
+    if queue:
+        queue.append({"label": "Then index, parse and check what arrived, and send the text for first reading.",
+                      "cmd": "\n".join(chain)})
+        queue.append({"label": "Or run the whole round in one go (queue, pulls, ingest, export, report).",
+                      "cmd": "python3 scripts/daily_mac.py"})
+    board["queue"] = queue
+    return board
+
+
 def sb_ru(d):
     return f"{d[8:10]}.{d[5:7]}.{d[:4]}" if d and len(d) >= 10 else (d or "")
 
 
 def build(board):
+    board = attach_commands(board)
     th = board["thresholds"]
     notes = "".join(f"<br>{html.escape(n)}" for n in board["notes"])
     data = json.dumps(board, ensure_ascii=False).replace("</", "<\\/")
@@ -234,6 +311,11 @@ def build(board):
 <section aria-labelledby="h-sum">
   <h2 class="rm-h2" id="h-sum">Records needing work</h2>
   <div class="sb-strip" id="strip"></div>
+</section>
+<section aria-labelledby="h-q">
+  <h2 class="rm-h2" id="h-q">Today's pull queue</h2>
+  <p class="count">The capped commands <code>status_board.py --pull-queue</code> prints for today. Copy one and paste it to the Mac session; nothing runs from this page. A pulled document is read before any fact from it enters the registry, and a screen hit is a lead to read. Pullable flags below carry their own one-record copy button.</p>
+  <div class="queue" id="queue"></div>
 </section>
 <section aria-labelledby="h-dev">
   <h2 class="rm-h2" id="h-dev">Behind on developments</h2>
