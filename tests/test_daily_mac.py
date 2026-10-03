@@ -4,7 +4,9 @@ block --publish; a hand-held registry file or a script still does.
 
     python3 tests/test_daily_mac.py
 """
+import json
 import sys
+import tempfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
@@ -23,6 +25,15 @@ def main():
         assert len(dm.hand_changes()) == 2, "a hand-held registry file and a script block"
     finally:
         dm.tracked_changes = orig
+    # the board file: first write has nothing to compare with; the second lists what changed since the first
+    row = lambda flags: {"slug": "ooo-x", "flags": flags}
+    flag = {"code": "bfo_missing", "kind": "pull", "text": "no БФО on file"}
+    with tempfile.TemporaryDirectory() as d:
+        path = Path(d) / "status" / "board.json"
+        assert "no earlier" in dm.publish_board({"generated": "2026-10-03", "rows": [row([flag])]}, path)
+        out = dm.publish_board({"generated": "2026-10-04", "rows": [row([])]}, path)
+        assert "1 cleared flag" in out and "0 new flag" in out, out
+        assert json.loads(path.read_text(encoding="utf-8"))["generated"] == "2026-10-04"
     assert "extract_registry.py" in dm.INGEST and "scan_sources.py" in dm.INGEST
     print("ok: daily_mac fixtures pass")
 

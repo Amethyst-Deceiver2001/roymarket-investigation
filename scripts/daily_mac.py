@@ -15,7 +15,8 @@ Chains tools that already exist, in the order CLAUDE.md gives them:
                           `pull-inbox` branch unless --no-push, and locally),
                           then `read` them into a worksheet beside the registry
   4. archive_sources.py   only with --archive N: one Wayback batch of N cited URLs
-  5. status_board.py      board after, and the flags new or cleared today
+  5. status_board.py      board after, and the flags new or cleared today; the board is
+                          written to data/watch/status/board.json for the cloud status step
 
 The day's report goes to data/watch/daily/<date>.md, which the cloud routines
 read through git; the texts stay in gitignored data/sources/_inbox/. With
@@ -49,7 +50,21 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import status_board as sb  # noqa: E402
 
 DAILY = ROOT / "data" / "watch" / "daily"
+STATUS = ROOT / "data" / "watch" / "status"
 INBOX = ROOT / "data" / "sources" / "_inbox"
+
+
+def publish_board(after, path=None):
+    """Write the day's board where the cloud status routine reads it; return what changed since the file it replaced.
+
+    The board is built here once, on the Mac that holds the data, so the cloud step only builds the page from
+    board.json and publishes it (issue #27, 03.10.2026). The HTML is not committed (.gitignore).
+    """
+    path = path or STATUS / "board.json"
+    prev = json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(after, ensure_ascii=False, indent=1), encoding="utf-8")
+    return sb.diff(prev, after) if prev else "no earlier board.json to compare with"
 
 
 def board_now(today):
@@ -175,6 +190,7 @@ def main():
 
     after = board_now(today)
     changes = sb.diff(before, after)
+    since_published = publish_board(after)
     pulled = sum(1 for l in log if "_pull.py" in l.splitlines()[0])
     screened = sum(1 for l in log if "/screen_" in l.splitlines()[0])
     summary = f"{pulled} pull step(s), {screened} screen step(s), {len(failed)} failed"
@@ -183,7 +199,9 @@ def main():
               "Pulls: " + ("skipped" if a.skip_pulls else "ran" if has_pulls else "nothing flagged"),
               "First-reading worksheet: " + (str(reading.relative_to(ROOT)) if reading.exists() else "none (no new pulls)"),
               "Failed steps: " + (", ".join(failed) or "none"), "",
-              "```", changes, "```", "", "## Log", "", *log]
+              "```", changes, "```", "",
+              "Board for the cloud status step: data/watch/status/board.json", "```", since_published, "```", "",
+              "## Log", "", *log]
     out = DAILY / f"{day}.md"
     out.write_text("\n".join(report), encoding="utf-8")
     print("\n" + changes)
