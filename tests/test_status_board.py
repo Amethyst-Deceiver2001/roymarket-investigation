@@ -105,6 +105,17 @@ def main():
         for s, i, fl in (("a-old", "7700000002", old), ("b-never", "7700000003", never))]}
     assert "b-never" in sb.pull_queue(rows, cap=1) and "a-old" not in sb.pull_queue(rows, cap=1)
 
+    # A registry that answered "not found" is not asked again for MISS_RETRY_DAYS.
+    import json as _json, tempfile as _tf
+    orig = sb.MISSES
+    with _tf.TemporaryDirectory() as d:
+        sb.MISSES = Path(d) / "m.json"
+        sb.MISSES.write_text(_json.dumps({"bfo": {"7700000003": "2026-10-01"}}))
+        assert "b-never" not in sb.pull_queue(rows, cap=1), "a fresh miss is skipped"
+        sb.MISSES.write_text(_json.dumps({"bfo": {"7700000003": "2026-08-01"}}))
+        assert "b-never" in sb.pull_queue(rows, cap=1), "an old miss is retried"
+    sb.MISSES = orig
+
     # Every flag kind is a declared one.
     assert {f["kind"] for row in board["rows"] for f in row["flags"]} <= set(sb.KINDS)
     print("ok: status_board fixtures pass")

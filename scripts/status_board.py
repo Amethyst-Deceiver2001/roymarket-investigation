@@ -52,6 +52,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 REG = ROOT / "data" / "registry"
 SHARED_WATCH = Path("/mnt/project-files/watch")
+# Shared state lives in the repo since 03.10.2026 (data/watch/), so the Mac and the
+# cloud sessions read and write the same files through git; the cloud-only folder is
+# a fallback until its files are migrated.
+REPO_WATCH = ROOT / "data" / "watch"
+WATCH_DIRS = (REPO_WATCH, SHARED_WATCH)
+# A registry that answered "not found" for an ИНН is not asked again for this many days.
+MISS_RETRY_DAYS = 30
+MISSES = REG / "_pull_misses.json"
 
 # Thresholds in days. Sanctions lists move weekly; company register data monthly.
 EGRUL_STALE_DAYS = 45
@@ -230,7 +238,8 @@ class Board:
         # Pre-sorted sanctions hits (the "Pre-sort sanctions hits" thread), newest file wins.
         # A proposed verdict only labels the flag; the flag stays until a sanctions_review lands.
         self.presort = {}
-        pre = sorted(SHARED_WATCH.glob("sanctions/presort_*.json")) if SHARED_WATCH.exists() else []
+        pre = sorted((f for d in WATCH_DIRS if d.exists() for f in d.glob("sanctions/presort_*.json")),
+                     key=lambda f: f.name)
         if pre:
             for rec in json.loads(pre[-1].read_text(encoding="utf-8")).get("records", []):
                 self.presort[rec.get("slug")] = rec
@@ -533,8 +542,26 @@ def presort_note(rec):
 
 
 def default_path(name):
-    p = SHARED_WATCH / name
-    return p if p.exists() else None
+    for d in WATCH_DIRS:
+        if (d / name).exists():
+            return d / name
+    return None
+
+
+def recent_misses(today, registry):
+    """ИНН a registry reported as not found within MISS_RETRY_DAYS (scripts write _pull_misses.json)."""
+    try:
+        data = json.loads(MISSES.read_text(encoding="utf-8")).get(registry, {})
+    except (OSError, ValueError):
+        return set()
+    out = set()
+    for inn, d in data.items():
+        try:
+            if (today - date.fromisoformat(d)).days < MISS_RETRY_DAYS:
+                out.add(inn)
+        except ValueError:
+            pass
+    return out
 
 
 def summary(board):
@@ -580,15 +607,19 @@ def pull_queue(board, cap=PULL_CAP):
     rank = {t: i for i, t in enumerate(TIER_ORDER)}
     ents = sorted((r for r in board["rows"] if r["kind"] == "entity" and r.get("inn")),
                   key=lambda r: (rank.get(r["tier"], 99), r["slug"]))
-    def pick(codes):
+    gen = date.fromisoformat(board["generated"]) if board.get("generated") else date.today()
+    missed = {"bfo": recent_misses(gen, "bfo"), "egrul": recent_misses(gen, "egrul")}
+
+    def pick(codes, registry=None):
         # Records whose register was already asked (a filing on disk, just not the
         # latest year) go after those never pulled, so a company that has not filed
         # yet cannot hold the day's slots; the tier order holds within each group.
-        hits = [r for r in ents if any(f["code"] in codes for f in r["flags"])]
+        hits = [r for r in ents if any(f["code"] in codes for f in r["flags"])
+                and r["inn"] not in missed.get(registry, ())]
         asked = lambda r: any(f.get("on_disk") for f in r["flags"] if f["code"] in codes)
         return sorted(hits, key=asked)[:cap]
-    egrul = pick({"egrul_missing", "egrul_stale"})
-    bfo = pick({"bfo_missing", "bfo_behind"})
+    egrul = pick({"egrul_missing", "egrul_stale"}, "egrul")
+    bfo = pick({"bfo_missing", "bfo_behind"}, "bfo")
     screens = screen_queue(board, rank)
     lines = [f"# Pull queue for {board['generated']} from scripts/status_board.py (cap {cap} per registry).",
              "# Live lookups against egrul.nalog.ru / bo.nalog.gov.ru: run from the repo root on a machine that reaches them."]

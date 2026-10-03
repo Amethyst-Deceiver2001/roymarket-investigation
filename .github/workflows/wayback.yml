@@ -1,0 +1,58 @@
+# Nightly Wayback batch for cited sources (scripts/archive_sources.py).
+# Runs on GitHub's runners: the cloud sessions' network blocks web.archive.org, and
+# a Mac session's background jobs stop at two hours. Only public URLs that
+# sources.json already cites are sent; no file from data/sources/ leaves the Mac.
+# Keys: set repo secrets WAYBACK_S3_ACCESS / WAYBACK_S3_SECRET (free archive.org
+# account) for the faster keyed endpoint; without them the anonymous one is used.
+# Writes one thing, data/registry/source_archives.json, committed to main.
+name: wayback
+
+on:
+  schedule:
+    - cron: "23 1 * * *"   # daily 01:23 UTC
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "URLs per batch"
+        default: "400"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wayback
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Archive a batch (tiers 1-2)
+        env:
+          WAYBACK_S3_ACCESS: ${{ secrets.WAYBACK_S3_ACCESS }}
+          WAYBACK_S3_SECRET: ${{ secrets.WAYBACK_S3_SECRET }}
+          LIMIT: ${{ github.event.inputs.limit || '400' }}
+        run: |
+          case "$LIMIT" in ''|*[!0-9]*) echo "limit must be a number"; exit 1;; esac
+          timeout 315m python3 -u scripts/archive_sources.py run --tier 1,2 --limit "$LIMIT" \
+            | tee log.txt || echo "batch ended early (time limit or error); captures so far are kept"
+          python3 scripts/archive_sources.py report | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit captures to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/registry/source_archives.json
+          git diff --cached --quiet && { echo "no new captures"; exit 0; }
+          git commit -qm "Wayback captures of cited sources ($(date -u +%F), nightly)"
+          for i in 1 2 3; do
+            git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0
+            git rebase --abort 2>/dev/null; sleep 20
+          done
+          echo "push failed after 3 tries" && exit 1

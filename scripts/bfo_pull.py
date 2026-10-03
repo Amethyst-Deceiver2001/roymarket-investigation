@@ -33,6 +33,7 @@ import re
 import sys
 import time
 import unicodedata
+from datetime import date
 from pathlib import Path
 
 import requests
@@ -123,6 +124,17 @@ def download_filing(correction_id: int, out_path: Path) -> int:
     return len(r.content)
 
 
+def record_miss(registry: str, inn: str) -> None:
+    """Note in data/registry/_pull_misses.json that a registry had no record for this ИНН today."""
+    path = ENTITIES.parent / "_pull_misses.json"
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        data = {}
+    data.setdefault(registry, {})[inn] = date.today().isoformat()
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--inn", action="append", help="ИНН (repeatable)")
@@ -160,6 +172,7 @@ def main():
             continue
         if not org:
             print(f"[{inn}] not found in bo.nalog.gov.ru search index", file=sys.stderr)
+            record_miss("bfo", inn)  # status_board.py waits 30 days before queueing it again
             continue
         try:
             filings = list_filings(org["id"])

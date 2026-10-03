@@ -17,9 +17,13 @@ Chains tools that already exist, in the order CLAUDE.md gives them:
   4. archive_sources.py   only with --archive N: one Wayback batch of N cited URLs
   5. status_board.py      board after, and the flags new or cleared today
 
-What it writes stays in gitignored data/sources/_daily/ and data/sources/_inbox/.
-Registry files that extract_registry.py regenerates are left uncommitted for
-review. The worksheet is a proposal: a fact enters the registry only through
+The day's report goes to data/watch/daily/<date>.md, which the cloud routines
+read through git; the texts stay in gitignored data/sources/_inbox/. With
+--publish (what the scheduled job uses) the round starts from the latest main
+and ends by committing and pushing the report and the files the ingest chain
+regenerates (data/registry/, data/watch/). It refuses to commit when the tree
+had tracked changes before the run or when a corrections_*.json file changed:
+a mechanical round never writes a hand-made fact. The worksheet is a proposal: a fact enters the registry only through
 corrections_*.json after someone has read the document (CLAUDE.md hard rule).
 
 The pull queue is the user's standing go-ahead (capped daily batch). A
@@ -30,6 +34,7 @@ Usage:
   python3 scripts/daily_mac.py                   # pulls, ingest, first reading, diff
   python3 scripts/daily_mac.py --archive 150     # plus one Wayback batch
   python3 scripts/daily_mac.py --skip-pulls      # re-read and re-board only
+  python3 scripts/daily_mac.py --publish         # scheduled: pull main, run, commit, push
 """
 import argparse
 import json
@@ -43,7 +48,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import status_board as sb  # noqa: E402
 
-DAILY = ROOT / "data" / "sources" / "_daily"
+DAILY = ROOT / "data" / "watch" / "daily"
 INBOX = ROOT / "data" / "sources" / "_inbox"
 
 
@@ -63,14 +68,50 @@ def run(cmd, log):
     return r.returncode
 
 
+def git(*a):
+    return subprocess.run(["git", *a], cwd=ROOT, capture_output=True, text=True)
+
+
+def tracked_changes():
+    return [l for l in git("status", "--porcelain").stdout.splitlines() if not l.startswith("??")]
+
+
+def publish(day, summary):
+    """Commit the round's mechanical outputs and push; returns a one-line outcome."""
+    if any("corrections_" in l for l in tracked_changes()):
+        return "not published: a corrections_*.json file changed during the round"
+    git("add", "data/registry", "data/watch")
+    if not git("diff", "--cached", "--quiet").returncode:
+        return "nothing to commit"
+    msg = (f"Daily round {day} (scheduled): {summary}\n\nMechanical outputs only: pulled files catalogued, "
+           "screens recorded, report in data/watch/daily/. Nothing here is a read fact.\n\n"
+           "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>")
+    if git("commit", "-q", "-m", msg).returncode:
+        return "commit failed"
+    for _ in range(3):
+        if not git("pull", "--rebase", "-q").returncode and not git("push", "-q").returncode:
+            return "published " + git("rev-parse", "--short", "HEAD").stdout.strip()
+        git("rebase", "--abort")
+    return "committed locally, push failed (rebase conflict?): resolve by hand"
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dry-run", action="store_true", help="print the plan, run nothing")
     ap.add_argument("--cap", type=int, default=sb.PULL_CAP, help="pulls per registry (default %(default)s)")
     ap.add_argument("--skip-pulls", action="store_true")
     ap.add_argument("--no-push", action="store_true", help="do not push texts to pull-inbox")
-    ap.add_argument("--archive", type=int, default=0, metavar="N", help="Wayback batch size (default: off)")
+    ap.add_argument("--archive", type=int, default=0, metavar="N", help="Wayback batch size (default: off; "
+                    "the daily Wayback batch runs in GitHub Actions, .github/workflows/wayback.yml)")
+    ap.add_argument("--publish", action="store_true", help="start from latest main, then commit and push the outputs")
     a = ap.parse_args()
+
+    blocked = None
+    if a.publish and not a.dry_run:
+        if tracked_changes():
+            blocked = "not published: the working tree had uncommitted changes before the round"
+        elif git("pull", "--rebase", "-q").returncode:
+            blocked = "not published: could not update from origin"
 
     today = date.today()
     day = today.isoformat()
@@ -104,7 +145,11 @@ def main():
 
     after = board_now(today)
     changes = sb.diff(before, after)
+    pulled = sum(1 for l in log if "_pull.py" in l.splitlines()[0])
+    screened = sum(1 for l in log if "/screen_" in l.splitlines()[0])
+    summary = f"{pulled} pull step(s), {screened} screen step(s), {len(failed)} failed"
     report = [f"# Daily round {day}", "",
+              "Summary: " + summary,
               "Pulls: " + ("skipped" if a.skip_pulls else "ran" if has_pulls else "nothing flagged"),
               "First-reading worksheet: " + (str(reading.relative_to(ROOT)) if reading.exists() else "none (no new pulls)"),
               "Failed steps: " + (", ".join(failed) or "none"), "",
@@ -113,6 +158,12 @@ def main():
     out.write_text("\n".join(report), encoding="utf-8")
     print("\n" + changes)
     print(f"\nwrote {out.relative_to(ROOT)}; failed steps: {len(failed)}")
+    if a.publish:
+        outcome = blocked or publish(day, summary)
+        print(outcome)
+        if blocked or not outcome.startswith(("published", "nothing")):
+            with out.open("a", encoding="utf-8") as f:
+                f.write(f"\n\nPublish: {outcome}\n")
     return 1 if failed else 0
 
 

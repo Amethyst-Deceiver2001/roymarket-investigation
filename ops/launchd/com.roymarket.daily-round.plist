@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Daily round at 09:15 local time. Install: cp to ~/Library/LaunchAgents/ and
+     launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.roymarket.daily-round.plist
+     Remove: launchctl bootout gui/$(id -u)/com.roymarket.daily-round
+     A run missed while the Mac sleeps starts on wake. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.roymarket.daily-round</string>
+  <key>ProgramArguments</key>
+  <array><string>/Users/ak/Downloads/roymarket-investigation/ops/run_daily_round.sh</string></array>
+  <key>StartCalendarInterval</key>
+  <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>15</integer></dict>
+  <key>StandardOutPath</key><string>/Users/ak/Library/Logs/roymarket-daily-round.log</string>
+  <key>StandardErrorPath</key><string>/Users/ak/Library/Logs/roymarket-daily-round.log</string>
+  <key>ProcessType</key><string>Background</string>
+</dict>
+</plist>

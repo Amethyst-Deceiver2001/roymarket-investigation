@@ -269,7 +269,7 @@ Decisions (user, 2026-10-02):
 - **Dossier draft:** unregistered facts in `notes/dossier_draft.html` are a
   migration backlog, never a page.
 
-### D. Screening and live jobs: who runs what (rewritten 2026-10-02)
+### D. Screening and live jobs: who runs what (rewritten 2026-10-02; scheduling 03.10.2026, see CLAUDE.md "Coordination")
 
 Mechanical upkeep now goes through the tools merged on 02.10.2026 (PRs #3–#6);
 rules in CLAUDE.md. A tool's output is a work item or a document to read, never
@@ -278,11 +278,11 @@ a registry fact.
 | Job | Tool | Where and who |
 |---|---|---|
 | What a record lacks or has let go stale | `status_board.py` (+ `exhibits/build_status_board.py`, private artifact AU3y9UL5M4i48UJ4BzrXSj) | anywhere, local |
-| The whole daily round in one command | `daily_mac.py` (`--dry-run`, `--archive N`) | the user's Mac; report in `data/sources/_daily/` |
+| The whole daily round in one command | `daily_mac.py --publish` via `ops/run_daily_round.sh` | the user's Mac, launchd at 09:15 local (03.10.2026); commits its outputs and `data/watch/daily/<date>.md` |
 | Missing/stale ЕГРЮЛ, ЕГРИП, БФО; missing/stale OpenSanctions, ГУР, Aleph screens | `status_board.py --pull-queue` (8 + 8 a day, top tiers first; re-screens 4 OpenSanctions + 8 ГУР + 8 Aleph a day; ingest steps incl. the graph rebuild printed after) | the user's Mac; the queue is the user's standing go-ahead, run as printed |
 | First reading of what arrived | `first_reading.py export --push` (Mac; `--local-dir data/sources/_inbox` also writes the texts locally so `read` runs the same day), then `read` | worksheet for a human; never merged, never applied |
 | Sanctions lists by ИНН/ОГРН | `sanctions_watch.py` | GitHub Actions, Mondays; an issue opens on change; state on `watch/sanctions` |
-| Public copies of cited pages | `archive_sources.py run --limit 150` | the user's Mac, a batch at a time; Telegram via per-channel lookup and preview pages (03.10.2026) |
+| Public copies of cited pages | `archive_sources.py run` | GitHub Actions `wayback.yml`, nightly (03.10.2026); Telegram via per-channel lookup and preview pages |
 | Timestamped fingerprints of every source file | `timestamp_sources.py build && … stamp` | the Mac, after new sources; first run 03.10.2026 (8,935 files, FreeTSA + DigiCert; 121 files differ from their catalogued hash, listed) |
 | Tests, registry check, tag balance | `.github/workflows/checks.yml` | every push to main and every PR |
 
