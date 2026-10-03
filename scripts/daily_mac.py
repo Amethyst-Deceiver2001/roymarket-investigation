@@ -126,6 +126,12 @@ def main():
         steps = [l.replace(" --push", "") if "first_reading.py export" in l else l for l in steps]
     if a.archive:
         steps.append(f"python3 scripts/archive_sources.py run --limit {a.archive}")
+    if (ROOT / "data" / "sources" / "_media_triage" / "files").exists():  # after a media download: local only
+        steps.append("python3 scripts/media_triage.py process")
+        venv_py = Path.home() / ".venvs" / "roymarket-media" / "bin" / "python"
+        if venv_py.exists():  # CLIP ranking needs open_clip, which lives in that venv, not in Homebrew's Python
+            steps.append(f"{venv_py} scripts/media_triage.py rank")
+        steps.append("python3 scripts/media_triage.py sheets")
 
     if a.dry_run:
         print("\n".join(steps))
