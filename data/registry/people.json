@@ -20753,6 +20753,19 @@
       "s7428 -- ООО «ИОНОС»'s own full signed ЕГРЮЛ выписка, pulled directly 2026-09-14.",
       "s7429 -- EU Council Decision (CFSP) 2026/1364, 15.6.2026, entry 801, confirming the entity's sanctioned status and the «Аляска»/«Алёша» connection."
     ],
+    "opensanctions_matches": [
+      {
+        "match_id": "ru-inn-616899150213",
+        "caption": "АНТОН АЛЕКСАНДРОВИЧ ИОНОВ",
+        "schema": "Person",
+        "score": 1.0,
+        "topics": [
+          "sanction.linked"
+        ],
+        "source_urls": []
+      }
+    ],
+    "opensanctions_screened_at": "2026-10-03",
     "egrip_hits": [
       {
         "ogrnip": "324619600000758",
@@ -49808,6 +49821,8 @@
     "_corrected": [
       "2026-09-08: found via ООО «Открытое небо»'s own EGRUL выписка (s7355), surfaced from a lead-mining pass over @projectArchangel."
     ],
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-10-03",
     "aleph_matches": [
       {
         "note": "2 results, both from Russian Unified State Register of Legal Entities (EGRUL) collection (itsoft.ru mirror) -- generic EGRUL-derived entries only, no sanctions/PEP dataset.",
@@ -49982,7 +49997,18 @@
     "_raw": {},
     "_corrected": [
       "2026-09-20: added as registered head of fond-sarmat (affiliated-organisation principal under the PII policy)."
-    ]
+    ],
+    "opensanctions_matches": [
+      {
+        "match_id": "ru-inn-502717315675",
+        "caption": "МАРАТ ДЖАУДАТОВИЧ ГАМИРУЛЛИН",
+        "schema": "Person",
+        "score": 1.0,
+        "topics": [],
+        "source_urls": []
+      }
+    ],
+    "opensanctions_screened_at": "2026-10-03"
   },
   {
     "slug": "eskov-nikolay-leonidovich",
@@ -50108,7 +50134,9 @@
     "_raw": {},
     "_corrected": [
       "2026-09-20: added as head of the institute issuing Архангел's credentials (affiliated-organisation principal under the PII policy)."
-    ]
+    ],
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-10-03"
   },
   {
     "slug": "pankratov-andrey-aleksandrovich",
