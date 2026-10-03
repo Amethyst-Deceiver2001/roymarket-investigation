@@ -334,6 +334,14 @@
             "note": "OpenSanctions topics: role.pol; sanction; debarment; poi. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role match: Secretary of United Russia's General Council, later Head of the Altai Republic — matches this registry's existing two-stage role description precisely. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
             "regime": null,
             "source_id": "s0825"
+          },
+          {
+            "date": null,
+            "regime": [
+              "United States (OFAC)"
+            ],
+            "source_id": "s9109",
+            "note": "OFAC SDN list of 02.10.2026 (entry uid 37823), program RUSSIA-EO14024: Andrey Anatolyevich TURCHAK, Member of the Federation Council; Tax ID No. 781002279818; DOB 20 Dec 1975; POB St. Petersburg. Identifier, date and place of birth match this record. The designation date is not stated in the list file and was not read from the Treasury press release."
           }
         ],
         "sources": [
@@ -344,7 +352,8 @@
       "why": [
         "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
         "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
-        "2026-08-26: rupep.org profile (s2608) confirms dob 20.12.1975 (already on file), adds birthplace Saint Petersburg, personal ИНН 781002279818, headshot."
+        "2026-08-26: rupep.org profile (s2608) confirms dob 20.12.1975 (already on file), adds birthplace Saint Petersburg, personal ИНН 781002279818, headshot.",
+        "04.10.2026: US listing read on the official OFAC list (s9109); personal ИНН, DOB and POB all match the record. Replaces the OpenSanctions-only PLAUSIBLE basis for the US regime."
       ]
     },
     "antonov-yuriy-gennadevich": {
@@ -376,10 +385,30 @@
     },
     "antsev-georgiy-vladimirovich": {
       "set": {
-        "inn_personal": "780105167705"
+        "inn_personal": "780105167705",
+        "sanctions": [
+          {
+            "date": "2024-02-23",
+            "regime": [
+              "European Union"
+            ],
+            "source_id": "s9125",
+            "note": "Council Implementing Regulation (EU) 2024/753 of 23.02.2024, entry 1732 (EU reference EU.11308.41): Георгий Владимирович АНЦЕВ, General Director / General Designer of JSC NPP Radar MMS; DOB 29.1.1961; POB printed as 'Russian Federation, Gorky. Leningrad (now St. Petersburg, Russian Federation)'; Tax Identification Number 780105167705. Reasons: Radar MMS homing heads for Kalibr and Kh-35 missiles. Read in the Official Journal text."
+          },
+          {
+            "date": null,
+            "regime": [
+              "Switzerland"
+            ],
+            "source_id": "s9106",
+            "note": "Swiss SECO list of 02.10.2026, entry ssid 72680 (amended 12.12.2025): same name, DOB 29.01.1961, Tax Identification Number 780105167705, General Director and General Designer of JSC NPP Radar MMS. The first Swiss listing date was not read."
+          }
+        ],
+        "dob": "1961-01-29"
       },
       "why": [
-        "2026-08-26 aleph_followup.py bulk fetch pass (manufacturer-tier full-roster triage): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly. (source s2530)."
+        "2026-08-26 aleph_followup.py bulk fetch pass (manufacturer-tier full-roster triage): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly. (source s2530).",
+        "04.10.2026: EU and Swiss entries read on the official files. Identity rests on the personal ИНН 780105167705 (the registry's own, and printed in both entries) and the matching post (director of АО «НПП «Радар ММС»). DOB 1961-01-29 taken from EU 2024/753 entry 1732 (s9125) and the Swiss list (s9106). Birthplace left null: the act's text 'Gorky. Leningrad (now St. Petersburg)' is internally unclear."
       ]
     },
     "antsev-ivan-georgievich": {
@@ -1162,6 +1191,14 @@
             "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him director/founder of \"SDB Piranya\" (Simbirsk Design Bureau Пиранья) — matches this registry's existing СКБ «Пиранья» okved_mismatch note. Personal ИНН given in notes: 732508747179; passport 7304202860. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
             "regime": null,
             "source_id": "s0829"
+          },
+          {
+            "date": "2026-07-23",
+            "regime": [
+              "European Union"
+            ],
+            "source_id": "s9124",
+            "note": "Council Decision (CFSP) 2026/1845 of 23.07.2026, entry 2099 (EU reference EU.14774.22): Павел Алексеевич ЧЕРНЫШОВ, Director and founder of SDB 'Piranya'; DOB 9.5.1984; INN 732508747179; passport number 7304202860. ИНН and DOB match this record. Reasons: SDB Piranya manufactures FPV drones (Piranya-7/10/13). Read in the Official Journal text."
           }
         ],
         "_verified": true
@@ -1173,7 +1210,8 @@
         "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
         "2026-08-25: OSINT research pass -- adds press background (currency trader to FPV-drone community) and an unverified 8,000+ drone supply claim.",
         "2026-08-25: photo/social-media OSINT research pass.",
-        "2026-09-07: verification backlog closure — identity already confirmed by ООО «СКБ Пиранья»'s (ooo-skb-piranya) own director_history entry (s0487), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
+        "2026-09-07: verification backlog closure — identity already confirmed by ООО «СКБ Пиранья»'s (ooo-skb-piranya) own director_history entry (s0487), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
+        "04.10.2026: EU listing read in Decision 2026/1845 (s9124): ИНН and DOB match; replaces the OpenSanctions-only PLAUSIBLE basis."
       ]
     },
     "chernyy-mikhail-davidovich": {
@@ -3119,6 +3157,22 @@
             "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: exact role AND product match: OpenSanctions independently names her as GD of \"LLC UAMOC\" (= this registry's ООО «ЦУГАМ») producing FPV drones \"Kort\"/\"Brus-1\"/\"Osa\"/\"Boomerang\" — new product names not yet in this registry's ooo-tsugam record, worth folding in separately. Personal ИНН given in notes: 500905260513. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
             "regime": null,
             "source_id": "s0858"
+          },
+          {
+            "date": "2026-04-23",
+            "regime": [
+              "European Union"
+            ],
+            "source_id": "s9114",
+            "note": "Council Implementing Regulation (EU) 2026/509 of 23.04.2026, entry 1994 (EU reference EU.14116.55): Ольга Михайловна СОКОЛОВА, general manager of LLC 'UAMOC'; DOB 3.1.1976; Tax Identification Number 500905260513. ИНН and DOB match this record. The act names the company 'UAMOC'; the registry reads this as ООО «ЦУГАМ» on the basis of the matching person, not of a printed identifier. Read in the Official Journal text."
+          },
+          {
+            "date": "2026-05-21",
+            "regime": [
+              "Switzerland"
+            ],
+            "source_id": "s9106",
+            "note": "Swiss SECO list of 02.10.2026, entry ssid 104705, dated 21.05.2026: same name, DOB 03.01.1976, Tax Identification Number 500905260513, general manager of LLC 'UAMOC'."
           }
         ],
         "sources": [
@@ -3132,7 +3186,8 @@
         "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
         "2026-08-27: rupep.org profile (s2710) confirms this record's ИНН lead (500905260513, previously only mentioned in the OpenSanctions sanctions[].note prose) as her formal inn_personal, adds birthplace (Bishkek, Kyrgyzstan), headshot, and a rich director-for-hire career chain across major Russian aerospace-defense enterprises: АО «НПО «Молния»» (Buran-shuttle developer), АО «ТМЗ»/ЗАО «Корпорация «ТМЗ»» (Тушинский машиностроительный завод), АО «780 РЗ ТСК» (a military repair plant), then this registry's own ООО «ЦУГАМ» (2023, already on file), then ООО «ПТЕРО» (2023) and ООО «РБС ГАРПИЯ» (2025, her current/last-listed position). A genuine dob conflict between this record's existing OpenSanctions-derived value and RuPEP's own value logged as an open question, not silently resolved -- see open_questions[]. RuPEP categorizes her 'Лицо под санкциями' with EU/France/Switzerland/Monaco listed.",
         "2026-09-07: verification via screen_upr_uchr.py ФНС cross-reference -- Ольга Соколова confirmed as директор of ooo-tsugam (ИНН 9731094770), an official-registry match against an already-known entity.",
-        "2026-09-14: screen_upr_uchr.py (manual-captcha run) other_entities scan found this director link via egrul.nalog.ru open API; the entity's own director_history already carries s0432 naming this person, but roles[] had no reciprocal entry — added it, same source already on file."
+        "2026-09-14: screen_upr_uchr.py (manual-captcha run) other_entities scan found this director link via egrul.nalog.ru open API; the entity's own director_history already carries s0432 naming this person, but roles[] had no reciprocal entry — added it, same source already on file.",
+        "04.10.2026: EU and Swiss entries read on the official files; ИНН and DOB match. The 'UAMOC' company is not identified by any printed identifier in either entry."
       ]
     },
     "ordzhonikidze-aleksey-grigorevich": {
@@ -6013,6 +6068,31 @@
           }
         ]
       }
+    },
+    "kosolapov-oleg-yurevich": {
+      "set": {
+        "sanctions": [
+          {
+            "date": "2026-04-23",
+            "regime": [
+              "European Union"
+            ],
+            "source_id": "s9114",
+            "note": "Council Implementing Regulation (EU) 2026/509 of 23.04.2026, entry 2005 (EU reference EU.14032.85): Олег Юрьевич КОСОЛАПОВ, General Director of Complex Unmanned Solutions Center Ltd, Director of onboard radio-electronic equipment at Russian Helicopters; Tax Identification Number 645001842561. No date or place of birth is printed. Read in the Official Journal text."
+          },
+          {
+            "date": "2026-05-21",
+            "regime": [
+              "Switzerland"
+            ],
+            "source_id": "s9106",
+            "note": "Swiss SECO list of 02.10.2026, entry ssid 104986, dated 21.05.2026: same name and function, Tax Identification Number 645001842561; no date of birth printed."
+          }
+        ]
+      },
+      "why": [
+        "04.10.2026: EU and Swiss entries read on the official files; matched by personal ИНН (printed in both) and by the function matching ООО «ЦКБР». Neither entry gives a date of birth, so none is recorded."
+      ]
     }
   },
   "people_add_entities": [

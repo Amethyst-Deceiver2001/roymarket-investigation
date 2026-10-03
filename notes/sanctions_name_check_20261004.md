@@ -18,3 +18,7 @@ Why: the weekly watch matches ИНН and ОГРН only. The Гаскар case (i
 - Names of the 73 were searched; the registry's other organisations and its people were not.
 - The EU FSF gap: a second EU source (the Official Journal acts) in the weekly watch is a proposal, not built (infrastructure freeze).
 - Canada: item numbers are from the file of 04.10.2026; the watch does not read it.
+
+## People entries of #9, recorded 04.10.2026
+
+Five people with a personal ИНН on the official lists, read in the original entries and matched by that ИНН: Турчак (US SDN, s9109), Анцев (EU Reg. 2024/753 entry 1732, s9125; CH, s9106), Чернышов (EU Decision 2026/1845 entry 2099, s9124), Косолапов (EU Reg. 2026/509 entry 2005, s9114; CH), Соколова (EU Reg. 2026/509 entry 1994; CH). Dates of birth match the registry for Турчак, Чернышов and Соколова. Анцев's 29.01.1961 is new (both lists); his birthplace is left null because the act's wording is unclear. Косолапов: no date or place of birth is printed anywhere. The Swiss first-listing date for Анцев and the OFAC designation date for Турчак were not read. Соколова's company is named 'UAMOC' in both entries with no identifier; the link to ООО «ЦУГАМ» rests on the person.
