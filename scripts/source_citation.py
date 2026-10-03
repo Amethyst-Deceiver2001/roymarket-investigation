@@ -175,6 +175,9 @@ SIMPLE = {  # prefix -> title stem; the date is appended
 def cite(s: dict, f: dict | None) -> tuple[str, str | None]:
     """(title, public_url) for one sources.json record."""
     title, url = _cite(s, f)
+    name = Path(s["path"]).name
+    if name.startswith("TGPOST_") and "tie-evidence" in name:  # our transcript of the database text, not a page capture
+        title += " (transcript of the database text, not a capture of the page)"
     return title[:1].upper() + title[1:], url
 
 
@@ -217,6 +220,13 @@ def _cite(s: dict, f: dict | None) -> tuple[str, str | None]:
             return (f"State procurement search for supplier ИНН {m.group(1)}, zakupki.gov.ru{dated}",
                     f"https://zakupki.gov.ru/epz/contract/search/results.html?supplierTitle={m.group(1)}")
         return f"State procurement record, zakupki.gov.ru{dated}", None
+    if prefix == "FEDRESURS" and "audit-report" in name:
+        m = re.search(r"(\d{4})fy", name)
+        return f"Auditor's report on the annual accounts, as published on Fedresurs{', FY ' + m.group(1) if m else ''}{dated}", None
+    if prefix == "HHRU":
+        return f"Job vacancy posted on hh.ru{dated}", None
+    if prefix == "CERT" and "dealer" in name:
+        return f"Official dealer certificate issued by the manufacturer{dated}", None
     if prefix == "EGRUL" or name.startswith("ul-") or typ == "egrul":
         m = re.match(r"EGRUL_(\d{10})_", name) or re.match(r"ul-(\d{13})-", name)
         ident = (f" for ИНН {m.group(1)}" if len(m.group(1)) == 10 else f" for ОГРН {m.group(1)}") if m else ""

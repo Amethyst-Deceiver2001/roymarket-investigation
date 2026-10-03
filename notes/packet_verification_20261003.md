@@ -58,3 +58,11 @@ Six packets in `notes/packets/`, one `claim-verifier` agent each (read-only), ab
 - **Гагаринг conflict:** needs the later audit PDF and the ЕГРЮЛ side by side; a person decides which stands, as of what date.
 - **Generator fixes** as in the patterns above, then regenerate each packet with `python3 exhibits/build_evidence_packet.py <slug>`.
 - **Not verified at all:** the personal ИНН checksums for Гагаринг, the 02.10 sanctions tables, date and place of birth (none printed), and the Canadian list.
+
+## Status 04.10.2026 (what was applied after reading the documents)
+
+Registry (commits 7a8cdb6, f225974 and the one after): the EU- and Swiss-listed «Гаскар Групп» is ООО «СТИМС» (ИНН 7734436058, new record `ooo-stims`), and the EU claim and ЦБСТ tie are withdrawn from ООО «Гаскар»; Canada item 833 read as a primary; Метаскан's second participant, address and tie text; Киловатт: Хальзев is a participant from 31.03.2026 (not a founder), trademark 1086620 held by the sister, patent holder unresolved; Гагаринг participant dates (Александров from 22.12.2023); Смарт quote reworded; registered address and entry date added to the records of all six; a shared e-mail (FOMMET@MAIL.RU) on Метаскан and Экспломет recorded as an open question.
+
+Generator and rules: the tie claim prints in full (the graph's edge label is cut for drawing), the address matches its history entry, a regime row with a registry entry no longer says "nothing", and four title rules were added (audit report, hh.ru vacancy, dealer certificate, transcript of the database text). All six packets and one new packet (СТИМС) were regenerated.
+
+Still open: the Пинимасов ИП (ИНН 583680188519) needs its own ЕГРИП extract before a record; the Гагаринг ownership conflict (register 50.5/49.5 against the audit's 50/50) needs a person's decision; Гагаринг's «Интел Дрон» share (packet 50%, register 40%) and the 2024 profit restatement are not corrected; the Экспломет restatement and wording of the tie ("direct, first-degree", "joint development") are not changed; E-exhibit hashes of the Смарт trademark files differ from disk; the 87 sources titled "Archived document" still need rules; the sanctions-gap table is the 02.10 snapshot and still lists Гаскар under Canada and the old tie until the next weekly run.

@@ -1,6 +1,6 @@
 # Evidence packet: ООО «Гагаринг»
 
-**DRAFT, generated 02.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
+**DRAFT, generated 04.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
 
 ## 1. Identification
 
@@ -34,10 +34,10 @@ Weekly identifier check of the official lists, run of 02.10.2026. "No ID match" 
 
 | As of | Owner | Share | Personal ИНН | Source |
 |---|---|---|---|---|
-| 04.09.2023 | Барашков Александр Сергеевич | 50.5% | 252201766438 | [E3] |
-| 04.09.2023 | Александров Алексей Витальевич | 49.5% | 231015713057 | [E3] |
 | 31.12.2025 | Барашков Александр Сергеевич | 50.0% | — | [E1] |
 | 31.12.2025 | Александров Алексей Витальевич | 50.0% | — | [E1] |
+| 15.04.2026 | Барашков Александр Сергеевич | 50.5% | 252201766438 | [E3] |
+| 15.04.2026 | Александров Алексей Витальевич | 49.5% | 231015713057 | [E3] |
 | 15.04.2026 | Александров Алексей Витальевич 49.5% (₽4 950) / Барашков Александр Сергеевич 50.5% (₽5 050) | — | — | [E4] |
 
 | As of | General director | Source |
@@ -154,8 +154,8 @@ Every document cited above. Telegram posts and web pages are archived and hashed
 
 | No. | Document | Public link | SHA-256 (first 16) | Internal id |
 |---|---|---|---|---|
-| E1 | Fedresurs register record, 03.09.2026 | none public; copy on file | `17e88a3d2a21fd13` | s5333 |
-| E2 | Press article, 25.08.2026 | none public; copy on file | `682bb10c75102205` | s5420 |
+| E1 | Auditor's report on the annual accounts, as published on Fedresurs, FY 2025, 03.09.2026 | none public; copy on file | `17e88a3d2a21fd13` | s5333 |
+| E2 | Job vacancy posted on hh.ru, 25.08.2026 | none public; copy on file | `682bb10c75102205` | s5420 |
 | E3 | Company register extract (ЕГРЮЛ, Federal Tax Service) for ОГРН 1232300051235, 23.08.2026 | none public; copy on file | `0c46187cf4eff1aa` | s0455 |
 | E4 | Company register extract (ЕГРЮЛ, Federal Tax Service) for ИНН 2312321660, 07.09.2026 | none public; copy on file | `ac78145a101678b0` | s6776 |
 | E5 | Annual accounts filed with the Federal Tax Service, ИНН 2312321660, FY 2023 | none public; copy on file | `dbafc03df0b303a8` | s0241 |

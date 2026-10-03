@@ -88,6 +88,24 @@ def test_relative_canonical_is_resolved_or_dropped():
     assert "url" not in facts_of("SITE_x_20260919_y.html", '<link rel="canonical" href="/nashi/">')
     assert facts_of("WEB_x_20261001_y.html", '<link rel="canonical" href="https://a.ru/b">')["url"] == "https://a.ru/b"
 
+def test_packet_exhibit_titles():
+    """Titles the 03.10.2026 packet check found naming the wrong kind of document."""
+    t, _ = C.cite(rec("FEDRESURS_939B297414FA48A4A4B3497315AF3659_20260903_gagaring-audit-report-2025fy-full.pdf",
+                      captured_date="2026-09-03"), {})
+    assert t == "Auditor's report on the annual accounts, as published on Fedresurs, FY 2025, 03.09.2026", t
+    t, _ = C.cite(rec("FEDRESURS_ABC_20260903_notice.pdf", captured_date="2026-09-03"), {})
+    assert t.startswith("Fedresurs register record"), t
+    t, _ = C.cite(rec("HHRU_2312321660_20260904_gagaring-vacancy-lawyer-goz.txt", captured_date="2026-08-07"), {})
+    assert t == "Job vacancy posted on hh.ru, 07.08.2026", t
+    t, _ = C.cite(rec("CERT_4800016776_20260823_kilovatt-official-dealer-2106-2024.pdf", captured_date="2026-08-23"), {})
+    assert t.startswith("Official dealer certificate"), t
+    t, _ = C.cite(rec("CERT_1_20260101_conformity.pdf", captured_date="2026-01-01"), {})
+    assert t.startswith("Certificate or declaration of conformity"), t
+    f = facts_of("TGPOST_20250512_ano_cbst-706-cbst-tie-evidence.txt", "t.me/ano_cbst (own channel), channel_id 1, msg_id 706, 2025-05-12")
+    t, u = C.cite(rec("TGPOST_20250512_ano_cbst-706-cbst-tie-evidence.txt", as_of="2025-05-12"), f)
+    assert t.endswith("(transcript of the database text, not a capture of the page)") and u == "https://t.me/ano_cbst/706", (t, u)
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

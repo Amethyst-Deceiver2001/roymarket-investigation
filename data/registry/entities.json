@@ -11614,7 +11614,7 @@
     "inn": "9710112989",
     "ogrn": "1237700273744",
     "registered": null,
-    "address": "г. Москва",
+    "address": "111675, г. Москва, вн.тер.г. муниципальный округ Косино-Ухтомский, ул. Пехорская, д. 1Д, стр. 1",
     "city": "Moscow",
     "okved_code": "30.30.39",
     "okved_label": "Производство прочих летательных аппаратов",
@@ -11655,6 +11655,12 @@
       }
     ],
     "address_history": [
+      {
+        "value": "111675, г. Москва, вн.тер.г. муниципальный округ Косино-Ухтомский, ул. Пехорская, д. 1Д, стр. 1",
+        "as_of": "2023-12-04",
+        "source_id": "s6759",
+        "note": "ГРН 2237712021732 of 04.12.2023; the address object was renamed by ГРН 2257716946826 of 08.05.2025. the ЕГРЮЛ extract of 07.09.2026."
+      },
       {
         "value": "111675, г. Москва, ул. Пехорская, д. 1Д, стр. 1",
         "as_of": "2026-08-01",
@@ -11847,7 +11853,8 @@
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "2026-09-08: read the full founding-document bundle (устав + rename amendment, OCR'd, s7354) obtained via ФНС — precisely dates the ЭВР->Гаскар rename (17.06.2026, ordered by sole participant СибНК acting through Ступников А.Г., already on file) and confirms it postdates the EU sanctions designation under the 'Гаскар' brand name by ~2 months.",
       "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-      "04.10.2026 (СТИМС/Гаскар check, issue #20): read the EU Implementing Regulation 2026/509 entry 704 (s9114), the Swiss entry (s9106) and the ЕГРЮЛ extract of ИНН 7734436058 (s9112); the listed «Гаскар Групп» is another company, so the EU claim and the 't-doc' ЦБСТ tie recorded here were withdrawn. Canada's item 833 (s9117) read as a primary: «EVR LLC», name only, listed 12.06.2026."
+      "04.10.2026 (СТИМС/Гаскар check, issue #20): read the EU Implementing Regulation 2026/509 entry 704 (s9114), the Swiss entry (s9106) and the ЕГРЮЛ extract of ИНН 7734436058 (s9112); the listed «Гаскар Групп» is another company, so the EU claim and the 't-doc' ЦБСТ tie recorded here were withdrawn. Canada's item 833 (s9117) read as a primary: «EVR LLC», name only, listed 12.06.2026.",
+      "04.10.2026: registered address and its entry date read from the ЕГРЮЛ extract (s6759); the packet printed «[no dated source on file]»."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026 | 04.10.2026: s9106-s9109 (official lists of 02.10.2026), s9112 (ЕГРЮЛ ИНН 7734436058), s9114 (EU Reg. 2026/509), s9115 (ГУР page), s9117 (Canada SEMA list).",
     "name_display": "OOO «Gaskar»",
@@ -19698,6 +19705,10 @@
       {
         "source_id": null,
         "text": "2026-08-24 OpenSanctions full-roster screening: OpenSanctions' name-similarity match for this entity was CHECKED and REJECTED — the designation record it returned (ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТАСКАН\", ИНН/tax number 5024179758) does not match this entity's own ИНН. Recorded explicitly so this false lead is not mistaken for a real hit in a future pass."
+      },
+      {
+        "source_id": "s6712",
+        "text": "The ЕГРЮЛ extract prints the registered e-mail FOMMET@MAIL.RU (entered by ГРН 2251602508749 of 09.07.2025); the extract of ООО ОПКБ «Экспломет» (ИНН 1215235283, s6710) prints the same address. Two records, one e-mail: the extract does not say who uses it, and no link between the two companies is drawn from it."
       }
     ],
     "sources": [],
@@ -21834,7 +21845,7 @@
     "inn": "7715934509",
     "ogrn": "1127746712752",
     "registered": "07.09.2012",
-    "address": "108811, Москва, км 22-й (Киевское ш.), двлд. 6",
+    "address": "108811, г. Москва, 22-й км (Киевское ш.), двлд. 6, стр. 1, пом. XXV, ком. 1Ж",
     "city": "Penza",
     "okved_code": "62.02.9",
     "okved_label": "Деятельность консультативная в области компьютерных технологий прочая",
@@ -21873,7 +21884,14 @@
         "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
       }
     ],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "108811, г. Москва, 22-й км (Киевское ш.), двлд. 6, стр. 1, пом. XXV, ком. 1Ж",
+        "as_of": "2018-09-03",
+        "source_id": "s6736",
+        "note": "ГРН 9187748429101 of 03.09.2018; the address object was renamed by ГРН 2257700536322 of 12.01.2025. the ЕГРЮЛ extract of 07.09.2026. The company was registered 07.09.2012 by the Moscow inspectorate No. 46, so the 2018 entry is the latest change of address, not the first address."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
@@ -22026,7 +22044,8 @@
       "2026-09-14: found via ЦБСТ-resident cross-reference research pass. Already documented in docs/index.html prose but never mirrored into the structured cbst_tie field until now.",
       "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
       "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
-      "04.10.2026 (packet check of 03.10.2026, issue #20): the tie claim printed «резидент ЦБСТ» as a quotation; the post says «Резидент Центра беспилотных систем и технологий (ЦБСТ)». Claim reworded to the post's own words."
+      "04.10.2026 (packet check of 03.10.2026, issue #20): the tie claim printed «резидент ЦБСТ» as a quotation; the post says «Резидент Центра беспилотных систем и технологий (ЦБСТ)». Claim reworded to the post's own words.",
+      "04.10.2026: registered address with «стр. 1, пом. XXV, ком. 1Ж» and its entry date read from the ЕГРЮЛ extract (s6736); the packet dropped the building and room."
     ],
     "_verified_against": null,
     "name_display": "OOO «Smart Teknolodzhis»",
@@ -23230,7 +23249,7 @@
     "inn": "1215235283",
     "ogrn": "1211200001650",
     "registered": "15.04.2021",
-    "address": "424006, Республика Марий Эл, г.о. город Йошкар-Ола, г. Йошкар-Ола",
+    "address": "424006, Республика Марий Эл, г.о. город Йошкар-Ола, г. Йошкар-Ола, ул. Строителей, д. 95, помещ. 102В лит.ЖЗ, ком. 2",
     "city": "Йошкар-Ола",
     "okved_code": "27.90",
     "okved_label": "Производство прочего электрического оборудования",
@@ -23282,6 +23301,12 @@
         "as_of": "2023-11-01",
         "source_id": "s6954",
         "note": "First street-level address on file (prior: bare city-level 'г. Йошкар-Ола'), from two consistent proverki.gov.ru labor-inspection warnings (Nov 2023 and Mar 2026)."
+      },
+      {
+        "value": "424006, Республика Марий Эл, г.о. город Йошкар-Ола, г. Йошкар-Ола, ул. Строителей, д. 95, помещ. 102В лит.ЖЗ, ком. 2",
+        "as_of": "2023-11-03",
+        "source_id": "s7408",
+        "note": "ГРН 2231200102285 of 03.11.2023; the address object was renamed by ГРН 2261200033895 of 02.03.2026. the ЕГРЮЛ extract of 14.09.2026."
       }
     ],
     "name_history": [],
@@ -23689,7 +23714,12 @@
         "source_id": "s7559"
       }
     ],
-    "open_questions": [],
+    "open_questions": [
+      {
+        "source_id": "s6710",
+        "text": "The ЕГРЮЛ extract prints the registered e-mail FOMMET@MAIL.RU (entered by ГРН 2221200082882 of 01.08.2022); the extract of ООО «Метаскан» (ИНН 1660349248, s6712) prints the same address. Two records, one e-mail: the extract does not say who uses it, and no link between the two companies is drawn from it."
+      }
+    ],
     "sources": [],
     "confidence": null,
     "_verified": true,
@@ -23719,7 +23749,8 @@
       "2026-09-07: merged dormant duplicate correction key '1215235283' into this slug-keyed entry (registry-hardening pass, no field conflict).",
       "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
       "[2026-09-15] Resolved the standing ЦБСТ-scope question for this entity (flagged 2026-09-15 as a well-documented mine/metal-detector manufacturer with zero UAV/ЦБСТ tie on record): found a direct hit via TG corpus grep for 'Экспломет' against data/roymarket.db -- NOT multihop, a first-degree institutional cooperation agreement announced on ЦБСТ's own channel (@ANO_CBST post 1033, 12.08.2025), signed by both organizations' own directors. This resolves the scope question: eksplomet belongs in the registry as a confirmed ЦБСТ-network entity, tier=manufacturer stands. No change needed to tier/wb_overlap/other fields.",
-      "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
+      "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
+      "04.10.2026: registered address, street and entry date read from the ЕГРЮЛ extract (s7408); the packet dropped the street and called the address undated."
     ],
     "_verified_against": null,
     "name_display": "OOO «OPKB Eksplomet»",
@@ -57730,7 +57761,8 @@
       "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
       "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
       "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s5440; the earlier cbst_tie record is unchanged.",
-      "04.10.2026 (packet check of 03.10.2026, issue #20): read the ЕГРЮЛ extract s6776 against the packet. CORRECTED the date of the 50.5/49.5 row: Александров's participant entry is 22.12.2023, the split is the record of 15.04.2026; the audit-report conflict stays open."
+      "04.10.2026 (packet check of 03.10.2026, issue #20): read the ЕГРЮЛ extract s6776 against the packet. CORRECTED the date of the 50.5/49.5 row: Александров's participant entry is 22.12.2023, the split is the record of 15.04.2026; the audit-report conflict stays open.",
+      "04.10.2026: registered address and its entry date read from the ЕГРЮЛ extract (s6776)."
     ],
     "_verified_against": null,
     "name_display": "OOO «Gagaring»",
@@ -65174,7 +65206,7 @@
     "ogrn": "1244800005240",
     "extra_ids": null,
     "registered": "2024-07-22",
-    "address": "Россия, 398024, Липецкая область, г. Липецк, ул. Папина, д. 2",
+    "address": "398024, Липецкая область, г.о. город Липецк, г. Липецк, ул. П.А. Папина, д. 2",
     "okved_code": null,
     "okved_label": null,
     "okved_mismatch": null,
@@ -65238,7 +65270,14 @@
         "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
       }
     ],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "398024, Липецкая область, г.о. город Липецк, г. Липецк, ул. П.А. Папина, д. 2",
+        "as_of": "2024-07-22",
+        "source_id": "s6790",
+        "note": "ГРН 1244800005240 of 22.07.2024, the creation entry. the ЕГРЮЛ extract of 07.09.2026."
+      }
+    ],
     "name_history": [],
     "facility_type": "soviet_legacy_defense_industrial",
     "facility_type_history": [
@@ -65618,7 +65657,8 @@
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
       "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
-      "04.10.2026 (packet check of 03.10.2026, issue #20): read the ЕГРЮЛ extract s6790, the FIPS record s1204 and the sister's extract. CORRECTED: Хальзев is a participant from 31.03.2026 (ГРН 2264800194668), not a founder and not 'since 22.04.2026'; the 60/40 split is recorded 13.05.2026. Trademark 1086620 belongs to the sister (FIPS holder address = the sister's seat); the dealer on the certificate is ИП Пинимасов Александр Вячеславович (ИНН 583680188519), a different person from the ИП Пинимасова Е.А. on file."
+      "04.10.2026 (packet check of 03.10.2026, issue #20): read the ЕГРЮЛ extract s6790, the FIPS record s1204 and the sister's extract. CORRECTED: Хальзев is a participant from 31.03.2026 (ГРН 2264800194668), not a founder and not 'since 22.04.2026'; the 60/40 split is recorded 13.05.2026. Trademark 1086620 belongs to the sister (FIPS holder address = the sister's seat); the dealer on the certificate is ИП Пинимасов Александр Вячеславович (ИНН 583680188519), a different person from the ИП Пинимасова Е.А. on file.",
+      "04.10.2026: registered address and its entry date read from the ЕГРЮЛ extract (s6790)."
     ],
     "_verified_against": "Aleph API 2026-08-24 direct-ИНН query, cross-checked against this entity's own already-verified ИНН/ОГРН",
     "name_display": "OOO «Nauchno-proizvodstvennoe obedinenie «Kilovatt»»",
@@ -89705,22 +89745,10 @@
     ],
     "founders_history": [
       {
-        "value": "ООО «Аметист Кэпитал» (ИНН 9704078560, ОГРН 1217700336480), 60% (₽6,000)",
-        "as_of": "2023-09-25",
-        "source_id": "s9112",
-        "note": "ГРН 2237708914188 of 25.09.2023."
-      },
-      {
-        "value": "Мингалимов Ленар Нуриахметович (ИНН 165020722607), 20% (₽2,000)",
-        "as_of": "2026-06-19",
-        "source_id": "s9112",
-        "note": "ГРН 2267705179872 of 19.06.2026."
-      },
-      {
-        "value": "Саитов Ренат Фаритович (ИНН 027503961630), 20% (₽2,000)",
+        "value": "ООО «Аметист Кэпитал» (ИНН 9704078560, ОГРН 1217700336480) 60% (₽6,000) / Мингалимов Ленар Нуриахметович (ИНН 165020722607) 20% (₽2,000) / Саитов Ренат Фаритович (ИНН 027503961630) 20% (₽2,000)",
         "as_of": "2026-07-07",
         "source_id": "s9112",
-        "note": "ГРН 2267705760914 of 07.07.2026. The extract of 03.10.2026 shows only current participants; earlier ones are not in it."
+        "note": "Participants in the ЕГРЮЛ extract of 03.10.2026. Entry dates: Аметист Кэпитал ГРН 2237708914188 of 25.09.2023; Мингалимов ГРН 2267705179872 of 19.06.2026; Саитов ГРН 2267705760914 of 07.07.2026. The extract shows only current participants, so earlier ones and earlier shares are not in it."
       }
     ],
     "charter_capital": 10000,

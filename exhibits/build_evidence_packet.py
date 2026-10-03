@@ -103,6 +103,27 @@ def top_unlisted(path: Path, n: int) -> list[str]:
     return [r["slug"] for r in rows[:n]]
 
 
+def tie_text(e: dict, x: dict) -> str:
+    """The tie claim in full. The graph's edge label is cut at 120 characters for drawing; a packet prints the record's own claim."""
+    label = x.get("label") or ""
+    full = (e.get("cbst_tie") or {}).get("claim") or ""
+    return full if full and label and full.startswith(label[:60]) else label
+
+
+REGIME_WORD = {"eu": "EU", "us": "US", "uk": "UK", "ch": "Switz", "ua": "Ukraine", "ca": "Canada",
+               "au": "Australia", "jp": "Japan", "nz": "New Zealand"}
+
+
+def unchecked(e: dict, k: str) -> str:
+    """What a regime row says when the weekly run has no status for it: not 'nothing' if the record holds a lead."""
+    held = [s for s in e.get("sanctions") or []
+            if REGIME_WORD[k].casefold() in " ".join(s.get("regime") if isinstance(s.get("regime"), list) else [str(s.get("regime") or "")]).casefold()]
+    if held:
+        return ("the registry holds an entry for this regime; read it before use, it may be an aggregator record "
+                "not read against the list's own text (see the registry entries below)")
+    return "nothing in the registry; not checked by the weekly run"
+
+
 def build(slug: str, external: bool, gap_path: Path, gap_as_of: str) -> str:
     entities = {e["slug"]: e for e in load("entities.json")}
     people = {p["slug"]: p for p in load("people.json")}
@@ -140,7 +161,15 @@ def build(slug: str, external: bool, gap_path: Path, gap_as_of: str) -> str:
     L += [f"- ИНН {e.get('inn') or '—'}, ОГРН {e.get('ogrn') or '—'}",
           f"- Registered: {e.get('registered') or '—'}"]
     hist = e.get("address_history") or []
-    match = next((h for h in hist if e.get("address") and str(h.get("value", "")).startswith(e["address"][:30])), None)
+    # The entry that carries the current address: an exact match, else the latest dated entry that extends or
+    # is extended by it (a bare "г. Москва" is a prefix of the full address). Never a guess between unlike strings.
+    cur = " ".join((e.get("address") or "").split()).casefold()
+    match = None
+    for h in sorted(hist, key=lambda h: h.get("as_of") or "", reverse=True):
+        v = " ".join(str(h.get("value", "")).split()).casefold()
+        if cur and v and (v == cur or v.startswith(cur) or cur.startswith(v)):
+            match = h
+            break
     if e.get("address"):
         L.append(f"- Registered address: {e['address']}"
                  + (f" (as of {iso_or_ru(match.get('as_of'))}) {X.ref(match.get('source_id'))}" if match
@@ -166,7 +195,7 @@ def build(slug: str, external: bool, gap_path: Path, gap_as_of: str) -> str:
                  "each list by name before calling it unlisted.")
         L += ["", "| Regime | Status |", "|---|---|"]
         for k in ("eu", "us", "uk", "ch", "ua", "ca", "au", "jp", "nz"):
-            L.append(f"| {REGIME_LABEL[k]} | {g.get(k) or 'nothing in the registry; not checked by the weekly run'} |")
+            L.append(f"| {REGIME_LABEL[k]} | {g.get(k) or unchecked(e, k)} |")
     else:
         L.append("Not in the sanctions-gap table.")
     for s in e.get("sanctions") or []:
@@ -228,7 +257,7 @@ def build(slug: str, external: bool, gap_path: Path, gap_as_of: str) -> str:
     tie = [x for x in edges if x["type"] == "cbst_tie"]
     L += ["## 5. Tie to ЦБСТ", ""]
     for x in tie:
-        L.append(f"- **{GRADE_WORD[x.get('grade') or 'open']}**: {x.get('label') or ''} {X.ref(x.get('source_id'))}")
+        L.append(f"- **{GRADE_WORD[x.get('grade') or 'open']}**: {tie_text(e, x)} {X.ref(x.get('source_id'))}")
     for m in e.get("memberships") or []:
         L.append(f"- Programme membership: {programs.get(m['program'], {}).get('name_ru', m['program'])} as {m.get('role')}, {iso_or_ru(m.get('as_of'))}, "
                  f"graded {GRADE_WORD[reader_grade(m.get('basis'))]} {X.ref(m.get('source_id'))}")
@@ -305,7 +334,7 @@ def build(slug: str, external: bool, gap_path: Path, gap_as_of: str) -> str:
         sor.append(f"Its owners are {own} {X.ref(fh[-1].get('source_id'))}.")
     if tie:
         t = tie[0]
-        sor.append(f"Its tie to the Centre for Unmanned Systems and Technologies (АНО «ЦБСТ»): {t.get('label')} "
+        sor.append(f"Its tie to the Centre for Unmanned Systems and Technologies (АНО «ЦБСТ»): {tie_text(e, t)} "
                    f"{X.ref(t.get('source_id'))}.")
     if e.get("products"):
         sor.append("Its products include " + ", ".join(p["name_ru"] for p in e["products"][:6] if p.get("name_ru"))
