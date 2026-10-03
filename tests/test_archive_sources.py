@@ -29,6 +29,21 @@ def test_telegram_variants():
     assert A.telegram_variants("https://t.me/ano_cbst") == ["https://t.me/ano_cbst"]
 
 
+def test_telegram_key_and_channel_hits():
+    assert A.telegram_key("https://t.me/ANO_CBST/5") == ("ano_cbst", "5", False)
+    assert A.telegram_key("https://t.me/s/ano_cbst/5?embed=1&mode=tme") == ("ano_cbst", "5", True)
+    assert A.telegram_key("https://t.me/ano_cbst") is None
+    rows = [["20260301000000", "https://t.me/Ano_Cbst/5", "A"],
+            ["20251101000000", "https://t.me/ano_cbst/5", "B"],
+            ["20251001000000", "https://t.me/ano_cbst/5?single", "C"],
+            ["20260101000000", "https://t.me/ano_cbst/5?embed=1&mode=tme", "D"],
+            ["20260101000000", "https://t.me/ano_cbst/6?comment=3", "E"]]
+    h = A.channel_hits(rows)
+    assert h[("ano_cbst", "5", False)]["wayback_sha1"] == "B", "earliest bare-page capture, case folded"
+    assert h[("ano_cbst", "5", True)]["wayback_sha1"] == "D"
+    assert ("ano_cbst", "6", False) not in h, "a comment view is not the post"
+
+
 def test_tiers():
     assert A.tier_of("telegram", True) == 1
     assert A.tier_of("web", True) == 1

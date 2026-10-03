@@ -23,7 +23,9 @@ Subcommands:
     local    Check each cited URL's local copy in data/sources/ against the
              sha256 in sources.json (no network; needs data/sources/).
     lookup   Ask the Wayback CDX index whether a capture already exists; record
-             the newest one. Read-only: creates nothing public.
+             it. Read-only: creates nothing public. Telegram posts are looked up
+             one request per channel (a CDX prefix query over the past
+             FRESH_DAYS); other URLs one request each.
     save     Ask the Wayback Machine to capture pending URLs, then hash the
              archived bytes. Uses SPN2 with keys when WAYBACK_S3_ACCESS and
              WAYBACK_S3_SECRET are set (free archive.org account, Settings ->
@@ -192,6 +194,35 @@ def is_current(e: dict, today: date) -> bool:
     return False
 
 
+def telegram_key(url: str) -> tuple[str, str, bool] | None:
+    """(channel lowercased, post id, embed view) for a post URL; None otherwise.
+
+    Telegram usernames are case-insensitive and the Wayback index folds case, so
+    t.me/ANO_CBST/5 and t.me/ano_cbst/5 are one post with one set of captures."""
+    m = re.match(r"https?://(?:t|telegram)\.me/(?:s/)?([A-Za-z0-9_]+)/(\d+)/?(\?.*)?$", url)
+    if not m:
+        return None
+    return m.group(1).lower(), m.group(2), "embed=1" in (m.group(3) or "")
+
+
+def channel_hits(rows: list[list[str]]) -> dict[tuple[str, str, bool], dict]:
+    """CDX prefix rows (timestamp, original, digest) -> the earliest capture per post.
+
+    Only the bare post page and its embed view count; ?single, ?comment and other
+    query variants render something else and are ignored."""
+    out: dict[tuple[str, str, bool], dict] = {}
+    for ts, orig, digest in rows:
+        k = telegram_key(orig)
+        if not k:
+            continue
+        q = orig.split("?", 1)[1] if "?" in orig else ""
+        if q and not (k[2] and set(q.split("&")) <= {"embed=1", "mode=tme"}):
+            continue
+        if k not in out or ts < out[k]["timestamp"]:
+            out[k] = {"timestamp": ts, "original": orig, "wayback_sha1": digest}
+    return out
+
+
 def pending(data: dict, tiers: set[int], today: date, *, skip_looked_up: bool = False) -> list[str]:
     out = []
     for u, e in data["urls"].items():
@@ -200,7 +231,8 @@ def pending(data: dict, tiers: set[int], today: date, *, skip_looked_up: bool = 
         if skip_looked_up and e.get("looked_up") == today.isoformat():
             continue
         out.append(u)
-    out.sort(key=lambda u: (data["urls"][u]["tier"], data["urls"][u]["kind"] != "telegram", u))
+    out.sort(key=lambda u: (data["urls"][u]["tier"], data["urls"][u]["kind"] != "telegram",
+                            "variant_of" in data["urls"][u], u))
     return out
 
 
@@ -240,6 +272,18 @@ def cdx_latest(url: str) -> dict | None:
         return None
     ts, orig, code, digest = rows[-1]
     return {"timestamp": ts, "original": orig, "wayback_sha1": digest}
+
+
+def cdx_channel(channel: str, since: date) -> list[list[str]]:
+    """Every 200 capture under t.me/<channel>/ since `since`, one row per URL."""
+    q = urllib.parse.urlencode({"url": f"t.me/{channel}/", "matchType": "prefix", "output": "json",
+                                "fl": "timestamp,original,digest", "filter": "statuscode:200",
+                                "collapse": "urlkey", "from": since.strftime("%Y%m%d")})
+    status, _, body, _ = http(f"{WAYBACK}/cdx/search/cdx?{q}", timeout=300)
+    if status != 200:
+        raise RuntimeError(f"CDX HTTP {status}")
+    rows = json.loads(body or b"[]")
+    return rows[1:]
 
 
 def raw_sha256(ts: str, url: str) -> tuple[str | None, int | None]:
@@ -294,6 +338,7 @@ class RateLimited(Exception):
 
 
 def record_capture(e: dict, ts: str, url: str, method: str, sha1: str | None = None) -> None:
+    """`url` is the address as the archive holds it (case may differ from ours)."""
     sha256, size = raw_sha256(ts, url)
     e["captures"] = [c for c in e.get("captures", []) if c.get("timestamp") != ts]
     e["captures"].append({
@@ -357,9 +402,52 @@ def parse_tiers(s: str) -> set[int]:
     return {int(x) for x in s.split(",") if x.strip()}
 
 
+def lookup_channels(data: dict, todo: list[str], today: date) -> int:
+    """One CDX prefix query per channel for the pending Telegram posts in `todo`.
+
+    Every post asked about is marked looked_up, found or not, so the per-URL
+    lookup skips it and an unarchived post goes straight to `save`."""
+    by_channel: dict[str, list[str]] = {}
+    for u in todo:
+        k = telegram_key(u)
+        if k:
+            by_channel.setdefault(k[0], []).append(u)
+    found = 0
+    for ch, urls in sorted(by_channel.items()):
+        try:
+            hits = channel_hits(cdx_channel(ch, today - timedelta(days=FRESH_DAYS)))
+        except Exception as err:  # leave these to the per-URL lookup
+            print(f"  channel {ch}: {err}", flush=True)
+            time.sleep(DELAY_LOOKUP)
+            continue
+        n = 0
+        for u in urls:
+            e = data["urls"][u]
+            e["looked_up"] = today.isoformat()
+            hit = hits.get(telegram_key(u))
+            if not hit:
+                continue
+            try:
+                record_capture(e, hit["timestamp"], hit["original"], "existing", hit["wayback_sha1"])
+                n += 1
+            except Exception as err:
+                e["last_error"] = f"lookup {today}: {err}"
+            time.sleep(DELAY_LOOKUP)
+        save_archives(data)
+        found += n
+        print(f"  channel {ch}: {n} of {len(urls)} posts already captured", flush=True)
+        time.sleep(DELAY_LOOKUP)
+    return found
+
+
 def cmd_lookup(args, data: dict | None = None) -> dict:
     data = data or load_archives()
     today = date.today()
+    tg = [u for u in pending(data, parse_tiers(args.tier), today, skip_looked_up=True)
+          if data["urls"][u]["kind"] == "telegram"]
+    if tg:
+        print(f"lookup: {len(tg)} Telegram posts, one index query per channel", flush=True)
+        print(f"lookup: existing capture found for {lookup_channels(data, tg, today)} of {len(tg)}")
     todo = pending(data, parse_tiers(args.tier), today, skip_looked_up=True)[: args.limit]
     print(f"lookup: {len(todo)} URLs")
     found = 0
@@ -461,6 +549,7 @@ def main(argv=None) -> int:
         p.add_argument("--limit", type=int, default=150, help="URLs per batch (default 150)")
         p.add_argument("--tier", default="1,2", help="comma-separated tiers (default 1,2)")
     args = ap.parse_args(argv)
+    sys.stdout.reconfigure(line_buffering=True)  # a batch killed midway still leaves its log
     if args.cmd == "plan":
         cmd_plan(args)
         return 0
