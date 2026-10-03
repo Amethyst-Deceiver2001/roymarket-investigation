@@ -28480,7 +28480,7 @@
         "source_id": "s5554",
         "revenue": 256862000.0,
         "profit": 2851156000.0,
-        "note": "Parsed from the signed БФО filing (bo.nalog.gov.ru), reported in Тыс. руб. and converted to whole rubles."
+        "note": "Parsed from the signed БФО filing (bo.nalog.gov.ru), reported in Тыс. руб. and converted to whole rubles. The 2022 net profit is an accounting effect, not trading: the pre-tax result is a loss of (556,610) тыс., turned into profit by a deferred-tax benefit («отложенный налог на прибыль 2412 3 407 766» тыс.). Re-pulled 02.10.2026 as s9008, same figures; audited by АО Аудиторская компания «ДЕЛОВОЙ ПРОФИЛЬ»."
       }
     ],
     "egrul_flags": [],
@@ -28702,7 +28702,17 @@
       }
     ],
     "workforce_history": [],
-    "state_programs": [],
+    "state_programs": [
+      {
+        "name_ru": "Грант (грантодатель в отчётности не назван)",
+        "name_en": "Grant of ₽500m (grantor not named in the filing)",
+        "role": "Recipient",
+        "as_of": "2022",
+        "amount_rub": 500000000,
+        "source_id": "s9008",
+        "note": "2022 БФО, «Отчет о целевом использовании средств»: «Прочие 6250 500 000», «Грант 500 000», «Всего поступило средств 6200 500 000», «Всего использовано средств 6300 (-)», «Остаток средств на конец отчетного года 6400 500 000» (тыс. руб.). Received in 2022, none of it used by 31.12.2022."
+      }
+    ],
     "marketing_claims": [],
     "battlefield_evidence": [],
     "domain_history": [],
@@ -28733,6 +28743,11 @@
         "source_id": "s0218",
         "status": "open",
         "text": "ООО «Аэромакс» was registered 09.01.2017, but its current name record dates only from 16.04.2019 (ГРН 2197747176086) — i.e. the company traded under a DIFFERENT name for its first two years. The extract states the current name only; the predecessor name is not in it. Worth pulling the superseded record or founding charter, since renames are a recurring pattern in this roster (cf. Рационы питания → Боевые технологии)."
+      },
+      {
+        "text": "Who granted ООО «Аэромакс» ₽500m in 2022 (АТР, ФСИ, a ministry)? The 2022 БФО (s9008) records it as «Грант» without naming the grantor, and none of it was used by year-end.",
+        "source_id": "s9008",
+        "status": "open"
       }
     ],
     "sources": [],
@@ -28782,7 +28797,8 @@
       "2026-09-14: received 3 products (БВС СТ AS-32-10, AS-32-8, Д-12К) reassigned from ao-aeromaks -- both entities' rk.2035.university catalog entry (catalog_id 019c662d-...) is internally inconsistent: the showcase editorial description names \"АО «Аэромакс»\" but every individual product listing's own manufacturer field says \"ООО «Аэромакс»\" (source s1169). Resolved in favour of ooo-aeromaks (this entity, ИНН 7725347482) using independent corroboration: this entity is a formally active АЭРОНЕКСТ association member with UavCount:6 on its own membership record (s1405) -- ao-aeromaks (ИНН 7708407413, a 2022-founded Кронштадт-Техник-managed entity) has no comparable independent UAV-product corroboration on file. Not a certainty (no OKVED/primary EGRUL activity-code text was extractable from either entity's scanned EGRUL PDF to settle it definitively), but the weight of evidence favours this entity.",
       "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
       "2026-09-16 (coverage-gap agent pass, verified independently before wiring): verified directly against the full docs/index.html paragraph (not just a fragment) before wiring -- an agent flagged this as a possible footnote error based on only the six-name contour sentence, but the fuller paragraph (already read in full this session) confirms Аэромакс is named in a separate clause of the same post, not fabricated.",
-      "[2026-10-02 claim corrected] cbst_tie rewritten and downgraded t-doc to t-open: post 2095, read in full, lists Аэромакс among «других отечественных разработчиков», not among the residents. Whether another document ties it to ЦБСТ is open."
+      "[2026-10-02 claim corrected] cbst_tie rewritten and downgraded t-doc to t-open: post 2095, read in full, lists Аэромакс among «других отечественных разработчиков», not among the residents. Whether another document ties it to ЦБСТ is open.",
+      "[2026-10-03 first reading of the 02.10 pulls, approved by Alexey] state_programs: ₽500m grant of 2022 added from the 2022 БФО re-pull (s9008), ОЦИС page read in full; 2022 financials note explains the deferred-tax profit; open question on the grantor."
     ],
     "_verified_against": "s0218 — ООО «Аэромакс»'s own full signed ЕГРЮЛ extract, pulled 20.08.2026",
     "name_display": "OOO «Aeromaks»",
@@ -32729,7 +32745,7 @@
     "okved_code": "72.19",
     "okved_label": "Научные исследования и разработки в области естественных и технических наук прочие",
     "okved_mismatch": null,
-    "director": null,
+    "director": "Некрасов Александр Викторович",
     "director_history": [
       {
         "as_of": "2025-05-27",
@@ -32800,11 +32816,22 @@
     ],
     "financials": [
       {
-        "note": "declared income ₽227.7m per brief's manufacturers-table row; year not specified in that source",
-        "profit": null,
-        "revenue": 227700000.0,
-        "source_id": null,
-        "year": null
+        "year": "2024",
+        "revenue": 143395000,
+        "profit": -110559000,
+        "source_id": "s9012",
+        "note": "Lines 2110 / 2400. Equity (1300) −110,549 тыс.; long-term borrowings (1410) 235,215 тыс. Read from the signed БФО filing (bo.nalog.gov.ru, pulled 02.10.2026), reported in тыс. руб. and converted to whole rubles."
+      },
+      {
+        "year": "2025",
+        "revenue": 15949000,
+        "profit": -33915000,
+        "funds_balance_start": 0,
+        "funds_received": 105770000,
+        "funds_used": 105770000,
+        "funds_balance_end": 0,
+        "source_id": "s9013",
+        "note": "Lines 2110 / 2400. Equity (1300) −144,465 тыс.; long-term borrowings 582,735 тыс.; total assets 734,269 тыс. The ОЦИС page records targeted funds «Прочие 6250 105 770» received and «6300 (105 770)» used (pay 14,045; fixed assets 9,076; «Прочие» 81,718 тыс.); the payer is not named. Other income (2340) is 105,838 тыс. Targeted funds are not revenue. Read from the signed БФО filing (bo.nalog.gov.ru, pulled 02.10.2026), reported in тыс. руб. and converted to whole rubles."
       }
     ],
     "egrul_flags": [],
@@ -32839,7 +32866,13 @@
       "other": []
     },
     "images": [],
-    "open_questions": [],
+    "open_questions": [
+      {
+        "text": "Who paid the 105,770 тыс. руб. of targeted funds the 2025 БФО (s9013) records as received and fully used? The filing does not name the source (a grant, a subsidy or a customer's earmarked money).",
+        "source_id": "s9013",
+        "status": "open"
+      }
+    ],
     "sources": [],
     "confidence": null,
     "_verified": true,
@@ -32862,7 +32895,8 @@
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "2026-09-14: Founding-document bundle (data/sources/UD_1237800134835_20260914_ooo-konstruktorskoe-byuro-sinergiya.zip, s7426) read in full, OCR'd (scanned TIFF original + PDF restatement, Протокол №2, 22.04.2024). ₽10,000 charter capital confirmed directly. Generic boilerplate purpose clause despite the 'design bureau' name -- no UAV-specific language found. Corroborates existing record, no new fact.",
       "2026-09-29: re-read the already-pulled full ЕГРЮЛ выписка (s6755) directly -- resolves the open_questions entry: director is Некрасов Александр Викторович (ГРН 2257805131626), a different person from sole founder Усачёв. Removed the now-resolved open question and filled founders[]'s share_percent/nominal_value/source_id from founders_history, which already had them.",
-      "[2026-09-30 product research] Tie to this ИНН: ЦБСТ's own post (s7589) names the ПМЭФ-2026 stand as ООО «Конструкторское бюро «Синергия»», matching this entity's EGRUL full name. Collision noted: the «Ася»/«Квилон» UAVs belong to Университет «Синергия»'s design bureau (s8572, s8580), not this company."
+      "[2026-09-30 product research] Tie to this ИНН: ЦБСТ's own post (s7589) names the ПМЭФ-2026 stand as ООО «Конструкторское бюро «Синергия»», matching this entity's EGRUL full name. Collision noted: the «Ася»/«Квилон» UAVs belong to Университет «Синергия»'s design bureau (s8572, s8580), not this company.",
+      "[2026-10-03 first reading of the 02.10 pulls, approved by Alexey] financials replaced: the old entry (₽227.7m, no year, no source, from the brief's table) matched neither filing; БФО 2024 (s9012) and 2025 (s9013) recorded instead. director scalar filled from director_history (s6755); the 2025 filing is signed «руководитель Некрасов Александр Викторович», which agrees."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "name_display": "OOO «Konstruktorskoe byuro «Sinergiya»»",
@@ -58541,7 +58575,7 @@
   },
   {
     "slug": "ip-gabitov-r-a",
-    "name_ru": "ИП Габитов Р.А.",
+    "name_ru": "ИП Габитов Радик Альфердович",
     "name_latin": "IP Gabitov R.A.",
     "legal_form": "ИП",
     "brand_ru": "BeastFPV / BEASTCONTROL",
@@ -58549,9 +58583,9 @@
     "inn": "024200325133",
     "ogrn": "324508100570973",
     "extra_ids": null,
-    "registered": null,
+    "registered": "10.10.2024",
     "address": null,
-    "okved_code": null,
+    "okved_code": "47.91",
     "okved_label": null,
     "okved_mismatch": null,
     "director": null,
@@ -58625,7 +58659,12 @@
     "images": [],
     "open_questions": [
       {
-        "text": "Full first/patronymic name for 'Р.А. Габитов' not found on the site or in a quick pass -- would need EGRUL/ЕГРИП lookup by ОГРНИП to resolve. As with ip-popov-aleksandr-sergeevich, no document ties this retailer to any specific GAONENG transaction on file (e.g. the ooo-npo-rustekhdron/ООО «ДСГ» 2023 court-documented delivery). BEASTCONTROL (remote FPV control over internet) is a real, independently notable capability for this space -- worth a closer look at whether it's marketed elsewhere (other pages, other channels) with more explicit combat/front-line framing than the one page captured here.",
+        "text": "Full first/patronymic name for 'Р.А. Габитов'. Resolved 03.10.2026: the ЕГРИП extract (s9017) reads «Фамилия ГАБИТОВ / Имя РАДИК / Отчество АЛЬФЕРДОВИЧ», ОГРНИП 324508100570973.",
+        "source_id": "s9017",
+        "status": "resolved"
+      },
+      {
+        "text": "As with ip-popov-aleksandr-sergeevich, no document ties this retailer to any specific GAONENG transaction on file (e.g. the ooo-npo-rustekhdron/ООО «ДСГ» 2023 court-documented delivery). BEASTCONTROL (remote FPV control over internet) is a real, independently notable capability for this space -- worth a closer look at whether it's marketed elsewhere (other pages, other channels) with more explicit combat/front-line framing than the one page captured here.",
         "source_id": null
       },
       {
@@ -58640,7 +58679,8 @@
     "_raw": {},
     "name_en": "Individual entrepreneur Gabitov R.A.",
     "_corrected": [
-      "2026-10-02 B5 brand review: brands[] set from the seller's own site footer, read in full."
+      "2026-10-02 B5 brand review: brands[] set from the seller's own site footer, read in full.",
+      "[2026-10-03 first reading of the 02.10 pulls, approved by Alexey] name_ru, registered and okved_code from the ЕГРИП extract of 03.10.2026 (s9017): «ГАБИТОВ РАДИК АЛЬФЕРДОВИЧ», «Дата регистрации 10.10.2024», main ОКВЭД «47.91 Торговля розничная по почте или по информационно-коммуникационной сети Интернет», no termination. No person record is made (PII third category: on user direction only)."
     ],
     "brands": [
       {
@@ -58654,7 +58694,7 @@
       }
     ],
     "_verified_against": null,
-    "name_display": "IP Gabitov R.A."
+    "name_display": "IP Gabitov Radik Alferdovich"
   },
   {
     "slug": "ip-popov-aleksandr-sergeevich",
@@ -58666,9 +58706,9 @@
     "inn": "772377497922",
     "ogrn": "321774600317322",
     "extra_ids": null,
-    "registered": null,
+    "registered": "28.05.2021",
     "address": null,
-    "okved_code": null,
+    "okved_code": "47.91.2",
     "okved_label": null,
     "okved_mismatch": null,
     "director": null,
@@ -58745,7 +58785,8 @@
     "_raw": {},
     "name_en": "Individual entrepreneur Popov Aleksandr Sergeyevich",
     "_corrected": [
-      "2026-10-02 B5 brand review: brands[] set from the seller's own site footer, read in full."
+      "2026-10-02 B5 brand review: brands[] set from the seller's own site footer, read in full.",
+      "[2026-10-03 first reading of the 02.10 pulls, approved by Alexey] registered, okved_code and okved_additional from the ЕГРИП extract of 03.10.2026 (s9018): «Дата регистрации 28.05.2021», main ОКВЭД «47.91.2 Торговля розничная, осуществляемая непосредственно при помощи информационно-коммуникационной сети Интернет», 46.90 added 30.04.2025; no termination."
     ],
     "brands": [
       {
@@ -58756,6 +58797,32 @@
         "source_id": "s7980",
         "as_of": "2026-09-21",
         "note": "fnsmart.ru «О нас» signs «Ваш FnSmart ИП ПОПОВ АЛЕКСАНДР СЕРГЕЕВИЧ ИНН 772377497922 ОГРНИП 321774600317322» (page read 02.10.2026). Spelled FnSmart as the site spells it."
+      }
+    ],
+    "okved_additional": [
+      {
+        "code": "46.90",
+        "label": "Торговля оптовая неспециализированная",
+        "as_of": "2025-04-30",
+        "source_id": "s9018"
+      },
+      {
+        "code": "47.91.1",
+        "label": "Торговля розничная по почте",
+        "as_of": "2021-05-28",
+        "source_id": "s9018"
+      },
+      {
+        "code": "47.91.4",
+        "label": "Торговля розничная, осуществляемая непосредственно при помощи телевидения, радио, телефона",
+        "as_of": "2021-05-28",
+        "source_id": "s9018"
+      },
+      {
+        "code": "62.09",
+        "label": "Деятельность, связанная с использованием вычислительной техники и информационных технологий, прочая",
+        "as_of": "2021-05-28",
+        "source_id": "s9018"
       }
     ],
     "_verified_against": null,
@@ -61758,10 +61825,59 @@
     "products": [],
     "financials": [
       {
-        "note": "Поступление (total receipts) per own отчет о благотворительной деятельности за 2024 г.",
-        "revenue": 309867111.76,
-        "source_id": "s0445",
-        "year": "2024"
+        "year": "2021",
+        "revenue": null,
+        "profit": null,
+        "funds_balance_start": 165000,
+        "funds_received": 595000,
+        "funds_used": 334000,
+        "funds_balance_end": 426000,
+        "source_id": "s8996",
+        "note": "Non-profit filing: «Отчет о целевом использовании средств», lines 6100/6200/6300/6400. These are funds, not revenue. Read from the signed БФО filing (bo.nalog.gov.ru, pulled 02.10.2026), reported in тыс. руб. and converted to whole rubles."
+      },
+      {
+        "year": "2022",
+        "revenue": null,
+        "profit": null,
+        "funds_balance_start": 426000,
+        "funds_received": 153202000,
+        "funds_used": 56707000,
+        "funds_balance_end": 96921000,
+        "source_id": "s8997",
+        "note": "Non-profit filing: «Отчет о целевом использовании средств», lines 6100/6200/6300/6400. These are funds, not revenue. Read from the signed БФО filing (bo.nalog.gov.ru, pulled 02.10.2026), reported in тыс. руб. and converted to whole rubles."
+      },
+      {
+        "year": "2023",
+        "revenue": null,
+        "profit": null,
+        "funds_balance_start": 96921000,
+        "funds_received": 399463000,
+        "funds_used": 270479000,
+        "funds_balance_end": 225905000,
+        "source_id": "s8998",
+        "note": "Non-profit filing: «Отчет о целевом использовании средств», lines 6100/6200/6300/6400. These are funds, not revenue. Read from the signed БФО filing (bo.nalog.gov.ru, pulled 02.10.2026), reported in тыс. руб. and converted to whole rubles."
+      },
+      {
+        "year": "2024",
+        "revenue": null,
+        "profit": null,
+        "funds_balance_start": 225905000,
+        "funds_received": 312867000,
+        "funds_used": 317100000,
+        "funds_balance_end": 221672000,
+        "source_id": "s8999",
+        "note": "Non-profit filing: «Отчет о целевом использовании средств», lines 6100/6200/6300/6400. These are funds, not revenue. Read from the signed БФО filing (bo.nalog.gov.ru, pulled 02.10.2026), reported in тыс. руб. and converted to whole rubles. The association's own Минюст activity report for 2024 (s0445) gives receipts of ₽309,867,111.76; the БФО gives 312,867 тыс. received, ₽3,000,000 more. Not revenue."
+      },
+      {
+        "year": "2025",
+        "revenue": null,
+        "profit": null,
+        "funds_balance_start": 221672000,
+        "funds_received": 139710000,
+        "funds_used": 146804000,
+        "funds_balance_end": 214578000,
+        "source_id": "s9000",
+        "note": "Non-profit filing: «Отчет о целевом использовании средств», lines 6100/6200/6300/6400. These are funds, not revenue. Read from the signed БФО filing (bo.nalog.gov.ru, pulled 02.10.2026), reported in тыс. руб. and converted to whole rubles."
       }
     ],
     "egrul_flags": [],
@@ -61807,7 +61923,8 @@
       "2026-09-19: cbst_tie added from the association's own Минюст report plus ЦБСТ's channel; event and personal tie only, no ownership or funding link.",
       "Full text read of the organization's own 2024 «Отчет о благотворительной деятельности» filed with Минюст (Главное управление по СПб и Ленинградской области, signed 14.04.2025, pulled 23.08.2026). SELF-DECLARED FINDING: total receipts ₽309,867,111.76 (₽309.87m) for 2024. Expenditure lines explicitly list purchases including «БПЛА, средства радиоэлектронной борьбы, иные виды оборудования» (UAVs, EW equipment, other equipment), operator training explicitly framed as preparing specialists for reconnaissance/combat-support UAV operation, and book publishing on military tactics. The narrative section explicitly states the organization ran the «Ежегодный всероссийский слет инструкторов и операторов боевых БПЛА 'Дронница'» — this is the FIRST primary document confirming Ассоциация «Взаимопомощь» as Дронница's actual legal/financial vehicle, not just an operator name association. Governing-body roster names Любимов Александр Сергеевич (Председатель), Мартынова Майя Владимировна, and Любимов Сергей Александрович (shared surname/patronymic pattern with the chairman — possible family control, flagged not confirmed) — no DOB/personal ИНН given in this document (all fields '-'). Tier upgraded from plumbing to money-layer: this is a real, quantified money-flow node, not incidental infrastructure.",
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0737).",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "[2026-10-03 first reading of the 02.10 pulls, approved by Alexey] financials replaced: БФО 2021–2025 (s8996–s9000), targeted-funds lines read in full. The former 2024 entry stored the Минюст report figure as revenue; it is kept in the 2024 note, since a non-profit's receipts are never revenue."
     ],
     "_verified_against": "Ассоциация «Взаимопомощь»'s own 2024 «Отчет о благотворительной деятельности», filed with Минюст СПб, signed 14.04.2025",
     "name_display": "Assotsiatsiya blagotvoritelnoy pomoshchi «Vzaimopomoshch»",
@@ -87414,7 +87531,29 @@
     "products": [
       "Биодроны-голуби Neiry (живые птицы с нейроимплантами)"
     ],
-    "financials": [],
+    "financials": [
+      {
+        "year": "2023",
+        "revenue": 250000,
+        "profit": -58540000,
+        "source_id": "s9014",
+        "note": "Lines 2110 / 2400. This is correction filing no. 1 for 2023 (№ 0710099_9701255148_2023_001); an earlier original exists. Total assets 94,877 тыс., equity 59,979 тыс. The 2025 filing (s9016) gives 152,876 тыс. and 117,979 тыс. at 31.12.2023, so the 2023 balance was restated again later. Read from the signed БФО filing (bo.nalog.gov.ru, pulled 02.10.2026), reported in тыс. руб. and converted to whole rubles."
+      },
+      {
+        "year": "2024",
+        "revenue": 13420000,
+        "profit": -134896000,
+        "source_id": "s9016",
+        "note": "Restated: taken from the prior-year column of the 2025 filing (s9016). The original 2024 filing (s9015) gives net loss (112,067) тыс. The 2025 filing also restates the 31.12.2024 balance: total assets 425,916 тыс., equity 156,148 тыс., against 394,402 and 178,975 in s9015. Read from the signed БФО filing (bo.nalog.gov.ru, pulled 02.10.2026), reported in тыс. руб. and converted to whole rubles."
+      },
+      {
+        "year": "2025",
+        "revenue": 54687000,
+        "profit": -191761000,
+        "source_id": "s9016",
+        "note": "Lines 2110 / 2400. This is correction filing no. 3 for 2025 (№ 0710099_9701255148_2025_003); earlier versions exist. Total assets 874,573 тыс., equity 422,324 тыс. Audited by ООО «АКГ «Я.Н.С. АУДИТ» (ИНН 7708534651). Read from the signed БФО filing (bo.nalog.gov.ru, pulled 02.10.2026), reported in тыс. руб. and converted to whole rubles."
+      }
+    ],
     "egrul_flags": [],
     "securing_measures": [],
     "securing_measures_checked_at": null,
@@ -87445,14 +87584,21 @@
       "other": []
     },
     "images": [],
-    "open_questions": [],
+    "open_questions": [
+      {
+        "text": "Losses grow with revenue while equity and assets keep rising (БФО 2023–2025, s9014–s9016), which suggests repeated capital injections. Check the capital-change form (0710004) in the PDFs and name the contributors before saying so.",
+        "source_id": "s9016",
+        "status": "open"
+      }
+    ],
     "sources": [],
     "confidence": null,
     "_verified": false,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": [
-      "2026-10-02 B5 brand review: brands[] set from the company's own site / trademark record, read in full."
+      "2026-10-02 B5 brand review: brands[] set from the company's own site / trademark record, read in full.",
+      "[2026-10-03 first reading of the 02.10 pulls, approved by Alexey] financials added from БФО 2023–2025 (s9014–s9016); the registry had none. 2024 is recorded as restated in the 2025 filing, with the original in the note."
     ],
     "memberships": [
       {
@@ -87831,7 +87977,43 @@
     "products": [
       "DGF-R4X300 — квадрокоптер для мониторинга ВЛЭП"
     ],
-    "financials": [],
+    "financials": [
+      {
+        "year": "2021",
+        "revenue": 1725000,
+        "profit": -307000,
+        "source_id": "s9001",
+        "note": "Lines 2110 / 2400. Read from the signed БФО filing (bo.nalog.gov.ru, pulled 02.10.2026), reported in тыс. руб. and converted to whole rubles."
+      },
+      {
+        "year": "2022",
+        "revenue": 1775000,
+        "profit": 1002000,
+        "source_id": "s9002",
+        "note": "Lines 2110 / 2400. Read from the signed БФО filing (bo.nalog.gov.ru, pulled 02.10.2026), reported in тыс. руб. and converted to whole rubles. The 2023 filing (s9003) restates 2022 net profit as 1,271 тыс. in its prior-year column."
+      },
+      {
+        "year": "2023",
+        "revenue": 3340000,
+        "profit": -2472000,
+        "source_id": "s9003",
+        "note": "Lines 2110 / 2400. Read from the signed БФО filing (bo.nalog.gov.ru, pulled 02.10.2026), reported in тыс. руб. and converted to whole rubles."
+      },
+      {
+        "year": "2024",
+        "revenue": 15947000,
+        "profit": 2530000,
+        "source_id": "s9004",
+        "note": "Lines 2110 / 2400. Read from the signed БФО filing (bo.nalog.gov.ru, pulled 02.10.2026), reported in тыс. руб. and converted to whole rubles."
+      },
+      {
+        "year": "2025",
+        "revenue": 56812000,
+        "profit": 7512000,
+        "source_id": "s9005",
+        "note": "Lines 2110 / 2400. Read from the signed БФО filing (bo.nalog.gov.ru, pulled 02.10.2026), reported in тыс. руб. and converted to whole rubles."
+      }
+    ],
     "egrul_flags": [],
     "securing_measures": [],
     "securing_measures_checked_at": null,
@@ -87883,7 +88065,9 @@
     "_verified": false,
     "_origin": "corrections:add_entities",
     "_raw": {},
-    "_corrected": "[2026-10-01 ЦБСТ resident sweep] Found by scripts/cbst_resident_sweep.py (ЦБСТ post 447). The registry held only the sister ООО «ИНТЭК БЕСПИЛОТНЫЕ СИСТЕМЫ»; the company ЦБСТ names in post 447 is this one, by legal name. Identity basis legal_name_printed (no ИНН in the post or on the channel page).",
+    "_corrected": [
+      "[2026-10-03 first reading of the 02.10 pulls, approved by Alexey] financials added from БФО 2021–2025 (s9001–s9005); the registry had none. The 2025 filing is signed «руководитель Калиновская Елена Евгеньевна», matching the registry."
+    ],
     "memberships": [
       {
         "program": "cbst-residency",
@@ -88529,7 +88713,42 @@
     "securing_measures_checked_at": null,
     "sanctions": [],
     "litigation": [],
-    "licences": [],
+    "licences": [
+      {
+        "number": "ЛСЗ0002690 225 Н",
+        "date": "19.02.2015",
+        "authority": "УПРАВЛЕНИЕ ФЕДЕРАЛЬНОЙ СЛУЖБЫ БЕЗОПАСНОСТИ РОССИЙСКОЙ ФЕДЕРАЦИИ ПО КРАСНОЯРСКОМУ КРАЮ",
+        "activity": "Разработка, производство, распространение шифровальных (криптографических) средств, информационных систем и телекоммуникационных систем, защищенных с использованием шифровальных (криптографических) средств, выполнение работ, оказание услуг в области шифрования информации, техническое обслуживание шифровальных (криптографических) средств […]",
+        "note": "Effective 25.02.2015 (ГРН 2152468671826, 11.11.2015).",
+        "source_id": "s8933"
+      },
+      {
+        "number": "Л024-00107-00/00582886",
+        "legacy_number": "1390",
+        "date": "04.03.2011",
+        "authority": "ФЕДЕРАЛЬНАЯ СЛУЖБА ПО ТЕХНИЧЕСКОМУ И ЭКСПОРТНОМУ КОНТРОЛЮ",
+        "activity": "Деятельность по технической защите конфиденциальной информации",
+        "note": "Effective 04.03.2011 (ГРН 2232400100690, 27.02.2023).",
+        "source_id": "s8933"
+      },
+      {
+        "number": "Л035-01211-24/01303047",
+        "legacy_number": "10296-л",
+        "date": "18.07.2024",
+        "authority": "МИНИСТЕРСТВО ОБРАЗОВАНИЯ КРАСНОЯРСКОГО КРАЯ",
+        "activity": "Лицензирование образовательной деятельности (за исключением указанной деятельности, осуществляемой частными образовательными организациями на территории инновационного центра \"Сколково\")",
+        "note": "Effective 18.07.2024 (ГРН 2242400376876). The DRONTECH.PRO site footer prints this licence number (s8941).",
+        "source_id": "s8933"
+      },
+      {
+        "number": "Л030-00114-77/00076773",
+        "date": "06.04.2020",
+        "authority": "ФЕДЕРАЛЬНАЯ СЛУЖБА ПО НАДЗОРУ В СФЕРЕ СВЯЗИ, ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ И МАССОВЫХ КОММУНИКАЦИЙ",
+        "activity": "Лицензирование оказания услуг связи",
+        "note": "Valid 28.07.2020 to 28.07.2030 (ГРН 2252401358658, 15.05.2025).",
+        "source_id": "s8933"
+      }
+    ],
     "trademarks": [],
     "patents": [],
     "foreign_components": [],
@@ -88585,7 +88804,8 @@
     ],
     "_corrected": [
       "Operator of the school DRONTECH.PRO, named by Чадаев as a resident of НПЦ «Ушкуйник» (s8876); identity from the school's own site footer (ИНН 2466077563, ОГРН 1022402646298, licence Л035-01211-24/01303047, s8941), the same licence number as in Чадаев's post, and the ЕГРЮЛ extract of 02.10.2026 (s8933).",
-      "2026-10-02 B5 brand review: brands[] set from the company's own site / trademark record, read in full."
+      "2026-10-02 B5 brand review: brands[] set from the company's own site / trademark record, read in full.",
+      "[2026-10-03 first reading of the 02.10 pulls, approved by Alexey] licences (4) and okved_additional (16) from the ЕГРЮЛ extract of 02.10.2026 (s8933), «Сведения о лицензиях» and «Сведения о дополнительных видах деятельности», read in full. as_of on each ОКВЭД is the date of the ЕГРЮЛ entry that added it."
     ],
     "brands": [
       {
@@ -88596,6 +88816,104 @@
         "source_id": "s8941",
         "as_of": "2026-10-02",
         "note": "drontech.pro («Школа дронов DRONTECH.PRO») prints ООО «МОПНИЭИ-Краскрипт», ОГРН 1022402646298, ИНН 2466077563 in its footer. It names one line of the company's business (a drone school and shop), not the company, so it is not the primary brand."
+      }
+    ],
+    "okved_additional": [
+      {
+        "code": "30.30.6",
+        "label": "Производство беспилотных авиационных систем",
+        "as_of": "2024-09-16",
+        "source_id": "s8933"
+      },
+      {
+        "code": "46.51",
+        "label": "Торговля оптовая компьютерами, периферийными устройствами к компьютерам и программным обеспечением",
+        "as_of": "2004-12-24",
+        "source_id": "s8933"
+      },
+      {
+        "code": "62.01",
+        "label": "Разработка компьютерного программного обеспечения",
+        "as_of": "2004-12-24",
+        "source_id": "s8933"
+      },
+      {
+        "code": "62.02",
+        "label": "Деятельность консультативная и работы в области компьютерных технологий",
+        "as_of": "2004-12-24",
+        "source_id": "s8933"
+      },
+      {
+        "code": "62.03",
+        "label": "Деятельность по управлению компьютерным оборудованием",
+        "as_of": "2024-03-20",
+        "source_id": "s8933"
+      },
+      {
+        "code": "63.11.1",
+        "label": "Деятельность по созданию и использованию баз данных и информационных ресурсов",
+        "as_of": "2004-12-24",
+        "source_id": "s8933"
+      },
+      {
+        "code": "72.19.4",
+        "label": "Научные исследования и разработки в области защиты информации",
+        "as_of": "2025-07-08",
+        "source_id": "s8933"
+      },
+      {
+        "code": "72.19.9",
+        "label": "Научные исследования и разработки в области естественных и технических наук прочие, не включенные в другие группировки",
+        "as_of": "2025-07-08",
+        "source_id": "s8933"
+      },
+      {
+        "code": "74.90.93",
+        "label": "Деятельность по мониторингу информационной безопасности средств и систем информатизации",
+        "as_of": "2024-03-20",
+        "source_id": "s8933"
+      },
+      {
+        "code": "74.90.94",
+        "label": "Деятельность по обеспечению защиты информации",
+        "as_of": "2024-03-20",
+        "source_id": "s8933"
+      },
+      {
+        "code": "74.90.99",
+        "label": "Деятельность в области защиты информации прочая",
+        "as_of": "2024-03-20",
+        "source_id": "s8933"
+      },
+      {
+        "code": "82.99",
+        "label": "Деятельность по предоставлению прочих вспомогательных услуг для бизнеса, не включенная в другие группировки",
+        "as_of": "2026-01-27",
+        "source_id": "s8933"
+      },
+      {
+        "code": "85.30",
+        "label": "Обучение профессиональное",
+        "as_of": "2025-08-27",
+        "source_id": "s8933"
+      },
+      {
+        "code": "85.41",
+        "label": "Образование дополнительное детей и взрослых",
+        "as_of": "2024-03-20",
+        "source_id": "s8933"
+      },
+      {
+        "code": "85.42",
+        "label": "Образование профессиональное дополнительное",
+        "as_of": "2024-03-20",
+        "source_id": "s8933"
+      },
+      {
+        "code": "95.11",
+        "label": "Ремонт компьютеров и периферийного компьютерного оборудования",
+        "as_of": "2004-12-24",
+        "source_id": "s8933"
       }
     ],
     "_verified_against": null,

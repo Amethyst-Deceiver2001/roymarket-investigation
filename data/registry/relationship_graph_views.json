@@ -26570,7 +26570,7 @@
           "source_id": "s6755",
           "as_of": "2025-05-27",
           "weight": 1.0,
-          "temporal_status": "historical",
+          "temporal_status": "current",
           "confidence": null,
           "detail": null,
           "grade": "doc"
@@ -42236,6 +42236,14 @@
           "degree": 2
         },
         {
+          "id": "nekrasov-aleksandr-viktorovich",
+          "kind": "person",
+          "label": "Некрасов Александр Викторович",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 3
+        },
+        {
           "id": "nina-olegovna-yanykina",
           "kind": "person",
           "label": "Нина Олеговна Яныкина",
@@ -46216,6 +46224,19 @@
           "label": null,
           "source_id": "s0332",
           "as_of": "2025-12-31",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "nekrasov-aleksandr-viktorovich",
+          "target": "ooo-konstruktorskoe-byuro-sinergiya",
+          "type": "directs",
+          "label": null,
+          "source_id": "s6755",
+          "as_of": "2025-05-27",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null,
