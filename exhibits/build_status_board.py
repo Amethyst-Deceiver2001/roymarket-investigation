@@ -272,7 +272,7 @@ def attach_commands(board):
             if cmds:
                 f["cmds"] = cmds
     queue, label, chain = [], "", []
-    for line in sb.pull_queue(board).splitlines():
+    for line in sb.pull_queue(board, used=sb.done_today(date.fromisoformat(board["generated"]))).splitlines():
         if line.startswith("#"):
             label = line.lstrip("# ")
         elif any(k in line for k in ("egrul_vypiska_pull", "bfo_pull", "screen_")):
