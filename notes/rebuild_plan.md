@@ -107,8 +107,13 @@ after the design system redo and a new landing page.
      source (`notes/brand_review_20261002.md`).
 6. **New reader pages** (chain views per case, entity pages for specialists) on
    the new system, citing through B4.
-7. **B6 explorer** (the old public explorer was retired and archived 02.10.2026, user) narrowed to neighbourhood-on-demand once two chain views
-   exist.
+7. **B6 neighbourhood explorer** (built locally 02.10.2026). The old public
+   explorer remains retired and archived. `exhibits/build_neighbourhood.py`
+   builds `exhibits/neighbourhood.html` from the current schema-v12 graph:
+   search by name, Latin name or identifier; inspect one or two undirected
+   steps; retain edge direction, temporal status, grade and source citation.
+   Results are paginated without silently dropping relationships. It is not
+   published under `docs/`; sharing a preview remains the user's decision.
 8. Later: Russian versions (written, not translated).
 
 ### V. Visuals (decided 2026-10-02; between the design system and the landing page)
