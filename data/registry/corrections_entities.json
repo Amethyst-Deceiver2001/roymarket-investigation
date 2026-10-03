@@ -42408,11 +42408,61 @@
             1359
           ],
           "note": "Post 1359 lists the prize nomination «Служение и созидание» in an announcement for the «Россия — страна возможностей» award."
-        }
+        },
+        "financials": [
+          {
+            "year": "2022",
+            "revenue": null,
+            "profit": null,
+            "source_id": "s9090",
+            "note": "Every line printed as «-» and total assets 0: the fund was registered on 14.11.2022. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2023",
+            "revenue": null,
+            "profit": 625000,
+            "funds_balance_start": 0,
+            "funds_received": 500795000,
+            "funds_used": 29062000,
+            "funds_balance_end": 471733000,
+            "source_id": "s9091",
+            "note": "Non-profit фонд (КНД 0710099): line 2110 printed as «-»; the funds_* figures are the «Отчет о целевом использовании средств» (lines 6100-6400), which are funds, not revenue. Received 500,795 тыс.: «Добровольные имущественные взносы и пожертвования» 500,000 (line 6230), profit from income-generating activity 625, other 170. Used 29,062: targeted measures 355 (social and charitable help), administration 18,207 (payroll 14,020), fixed assets 10,500. Total assets 750,696 тыс. Audit required, no auditor named in the export. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2024",
+            "revenue": null,
+            "profit": 8137000,
+            "funds_balance_start": 471733000,
+            "funds_received": 8138000,
+            "funds_used": 260452000,
+            "funds_balance_end": 219418000,
+            "source_id": "s9092",
+            "note": "Correction filing no. 2 for 2024. Line 2110 «-». Received 8,138 тыс. (profit from income-generating activity); used 260,452: targeted measures 227,974 (social and charitable help 30,444, «иные мероприятия» 197,530), administration 32,478. Cash-flow line 4222, payments for stakes in other organisations, 100,250 тыс.; financial investments 446,547 тыс. at year-end. Total assets 690,372 тыс. The printed closing balance 219,418 is as filed. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2025",
+            "revenue": null,
+            "profit": 5496000,
+            "funds_balance_start": 219418000,
+            "funds_received": 22636000,
+            "funds_used": 181739000,
+            "funds_balance_end": 60315000,
+            "source_id": "s9093",
+            "note": "Line 2110 not printed. Received 22,636 тыс.: «Добровольные имущественные взносы и пожертвования» 17,140 (line 6230), profit from income-generating activity 5,496. Used 181,739: targeted measures 10,475, administration 16,263, «Прочие» 155,000 (line 6350, not itemised). Financial investments 492,867 тыс., total assets 531,247 тыс. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          }
+        ],
+        "open_questions": [
+          {
+            "source_id": "s9091",
+            "status": "open",
+            "text": "2026-10-03: the 2023 filing shows ₽500,000 тыс. of «Добровольные имущественные взносы и пожертвования» (line 6230) in the fund's first full year, and the 2025 filing ₽155,000 тыс. of «Прочие» use of funds (line 6350). The export carries no notes, so the donor of the 500m and the purpose of the 155m are not stated; the fund's own annual report or the donor's records are needed."
+          }
+        ]
       },
       "why": [
         "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [1359] flagged by scripts/tg_post_coverage.py: namesake. Post 1359 lists the prize nomination «Служение и созидание» in an announcement for the «Россия — страна возможностей» award."
-      ]
+      ],
+      "verified_against": "s9090-s9093: the fund's own БФО filings for 2022-2025."
     },
     "ao-kompaniya-molot": {
       "set": {
@@ -43194,6 +43244,225 @@
       "why": [
         "2026-10-03: БФО for 2022 read in full (s9060). A non-profit with a commercial-style income statement and a targeted-funds report; funds recorded as funds, not revenue."
       ]
+    },
+    "ooo-aitk": {
+      "set": {
+        "financials": [
+          {
+            "year": "2021",
+            "revenue": 0,
+            "profit": -435000,
+            "source_id": "s9080",
+            "note": "Line 2110 printed as 0 (prior year 1,458 тыс.); cost of sales 388, net loss 435. Total assets 432 тыс. The 2022 filing prints 2021 net loss as 438. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2022",
+            "revenue": null,
+            "profit": 55000,
+            "source_id": "s9081",
+            "note": "Line 2110 printed as «-». Total assets 1,784,097 тыс. at year-end with equity (502) тыс. The 2023 filing restates 2022: net result (125) тыс. instead of 55, total assets 1,784,114 тыс. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2023",
+            "revenue": 2383647000,
+            "profit": 2512000,
+            "source_id": "s9082",
+            "note": "Cost of sales 2,357,104, gross profit 26,543. Total assets 265,854 тыс., equity 2,010 тыс., long-term borrowings 226,650 тыс., receivables 44,892 тыс., payables 28,466 тыс. Audit not required. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2024",
+            "revenue": 19457000,
+            "profit": 1295000,
+            "source_id": "s9083",
+            "note": "Cost of sales 18,032, gross profit 1,425. Total assets 2,499,453 тыс., equity 3,341 тыс., receivables 2,243,263 тыс., payables 2,164,420 тыс., long-term borrowings 307,850 тыс. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2025",
+            "revenue": 2208107000,
+            "profit": 35534000,
+            "source_id": "s9084",
+            "note": "Cost of sales 2,090,641, gross profit 117,466, profit from sales 34,497. Total assets 454,207 тыс., equity 30,337 тыс., long-term borrowings 323,388 тыс., receivables 349,651 тыс., payables 92,272 тыс. Charter capital 100 тыс. matches the ЕГРЮЛ extract of 19.09.2026 (₽100,000). Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          }
+        ],
+        "open_questions": [
+          {
+            "source_id": "s9082",
+            "status": "open",
+            "text": "2026-10-03: the filings show revenue of ₽2,383,647 тыс. in 2023 and ₽2,208,107 тыс. in 2025, but ₽19,457 тыс. in 2024 and none in 2022, with year-end receivables and payables of ₽1.67bn and ₽1.78bn (31.12.2022) and ₽2.24bn and ₽2.16bn (31.12.2024) against equity of ₽2m and ₽3.3m. The export carries no notes and names no counterparty, so who paid and who was paid is not stated. ЕИС contracts under supplier ИНН 3663143016, and the tie to АО «Эколибри» (which ООО «АИТК» co-founded), are the places to look."
+          }
+        ]
+      },
+      "verified_against": "s9080-s9084: ООО «АИТК»'s own БФО filings for 2021-2025; charter capital checked against the ЕГРЮЛ extract of 19.09.2026.",
+      "why": "First reading of the 03.10.2026 pull queue: five organisations of the chain behind АО «Эколибри», read in full."
+    },
+    "ooo-investproektgrupp": {
+      "set": {
+        "financials": [
+          {
+            "year": "2021",
+            "revenue": null,
+            "profit": -905000,
+            "source_id": "s9085",
+            "note": "Line 2110 printed as «-». Total assets 68,191 тыс., equity 52,427 тыс. Audit not required. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2022",
+            "revenue": 3992000,
+            "profit": -6191000,
+            "source_id": "s9086",
+            "note": "Gross profit 3,992 (no cost of sales), loss from sales 7,447, interest received 2,639. Total assets 233,295 тыс., equity 214,236 тыс. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2023",
+            "revenue": 9833000,
+            "profit": -35034000,
+            "source_id": "s9087",
+            "note": "Cost of sales 11,524, gross loss 1,691; income from participation in other organisations 25,631 (line 2310); other expenses 70,261 (line 2350). Total assets 226,120 тыс., equity 224,202 тыс. Charter capital 222,832 тыс. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2024",
+            "revenue": 12175000,
+            "profit": -4817000,
+            "source_id": "s9088",
+            "note": "No cost of sales printed. Total assets 343,543 тыс., equity 319,371 тыс. Charter capital 322,832 тыс., up ₽100,000 тыс. on 2023, which matches the ЕГРЮЛ entry of 23.09.2024 (ГРН 2245002023870, ₽322,832,000). Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2025",
+            "revenue": 15023000,
+            "profit": -3835000,
+            "source_id": "s9089",
+            "note": "Total assets 342,017 тыс., equity 315,334 тыс., fixed assets 96,791 тыс., financial investments 85,288 тыс. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          }
+        ],
+        "open_questions": [
+          {
+            "source_id": "s9088",
+            "status": "open",
+            "text": "2026-10-03: charter capital rose by ₽100,000 тыс. (222,832 to 322,832 тыс.), registered in the ЕГРЮЛ on 23.09.2024. Its founder Фонд «Созидание» reports a 2024 cash-flow payment of ₽100,250 тыс. for stakes in other organisations (s9092, line 4222). The filings do not say the two are the same payment; that needs the fund's own accounts or the capital-increase decision."
+          }
+        ]
+      },
+      "verified_against": "s9085-s9089: ООО «Инвестпроектгрупп»'s own БФО filings for 2021-2025; charter capital checked against the ЕГРЮЛ extract of 19.09.2026.",
+      "why": "First reading of the 03.10.2026 pull queue; founded by Фонд «Созидание», holds 25% of ООО «ЦКБР»."
+    },
+    "fond-moskovskiy-innovatsionnyy-klaster": {
+      "set": {
+        "financials": [
+          {
+            "year": "2021",
+            "revenue": null,
+            "profit": 897000,
+            "funds_balance_start": 1233207000,
+            "funds_received": 1156099000,
+            "funds_used": 514312000,
+            "funds_balance_end": 1874994000,
+            "source_id": "s9094",
+            "note": "Correction filing no. 1 for 2021. Non-profit фонд: line 2110 printed as «-»; funds_* are the «Отчет о целевом использовании средств», funds, not revenue. Total assets 1,902,951 тыс., equity 1,886,984 тыс. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2022",
+            "revenue": null,
+            "profit": 224000,
+            "funds_balance_start": 1874994000,
+            "funds_received": 2608752000,
+            "funds_used": 1125672000,
+            "funds_balance_end": 3358074000,
+            "source_id": "s9095",
+            "note": "Line 2110 «-». Total assets 3,404,689 тыс., equity 3,370,839 тыс. (targeted funds 3,358,074). Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2023",
+            "revenue": 166594000,
+            "profit": 112329000,
+            "funds_balance_start": 3358074000,
+            "funds_received": 2087289000,
+            "funds_used": 1839608000,
+            "funds_balance_end": 3605755000,
+            "source_id": "s9096",
+            "note": "Correction filing no. 1 for 2023. Line 2110 as printed (revenue of the income-generating activity); cost of sales 16,405, profit from sales 143,230. Funds_* are funds, not revenue. «Фонд недвижимого и особо ценного движимого имущества» (line 1360) rose to 12,712,377 тыс. from 12,765; fixed assets 12,753,170 тыс., of which 12,684,083 тыс. «для целей приносящей доход деятельности» (nil a year earlier). Total assets 16,602,432 тыс. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2024",
+            "revenue": 550826000,
+            "profit": 101327000,
+            "funds_balance_start": 3605755000,
+            "funds_received": 2628673000,
+            "funds_used": 2701606000,
+            "funds_balance_end": 3532822000,
+            "source_id": "s9097",
+            "note": "Correction filing no. 3 for 2024. Line 2110 as printed; cost of sales 265,219. «Целевые взносы» 2,527,346 тыс. (line 6220). Total assets 17,919,856 тыс., equity 17,468,557 тыс. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2025",
+            "revenue": 1108111000,
+            "profit": 297133000,
+            "funds_balance_start": 3532822000,
+            "funds_received": 17970386000,
+            "funds_used": 17625712000,
+            "funds_balance_end": 3877496000,
+            "source_id": "s9098",
+            "note": "Correction filing no. 1 for 2025. Line 2110 as printed; cost of sales 351,693, profit from sales 403,279. «Целевые взносы» 17,631,829 тыс. (line 6220); used 17,625,712: targeted measures 2,301,538, administration 1,341,619, fixed assets 13,982,057 (line 6330). Fixed assets 28,761,149 тыс., total assets 33,325,689 тыс., equity 31,095,633 тыс. Audited by ООО «Авантаж Аудит» (ИНН 5024045017), approved by the Наблюдательный совет, signed by руководитель Парабучев Алексей Игоревич, the director on file. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          }
+        ],
+        "open_questions": [
+          {
+            "source_id": "s9098",
+            "status": "open",
+            "text": "2026-10-03: the filings show «Целевые взносы» of ₽17,631,829 тыс. in 2025 (₽2,527,346 тыс. in 2024) and ₽13,982,057 тыс. of fixed assets bought from targeted funds in 2025, and for 2023 a jump in the «Фонд недвижимого и особо ценного движимого имущества» (line 1360) from ₽12,765 тыс. to ₽12,712,377 тыс. with ₽12,684,083 тыс. of fixed assets «для целей приносящей доход деятельности». The export carries no notes, so who paid the contributions, who transferred the property and what the assets are is not stated; the fund's annual report or the founder's records are needed. The fund founded ООО «Центр управления городской аэромобильностью» (s0505)."
+          }
+        ],
+        "sanctions_review": {
+          "as_of": "2026-10-03",
+          "outcome": "closed",
+          "note": "ГУР «war-sanctions» screen of 03.10.2026 returned one name-fuzzy record, https://war-sanctions.gur.gov.ua/en/uav/companies/15021, captioned «Association South Urals Industrial Cluster of Unmanned Aerial Vehicles». Its own identifiers are ИНН 7451471189 and ОГРН 1247400031746, neither equal to this fund's ИНН 9710075695 / ОГРН on file, and the script reports no identifier match: a different legal person sharing the word «cluster». OpenSanctions returned no match. No sanction of this fund is recorded."
+        }
+      },
+      "verified_against": "s9094-s9098: the fund's own БФО filings for 2021-2025.",
+      "why": "First reading of the 03.10.2026 pull queue; founder of ООО «Центр управления городской аэромобильностью»."
+    },
+    "ooo-dedal": {
+      "set": {
+        "financials": [
+          {
+            "year": "2021",
+            "revenue": null,
+            "profit": null,
+            "source_id": "s9099",
+            "note": "Correction filing no. 1 for 2021. Every line printed as «-»; total assets 40 тыс. (the charter capital, ₽40,000, matching the ЕГРЮЛ extract of 19.09.2026). Registered 03.08.2021. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2022",
+            "revenue": null,
+            "profit": -19000,
+            "source_id": "s9100",
+            "note": "Line 2110 «-»; cost of sales 19 (printed as an expense). Total assets 58 тыс., equity 21 тыс. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2023",
+            "revenue": null,
+            "profit": -13000,
+            "source_id": "s9101",
+            "note": "Line 2110 «-»; cost of sales 12, other expense 1. Total assets 51 тыс., equity 8 тыс. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2024",
+            "revenue": null,
+            "profit": -11000,
+            "source_id": "s9102",
+            "note": "Line 2110 «-»; cost of sales 8, other expense 1, other expenses 2 (line 2350). Total assets 52 тыс., equity (3) тыс. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          },
+          {
+            "year": "2025",
+            "revenue": null,
+            "profit": 0,
+            "source_id": "s9103",
+            "note": "Net result printed as 0. Total assets 325 тыс., equity (3) тыс. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 03.10.2026), reported in тыс. руб. and converted to whole rubles."
+          }
+        ],
+        "open_questions": []
+      },
+      "verified_against": "s9099-s9103: ООО «ДЕДАЛ»'s own БФО filings for 2021-2025; charter capital checked against the ЕГРЮЛ extract of 19.09.2026.",
+      "why": "First reading of the 03.10.2026 pull queue; co-founder, with ООО «АИТК», of АО «Эколибри»."
     }
   }
 }

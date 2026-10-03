@@ -20749,6 +20749,11 @@
     "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
+    "sanctions_review": {
+      "as_of": "2026-10-03",
+      "outcome": "closed",
+      "note": "OpenSanctions (s9105, screened 03.10.2026) returns one record for this personal ИНН, ru-inn-616899150213, score 1.0 by identifier, topics ['sanction.linked'], datasets ann_graph_topics and ext_ru_egrul, no referents. 'sanction.linked' is OpenSanctions' derived label for a person tied to a sanctioned entity, here his control of ООО «ИОНОС» (EU Council Decision (CFSP) 2026/1364, entry 801, s7429), which this record already states; it is not a listing of him. Checked against the official lists as downloaded by the 02.10.2026 sanctions watch (EU s9107, US s9109, UK s9108, Swiss s9106): no entry carries his ИНН, and no entry for a person with the family name Ионов has the given name Anton. The Ионов entries are Дмитрий Юлианович (EU, Swiss), Sergey and Dmitry (Swiss) and Aleksandr Viktorovich (US), none of them him. No personal sanction recorded; reopen if a later list names him."
+    },
     "_corrected": [
       "s7428 -- ООО «ИОНОС»'s own full signed ЕГРЮЛ выписка, pulled directly 2026-09-14.",
       "s7429 -- EU Council Decision (CFSP) 2026/1364, 15.6.2026, entry 801, confirming the entity's sanctioned status and the «Аляска»/«Алёша» connection."
