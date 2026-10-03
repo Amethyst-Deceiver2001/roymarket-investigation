@@ -14,7 +14,7 @@ This Mac session ("main") orchestrates; the others run on schedules and talk thr
 
 | Job | Where, when | Writes |
 |---|---|---|
-| Daily round: capped pulls and re-screens, ingest, first-reading export | Mac, launchd `ops/launchd/com.roymarket.daily-round.plist`, 09:15 local | mechanical outputs + `data/watch/daily/<date>.md`, committed and pushed by `daily_mac.py --publish`; texts to `pull-inbox` |
+| Daily round: capped pulls and re-screens, ingest, first-reading export | Mac, launchd `ops/launchd/com.roymarket.daily-round.plist`, 09:15 local (Python needs Full Disk Access: the repo is in ~/Downloads) | mechanical outputs + `data/watch/daily/<date>.md`, committed and pushed by `daily_mac.py --publish`; texts to `pull-inbox` |
 | Wayback batch | GitHub Actions `wayback.yml`, 01:23 UTC nightly | `data/registry/source_archives.json` on main |
 | Sanctions-list watch | GitHub Actions, Mondays | `watch/sanctions` branch, an issue on change |
 | Status check (board artifact) | cloud routine, 10:05 Berlin | `data/watch/status/`; replies in its thread only if something failed |

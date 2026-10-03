@@ -4,7 +4,7 @@ Since 03.10.2026 every job that the sessions hand to each other reads and writes
 
 | Path | Written by | Read by |
 |---|---|---|
-| `daily/<date>.md` | the Mac's scheduled round (`ops/run_daily_round.sh`, 09:15 local time) | status check routine, main session |
+| `daily/<date>.md` | the Mac's scheduled round (launchd `ops/launchd/com.roymarket.daily-round.plist`, 09:15 local time) | status check routine, main session |
 | `developments.json` | weekly scan routine (appends items); main session (sets `status: recorded\|dismissed` with a `note`, in the same commit as the correction it records) | `status_board.py` |
 | `weekly_scan_state.json`, `watchlist.md` | weekly scan routine (state); the user (watch list) | weekly scan routine, `status_board.py` |
 | `reports/<date>.md` | weekly scan routine | main session |

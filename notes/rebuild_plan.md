@@ -278,7 +278,7 @@ a registry fact.
 | Job | Tool | Where and who |
 |---|---|---|
 | What a record lacks or has let go stale | `status_board.py` (+ `exhibits/build_status_board.py`, private artifact AU3y9UL5M4i48UJ4BzrXSj) | anywhere, local |
-| The whole daily round in one command | `daily_mac.py --publish` via `ops/run_daily_round.sh` | the user's Mac, launchd at 09:15 local (03.10.2026); commits its outputs and `data/watch/daily/<date>.md` |
+| The whole daily round in one command | `daily_mac.py --publish` via launchd (`ops/launchd/`; needs Full Disk Access for Python, the repo is in ~/Downloads) | the user's Mac, launchd at 09:15 local (03.10.2026); commits its outputs and `data/watch/daily/<date>.md` |
 | Missing/stale ЕГРЮЛ, ЕГРИП, БФО; missing/stale OpenSanctions, ГУР, Aleph screens | `status_board.py --pull-queue` (8 + 8 a day, top tiers first; re-screens 4 OpenSanctions + 8 ГУР + 8 Aleph a day; ingest steps incl. the graph rebuild printed after) | the user's Mac; the queue is the user's standing go-ahead, run as printed |
 | First reading of what arrived | `first_reading.py export --push` (Mac; `--local-dir data/sources/_inbox` also writes the texts locally so `read` runs the same day), then `read` | worksheet for a human; never merged, never applied |
 | Sanctions lists by ИНН/ОГРН | `sanctions_watch.py` | GitHub Actions, Mondays; an issue opens on change; state on `watch/sanctions` |

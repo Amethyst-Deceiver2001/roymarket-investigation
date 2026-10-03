@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!-- Daily round at 09:15 local time. Install: cp to ~/Library/LaunchAgents/ and
-     launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.roymarket.daily-round.plist
-     Remove: launchctl bootout gui/$(id -u)/com.roymarket.daily-round
-     A run missed while the Mac sleeps starts on wake. -->
+<!-- Daily round at 09:15 local time (CLAUDE.md "Coordination"). A run missed while the Mac sleeps starts on wake.
+     The repo is in ~/Downloads, which macOS protects: grant Full Disk Access to the Python binary below
+     (System Settings > Privacy & Security > Full Disk Access > + > Cmd-Shift-G, paste the path).
+     Install: cp to ~/Library/LaunchAgents/ && launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.roymarket.daily-round.plist
+     Remove:  launchctl bootout gui/$(id -u)/com.roymarket.daily-round -->
 <plist version="1.0">
 <dict>
   <key>Label</key><string>com.roymarket.daily-round</string>
   <key>ProgramArguments</key>
-  <array><string>/Users/ak/Downloads/roymarket-investigation/ops/run_daily_round.sh</string></array>
+  <array><string>/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/bin/python3.14</string><string>-u</string><string>scripts/daily_mac.py</string><string>--publish</string></array>
+  <key>WorkingDirectory</key><string>/Users/ak/Downloads/roymarket-investigation</string>
+  <key>EnvironmentVariables</key>
+  <dict><key>PATH</key><string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string></dict>
   <key>StartCalendarInterval</key>
   <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>15</integer></dict>
   <key>StandardOutPath</key><string>/Users/ak/Library/Logs/roymarket-daily-round.log</string>
