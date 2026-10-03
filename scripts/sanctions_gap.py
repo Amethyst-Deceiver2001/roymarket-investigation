@@ -68,11 +68,17 @@ def regimes(e: dict) -> list[tuple[str, str | None]]:
 def latest_revenue(e: dict, src_type: dict):
     """(rubles, year, basis): basis says whether the figure is a filed БФО or relayed by others."""
     rows = [f for f in e.get("financials") or [] if f.get("revenue")]
+    nonprofit_name = re.match(r"^(АНО|Фонд|Ассоциация|НКО|Союз)\b", e.get("name_ru") or "")
     if not rows:
+        # A non-profit's БФО carries funds received (line 6200) and no revenue line.
+        funds = [f for f in e.get("financials") or [] if f.get("funds_received")]
+        if nonprofit_name and funds:
+            f = max(funds, key=lambda x: str(x.get("year")))
+            return float(f["funds_received"]), str(f.get("year")), "non-profit funds, not revenue"
         return None, None, ""
     f = max(rows, key=lambda x: str(x.get("year")))
     kind = src_type.get(f.get("source_id")) or ""
-    nonprofit = kind == "minjust" or re.match(r"^(АНО|Фонд|Ассоциация|НКО|Союз)\b", e.get("name_ru") or "")
+    nonprofit = kind == "minjust" or nonprofit_name
     if nonprofit:
         # CLAUDE.md: a non-profit's funds are never presented as revenue.
         return float(f["revenue"]), str(f.get("year")), "non-profit funds, not revenue"
