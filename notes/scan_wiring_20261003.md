@@ -46,3 +46,13 @@ Post 742 restates firmware 1.71 for в.4, which matches the record; it adds noth
 ## 3. Then
 
 `python3 scripts/build_relationship_graph.py && python3 scripts/check_registry.py`, then set the matching `developments.json` items to `recorded` with a note naming the source id.
+
+## Applied (Mac, 03.10.2026)
+
+The five posts were already in `data/roymarket.db` and already had `TGPOST_` files, so no scan was run; cataloguing gave them source ids: ru3mx 741 = s9046, ru3mx 742 = s9047, kb_spektr 337 = s9048, ano_cbst 2565 = s9049, nashapravdafond 686 = s9050. Each was read in full before anything below.
+
+- **Сидякин:** role added (Duma IX committee chair, source s9050, `from` null) plus an open question for the vote date; duma.gov.ru served an empty shell to a scripted fetch, so the plenary record still needs a browser read. Наша Правда's «Мы давно сотрудничаем с Александром…» added to `quotes_manual.json`.
+- **«Булат» в.6:** version `bulat-v6` added (s9046). Note: post 741 is dated 05.06.2026, not a new post.
+- **КБ «СПЕКТР»:** post 337 (14.08.2026) recorded in the `sells_for` → `ooo-mptm` record's `open` field as an announcement; edge stays `listed`. s8737 cited for post 321 is correct (a web capture of posts 321–322; s8848 is the text file).
+- **Ткачук:** not made; waiting on the user (record without patronymic or not).
+- **For the cloud session:** set the matching `developments.json` items to `recorded` with these source ids; the file is not on the Mac.

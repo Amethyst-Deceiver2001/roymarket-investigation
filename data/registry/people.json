@@ -360,6 +360,14 @@
         "from": "2025-06-24",
         "to": null,
         "source_id": "s8696"
+      },
+      {
+        "entity_slug": null,
+        "body": "Государственная Дума IX созыва",
+        "title": "Chair, State Duma Committee on Digital Development and Artificial Intelligence (председатель комитета Госдумы по цифровому развитию и искусственному интеллекту)",
+        "from": null,
+        "to": null,
+        "source_id": "s9050"
       }
     ],
     "sanctions": [
@@ -410,6 +418,10 @@
       {
         "source_id": "s8696",
         "text": "2026-10-01: ЦБСТ's own posts give Сидякин three different titles: «член наблюдательного совета ЦБСТ» (s8695, 19.06.2025), «член правления ЦБСТ» (s8696 24.06.2025; also posts 866 and 894 on 30.06 and 08.07.2025, archived as s8697, s8698) and «секретарь наблюдательного совета ЦБСТ» (s8699, 18.07.2025). The supervisory board (chair Якушев) and the правление are different bodies. Not resolved whether he sits on both or the channel mislabels; check ЦБСТ's governance page or charter."
+      },
+      {
+        "source_id": "s9049",
+        "text": "2026-10-03: date of the Duma vote electing Сидякин chair of the new committee is not read from a Duma record. ЦБСТ post 2565 (24.09.2026, s9049) reports only that Медведев «предложил кандидатуру»; Фонд «Наша Правда» post 686 (30.09.2026, s9050) congratulates him «с назначением на пост председателя комитета», so the appointment had happened by 30.09.2026. Press (zona.media, 24.09.2026) gives the committee's remit as marketplaces, UAVs and creative industries: a lead, not read from a Duma document. duma.gov.ru served an empty page shell to a scripted fetch on 03.10.2026; read the plenary resolution in a browser and set `from`."
       }
     ],
     "passport": "Russian passport 4510 747365; travel passport 530004691 / 100113962 / 531064240",
@@ -419,7 +431,8 @@
       "2026-08-25: photo/social-media OSINT research pass.",
       "2026-08-25: personal Telegram/VK confirmed via t.me/asidyakin's own bio — added to social[].",
       "2026-08-26: user-supplied RuPEP.org profile (PDF export, last profile update per RuPEP 19.05.2026) — filled in the patronymic (Геннадьевич, previously missing), birthplace and personal ИНН directly from RuPEP's own record (s2535). DOB (17.11.1977) and Segezha birthplace/career history corroborate what was already independently sourced. Also carries a full income-declaration history (2011-2017, real estate/vehicles) and a family/business-connections panel (father/sons/daughter/ex-wife/in-laws, mostly \"Совместное путешествие\"-inferred, i.e. joint-travel-record-based — not independently verified and not wired here per the PII-scope rule, family members aren't network principals in their own right) — kept in the archived PDF for reference. A headshot photo is embedded in the PDF too but this record already carries a sourced er.ru party portrait, so the existing photo field was left as-is (extracted RuPEP headshot saved to docs/images/aleksandr-sidyakin_portrait_rupep.jpg in case a second image is wanted later).",
-      "2026-09-15: graph-connectivity audit -- this ЦБСТ Supervisory Board role had entity_slug null, generating no graph edge (same bug class fixed for vladimir-vadimovich-yakushev/andrey-bezrukov earlier the same day per notes/rebuild_plan.md, which missed this record and 2 siblings). Backfilled entity_slug to ano-tsbst-centre-for-unmanned-systems-technologies. Checked TRANSCRIPT_20250421_peregovorka-cbst-er-sidyakin-bezrukov.txt (the only archived source naming both Сидякин and ЦБСТ together) for direct corroboration of the \"Secretary of the Supervisory Board\" title specifically -- it does NOT independently confirm this; he's introduced there only by his United Russia executive-committee title, and the board-chairmanship discussion in that transcript is about Yakushev, not him. The title itself is not newly sourced by this pass -- source_id left null (existing state, a placeholder per this registry's own convention, not fabricated)."
+      "2026-09-15: graph-connectivity audit -- this ЦБСТ Supervisory Board role had entity_slug null, generating no graph edge (same bug class fixed for vladimir-vadimovich-yakushev/andrey-bezrukov earlier the same day per notes/rebuild_plan.md, which missed this record and 2 siblings). Backfilled entity_slug to ano-tsbst-centre-for-unmanned-systems-technologies. Checked TRANSCRIPT_20250421_peregovorka-cbst-er-sidyakin-bezrukov.txt (the only archived source naming both Сидякин and ЦБСТ together) for direct corroboration of the \"Secretary of the Supervisory Board\" title specifically -- it does NOT independently confirm this; he's introduced there only by his United Russia executive-committee title, and the board-chairmanship discussion in that transcript is about Yakushev, not him. The title itself is not newly sourced by this pass -- source_id left null (existing state, a placeholder per this registry's own convention, not fabricated).",
+      "2026-10-03: Duma committee chair role added from Фонд «Наша Правда» post 686 (s9050, 30.09.2026), read in full: «поздравляет Александра Сидякина с назначением на пост председателя комитета Госдумы по цифровому развитию и искусственному интеллекту». ЦБСТ post 2565 (s9049, 24.09.2026), read in full, reports the nomination by Медведев and Безруков's statement that ЦБСТ «окажет ему всю необходимую экспертную поддержку». `from` left null: the vote date is not in either post (open question). Weekly scan trial, notes/scan_wiring_20261003.md."
     ],
     "_verified_against": "OpenSanctions API 2026-08-24 full-roster screening, cross-checked against registry's own pre-existing role/context text",
     "opensanctions_matches": [
