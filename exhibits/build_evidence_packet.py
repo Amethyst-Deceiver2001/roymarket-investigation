@@ -42,7 +42,7 @@ GAP_AS_OF = "02.10.2026"   # date of the exhibits/ snapshot; pass --gap/--gap-as
 GRADE_WORD = {"doc": "Documented", "rep": "Reported", "open": "Not documented"}
 REGIME_LABEL = {"eu": "EU", "us": "US (OFAC)", "uk": "UK", "ch": "Switzerland (SECO)", "ua": "Ukraine",
                 "ca": "Canada", "au": "Australia", "jp": "Japan", "nz": "New Zealand"}
-EDGE_WORDS = {"owns": "owns", "founded": "founded", "directs": "directs", "role": "role at",
+EDGE_WORDS = {"owns": "owns", "founded": "is a recorded participant of", "directs": "directs", "role": "role at",
               "cbst_tie": "tie to ЦБСТ", "related": "related to", "sells_for": "sells for",
               "procures": "buys from", "resident_of": "resident of", "participated_in": "took part in",
               "member_of": "member of", "produces": "makes"}

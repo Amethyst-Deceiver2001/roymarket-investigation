@@ -61,7 +61,7 @@ Other links in the record:
 
 | Link | Grade | Source |
 |---|---|---|
-| АО «УК СМАРТ» founded ООО «Смарт Текнолоджис» | Documented | [E2] |
+| АО «УК СМАРТ» is a recorded participant of ООО «Смарт Текнолоджис» | Documented | [E2] |
 | ООО «Смарт Текнолоджис» resident of Резидентство ЦБСТ (resident) | Documented | [E8] |
 
 ## 6. Products and what is said about their use

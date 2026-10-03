@@ -62,7 +62,7 @@ Other links in the record:
 
 | Link | Grade | Source |
 |---|---|---|
-| ООО «ЦЮС» founded ООО «Метаскан» | Documented | [E1] |
+| ООО «ЦЮС» is a recorded participant of ООО «Метаскан» | Documented | [E1] |
 
 ## 6. Products and what is said about their use
 

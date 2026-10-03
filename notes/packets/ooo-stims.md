@@ -43,9 +43,9 @@ Other links in the record:
 
 | Link | Grade | Source |
 |---|---|---|
-| ООО «Аметист Кэпитал» founded ООО «СТИМС» | Documented | [E1] |
+| ООО «Аметист Кэпитал» is a recorded participant of ООО «СТИМС» | Documented | [E1] |
 | Мингалимов Ленар Нуриахметович directs ООО «СТИМС» | Documented | [E1] |
-| Мингалимов Ленар Нуриахметович founded ООО «СТИМС» | Documented | [E1] |
+| Мингалимов Ленар Нуриахметович is a recorded participant of ООО «СТИМС» | Documented | [E1] |
 
 ## 6. Products and what is said about their use
 
