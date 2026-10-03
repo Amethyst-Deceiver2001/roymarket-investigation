@@ -46,6 +46,7 @@ import urllib.parse
 import urllib.request
 from datetime import date
 from pathlib import Path
+from source_files import write_new  # never overwrite a catalogued source
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCES = ROOT / "data" / "sources"
@@ -166,7 +167,7 @@ def main() -> int:
             time.sleep(DELAY_SECONDS)
             continue
 
-        out_path.write_bytes(pdf)
+        out_path = write_new(out_path, pdf)
         ok += 1
         print(f"  [{i}/{len(targets)}] ok  {inn}  {name[:40]}  "
               f"({len(pdf):,} bytes → {out_path.name})")

@@ -47,6 +47,7 @@ import urllib.parse
 import urllib.request
 from datetime import date
 from pathlib import Path
+from source_files import write_new  # never overwrite a catalogued source
 
 REPO = Path(__file__).resolve().parent.parent
 ENTITIES = REPO / "data" / "registry" / "entities.json"
@@ -153,11 +154,9 @@ def main() -> int:
             time.sleep(DELAY_SECONDS)
             continue
 
-        out_path.write_text(
-            json.dumps({"queried_inn": inn, "queried_slug": slug,
+        out_path = write_new(out_path, json.dumps({"queried_inn": inn, "queried_slug": slug,
                        "queried_name": e["name_ru"], "pulled_date": today,
-                       "raw": row}, ensure_ascii=False, indent=2) + "\n",
-            encoding="utf-8")
+                       "raw": row}, ensure_ascii=False, indent=2) + "\n")
         ok += 1
         if i % 10 == 0 or i == len(targets):
             print(f"  [{i}/{len(targets)}] {ok} ok, {mismatch} no-match, "

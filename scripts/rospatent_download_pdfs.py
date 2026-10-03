@@ -49,6 +49,7 @@ import time
 import urllib.error
 import urllib.request
 from pathlib import Path
+from source_files import write_new  # never overwrite a catalogued source
 
 REPO = Path(__file__).resolve().parent.parent
 SOURCES_DIR = REPO / "data" / "sources"
@@ -115,7 +116,7 @@ def main() -> None:
             time.sleep(DELAY_SECONDS)
             continue
 
-        pdf_path.write_bytes(data)
+        pdf_path = write_new(pdf_path, data)
         print(f"  [{i}/{len(json_files)}] {jpath.name}: wrote {pdf_path.name} ({len(data)} bytes)")
         ok += 1
         time.sleep(DELAY_SECONDS)

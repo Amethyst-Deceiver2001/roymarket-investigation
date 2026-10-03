@@ -50,6 +50,7 @@ import time
 import urllib.error
 import urllib.request
 from pathlib import Path
+from source_files import write_new  # never overwrite a catalogued source
 
 REPO = Path(__file__).resolve().parent.parent
 SOURCES_DIR = REPO / "data" / "sources"
@@ -208,7 +209,7 @@ def main() -> None:
             time.sleep(DELAY_SECONDS)
             continue
 
-        (SOURCES_DIR / f"{base_name}.html").write_text(html, encoding="utf-8")
+        write_new(SOURCES_DIR / f"{base_name}.html", html)
         parsed = parse_record(html)
         parsed["slug"] = slug
         parsed["source_url"] = url
@@ -218,11 +219,11 @@ def main() -> None:
             try:
                 req = urllib.request.Request(img_url, headers={"User-Agent": USER_AGENT})
                 with urllib.request.urlopen(req, timeout=60) as resp:
-                    (SOURCES_DIR / f"{base_name}.jpg").write_bytes(resp.read())
+                    write_new(SOURCES_DIR / f"{base_name}.jpg", resp.read())
             except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as ex:
                 print(f"    (image fetch failed: {ex})")
 
-        json_path.write_text(json.dumps(parsed, ensure_ascii=False, indent=2), encoding="utf-8")
+        json_path = write_new(json_path, json.dumps(parsed, ensure_ascii=False, indent=2))
         print(f"  [{i}/{len(pending)}] {base_name}: wrote html+json"
               f"{'+jpg' if img_url else ''} -- {parsed.get('mark_type') or '?'}")
         ok += 1

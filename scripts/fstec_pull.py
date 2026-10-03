@@ -70,6 +70,7 @@ import urllib.parse
 import urllib.request
 from datetime import date
 from pathlib import Path
+from source_files import write_new  # never overwrite a catalogued source
 
 REPO = Path(__file__).resolve().parent.parent
 ENTITIES = REPO / "data" / "registry" / "entities.json"
@@ -134,7 +135,7 @@ def cmd_fetch(_args) -> None:
         print(f"  {len(rows)} rows")
 
         out = SOURCES / f"FSTEC_{reg_slug.upper()}_{stamp}.json"
-        out.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
+        out = write_new(out, json.dumps(rows, ensure_ascii=False, indent=2))
 
         by_inn: dict[str, list] = {}
         for row in rows:

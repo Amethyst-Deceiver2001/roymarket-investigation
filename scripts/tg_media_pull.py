@@ -48,6 +48,7 @@ import urllib.request
 from pathlib import Path
 
 from id_patterns import uav_score
+from source_files import write_new  # never overwrite a catalogued source
 
 REPO = Path(__file__).resolve().parent.parent
 DB = REPO / "data" / "roymarket.db"
@@ -173,7 +174,7 @@ def cmd_fetch(args) -> None:
             dest = SOURCES_DIR / fname
             req = urllib.request.Request(url, headers={"User-Agent": UA})
             with urllib.request.urlopen(req, timeout=30) as resp:
-                dest.write_bytes(resp.read())
+                dest = write_new(dest, resp.read())
             saved.append(str(dest.relative_to(REPO)))
             print(f"msg_id {msg_id}: saved {fname}", file=sys.stderr)
 

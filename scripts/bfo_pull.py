@@ -36,6 +36,7 @@ import unicodedata
 from pathlib import Path
 
 import requests
+from source_files import write_new  # never overwrite a catalogued source
 
 BASE = "https://bo.nalog.gov.ru"
 ROOT = Path(__file__).resolve().parent.parent
@@ -118,7 +119,7 @@ def download_filing(correction_id: int, out_path: Path) -> int:
     r = get_with_retry(f"{BASE}/download/bfo/pdf/{correction_id}", timeout=60)
     if r.headers.get("content-type", "").split(";")[0] != "application/pdf":
         raise RuntimeError(f"unexpected content-type {r.headers.get('content-type')!r}")
-    out_path.write_bytes(r.content)
+    out_path = write_new(out_path, r.content)
     return len(r.content)
 
 

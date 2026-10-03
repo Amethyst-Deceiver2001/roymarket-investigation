@@ -61,6 +61,7 @@ import urllib.parse
 import urllib.request
 from datetime import date
 from pathlib import Path
+from source_files import write_new  # never overwrite a catalogued source
 
 REPO = Path(__file__).resolve().parent.parent
 ENTITIES = REPO / "data" / "registry" / "entities.json"
@@ -187,7 +188,7 @@ def process(entities: list[dict], today: str, force: bool, limit: int | None,
             matches.append(entry)
             if inn_match or ogrn_match:
                 out = SOURCES / f"GUR_{e.get('inn') or slug}_{today.replace('-', '')}_{slug}.html"
-                out.write_text(profile_html, encoding="utf-8")
+                out = write_new(out, profile_html)
                 print(f"    *** ID-CONFIRMED: {slug} <-> {link} -- saved {out.name} ***")
             time.sleep(DELAY_SECONDS)
 

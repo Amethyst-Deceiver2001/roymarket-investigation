@@ -58,6 +58,7 @@ import urllib.parse
 import urllib.request
 from datetime import date
 from pathlib import Path
+from source_files import write_new  # never overwrite a catalogued source
 
 REPO = Path(__file__).resolve().parent.parent
 ENTITIES = REPO / "data" / "registry" / "entities.json"
@@ -158,7 +159,7 @@ def process(records: list, kind: str, api_key: str, today: str, force: bool,
         if matches:
             hit_count += 1
             out = SOURCES / f"ALEPH_{r.get('inn') or r.get('inn_personal') or slug}_{today.replace('-', '')}_{slug}.json"
-            out.write_text(json.dumps({"query": q, "response": resp}, ensure_ascii=False, indent=2), encoding="utf-8")
+            out = write_new(out, json.dumps({"query": q, "response": resp}, ensure_ascii=False, indent=2))
             print(f"    [{i}/{len(targets)}] {slug}: {len(matches)} result(s), top: "
                   f"{matches[0]['caption']} ({matches[0]['dataset_label']}) — saved {out.name}")
         else:

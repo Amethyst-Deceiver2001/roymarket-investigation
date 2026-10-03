@@ -57,6 +57,7 @@ import urllib.parse
 import urllib.request
 from datetime import date
 from pathlib import Path
+from source_files import write_new  # never overwrite a catalogued source
 
 REPO = Path(__file__).resolve().parent.parent
 ENTITIES = REPO / "data" / "registry" / "entities.json"
@@ -155,7 +156,7 @@ def main() -> None:
 
         if items:
             out = SOURCES / f"REESTR_DIGITAL_{inn}_{today.replace('-', '')}.json"
-            out.write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
+            out = write_new(out, json.dumps(items, ensure_ascii=False, indent=2))
 
         ENTITIES.write_text(json.dumps(entities, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 

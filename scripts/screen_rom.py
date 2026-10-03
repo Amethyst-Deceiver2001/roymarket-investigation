@@ -41,6 +41,7 @@ import urllib.error
 import urllib.request
 from datetime import date
 from pathlib import Path
+from source_files import write_new  # never overwrite a catalogued source
 
 REPO = Path(__file__).resolve().parent.parent
 ENTITIES = REPO / "data" / "registry" / "entities.json"
@@ -113,7 +114,7 @@ def main() -> None:
             hits_found += 1
             slug = ent.get("slug") or slugify(ent.get("name_ru", inn))
             out = SOURCES / f"ROM_{inn}_{today.replace('-', '')}_{slug}.json"
-            out.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+            out = write_new(out, json.dumps(result, ensure_ascii=False, indent=2))
             print(f"  {i}/{len(targets)}  {inn}  *** {len(rows)} active securing measure(s) — saved {out.name} ***")
         else:
             print(f"  {i}/{len(targets)}  {inn}  clean (0)")

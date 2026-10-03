@@ -107,6 +107,7 @@ import urllib.parse
 import urllib.request
 from datetime import date
 from pathlib import Path
+from source_files import write_new  # never overwrite a catalogued source
 
 REPO = Path(__file__).resolve().parent.parent
 ENTITIES = REPO / "data" / "registry" / "entities.json"
@@ -309,8 +310,7 @@ def cmd_scan(args) -> int:
             zero += 1
         else:
             hits += 1
-            out_path = SOURCES / f"ZAKUPKI_{inn}_{today}_supplier-search.html"
-            out_path.write_text(html, encoding="utf-8")
+            out_path = write_new(SOURCES / f"ZAKUPKI_{inn}_{today}_supplier-search.html", html)
             shown = ", ".join(reg_numbers[:5]) + (f", +{len(reg_numbers) - 5} more" if len(reg_numbers) > 5 else "")
             flag = "  [INCOMPLETE — pagination failed partway, re-run scan --force]" if incomplete else ""
             print(f"  [{i}/{len(targets)}] HIT      {inn}  {t['name'][:40]}  — {count} contract(s): {shown}{flag}")
@@ -422,7 +422,7 @@ def cmd_fetch_contracts(args) -> int:
 
         # supplier ИНН isn't known here without parsing — key the filename on
         # regNumber alone, a human/corrections.json pass assigns it to an entity.
-        out_path.write_text(html, encoding="utf-8")
+        out_path = write_new(out_path, html)
         print(f"  [{i}/{len(reg_numbers)}] saved   {reg}  -> {out_path.relative_to(REPO)}")
         time.sleep(DELAY_SECONDS)
 
@@ -470,7 +470,7 @@ def cmd_fetch_documents(args) -> int:
                 print(f"  [{i}/{len(by_reg)}] FAILED card  {reg}  ({ex})")
                 time.sleep(DELAY_SECONDS)
                 continue
-            card_path.write_text(html, encoding="utf-8")
+            card_path = write_new(card_path, html)
             time.sleep(DELAY_SECONDS)
 
         contract_info_id = extract_contract_info_id(html)
@@ -517,7 +517,7 @@ def cmd_fetch_documents(args) -> int:
                     ext = fname.rsplit(".", 1)[-1].lower()[:5]
 
             out_path = SOURCES / f"ZAKUPKI_ATTACH_{key}_{reg}_{slug}_{uid8}.{ext}"
-            out_path.write_bytes(data)
+            out_path = write_new(out_path, data)
             total_files += 1
             total_bytes += len(data)
             print(f"      [{j}/{len(attachments)}] saved   {att['label'][:40]}  ({len(data):,}B) -> {out_path.name}")

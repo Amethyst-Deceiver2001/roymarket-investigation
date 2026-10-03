@@ -85,6 +85,7 @@ import urllib.error
 import urllib.request
 from datetime import date, timedelta
 from pathlib import Path
+from source_files import write_new  # never overwrite a catalogued source
 
 REPO = Path(__file__).resolve().parent.parent
 ENTITIES = REPO / "data" / "registry" / "entities.json"
@@ -239,8 +240,7 @@ def process(targets: list, kind: str, api_key: str, today: str) -> int:
                 hit_count += 1
                 inn_or_slug = r.get("inn") or r.get("inn_personal") or slug
                 out = SOURCES / f"OPENSANCTIONS_{inn_or_slug}_{today.replace('-', '')}_{slug}.json"
-                out.write_text(json.dumps({"query": q, "response": result}, ensure_ascii=False, indent=2),
-                                encoding="utf-8")
+                out = write_new(out, json.dumps({"query": q, "response": result}, ensure_ascii=False, indent=2))
                 print(f"    *** {slug}: best score {best:.2f} — {matches[0]['caption']} — saved {out.name} ***")
             else:
                 print(f"    {slug}: best score {best:.2f} (below archive threshold, still recorded)")

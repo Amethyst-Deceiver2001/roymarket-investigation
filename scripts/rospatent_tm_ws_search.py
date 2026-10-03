@@ -81,6 +81,7 @@ import ssl
 import struct
 import time
 from pathlib import Path
+from source_files import write_new  # never overwrite a catalogued source
 
 REPO = Path(__file__).resolve().parent.parent
 HOST = "searchplatform.rospatent.gov.ru"
@@ -400,7 +401,7 @@ def main() -> None:
                 time.sleep(DELAY_SECONDS)
 
             if record["hits"]:
-                out_path.write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding="utf-8")
+                out_path = write_new(out_path, json.dumps(record, ensure_ascii=False, indent=2))
                 entities_with_hits += 1
                 hits_total += len(record["hits"])
                 print(f"  [{i}/{len(targets)}] {slug}: {len(record['hits'])} hit(s) across "

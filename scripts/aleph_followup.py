@@ -57,6 +57,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from id_patterns import norm  # noqa: E402
+from source_files import write_new  # never overwrite a catalogued source
 
 ENV_FILE = REPO / ".env"
 API_BASE = "https://aleph.occrp.org/api/2/entities"
@@ -227,7 +228,7 @@ def cmd_fetch(args) -> int:
         # overwrote two files on disk in practice; hash the full id instead.
         id_hash = hashlib.sha1(eid.encode("utf-8")).hexdigest()[:8]
         fname = f"ALEPH_DETAIL_{slug}_{today}_{id_hash}.json"
-        (SOURCES / fname).write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
+        fname = write_new(SOURCES / fname, json.dumps(d, ensure_ascii=False, indent=1)).name
         cache[fname] = cache.get(fname, {})
         cache[fname]["type"] = "aleph_entity_detail"
         cache[fname]["as_of"] = date.today().isoformat()

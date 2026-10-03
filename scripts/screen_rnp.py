@@ -42,6 +42,7 @@ import time
 from pathlib import Path
 
 import requests
+from source_files import write_new  # never overwrite a catalogued source
 
 ROOT = Path(__file__).resolve().parent.parent
 REG = ROOT / "data" / "registry"
@@ -143,7 +144,7 @@ def main() -> int:
         verdict, html = check(inn)
         if verdict == "hit":
             out = SOURCES / f"RNP_{inn}_{stamp}_debarment.html"
-            out.write_text(html, encoding="utf-8")
+            out = write_new(out, html)
             matches.append({
                 "registry": REGISTRY_LABEL,
                 "archived_as": out.name,

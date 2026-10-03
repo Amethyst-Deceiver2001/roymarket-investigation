@@ -149,6 +149,7 @@ import urllib.parse
 import urllib.request
 from datetime import date
 from pathlib import Path
+from source_files import write_new  # never overwrite a catalogued source
 
 REPO = Path(__file__).resolve().parent.parent
 PEOPLE = REPO / "data" / "registry" / "people.json"
@@ -514,10 +515,9 @@ def main() -> None:
         raw_path = None
         if raw_by_role["upr"] or raw_by_role["uchr"]:
             SOURCES_DIR.mkdir(parents=True, exist_ok=True)
-            raw_path = SOURCES_DIR / f"FNS_PB_UPR_UCHR_{inn}_{today.replace('-', '')}_{person['slug']}-raw.json"
-            raw_path.write_text(
-                json.dumps(raw_by_role, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-            )
+            raw_path = write_new(
+                SOURCES_DIR / f"FNS_PB_UPR_UCHR_{inn}_{today.replace('-', '')}_{person['slug']}-raw.json",
+                json.dumps(raw_by_role, ensure_ascii=False, indent=2) + "\n")
 
         person["other_entities"] = found
         person["other_entities_checked_at"] = today

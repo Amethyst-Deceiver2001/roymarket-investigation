@@ -46,6 +46,7 @@ import urllib.error
 import urllib.request
 from datetime import date
 from pathlib import Path
+from source_files import write_new  # never overwrite a catalogued source
 
 REPO = Path(__file__).resolve().parent.parent
 SOURCES_DIR = REPO / "data" / "sources"
@@ -178,7 +179,7 @@ def main() -> None:
 
         fname = archive_name(slug, doc, today)
         out_path = SOURCES_DIR / fname
-        out_path.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        out_path = write_new(out_path, json.dumps(doc, ensure_ascii=False, indent=2) + "\n")
 
         biblio = doc.get("biblio", {}).get("ru", {})
         title = biblio.get("title", "?")

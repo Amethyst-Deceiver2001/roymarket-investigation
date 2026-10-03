@@ -73,6 +73,7 @@ import urllib.error
 import urllib.request
 from datetime import date
 from pathlib import Path
+from source_files import write_new  # never overwrite a catalogued source
 
 REPO = Path(__file__).resolve().parent.parent
 ENTITIES = REPO / "data" / "registry" / "entities.json"
@@ -221,10 +222,10 @@ def main() -> None:
 
         if cert_items:
             out = SOURCES / f"FSA_CERT_{inn}_{today.replace('-', '')}.json"
-            out.write_text(json.dumps(cert_items, ensure_ascii=False, indent=2), encoding="utf-8")
+            out = write_new(out, json.dumps(cert_items, ensure_ascii=False, indent=2))
         if decl_items:
             out = SOURCES / f"FSA_DECL_{inn}_{today.replace('-', '')}.json"
-            out.write_text(json.dumps(decl_items, ensure_ascii=False, indent=2), encoding="utf-8")
+            out = write_new(out, json.dumps(decl_items, ensure_ascii=False, indent=2))
 
         ENTITIES.write_text(json.dumps(entities, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
