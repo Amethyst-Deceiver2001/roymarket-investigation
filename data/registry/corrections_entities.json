@@ -25207,8 +25207,26 @@
         ],
         "founders_history": [
           {
-            "as_of": "2023-09-04",
-            "note": "EGRUL-sourced split (as_of approximated to registration date; exact EGRUL extract pull date not recorded), previously the only recorded figure.",
+            "as_of": "2025-12-31",
+            "note": "Гагаринг's own FY2025 audit report states an even 50/50 split (5,000 руб. each) and says Александров is a participant since December 2023, which agrees with the register on his entry date. The register records 50.5/49.5 since 15.04.2026 (s0455, s6776). The two are not reconciled; the register is the primary record. Which split stood on 31.12.2025 is for a person to decide from the audit report and the register history side by side.",
+            "source_id": "s5333",
+            "value": [
+              {
+                "name": "Барашков Александр Сергеевич",
+                "nominal_value": 5000,
+                "share_percent": 50.0
+              },
+              {
+                "name": "Александров Алексей Витальевич",
+                "nominal_value": 5000,
+                "note": "участник с декабря 2023г.",
+                "share_percent": 50.0
+              }
+            ]
+          },
+          {
+            "as_of": "2026-04-15",
+            "note": "Position as shown by the ЕГРЮЛ extracts of 23.08.2026 (s0455) and 07.09.2026 (s6776): both share records carry ГРН 2262300538091 of 15.04.2026. Барашков is entered as a participant from 04.09.2023 (ГРН 1232300051235, the registration); Александров from 22.12.2023 (ГРН 2232301747335). An earlier version of this row dated both holdings 04.09.2023, which the register does not support.",
             "source_id": "s0455",
             "value": [
               {
@@ -25222,24 +25240,6 @@
                 "name": "Александров Алексей Витальевич",
                 "nominal_value": 4950,
                 "share_percent": 49.5
-              }
-            ]
-          },
-          {
-            "as_of": "2025-12-31",
-            "note": "Гагаринг's own FY2025 audit report states an even 50%/50% split (5,000 руб. each), differing slightly from the s0455 EGRUL figure (50.5/49.5). Not reconciled — flagged, not overwritten; a later EGRUL re-pull would resolve which is current.",
-            "source_id": "s5333",
-            "value": [
-              {
-                "name": "Барашков Александр Сергеевич",
-                "nominal_value": 5000,
-                "share_percent": 50.0
-              },
-              {
-                "name": "Александров Алексей Витальевич",
-                "nominal_value": 5000,
-                "note": "участник с декабря 2023г.",
-                "share_percent": 50.0
               }
             ]
           },
@@ -25754,7 +25754,8 @@
         "2026-09-15: informal-cooperation triage (LEAD 3) -- confirmed the projectArchangel/Archangel_Forum joint-exhibitor listing verbatim against data/roymarket.db. Recorded as related_entities per CLAUDE.md's existing mechanism, not a new cbst_tie (it's the Архангел project's own event, not ЦБСТ's).",
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
         "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
-        "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s5440; the earlier cbst_tie record is unchanged."
+        "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s5440; the earlier cbst_tie record is unchanged.",
+        "04.10.2026 (packet check of 03.10.2026, issue #20): read the ЕГРЮЛ extract s6776 against the packet. CORRECTED the date of the 50.5/49.5 row: Александров's participant entry is 22.12.2023, the split is the record of 15.04.2026; the audit-report conflict stays open."
       ]
     },
     "ooo-garant-klub": {
@@ -29650,7 +29651,7 @@
     "ooo-metaskan": {
       "set": {
         "_verified": true,
-        "address": "Республика Татарстан, г. Казань",
+        "address": "420124, Республика Татарстан, г. Казань, ул. Меридианная, д. 26А, помещ. 01(А)",
         "director": "Поспехов Иван Александрович",
         "director_history": [
           {
@@ -29661,8 +29662,8 @@
           },
           {
             "as_of": "2025-07-09",
-            "note": "personal ИНН 121525518840; also sole founder",
-            "source_id": "s0481",
+            "note": "personal ИНН 121525518840; participant with 50% (₽20,000); the other 50% is held by ООО «Централизованная юридическая служба» (ИНН 1215226708), per the ЕГРЮЛ extract.",
+            "source_id": "s6712",
             "value": "Поспехов Иван Александрович"
           }
         ],
@@ -29670,8 +29671,15 @@
           {
             "inn_personal": "121525518840",
             "name": "Поспехов Иван Александрович",
-            "share_percent": null,
-            "source_id": "s0481"
+            "share_percent": 50.0,
+            "source_id": "s6712"
+          },
+          {
+            "inn": "1215226708",
+            "name": "ООО «Централизованная юридическая служба»",
+            "ogrn": "1181215007192",
+            "share_percent": 50.0,
+            "source_id": "s6712"
           }
         ],
         "ogrn": "1201600057097",
@@ -29752,6 +29760,12 @@
             "as_of": "2023-04-01",
             "source_id": "s6937",
             "note": "First street-level address on file (prior: bare 'Республика Татарстан, г. Казань'), from a proverki.gov.ru labor-inspection warning (Apr 2023)."
+          },
+          {
+            "value": "420124, Республика Татарстан, г. Казань, ул. Меридианная, д. 26А, помещ. 01(А)",
+            "as_of": "2023-09-28",
+            "source_id": "s6712",
+            "note": "ГРН 2231601071744 of 28.09.2023; the registered seat is Г.О. город Казань, г. Казань. The April 2023 address on Николая Ершова (inspection record, s6937) is the earlier one."
           }
         ],
         "notes": "2026-09-07 NSPD corroboration: ул. Николая Ершова, зд.31В, Казань confirmed as a real multi-unit nonresidential commercial building (units registered 2020, private ownership) (s6939).",
@@ -29761,9 +29775,9 @@
           "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05). OpenSanctions: 1 match(es), top='ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"МЕТАСКАН\"' (score 1.0, topics=['sanction.linked', 'sanction.control']) Aleph: 1 match(es), dataset categories=['company'] No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]."
         },
         "cbst_tie": {
-          "claim": "ЦБСТ's own \"gift convoy\" delivery reporting: «Арена 5М» demining detonators handed over to Kursk-direction sappers, 12.05.2025.",
+          "claim": "ЦБСТ's own post of 12.05.2025 lists «Арена 5М» demining firing devices (ООО «Метаскан») among the goods it handed over to Kursk-direction sappers and units.",
           "confidence": "t-doc",
-          "evidence": "ЦБСТ's own Telegram channel delivery/\"gift convoy\" post (per docs/index.html prose). Post not archived as a discrete file; no sNNNN id applies yet.",
+          "evidence": "ЦБСТ's own channel, post 2159491523:706, 12.05.2025, on file as a transcript of the database text (s7594, not a capture of the page): «Что именно передано: ▪️ Подрывные машинки «Арена 5М» (ООО «Метаскан») — надёжные и удобные устройства для подрыва боеприпасов.» The post calls the cargo as a whole «Переданная техника резидентов ЦБСТ»; it does not say in so many words that ООО «Метаскан» is a resident. The earlier note that the post was not archived is out of date.",
           "source_id": "s7594"
         }
       },
@@ -29774,7 +29788,8 @@
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): source_id left null, same precedent as ooo-aviron above."
+        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): source_id left null, same precedent as ooo-aviron above.",
+        "04.10.2026 (packet check of 03.10.2026, issue #20): read the ЕГРЮЛ extract (s6712) and post 706 (s7594) against the packet. CORRECTED: the register shows two participants, Поспехов 50% and ООО «ЦЮС» 50%, so the earlier notes calling Поспехов sole founder were wrong; the registered seat is Меридианная 26А since 28.09.2023; post 706 is on file and names the firm as maker of the «Арена 5М» handed over, without calling it a resident."
       ]
     },
     "ooo-nova": {
@@ -30069,7 +30084,7 @@
             "relationship_type": "name-collision-distinct"
           },
           {
-            "relationship": "Shared founder: Шестопалов С.А. founded this entity (100%) and founded the second Kilovatt LLC (ИНН 4800016776), where he has held 60% since 22.04.2026 alongside Хальзев С.Ю. 40% (s8685, s6790). Until that date both entities had the same sole founder, confirmed via both entities' own EGRUL extracts.",
+            "relationship": "Shared founder: Шестопалов С.А. founded this entity (100%) and founded the second Kilovatt LLC (ИНН 4800016776), where Хальзев С.Ю. is entered as a participant from 31.03.2026 and the 60/40 split with Шестопалов is recorded 13.05.2026 on the meeting of 22.04.2026 (s8685, s6790). Until the 31.03.2026 entry both entities had the same sole founder, confirmed via both entities' own EGRUL extracts.",
             "source_id": "s8685",
             "relationship_type": "sister-entity"
           }
@@ -30387,6 +30402,12 @@
             "note": "Charter approved by decision №1 of the single founder of 15.07.2024, company created in ЕГРЮЛ 22.07.2024 (ГРН 1244800005240). Charter capital ₽10 000. The charter itself does not name the founder; the name comes from the ЕГРЮЛ extract (s0533, s6790)."
           },
           {
+            "value": "Хальзев Сергей Юрьевич (ИНН 482300070325) enters the register as a participant",
+            "as_of": "2026-03-31",
+            "source_id": "s6790",
+            "note": "ГРН 2264800194668 of 31.03.2026 (participant entry). The extract of 07.09.2026 shows only the current share record, so his share on that date and the 31.03.2026 split are not visible; the 40% (₽400,000) and 60/40 split are recorded by ГРН 2264800241418 of 13.05.2026, on the strength of the meeting of 22.04.2026 (s8685). The company was created on 22.07.2024; he is not a founder of it."
+          },
+          {
             "value": "Шестопалов Сергей Анатольевич 60% (₽600 000) / Хальзев Сергей Юрьевич 40% (₽400 000)",
             "as_of": "2026-04-22",
             "source_id": "s8685",
@@ -30400,11 +30421,36 @@
           },
           {
             "source_id": "s0533",
-            "text": "RESOLVED: relationship to the sister entity (ИНН 4800013729) is common ownership -- same sole founder Шестопалов С.А. on both, per full EGRUL extracts. He directs this one personally; the other has a hired director (Гаврилов А.Г.). UPDATE 2026-10-01 (s8685, s6790): this holds for the period to 22 April 2026. Since then ООО НПО «Киловатт» (ИНН 4800016776) has a second participant, Хальзев Сергей Юрьевич 40% (Шестопалов 60%), so the two entities are no longer under identical ownership; Шестопалов remains a founder of both."
+            "text": "RESOLVED: relationship to the sister entity (ИНН 4800013729) is common ownership -- same sole founder Шестопалов С.А. on both, per full EGRUL extracts. He directs this one personally; the other has a hired director (Гаврилов А.Г.). UPDATE 2026-10-01 (s8685, s6790): this holds for the period to 31 March 2026. Since then ООО НПО «Киловатт» (ИНН 4800016776) has a second participant, Хальзев Сергей Юрьевич 40% (Шестопалов 60%), so the two entities are no longer under identical ownership; Шестопалов remains a founder of both."
           },
           {
             "source_id": "s8685",
-            "text": "2026-10-01 founding-document read: since 22 April 2026 the company has TWO participants, Шестопалов Сергей Анатольевич 60% and Хальзев Сергей Юрьевич 40% (charter amendment and the ЕГРЮЛ extract s6790 agree). Earlier text on this record calling Шестопалов the sole founder, and the resolved note on common ownership with the sister entity ИНН 4800013729 (\"same sole founder\"), describe the position before that date. Lookups done 2026-10-01: Хальзев's ИНН 482300070325 appears only in this entity's ЕГРЮЛ extracts in our archive; the sister entity ИНН 4800013729 shows Шестопалов 100% and director Гаврилов Алексей Георгиевич (ИНН 235209926630), no Хальзев; ЦБСТ channel search for «Хальзев» returns 0 hits; a web search found nothing. Not done: a ФНС cross-reference of his ИНН for other holdings. The 2024 charter (§10.4, §12.8) contains state-secret clauses worded identically to the РЛВТ charter, so they read as template text; no допуск to state secrets is evidenced."
+            "text": "2026-10-01 founding-document read: since 31.03.2026 (participant entry; the 60/40 split is recorded 13.05.2026 on the meeting of 22.04.2026) the company has TWO participants, Шестопалов Сергей Анатольевич 60% and Хальзев Сергей Юрьевич 40% (charter amendment and the ЕГРЮЛ extract s6790 agree). Earlier text on this record calling Шестопалов the sole founder, and the resolved note on common ownership with the sister entity ИНН 4800013729 (\"same sole founder\"), describe the position before that date. Lookups done 2026-10-01: Хальзев's ИНН 482300070325 appears only in this entity's ЕГРЮЛ extracts in our archive; the sister entity ИНН 4800013729 shows Шестопалов 100% and director Гаврилов Алексей Георгиевич (ИНН 235209926630), no Хальзев; ЦБСТ channel search for «Хальзев» returns 0 hits; a web search found nothing. Not done: a ФНС cross-reference of his ИНН for other holdings. The 2024 charter (§10.4, §12.8) contains state-secret clauses worded identically to the РЛВТ charter, so they read as template text; no допуск to state secrets is evidenced."
+          }
+        ],
+        "trademarks": [
+          {
+            "expires": "2034-04-19",
+            "filed": "2024-04-19",
+            "holder": "ООО НПО «Киловатт» (ИНН 4800013729; the sister entity, per the FIPS address)",
+            "name": "Капюшон",
+            "reg_number": "1086620",
+            "registered": "2025-02-14",
+            "source_id": "s0539",
+            "note": "Holder printed as «ООО НПО «Киловатт»» only, on the certificate copy on this company's site (s0539). The FIPS record (s1204) gives the holder's address as 398037, Липецк, Трубный проезд, влд. 10, оф. 2, which is the registered seat of the sister ООО НПО «Киловатт» (ИНН 4800013729, ЕГРЮЛ extract of 07.09.2026); this company's seat is ул. Папина, д. 2. The mark is held by the sister (ooo-npo-kilovatt); this record shows the certificate, it does not establish this company as holder."
+          }
+        ],
+        "patents": [
+          {
+            "filed": "2024-07-26",
+            "holder": "ООО НПО «Киловатт»",
+            "inventor": null,
+            "note": "Inventor name redacted in the copy posted on the company's own site. Holder printed by name only on the company's copy; no Rospatent record of the design is on file, so the holder cannot be told apart from the sister of the same name (ИНН 4800013729).",
+            "published": "2025-02-06",
+            "reg_number": "RU145992S",
+            "source_id": "s0538",
+            "title": "Устройство помехового воздействия на средства связи и управления беспилотных воздушных судов",
+            "type": "industrial design (промышленный образец)"
           }
         ]
       },
@@ -30416,7 +30462,8 @@
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 2 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
+        "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
+        "04.10.2026 (packet check of 03.10.2026, issue #20): read the ЕГРЮЛ extract s6790, the FIPS record s1204 and the sister's extract. CORRECTED: Хальзев is a participant from 31.03.2026 (ГРН 2264800194668), not a founder and not 'since 22.04.2026'; the 60/40 split is recorded 13.05.2026. Trademark 1086620 belongs to the sister (FIPS holder address = the sister's seat); the dealer on the certificate is ИП Пинимасов Александр Вячеславович (ИНН 583680188519), a different person from the ИП Пинимасова Е.А. on file."
       ]
     },
     "ooo-npo-nebo": {
@@ -34534,9 +34581,9 @@
           }
         ],
         "cbst_tie": {
-          "claim": "Named directly as \"резидент ЦБСТ\" by ЦБСТ's own channel.",
+          "claim": "Named by ЦБСТ's own channel as «Резидент Центра беспилотных систем и технологий (ЦБСТ)».",
           "confidence": "t-doc",
-          "evidence": "ЦБСТ's own channel, post 2159491523:487, 25.02.2025: \"Резидент Центра беспилотных систем и технологий (ЦБСТ), компания ООО «Смарт Текнолоджис» из Пензы, разработала устройство «Метафора» — межсетевой ретранслятор...\" This project's own scraped Telegram data (data/roymarket.db), not a data/sources/ document — no s#### id applies; the channel/post/date is the citation.",
+          "evidence": "ЦБСТ's own channel, post 2159491523:487, 25.02.2025: \"Резидент Центра беспилотных систем и технологий (ЦБСТ), компания ООО «Смарт Текнолоджис» из Пензы, разработала устройство «Метафора» — межсетевой ретранслятор...\" On file as a transcript of the database text (s7581), not a capture of the page.",
           "source_id": "s7581"
         },
         "sanctions_review": {
@@ -34567,7 +34614,8 @@
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-14: found via ЦБСТ-resident cross-reference research pass. Already documented in docs/index.html prose but never mirrored into the structured cbst_tie field until now.",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
+        "04.10.2026 (packet check of 03.10.2026, issue #20): the tie claim printed «резидент ЦБСТ» as a quotation; the post says «Резидент Центра беспилотных систем и технологий (ЦБСТ)». Claim reworded to the post's own words."
       ]
     },
     "ooo-spdbbk": {

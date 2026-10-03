@@ -1,9 +1,9 @@
 {
   "schema_version": 12,
   "generated_from": "data/registry/entities.json + people.json + programs.json + products.json",
-  "node_count": 1251,
+  "node_count": 1250,
   "edge_count": 2168,
-  "unresolved_count": 116,
+  "unresolved_count": 115,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -4628,7 +4628,7 @@
       "legal_form": "ООО",
       "variant": null,
       "product_count": 0,
-      "degree": 6
+      "degree": 7
     },
     {
       "id": "ooo-uk-komaks",
@@ -12652,12 +12652,6 @@
       "id": "stub::хоук холдинг",
       "kind": "unresolved",
       "label": "Акционерное общество \"Хоук Холдинг\"",
-      "degree": 1
-    },
-    {
-      "id": "stub::централизованная юридическая служба",
-      "kind": "unresolved",
-      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦЕНТРАЛИЗОВАННАЯ ЮРИДИЧЕСКАЯ СЛУЖБА\"",
       "degree": 1
     },
     {
@@ -30927,7 +30921,7 @@
       "source": "ooo-metaskan",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
-      "label": "ЦБСТ's own \"gift convoy\" delivery reporting: «Арена 5М» demining detonators handed over to Kursk-direction sappers, 1...",
+      "label": "ЦБСТ's own post of 12.05.2025 lists «Арена 5М» demining firing devices (ООО «Метаскан») among the goods it handed ove...",
       "source_id": "s7594",
       "as_of": null,
       "weight": 1.0,
@@ -32786,7 +32780,7 @@
       "source": "ooo-smart-teknolodzhis",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
-      "label": "Named directly as \"резидент ЦБСТ\" by ЦБСТ's own channel.",
+      "label": "Named by ЦБСТ's own channel as «Резидент Центра беспилотных систем и технологий (ЦБСТ)».",
       "source_id": "s7581",
       "as_of": null,
       "weight": 1.0,
@@ -33418,6 +33412,19 @@
       "confidence": null,
       "detail": null,
       "grade": "rep"
+    },
+    {
+      "source": "ooo-tsyus",
+      "target": "ooo-metaskan",
+      "type": "founded",
+      "label": null,
+      "source_id": "s6712",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
     },
     {
       "source": "ooo-uk-komaks",
@@ -34711,7 +34718,7 @@
       "target": "ooo-metaskan",
       "type": "directs",
       "label": null,
-      "source_id": "s0481",
+      "source_id": "s6712",
       "as_of": "2025-07-09",
       "weight": 1.0,
       "temporal_status": "current",
@@ -34724,7 +34731,7 @@
       "target": "ooo-metaskan",
       "type": "founded",
       "label": null,
-      "source_id": "s0481",
+      "source_id": "s6712",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -39725,19 +39732,6 @@
       "grade": "doc"
     },
     {
-      "source": "stub::централизованная юридическая служба",
-      "target": "ooo-metaskan",
-      "type": "founded",
-      "label": "50%",
-      "source_id": "s6712",
-      "as_of": "2025-07-09",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
       "source": "stub::часовских павел анатольевич",
       "target": "ooo-gaskar-integratsiya",
       "type": "founded",
@@ -42124,13 +42118,6 @@
       "raw_name": "Акционерное общество \"Хоук Холдинг\"",
       "contexts": [
         "founder of ao-stratim"
-      ]
-    },
-    {
-      "id": "stub::централизованная юридическая служба",
-      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦЕНТРАЛИЗОВАННАЯ ЮРИДИЧЕСКАЯ СЛУЖБА\"",
-      "contexts": [
-        "former founder of ooo-metaskan"
       ]
     },
     {
