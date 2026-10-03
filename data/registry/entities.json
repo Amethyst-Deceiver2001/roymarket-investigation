@@ -11682,9 +11682,9 @@
     "subsidiaries": [],
     "tier": "manufacturer",
     "cbst_tie": {
-      "claim": "EU-sanctioned as one of six named ЦБСТ residents (\"Гаскар Групп\") in the EU's 20th sanctions package, per ЦБСТ's own coverage of the listing.",
-      "confidence": "t-doc",
-      "evidence": "ЦБСТ's own channel, post 2159491523:2095, 24.04.2026 (see ooo-arkhangel/ao-tekhnodron for the same post). NOTE: the post names \"Гаскар Групп\" — not independently disambiguated in this pass between ООО «Гаскар» itself and its sister entities «Гаскар Технологии»/«Гаскар Интеграция» (also in this registry, under a different founder, Афанасьев И.К.) — attached to ooo-gaskar as the primary EU-sanctioned entity per the existing registry record, but the exact referent of \"Групп\" is a real open question. Web search (23.08.2026) for \"Гаскар Технологии\"/\"Гаскар Интеграция\" + EU sanctions found NO hits connecting either sister entity to the EU's 20th package — some (weak, negative-evidence) support for \"Гаскар Групп\" referring to this entity (ООО «Гаскар») rather than the Афанасьев-founded sister pair, though not a positive confirmation either way.",
+      "claim": "Not established. ЦБСТ's post 2095 names «Гаскар Групп»; the EU's «Гаскар Групп» is ИНН 7734436058 (ООО «СТИМС», ooo-stims), not this company.",
+      "confidence": "not_established",
+      "evidence": "ЦБСТ's own channel, post 2159491523:2095, 24.04.2026, names «Гаскар Групп» without an ИНН. The EU entry (Implementing Regulation 2026/509, entry 704, s9114) and the Swiss entry (s9106) carry ИНН 7734436058 and ОГРН 1207700279797; no EU, Swiss, UK or US entry carries ИНН 9710112989 or ОГРН 1237700273744 (files of 02.10.2026, s9106-s9109). Until 04.10.2026 this record held the tie as 't-doc' on the assumption that «Групп» meant this company; that attribution is withdrawn. Search «Гаскар» in 2,474 @ANO_CBST posts, 04.10.2026: 1 hit (post 2095), so no other ЦБСТ post names this company.",
       "source_id": "s7588"
     },
     "wb_overlap": "confirmed_direct",
@@ -11757,12 +11757,12 @@
     "securing_measures_checked_at": "2026-09-06",
     "sanctions": [
       {
-        "date": null,
-        "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 9710112989 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"LIMITED LIABILITY COMPANY \"EVR\"\". Topics: sanction. Primary source URLs cited by OpenSanctions: https://war-sanctions.gur.gov.ua/en/sanctions/companies/16112. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
+        "date": "2026-06-12",
         "regime": [
-          "Canada (Special Economic Measures Act)"
+          "Canada (Special Economic Measures Act, Schedule 1 Part 2, item 833)"
         ],
-        "source_id": "s0809"
+        "source_id": "s9117",
+        "note": "Read in Canada's consolidated list of 04.10.2026 (s9117): item 833, «EVR LLC», aliases «ООО ЭВР» and «Общество С Огрcаниченной Ответственностью \"ЭВР\"», listed 2026-06-12. The entry prints no ИНН, ОГРН or address. The link to this company rests on the name: ООО «ЭВР» was this company's name from 07.04.2023 until the rename entered 17.06.2026 (name_history, s7354), five days after the Canadian listing, and Ukraine's ГУР page for ООО «ЭВР» prints ИНН 9710112989 and ОГРН 1237700273744 (s9115). OpenSanctions joins the two by ИНН (s0809). A name match plus an identifier on a Ukrainian government page, not an identifier match on Canada's own list. The GUR page names no date or document for any listing."
       }
     ],
     "litigation": [],
@@ -11811,6 +11811,10 @@
       {
         "source_id": "s8721",
         "text": "rk.2035.university BAS-company directory (pull of 2026-10-01, s8721) carries this ИНН with site https://gaskar.group/ (self-declared). That same site is already recorded for the sister entity ooo-gaskar-integratsiya (ИНН 7733894200; capture s7569, home page titled «Группа компаний Гаскар. Беспилотные и роботизированные системы, инфраструктура управления и связи», no ИНН printed). It is a group site; the registry holds three Гаскар entities, so it is not attributed to this one pending a printed ИНН or requisites page (/contacts returned 403 on 2026-10-01)."
+      },
+      {
+        "source_id": "s9114",
+        "text": "Resolved 04.10.2026 by identifiers: the EU and Swiss «Гаскар Групп» is ООО «СТИМС» (ИНН 7734436058), not this company (ooo-stims; s9106, s9112, s9114). The earlier question of which Гаскар entity the post meant is closed for the listing; the product line still has no registered holder (s1169)."
       }
     ],
     "sources": [],
@@ -11826,7 +11830,7 @@
       "brief:prose"
     ],
     "notes": "2026-09-07: proverki.gov.ru screen (5 records, all labor-inspection warnings, s6934) surfaced a prior legal name (ООО «ЭВР») and this entity's first street-level address (ул. Пехорская, д.1Д, стр.1, Москва). 2026-09-07 NSPD corroboration (s6951): ул. Пехорская, д.1Д, стр.1 is a real, substantial building — 'Корпус 9', 15,506.8 m², 2-3 floors, commissioned 2022, private ownership, in the Косино-Ухтомский municipal district of Moscow. This is the SAME municipal district (Косино-Ухтомский/Руднево technopark zone) as ООО «НПО «Рустехдрон»»'s Пехорская 1/3, стр.4 facility — same street, same district, upgrading the 'possible shared-cluster' note to a confirmed shared-industrial-zone finding (still not confirmed as the literally same building).",
-    "tier_basis": "Named (with a disambiguation caveat against sister entities sharing the «Гаскар» brand) among six ЦБСТ residents in EU sanctions coverage on ЦБСТ's own channel; separately sanctioned by Canada (ID-confirmed via ИНН match). Large confirmed UAV product catalogue via Минпромторг's GISP goods registry (fixed-wing «Шторм», multi-rotor «Сибирячок»/«Сибирь» series), ₽9.8bn FY2025 revenue.",
+    "tier_basis": "Manufacturer by its product catalogue: Минпромторг's GISP goods registry lists fixed-wing «Шторм» and multi-rotor «Сибирячок»/«Сибирь» series; ₽9.8bn FY2025 revenue. Listed by Canada as «EVR LLC» (its name until 17.06.2026), by name only. No ЦБСТ tie established: see cbst_tie.",
     "_corrected": [
       "full EGRUL extract pulled directly 23.08.2026 (ul-1237700273744-20260823122809.pdf).",
       "REAL CROSS-LINK, not just a routine pull: ООО «Гаскар» (already documented in the brief prose at docs/index.html:412 as EU-sanctioned, address a few doors from ООО «НПО Рустехдрон» on ул. Пехорская) is 100%-owned by ООО «Сибирская навигационная компания» (ИНН 4205376019) — the SAME entity already hand-verified earlier this session (ooo-sibirskaya-navigatsionnaya-kompaniya, in the prior 14-entity manufacturer batch). And Гаскар's own director, Константинов Евгений Александрович (ИНН 263114465785), is independently confirmed as the 26.25% minority founder of that same parent company (Сибирская навигационная компания) — so this is not merely a shell-subsidiary relationship, the sanctioned company's own director is a direct personal owner of its parent. Ties two previously-separate registry records together via a verified primary-document chain.",
@@ -11842,9 +11846,10 @@
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 3 filing-year record(s).",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "2026-09-08: read the full founding-document bundle (устав + rename amendment, OCR'd, s7354) obtained via ФНС — precisely dates the ЭВР->Гаскар rename (17.06.2026, ordered by sole participant СибНК acting through Ступников А.Г., already on file) and confirms it postdates the EU sanctions designation under the 'Гаскар' brand name by ~2 months.",
-      "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed."
+      "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
+      "04.10.2026 (СТИМС/Гаскар check, issue #20): read the EU Implementing Regulation 2026/509 entry 704 (s9114), the Swiss entry (s9106) and the ЕГРЮЛ extract of ИНН 7734436058 (s9112); the listed «Гаскар Групп» is another company, so the EU claim and the 't-doc' ЦБСТ tie recorded here were withdrawn. Canada's item 833 (s9117) read as a primary: «EVR LLC», name only, listed 12.06.2026."
     ],
-    "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
+    "_verified_against": "full EGRUL extract pulled directly 23.08.2026 | 04.10.2026: s9106-s9109 (official lists of 02.10.2026), s9112 (ЕГРЮЛ ИНН 7734436058), s9114 (EU Reg. 2026/509), s9115 (ГУР page), s9117 (Canada SEMA list).",
     "name_display": "OOO «Gaskar»",
     "_egrul_crosschecked": "2026-08-22",
     "opensanctions_matches": [
@@ -89628,5 +89633,179 @@
       }
     ],
     "aleph_screened_at": "2026-10-03"
+  },
+  {
+    "slug": "ooo-stims",
+    "name_ru": "ООО «СТИМС»",
+    "name_latin": null,
+    "legal_form": "ООО",
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "7734436058",
+    "ogrn": "1207700279797",
+    "extra_ids": null,
+    "registered": "07.08.2020",
+    "address": "121205, г. Москва, вн.тер.г. муниципальный округ Можайский, тер. Инновационного центра Сколково, ул. Нобеля, д. 7, этаж 4, помещ./раб.место 15/6",
+    "okved_code": "62.01",
+    "okved_label": "Разработка компьютерного программного обеспечения",
+    "okved_mismatch": null,
+    "director": "Мингалимов Ленар Нуриахметович",
+    "director_history": [
+      {
+        "value": "Мингалимов Ленар Нуриахметович",
+        "as_of": "2026-05-18",
+        "source_id": "s9112",
+        "note": "Person entitled to act without a power of attorney, ГРН 2267704260680 of 18.05.2026; position «генеральный директор» entered by ГРН 2267705078265 of 16.06.2026. Personal ИНН 165020722607. Earlier directors are not in this extract."
+      }
+    ],
+    "founders": [
+      {
+        "inn": "9704078560",
+        "name": "ООО «Аметист Кэпитал»",
+        "ogrn": "1217700336480",
+        "share_percent": 60.0,
+        "source_id": "s9112"
+      },
+      {
+        "inn_personal": "165020722607",
+        "name": "Мингалимов Ленар Нуриахметович",
+        "share_percent": 20.0,
+        "source_id": "s9112"
+      },
+      {
+        "inn_personal": "027503961630",
+        "name": "Саитов Ренат Фаритович",
+        "share_percent": 20.0,
+        "source_id": "s9112"
+      }
+    ],
+    "founders_history": [
+      {
+        "value": "ООО «Аметист Кэпитал» (ИНН 9704078560, ОГРН 1217700336480), 60% (₽6,000)",
+        "as_of": "2023-09-25",
+        "source_id": "s9112",
+        "note": "ГРН 2237708914188 of 25.09.2023."
+      },
+      {
+        "value": "Мингалимов Ленар Нуриахметович (ИНН 165020722607), 20% (₽2,000)",
+        "as_of": "2026-06-19",
+        "source_id": "s9112",
+        "note": "ГРН 2267705179872 of 19.06.2026."
+      },
+      {
+        "value": "Саитов Ренат Фаритович (ИНН 027503961630), 20% (₽2,000)",
+        "as_of": "2026-07-07",
+        "source_id": "s9112",
+        "note": "ГРН 2267705760914 of 07.07.2026. The extract of 03.10.2026 shows only current participants; earlier ones are not in it."
+      }
+    ],
+    "charter_capital": 10000,
+    "charter_capital_history": [
+      {
+        "value": 10000,
+        "as_of": "2020-08-07",
+        "source_id": "s9112",
+        "note": "Уставный капитал ₽10,000, ГРН 1207700279797 of 07.08.2020."
+      }
+    ],
+    "address_history": [
+      {
+        "value": "121205, г. Москва, вн.тер.г. муниципальный округ Можайский, тер. Инновационного центра Сколково, ул. Нобеля, д. 7, этаж 4, помещ./раб.место 15/6",
+        "as_of": "2021-03-25",
+        "source_id": "s9112",
+        "note": "ГРН 2217702382731 of 25.03.2021; the address object was renamed by ГРН 2257713268536 of 14.02.2025. Matches the address printed in the EU and Swiss entries."
+      }
+    ],
+    "name_history": [
+      {
+        "value": "ООО «СТИМС»",
+        "as_of": "2024-11-19",
+        "source_id": "s9112",
+        "note": "The name entry carries ГРН 2247711610640 of 19.11.2024 (new edition of the charter). The extract prints no former name, so it does not show what the company was called before, or whether that entry was a rename."
+      }
+    ],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "adjacent",
+    "tier_basis": "Listed by the EU (23.04.2026) and Switzerland (21.05.2026) as «Гаскар Групп» under this ИНН and ОГРН (s9114, s9106). ЦБСТ's own channel names «Гаскар Групп» among the organisations in its contour (post 2095). No manufacturing or ЦБСТ document ties the registered company itself to either; its registered activities are software, construction, consulting and R&D.",
+    "cbst_tie": {
+      "claim": "Named by ЦБСТ's own channel, as «Гаскар Групп», among the organisations in its contour that the EU listed in its 20th package.",
+      "confidence": "t-open",
+      "evidence": "ЦБСТ's own channel, post 2159491523:2095, 24.04.2026: «В 20-й пакет ограничительных мер Европейского союза были включены организации, входящие в контур Центра беспилотных систем и технологий. Среди них «Технодрон», «Гаскар Групп», СКБ «Пиранья», «Аэро-Хит», «Атлант Аэро» и «Архангел».» The post prints no ИНН or ОГРН. The EU act lists a «Гаскар Групп» under ИНН 7734436058 and ОГРН 1207700279797 (s9114), which the ЕГРЮЛ extract of 03.10.2026 shows as ООО «СТИМС» (s9112); the link from the post to this company therefore runs through the name used on the list, and ЦБСТ states no identifier. Whether ЦБСТ means this company or the «Гаскар» group brand is not shown. Search «Гаскар» in 2,474 @ANO_CBST posts, 04.10.2026: 1 hit (post 2095); «СТИМС»: 0.",
+      "source_id": "s7588"
+    },
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [
+      {
+        "date": "2026-04-23",
+        "regime": [
+          "EU (Council Regulation (EU) No 269/2014, Annex I, entry 704; reference EU.14160.3)"
+        ],
+        "source_id": "s9114",
+        "note": "Listed by Council Implementing Regulation (EU) 2026/509 of 23 April 2026, entry 704 (the same entry is in Council Decision (CFSP) 2026/504 of the same date, s9113), as Limited Liability Company “Gaskar Group” (Общество с ограниченной ответственностью “Гаскар Групп”; aliases include ГК «ГАСКАР» and ООО “Гаскар Групп” Инновационного Центра Сколково). Printed identifiers: Registration number 1207700279797, Tax Identification Number 7734436058, KPP 773101001, registered 7.8.2020; address Skolkovo Innovation Center, Nobelya Street 7, Floor 4, Room 15/6. All match the ЕГРЮЛ extract of 03.10.2026 (s9112), which names the company ООО «СТИМС». Stated reason: a Russian company specialising in the development and production of UAVs, electronics and software, with products Sibiryachok and Siberia-1 in military use; «materially supporting Russia's military and industrial complex» and benefitting from the Government of the Russian Federation. Read in the Regulation's own text (s9114) and in the EU consolidated list of 02.10.2026 (s9107)."
+      },
+      {
+        "date": "2026-05-21",
+        "regime": [
+          "Switzerland (SECO, Ukraine-related measures)"
+        ],
+        "source_id": "s9106",
+        "note": "Listed by Switzerland 21.5.2026 (published 22.5.2026, effective 22.5.2026) as Limited Liability Company “Gaskar Group”, SSID 104739: Registration number 1207700279797, Tax Identification Number 7734436058, KPP 773101001, date of registration 7.8.2020, the same Skolkovo address; the justifications repeat the EU's. Read in the Swiss list file of 02.10.2026 (s9106). The US and UK files of the same date (s9109, s9108) carry neither identifier."
+      }
+    ],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [],
+      "telegram": [],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [
+      {
+        "source_id": "s9112",
+        "text": "The extract prints no former name. The name entry carries ГРН 2247711610640 of 19.11.2024, 17 months before the EU listing, while the EU and Swiss entries use «Гаскар Групп». When the company was named «Гаскар Групп», and whether the lists used a name no longer in the register, is not established; an extract with the full record history, or the charter of 2022 or 2024, would show it."
+      },
+      {
+        "source_id": "s9114",
+        "text": "The listing describes UAV development and production. The registered activities in the extract are 62.01 (primary), construction, consulting and R&D 72.19, with no manufacturing code. A Habr Career page for «Gaskar Group» (s9118) calls ООО «Гаскар интеграция» the «heart» of the group and describes an IT integrator in construction: the group's own description, a lead only. Which registered entity holds the drone line (ooo-gaskar, ooo-gaskar-integratsiya, ooo-gaskar-tekhnologii) is not established."
+      },
+      {
+        "source_id": "s9112",
+        "text": "Participant Саитов Ренат Фаритович (ИНН 027503961630, 20% from 07.07.2026) shares a name with the 2019 general director of ООО «Гаскар Интеграция» in this registry (saitov-renat-faritovich, s1548). That record carries no ИНН and the current Гаскар Интеграция extracts do not mention him: the same name only, no link is drawn. No person records are made for the director or the two participants; their scope under the PII policy is not decided."
+      },
+      {
+        "source_id": "s9112",
+        "text": "All three people entries post-date the listings: director 18.05.2026, Мингалимов's share 19.06.2026, Саитов's 07.07.2026. ООО «Аметист Кэпитал» has held 60% since 25.09.2023. Earlier directors and participants are not in this extract. No accounts (БФО) have been pulled for this ИНН."
+      }
+    ],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "city": "Москва",
+    "ecosystem_roles": [],
+    "_corrected": null,
+    "name_display": "OOO «STIMS»"
   }
 ]

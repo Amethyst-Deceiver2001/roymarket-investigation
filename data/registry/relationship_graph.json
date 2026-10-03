@@ -1,9 +1,9 @@
 {
   "schema_version": 12,
   "generated_from": "data/registry/entities.json + people.json + programs.json + products.json",
-  "node_count": 1261,
-  "edge_count": 2182,
-  "unresolved_count": 115,
+  "node_count": 1251,
+  "edge_count": 2168,
+  "unresolved_count": 116,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -2566,14 +2566,6 @@
       "degree": 3
     },
     {
-      "id": "konstantinov-evgeniy-aleksandrovich",
-      "kind": "person",
-      "label": "Константинов Евгений Александрович",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 2
-    },
-    {
       "id": "korchagina-olga-aleksandrovna",
       "kind": "person",
       "label": "Корчагина Ольга Александровна",
@@ -3625,19 +3617,6 @@
       "degree": 4
     },
     {
-      "id": "ooo-gaskar",
-      "kind": "entity",
-      "label": "ООО «Гаскар»",
-      "name_latin": null,
-      "inn": "9710112989",
-      "tier": "manufacturer",
-      "sanctioned": true,
-      "legal_form": "ООО",
-      "variant": null,
-      "product_count": 8,
-      "degree": 13
-    },
-    {
       "id": "ooo-gaskar-integratsiya",
       "kind": "entity",
       "label": "ООО «Гаскар Интеграция»",
@@ -4379,19 +4358,6 @@
       "degree": 6
     },
     {
-      "id": "ooo-sibirskaya-navigatsionnaya-kompaniya",
-      "kind": "entity",
-      "label": "ООО «Сибирская навигационная компания»",
-      "name_latin": null,
-      "inn": "4205376019",
-      "tier": "manufacturer",
-      "sanctioned": true,
-      "legal_form": "ООО",
-      "variant": null,
-      "product_count": 0,
-      "degree": 8
-    },
-    {
       "id": "ooo-sistemnyy-integrator",
       "kind": "entity",
       "label": "ООО «Системный интегратор»",
@@ -4507,6 +4473,19 @@
       "variant": null,
       "product_count": 0,
       "degree": 6
+    },
+    {
+      "id": "ooo-stims",
+      "kind": "entity",
+      "label": "ООО «СТИМС»",
+      "name_latin": null,
+      "inn": "7734436058",
+      "tier": "adjacent",
+      "sanctioned": true,
+      "legal_form": "ООО",
+      "variant": null,
+      "product_count": 0,
+      "degree": 5
     },
     {
       "id": "ooo-stratim",
@@ -8772,110 +8751,6 @@
       "degree": 1
     },
     {
-      "id": "product::ooo-gaskar::беспилотная-авиационная-система-втулка",
-      "kind": "product",
-      "label": "Беспилотная авиационная система \"Втулка\"",
-      "owner_slug": "ooo-gaskar",
-      "source_id": "s5391",
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
-      "id": "product::ooo-gaskar::беспилотная-авиационная-система-сибирь-1",
-      "kind": "product",
-      "label": "Беспилотная авиационная система «Сибирь-1»",
-      "owner_slug": "ooo-gaskar",
-      "source_id": "s5391",
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
-      "id": "product::ooo-gaskar::беспилотная-авиационная-система-сибирь-2",
-      "kind": "product",
-      "label": "Беспилотная авиационная система «Сибирь-2»",
-      "owner_slug": "ooo-gaskar",
-      "source_id": "s5391",
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
-      "id": "product::ooo-gaskar::беспилотная-авиационная-система-сибирячок-5",
-      "kind": "product",
-      "label": "Беспилотная авиационная система \"Сибирячок-5\"",
-      "owner_slug": "ooo-gaskar",
-      "source_id": "s5391",
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
-      "id": "product::ooo-gaskar::беспилотная-авиационная-система-сибирячок-с-совмещенной-камерой-в-видимом-и-инфракрасном-диапазонах",
-      "kind": "product",
-      "label": "Беспилотная авиационная система «Сибирячок с совмещенной камерой в видимом и инфракрасном диапазонах»",
-      "owner_slug": "ooo-gaskar",
-      "source_id": "s5391",
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
-      "id": "product::ooo-gaskar::беспилотная-авиационная-система-шторм",
-      "kind": "product",
-      "label": "Беспилотная авиационная система \"Шторм\"",
-      "owner_slug": "ooo-gaskar",
-      "source_id": "s5391",
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
-      "id": "product::ooo-gaskar::мотор-py3115-1300kv-бесколлекторный-fpv",
-      "kind": "product",
-      "label": "Мотор PY3115 1300KV бесколлекторный FPV",
-      "owner_slug": "ooo-gaskar",
-      "source_id": "s1385",
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
-      "id": "product::ooo-gaskar::пропеллеры-10-дюймов-3-лопасти-fpv",
-      "kind": "product",
-      "label": "Пропеллеры 10 дюймов 3 лопасти FPV (совместимость 3115 900KV)",
-      "owner_slug": "ooo-gaskar",
-      "source_id": "s1385",
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
       "id": "product::ooo-geron::бпла-удар",
       "kind": "product",
       "label": "БПЛА «Удар»",
@@ -11722,7 +11597,7 @@
       "label": "Саитов Ренат Фаритович",
       "name_latin": "Renat Faritovich Saitov",
       "sanctioned": false,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "sakharov-aleksey-yurevich",
@@ -12192,6 +12067,12 @@
       "degree": 1
     },
     {
+      "id": "stub::inn-9704078560",
+      "kind": "unresolved",
+      "label": "ООО «Аметист Кэпитал»",
+      "degree": 2
+    },
+    {
       "id": "stub::абрамов юрий александрович",
       "kind": "unresolved",
       "label": "Абрамов Юрий Александрович",
@@ -12237,12 +12118,6 @@
       "id": "stub::амбаров петр андреевич",
       "kind": "unresolved",
       "label": "Амбаров Петр Андреевич",
-      "degree": 1
-    },
-    {
-      "id": "stub::аметист кэпитал",
-      "kind": "unresolved",
-      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АМЕТИСТ КЭПИТАЛ\"",
       "degree": 1
     },
     {
@@ -12520,6 +12395,12 @@
       "kind": "unresolved",
       "label": "Минатулаев Шахсолтан Магомедрасулович",
       "degree": 1
+    },
+    {
+      "id": "stub::мингалимов ленар нуриахметович",
+      "kind": "unresolved",
+      "label": "Мингалимов Ленар Нуриахметович",
+      "degree": 2
     },
     {
       "id": "stub::мирошниченко павел александрович",
@@ -12814,14 +12695,6 @@
       "kind": "unresolved",
       "label": "Яковенко Ирина Геннадьевна",
       "degree": 2
-    },
-    {
-      "id": "stupnikov-andrey-genadevich",
-      "kind": "person",
-      "label": "Ступников Андрей Генадьевич",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 6
     },
     {
       "id": "sugak-mikhail-ivanovich",
@@ -25097,32 +24970,6 @@
       "grade": "doc"
     },
     {
-      "source": "konstantinov-evgeniy-aleksandrovich",
-      "target": "ooo-gaskar",
-      "type": "directs",
-      "label": null,
-      "source_id": "s0468",
-      "as_of": "2026-04-23",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "konstantinov-evgeniy-aleksandrovich",
-      "target": "ooo-sibirskaya-navigatsionnaya-kompaniya",
-      "type": "founded",
-      "label": null,
-      "source_id": "s0451",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
       "source": "korchagina-olga-aleksandrovna",
       "target": "ooo-skb-piranya",
       "type": "founded",
@@ -29946,123 +29793,6 @@
       "grade": "doc"
     },
     {
-      "source": "ooo-gaskar",
-      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-      "type": "cbst_tie",
-      "label": "EU-sanctioned as one of six named ЦБСТ residents (\"Гаскар Групп\") in the EU's 20th sanctions package, per ЦБСТ's own ...",
-      "source_id": "s7588",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "t-doc",
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "ooo-gaskar",
-      "target": "product::ooo-gaskar::беспилотная-авиационная-система-втулка",
-      "type": "produces",
-      "label": null,
-      "source_id": "s5391",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "ooo-gaskar",
-      "target": "product::ooo-gaskar::беспилотная-авиационная-система-сибирь-1",
-      "type": "produces",
-      "label": null,
-      "source_id": "s5391",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "ooo-gaskar",
-      "target": "product::ooo-gaskar::беспилотная-авиационная-система-сибирь-2",
-      "type": "produces",
-      "label": null,
-      "source_id": "s5391",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "ooo-gaskar",
-      "target": "product::ooo-gaskar::беспилотная-авиационная-система-сибирячок-5",
-      "type": "produces",
-      "label": null,
-      "source_id": "s5391",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "ooo-gaskar",
-      "target": "product::ooo-gaskar::беспилотная-авиационная-система-сибирячок-с-совмещенной-камерой-в-видимом-и-инфракрасном-диапазонах",
-      "type": "produces",
-      "label": null,
-      "source_id": "s5391",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "ooo-gaskar",
-      "target": "product::ooo-gaskar::беспилотная-авиационная-система-шторм",
-      "type": "produces",
-      "label": null,
-      "source_id": "s5391",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "ooo-gaskar",
-      "target": "product::ooo-gaskar::мотор-py3115-1300kv-бесколлекторный-fpv",
-      "type": "produces",
-      "label": null,
-      "source_id": "s1385",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "rep"
-    },
-    {
-      "source": "ooo-gaskar",
-      "target": "product::ooo-gaskar::пропеллеры-10-дюймов-3-лопасти-fpv",
-      "type": "produces",
-      "label": null,
-      "source_id": "s1385",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "rep"
-    },
-    {
       "source": "ooo-gaskar-integratsiya",
       "target": "product::ooo-gaskar-integratsiya::hive",
       "type": "produces",
@@ -32871,32 +32601,6 @@
       "grade": "rep"
     },
     {
-      "source": "ooo-sibirskaya-navigatsionnaya-kompaniya",
-      "target": "ooo-gaskar",
-      "type": "founded",
-      "label": null,
-      "source_id": "s0468",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "ooo-sibirskaya-navigatsionnaya-kompaniya",
-      "target": "ooo-gaskar",
-      "type": "owns",
-      "label": null,
-      "source_id": "s6759",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
       "source": "ooo-sistemnyy-integrator",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
@@ -33192,6 +32896,19 @@
       "weight": 1.0,
       "temporal_status": "historical",
       "confidence": null,
+      "detail": null,
+      "grade": "rep"
+    },
+    {
+      "source": "ooo-stims",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "cbst_tie",
+      "label": "Named by ЦБСТ's own channel, as «Гаскар Групп», among the organisations in its contour that the EU listed in its 20th...",
+      "source_id": "s7588",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "t-open",
       "detail": null,
       "grade": "rep"
     },
@@ -36134,6 +35851,19 @@
       "grade": "doc"
     },
     {
+      "source": "saitov-renat-faritovich",
+      "target": "ooo-stims",
+      "type": "founded",
+      "label": null,
+      "source_id": "s9112",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
       "source": "sakharov-aleksey-yurevich",
       "target": "npts-elvis",
       "type": "role",
@@ -38240,6 +37970,32 @@
       "grade": "doc"
     },
     {
+      "source": "stub::inn-9704078560",
+      "target": "ooo-gaskar-tekhnologii",
+      "type": "founded",
+      "label": "60%",
+      "source_id": "s6772",
+      "as_of": "2026-06-03",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "stub::inn-9704078560",
+      "target": "ooo-stims",
+      "type": "founded",
+      "label": null,
+      "source_id": "s9112",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
       "source": "stub::абрамов юрий александрович",
       "target": "ooo-ti-es-dzhi-grupp",
       "type": "founded",
@@ -38376,19 +38132,6 @@
       "label": null,
       "source_id": "s7636",
       "as_of": "2023-10-03",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "stub::аметист кэпитал",
-      "target": "ooo-gaskar-tekhnologii",
-      "type": "founded",
-      "label": "60%",
-      "source_id": "s6772",
-      "as_of": "2026-06-03",
       "weight": 1.0,
       "temporal_status": "current",
       "confidence": null,
@@ -39184,6 +38927,32 @@
       "as_of": "2025-06-16",
       "weight": 1.0,
       "temporal_status": "current",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "stub::мингалимов ленар нуриахметович",
+      "target": "ooo-stims",
+      "type": "directs",
+      "label": null,
+      "source_id": "s9112",
+      "as_of": "2026-05-18",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "stub::мингалимов ленар нуриахметович",
+      "target": "ooo-stims",
+      "type": "founded",
+      "label": null,
+      "source_id": "s9112",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
       "confidence": null,
       "detail": null,
       "grade": "doc"
@@ -40094,84 +39863,6 @@
       "as_of": "2026-08-24",
       "weight": 1.0,
       "temporal_status": "current",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "stupnikov-andrey-genadevich",
-      "target": "ooo-gaskar",
-      "type": "role",
-      "label": "signed on behalf of sole participant ООО «СибНК» to order the ЭВР->Гаскар rename",
-      "source_id": "s7354",
-      "as_of": "2026-06-09",
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "stupnikov-andrey-genadevich",
-      "target": "ooo-sibirskaya-navigatsionnaya-kompaniya",
-      "type": "directs",
-      "label": null,
-      "source_id": "s0451",
-      "as_of": "2023-04-20",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "stupnikov-andrey-genadevich",
-      "target": "ooo-sibirskaya-navigatsionnaya-kompaniya",
-      "type": "founded",
-      "label": null,
-      "source_id": "s0451",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "stupnikov-andrey-genadevich",
-      "target": "ooo-sibirskaya-navigatsionnaya-kompaniya",
-      "type": "role",
-      "label": "director",
-      "source_id": "s8112",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "stupnikov-andrey-genadevich",
-      "target": "ooo-sibirskaya-navigatsionnaya-kompaniya",
-      "type": "role",
-      "label": "founder",
-      "source_id": "s8112",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "stupnikov-andrey-genadevich",
-      "target": "ooo-sibirskaya-navigatsionnaya-kompaniya",
-      "type": "role",
-      "label": "Генеральный директор",
-      "source_id": "s0451",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
       "confidence": null,
       "detail": null,
       "grade": "doc"
@@ -41726,6 +41417,13 @@
       ]
     },
     {
+      "id": "stub::inn-9704078560",
+      "raw_name": "ООО «Аметист Кэпитал»",
+      "contexts": [
+        "founder of ooo-stims"
+      ]
+    },
+    {
       "id": "stub::абрамов юрий александрович",
       "raw_name": "Абрамов Юрий Александрович",
       "contexts": [
@@ -41781,13 +41479,6 @@
       "raw_name": "Амбаров Петр Андреевич",
       "contexts": [
         "founder of ooo-gruppa-promavto"
-      ]
-    },
-    {
-      "id": "stub::аметист кэпитал",
-      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АМЕТИСТ КЭПИТАЛ\"",
-      "contexts": [
-        "former founder of ooo-gaskar-tekhnologii"
       ]
     },
     {
@@ -42121,6 +41812,14 @@
       "raw_name": "Минатулаев Шахсолтан Магомедрасулович",
       "contexts": [
         "former founder of ooo-superkhrono"
+      ]
+    },
+    {
+      "id": "stub::мингалимов ленар нуриахметович",
+      "raw_name": "Мингалимов Ленар Нуриахметович",
+      "contexts": [
+        "founder of ooo-stims",
+        "director of ooo-stims"
       ]
     },
     {
@@ -42546,6 +42245,7 @@
     "kashnikov-konstantin-nikolaevich",
     "kindyakov-andrey-andreevich",
     "kolskaya-verf",
+    "konstantinov-evgeniy-aleksandrovich",
     "korolev-dmitriy-alekseevich",
     "krylov-andrey-olegovich",
     "kurteev-aleksandr-sergeevich",
@@ -42573,6 +42273,7 @@
     "ooo-dronnet",
     "ooo-dronomir",
     "ooo-eliars",
+    "ooo-gaskar",
     "ooo-ges-2",
     "ooo-instekh",
     "ooo-mobil-grup",
@@ -42583,6 +42284,7 @@
     "ooo-prommash",
     "ooo-radiofid-sistemy",
     "ooo-rokot-tekh",
+    "ooo-sibirskaya-navigatsionnaya-kompaniya",
     "ooo-tsentr-bespilotnykh-sistem-tula",
     "ooo-tstp-tsifrovaya-transportnaya-platforma",
     "ooo-zetaks",
@@ -42624,6 +42326,14 @@
     "product::ooo-eliars::парс-4",
     "product::ooo-eliars::прибор-активации-режимов-самоспасения",
     "product::ooo-eliars::сектор",
+    "product::ooo-gaskar::беспилотная-авиационная-система-втулка",
+    "product::ooo-gaskar::беспилотная-авиационная-система-сибирь-1",
+    "product::ooo-gaskar::беспилотная-авиационная-система-сибирь-2",
+    "product::ooo-gaskar::беспилотная-авиационная-система-сибирячок-5",
+    "product::ooo-gaskar::беспилотная-авиационная-система-сибирячок-с-совмещенной-камерой-в-видимом-и-инфракрасном-диапазонах",
+    "product::ooo-gaskar::беспилотная-авиационная-система-шторм",
+    "product::ooo-gaskar::мотор-py3115-1300kv-бесколлекторный-fpv",
+    "product::ooo-gaskar::пропеллеры-10-дюймов-3-лопасти-fpv",
     "product::ooo-instekh::антидрон-система-aura",
     "product::ooo-instekh::система-оповещения-нежеголь-оборудование-орало-150",
     "product::ooo-npo-nebo::скарабей-sd-138",
@@ -42672,6 +42382,7 @@
     "stub::шаповалов сергей михайлович",
     "stub::шпак максим викторович",
     "stub::щанович инга сергеевна",
+    "stupnikov-andrey-genadevich",
     "sukhonenkova-nadezhda-andreevna",
     "tarasenko-irina-anatolevna",
     "tg-arkhangel-spetsnaza",
