@@ -64,7 +64,9 @@ def test_telegram_capture_never_stale_and_variant_follows_base():
         "https://t.me/a/2?embed=1&mode=tme": {"tier": 1, "kind": "telegram", "captures": [],
                                               "variant_of": "https://t.me/a/2"},
         "https://t.me/a/2": {"tier": 1, "kind": "telegram", "captures": []}}}
-    assert A.pending(data, {1}, today) == ["https://t.me/a/2", "https://t.me/a/2?embed=1&mode=tme"]
+    assert A.pending(data, {1}, today)[0] == "https://t.me/a/2"
+    # a captured post whose saved text is unavailable keeps its embed view (cannot rule out truncation)
+    assert "https://t.me/a/1?embed=1&mode=tme" in A.pending(data, {1}, today)
 
 
 def test_tiers():
