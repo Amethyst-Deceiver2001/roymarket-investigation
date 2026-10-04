@@ -470,10 +470,11 @@
         "sanctions_review": {
           "as_of": "2026-10-04",
           "outcome": "designated",
-          "note": "EU and Swiss entries read on the official files; the printed ИНН 773514103490 matches the one in the Элиарс ЕГРЮЛ extract (s6827). Date of birth 11.01.1980 is from the EU entry (s9107).",
+          "note": "EU and Swiss entries read on the official files; the printed ИНН 773514103490 matches the one in the Элиарс ЕГРЮЛ extract (s6827). Date of birth 11.01.1980 is from the EU entry (s9107). | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
           "checked": [
             "s9106",
-            "s9107"
+            "s9107",
+            "s9117"
           ]
         }
       },
@@ -804,12 +805,13 @@
         "sanctions_review": {
           "as_of": "2026-10-04",
           "outcome": "linked_not_designated",
-          "note": "OpenSanctions marks this person as sanction-linked through АО «Эколибри» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked.",
+          "note": "OpenSanctions marks this person as sanction-linked through АО «Эколибри» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
           "checked": [
             "s9106",
             "s9107",
             "s9108",
-            "s9109"
+            "s9109",
+            "s9117"
           ]
         }
       },
@@ -915,12 +917,13 @@
         "sanctions_review": {
           "as_of": "2026-10-04",
           "outcome": "open",
-          "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled: birth date 18.10.1983 and ИНН 636501893256 both match ours. NSDC-listed (first seen 09.05.2025); the entry ties her to ООО «Тримикс» (100% owner 21.07.2023–26.02.2024).",
+          "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled: birth date 18.10.1983 and ИНН 636501893256 both match ours. NSDC-listed (first seen 09.05.2025); the entry ties her to ООО «Тримикс» (100% owner 21.07.2023–26.02.2024). | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
           "checked": [
             "s9106",
             "s9107",
             "s9108",
-            "s9109"
+            "s9109",
+            "s9117"
           ]
         }
       },
@@ -1180,15 +1183,24 @@
             ],
             "source_id": "s9106",
             "note": "Swiss SECO list of 02.10.2026, entry ssid 93601: Alexey Viktorovich CHADAYEV, Director of Scientific-Research Centre «Ushkuynik» (UAVs incl. «Князь Вандал Новгородский»). Same identity basis as the EU entry; the Swiss listing date was not read."
+          },
+          {
+            "date": "2026-06-12",
+            "regime": [
+              "Canada"
+            ],
+            "source_id": "s9117",
+            "note": "Canada SEMA list of 04.10.2026, Schedule 1 Part 1, item 1614 (listed 2026-06-12): Chadayev, Alexey Victorovich, b. 1978-09-30, Russia. The entry prints no ИНН or employer; matched by name, patronymic and date of birth to the EU entry (s9107), whose function is director of НПЦ «Ушкуйник»."
           }
         ],
         "sanctions_review": {
           "as_of": "2026-10-04",
           "outcome": "designated",
-          "note": "EU entry EU.13089.32 and Swiss entry 93601 read on the official files. Identity rests on name, patronymic and function (director of НПЦ «Ушкуйник»), not on an identifier. His own post 4636 (29.03.2026) says he is under EU personal sanctions. DOB 30.09.1978 is printed in the EU entry only and is not copied into the record's dob field.",
+          "note": "EU entry EU.13089.32 and Swiss entry 93601 read on the official files. Identity rests on name, patronymic and function (director of НПЦ «Ушкуйник»), not on an identifier. His own post 4636 (29.03.2026) says he is under EU personal sanctions. DOB 30.09.1978 is printed in the EU entry only and is not copied into the record's dob field. | Canada SEMA Schedule 1 Part 1 item 1614 (listed 12.06.2026): Chadayev, Alexey Victorovich, b. 1978-09-30, Russia: same name, patronymic and date of birth as the EU entry; recorded as a listing.",
           "checked": [
             "s9106",
-            "s9107"
+            "s9107",
+            "s9117"
           ]
         }
       },
@@ -1243,12 +1255,13 @@
         "sanctions_review": {
           "as_of": "2026-10-04",
           "outcome": "open",
-          "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled by ИНН: the NSDC entry prints ИНН 773376903806, ours. It gives b. 20.04.1990 (a lead for the record) and ties her to ООО «Аргус-М» and НПП «Аргата». NSDC since 08.02.2026.",
+          "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled by ИНН: the NSDC entry prints ИНН 773376903806, ours. It gives b. 20.04.1990 (a lead for the record) and ties her to ООО «Аргус-М» and НПП «Аргата». NSDC since 08.02.2026. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
           "checked": [
             "s9106",
             "s9107",
             "s9108",
-            "s9109"
+            "s9109",
+            "s9117"
           ]
         }
       },
@@ -1452,12 +1465,13 @@
         "sanctions_review": {
           "as_of": "2026-10-04",
           "outcome": "open",
-          "note": "The record is on ГУР's database as a 'person of interest' per OpenSanctions, which says it is on no sanctions list; or it is only linked through an owner. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. The ГУР entry is not read in full here. Two hits. NK-XU3ivbw (PESKOV Dmitry Nikolaevich): date of birth 26.12.1975, birthplace Voronezh and ИНН 772919018611 all match ours, but it is a ГУР-database 'person of interest' only; OpenSanctions says he is on no sanctions list. The other hit, Q111263326, is Nikolay Dmitrievich Peskov (b. 03.02.1",
+          "note": "The record is on ГУР's database as a 'person of interest' per OpenSanctions, which says it is on no sanctions list; or it is only linked through an owner. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. The ГУР entry is not read in full here. Two hits. NK-XU3ivbw (PESKOV Dmitry Nikolaevich): date of birth 26.12.1975, birthplace Voronezh and ИНН 772919018611 all match ours, but it is a ГУР-database 'person of interest' only; OpenSanctions says he is on no sanctions list. The other hit, Q111263326, is Nikolay Dmitrievich Peskov (b. 03.02.1 | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
           "checked": [
             "s9106",
             "s9107",
             "s9108",
-            "s9109"
+            "s9109",
+            "s9117"
           ]
         }
       },
@@ -2036,12 +2050,13 @@
         "sanctions_review": {
           "as_of": "2026-10-04",
           "outcome": "linked_not_designated",
-          "note": "OpenSanctions marks this person as sanction-linked through ООО «Клеверкоптер» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked.",
+          "note": "OpenSanctions marks this person as sanction-linked through ООО «Клеверкоптер» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
           "checked": [
             "s9106",
             "s9107",
             "s9108",
-            "s9109"
+            "s9109",
+            "s9117"
           ]
         }
       },
@@ -2480,12 +2495,13 @@
         "sanctions_review": {
           "as_of": "2026-10-04",
           "outcome": "false_positive",
-          "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: The NSDC-listed Климов Максим Олександрович carries ИНН 695004552407 per the earlier OpenSanctions read noted in the record; our АРРС founder's ИНН from the 29.09.2026 ЕГРЮЛ extract is 410201675667. A personal ИНН does not change, so these look like two people. Note: the record's notes still say 'confirmed … see sanctions[]', but sanctions[] is empty; the notes need correcting either way. On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by personal ИНН/name: no entry). Ukraine's NSDC not checked.",
+          "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: The NSDC-listed Климов Максим Олександрович carries ИНН 695004552407 per the earlier OpenSanctions read noted in the record; our АРРС founder's ИНН from the 29.09.2026 ЕГРЮЛ extract is 410201675667. A personal ИНН does not change, so these look like two people. Note: the record's notes still say 'confirmed … see sanctions[]', but sanctions[] is empty; the notes need correcting either way. On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by personal ИНН/name: no entry). Ukraine's NSDC not checked. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
           "checked": [
             "s9106",
             "s9107",
             "s9108",
-            "s9109"
+            "s9109",
+            "s9117"
           ]
         }
       },
@@ -2510,12 +2526,13 @@
         "sanctions_review": {
           "as_of": "2026-10-04",
           "outcome": "open",
-          "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. Hit ru-inn-263114465785 ('sanction-linked'): a namesake in the Russian company register. The record has no ИНН of its own, so this is name-only. Settle it by reading his ИНН from an ЕГРЮЛ extract.",
+          "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. Hit ru-inn-263114465785 ('sanction-linked'): a namesake in the Russian company register. The record has no ИНН of its own, so this is name-only. Settle it by reading his ИНН from an ЕГРЮЛ extract. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
           "checked": [
             "s9106",
             "s9107",
             "s9108",
-            "s9109"
+            "s9109",
+            "s9117"
           ]
         }
       },
@@ -2565,12 +2582,13 @@
         "sanctions_review": {
           "as_of": "2026-10-04",
           "outcome": "false_positive",
-          "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: The only risky hit (Q120853992) is a Myrotvorets entry, which OpenSanctions tags 'war crimes' but is not a sanctions list. Name-only; no designation. On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by personal ИНН/name: no entry). Ukraine's NSDC not checked.",
+          "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: The only risky hit (Q120853992) is a Myrotvorets entry, which OpenSanctions tags 'war crimes' but is not a sanctions list. Name-only; no designation. On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by personal ИНН/name: no entry). Ukraine's NSDC not checked. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
           "checked": [
             "s9106",
             "s9107",
             "s9108",
-            "s9109"
+            "s9109",
+            "s9117"
           ]
         }
       },
@@ -2603,12 +2621,13 @@
         "sanctions_review": {
           "as_of": "2026-10-04",
           "outcome": "linked_not_designated",
-          "note": "OpenSanctions marks this person as sanction-linked through ООО «КРАВТ» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked.",
+          "note": "OpenSanctions marks this person as sanction-linked through ООО «КРАВТ» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
           "checked": [
             "s9106",
             "s9107",
             "s9108",
-            "s9109"
+            "s9109",
+            "s9117"
           ]
         }
       },
@@ -2657,12 +2676,13 @@
         "sanctions_review": {
           "as_of": "2026-10-04",
           "outcome": "linked_not_designated",
-          "note": "OpenSanctions marks this person as sanction-linked through АО «Стратим» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked.",
+          "note": "OpenSanctions marks this person as sanction-linked through АО «Стратим» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
           "checked": [
             "s9106",
             "s9107",
             "s9108",
-            "s9109"
+            "s9109",
+            "s9117"
           ]
         }
       },
@@ -2942,12 +2962,13 @@
         "sanctions_review": {
           "as_of": "2026-10-04",
           "outcome": "open",
-          "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. Hit ru-inn-780158682795 ('sanction-linked'). Name-only; our Любимов (chair of Ассоциация «Взаимопомощь», co-organiser of «Дронница») has no ИНН on file. The association's ЕГРЮЛ extract would give it.",
+          "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. Hit ru-inn-780158682795 ('sanction-linked'). Name-only; our Любимов (chair of Ассоциация «Взаимопомощь», co-organiser of «Дронница») has no ИНН on file. The association's ЕГРЮЛ extract would give it. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
           "checked": [
             "s9106",
             "s9107",
             "s9108",
-            "s9109"
+            "s9109",
+            "s9117"
           ]
         }
       },
@@ -3037,12 +3058,13 @@
         "sanctions_review": {
           "as_of": "2026-10-04",
           "outcome": "open",
-          "note": "Pre-sort resolves the hit to Кузнецов Михаил Михайлович (head of the ОНФ executive committee since 03.2022; EU, CH and others per OpenSanctions). No matching EU entry was found on the 02.10.2026 file by name, and the record has no ИНН or date of birth. Read the EU/Swiss entries by that name before recording.",
+          "note": "Pre-sort resolves the hit to Кузнецов Михаил Михайлович (head of the ОНФ executive committee since 03.2022; EU, CH and others per OpenSanctions). No matching EU entry was found on the 02.10.2026 file by name, and the record has no ИНН or date of birth. Read the EU/Swiss entries by that name before recording. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
           "checked": [
             "s9106",
             "s9107",
             "s9108",
-            "s9109"
+            "s9109",
+            "s9117"
           ]
         }
       },
@@ -3988,12 +4010,13 @@
         "sanctions_review": {
           "as_of": "2026-10-04",
           "outcome": "open",
-          "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled: birth date 06.05.1986 and ИНН 471010513778 both match ours. NSDC-listed (09.05.2025); 15% of ООО «Тримикс» 27.02–31.10.2024.",
+          "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled: birth date 06.05.1986 and ИНН 471010513778 both match ours. NSDC-listed (09.05.2025); 15% of ООО «Тримикс» 27.02–31.10.2024. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
           "checked": [
             "s9106",
             "s9107",
             "s9108",
-            "s9109"
+            "s9109",
+            "s9117"
           ]
         }
       },
@@ -4243,12 +4266,13 @@
         "sanctions_review": {
           "as_of": "2026-10-04",
           "outcome": "linked_not_designated",
-          "note": "OpenSanctions marks this person as sanction-linked through ООО «СибНК» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked.",
+          "note": "OpenSanctions marks this person as sanction-linked through ООО «СибНК» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
           "checked": [
             "s9106",
             "s9107",
             "s9108",
-            "s9109"
+            "s9109",
+            "s9117"
           ]
         }
       },
@@ -4463,9 +4487,10 @@
         "sanctions_review": {
           "as_of": "2026-10-04",
           "outcome": "designated",
-          "note": "UK entry RUS1046 read in full on the official list; DOB and birthplace match. Other lists named by OpenSanctions (US, Canada, Australia, New Zealand, Ukraine) not read; no EU or Swiss entry found by name.",
+          "note": "UK entry RUS1046 read in full on the official list; DOB and birthplace match. Other lists named by OpenSanctions (US, Canada, Australia, New Zealand, Ukraine) not read; no EU or Swiss entry found by name. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
           "checked": [
-            "s9108"
+            "s9108",
+            "s9117"
           ]
         }
       },
@@ -5356,12 +5381,13 @@
         "sanctions_review": {
           "as_of": "2026-10-04",
           "outcome": "open",
-          "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled by ИНН: the NSDC entry prints ИНН 712802968839, ours. b. 04.07.1984; 100% owner of ООО «Русская лаборатория воздушного транспорта». NSDC since 02.12.2024.",
+          "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled by ИНН: the NSDC entry prints ИНН 712802968839, ours. b. 04.07.1984; 100% owner of ООО «Русская лаборатория воздушного транспорта». NSDC since 02.12.2024. | Canada SEMA item 95 (listed 15.03.2019) is Andrey Vladimirovich Cherezov, b. 1967-10-12: a different patronymic, so not this person.",
           "checked": [
             "s9106",
             "s9107",
             "s9108",
-            "s9109"
+            "s9109",
+            "s9117"
           ]
         }
       },
@@ -6649,12 +6675,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "open",
-        "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. Hit ru-inn-615424668354 ('sanction-linked'). Name-only; co-inventor at ООО «Атлант Аэро», no ИНН on file.",
+        "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. Hit ru-inn-615424668354 ('sanction-linked'). Name-only; co-inventor at ООО «Атлант Аэро», no ИНН on file. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
@@ -6851,10 +6878,11 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "designated",
-        "note": "EU Reg. 2024/753 entry 1732 and the Swiss entry read (recorded 04.10.2026); personal ИНН printed in both.",
+        "note": "EU Reg. 2024/753 entry 1732 and the Swiss entry read (recorded 04.10.2026); personal ИНН printed in both. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
         "checked": [
           "s9106",
           "s9107",
+          "s9117",
           "s9125"
         ]
       }
@@ -6914,10 +6942,11 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "designated",
-        "note": "EU and Swiss entries read on the official files. Identity rests on name, patronymic and employer, not on an identifier; this record's personal ИНН 780156016060 is not printed in either entry. DOB 04.08.1985 is not copied into the record.",
+        "note": "EU and Swiss entries read on the official files. Identity rests on name, patronymic and employer, not on an identifier; this record's personal ИНН 780156016060 is not printed in either entry. DOB 04.08.1985 is not copied into the record. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
         "checked": [
           "s9106",
-          "s9107"
+          "s9107",
+          "s9117"
         ]
       }
     },
@@ -8076,12 +8105,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "open",
-        "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled by ИНН: the NSDC entry prints ИНН 695001185808, ours. b. 27.01.1960; listed as general director of АО «МКБ «Факел» им. Грушина» since 21.10.2014, a role our record lacks (lead). NSDC since 20.04.2023.",
+        "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled by ИНН: the NSDC entry prints ИНН 695001185808, ours. b. 27.01.1960; listed as general director of АО «МКБ «Факел» им. Грушина» since 21.10.2014, a role our record lacks (lead). NSDC since 20.04.2023. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
@@ -8610,12 +8640,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "open",
-        "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. The listed Kozlov (OFAC 15.01.2025, NSDC) is b. 07.08.1969 in St Petersburg, ИНН 782023355772, Pushkin address. Our Козлов is a co-inventor at АО «НИИ «Вектор»» (St Petersburg) with no ИНН on file. Same city, common name: compare the ИНН fr",
+        "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. The listed Kozlov (OFAC 15.01.2025, NSDC) is b. 07.08.1969 in St Petersburg, ИНН 782023355772, Pushkin address. Our Козлов is a co-inventor at АО «НИИ «Вектор»» (St Petersburg) with no ИНН on file. Same city, common name: compare the ИНН fr | Canada SEMA item 373 (Ukraine regime, 26.04.2022) is Aleksandr Vladimirovich Kozlov: a different patronymic, so not this person.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
@@ -8647,12 +8678,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "open",
-        "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. The listed Комаров (NSDC, 09.05.2025) is b. 06.07.1968, ИНН 500908329403, 34% of ООО «Интермаш». Our Комаров is a co-inventor at ООО «КРАВТ-Удмуртия» with no ИНН; nothing links him to Интермаш. Leaning false positive, but unproven.",
+        "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. The listed Комаров (NSDC, 09.05.2025) is b. 06.07.1968, ИНН 500908329403, 34% of ООО «Интермаш». Our Комаров is a co-inventor at ООО «КРАВТ-Удмуртия» with no ИНН; nothing links him to Интермаш. Leaning false positive, but unproven. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
@@ -8771,12 +8803,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "open",
-        "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. Hit ru-inn-471203835475 ('sanction-linked'). Name-only; co-inventor at НПЦ «Элвис», no ИНН on file.",
+        "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. Hit ru-inn-471203835475 ('sanction-linked'). Name-only; co-inventor at НПЦ «Элвис», no ИНН on file. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
@@ -8886,12 +8919,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "open",
-        "note": "Name-only: the hit is a Belarusian listed under the EU Belarus regime (OJ L 2024/1746). This record is a Russian co-inventor with no ИНН; likely a namesake but not shown.",
+        "note": "Name-only: the hit is a Belarusian listed under the EU Belarus regime (OJ L 2024/1746). This record is a Russian co-inventor with no ИНН; likely a namesake but not shown. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
@@ -9158,12 +9192,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "open",
-        "note": "Name-only: the UK (RUS1516) and US lists carry Oleg Nikolaev, head of the Chuvash Republic. This record is a patent co-inventor at АО «НИИ «Вектор»» with no ИНН or date of birth; nothing ties him to the governor, so likely a namesake but not shown.",
+        "note": "Name-only: the UK (RUS1516) and US lists carry Oleg Nikolaev, head of the Chuvash Republic. This record is a patent co-inventor at АО «НИИ «Вектор»» with no ИНН or date of birth; nothing ties him to the governor, so likely a namesake but not shown. | Canada SEMA item 910 (listed 19.08.2022): Nikolayev, Oleg Alekseyevich, b. 1969-12-10: the Chuvash head the pre-sort identifies; this record's patronymic matches but nothing ties the co-inventor to him.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
@@ -9247,12 +9282,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "open",
-        "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. The Q120852989 entry is a Wagner member on Myrotvorets only, not on any sanctions list: ignore it. What remains is ru-inn-532001062101 ('sanction-linked'), name-only because we hold no ИНН for our НПЦ «Элвис» co-inventor.",
+        "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. The Q120852989 entry is a Wagner member on Myrotvorets only, not on any sanctions list: ignore it. What remains is ru-inn-532001062101 ('sanction-linked'), name-only because we hold no ИНН for our НПЦ «Элвис» co-inventor. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
@@ -10126,12 +10162,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "false_positive",
-        "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: Hit Q15066899 (score 0.91) is Aleksey Zakharov, a different surname (Захаров, not Сахаров), flagged only as a relative of a listed person. On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by name: no entry). Ukraine's NSDC not checked.",
+        "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: Hit Q15066899 (score 0.91) is Aleksey Zakharov, a different surname (Захаров, not Сахаров), flagged only as a relative of a listed person. On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by name: no entry). Ukraine's NSDC not checked. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
@@ -10408,12 +10445,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "open",
-        "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled by ИНН: the entry prints ИНН 780212544531, ours. b. 14 or 15.08.1978; director at АО «Завод «Энергия»». Listed by Ukraine's NSDC (13.12.2023) and Canada (06.08.2024), plus the ГУР database.",
+        "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled by ИНН: the entry prints ИНН 780212544531, ours. b. 14 or 15.08.1978; director at АО «Завод «Энергия»». Listed by Ukraine's NSDC (13.12.2023) and Canada (06.08.2024), plus the ГУР database. | Canada SEMA Schedule 1 Part 1 item 1259 (listed 18.05.2023): Skorykh, Sergey Valeryevich, b. 1978-08-14, Russia. Name, patronymic and date of birth are consistent with the NSDC data reported by OpenSanctions, but the Canadian entry prints no identifier or employer and the NSDC original is unread, so it is not recorded as this person's listing.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
@@ -11539,12 +11577,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "open",
-        "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Match by ownership: the NSDC entry records a 93.33% stake in НПО «Кайсант», the same stake our record holds from aggregators. It prints ИНН 504508740969 and b. 15.03.1984; confirm the ИНН from Кайсант's ЕГРЮЛ extract before recording. NSDC since 08.02.2026.",
+        "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Match by ownership: the NSDC entry records a 93.33% stake in НПО «Кайсант», the same stake our record holds from aggregators. It prints ИНН 504508740969 and b. 15.03.1984; confirm the ИНН from Кайсант's ЕГРЮЛ extract before recording. NSDC since 08.02.2026. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
@@ -12579,12 +12618,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "open",
-        "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. Hit ru-inn-027503961630 ('sanction-linked', score 0.97). Name-only; former director of ООО «Гаскар Интеграция», no ИНН on file. The company's ЕГРЮЛ extract would give it.",
+        "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. Hit ru-inn-027503961630 ('sanction-linked', score 0.97). Name-only; former director of ООО «Гаскар Интеграция», no ИНН on file. The company's ЕГРЮЛ extract would give it. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
@@ -12902,12 +12942,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "open",
-        "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled by ИНН: the NSDC entry prints ИНН 561012075269, ours. b. 03.05.1980; general director of the Tula ООО «Центр беспилотных систем» 2023–2024, later of АНО «НПЦ БАС «Туладрон»». NSDC since 13.12.2023.",
+        "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled by ИНН: the NSDC entry prints ИНН 561012075269, ours. b. 03.05.1980; general director of the Tula ООО «Центр беспилотных систем» 2023–2024, later of АНО «НПЦ БАС «Туладрон»». NSDC since 13.12.2023. | Canada SEMA item 166 (listed 24.02.2022) is Alexander Alexandrovich Borisov: a different patronymic, so not this person.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
@@ -13149,12 +13190,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "false_positive",
-        "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: The only risky hit (Q120853949) is a Myrotvorets entry, not a sanctions list. Name-only. Worth a glance only because he was a director of ООО «Ушкуйник». On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by personal ИНН/name: no entry). Ukraine's NSDC not checked.",
+        "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: The only risky hit (Q120853949) is a Myrotvorets entry, not a sanctions list. Name-only. Worth a glance only because he was a director of ООО «Ушкуйник». On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by personal ИНН/name: no entry). Ukraine's NSDC not checked. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
@@ -13308,12 +13350,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "open",
-        "note": "Name matches an official-list entry on the Swiss list and the UK list of 02.10.2026 (a DNR official in each case), but this record has no date of birth to compare and nothing ties the two. Not recorded. The listed Yatsenko (Q108060327) is a former DNR 'minister of communications', b. 22.04.1985 in Kherson, passport 0311 988150, no ИНН printed. Our Яценко is general director of ООО «Аэро-Хит» (ИНН 231907430700). The Аэро-Хит group has a Kherson company, but nothing on file ties the two. Needs his bi",
+        "note": "Name matches an official-list entry on the Swiss list and the UK list of 02.10.2026 (a DNR official in each case), but this record has no date of birth to compare and nothing ties the two. Not recorded. The listed Yatsenko (Q108060327) is a former DNR 'minister of communications', b. 22.04.1985 in Kherson, passport 0311 988150, no ИНН printed. Our Яценко is general director of ООО «Аэро-Хит» (ИНН 231907430700). The Аэро-Хит group has a Kherson company, but nothing on file ties the two. Needs his bi | Canada SEMA item 89 (Ukraine regime, 17.02.2015): Yatsenko, Viktor, no patronymic or date of birth: not enough to tie to this record.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
@@ -13341,12 +13384,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "open",
-        "note": "Name matches an official-list entry on the Swiss list and the UK list of 02.10.2026 (a DNR official in each case), but this record has no date of birth to compare and nothing ties the two. Not recorded. The listed Zhigulin is a DNR People's Council member since 2014, b. 29.01.1979 in Semey; EU, UK, Switzerland, Canada, Japan, NSDC. Our record (director of ООО «Аэро-Хит М») already notes a press allegation of DNR-linked membership, so a match is plausible, but no ИНН is printed on the list and we ho",
+        "note": "Name matches an official-list entry on the Swiss list and the UK list of 02.10.2026 (a DNR official in each case), but this record has no date of birth to compare and nothing ties the two. Not recorded. The listed Zhigulin is a DNR People's Council member since 2014, b. 29.01.1979 in Semey; EU, UK, Switzerland, Canada, Japan, NSDC. Our record (director of ООО «Аэро-Хит М») already notes a press allegation of DNR-linked membership, so a match is plausible, but no ИНН is printed on the list and we ho | Canada SEMA item 263 (Ukraine regime, listed 26.04.2022): Zhigulin, Aleksei Mikhailovich, no date of birth or employer printed. Name and patronymic match this record and the DNR People's Council member the pre-sort proposes, which strengthens the lead; identity is still not established.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
@@ -14196,12 +14240,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "open",
-        "note": "Name-only on a very common name; the record is a course participant known by a Telegram handle with no patronymic, ИНН or date of birth. Not settled.",
+        "note": "Name-only on a very common name; the record is a course participant known by a Telegram handle with no patronymic, ИНН or date of birth. Not settled. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
@@ -14458,12 +14503,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "linked_not_designated",
-        "note": "OpenSanctions marks this person as sanction-linked through ООО «Архангел-Центр» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked.",
+        "note": "OpenSanctions marks this person as sanction-linked through ООО «Архангел-Центр» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
@@ -14494,12 +14540,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "linked_not_designated",
-        "note": "OpenSanctions marks this person as sanction-linked through ООО «Архангел-Центр» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked.",
+        "note": "OpenSanctions marks this person as sanction-linked through ООО «Архангел-Центр» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
@@ -14695,12 +14742,13 @@
       "sanctions_review": {
         "as_of": "2026-10-04",
         "outcome": "open",
-        "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Match by directorship: the NSDC entry lists her at ООО «Аэромакс», where our record has her as general director, and at ООО «Кронштадт Инновации» (since 14.03.2025, new to us). It prints ИНН 525630892605 and b. 11.12.1996; confirm the ИНН from Аэромакс's ЕГРЮЛ extract. NSDC since 02.12.2024.",
+        "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Match by directorship: the NSDC entry lists her at ООО «Аэромакс», where our record has her as general director, and at ООО «Кронштадт Инновации» (since 14.03.2025, new to us). It prints ИНН 525630892605 and b. 11.12.1996; confirm the ИНН from Аэромакс's ЕГРЮЛ extract. NSDC since 02.12.2024. | Canada: Canada SEMA list of 04.10.2026 searched by name (surname and given name, transliteration variants): no entry.",
         "checked": [
           "s9106",
           "s9107",
           "s9108",
-          "s9109"
+          "s9109",
+          "s9117"
         ]
       }
     },
