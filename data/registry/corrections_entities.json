@@ -698,7 +698,18 @@
         "entity's own founding-document bundle) was already OCR'd this",
         "session as part of the founding-doc batch — worth checking its",
         "content against this record once it has a proper sources.json entry."
-      ]
+      ],
+      "sanctions_review": {
+        "as_of": "2026-10-04",
+        "outcome": "false_positive",
+        "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: Both ГУР hits are other companies (ИНН 5263093100 and 7802703755). Ours is 3435149330. On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by ИНН/ОГРН: no entry). Ukraine's NSDC not checked.",
+        "checked": [
+          "s9106",
+          "s9107",
+          "s9108",
+          "s9109"
+        ]
+      }
     },
     {
       "address": "Barnaul",
@@ -1810,7 +1821,18 @@
       "tier_basis": "Per smolin.info (s5291): named as a related aviation entity in the same network; role in the supply chain not detailed by the source beyond the name association.",
       "why": [
         "2026-09-02: added from smolin.info (s5291). ОГРН/registration date corroborated live via egrul.nalog.ru 2026-09-02 (exact match). Oldest entity in this cluster by far (registered 2002) -- role unclear, flagged for follow-up rather than asserted."
-      ]
+      ],
+      "sanctions_review": {
+        "as_of": "2026-10-04",
+        "outcome": "false_positive",
+        "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: The ГУР hit is a different company, ИНН 7726700284. Ours is 7802145959. On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by ИНН/ОГРН: no entry). Ukraine's NSDC not checked.",
+        "checked": [
+          "s9106",
+          "s9107",
+          "s9108",
+          "s9109"
+        ]
+      }
     },
     {
       "address": "г. Москва",
@@ -1824,7 +1846,18 @@
       "tier_basis": "Per smolin.info (s5291): named as part of the Аэро-хит orbit.",
       "why": [
         "2026-09-02: added from smolin.info (s5291). ОГРН/registration date corroborated live via egrul.nalog.ru 2026-09-02 (exact match; NOTE: source article's stated 'February 2026' registration date actually matches the sibling entity ooo-aero-khit-m, not this one -- likely a source/summarization mix-up between the two similarly-named 'Аэро-хит' Moscow entities, flagged not resolved)."
-      ]
+      ],
+      "sanctions_review": {
+        "as_of": "2026-10-04",
+        "outcome": "open",
+        "note": "The record is on ГУР's database as a 'person of interest' per OpenSanctions, which says it is on no sanctions list; or it is only linked through an owner. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. The ГУР entry is not read in full here. Identity confirmed by ИНН 9704220859 on two hits: the ГУР UAV-companies entry (ГУР's own ИНН check says match) and OpenSanctions' record from ГУР's database. OpenSanctions says it is not on any international sanctions list; it is a ГУР 'person of interest' and is owned by ООО «УК КОМАКС» (ИНН 770479",
+        "checked": [
+          "s9106",
+          "s9107",
+          "s9108",
+          "s9109"
+        ]
+      }
     },
     {
       "address": "г. Москва",
@@ -1838,7 +1871,18 @@
       "tier_basis": "Per smolin.info (s5291): directed by Жигулин Алексей Михайлович, alleged by source to be a member of a DNR-linked organization -- PER SOURCE ONLY, not independently verified.",
       "why": [
         "2026-09-02: added from smolin.info (s5291). Director/ОГРН/registration date corroborated live via egrul.nalog.ru 2026-09-02 (exact match -- this is the entity actually registered 27.02.2026, per live EGRUL, matching the source's stated Feb-2026 date more precisely than ooo-aero-khit-servis)."
-      ]
+      ],
+      "sanctions_review": {
+        "as_of": "2026-10-04",
+        "outcome": "open",
+        "note": "The record is on ГУР's database as a 'person of interest' per OpenSanctions, which says it is on no sanctions list; or it is only linked through an owner. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. The ГУР entry is not read in full here. Identity confirmed: the OpenSanctions hit is ru-inn-9718293790, our own ИНН. It is flagged only because its 100% owner is ООО «УК КОМАКС» (NSDC-listed, per the registry). OpenSanctions says the company itself is on no sanctions list. The five ГУР hits are other Аэро-Хит/aviation companies with other",
+        "checked": [
+          "s9106",
+          "s9107",
+          "s9108",
+          "s9109"
+        ]
+      }
     },
     {
       "address": "283004, ДНР, г. Донецк, ул. Зинина, д. 19А (occupied territory)",
@@ -3432,7 +3476,18 @@
           "source_id": "s5529",
           "note": "БФО filing (thousands RUB in original: 310 / (894), converted to whole rubles here). Minimal revenue, net loss — consistent with this entity being a small/marginal operation relative to ooo-arkhangel-shchit and -zaporizhzhie."
         }
-      ]
+      ],
+      "sanctions_review": {
+        "as_of": "2026-10-04",
+        "outcome": "false_positive",
+        "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: All three hits are other «Архангел» companies: the Melitopol ООО «Архангел» (ИНН 9001027869, NSDC-listed), the Melitopol ООО «Архангел» (ИНН 9500026652, linked only) and ООО «Архангел-Центр» (ИНН 5032379630, EU-listed). Ours is 5017140245. The record already calls these name-only false positives (05.09.2026). On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by ИНН/ОГРН: no entry). Ukraine's NSDC not checked.",
+        "checked": [
+          "s9106",
+          "s9107",
+          "s9108",
+          "s9109"
+        ]
+      }
     },
     {
       "_verified": true,
@@ -3671,7 +3726,18 @@
           "source_id": "s5534",
           "note": "БФО filing: balance-sheet total ₽3,100k, held entirely as Основные средства (fixed assets), matching the ₽3.1m charter capital exactly — i.e. the capital appears to have been contributed in kind, not cash. Zero revenue line (Совокупный финансовый результат, code 2500, blank/zero). No FY2023/2024 comparative figures shown (company registered 14.04.2025, so FY2025 is its first filing)."
         }
-      ]
+      ],
+      "sanctions_review": {
+        "as_of": "2026-10-04",
+        "outcome": "false_positive",
+        "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: Same three other «Архангел» companies; ours is ИНН 9108131213. Not the same entity, but the record has a real link: its director Тимофеев В.С. was appointed director of the Melitopol ООО «Архангел» (ИНН 9500026652) three days before this company was registered. That is a relationship to record, not a listing of this company. On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by ИНН/ОГРН: no entry). Ukraine's NSDC not checked.",
+        "checked": [
+          "s9106",
+          "s9107",
+          "s9108",
+          "s9109"
+        ]
+      }
     },
     {
       "slug": "ao-npp-real",
@@ -3924,7 +3990,18 @@
           "source_id": "s6906",
           "note": "Original Устав (редакция №1), утвержден Решением №01 единственного учредителя от 04.10.2016; unchanged in редакция №2 (Решение №30-05/1/2017 от 30.05.2017, ГРН 8177747805470 от 07.07.2017, still единственный участник)."
         }
-      ]
+      ],
+      "sanctions_review": {
+        "as_of": "2026-10-04",
+        "outcome": "false_positive",
+        "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: Both ГУР hits are other companies (ИНН 1831117433 and 1831156383). Ours is 7801320277. The sanctioned АО «Кронштадт» (ИНН 7808035536) is a separate legal entity, noted in the record as a lead. On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by ИНН/ОГРН: no entry). Ukraine's NSDC not checked.",
+        "checked": [
+          "s9106",
+          "s9107",
+          "s9108",
+          "s9109"
+        ]
+      }
     },
     {
       "slug": "ooo-hab-svo",
@@ -4153,7 +4230,18 @@
       "why": [
         "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен А.А.; pulled full EGRUL выписка to confirm founders/director directly.",
         "2026-09-30: OpenSanctions public entity page ru-inn-6154166381 (captured 2026-09-30) tags the company \"Sanction ownership or control\" and \"Sanction-linked\". The page states it has not been found on international sanctions lists; the tag is labelled \"Graph-based entity tagging\", inferred, i.e. an algorithmic link to some sanctioned party, not a listing, and the page does not name that party. Recorded as a lead only (screening fields opensanctions_matches/opensanctions_screened_at, source s8226); not written to sanctions[]. The GUR war-sanctions search for the same entity returned no ID-confirmed profile. The same three owners appear across ООО «Прометей», ООО «НПК «Атлант Аэро» and ООО «Сельскохозяйственные беспилотные системы «Мира»», which all carry the tag; the shared owner is the likely origin but is not stated by the source."
-      ]
+      ],
+      "sanctions_review": {
+        "as_of": "2026-10-04",
+        "outcome": "false_positive",
+        "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: The ГУР hit is a different company, «NPK …» ИНН 1683010356. Ours is 6154166381. On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by ИНН/ОГРН: no entry). Ukraine's NSDC not checked.",
+        "checked": [
+          "s9106",
+          "s9107",
+          "s9108",
+          "s9109"
+        ]
+      }
     },
     {
       "slug": "ooo-atlant-servis",
@@ -13084,7 +13172,18 @@
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
           }
         ],
-        "charter_capital": 641200
+        "charter_capital": 641200,
+        "sanctions_review": {
+          "as_of": "2026-10-04",
+          "outcome": "false_positive",
+          "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: The ГУР hit is a person, Savitskaya Svetlana Evgenievna. The record does not name her anywhere; its director is Рябико Ольга Александровна. On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by ИНН/ОГРН: no entry). Ukraine's NSDC not checked.",
+          "checked": [
+            "s9106",
+            "s9107",
+            "s9108",
+            "s9109"
+          ]
+        }
       },
       "verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0102)",
       "why": [
@@ -17511,6 +17610,17 @@
             716
           ],
           "note": "Post 716 (14.05.2025) is about the Ukrainian «Аэро Азимут» aerostat platform, unrelated to this entity."
+        },
+        "sanctions_review": {
+          "as_of": "2026-10-04",
+          "outcome": "false_positive",
+          "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: Both ГУР hits are other companies: «Unmanned Systems» LLC (ИНН 1831156383) and «BVS Systems» LLC (ИНН 7820061973). Ours is 7714390623. ГУР's own identifier check returned no match for either. On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by ИНН/ОГРН: no entry). Ukraine's NSDC not checked.",
+          "checked": [
+            "s9106",
+            "s9107",
+            "s9108",
+            "s9109"
+          ]
         }
       },
       "verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0106)",
@@ -19601,7 +19711,18 @@
             "source_id": "s1352",
             "type": "combined_mark"
           }
-        ]
+        ],
+        "sanctions_review": {
+          "as_of": "2026-10-04",
+          "outcome": "false_positive",
+          "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: This record is ИП Пинимасова Елена Александровна. The five ГУР hits are women with other surnames who share only the patronymic Александровна (Kulikova, Pereselyak, Topchi, Rubtsova, Tyurina). On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by ИНН/ОГРН: no entry). Ukraine's NSDC not checked.",
+          "checked": [
+            "s9106",
+            "s9107",
+            "s9108",
+            "s9109"
+          ]
+        }
       },
       "verified_against": "fl-316784700156711-20260823182427.pdf (full ЕГРИП extract, ИП Пинимасова Е.А., pulled 23.08.2026)",
       "why": [
@@ -24282,7 +24403,18 @@
           }
         ],
         "tier": "adjacent",
-        "tier_basis": "checked and ruled out — dormant across five fiscal years"
+        "tier_basis": "checked and ruled out — dormant across five fiscal years",
+        "sanctions_review": {
+          "as_of": "2026-10-04",
+          "outcome": "false_positive",
+          "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: The ГУР hit is a different company, ИНН 7804317900. Ours is 7805728050. On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by ИНН/ОГРН: no entry). Ukraine's NSDC not checked.",
+          "checked": [
+            "s9106",
+            "s9107",
+            "s9108",
+            "s9109"
+          ]
+        }
       },
       "verified_against": "egrul.nalog.ru open API, 2026-08-24",
       "why": [
@@ -32289,7 +32421,18 @@
             "source_id": "s8688",
             "note": "Edition 11-T, approved by the sole participant on 10 December 2018; ЕГРЮЛ ГРН 2193702041135 of 18.01.2019. The charter gives the town only, not a street address."
           }
-        ]
+        ],
+        "sanctions_review": {
+          "as_of": "2026-10-04",
+          "outcome": "false_positive",
+          "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: The only risky hit is ООО «Орион», ИНН 2308299972 (Rostov-on-Don, registered 04.02.2025). Ours is ИНН 7706664648. Already rejected in the record on 24.08.2026. On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by ИНН/ОГРН: no entry). Ukraine's NSDC not checked.",
+          "checked": [
+            "s9106",
+            "s9107",
+            "s9108",
+            "s9109"
+          ]
+        }
       },
       "verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0099)",
       "why": [

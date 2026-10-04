@@ -18,7 +18,16 @@
         "source_id": "s7519"
       }
     ],
-    "sanctions": [],
+    "sanctions": [
+      {
+        "date": "2022-03-24",
+        "regime": [
+          "United Kingdom"
+        ],
+        "source_id": "s9108",
+        "note": "UK Sanctions List (FCDO) of 02.10.2026, entry RUS1046 (group id 14989): Vladimir Vladimirovich YAKUSHEV / ЯКУШЕВ Владимир Владимирович, DOB 14/06/1968, 'Neftekamsk, Bashkiria Russia'; Member of the Security Council, Presidential Envoy to the Urals Federal District. Asset freeze, travel ban, trust-services sanctions (21.03.2023) and director disqualification (09.04.2025). Date of birth and birthplace match this record. Other regimes cited by OpenSanctions were not read on their own lists."
+      }
+    ],
     "other_entities": [
       {
         "inn": "7702330228",
@@ -49,6 +58,14 @@
       "name": "Владимир Вадимович Якушев",
       "position": "Chairman of the Supervisory Board; Secretary of United Russia’s General Council; First Deputy Chairman of the Federation Council",
       "note": "The most senior figure in the structure. Per Sidyakin's own account (United Russia's \"Переговорка\" podcast, published 21.04.2025, referencing \"2 months ago\"), he took the Supervisory Board chair around February 2025 — not previously dated in this brief. Primary doc"
+    },
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "designated",
+      "note": "UK entry RUS1046 read in full on the official list; DOB and birthplace match. Other lists named by OpenSanctions (US, Canada, Australia, New Zealand, Ukraine) not read; no EU or Swiss entry found by name.",
+      "checked": [
+        "s9108"
+      ]
     },
     "_corrected": [
       "2026-08-25: patronymic correction + DOB fill via OSINT research pass -- resolves the biggest identifying-detail gap on the network's most senior figure.",
@@ -753,6 +770,17 @@
       "outcome": "closed",
       "note": "6 unwired archived cards, all РАНХиГС, ₽728,220 combined 2023 — academic/consulting-fee scale, not procurement of substance."
     },
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "The record is on ГУР's database as a 'person of interest' per OpenSanctions, which says it is on no sanctions list; or it is only linked through an owner. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. The ГУР entry is not read in full here. Two hits. NK-XU3ivbw (PESKOV Dmitry Nikolaevich): date of birth 26.12.1975, birthplace Voronezh and ИНН 772919018611 all match ours, but it is a ГУР-database 'person of interest' only; OpenSanctions says he is on no sanctions list. The other hit, Q111263326, is Nikolay Dmitrievich Peskov (b. 03.02.1",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "2026-08-24: OpenSanctions match explicitly checked and rejected — name collision with Kremlin press secretary Dmitry Peskov.",
       "2026-08-26: rupep.org profile (s2606) for this registry's Дмитрий Песков (Presidential special representative for digital/technological development, CEO АНО «Платформа НТИ») -- role text matches this RuPEP profile exactly, and RuPEP's own career table lists both roles verbatim. This is a DIFFERENT person from the Kremlin press secretary Dmitry Sergeevich Peskov already correctly rejected in this record's open_questions[] (b.1967, Moscow) -- RuPEP gives dob 26.12.1975, birthplace Voronezh, ИНН 772919018611, none of which match the press secretary. Confirms the earlier rejection was correct rather than resolving it away.",
@@ -1049,6 +1077,17 @@
       "name": "Михаил Кузнецов",
       "position": "Head of the Executive Committee, ОНФ (Popular Front)",
       "note": "Primary doc"
+    },
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Pre-sort resolves the hit to Кузнецов Михаил Михайлович (head of the ОНФ executive committee since 03.2022; EU, CH and others per OpenSanctions). No matching EU entry was found on the 02.10.2026 file by name, and the record has no ИНН or date of birth. Read the EU/Swiss entries by that name before recording.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
     },
     "_corrected": [
       "2026-08-24 OpenSanctions screening returned TWO distinct same-scored candidates for \"Михаил Кузнецов\" — (a) Sovcomflot board-of-directors member, DOB 1979-06-20, director-disqualification sanctioned 2025-09-04; (b) authorized representative for Putin's 2024 presidential campaign, DOB 1979-08-18. NEITHER candidate's notes text mentions ОНФ (this registry's own role for him: Head of the Executive Committee, Popular Front). Left UNCONFIRMED rather than guessing which DOB belongs to this person — common name, genuine ambiguity.",
@@ -8947,6 +8986,17 @@
         "text": "Name-collision risk on OpenSanctions sweep (2026-08-24): two distinct ru-inn records share this exact ФИО, only one flagged sanction.linked. OpenSanctions returns TWO score-1.0 candidates for this exact name: ru-inn-623300860474 (no topics — plain EGRUL entry) and ru-inn-732102513469 (topics: sanction.linked). Cannot determine which ИНН belongs to this registry's Гусев without an independent personal-ИНН source to cross-check. Archived s0839; both candidates on file."
       }
     ],
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "linked_not_designated",
+      "note": "OpenSanctions marks this person as sanction-linked through ООО «Клеверкоптер» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
       "2026-08-24 opensanctions people cross-reference pass: ambiguous, logged as open question rather than promoted.",
@@ -10881,6 +10931,17 @@
         "e Forbes/Investigative-Committee reporting, which named the company, dated the arrest, and quantified frozen funds precisely. Corporately, СИБНК's ownership has shifted very recently: 100% held by GD Ступников Андрей Генадьевич per the FY2025 filing's own related-party note, but EGRUL (pulled fresh) shows a new 26.25% stake carved out to Константинов Евгений Александрович — the same person who is now Гаскар's own GD — dated 29.05.2026, with Ступников's own"
       ]
     },
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "linked_not_designated",
+      "note": "OpenSanctions marks this person as sanction-linked through ООО «СибНК» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2559).",
       "2026-09-07: verification via screen_upr_uchr.py ФНС cross-reference -- Ступников Андрей Генадьевич confirmed as директор of ooo-sibirskaya-navigatsionnaya-kompaniya (ИНН 4205376019), an official-registry match against an already-known entity.",
@@ -10947,6 +11008,17 @@
     "_raw": {
       "contexts": [
         "ИБНК's ownership has shifted very recently: 100% held by GD Ступников Андрей Генадьевич per the FY2025 filing's own related-party note, but EGRUL (pulled fresh) shows a new 26.25% stake carved out to Константинов Евгений Александрович — the same person who is now Гаскар's own GD — dated 29.05.2026, with Ступников's own GD appointment at СИБНК dated 29.06.2026, one month later; i.e., a leadership reshuffle across parent and subsidiary compressed into a five"
+      ]
+    },
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. Hit ru-inn-263114465785 ('sanction-linked'): a namesake in the Russian company register. The record has no ИНН of its own, so this is name-only. Settle it by reading his ИНН from an ЕГРЮЛ extract.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
       ]
     },
     "_corrected": [
@@ -11654,6 +11726,17 @@
         "founder data before it was hidden. Multiple independent aggregators (RBC Companies, Rusprofile, Zachestnyibiznes) agree on three founders, matching the three redacted participant records found above: Белоглазова Людмила Александровна, Шагиахметов Айрат Фатхутдинович and Шахматов Иван Анатольевич — charter capital ₽200,000 across all sources, matching the EGRUL figure exactly. Аggregator snapshots disagree on who currently holds the GD role (some show Шагиа"
       ]
     },
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled: birth date 18.10.1983 and ИНН 636501893256 both match ours. NSDC-listed (first seen 09.05.2025); the entry ties her to ООО «Тримикс» (100% owner 21.07.2023–26.02.2024).",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
       "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text."
@@ -11732,6 +11815,17 @@
     "_raw": {
       "contexts": [
         "C Companies, Rusprofile, Zachestnyibiznes) agree on three founders, matching the three redacted participant records found above: Белоглазова Людмила Александровна, Шагиахметов Айрат Фатхутдинович and Шахматов Иван Анатольевич — charter capital ₽200,000 across all sources, matching the EGRUL figure exactly. Аggregator snapshots disagree on who currently holds the GD role (some show Шагиахметов, one shows Белоглазова) and on Шагиахметов's stake, reported as "
+      ]
+    },
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled: birth date 06.05.1986 and ИНН 471010513778 both match ours. NSDC-listed (09.05.2025); 15% of ООО «Тримикс» 27.02–31.10.2024.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
       ]
     },
     "_corrected": [
@@ -11861,6 +11955,17 @@
       "as_of": "2026-08-31",
       "outcome": "closed",
       "note": "19 contracts across unrelated regional customers with no thematic or geographic connection to her ООО «НПО Кайсант» role; generic small-supplier contracting."
+    },
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled by ИНН: the NSDC entry prints ИНН 773376903806, ours. It gives b. 20.04.1990 (a lead for the record) and ties her to ООО «Аргус-М» and НПП «Аргата». NSDC since 08.02.2026.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
     },
     "_corrected": [
       "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2540).",
@@ -12045,6 +12150,17 @@
         "note": "Public working name, not a legal name change. The Insider (29.07.2026) states that when giving public comments Черезов introduced himself as «Андрея Иванова», including in the 2024 «Соловьев LIVE» segment with Кирилл Фёдоров; press level, one outlet. Consistent with the on-screen caption «Андрей Иванов — разработчик, создатель дрона «ОВОД»» in that video (s7854) and with the Mash photo of Черезов А.П. receiving the «Патриот-2024» laureate diploma (s7851), in which he wears the same kind of tinted glasses. as_of is the year of the segment as stated by The Insider, not an exact date."
       }
     ],
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled by ИНН: the NSDC entry prints ИНН 712802968839, ours. b. 04.07.1984; 100% owner of ООО «Русская лаборатория воздушного транспорта». NSDC since 02.12.2024.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "2026-09-20: photo = Mash.ru press image (s7851/s7852, 29.07.2026) showing him at the «Патриот-2024» award; the diploma in it reads «Черезов Андрей Павлович». Alias «Андрей Иванов» added to name_history from The Insider (s7853), corroborated by the Фёдоров LIVE on-screen caption (s7854, user-supplied screenshot) and the «За работу» workshop interview (s7855 and Readovka/Ramzay reposts s7858/s7859). Identification is press-level; no second independent outlet states the alias. Mash's remark that the attacker may have confused him with a second co-founder named Андрей is NOT used: the ЕГРЮЛ выписка (s6727) has him as sole founder.",
       "2026-09-08: personal ИНН found in the already-pulled EGRUL выписка for ovod (ИНН 7100027464, s6727) — he's named there as director since 28.09.2022, ИНН 712802968839. Sitting unexploited since 2026-09-07; closing the gap now that this Гагаринг-adjacent 'Архангел'-family thread is being worked.",
@@ -12155,7 +12271,24 @@
         "to": null
       }
     ],
-    "sanctions": [],
+    "sanctions": [
+      {
+        "date": "2025-05-20",
+        "regime": [
+          "European Union"
+        ],
+        "source_id": "s9107",
+        "note": "EU consolidated list of 02.10.2026, entry EU.13089.32 (Official Journal 2025/933): Alexey Viktorovich CHADAYEV / Алексей Викторович ЧАДАЕВ, DOB 30.9.1978, function 'Director of Scientific-Research Centre «Ushkuynik»'. Matched to this record by name, patronymic and function; no ИНН is printed and the record holds none. The act itself was not read."
+      },
+      {
+        "date": null,
+        "regime": [
+          "Switzerland"
+        ],
+        "source_id": "s9106",
+        "note": "Swiss SECO list of 02.10.2026, entry ssid 93601: Alexey Viktorovich CHADAYEV, Director of Scientific-Research Centre «Ushkuynik» (UAVs incl. «Князь Вандал Новгородский»). Same identity basis as the EU entry; the Swiss listing date was not read."
+      }
+    ],
     "other_entities": [],
     "other_entities_checked_at": null,
     "disqualification_hits": [],
@@ -12193,6 +12326,15 @@
         "text": "His own channel (t.me/chadayevru 4636, 29.03.2026) says sanctions of unfriendly states exist «персональные против меня (в частности, 19-й пакет санкций ЕС) или против НПЦ». The registry holds no sanction for him or for the НПЦ. Not verified against the EU Official Journal: a web search on 2026-10-02 («Алексей Чадаев санкции ЕС 19-й пакет Ушкуйник…») returned only general 19th-package coverage, and the listing itself was not read. The sentence does not say whether the НПЦ is listed."
       }
     ],
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "designated",
+      "note": "EU entry EU.13089.32 and Swiss entry 93601 read on the official files. Identity rests on name, patronymic and function (director of НПЦ «Ушкуйник»), not on an identifier. His own post 4636 (29.03.2026) says he is under EU personal sanctions. DOB 30.09.1978 is printed in the EU entry only and is not copied into the record's dob field.",
+      "checked": [
+        "s9106",
+        "s9107"
+      ]
+    },
     "_corrected": [
       "2026-08-24: the pre-existing `_candidate` role on this person pointed at the wrong entity -- \"ООО «Ушкуйник»\" (npts-ushkuynik, the flagship UAV maker itself, whose own `director` field is null) rather than \"АНО «НПЦ «Ушкуйник»»\" (ano-npts-ushkuynik, a separate registry entity whose `director` field already reads \"Чадаев Алексей Викторович\", sourced to an EGRUL pull s0947). Corrected the entity_slug/entity_name to the АНО and attached that same s0947 source, dropping `_candidate` since it now matches an independently EGRUL-sourced field exactly. Corroborated further by leader-id.ru, which self-reports the same employer (full legal name match) and position \"Генеральный директор\", Москва. NOT the same person as «Чадаев Ю.А.» (leader of АНО «НПЦ БАС «ТулаДрон»», per the parked npc_bas_technopark_network memory) -- different patronymic, different organization.",
       "2026-09-07: verification backlog closure — identity already confirmed by АНО «НПЦ «Ушкуйник»»'s (ano-npts-ushkuynik) own director_history entry (s6806), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
@@ -12291,12 +12433,38 @@
     "slug": "atlivanchik-sergey-nikolaevich",
     "fio_ru": "Атливанчик Сергей Николаевич",
     "name_latin": null,
-    "dob": null,
+    "dob": "1980-01-11",
     "birthplace": null,
     "address": null,
-    "inn_personal": null,
-    "roles": [],
-    "sanctions": [],
+    "inn_personal": "773514103490",
+    "roles": [
+      {
+        "entity_name": "ООО «Элиарс»",
+        "entity_slug": "ooo-eliars",
+        "from": "2016-12-12",
+        "source_id": "s6827",
+        "title": "Генеральный директор",
+        "to": null
+      }
+    ],
+    "sanctions": [
+      {
+        "date": "2025-02-24",
+        "regime": [
+          "European Union"
+        ],
+        "source_id": "s9107",
+        "note": "EU consolidated list of 02.10.2026, entry EU.12764.77 (Council Implementing Regulation (EU) 2025/389, 24.02.2025): Сергей Николаевич АТЛИВАНЧИК, General Director of LLC Eliars; DOB 11.1.1980; National Fiscal Code 773514103490. The ИНН matches the personal ИНН in ООО «Элиарс»'s ЕГРЮЛ extract (s6827)."
+      },
+      {
+        "date": null,
+        "regime": [
+          "Switzerland"
+        ],
+        "source_id": "s9106",
+        "note": "Swiss SECO list of 02.10.2026, entry ssid 88614: Sergey Nikolaevich ATLIVANCHIK, General Director of LLC Eliars; Tax Identification Number 773514103490; listed for the «Зонт» anti-drone system."
+      }
+    ],
     "other_entities": [],
     "other_entities_checked_at": null,
     "disqualification_hits": [],
@@ -12313,6 +12481,15 @@
     "_raw": {
       "contexts": [
         "rector of Development, С.С. Шандобыло, and Элиарс's (ИНН 7735140825, Zelenograd) General Director, С.Н. Атливанчик — a name-to-EGRUL match independently confirmed, since Rusprofile's own record lists Атливанчик Сергей Николаевич as Элиарс's director — real, named people from an independent conference-programme source, standing in useful contrast to Тримикс's own EGRUL record, where both GD and founder are access-restricted. Separately, Chadaev's channel in"
+      ]
+    },
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "designated",
+      "note": "EU and Swiss entries read on the official files; the printed ИНН 773514103490 matches the one in the Элиарс ЕГРЮЛ extract (s6827). Date of birth 11.01.1980 is from the EU entry (s9107).",
+      "checked": [
+        "s9106",
+        "s9107"
       ]
     },
     "_corrected": [
@@ -12753,6 +12930,17 @@
     "_raw": {
       "contexts": [
         " charter (pulled directly from ФНС, a single boilerplate document with no state-secrets or defence-specific clauses, ₽100,000 charter capital) shows a family-controlled structure: sole founder (100%) Королев Алексей Александрович, General Director Королев Дмитрий Алексеевич — same surname, patronymics consistent with a close family relationship rather than an arm's-length appointment. Its secondary OKVED list is unusually broad for a week-old shell — integ"
+      ]
+    },
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "false_positive",
+      "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: The only risky hit (Q120853992) is a Myrotvorets entry, which OpenSanctions tags 'war crimes' but is not a sanctions list. Name-only; no designation. On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by personal ИНН/name: no entry). Ukraine's NSDC not checked.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
       ]
     },
     "_corrected": [
@@ -13575,6 +13763,17 @@
         "duct (Vector's «Hammer F1»), a framing pattern (domestic ЦБСТ resident vs. named Western competitor) seen elsewhere in this platform's self-promotion. Corporately, КРАВТ is 100% owned by its founder, Королев Дмитрий Михайлович, personally (sole founder since registration, GD in place since founding) — not a subsidiary of anything. КРАВТ itself in turn owns two subsidiaries: 90% of ООО «КРАВТ УДМУРТИЯ» (ИНН 1800023369, registered 09.09.2024 in Glazov, Удмур"
       ]
     },
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "linked_not_designated",
+      "note": "OpenSanctions marks this person as sanction-linked through ООО «КРАВТ» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "2026-08-24 patent-sweep author cross-reference: added co-inventor role(s) for RU2858174C1 (searchplatform.rospatent.gov.ru full-roster sweep), preserving existing roles.",
       "2026-08-24 cleanup: dropped a stale prose-extracted _candidate role for ООО «КРАВТ УДМУРТИЯ», now superseded by the resolved co-inventor role added from the patent sweep (same entity, now with entity_slug/title/source_id).",
@@ -14219,6 +14418,17 @@
         "др Игоревич holds 4.5%, and Назаров Олег Рамилевич holds 1.3%; the notes name all four — Ястребов, Бежанов, Махнёв, Назаров — explicitly as \"конечные бенефициары\" (ultimate beneficiaries). Current GD Костюнин Павел Андреевич (since 03.05.2024) holds no disclosed equity but is also GD of a related entity, АО «Стратим-Тех», which transacted ₽1.83m in purchases with АО «Стратим» in 2025. A separate, similarly-named ООО «Стратим» (ИНН 5260494520, 25% owned by "
       ]
     },
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "linked_not_designated",
+      "note": "OpenSanctions marks this person as sanction-linked through АО «Стратим» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "2026-08-24: leader-id.ru self-reports employer \"АО «Стратим»\", position \"Генеральный директор\", Москва -- exact name/title match to ao-stratim's own already-sourced `director` field (Костюнин Павел Андреевич), resolving one of the three pre-existing `_candidate` role links on this person (АО «Стратим») via corroboration, though not upgraded to a sourced `source_id` on the role itself -- leader-id self-report alone isn't sufficient sourcing for that per this registry's standing discipline. The other two candidate roles (АО «Стратим-Тех», ООО «Стратим») remain unreviewed.",
       "2026-08-25: bulk _candidate role resolution against the egrul_batch_pull.py full-roster director snapshot (Phase 1b item 1) -- exact full-ФИО match to the batch-pulled director/ликвидатор field, per-role source_id assigned, _candidate dropped. АО «Стратим» -> ao-stratim, confirmed Генеральный директор via egrul_batch_pull.py snapshot (s0111). ООО «Стратим» -> ooo-stratim, confirmed Ликвидатор via egrul_batch_pull.py snapshot (s0074).",
@@ -14508,6 +14718,17 @@
     "_raw": {
       "contexts": [
         "— the EGRUL address (обл. Ленинградская, м.р-н Сланцевский, с.п. Старопольское, д. Шакицы, д.14) matches the site's disclosed operator address exactly. Its Председатель (chairman) since 26.03.2021 is Любимов Александр Сергеевич — the same person, EGRUL-confirmed rather than inferred; as an association, EGRUL records no separate founder list. Дронница's own site also discloses direct crowdfunding rails: a Sberbank card (2202205080218883, recipient \"Майя Вла"
+      ]
+    },
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. Hit ru-inn-780158682795 ('sanction-linked'). Name-only; our Любимов (chair of Ассоциация «Взаимопомощь», co-organiser of «Дронница») has no ИНН on file. The association's ЕГРЮЛ extract would give it.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
       ]
     },
     "_corrected": [
@@ -18234,6 +18455,17 @@
         "«Прайм» (ИНН 7735565264, Moscow, director Баранова Ольга Владимировна — no obvious defense/UAV tie by name alone, not yet otherwise researched), and two individuals, Сиразатдинов Никита Вадимович and Климов Максим Александрович — both new names, not otherwise appearing in this brief. Financials are minimal (₽239,000 in assets, no reported 2025 revenue), consistent with a young trade-association shell rather than an operating company. Not yet established wh"
       ]
     },
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "false_positive",
+      "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: The NSDC-listed Климов Максим Олександрович carries ИНН 695004552407 per the earlier OpenSanctions read noted in the record; our АРРС founder's ИНН from the 29.09.2026 ЕГРЮЛ extract is 410201675667. A personal ИНН does not change, so these look like two people. Note: the record's notes still say 'confirmed … see sanctions[]', but sanctions[] is empty; the notes need correcting either way. On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by personal ИНН/name: no entry). Ukraine's NSDC not checked.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "2026-09-03: corrected during the Гагаринг-network wide-net push — his scaffolded record had no role at all despite being named as an АРРС founder in the entity's own founders[] list; added the missing role.",
       "2026-09-07: verification backlog closure (round 2, founders) -- identity confirmed by Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭР, РЭБ и связи)'s (ano-arrs-krasnodar) own founders_history entry (s6777), a primary-source document, but the person record had never been marked _verified.",
@@ -19623,6 +19855,17 @@
         "text": "Name-collision risk on OpenSanctions sweep (2026-08-24): two distinct ru-inn records share this exact ФИО, only one flagged sanction.linked. OpenSanctions returns TWO score-1.0 candidates for this exact name: ru-inn-773570615358 (no topics — plain EGRUL entry) and ru-inn-774305253744 (topics: sanction.linked). Cannot determine which ИНН belongs to this registry's Басов without an independent personal-ИНН source to cross-check. Archived s0827; both candidates on file."
       }
     ],
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "linked_not_designated",
+      "note": "OpenSanctions marks this person as sanction-linked through АО «Эколибри» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "2026-08-24 opensanctions people cross-reference pass: ambiguous, logged as open question rather than promoted.",
       "[2026-09-16] Per _docs_registry_gap_list item 10: the two _candidate ДЕДАЛ/АИТК role stubs were a mis-read -- ДЕДАЛ/АИТК are shareholders IN АО «Эколибри», not entities Басов himself directs. The entity's own FY2025 БФО filing (s0324, 'Перечень связанных сторон', p.45) instead names him directly as a Член Совета директоров of Эколибри, with personal ИНН 774305253744. Replaced the two unsourced candidate stubs with this one real, sourced role."
@@ -21752,6 +21995,17 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_verified_against": "searchplatform.rospatent.gov.ru patent RU2859152C1, archived as s0977",
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. Hit ru-inn-615424668354 ('sanction-linked'). Name-only; co-inventor at ООО «Атлант Аэро», no ИНН on file.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": null,
     "opensanctions_matches": [
       {
@@ -22514,6 +22768,16 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_verified_against": null,
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "designated",
+      "note": "EU Reg. 2024/753 entry 1732 and the Swiss entry read (recorded 04.10.2026); personal ИНН printed in both.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9125"
+      ]
+    },
     "_corrected": [
       "2026-08-26 aleph_followup.py bulk fetch pass (manufacturer-tier full-roster triage): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly. (source s2530).",
       "04.10.2026: EU and Swiss entries read on the official files. Identity rests on the personal ИНН 780105167705 (the registry's own, and printed in both entries) and the matching post (director of АО «НПП «Радар ММС»). DOB 1961-01-29 taken from EU 2024/753 entry 1732 (s9125) and the Swiss list (s9106). Birthplace left null: the act's text 'Gorky. Leningrad (now St. Petersburg)' is internally unclear."
@@ -22622,7 +22886,24 @@
         "to": null
       }
     ],
-    "sanctions": [],
+    "sanctions": [
+      {
+        "date": "2025-02-24",
+        "regime": [
+          "European Union"
+        ],
+        "source_id": "s9107",
+        "note": "EU consolidated list of 02.10.2026, entry EU.12733.74 (Council Implementing Regulation (EU) 2025/389, 24.02.2025): Иван Георгиевич АНЦЕВ, Executive Director of JSC NPP Radar MMS; DOB 4.8.1985; POB St. Petersburg. No ИНН printed. Matched by name, patronymic and employer (the record is a co-inventor at Радар ММС). The act itself was not read."
+      },
+      {
+        "date": null,
+        "regime": [
+          "Switzerland"
+        ],
+        "source_id": "s9106",
+        "note": "Swiss SECO list of 02.10.2026, entry ssid 89169: Ivan Georgyevich ANTSEV, Executive Director of JSC NPP Radar MMS. No ИНН or date of birth printed. Same identity basis."
+      }
+    ],
     "other_entities": [
       {
         "inn": "7814354481",
@@ -22663,6 +22944,15 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_verified_against": null,
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "designated",
+      "note": "EU and Swiss entries read on the official files. Identity rests on name, patronymic and employer, not on an identifier; this record's personal ИНН 780156016060 is not printed in either entry. DOB 04.08.1985 is not copied into the record.",
+      "checked": [
+        "s9106",
+        "s9107"
+      ]
+    },
     "_corrected": [
       "2026-08-24: leader-id.ru self-reports employer \"ОАО \\\"НПП \\\"Радар ммс\\\"\", position \"Исполнительный директор\" (Executive Director), Санкт-Петербург -- corroborates and upgrades this person from co-inventor to a named executive at npp-radar-mms, matching the entity's own name and city exactly.",
       "2026-08-26 aleph_followup.py bulk fetch pass (manufacturer-tier full-roster triage): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly. (source s2477).",
@@ -26383,6 +26673,17 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_verified_against": null,
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled by ИНН: the NSDC entry prints ИНН 695001185808, ours. b. 27.01.1960; listed as general director of АО «МКБ «Факел» им. Грушина» since 21.10.2014, a role our record lacks (lead). NSDC since 20.04.2023.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "2026-08-26 aleph_followup.py bulk fetch pass (manufacturer-tier full-roster triage): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly. (source s2500)."
     ],
@@ -28142,6 +28443,17 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_verified_against": "searchplatform.rospatent.gov.ru patent record(s): RU2820521C1",
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. The listed Kozlov (OFAC 15.01.2025, NSDC) is b. 07.08.1969 in St Petersburg, ИНН 782023355772, Pushkin address. Our Козлов is a co-inventor at АО «НИИ «Вектор»» (St Petersburg) with no ИНН on file. Same city, common name: compare the ИНН fr",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": null,
     "opensanctions_matches": [
       {
@@ -28393,6 +28705,17 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_verified_against": "searchplatform.rospatent.gov.ru patent record(s): RU2858174C1",
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. The listed Комаров (NSDC, 09.05.2025) is b. 06.07.1968, ИНН 500908329403, 34% of ООО «Интермаш». Our Комаров is a co-inventor at ООО «КРАВТ-Удмуртия» with no ИНН; nothing links him to Интермаш. Leaning false positive, but unproven.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": null,
     "opensanctions_matches": [
       {
@@ -28827,6 +29150,17 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_verified_against": "searchplatform.rospatent.gov.ru patent record(s): RU2758587C1",
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. Hit ru-inn-471203835475 ('sanction-linked'). Name-only; co-inventor at НПЦ «Элвис», no ИНН on file.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": null,
     "opensanctions_matches": [
       {
@@ -29383,6 +29717,17 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_verified_against": "searchplatform.rospatent.gov.ru patent record(s): RU2716283C2",
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Name-only: the hit is a Belarusian listed under the EU Belarus regime (OJ L 2024/1746). This record is a Russian co-inventor with no ИНН; likely a namesake but not shown.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": null,
     "opensanctions_matches": [
       {
@@ -30464,6 +30809,17 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_verified_against": "searchplatform.rospatent.gov.ru patent record(s): RU2769566C2",
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Name-only: the UK (RUS1516) and US lists carry Oleg Nikolaev, head of the Chuvash Republic. This record is a patent co-inventor at АО «НИИ «Вектор»» with no ИНН or date of birth; nothing ties him to the governor, so likely a namesake but not shown.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": null,
     "opensanctions_matches": [
       {
@@ -30776,6 +31132,17 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_verified_against": "searchplatform.rospatent.gov.ru patent record(s): RU2766442C1",
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. The Q120852989 entry is a Wagner member on Myrotvorets only, not on any sanctions list: ignore it. What remains is ru-inn-532001062101 ('sanction-linked'), name-only because we hold no ИНН for our НПЦ «Элвис» co-inventor.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": null,
     "opensanctions_matches": [
       {
@@ -33400,6 +33767,17 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_verified_against": "searchplatform.rospatent.gov.ru patent record(s): RU140982U1",
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "false_positive",
+      "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: Hit Q15066899 (score 0.91) is Aleksey Zakharov, a different surname (Захаров, not Сахаров), flagged only as a relative of a listed person. On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by name: no entry). Ukraine's NSDC not checked.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": null,
     "opensanctions_matches": [
       {
@@ -34290,6 +34668,17 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_verified_against": null,
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled by ИНН: the entry prints ИНН 780212544531, ours. b. 14 or 15.08.1978; director at АО «Завод «Энергия»». Listed by Ukraine's NSDC (13.12.2023) and Canada (06.08.2024), plus the ГУР database.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "2026-08-26 aleph_followup.py bulk fetch pass (manufacturer-tier full-roster triage): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly. (source s2524)."
     ],
@@ -37737,6 +38126,17 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_verified_against": null,
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Match by ownership: the NSDC entry records a 93.33% stake in НПО «Кайсант», the same stake our record holds from aggregators. It prints ИНН 504508740969 and b. 15.03.1984; confirm the ИНН from Кайсант's ЕГРЮЛ extract before recording. NSDC since 08.02.2026.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "2026-08-24: web search on this session's own new co-inventor finding surfaced that he is also the majority owner of the same entity, not just a named software co-inventor -- a materially more significant role than 'co-inventor' alone."
     ],
@@ -41884,6 +42284,17 @@
       "7733894200"
     ],
     "source_id": "s1548",
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Name-only hit; the record holds no personal ИНН or date of birth to settle it. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry by name. Settle by reading his ИНН from a register extract. Hit ru-inn-027503961630 ('sanction-linked', score 0.97). Name-only; former director of ООО «Гаскар Интеграция», no ИНН on file. The company's ЕГРЮЛ extract would give it.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "2026-09-19: fio_ru set from this record's own name_latin (\"Renat Faritovich Saitov\") and the Cyrillic form already used for this person in director_history; the record had no Cyrillic name, so name matching missed it and the graph showed a stub beside it.",
       "2026-09-07: registry-hardening pass -- resolved orphan role link to ooo-gaskar-integratsiya."
@@ -42468,6 +42879,17 @@
       "ooo-tsentr-bespilotnykh-sistem-tula"
     ],
     "source_id": "s1914",
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Settled by ИНН: the NSDC entry prints ИНН 561012075269, ours. b. 03.05.1980; general director of the Tula ООО «Центр беспилотных систем» 2023–2024, later of АНО «НПЦ БАС «Туладрон»». NSDC since 13.12.2023.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "2026-09-07: registry-hardening pass -- resolved orphan role link to ooo-tsentr-bespilotnykh-sistem-tula."
     ],
@@ -43247,6 +43669,17 @@
     "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "false_positive",
+      "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026: The only risky hit (Q120853949) is a Myrotvorets entry, not a sanctions list. Name-only. Worth a glance only because he was a director of ООО «Ушкуйник». On the EU, US, UK and Swiss lists of 02.10.2026 (official lists searched by personal ИНН/name: no entry). Ukraine's NSDC not checked.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "2026-09-07: verification backlog closure — identity already confirmed by ООО «Ушкуйник»'s (npts-ushkuynik) own director_history entry (s5289), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
     ],
@@ -43874,6 +44307,17 @@
     "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Name matches an official-list entry on the Swiss list and the UK list of 02.10.2026 (a DNR official in each case), but this record has no date of birth to compare and nothing ties the two. Not recorded. The listed Yatsenko (Q108060327) is a former DNR 'minister of communications', b. 22.04.1985 in Kherson, passport 0311 988150, no ИНН printed. Our Яценко is general director of ООО «Аэро-Хит» (ИНН 231907430700). The Аэро-Хит group has a Kherson company, but nothing on file ties the two. Needs his bi",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "2026-09-07: verification backlog closure — identity already confirmed by ООО «Аэро-Хит»'s (ooo-aero-khit) own director_history entry (s0466), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
       "2026-09-14: inn_personal filled from a direct re-read of the full EGRUL выписка already on file (s6714, data/sources/EGRUL_2700012608_20260907_ooo-aero-khit.pdf) -- ИНН 231907430700, not previously extracted into this record. Local processing only, no new pull."
@@ -44015,6 +44459,17 @@
     "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Name matches an official-list entry on the Swiss list and the UK list of 02.10.2026 (a DNR official in each case), but this record has no date of birth to compare and nothing ties the two. Not recorded. The listed Zhigulin is a DNR People's Council member since 2014, b. 29.01.1979 in Semey; EU, UK, Switzerland, Canada, Japan, NSDC. Our record (director of ООО «Аэро-Хит М») already notes a press allegation of DNR-linked membership, so a match is plausible, but no ИНН is printed on the list and we ho",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "2026-09-07: verification backlog closure — identity already confirmed by ООО «Аэро-хит М»'s (ooo-aero-khit-m) own director_history entry (s6865), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
       "2026-09-29: Tier-3 ИНН-holder sweep -- fresh full ЕГРЮЛ выписка pull (s8220, EGRUL_9718293790_20260929) confirms Жигулин as the current 'лицо, имеющее право без доверенности действовать' with personal ИНН 614337345700 (checksum-valid) directly on the document. Wired."
@@ -46477,6 +46932,17 @@
     "_verified": false,
     "_origin": "corrections:add_entities",
     "_raw": {},
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Name-only on a very common name; the record is a course participant known by a Telegram handle with no patronymic, ИНН or date of birth. Not settled.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "2026-09-04: added under the same-day PII policy amendment (see CLAUDE.md's PII handling section) admitting confirmed participants of Проект «Архангел»'s own training/chat apparatus, not just its owners/officials."
     ],
@@ -47167,6 +47633,17 @@
     "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "linked_not_designated",
+      "note": "OpenSanctions marks this person as sanction-linked through ООО «Архангел-Центр» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "First screening of any kind on this person, identified the same day as a 50% owner of a six-jurisdiction-designated entity. The ЕГРИП result is mundane; the incomplete ФНС check is recorded as outstanding work."
     ],
@@ -47258,6 +47735,17 @@
     "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "linked_not_designated",
+      "note": "OpenSanctions marks this person as sanction-linked through ООО «Архангел-Центр» (a lead, from its web page). EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Ukraine's NSDC and Canada not checked.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "Both ЕГРИП registrations are ordinary retail/wholesale trade, so nothing here corroborates the training operation. The unfinished ФНС cross-reference is logged explicitly rather than left as a silent gap — he directs the family's most heavily sanctioned entity and it is now under an ФНС strike-off decision, so his other directorships are exactly what a successor-vehicle check would need."
     ],
@@ -47936,6 +48424,17 @@
     "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "open",
+      "note": "Pre-sort proposes a match on Ukraine's NSDC list (identifier or birth date, from OpenSanctions pages: a lead). The NSDC original was not read, so nothing is recorded as a listing. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. Needs the NSDC decree or register entry read in full. Match by directorship: the NSDC entry lists her at ООО «Аэромакс», where our record has her as general director, and at ООО «Кронштадт Инновации» (since 14.03.2025, new to us). It prints ИНН 525630892605 and b. 11.12.1996; confirm the ИНН from Аэромакс's ЕГРЮЛ extract. NSDC since 02.12.2024.",
+      "checked": [
+        "s9106",
+        "s9107",
+        "s9108",
+        "s9109"
+      ]
+    },
     "_corrected": [
       "2026-09-07: verification backlog closure — identity already confirmed by ООО «Аэромакс»'s (ooo-aeromaks) own director_history entry (s4572), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
       "2026-09-15: notes field updated to close out the EGRUL-mismatch open lead — the entity's director_history (added after this person's note was written) now dates and sources the full succession chain, so the earlier 'UNRESOLVED' framing was stale, not an actual open question."
