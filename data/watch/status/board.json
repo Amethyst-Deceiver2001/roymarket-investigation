@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04",
+ "generated": "2026-10-05",
  "thresholds": {
   "egrul_stale_days": 45,
   "screen_stale_days": 30,
@@ -11803,6 +11803,32 @@
      "kind": "pull",
      "code": "other_entities_unchecked",
      "text": "Other companies under this personal ИНН not checked"
+    }
+   ]
+  },
+  {
+   "kind": "person",
+   "slug": "shingareev-renat-rifkatovich",
+   "name": "Шингареев Ренат Рифкатович",
+   "latin": "Shingareev Renat Rifkatovich",
+   "tier": "person",
+   "role": "Заместитель генерального директора (named on a presentation slide at an award ceremony)",
+   "channels": [],
+   "screened": null,
+   "sanctioned": false,
+   "flags": [
+    {
+     "kind": "pull",
+     "code": "screen_never",
+     "text": "Never screened: OpenSanctions",
+     "due": [
+      "opensanctions"
+     ]
+    },
+    {
+     "kind": "gap",
+     "code": "no_inn",
+     "text": "Holds a company role but no personal ИНН on file"
     }
    ]
   },

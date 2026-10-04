@@ -1,8 +1,8 @@
 {
   "schema_version": 12,
   "generated_from": "data/registry/entities.json + people.json + programs.json + products.json",
-  "node_count": 1251,
-  "edge_count": 2170,
+  "node_count": 1252,
+  "edge_count": 2171,
   "unresolved_count": 114,
   "nodes": [
     {
@@ -423,7 +423,7 @@
       "legal_form": "АО",
       "variant": null,
       "product_count": 2,
-      "degree": 7
+      "degree": 8
     },
     {
       "id": "ao-kronshtadt",
@@ -11787,6 +11787,14 @@
       "name_latin": "Sheynin Yuriy Evgenevich",
       "sanctioned": false,
       "degree": 2
+    },
+    {
+      "id": "shingareev-renat-rifkatovich",
+      "kind": "person",
+      "label": "Шингареев Ренат Рифкатович",
+      "name_latin": "Shingareev Renat Rifkatovich",
+      "sanctioned": false,
+      "degree": 1
     },
     {
       "id": "shmyrin-mikhail-sergeevich",
@@ -36670,6 +36678,19 @@
       "confidence": null,
       "detail": null,
       "grade": "doc"
+    },
+    {
+      "source": "shingareev-renat-rifkatovich",
+      "target": "ao-kotlin-novator",
+      "type": "role",
+      "label": "Заместитель генерального директора (named on a presentation slide at an award ceremony)",
+      "source_id": "s9169",
+      "as_of": "2024-02-06",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "rep"
     },
     {
       "source": "shmyrin-mikhail-sergeevich",
