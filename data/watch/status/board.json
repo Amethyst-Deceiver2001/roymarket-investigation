@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-03",
+ "generated": "2026-10-04",
  "thresholds": {
   "egrul_stale_days": 45,
   "screen_stale_days": 30,
@@ -145,14 +145,6 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "The only risky hit is ООО «Орион», ИНН 2308299972 (Rostov-on-Don, registered 04.02.2025). Ours is ИНН 7706664648. Already rejected in the record on 24.08.2026."
-    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -369,16 +361,7 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "2 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 2,
-     "presort": "likely_false_positive",
-     "presort_why": "Both ГУР hits are other companies: «Unmanned Systems» LLC (ИНН 1831156383) and «BVS Systems» LLC (ИНН 7820061973). Ours is 7714390623. ГУР's own identifier check returned no match for either."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "entity",
@@ -424,7 +407,14 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -615,8 +605,8 @@
     {
      "kind": "review",
      "code": "open_questions",
-     "text": "3 open question(s)",
-     "count": 3
+     "text": "4 open question(s)",
+     "count": 4
     }
    ]
   },
@@ -851,8 +841,8 @@
     {
      "kind": "review",
      "code": "open_questions",
-     "text": "1 open question(s)",
-     "count": 1
+     "text": "2 open question(s)",
+     "count": 2
     }
    ]
   },
@@ -1041,7 +1031,14 @@
    "last_register_pull": "2026-09-14",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -1080,14 +1077,6 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "5 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 5,
-     "presort": "likely_false_positive",
-     "presort_why": "This record is ИП Пинимасова Елена Александровна. The five ГУР hits are women with other surnames who share only the patronymic Александровна (Kulikova, Pereselyak, Topchi, Rubtsova, Tyurina)."
-    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -1916,14 +1905,6 @@
    "flags": [
     {
      "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "The ГУР hit is a different company, ИНН 7804317900. Ours is 7805728050."
-    },
-    {
-     "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
      "count": 1
@@ -1981,16 +1962,7 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "The ГУР hit is a person, Savitskaya Svetlana Evgenievna. The record does not name her anywhere; its director is Рябико Ольга Александровна."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "entity",
@@ -2370,15 +2342,15 @@
    "channels": [
     "my_el_lab"
    ],
-   "last_register_pull": "2026-09-07",
+   "last_register_pull": "2026-10-04",
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
     {
      "kind": "review",
      "code": "open_questions",
-     "text": "22 open question(s)",
-     "count": 22
+     "text": "24 open question(s)",
+     "count": 24
     },
     {
      "kind": "behind",
@@ -2489,10 +2461,15 @@
      ]
     },
     {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
+     "kind": "review",
+     "code": "bfo_unread",
+     "text": "БФО for 2021, 2023, 2024, 2025 pulled but not yet read into financials[]",
+     "years_on_disk": [
+      2021,
+      2023,
+      2024,
+      2025
+     ]
     },
     {
      "kind": "review",
@@ -2721,16 +2698,7 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "2 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 2,
-     "presort": "likely_false_positive",
-     "presort_why": "Both ГУР hits are other companies (ИНН 5263093100 and 7802703755). Ours is 3435149330."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "entity",
@@ -3198,16 +3166,7 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "The ГУР hit is a different company, ИНН 7726700284. Ours is 7802145959."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "entity",
@@ -3220,16 +3179,7 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "6 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 6,
-     "presort": "likely_match",
-     "presort_why": "Identity confirmed by ИНН 9704220859 on two hits: the ГУР UAV-companies entry (ГУР's own ИНН check says match) and OpenSanctions' record from ГУР's database. OpenSanctions says it is not on any international sanctions list; it is a ГУР 'person of interest' and is owned by ООО «УК КОМАКС» (ИНН 7704790277), which the registry already records as NSDC-listed. Proposed: record a ГУР database listing, not a designation."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "entity",
@@ -3242,16 +3192,7 @@
    "last_register_pull": "2026-09-29",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "6 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 6,
-     "presort": "likely_match",
-     "presort_why": "Identity confirmed: the OpenSanctions hit is ru-inn-9718293790, our own ИНН. It is flagged only because its 100% owner is ООО «УК КОМАКС» (NSDC-listed, per the registry). OpenSanctions says the company itself is on no sanctions list. The five ГУР hits are other Аэро-Хит/aviation companies with other ИНН. Proposed: no designation; record the owner link."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "entity",
@@ -3536,14 +3477,6 @@
    "flags": [
     {
      "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "3 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 3,
-     "presort": "likely_false_positive",
-     "presort_why": "All three hits are other «Архангел» companies: the Melitopol ООО «Архангел» (ИНН 9001027869, NSDC-listed), the Melitopol ООО «Архангел» (ИНН 9500026652, linked only) and ООО «Архангел-Центр» (ИНН 5032379630, EU-listed). Ours is 5017140245. The record already calls these name-only false positives (05.09.2026)."
-    },
-    {
-     "kind": "review",
      "code": "open_questions",
      "text": "4 open question(s)",
      "count": 4
@@ -3582,14 +3515,6 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "3 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 3,
-     "presort": "likely_false_positive",
-     "presort_why": "Same three other «Архангел» companies; ours is ИНН 9108131213. Not the same entity, but the record has a real link: its director Тимофеев В.С. was appointed director of the Melitopol ООО «Архангел» (ИНН 9500026652) three days before this company was registered. That is a relationship to record, not a listing of this company."
-    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -3698,14 +3623,6 @@
    "screened": "2026-09-30",
    "sanctioned": false,
    "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "2 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 2,
-     "presort": "likely_false_positive",
-     "presort_why": "Both ГУР hits are other companies (ИНН 1831117433 and 1831156383). Ours is 7801320277. The sanctioned АО «Кронштадт» (ИНН 7808035536) is a separate legal entity, noted in the record as a lead."
-    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -3858,16 +3775,7 @@
    "last_register_pull": "2026-09-08",
    "screened": "2026-09-30",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "The ГУР hit is a different company, «NPK …» ИНН 1683010356. Ours is 6154166381."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "entity",
@@ -4318,10 +4226,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -4354,10 +4261,14 @@
      ]
     },
     {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
+     "kind": "review",
+     "code": "bfo_unread",
+     "text": "БФО for 2023, 2024, 2025 pulled but not yet read into financials[]",
+     "years_on_disk": [
+      2023,
+      2024,
+      2025
+     ]
     }
    ]
   },
@@ -4383,10 +4294,16 @@
      ]
     },
     {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
+     "kind": "review",
+     "code": "bfo_unread",
+     "text": "БФО for 2021, 2022, 2023, 2024, 2025 pulled but not yet read into financials[]",
+     "years_on_disk": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+     ]
     }
    ]
   },
@@ -4425,23 +4342,16 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
      "kind": "review",
-     "code": "bfo_unread",
-     "text": "БФО for 2021, 2022, 2023, 2024, 2025 pulled but not yet read into financials[]",
-     "years_on_disk": [
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-     ]
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
     }
    ]
   },
@@ -4460,23 +4370,16 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
      "kind": "review",
-     "code": "bfo_unread",
-     "text": "БФО for 2021, 2022, 2023, 2024, 2025 pulled but not yet read into financials[]",
-     "years_on_disk": [
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-     ]
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
     }
    ]
   },
@@ -4495,17 +4398,22 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
+     "kind": "review",
+     "code": "bfo_unread",
+     "text": "БФО for 2021, 2022, 2023, 2024, 2025 pulled but not yet read into financials[]",
+     "years_on_disk": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+     ]
     }
    ]
   },
@@ -4524,22 +4432,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
-     ]
-    },
-    {
-     "kind": "review",
-     "code": "bfo_unread",
-     "text": "БФО for 2021, 2022, 2023, 2024, 2025 pulled but not yet read into financials[]",
-     "years_on_disk": [
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
+      "opensanctions"
      ]
     }
    ]
@@ -4559,17 +4454,19 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
+     "kind": "review",
+     "code": "bfo_unread",
+     "text": "БФО for 2024, 2025 pulled but not yet read into financials[]",
+     "years_on_disk": [
+      2024,
+      2025
+     ]
     }
    ]
   },
@@ -4638,10 +4535,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -4703,10 +4599,16 @@
      ]
     },
     {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
+     "kind": "review",
+     "code": "bfo_unread",
+     "text": "БФО for 2021, 2022, 2023, 2024, 2025 pulled but not yet read into financials[]",
+     "years_on_disk": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+     ]
     }
    ]
   },
@@ -4725,10 +4627,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -4761,20 +4662,8 @@
     },
     {
      "kind": "review",
-     "code": "bfo_unread",
-     "text": "БФО for 2021, 2022, 2023, 2024, 2025 pulled but not yet read into financials[]",
-     "years_on_disk": [
-      2021,
-      2022,
-      2023,
-      2024,
-      2025
-     ]
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions review recorded",
+     "code": "open_questions",
+     "text": "1 open question(s)",
      "count": 1
     }
    ]
@@ -4823,14 +4712,9 @@
     },
     {
      "kind": "review",
-     "code": "bfo_unread",
-     "text": "БФО for 2022, 2023, 2024, 2025 pulled but not yet read into financials[]",
-     "years_on_disk": [
-      2022,
-      2023,
-      2024,
-      2025
-     ]
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
     }
    ]
   },
@@ -5056,10 +4940,14 @@
      ]
     },
     {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
+     "kind": "review",
+     "code": "bfo_unread",
+     "text": "БФО for 2023, 2024, 2025 pulled but not yet read into financials[]",
+     "years_on_disk": [
+      2023,
+      2024,
+      2025
+     ]
     },
     {
      "kind": "review",
@@ -5376,14 +5264,72 @@
     {
      "kind": "review",
      "code": "open_questions",
-     "text": "1 open question(s)",
-     "count": 1
+     "text": "3 open question(s)",
+     "count": 3
     },
     {
      "kind": "gap",
      "code": "unsourced_history",
      "text": "1 history entr(ies) with no source",
      "count": 1
+    }
+   ]
+  },
+  {
+   "kind": "entity",
+   "slug": "ooo-stims",
+   "name": "ООО «СТИМС»",
+   "latin": "OOO «STIMS»",
+   "tier": "adjacent",
+   "inn": "7734436058",
+   "channels": [],
+   "last_register_pull": "2026-10-03",
+   "screened": null,
+   "sanctioned": true,
+   "flags": [
+    {
+     "kind": "pull",
+     "code": "screen_never",
+     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "due": [
+      "opensanctions",
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "6 open question(s)",
+     "count": 6
+    }
+   ]
+  },
+  {
+   "kind": "entity",
+   "slug": "ip-pinimasov-aleksandr-vyacheslavovich",
+   "name": "ИП Пинимасов Александр Вячеславович",
+   "latin": "IP Pinimasov Aleksandr Vyacheslavovich",
+   "tier": "adjacent",
+   "inn": "583680188519",
+   "channels": [],
+   "last_register_pull": "2026-10-04",
+   "screened": null,
+   "sanctioned": false,
+   "flags": [
+    {
+     "kind": "pull",
+     "code": "screen_never",
+     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "due": [
+      "opensanctions",
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "3 open question(s)",
+     "count": 3
     }
    ]
   },
@@ -5396,17 +5342,8 @@
    "role": "Chairman of the Supervisory Board; Secretary of United Russia's General Council; First Deputy Chairman of the Federation Council",
    "channels": [],
    "screened": "2026-09-06",
-   "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Date of birth 14.06.1968, birthplace Neftekamsk and ИНН 890304549930 on the OpenSanctions record all match ours. Listed by the US (OFAC SDN), UK, Canada, Australia, New Zealand and Ukraine's NSDC, plus US and Taiwan export-control lists. The registry has no sanctions entry for him. Confirm against the OFAC entry before recording."
-    }
-   ]
+   "sanctioned": true,
+   "flags": []
   },
   {
    "kind": "person",
@@ -5466,14 +5403,6 @@
    "flags": [
     {
      "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "2 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 2,
-     "presort": "likely_match",
-     "presort_why": "Two hits. NK-XU3ivbw (PESKOV Dmitry Nikolaevich): date of birth 26.12.1975, birthplace Voronezh and ИНН 772919018611 all match ours, but it is a ГУР-database 'person of interest' only; OpenSanctions says he is on no sanctions list. The other hit, Q111263326, is Nikolay Dmitrievich Peskov (b. 03.02.1990, son of the press secretary): a false positive. Its alternate birth date happens to be our Peskov's, which looks like a data merge error at OpenSanctions. Proposed: no designation; note the ГУР database entry."
-    },
-    {
-     "kind": "review",
      "code": "open_questions",
      "text": "2 open question(s)",
      "count": 2
@@ -5507,14 +5436,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "3 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 3,
-     "presort": "likely_match",
-     "presort_why": "Resolved: candidate Q124215058, Кузнецов Михаил Михайлович, is described as head of the ОНФ executive committee since 09.03.2022, our record's role. b. 18.08.1979, Moscow; ИНН 773714338411. Listed by the EU, Switzerland, France, Belgium, Monaco, NSDC. The other two candidates are different people (a Sovcomflot director b. 1979-06-20; a former LDPR Duma deputy b. 1968). Our record's patronymic is missing; confirm the EU entry."
     }
    ]
   },
@@ -6158,14 +6079,6 @@
    "flags": [
     {
      "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Identity confirmed: the hit is ru-inn-732102513469, the ИНН read from ООО «Клеверкоптер»'s ЕГРЮЛ extract. Flagged 'sanction-linked' only, not designated; the link is explained by «Клеверкоптер», which the registry already records as sanctioned. Proposed: no personal designation."
-    },
-    {
-     "kind": "review",
      "code": "open_questions",
      "text": "2 open question(s)",
      "count": 2
@@ -6357,16 +6270,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Identity confirmed by own ИНН 165043571104. 'Sanction-linked' only; explained by ООО «СибНК», where he is director and which the registry records as sanctioned. Proposed: no personal designation."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -6378,16 +6282,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 1,
-     "presort": "needs_checking",
-     "presort_why": "Hit ru-inn-263114465785 ('sanction-linked'): a namesake in the Russian company register. The record has no ИНН of its own, so this is name-only. Settle it by reading his ИНН from an ЕГРЮЛ extract."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -6453,16 +6348,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Settled: birth date 18.10.1983 and ИНН 636501893256 both match ours. NSDC-listed (first seen 09.05.2025); the entry ties her to ООО «Тримикс» (100% owner 21.07.2023–26.02.2024)."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -6474,16 +6360,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Settled: birth date 06.05.1986 and ИНН 471010513778 both match ours. NSDC-listed (09.05.2025); 15% of ООО «Тримикс» 27.02–31.10.2024."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -6495,16 +6372,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Settled by ИНН: the NSDC entry prints ИНН 773376903806, ours. It gives b. 20.04.1990 (a lead for the record) and ties her to ООО «Аргус-М» and НПП «Аргата». NSDC since 08.02.2026."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -6516,16 +6384,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Settled by ИНН: the NSDC entry prints ИНН 712802968839, ours. b. 04.07.1984; 100% owner of ООО «Русская лаборатория воздушного транспорта». NSDC since 02.12.2024."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -6539,20 +6398,12 @@
     "chadayevru"
    ],
    "screened": "2026-09-06",
-   "sanctioned": false,
+   "sanctioned": true,
    "flags": [
     {
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Name, patronymic and public role fit: OpenSanctions cites an EU listing (OJ L 2025/933, CELEX 32025D0936) and ГУР's propaganda section, and his own channel (post 4636, 29.03.2026) says he is under personal EU sanctions. The record has no birth date or ИНН to compare, so read the EU Official Journal entry for his birth date before recording."
     },
     {
      "kind": "review",
@@ -6568,18 +6419,15 @@
    "name": "Атливанчик Сергей Николаевич",
    "latin": null,
    "tier": "person",
-   "role": null,
+   "role": "Генеральный директор",
    "channels": [],
    "screened": "2026-09-06",
-   "sanctioned": false,
+   "sanctioned": true,
    "flags": [
     {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Official entry read: Council Implementing Regulation (EU) 2025/389 of 24.02.2025, Annex entry 1904: 'General Director of LLC Eliars; DOB: 11.1.1980; Tax Identification Number: 773514103490'; listed for Элиарс's «Зонт» anti-drone system used by Russian forces; date of listing 24.2.2025. Our registry has him as Элиарс's director; the record has no ИНН yet, so this EU entry is the citable source for it. Also Switzerland, France, Belgium, Monaco, NSDC."
+     "kind": "pull",
+     "code": "other_entities_unchecked",
+     "text": "Other companies under this personal ИНН not checked"
     }
    ]
   },
@@ -6629,16 +6477,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "The only risky hit (Q120853992) is a Myrotvorets entry, which OpenSanctions tags 'war crimes' but is not a sanctions list. Name-only; no designation."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -6722,16 +6561,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Identity confirmed by own ИНН 784804037752. 'Sanction-linked' only; explained by ООО «КРАВТ» (director), recorded as sanctioned. Proposed: no personal designation."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -6809,16 +6639,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Identity confirmed by own ИНН 510203980877. 'Sanction-linked' only; explained by АО «Стратим» (director), recorded as sanctioned. Proposed: no personal designation."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -6847,14 +6668,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 1,
-     "presort": "needs_checking",
-     "presort_why": "Hit ru-inn-780158682795 ('sanction-linked'). Name-only; our Любимов (chair of Ассоциация «Взаимопомощь», co-organiser of «Дронница») has no ИНН on file. The association's ЕГРЮЛ extract would give it."
     }
    ]
   },
@@ -7242,16 +7055,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "The NSDC-listed Климов Максим Олександрович carries ИНН 695004552407 per the earlier OpenSanctions read noted in the record; our АРРС founder's ИНН from the 29.09.2026 ЕГРЮЛ extract is 410201675667. A personal ИНН does not change, so these look like two people. Note: the record's notes still say 'confirmed … see sanctions[]', but sanctions[] is empty; the notes need correcting either way."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -7398,14 +7202,6 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Identity confirmed by own ИНН 774305253744 (read from АО «Эколибри»'s FY2025 accounts, related-parties list). 'Sanction-linked' only; explained by «Эколибри» (board member), recorded on the ГУР list. The record's open question from 24.08 about two namesakes is now answered by that ИНН and can be closed. Proposed: no personal designation."
-    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -7574,14 +7370,7 @@
    "channels": [],
    "screened": "2026-10-03",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded",
-     "count": 1
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -7603,18 +7392,9 @@
    "tier": "person",
    "role": "Генеральный директор",
    "channels": [],
-   "screened": null,
-   "sanctioned": false,
-   "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    }
-   ]
+   "screened": "2026-10-04",
+   "sanctioned": true,
+   "flags": []
   },
   {
    "kind": "person",
@@ -7737,14 +7517,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 1,
-     "presort": "needs_checking",
-     "presort_why": "Hit ru-inn-615424668354 ('sanction-linked'). Name-only; co-inventor at ООО «Атлант Аэро», no ИНН on file."
     }
    ]
   },
@@ -7859,17 +7631,8 @@
    "role": "co-inventor (patent RU2705387C1)",
    "channels": [],
    "screened": "2026-09-06",
-   "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Strongest case in the set. The weekly official-list watcher (draft PR #4, run of 02.10.2026) found our ИНН 780105167705 printed in his entries on the EU consolidated list and the Swiss SECO list. OpenSanctions also cites EU acts 2024/753 and 2025/1895, France and ГУР. Our Анцев is a co-inventor on НПП «Радар ммс» patents. Read the EU entry and record it."
-    }
-   ]
+   "sanctioned": true,
+   "flags": []
   },
   {
    "kind": "person",
@@ -7880,17 +7643,8 @@
    "role": "co-inventor (patent RU2705387C1)",
    "channels": [],
    "screened": "2026-09-06",
-   "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Official entry read: Council Implementing Regulation (EU) 2025/389 of 24.02.2025, Annex entry 1884: 'Executive Director of JSC NPP Radar MMS; DOB: 4.8.1985; POB: Leningrad, USSR (now St. Petersburg)'; date of listing 24.2.2025. The EU entry prints no ИНН; ИНН 780156016060 (ours) comes from the NSDC entry via OpenSanctions. Also Switzerland, France, Belgium, Monaco, NSDC."
-    }
-   ]
+   "sanctioned": true,
+   "flags": []
   },
   {
    "kind": "person",
@@ -8442,16 +8196,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Settled by ИНН: the NSDC entry prints ИНН 695001185808, ours. b. 27.01.1960; listed as general director of АО «МКБ «Факел» им. Грушина» since 21.10.2014, a role our record lacks (lead). NSDC since 20.04.2023."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -8732,14 +8477,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 1,
-     "presort": "needs_checking",
-     "presort_why": "The listed Kozlov (OFAC 15.01.2025, NSDC) is b. 07.08.1969 in St Petersburg, ИНН 782023355772, Pushkin address. Our Козлов is a co-inventor at АО «НИИ «Вектор»» (St Petersburg) with no ИНН on file. Same city, common name: compare the ИНН from any Вектор document that names him."
     }
    ]
   },
@@ -8758,14 +8495,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 1,
-     "presort": "needs_checking",
-     "presort_why": "The listed Комаров (NSDC, 09.05.2025) is b. 06.07.1968, ИНН 500908329403, 34% of ООО «Интермаш». Our Комаров is a co-inventor at ООО «КРАВТ-Удмуртия» with no ИНН; nothing links him to Интермаш. Leaning false positive, but unproven."
     }
    ]
   },
@@ -8832,14 +8561,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 1,
-     "presort": "needs_checking",
-     "presort_why": "Hit ru-inn-471203835475 ('sanction-linked'). Name-only; co-inventor at НПЦ «Элвис», no ИНН on file."
     }
    ]
   },
@@ -8906,14 +8627,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "Hit Q133295749 (score 0.96) is Aliaksandr Lukjanaŭ, a Belarusian listed by the EU under its Belarus regime (OJ L 2024/1746). Our record is Лукиянов, a co-inventor at АО «НИИ «Вектор»»."
     }
    ]
   },
@@ -9064,14 +8777,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "Hit Q62841889 is Oleg Nikolaev, head of the Chuvash Republic (OFAC, UK, ГУР). Our record is a co-inventor on a «Вектор» patent; nothing ties him to the governor. Name-only."
     }
    ]
   },
@@ -9114,14 +8819,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "2 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 2,
-     "presort": "needs_checking",
-     "presort_why": "The Q120852989 entry is a Wagner member on Myrotvorets only, not on any sanctions list: ignore it. What remains is ru-inn-532001062101 ('sanction-linked'), name-only because we hold no ИНН for our НПЦ «Элвис» co-inventor."
     }
    ]
   },
@@ -9512,14 +9209,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "Hit Q15066899 (score 0.91) is Aleksey Zakharov, a different surname (Захаров, not Сахаров), flagged only as a relative of a listed person."
     }
    ]
   },
@@ -9647,16 +9336,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Settled by ИНН: the entry prints ИНН 780212544531, ours. b. 14 or 15.08.1978; director at АО «Завод «Энергия»». Listed by Ukraine's NSDC (13.12.2023) and Canada (06.08.2024), plus the ГУР database."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -10207,14 +9887,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Match by ownership: the NSDC entry records a 93.33% stake in НПО «Кайсант», the same stake our record holds from aggregators. It prints ИНН 504508740969 and b. 15.03.1984; confirm the ИНН from Кайсант's ЕГРЮЛ extract before recording. NSDC since 08.02.2026."
     },
     {
      "kind": "gap",
@@ -10792,14 +10464,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 1,
-     "presort": "needs_checking",
-     "presort_why": "Hit ru-inn-027503961630 ('sanction-linked', score 0.97). Name-only; former director of ООО «Гаскар Интеграция», no ИНН on file. The company's ЕГРЮЛ extract would give it."
     }
    ]
   },
@@ -10945,16 +10609,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Settled by ИНН: the NSDC entry prints ИНН 561012075269, ours. b. 03.05.1980; general director of the Tula ООО «Центр беспилотных систем» 2023–2024, later of АНО «НПЦ БАС «Туладрон»». NSDC since 13.12.2023."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -11056,16 +10711,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "The only risky hit (Q120853949) is a Myrotvorets entry, not a sanctions list. Name-only. Worth a glance only because he was a director of ООО «Ушкуйник»."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -11137,16 +10783,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "2 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 2,
-     "presort": "needs_checking",
-     "presort_why": "The listed Yatsenko (Q108060327) is a former DNR 'minister of communications', b. 22.04.1985 in Kherson, passport 0311 988150, no ИНН printed. Our Яценко is general director of ООО «Аэро-Хит» (ИНН 231907430700). The Аэро-Хит group has a Kherson company, but nothing on file ties the two. Needs his birth date from an ЕГРЮЛ-adjacent source or a passport match."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -11158,16 +10795,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 1,
-     "presort": "needs_checking",
-     "presort_why": "The listed Zhigulin is a DNR People's Council member since 2014, b. 29.01.1979 in Semey; EU, UK, Switzerland, Canada, Japan, NSDC. Our record (director of ООО «Аэро-Хит М») already notes a press allegation of DNR-linked membership, so a match is plausible, but no ИНН is printed on the list and we hold no birth date."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -11584,14 +11212,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "Hit Q4181368, Dmitry Zhukov, flagged only as a relative or close associate of a listed person. Our record is an «Архангел» course participant with no patronymic, known by a Telegram handle. Name-only on one of the commonest Russian names."
     }
    ]
   },
@@ -11709,16 +11329,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Identity confirmed by own ИНН 910520449851. 'Sanction-linked' only. OpenSanctions' page for ООО «Архангел-Центр» names him as 50% owner and says neither owner is separately designated. Proposed: no personal designation; the record already says this."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -11730,16 +11341,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Identity confirmed by own ИНН 026105732534. Same as Чапурин: director and 50% owner of the EU-listed ООО «Архангел-Центр», not separately designated. Proposed: no personal designation."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -11816,14 +11418,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Match by directorship: the NSDC entry lists her at ООО «Аэромакс», where our record has her as general director, and at ООО «Кронштадт Инновации» (since 14.03.2025, new to us). It prints ИНН 525630892605 and b. 11.12.1996; confirm the ИНН from Аэромакс's ЕГРЮЛ extract. NSDC since 02.12.2024."
     }
    ]
   },
@@ -12164,16 +11758,14 @@
    "tier": "person",
    "role": null,
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-04",
    "sanctioned": false,
    "flags": [
     {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
+     "kind": "review",
+     "code": "screen_hits_unreviewed",
+     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded",
+     "count": 1
     }
    ]
   },
@@ -12276,17 +11868,27 @@
    "tier": "person",
    "role": "Индивидуальный предприниматель; seller of record of the Ozon storefront «СПЕКТР конструкторское бюро»",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-04",
    "sanctioned": false,
    "flags": [
     {
      "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    },
+     "code": "other_entities_unchecked",
+     "text": "Other companies under this personal ИНН not checked"
+    }
+   ]
+  },
+  {
+   "kind": "person",
+   "slug": "kholkin-oleg-valerevich",
+   "name": "Холкин Олег Валерьевич",
+   "latin": "Kholkin Oleg Valerevich",
+   "tier": "person",
+   "role": "Генеральный директор; единственный участник (100%, с 12.11.2025)",
+   "channels": [],
+   "screened": "2026-10-04",
+   "sanctioned": false,
+   "flags": [
     {
      "kind": "pull",
      "code": "other_entities_unchecked",

@@ -81609,6 +81609,8 @@
       }
     ],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-04",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -84249,7 +84251,9 @@
         "ui_link": "https://aleph.occrp.org/entities/ru-inn-3663143016.2ea8dbaaa31910681073933593d7af885b60f863"
       }
     ],
-    "aleph_screened_at": "2026-09-19"
+    "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-04"
   },
   {
     "slug": "ooo-investproektgrupp",
@@ -84404,7 +84408,9 @@
         "ui_link": "https://aleph.occrp.org/entities/6f6c7ce7dda24a5cf089e76d295802dd63101b09.625b82a92a9fa3f16fb32092776ca74dfe36ec16"
       }
     ],
-    "aleph_screened_at": "2026-09-19"
+    "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-04"
   },
   {
     "slug": "ooo-uk-komaks",
@@ -84570,7 +84576,9 @@
         "ui_link": "https://aleph.occrp.org/entities/74732f8180b60a1f74f2a604f4dfec8d4fe00133.0d3536b3a8c7edcb15a5738db356c5b53ea2c834"
       }
     ],
-    "aleph_screened_at": "2026-09-19"
+    "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-04"
   },
   {
     "slug": "ooo-dedal",
@@ -84738,7 +84746,9 @@
         "ui_link": "https://aleph.occrp.org/entities/ru-9c637cc04b405092ce4da3abc84b9532fa162941.da8221ede340434e740bc21e4d41ea67ba8e0853"
       }
     ],
-    "aleph_screened_at": "2026-09-19"
+    "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-04"
   },
   {
     "slug": "ooo-startap-studiya-universiteta-lobachevskogo",
@@ -84857,7 +84867,9 @@
     ],
     "name_display": "OOO «Startap-studiya universiteta Lobachevskogo»",
     "aleph_matches": [],
-    "aleph_screened_at": "2026-09-19"
+    "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-04"
   },
   {
     "slug": "ao-uk-inntts-intellektualnaya-elektronika-valday",
@@ -85309,7 +85321,9 @@
         "ui_link": "https://aleph.occrp.org/entities/02e726e6ebe6a3ad7b8ef1498d8126851e488f3c.5d22083779b7265c0587932781626c406e133b77"
       }
     ],
-    "aleph_screened_at": "2026-09-19"
+    "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-04"
   },
   {
     "slug": "fond-razvitiya-promyshlennosti-tulskoy-oblasti",
@@ -85733,7 +85747,9 @@
         "ui_link": "https://aleph.occrp.org/entities/ru-inn-7716846333.2cbed4d1397d7c1eda7e5ed9e2d1b5884af09254"
       }
     ],
-    "aleph_screened_at": "2026-09-19"
+    "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-04"
   },
   {
     "slug": "fond-moskovskiy-innovatsionnyy-klaster",
@@ -90249,7 +90265,67 @@
     "city": "Москва",
     "ecosystem_roles": [],
     "_corrected": null,
-    "name_display": "OOO «STIMS»"
+    "name_display": "OOO «STIMS»",
+    "aleph_matches": [
+      {
+        "entity_id": "ru-inn-7734436058.9ea9808009cf0ecd987df275182f5a62255c35ac",
+        "caption": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГАСКАР ГРУПП\"",
+        "schema": "Company",
+        "score": 23.074,
+        "dataset_label": "Russian Unified State Register of Legal Entities (EGRUL)",
+        "dataset_category": "company",
+        "countries": [
+          "ru"
+        ],
+        "ui_link": "https://aleph.occrp.org/entities/ru-inn-7734436058.9ea9808009cf0ecd987df275182f5a62255c35ac"
+      },
+      {
+        "entity_id": "f13bf9ea6e057142d370058e2e80e5ee92515137.6354761139d3ebfcf9909b7c20417708c3c238d9",
+        "caption": "Gaskar Group of Companies",
+        "schema": "Company",
+        "score": 7.4578,
+        "dataset_label": "Global Sanctions Database",
+        "dataset_category": "sanctions",
+        "countries": [
+          "ru",
+          "ru"
+        ],
+        "ui_link": "https://aleph.occrp.org/entities/f13bf9ea6e057142d370058e2e80e5ee92515137.6354761139d3ebfcf9909b7c20417708c3c238d9"
+      },
+      {
+        "entity_id": "d9c8d2aad7a5407a2197aafb7a1c4febc503563b.e4efb4be83f3e783a00856380679459762b39f22",
+        "caption": "LLC Gaskar Group of the Skolkovo Innovation Center",
+        "schema": "Organization",
+        "score": 4.2695,
+        "dataset_label": "Global Sanctions Database",
+        "dataset_category": "sanctions",
+        "countries": [],
+        "ui_link": "https://aleph.occrp.org/entities/d9c8d2aad7a5407a2197aafb7a1c4febc503563b.e4efb4be83f3e783a00856380679459762b39f22"
+      },
+      {
+        "entity_id": "a7f2ffa932cb9c7e5a523cb135cc10bc8878aa48.73f03df62d10c114234287af36f11f537c0498c5",
+        "caption": "LLC “Gaskar Group” LLC Gaskar Group of the Skolkovo Innovation Center Gaskar Group of Companies",
+        "schema": "LegalEntity",
+        "score": 2.9487,
+        "dataset_label": "Global Sanctions Database",
+        "dataset_category": "sanctions",
+        "countries": [
+          "ru"
+        ],
+        "ui_link": "https://aleph.occrp.org/entities/a7f2ffa932cb9c7e5a523cb135cc10bc8878aa48.73f03df62d10c114234287af36f11f537c0498c5"
+      },
+      {
+        "entity_id": "185dd817e768b7ce630e30c62b6cbd8216a25567.94a8d9ec72284ec6cef5aff3f8c90c78499b3eaa",
+        "caption": "Gaskar Group of Companies",
+        "schema": "Organization",
+        "score": 2.2706,
+        "dataset_label": "Global Sanctions Database",
+        "dataset_category": "sanctions",
+        "countries": [],
+        "ui_link": "https://aleph.occrp.org/entities/185dd817e768b7ce630e30c62b6cbd8216a25567.94a8d9ec72284ec6cef5aff3f8c90c78499b3eaa"
+      }
+    ],
+    "aleph_screened_at": "2026-10-04"
   },
   {
     "slug": "ip-pinimasov-aleksandr-vyacheslavovich",
@@ -90353,6 +90429,8 @@
     ],
     "verified_against": "s9119 (ЕГРИП extract of 04.10.2026), s0537 (dealer certificate №2106/2024).",
     "_corrected": "Packet check of 03.10.2026 (issue #20): the dealer named on the maker's certificate is ИП Пинимасов Александр Вячеславович; the packet had attached the dealer role to ИП Пинимасова Елена Александровна. ЕГРИП extract pulled 04.10.2026 (single lookup) and the certificate read from the page.",
-    "name_display": "IP Pinimasov Aleksandr Vyacheslavovich"
+    "name_display": "IP Pinimasov Aleksandr Vyacheslavovich",
+    "aleph_matches": [],
+    "aleph_screened_at": "2026-10-04"
   }
 ]

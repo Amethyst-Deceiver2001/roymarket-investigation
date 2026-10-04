@@ -21219,6 +21219,24 @@
       "04.10.2026: EU and Swiss entries read on the official files; matched by personal ИНН (printed in both) and by the function matching ООО «ЦКБР». Neither entry gives a date of birth, so none is recorded."
     ],
     "_verified_against": null,
+    "opensanctions_matches": [
+      {
+        "match_id": "NK-FJ28hP7A8fmufR22xthLDJ",
+        "caption": "Oleg Jurijevič KOSOLAPOV",
+        "schema": "Person",
+        "score": 1.0,
+        "topics": [
+          "sanction"
+        ],
+        "source_urls": [
+          "https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=8867",
+          "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0269",
+          "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509",
+          "https://war-sanctions.gur.gov.ua/en/sanctions/persons/36624"
+        ]
+      }
+    ],
+    "opensanctions_screened_at": "2026-10-04",
     "egrip_hits": [],
     "egrip_checked_at": "2026-09-15"
   },
@@ -50520,7 +50538,33 @@
     "_raw": {},
     "_corrected": [
       "2026-09-19: created at user direction to monitor family ties of PEP-linked persons; father-son tie confirmed by RuPEP's own family list."
-    ]
+    ],
+    "opensanctions_matches": [
+      {
+        "match_id": "Q4222062",
+        "caption": "Dmitry Konstantinovich Kiselev",
+        "schema": "Person",
+        "score": 1.0,
+        "topics": [
+          "export.control",
+          "sanction",
+          "debarment",
+          "corp.disqual",
+          "poi"
+        ],
+        "source_urls": [
+          "https://war-sanctions.gur.gov.ua/en/sanctions/persons/4006",
+          "https://war-sanctions.gur.gov.ua/en/propaganda/persons/4006",
+          "https://find-and-update.company-information.service.gov.uk/disqualified-officers/natural/2ViQEF1NSwk_nsSiRfz6KYkYTgk",
+          "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32020R0398&from=EN",
+          "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=50691",
+          "https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=1339",
+          "https://peps.dossier.center/person/kiselev-dmitrij-konstantinovich/",
+          "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0269"
+        ]
+      }
+    ],
+    "opensanctions_screened_at": "2026-10-04"
   },
   {
     "slug": "pribylova-kristina-anatolevna",
@@ -50889,7 +50933,9 @@
     "_verified": true,
     "_origin": "corrections:add_entities",
     "_raw": {},
-    "_corrected": null
+    "_corrected": null,
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-10-04"
   },
   {
     "slug": "kholkin-oleg-valerevich",
@@ -50934,6 +50980,8 @@
     "_corrected": [
       "s8933 -- the company's ЕГРЮЛ extract (director entry ГРН 2232400270298 of 19.05.2023; sole participant, ГРН 2252401725596 of 12.11.2025).",
       "s8941 -- DRONTECH.PRO homepage capture; s8876 -- Чадаев's post 3240 calling the school a resident of НПЦ «Ушкуйник»."
-    ]
+    ],
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-10-04"
   }
 ]
