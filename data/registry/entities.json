@@ -86321,6 +86321,45 @@
     },
     "_verified_against": "s9090-s9093: the fund's own БФО filings for 2022-2025.",
     "name_display": "Fond podderzhki sotsialnykh initsiativ «Sozidanie»",
+    "opensanctions_matches": [
+      {
+        "match_id": "ru-inn-5040181970",
+        "caption": "ФОНД ПОДДЕРЖКИ СОЦИАЛЬНЫХ ИНИЦИАТИВ \"СОЗИДАНИЕ\"",
+        "schema": "Company",
+        "score": 1.0,
+        "topics": [],
+        "source_urls": []
+      },
+      {
+        "match_id": "ru-inn-7500000890",
+        "caption": "ФОНД ПОДДЕРЖКИ СОЦИАЛЬНЫХ ИНИЦИАТИВ \"ЗАБАЙКАЛЬЕ\"",
+        "schema": "Company",
+        "score": 0.75,
+        "topics": [
+          "sanction.linked"
+        ],
+        "source_urls": []
+      },
+      {
+        "match_id": "ru-inn-7729451572",
+        "caption": "ФОНД ПОДДЕРЖКИ СОЦИАЛЬНЫХ ИНИЦИАТИВ ГАЗПРОМА",
+        "schema": "Company",
+        "score": 0.75,
+        "topics": [],
+        "source_urls": []
+      },
+      {
+        "match_id": "NK-2ydE6H6eF2J4nXcwdRFPwt",
+        "caption": "Фонд підтримки соціальних ініціатив \"Майбутнє Камчатки\"",
+        "schema": "Company",
+        "score": 0.7143,
+        "topics": [
+          "sanction"
+        ],
+        "source_urls": []
+      }
+    ],
+    "opensanctions_screened_at": "2026-10-04",
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
     "gur_matches": [],
