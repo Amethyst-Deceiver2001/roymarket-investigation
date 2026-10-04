@@ -88,6 +88,16 @@ PAGE_CSS = r"""
 .qi .cp { grid-column: 2; grid-row: 1 / span 2; align-self: center; padding: 8px 10px; }
 .how { font-size: var(--t-note); color: var(--ink-2); max-width: var(--measure); }
 .how code { font: 400 12px/1.4 var(--font-mono); background: var(--panel-2); padding: 1px 4px; border-radius: 2px; overflow-wrap: anywhere; }
+.ids { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.id { font: 400 11.5px/1.2 var(--font-mono); padding: 3px 6px; border: 1px dashed var(--ink-3); background: var(--panel);
+  color: var(--ink); border-radius: 3px; cursor: pointer; font-variant-numeric: tabular-nums; }
+.id:hover { border-style: solid; border-color: var(--ink); }
+.id[data-done] { background: var(--ink); color: var(--paper); }
+.oq { flex: 1 1 100%; font-size: var(--t-note); }
+.oq summary { cursor: pointer; font: 600 11px/1.4 var(--font-mono); letter-spacing: .05em; text-transform: uppercase; color: var(--ink-2); }
+.oq .q { padding: 6px 0; border-top: 1px solid var(--rule-soft); }
+.oq .q p { margin: 0 0 2px; max-width: var(--measure); overflow-wrap: anywhere; }
+.oq .k { font: 400 11px/1.3 var(--font-mono); color: var(--ink-3); }
 @media (max-width: 760px) {
   .row { grid-template-columns: minmax(0, 1fr); }
   .hdr { display: none; }
@@ -131,7 +141,6 @@ function chip(f) {
 function facts(r) {
   const out = [];
   if (r.kind === "entity") {
-    if (r.inn) out.push("ИНН " + r.inn);
     out.push(r.last_register_pull ? `register ${ru(r.last_register_pull)} (${age(r.last_register_pull)}d)` : "register: none");
   }
   if (r.kind === "entity" || r.kind === "person") out.push(r.screened ? `screened ${ru(r.screened)} (${age(r.screened)}d)` : "screened: never");
@@ -150,7 +159,11 @@ function rowHTML(r) {
   const role = r.role ? `<div class="sub">${esc(r.role)}</div>` : "";
   const sanc = r.sanctioned ? ` <span class="rm-sanction">Sanctioned</span>` : "";
   const fl = r.flags.length ? r.flags.map(chip).join("") : `<span class="ok">No flags</span>`;
-  return `<div class="row"><div><div class="nm">${esc(r.name || r.slug)}${sanc}</div>${lat}${role}<div class="sub">${esc(sub)}</div></div><div class="facts">${facts(r)}</div><div class="fl">${fl}</div></div>`;
+  const idc = [["ИНН", r.inn], ["ОГРН", r.ogrn], ["ИНН физ.", r.inn_personal]].filter(x => x[1])
+    .map(x => `<button class="id" type="button" data-t="${esc(x[1])}" title="Copy ${x[0]} ${esc(x[1])}">${x[0]} ${esc(x[1])}</button>`).join("");
+  const oqs = (r.oq||[]).length ? `<details class="oq"><summary>Open questions (${r.oq.length})</summary>` + r.oq.map(q =>
+    `<div class="q"><p>${esc(q.t)}</p>${q.s ? `<span class="k">${esc(q.s)}</span>` : ""}</div>`).join("") + `</details>` : "";
+  return `<div class="row"><div><div class="nm">${esc(r.name || r.slug)}${sanc}</div>${lat}${role}<div class="sub">${esc(sub)}</div>${idc ? `<div class="ids">${idc}</div>` : ""}</div><div class="facts">${facts(r)}</div><div class="fl">${fl}${oqs}</div></div>`;
 }
 function match(r) {
   if (st.kind !== "all" && r.kind !== st.kind) return false;
@@ -182,7 +195,16 @@ function render() {
 const q = document.getElementById('queue');
 q.innerHTML = (B.queue||[]).map(it => `<div class="qi"><span class="ql">${esc(it.label)}</span><pre>${esc(it.cmd)}</pre>${cpBtn(it.cmd, "Copy")}</div>`).join("") || `<p class="count">Nothing queued today.</p>`;
 const QN = CMDS.length;
-document.addEventListener('click', e => { const b = e.target.closest('.cp'); if (!b) return; copyText(b, CMDS[+b.dataset.c]); });
+document.addEventListener('click', e => {
+  const i = e.target.closest('.id'); if (i) { copyText(i, i.dataset.t); return; }
+  const b = e.target.closest('.cp'); if (!b) return; copyText(b, CMDS[+b.dataset.c]);
+});
+// Every one-record pull command on the rows currently shown, to paste to the Mac in one go.
+document.getElementById('bulk').addEventListener('click', e => {
+  const seen = new Set(), out = [];
+  B.rows.filter(match).slice(0, st.shown).forEach(r => r.flags.forEach(f => (f.cmds||[]).forEach(c => { if (!seen.has(c.cmd)) { seen.add(c.cmd); out.push(c.cmd); } })));
+  copyText(e.currentTarget, out.join("\n") || "# no pullable flags on the rows shown");
+});
 // Summary tiles: records carrying at least one flag of each kind.
 const strip = document.getElementById('strip');
 strip.innerHTML = Object.entries(B.kinds).map(([k,l]) => {
@@ -292,8 +314,45 @@ def sb_ru(d):
     return f"{d[8:10]}.{d[5:7]}.{d[:4]}" if d and len(d) >= 10 else (d or "")
 
 
+def attach_record_detail(board):
+    """Add what a person at the dashboard copies or reads: ОГРН / personal ИНН and the open questions.
+
+    Read from data/registry/ (committed, so it works in the cloud). Only open
+    questions are carried; nothing here is written back.
+    """
+    reg = ROOT / "data" / "registry"
+    def load(name):
+        try:
+            d = json.loads((reg / name).read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            return []
+        return list(d.values()) if isinstance(d, dict) else d
+    ents = {e.get("slug"): e for e in load("entities.json")}
+    ppl = {p.get("slug"): p for p in load("people.json")}
+    oq = {}
+    for q in load("open_questions.json"):
+        for key in ("entity_slug", "person_slug"):
+            if q.get(key) and q.get("status", "open") == "open":
+                oq.setdefault(q[key], []).append({"t": q.get("text", ""), "s": q.get("source_id")})
+    board = json.loads(json.dumps(board))
+    for r in board["rows"]:
+        rec = ents.get(r["slug"]) if r["kind"] == "entity" else ppl.get(r["slug"]) if r["kind"] == "person" else None
+        if rec:
+            if r["kind"] == "entity":
+                r["ogrn"] = rec.get("ogrn") or None
+            else:
+                r["inn_personal"] = rec.get("inn_personal") or None
+        qs = [{"t": q.get("text", ""), "s": q.get("source_id")}
+              for q in (rec or {}).get("open_questions") or [] if q.get("status", "open") == "open"]
+        seen = {q["t"] for q in qs}
+        qs += [q for q in oq.get(r["slug"], []) if q["t"] not in seen]
+        if qs:
+            r["oq"] = qs
+    return board
+
+
 def build(board):
-    board = attach_commands(board)
+    board = attach_record_detail(attach_commands(board))
     th = board["thresholds"]
     notes = "".join(f"<br>{html.escape(n)}" for n in board["notes"])
     data = json.dumps(board, ensure_ascii=False).replace("</", "<\\/")
@@ -314,7 +373,7 @@ def build(board):
 </section>
 <section aria-labelledby="h-q">
   <h2 class="rm-h2" id="h-q">Today's pull queue</h2>
-  <p class="count">The capped commands <code>status_board.py --pull-queue</code> prints for today. Copy one and paste it to the Mac session; nothing runs from this page. A pulled document is read before any fact from it enters the registry, and a screen hit is a lead to read. Pullable flags below carry their own one-record copy button.</p>
+  <p class="count">The capped commands <code>status_board.py --pull-queue</code> prints for today. Copy one and paste it to the Mac session; nothing runs from this page (a page cannot reach the Mac). Click an ИНН or ОГРН on any row to copy it. A pulled document is read before any fact from it enters the registry, and a screen hit is a lead to read. Pullable flags below carry their own one-record copy button.</p>
   <div class="queue" id="queue"></div>
 </section>
 <section aria-labelledby="h-dev">
@@ -331,6 +390,7 @@ def build(board):
     </div>
     <select id="tier" aria-label="Tier"><option value="">Any tier</option></select>
     <label><input type="checkbox" id="flagged"> Only records with flags</label>
+    <button class="cp" id="bulk" type="button" title="Copy every pull command on the rows shown">Copy pull commands for rows shown</button>
   </div>
   <p class="count" id="count"></p>
   <div class="rows" id="rows"></div>
