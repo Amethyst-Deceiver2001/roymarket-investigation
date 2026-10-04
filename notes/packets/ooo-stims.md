@@ -33,11 +33,18 @@ Identifying detail on file for the people above (field-level sources are not rec
 
 ## 4. Filed accounts and staff
 
-No filed accounts on file.
+| Year | Revenue | Net profit | Source |
+|---|---|---|---|
+| 2021 | ₽0.8m | ₽0.0m | [E4] |
+| 2022 | ₽0.9m | ₽0.0m | [E5] |
+| 2023 | ₽1.8m | ₽0.0m | [E6] |
+| 2024 | ₽3.2m | ₽0.0m | [E7] |
+| 2025 | ₽349.6m | ₽218.0m | [E8] |
+
 
 ## 5. Tie to ЦБСТ
 
-- **Reported**: Named by ЦБСТ's own channel, as «Гаскар Групп», among the organisations in its contour that the EU listed in its 20th package. [E4]
+- **Reported**: Named by ЦБСТ's own channel, as «Гаскар Групп», among the organisations in its contour that the EU listed in its 20th package. [E9]
 
 Other links in the record:
 
@@ -54,7 +61,7 @@ Other links in the record:
 
 *Facts only, in the order an EU listing puts them. The submitter chooses the legal route (for example the asset-freeze criteria of Council Decision 2014/145/CFSP, or the military end-user list in Annex IV to Council Regulation (EU) No 833/2014) and writes the conclusion.*
 
-OOO «STIMS» (ООО «СТИМС»; ИНН 7734436058; ОГРН 1207700279797) is a company registered in Russia on 07.08.2020, in Москва. Its general director is Мингалимов Ленар Нуриахметович [E1]. Its owners, as of 07.07.2026, are ООО «Аметист Кэпитал» (ИНН 9704078560, ОГРН 1217700336480) 60% (₽6,000) / Мингалимов Ленар Нуриахметович (ИНН 165020722607) 20% (₽2,000) / Саитов Ренат Фаритович (ИНН 027503961630) 20% (₽2,000) [E1]. Its tie to the Centre for Unmanned Systems and Technologies (АНО «ЦБСТ»): Named by ЦБСТ's own channel, as «Гаскар Групп», among the organisations in its contour that the EU listed in its 20th package. [E4].
+OOO «STIMS» (ООО «СТИМС»; ИНН 7734436058; ОГРН 1207700279797) is a company registered in Russia on 07.08.2020, in Москва. Its general director is Мингалимов Ленар Нуриахметович [E1]. Its owners, as of 07.07.2026, are ООО «Аметист Кэпитал» (ИНН 9704078560, ОГРН 1217700336480) 60% (₽6,000) / Мингалимов Ленар Нуриахметович (ИНН 165020722607) 20% (₽2,000) / Саитов Ренат Фаритович (ИНН 027503961630) 20% (₽2,000) [E1]. Its tie to the Centre for Unmanned Systems and Technologies (АНО «ЦБСТ»): Named by ЦБСТ's own channel, as «Гаскар Групп», among the organisations in its contour that the EU listed in its 20th package. [E9]. Its filed revenue for 2025 was ₽349.6m [E8].
 
 [Conclusion and criterion: for the submitter.]
 
@@ -67,7 +74,12 @@ Every document cited above. Telegram posts and web pages are archived and hashed
 | E1 | Company register extract (ЕГРЮЛ, Federal Tax Service) for ИНН 7734436058, 03.10.2026 | none public; copy on file | `93bb8cee04d620df` | s9112 |
 | E2 | Council Implementing Regulation (EU) 2026/509, Official Journal of the EU | none public; copy on file | `4074c362a8335caa` | s9114 |
 | E3 | Archived document, 02.10.2026 | none public; copy on file | `5f1315863aedf05c` | s9106 |
-| E4 | Telegram, @ano_cbst, post 2095, 24.04.2026 (transcript of the database text, not a capture of the page) | https://t.me/ano_cbst/2095 | `e180c4aca6b6c5a4` | s7588 |
+| E4 | Annual accounts filed with the Federal Tax Service, ИНН 7734436058, FY 2021 | none public; copy on file | `18cd9a2b7666a811` | s9127 |
+| E5 | Annual accounts filed with the Federal Tax Service, ИНН 7734436058, FY 2022 | none public; copy on file | `4f8b422c7fcaf0ee` | s9128 |
+| E6 | Annual accounts filed with the Federal Tax Service, ИНН 7734436058, FY 2023 | none public; copy on file | `8b41abf758af8d1b` | s9129 |
+| E7 | Annual accounts filed with the Federal Tax Service, ИНН 7734436058, FY 2024 | none public; copy on file | `9a28577892004aeb` | s9130 |
+| E8 | Annual accounts filed with the Federal Tax Service, ИНН 7734436058, FY 2025 | none public; copy on file | `e6a90f6d06618952` | s9131 |
+| E9 | Telegram, @ano_cbst, post 2095, 24.04.2026 (transcript of the database text, not a capture of the page) | https://t.me/ano_cbst/2095 | `e180c4aca6b6c5a4` | s7588 |
 
 ## Appendix (internal, drop before sending): open questions in the record
 
@@ -77,3 +89,5 @@ Research notes as the registry holds them. Some may weaken a line above; read th
 - The listing describes UAV development and production. The registered activities in the extract are 62.01 (primary), construction, consulting and R&D 72.19, with no manufacturing code. A Habr Career page for «Gaskar Group» (s9118) calls ООО «Гаскар интеграция» the «heart» of the group and describes an IT integrator in construction: the group's own description, a lead only. Which registered entity holds the drone line (ooo-gaskar, ooo-gaskar-integratsiya, ooo-gaskar-tekhnologii) is not established. (s9114)
 - Participant Саитов Ренат Фаритович (ИНН 027503961630, 20% from 07.07.2026) shares a name with the 2019 general director of ООО «Гаскар Интеграция» in this registry (saitov-renat-faritovich, s1548). That record carries no ИНН and the current Гаскар Интеграция extracts do not mention him: the same name only, no link is drawn. No person records are made for the director or the two participants; their scope under the PII policy is not decided. (s9112)
 - All three people entries post-date the listings: director 18.05.2026, Мингалимов's share 19.06.2026, Саитов's 07.07.2026. ООО «Аметист Кэпитал» has held 60% since 25.09.2023. Earlier directors and participants are not in this extract. No accounts (БФО) have been pulled for this ИНН. (s9112)
+- FY2025 accounts (filed with the tax service, read 04.10.2026, unit тыс. руб.): revenue ₽349.65m against ₽3.25m in FY2024; net profit ₽217.98m against ₽3 thousand; balance ₽259.0m against ₽17.8m (intangible assets ₽92.6m, cash ₽91.1m, other current assets ₽74.6m). The company is not subject to mandatory audit and the filing is unaudited. The step is two orders of magnitude in one year, in the year before the EU listing of 23.04.2026. What the revenue was for is not stated in the filing; the registered activity is ОКВЭД-only and the production mismatch is already an open question. Not read: the notes, the counterparties, the source of the ₽64.1m other expenses. (s9131)
+- The FY2025 filing is signed by «руководитель» Часовских Павел Анатольевич, not by Мингалимов Ленар Нуриахметович, who is the general director per the ЕГРЮЛ extract (entries of 18.05.2026 and 16.06.2026). The filing predates or was prepared before that change; the earlier director is not in the extract and no director_history row exists for Часовских. Not recorded as a person: no identifier is printed. (s9131)

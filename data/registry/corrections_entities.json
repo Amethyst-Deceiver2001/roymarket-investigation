@@ -10533,6 +10533,14 @@
         {
           "source_id": "s9112",
           "text": "All three people entries post-date the listings: director 18.05.2026, Мингалимов's share 19.06.2026, Саитов's 07.07.2026. ООО «Аметист Кэпитал» has held 60% since 25.09.2023. Earlier directors and participants are not in this extract. No accounts (БФО) have been pulled for this ИНН."
+        },
+        {
+          "source_id": "s9131",
+          "text": "FY2025 accounts (filed with the tax service, read 04.10.2026, unit тыс. руб.): revenue ₽349.65m against ₽3.25m in FY2024; net profit ₽217.98m against ₽3 thousand; balance ₽259.0m against ₽17.8m (intangible assets ₽92.6m, cash ₽91.1m, other current assets ₽74.6m). The company is not subject to mandatory audit and the filing is unaudited. The step is two orders of magnitude in one year, in the year before the EU listing of 23.04.2026. What the revenue was for is not stated in the filing; the registered activity is ОКВЭД-only and the production mismatch is already an open question. Not read: the notes, the counterparties, the source of the ₽64.1m other expenses."
+        },
+        {
+          "source_id": "s9131",
+          "text": "The FY2025 filing is signed by «руководитель» Часовских Павел Анатольевич, not by Мингалимов Ленар Нуриахметович, who is the general director per the ЕГРЮЛ extract (entries of 18.05.2026 and 16.06.2026). The filing predates or was prepared before that change; the earlier director is not in the extract and no director_history row exists for Часовских. Not recorded as a person: no identifier is printed."
         }
       ],
       "web": {
@@ -10542,7 +10550,39 @@
         "youtube": [],
         "marketplace_listings": [],
         "other": []
-      }
+      },
+      "financials": [
+        {
+          "year": "2021",
+          "revenue": 813000.0,
+          "profit": 1000.0,
+          "source_id": "s9127"
+        },
+        {
+          "year": "2022",
+          "revenue": 875000.0,
+          "profit": 4000.0,
+          "source_id": "s9128"
+        },
+        {
+          "year": "2023",
+          "revenue": 1750000.0,
+          "profit": 3000.0,
+          "source_id": "s9129"
+        },
+        {
+          "year": "2024",
+          "revenue": 3249000.0,
+          "profit": 3000.0,
+          "source_id": "s9130"
+        },
+        {
+          "year": "2025",
+          "revenue": 349650000.0,
+          "profit": 217975000.0,
+          "source_id": "s9131"
+        }
+      ]
     },
     {
       "slug": "ip-pinimasov-aleksandr-vyacheslavovich",
