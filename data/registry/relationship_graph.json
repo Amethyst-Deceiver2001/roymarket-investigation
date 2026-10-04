@@ -2,8 +2,8 @@
   "schema_version": 12,
   "generated_from": "data/registry/entities.json + people.json + programs.json + products.json",
   "node_count": 1251,
-  "edge_count": 2168,
-  "unresolved_count": 115,
+  "edge_count": 2170,
+  "unresolved_count": 114,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -2443,6 +2443,14 @@
       "degree": 3
     },
     {
+      "id": "kholkin-oleg-valerevich",
+      "kind": "person",
+      "label": "Холкин Олег Валерьевич",
+      "name_latin": "Kholkin Oleg Valerevich",
+      "sanctioned": false,
+      "degree": 4
+    },
+    {
       "id": "khristyuk-ekaterina-valerevna",
       "kind": "person",
       "label": "Христюк Екатерина Валерьевна",
@@ -3991,7 +3999,7 @@
       "legal_form": "ООО",
       "variant": null,
       "product_count": 0,
-      "degree": 3
+      "degree": 5
     },
     {
       "id": "ooo-momento-rubinshteyn",
@@ -12654,12 +12662,6 @@
       "kind": "unresolved",
       "label": "Хафизов Марат Миннерасыхович",
       "degree": 3
-    },
-    {
-      "id": "stub::холкин олег валерьевич",
-      "kind": "unresolved",
-      "label": "Холкин Олег Валерьевич",
-      "degree": 2
     },
     {
       "id": "stub::хоук холдинг",
@@ -23988,6 +23990,58 @@
       "label": "co-inventor (patent RU2746394C1)",
       "source_id": "s1019",
       "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "kholkin-oleg-valerevich",
+      "target": "ooo-mo-pniei-kraskript",
+      "type": "directs",
+      "label": null,
+      "source_id": "s8933",
+      "as_of": "2023-05-19",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "kholkin-oleg-valerevich",
+      "target": "ooo-mo-pniei-kraskript",
+      "type": "founded",
+      "label": null,
+      "source_id": "s8933",
+      "as_of": "2025-11-12",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "kholkin-oleg-valerevich",
+      "target": "ooo-mo-pniei-kraskript",
+      "type": "role",
+      "label": "Основатель школы дронов DRONTECH.PRO (per the school's own site: «основатель школы кандидат технических наук Олег Холкин»)",
+      "source_id": "s8941",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "rep"
+    },
+    {
+      "source": "kholkin-oleg-valerevich",
+      "target": "ooo-mo-pniei-kraskript",
+      "type": "role",
+      "label": "Генеральный директор; единственный участник (100%, с 12.11.2025)",
+      "source_id": "s8933",
+      "as_of": "2023-05-19",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null,
@@ -39712,32 +39766,6 @@
       "grade": "doc"
     },
     {
-      "source": "stub::холкин олег валерьевич",
-      "target": "ooo-mo-pniei-kraskript",
-      "type": "directs",
-      "label": null,
-      "source_id": "s8933",
-      "as_of": "2023-05-19",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "stub::холкин олег валерьевич",
-      "target": "ooo-mo-pniei-kraskript",
-      "type": "founded",
-      "label": null,
-      "source_id": "s8933",
-      "as_of": "2025-11-12",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
       "source": "stub::хоук холдинг",
       "target": "ao-stratim",
       "type": "founded",
@@ -42122,14 +42150,6 @@
         "former founder of ooo-gaskar-integratsiya",
         "former founder of ooo-gaskar-tekhnologii",
         "former founder of ooo-vostochnye-vorota-zabaykalsk-manchzhuriya"
-      ]
-    },
-    {
-      "id": "stub::холкин олег валерьевич",
-      "raw_name": "Холкин Олег Валерьевич",
-      "contexts": [
-        "former founder of ooo-mo-pniei-kraskript",
-        "director of ooo-mo-pniei-kraskript"
       ]
     },
     {

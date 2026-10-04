@@ -50343,5 +50343,50 @@
     "_origin": "corrections:add_entities",
     "_raw": {},
     "_corrected": null
+  },
+  {
+    "slug": "kholkin-oleg-valerevich",
+    "fio_ru": "Холкин Олег Валерьевич",
+    "name_latin": "Kholkin Oleg Valerevich",
+    "dob": null,
+    "birthplace": null,
+    "address": null,
+    "inn_personal": "246000760010",
+    "roles": [
+      {
+        "entity_name": "ООО «МО ПНИЭИ - КРАСКРИПТ»",
+        "entity_slug": "ooo-mo-pniei-kraskript",
+        "from": "2023-05-19",
+        "source_id": "s8933",
+        "title": "Генеральный директор; единственный участник (100%, с 12.11.2025)",
+        "to": null
+      },
+      {
+        "entity_name": "ООО «МО ПНИЭИ - КРАСКРИПТ»",
+        "entity_slug": "ooo-mo-pniei-kraskript",
+        "from": null,
+        "source_id": "s8941",
+        "title": "Основатель школы дронов DRONTECH.PRO (per the school's own site: «основатель школы кандидат технических наук Олег Холкин»)",
+        "to": null
+      }
+    ],
+    "sanctions": [],
+    "other_entities": [],
+    "other_entities_checked_at": null,
+    "disqualification_hits": [],
+    "disqualification_checked_at": null,
+    "subsidiary_liability_hits": [],
+    "subsidiary_liability_checked_at": null,
+    "social": [],
+    "photo": null,
+    "notes": "04.10.2026: new record, user's direction (#20 item 3: in scope as the identified principal of a resident school of НПЦ «Ушкуйник»). Personal ИНН, role and share from the company's ЕГРЮЛ extract of 02.10.2026 (s8933). The DRONTECH.PRO founder named on the school's site is linked to him by name and by the company the site's footer names, not by a printed personal ИНН. No date of birth, address or photo: none sourced. Not to be confused with Александр Холкин, the school's course author (relation unknown).",
+    "sources": [],
+    "_verified": true,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "_corrected": [
+      "s8933 -- the company's ЕГРЮЛ extract (director entry ГРН 2232400270298 of 19.05.2023; sole participant, ГРН 2252401725596 of 12.11.2025).",
+      "s8941 -- DRONTECH.PRO homepage capture; s8876 -- Чадаев's post 3240 calling the school a resident of НПЦ «Ушкуйник»."
+    ]
   }
 ]
