@@ -1849,14 +1849,15 @@
       ],
       "sanctions_review": {
         "as_of": "2026-10-04",
-        "outcome": "open",
-        "note": "The record is on ГУР's database as a 'person of interest' per OpenSanctions, which says it is on no sanctions list; or it is only linked through an owner. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. The ГУР entry is not read in full here. Identity confirmed by ИНН 9704220859 on two hits: the ГУР UAV-companies entry (ГУР's own ИНН check says match) and OpenSanctions' record from ГУР's database. OpenSanctions says it is not on any international sanctions list; it is a ГУР 'person of interest' and is owned by ООО «УК КОМАКС» (ИНН 770479",
+        "outcome": "linked_not_designated",
         "checked": [
+          "s6148",
           "s9106",
           "s9107",
           "s9108",
           "s9109"
-        ]
+        ],
+        "note": "ГУР's own page for this company (war-sanctions.gur.gov.ua uav/companies/15560, saved 05.09.2026, s6148; page read in full 04.10.2026) prints ИНН 9704220859 and ОГРН 1237700611455 and describes it as part of the Aero-Hit group making «Велес» FPV drones, with the senator Konstantin Basyuk as ultimate beneficiary. Its 'Date of entry and reference to the document' field reads: 'The country has not yet applied sanctions'; the long jurisdiction list on the page is the site's own fixed menu, not listings. EU, US, UK and Swiss lists of 02.10.2026 searched by ИНН/ОГРН: no entry. So it is catalogued by ГУР but not shown as sanctioned anywhere. Not checked: Ukraine's NSDC and Canada (entity entries carry no identifiers)."
       }
     },
     {
@@ -1874,14 +1875,15 @@
       ],
       "sanctions_review": {
         "as_of": "2026-10-04",
-        "outcome": "open",
-        "note": "The record is on ГУР's database as a 'person of interest' per OpenSanctions, which says it is on no sanctions list; or it is only linked through an owner. EU, US, UK and Swiss lists of 02.10.2026 (s9106-s9109) searched by personal ИНН and full name: no entry. The ГУР entry is not read in full here. Identity confirmed: the OpenSanctions hit is ru-inn-9718293790, our own ИНН. It is flagged only because its 100% owner is ООО «УК КОМАКС» (NSDC-listed, per the registry). OpenSanctions says the company itself is on no sanctions list. The five ГУР hits are other Аэро-Хит/aviation companies with other",
+        "outcome": "linked_not_designated",
         "checked": [
+          "s6148",
           "s9106",
           "s9107",
           "s9108",
           "s9109"
-        ]
+        ],
+        "note": "ГУР has no entry for this company: the five hits it returned carry other ИНН (the sibling Aero-Hit Service entry, 15560, is read: not sanctioned). OpenSanctions marks it sanction-linked through its 100% owner ООО «УК КОМАКС», which the registry records as NSDC-listed (NSDC original not read). EU, US, UK and Swiss lists of 02.10.2026 searched by ИНН/ОГРН: no entry."
       }
     },
     {
