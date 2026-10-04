@@ -41725,6 +41725,11 @@
           "confidence": "not_established",
           "evidence": "50%-owned subsidiary of ООО «Гагаринг»; no document ties the company itself to ЦБСТ.",
           "source_id": null
+        },
+        "sanctions_review": {
+          "as_of": "2026-10-04",
+          "outcome": "false_positive",
+          "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026 by reading the ГУР page directly (fetched with a browser User-Agent; plain curl 403s). The only hit is \"RUSSIAN AIR TRANSPORT LABORATORY LIMITED LIABILITY COMPANY\", own TIN 7100027464, own registration 1227100012369 -- a different company by name, region and identifier. Ours is ИНН 2373028450 / ОГРН 1262300002535. ГУР itself flags no identifier match (inn_match/ogrn_match both false). No EU/US/UK/Swiss check needed given the ГУР hit alone does not implicate this entity."
         }
       },
       "verified_against": null,
@@ -43643,7 +43648,12 @@
             "source_id": "s9005",
             "note": "Lines 2110 / 2400. Read from the signed БФО filing (bo.nalog.gov.ru, pulled 02.10.2026), reported in тыс. руб. and converted to whole rubles."
           }
-        ]
+        ],
+        "sanctions_review": {
+          "as_of": "2026-10-04",
+          "outcome": "false_positive",
+          "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026. All three ГУР hits are other companies by name, region and identifier, none matching ours (ИНН 7017396681 / ОГРН 1167031054057): \"BVS Systems\" LLC (TIN 7820061973, St Petersburg), \"Unmanned Systems\" LLC (TIN 1831156383, Udmurtia) and \"Izhevsk Unmanned Systems\" R&D association (TIN 1831117433, Udmurtia). The same \"BVS Systems\"/\"Unmanned Systems\" pair already surfaced as a false positive on ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s (sanctions_review, checked 2026-10-04) -- a generic keyword overlap on \"Системы\"/\"Systems\", not a real identity signal. ГУР itself flags no identifier match on any of the three (inn_match/ogrn_match all false)."
+        }
       },
       "why": [
         "[2026-10-03 first reading of the 02.10 pulls, approved by Alexey] financials added from БФО 2021–2025 (s9001–s9005); the registry had none. The 2025 filing is signed «руководитель Калиновская Елена Евгеньевна», matching the registry."

@@ -48871,10 +48871,10 @@
     "slug": "aleynik-evgeniy",
     "fio_ru": "Алейник Евгений",
     "name_latin": null,
-    "dob": null,
-    "birthplace": null,
+    "dob": "2000-11-15",
+    "birthplace": "Veydelevsky district, Belgorod region, Russia",
     "address": null,
-    "inn_personal": null,
+    "inn_personal": "310206521001",
     "roles": [
       {
         "entity_slug": "tg-arkhangel-spetsnaza",
@@ -48883,7 +48883,16 @@
         "source_id": "s6406"
       }
     ],
-    "sanctions": [],
+    "sanctions": [
+      {
+        "date": "2026-09-24",
+        "regime": [
+          "Ukraine (ГУР war-sanctions)"
+        ],
+        "source_id": "s9164",
+        "note": "ГУР war-sanctions \"Kremlin Mouthpieces\" list: АЛЕЙНИК Евгений Станиславович, TIN 310206521001, DOB 15.11.2000. Listed as \"administrator of the Telegram-channel Archangel of Spetsnaz\" -- matches this record's existing role (tg-arkhangel-spetsnaza, callsign «Внук», s6406) exactly, and the page cites the same iStories article (istories.media, 24.09.2024) already on file as this record's source. Reasons: propaganda, hate speech against Ukrainian military/civilians, organising fundraisers for occupation units including drone purchases. No EU/US/UK/Swiss list checked for this individual -- open."
+      }
+    ],
     "other_entities": [],
     "other_entities_checked_at": null,
     "disqualification_hits": [],
@@ -48892,13 +48901,19 @@
     "subsidiary_liability_checked_at": null,
     "social": [],
     "photo": null,
-    "notes": "23 years old as of the 2024-09-24 iStories publication (s6406). Son of Станислав Алейник, rector of Belgorod State Agrarian University and former Deputy Minister of Agriculture of Russia — identified by matching name, surname and date of birth to a family photo, then confirmed via Amazon Rekognition facial comparison against the channel's «Внук» persona (88.6% confidence, per iStories' own reporting methodology). His current unit/place of service is not stated in the source — flagged as unknown, not guessed. Originally surfaced publicly via the Ukrainian leak-aggregator site Evocation (July 2024), which published personal data on several «Архангел спецназа» authors — iStories independently verified this specific identification against open-source data rather than simply repeating the leak site's claim. Жулидов's statement to iStories claims Алейник also stopped administering the channel in late 2022 under military orders — his colleague's denial on his behalf, not independently confirmed. PII scope: co-administrator of a channel running a joint drone-retraining project with ooo-npo-kilovatt's Гагаринг lab (see tg-arkhangel-spetsnaza's tier_basis) — a confirmed operational participant under the 2026-09-04 PII policy amendment, not a bystander. DOB left null (only age-at-publication known, not exact birth date).",
+    "notes": " DOB and place of birth (15.11.2000, Veydelevsky district, Belgorod region) and personal TIN (310206521001) per the ГУР «Kremlin Mouthpieces» page (s9164, checked 2026-10-04), which cites the same iStories article already on file as this record's source and names the same Telegram-channel role.",
     "sources": [],
     "_verified": false,
     "_origin": "corrections:add_entities",
     "_raw": {},
     "fio_latin": "Evgeny Aleinik",
     "_corrected": null,
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "designated",
+      "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026 by reading the ГУР page directly (browser User-Agent; plain curl 403s). Same Telegram role, same cited source article as this record's existing identification -- genuine match, not a false positive. New identifying detail (DOB, birthplace, personal TIN) added above."
+    },
+    "_verified_against": null,
     "opensanctions_matches": [
       {
         "match_id": "NK-Jhy8WseBPaa7ojvLquybfX",
@@ -48973,8 +48988,8 @@
     "slug": "bogatikov-sergey-anatolevich",
     "fio_ru": "Богатиков Сергей Анатольевич",
     "name_latin": "Bogatikov Sergey Anatolevich",
-    "dob": null,
-    "birthplace": null,
+    "dob": "1972-08-04",
+    "birthplace": "Moscow, RSFSR",
     "address": null,
     "inn_personal": "770304117100",
     "roles": [
@@ -48987,7 +49002,16 @@
         "source_id": "s6885"
       }
     ],
-    "sanctions": [],
+    "sanctions": [
+      {
+        "date": "2026-09-02",
+        "regime": [
+          "Ukraine (ГУР war-sanctions)"
+        ],
+        "source_id": "s9165",
+        "note": "ГУР war-sanctions \"Engineers of aggression\" list (updated 02.09.2026), total 56 individuals: БОГАТИКОВ Сергей Анатольевич, TIN 770304117100 -- exact match to this record's existing inn_personal. Listed as General Director of \"A.Y.BEREZNYAK GOSMKB RADUGA JSC\" (matches other_entities: director of АО «ГосМКБ «Радуга» им. А.Я.Березняка», s6885), the principal developer of Kh-101/Kh-102 strategic cruise missiles and Kh-59/Kh-69 guided air-launched missiles. Reasons cite his tenure overseeing the Kh-101 modernisation (cluster warhead integration) and name two strikes as the most significant by casualties: 08.07.2024 on Okhmatdyt Children's Medical Center, Kyiv; 19.11.2025 on an apartment building in Ternopil (33 dead incl. 6 children). No EU/US/UK/Swiss list checked yet for this individual -- open."
+      }
+    ],
     "other_entities": [
       {
         "inn": "5010031470",
@@ -49008,7 +49032,7 @@
     "subsidiary_liability_checked_at": "2026-09-07",
     "social": [],
     "photo": null,
-    "notes": "Recovered as director of ООО «ГК Аэромакс» (ИНН 7710974353) via Aleph/OCCRP's cached EGRUL mirror snapshot dated 2025-12-14 (github.com/alephcommons/ru-egrul), which predates the 19.08.2026/07.09.2026 Federal Law 129-FZ redaction of this entity's director field in current EGRUL. Not independently confirmed against a live/current EGRUL pull -- this is the last publicly-mirrored director identity before redaction, not necessarily still the acting director.",
+    "notes": "DOB and place of birth (04.08.1972, Moscow) per the ГУР «Engineers of aggression» page (s9165, checked 2026-10-04), which also carries an exact TIN match (770304117100) to this record.",
     "sources": [],
     "_verified": true,
     "_origin": "corrections:add_entities",
@@ -49020,6 +49044,11 @@
       "as_of": "2026-09-07",
       "outcome": "closed",
       "note": "Scanned by personal ИНН, zero hits in zakupki.gov.ru contract registry."
+    },
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "designated",
+      "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026 by reading the ГУР page directly (browser User-Agent; plain curl 403s). Exact TIN match (770304117100) to this record's existing inn_personal and exact role match (general director of ГосМКБ «Радуга») confirm identity beyond doubt. Genuine designation, not a false positive -- see sanctions[] above."
     },
     "_verified_against": null,
     "opensanctions_matches": [
@@ -50514,12 +50543,21 @@
     "slug": "kiselev-dmitriy-konstantinovich",
     "fio_ru": "Киселёв Дмитрий Константинович",
     "name_latin": "Dmitry Konstantinovich Kiselev",
-    "dob": null,
-    "birthplace": null,
+    "dob": "1954-04-26",
+    "birthplace": "Moscow, Russia",
     "address": null,
-    "inn_personal": null,
+    "inn_personal": "771911447529",
     "roles": [],
-    "sanctions": [],
+    "sanctions": [
+      {
+        "date": "2026-10-02",
+        "regime": [
+          "United States (OFAC SDN)"
+        ],
+        "source_id": "s9166",
+        "note": "OFAC SDN List (list current as of 02.10.2026, record id 50691): KISELEV, Dmitry Konstantinovich, a.k.a. KISELYOV; Program RUSSIA-EO14024; DOB 26 Apr 1954; Place of birth Moscow, Russia; Tax ID No. 771911447529; \"Remarks: (Linked To: FEDERAL STATE UNITARY ENTERPRISE INTERNATIONAL INFORMATION AGENCY ROSSIYA SEGODNYA)\" -- matches this record's existing identification as head of МИА «Россия сегодня» (s0561) exactly. This record is logged PEP-context only (father of a family-tie person, no stake of his own in this network); the designation is real but his own entity ties here stay as recorded. EU/UK/French listings referenced by OpenSanctions metadata are not yet read in full -- open."
+      }
+    ],
     "other_entities": [],
     "other_entities_checked_at": null,
     "disqualification_hits": [],
@@ -50536,9 +50574,13 @@
     "_verified": false,
     "_origin": "corrections:add_entities",
     "_raw": {},
-    "_corrected": [
-      "2026-09-19: created at user direction to monitor family ties of PEP-linked persons; father-son tie confirmed by RuPEP's own family list."
-    ],
+    "_corrected": null,
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "designated",
+      "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026 by reading the OFAC SDN record directly. \"Linked To: ...ROSSIYA SEGODNYA\" matches this record's existing identification exactly -- unambiguous, not a namesake. Genuine designation; EU/UK/French lists in the match metadata not independently read yet."
+    },
+    "_verified_against": null,
     "opensanctions_matches": [
       {
         "match_id": "Q4222062",

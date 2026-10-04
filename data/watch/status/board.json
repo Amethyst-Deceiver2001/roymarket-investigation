@@ -4053,12 +4053,6 @@
      "due": [
       "opensanctions"
      ]
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions review recorded",
-     "count": 1
     }
    ]
   },
@@ -5036,12 +5030,6 @@
      "due": [
       "opensanctions"
      ]
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "3 sanctions-type screening hit(s), no sanctions review recorded",
-     "count": 3
     },
     {
      "kind": "review",
@@ -11426,18 +11414,12 @@
    "role": null,
    "channels": [],
    "screened": "2026-10-03",
-   "sanctioned": false,
+   "sanctioned": true,
    "flags": [
     {
-     "kind": "gap",
-     "code": "no_inn",
-     "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded",
-     "count": 1
+     "kind": "pull",
+     "code": "other_entities_unchecked",
+     "text": "Other companies under this personal ИНН not checked"
     }
    ]
   },
@@ -11450,15 +11432,8 @@
    "role": "Генеральный директор (per Aleph EGRUL mirror, snapshot 2025-12-14)",
    "channels": [],
    "screened": "2026-10-03",
-   "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded",
-     "count": 1
-    }
-   ]
+   "sanctioned": true,
+   "flags": []
   },
   {
    "kind": "person",
@@ -11695,13 +11670,12 @@
    "role": null,
    "channels": [],
    "screened": "2026-10-04",
-   "sanctioned": false,
+   "sanctioned": true,
    "flags": [
     {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded",
-     "count": 1
+     "kind": "pull",
+     "code": "other_entities_unchecked",
+     "text": "Other companies under this personal ИНН not checked"
     }
    ]
   },

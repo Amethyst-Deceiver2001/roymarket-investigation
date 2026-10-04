@@ -80371,6 +80371,11 @@
       "outcome": "closed",
       "note": "not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
     },
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "false_positive",
+      "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026 by reading the ГУР page directly (fetched with a browser User-Agent; plain curl 403s). The only hit is \"RUSSIAN AIR TRANSPORT LABORATORY LIMITED LIABILITY COMPANY\", own TIN 7100027464, own registration 1227100012369 -- a different company by name, region and identifier. Ours is ИНН 2373028450 / ОГРН 1262300002535. ГУР itself flags no identifier match (inn_match/ogrn_match both false). No EU/US/UK/Swiss check needed given the ГУР hit alone does not implicate this entity."
+    },
     "_verified_against": null,
     "name_display": "OOO «Laboratoriya Yangelya»",
     "aleph_matches": [],
@@ -89186,6 +89191,11 @@
         "note": "ЦБСТ's own channel, post 447: «Компания «ИНТЭК промышленные системы», являясь резидентом Центра беспилотных систем и технологий»."
       }
     ],
+    "sanctions_review": {
+      "as_of": "2026-10-04",
+      "outcome": "false_positive",
+      "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026. All three ГУР hits are other companies by name, region and identifier, none matching ours (ИНН 7017396681 / ОГРН 1167031054057): \"BVS Systems\" LLC (TIN 7820061973, St Petersburg), \"Unmanned Systems\" LLC (TIN 1831156383, Udmurtia) and \"Izhevsk Unmanned Systems\" R&D association (TIN 1831117433, Udmurtia). The same \"BVS Systems\"/\"Unmanned Systems\" pair already surfaced as a false positive on ao-uk-azimut-formerly-aeronavigatsionnye-i-informatsionnye-s (sanctions_review, checked 2026-10-04) -- a generic keyword overlap on \"Системы\"/\"Systems\", not a real identity signal. ГУР itself flags no identifier match on any of the three (inn_match/ogrn_match all false)."
+    },
     "_verified_against": null,
     "name_display": "OOO «INTEK PROMYSHLENNYE SISTEMY»",
     "aleph_matches": [

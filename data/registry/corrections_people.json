@@ -5135,7 +5135,25 @@
           "as_of": "2026-09-07",
           "outcome": "closed",
           "note": "Scanned by personal ИНН, zero hits in zakupki.gov.ru contract registry."
-        }
+        },
+        "dob": "1972-08-04",
+        "birthplace": "Moscow, RSFSR",
+        "sanctions": [
+          {
+            "date": "2026-09-02",
+            "regime": [
+              "Ukraine (ГУР war-sanctions)"
+            ],
+            "source_id": "s9165",
+            "note": "ГУР war-sanctions \"Engineers of aggression\" list (updated 02.09.2026), total 56 individuals: БОГАТИКОВ Сергей Анатольевич, TIN 770304117100 -- exact match to this record's existing inn_personal. Listed as General Director of \"A.Y.BEREZNYAK GOSMKB RADUGA JSC\" (matches other_entities: director of АО «ГосМКБ «Радуга» им. А.Я.Березняка», s6885), the principal developer of Kh-101/Kh-102 strategic cruise missiles and Kh-59/Kh-69 guided air-launched missiles. Reasons cite his tenure overseeing the Kh-101 modernisation (cluster warhead integration) and name two strikes as the most significant by casualties: 08.07.2024 on Okhmatdyt Children's Medical Center, Kyiv; 19.11.2025 on an apartment building in Ternopil (33 dead incl. 6 children). No EU/US/UK/Swiss list checked yet for this individual -- open."
+          }
+        ],
+        "sanctions_review": {
+          "as_of": "2026-10-04",
+          "outcome": "designated",
+          "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026 by reading the ГУР page directly (browser User-Agent; plain curl 403s). Exact TIN match (770304117100) to this record's existing inn_personal and exact role match (general director of ГосМКБ «Радуга») confirm identity beyond doubt. Genuine designation, not a false positive -- see sanctions[] above."
+        },
+        "notes": "DOB and place of birth (04.08.1972, Moscow) per the ГУР «Engineers of aggression» page (s9165, checked 2026-10-04), which also carries an exact TIN match (770304117100) to this record."
       },
       "why": [
         "2026-09-07: zakupki scan (never-scanned gap closure) — scanned by personal ИНН, zero hits in zakupki.gov.ru contract registry."
@@ -6370,6 +6388,51 @@
       "why": [
         "04.10.2026: EU and Swiss entries read on the official files; matched by personal ИНН (printed in both) and by the function matching ООО «ЦКБР». Neither entry gives a date of birth, so none is recorded."
       ]
+    },
+    "aleynik-evgeniy": {
+      "set": {
+        "dob": "2000-11-15",
+        "birthplace": "Veydelevsky district, Belgorod region, Russia",
+        "inn_personal": "310206521001",
+        "sanctions": [
+          {
+            "date": "2026-09-24",
+            "regime": [
+              "Ukraine (ГУР war-sanctions)"
+            ],
+            "source_id": "s9164",
+            "note": "ГУР war-sanctions \"Kremlin Mouthpieces\" list: АЛЕЙНИК Евгений Станиславович, TIN 310206521001, DOB 15.11.2000. Listed as \"administrator of the Telegram-channel Archangel of Spetsnaz\" -- matches this record's existing role (tg-arkhangel-spetsnaza, callsign «Внук», s6406) exactly, and the page cites the same iStories article (istories.media, 24.09.2024) already on file as this record's source. Reasons: propaganda, hate speech against Ukrainian military/civilians, organising fundraisers for occupation units including drone purchases. No EU/US/UK/Swiss list checked for this individual -- open."
+          }
+        ],
+        "sanctions_review": {
+          "as_of": "2026-10-04",
+          "outcome": "designated",
+          "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026 by reading the ГУР page directly (browser User-Agent; plain curl 403s). Same Telegram role, same cited source article as this record's existing identification -- genuine match, not a false positive. New identifying detail (DOB, birthplace, personal TIN) added above."
+        },
+        "notes": " DOB and place of birth (15.11.2000, Veydelevsky district, Belgorod region) and personal TIN (310206521001) per the ГУР «Kremlin Mouthpieces» page (s9164, checked 2026-10-04), which cites the same iStories article already on file as this record's source and names the same Telegram-channel role."
+      }
+    },
+    "kiselev-dmitriy-konstantinovich": {
+      "set": {
+        "dob": "1954-04-26",
+        "birthplace": "Moscow, Russia",
+        "inn_personal": "771911447529",
+        "sanctions": [
+          {
+            "date": "2026-10-02",
+            "regime": [
+              "United States (OFAC SDN)"
+            ],
+            "source_id": "s9166",
+            "note": "OFAC SDN List (list current as of 02.10.2026, record id 50691): KISELEV, Dmitry Konstantinovich, a.k.a. KISELYOV; Program RUSSIA-EO14024; DOB 26 Apr 1954; Place of birth Moscow, Russia; Tax ID No. 771911447529; \"Remarks: (Linked To: FEDERAL STATE UNITARY ENTERPRISE INTERNATIONAL INFORMATION AGENCY ROSSIYA SEGODNYA)\" -- matches this record's existing identification as head of МИА «Россия сегодня» (s0561) exactly. This record is logged PEP-context only (father of a family-tie person, no stake of his own in this network); the designation is real but his own entity ties here stay as recorded. EU/UK/French listings referenced by OpenSanctions metadata are not yet read in full -- open."
+          }
+        ],
+        "sanctions_review": {
+          "as_of": "2026-10-04",
+          "outcome": "designated",
+          "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026 by reading the OFAC SDN record directly. \"Linked To: ...ROSSIYA SEGODNYA\" matches this record's existing identification exactly -- unambiguous, not a namesake. Genuine designation; EU/UK/French lists in the match metadata not independently read yet."
+        }
+      }
     }
   },
   "people_add_entities": [
