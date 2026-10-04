@@ -327,6 +327,7 @@ Waiting on the user:
   `short_en`, `echelon`, `branch`, each form with its source.
 - archive.org S3 keys for Wayback (faster, less rate-limited); batches started 02.10.2026 on the anonymous endpoint.
 - Graphic-content default; when to share the chain previews.
+- Review the Гагаринг evidence-packet visual (private Artifact, built 04.10.2026 on the РОЙ.МАРКЕТ Reader System tokens, from `notes/packets/ooo-gagaring.md`): https://claude.ai/artifact/J9u4BinqBuzt1tKDrLPQvS — not shared, nothing checked against it yet. If it holds up, the other six sanctions-gap packets (Гаскар, СТИМС, Смарт Текнолоджис, Киловатт, Экспломет, Метаскан) go out the same way.
 
 ## Current state (queried 2026-10-02, after the merge of PRs #3–#6)
 
