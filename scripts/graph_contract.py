@@ -86,7 +86,18 @@ def source_grade(src: dict | None) -> str:
     if name[:1] in "AА" and name[1:2].isdigit():
         return "doc"                      # arbitration court filings, A40-…
     g = SOURCE_PREFIX_GRADE.get(name.split("_", 1)[0])
-    return g or SOURCE_TYPE_GRADE.get(src.get("type") or "", "rep")
+    if g:
+        return g
+    g = SOURCE_TYPE_GRADE.get(src.get("type") or "")
+    # A source whose prefix and type both miss the table above is one this
+    # table has no documented grade for -- defaulting that to "rep" would
+    # silently overstate it as a party's own word/the press, one of only
+    # three grades a reader sees. "open" is the honest default: cited but
+    # ungraded, not "we checked and it's reported." (Found 05.10.2026 by an
+    # adversarial code review; 86 of 9064 sources.json records hit this path
+    # at the time, mostly internal ARTIFACT_ captures and a few odd-named
+    # pulls with no recognized prefix/type.)
+    return g or "open"
 # Confidence vocabulary carried over verbatim from entities.json's own
 # cbst_tie.confidence field (t-doc/t-open/press are positive-tie values;
 # "none"/"not_established" mean no tie and are never emitted as edges).

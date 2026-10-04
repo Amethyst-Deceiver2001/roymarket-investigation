@@ -21,10 +21,15 @@ fi
 
 echo "pre-commit: registry facts changed -- checking and refreshing the status board"
 
-# check_registry.py always exits 0 -- the error count is in its own
-# summary line, never the process exit code.
-python3 scripts/check_registry.py >/tmp/pre-commit-check_registry.log 2>&1
-if ! grep -q '^0 error(s)' /tmp/pre-commit-check_registry.log; then
+# check_registry.py's own exit code is the error signal (1 if any error,
+# 0 otherwise -- scripts/check_registry.py's main() returns this directly).
+# An earlier version of this hook believed it "always exits 0" and parsed
+# its stdout instead, under `set -e`: that made the diagnostic branch dead
+# code on the exact path it existed for, since `set -e` killed the script
+# at the check_registry.py line before the grep/echo/tail ever ran -- the
+# commit still got blocked (git saw the hook's own nonzero exit), just with
+# no printed reason (found 05.10.2026 by an adversarial code review).
+if ! python3 scripts/check_registry.py >/tmp/pre-commit-check_registry.log 2>&1; then
   echo "pre-commit: check_registry.py reports errors -- commit blocked"
   tail -40 /tmp/pre-commit-check_registry.log
   exit 1

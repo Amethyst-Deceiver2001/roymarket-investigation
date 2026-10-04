@@ -328,6 +328,7 @@ Waiting on the user:
 - archive.org S3 keys for Wayback (faster, less rate-limited); batches started 02.10.2026 on the anonymous endpoint.
 - Graphic-content default; when to share the chain previews.
 - Review the Гагаринг evidence-packet visual (private Artifact, built 04.10.2026 on the РОЙ.МАРКЕТ Reader System tokens, from `notes/packets/ooo-gagaring.md`): https://claude.ai/artifact/J9u4BinqBuzt1tKDrLPQvS — not shared, nothing checked against it yet. If it holds up, the other six sanctions-gap packets (Гаскар, СТИМС, Смарт Текнолоджис, Киловатт, Экспломет, Метаскан) go out the same way.
+- Proposed (05.10.2026, held off per the infrastructure freeze — needs an explicit go-ahead): extend `media_triage.py`'s `process` step to run `id_patterns.py`'s existing role+name regex over each photo's OCR text, flagging a "document"-class image whose OCR contains a capitalized ФИО pattern as priority. Reuses OCR already being captured, no new model. Scoped during the 320-item kb_spektr/gaskargroup/ru3mx/kotlin_novator/bpryarl triage pass, which found two named-person leads (Братеньков's medal, Шингареев's award slide) by manual sheet review that this would have surfaced automatically — but it's new tooling, so it waits for the freeze to lift.
 
 ## Current state (queried 2026-10-02, after the merge of PRs #3–#6)
 
