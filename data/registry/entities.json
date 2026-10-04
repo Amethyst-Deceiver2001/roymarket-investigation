@@ -90315,32 +90315,33 @@
     "financials": [
       {
         "year": "2021",
-        "revenue": 813000.0,
-        "profit": 1000.0,
+        "revenue": 813000,
+        "profit": 1000,
         "source_id": "s9127"
       },
       {
         "year": "2022",
-        "revenue": 875000.0,
-        "profit": 4000.0,
+        "revenue": 875000,
+        "profit": 4000,
         "source_id": "s9128"
       },
       {
         "year": "2023",
-        "revenue": 1750000.0,
-        "profit": 3000.0,
+        "revenue": 1750000,
+        "profit": 3000,
         "source_id": "s9129"
       },
       {
         "year": "2024",
-        "revenue": 3249000.0,
-        "profit": 3000.0,
-        "source_id": "s9130"
+        "revenue": 3249000,
+        "profit": 2000,
+        "source_id": "s9130",
+        "note": "The 2024 filing's own year gives net profit as ₽2 thousand; the 2025 filing's prior-year comparative column gives ₽3 thousand for the same year. Recorded from the filing's own-year figure per the project convention; the ₽1 thousand discrepancy is rounding-scale, not investigated further."
       },
       {
         "year": "2025",
-        "revenue": 349650000.0,
-        "profit": 217975000.0,
+        "revenue": 349650000,
+        "profit": 217975000,
         "source_id": "s9131"
       }
     ],
@@ -90419,6 +90420,7 @@
     "city": "Москва",
     "ecosystem_roles": [],
     "_corrected": null,
+    "_verified_against": null,
     "name_display": "OOO «STIMS»",
     "aleph_matches": [
       {

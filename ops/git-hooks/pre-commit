@@ -1,0 +1,41 @@
+#!/bin/sh
+# Keeps data/watch/status/board.json current with every registry-fact commit,
+# not just the 09:15 daily round, so pending items can be worked and cleared
+# methodically between rounds (user, 04.10.2026).
+#
+# Install once: git config core.hooksPath ops/git-hooks
+#
+# Fires only when a commit touches a fact file (entities/people/products/
+# programs/military_units or either corrections file). Registry-only
+# mechanical commits (sources.json after a pull, graph rebuilds with no
+# fact change) are untouched -- status_board.py is cheap and idempotent,
+# but there is no reason to run it on, say, a notes/-only commit.
+
+set -e
+cd "$(git rev-parse --show-toplevel)"
+
+FACT_FILES='^data/registry/(entities|people|products|programs|military_units|corrections_entities|corrections_people)\.json$'
+if ! git diff --cached --name-only | grep -qE "$FACT_FILES"; then
+  exit 0
+fi
+
+echo "pre-commit: registry facts changed -- checking and refreshing the status board"
+
+# check_registry.py always exits 0 -- the error count is in its own
+# summary line, never the process exit code.
+python3 scripts/check_registry.py >/tmp/pre-commit-check_registry.log 2>&1
+if ! grep -q '^0 error(s)' /tmp/pre-commit-check_registry.log; then
+  echo "pre-commit: check_registry.py reports errors -- commit blocked"
+  tail -40 /tmp/pre-commit-check_registry.log
+  exit 1
+fi
+
+cp data/watch/status/board.json /tmp/pre-commit-board-prev.json 2>/dev/null || true
+if [ -f /tmp/pre-commit-board-prev.json ]; then
+  python3 scripts/status_board.py --diff /tmp/pre-commit-board-prev.json --json data/watch/status/board.json >/tmp/pre-commit-board-diff.log 2>&1
+  tail -20 /tmp/pre-commit-board-diff.log
+else
+  python3 scripts/status_board.py --json data/watch/status/board.json >/tmp/pre-commit-board.log 2>&1
+fi
+git add data/watch/status/board.json
+echo "pre-commit: board.json refreshed and staged"
