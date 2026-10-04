@@ -28,6 +28,8 @@ This Mac session ("main") orchestrates; the others run on schedules and talk thr
 
 Only the main session writes facts into the registry. Something that needs the user goes in a GitHub issue. A registry "not found" is remembered in `data/registry/_pull_misses.json` and not queued again for 30 days.
 
+**Status board stays current between rounds (added 04.10.2026).** `ops/git-hooks/pre-commit` (install once: `git config core.hooksPath ops/git-hooks`) fires on any commit touching a registry fact file (`entities`/`people`/`products`/`programs`/`military_units`.json or either `corrections_*.json`): it runs `check_registry.py` and blocks the commit on a nonzero error count, then regenerates `data/watch/status/board.json` and stages it. This is why an ad-hoc correction applied outside the 09:15 round — a first-reading application, a manual pull processed by hand — still shows up on the board immediately, so pending items can be worked through methodically rather than only once a day.
+
 ## This repo has its own Telegram scraping pipeline — separate from wb_watch
 
 **Correction (2026-08-18, same day as migration):** the original design had

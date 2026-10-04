@@ -285,6 +285,7 @@ a registry fact.
 | Public copies of cited pages | `archive_sources.py run` | GitHub Actions `wayback.yml`, nightly (03.10.2026); Telegram via per-channel lookup and preview pages |
 | Timestamped fingerprints of every source file | `timestamp_sources.py build && … stamp` | the Mac, after new sources; first run 03.10.2026 (8,935 files, FreeTSA + DigiCert; 121 files differ from their catalogued hash, listed) |
 | Tests, registry check, tag balance | `.github/workflows/checks.yml` | every push to main and every PR |
+| Status board kept current between rounds | `ops/git-hooks/pre-commit` (`git config core.hooksPath ops/git-hooks`) | the main session's local commits, any that touch a fact file |
 
 Still by hand (no tool selects per record):
 
