@@ -89,6 +89,20 @@ def main():
     hits = mt.registry_matcher()
     assert any("булат" in x for x in hits("Бойцам передали комплексы «Булат»")), "positive control: a registry product"
     assert hits("") == []
+
+    # a same-size, different-content re-download (a retried pull landing a corrupted/different
+    # payload of coincidentally equal length) must still count as changed, not be skipped forever
+    # on a size-only check
+    with tempfile.TemporaryDirectory() as d:
+        d = Path(d)
+        f = d / "same-size.bin"
+        f.write_bytes(b"\x01" * 100)
+        prior = {"size": 100, "sha256": mt.sha256(f)}
+        assert mt._changed_since_processed(f, prior) is False, "identical bytes: not changed"
+        f.write_bytes(b"\x02" * 100)  # same size, different content
+        assert mt._changed_since_processed(f, prior) is True, "same size but different bytes must still re-process"
+        assert mt._changed_since_processed(f, {}) is True, "never-seen file is changed"
+
     print("test_media_triage: ok")
 
 

@@ -343,10 +343,23 @@ def transcribe(video: Path) -> str:
     return (model.transcribe(str(video), language="ru", fp16=False) or {}).get("text", "").strip()
 
 
+def _changed_since_processed(p: Path, prior: dict) -> bool:
+    """Same path, same byte-size but different content (a retried download
+    that landed a different payload of coincidentally equal length) must
+    still count as changed -- a size-only check would keep the prior run's
+    stale sha256/dhash/OCR text forever. Size is checked first because it's
+    free; the sha256 (cheap, unlike the OCR/ffmpeg this gates) only runs
+    when size alone can't tell them apart. (Found 05.10.2026 by an
+    adversarial code review.)"""
+    if prior.get("size") != p.stat().st_size:
+        return True
+    return prior.get("sha256") != sha256(p)
+
+
 def cmd_process(args) -> None:
     files = sorted(p for p in FILES.glob("*") if p.suffix.lower() in IMAGE_EXT | VIDEO_EXT) if FILES.exists() else []
     done = load_json(PROCESSED, {})
-    todo = [p for p in files if done.get(p.name, {}).get("size") != p.stat().st_size]
+    todo = [p for p in files if _changed_since_processed(p, done.get(p.name, {}))]
     print(f"{len(files)} files in the working folder, {len(todo)} new or changed"
           + (" (OCR takes about a second a picture)" if todo else ""))
     reg_hits = registry_matcher() if todo else None
