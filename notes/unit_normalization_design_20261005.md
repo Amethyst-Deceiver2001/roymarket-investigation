@@ -25,6 +25,10 @@ A unit is identified by **number + type + parent formation**, none of them alone
 - `vch` (в/ч number) is a name form with its own source. A в/ч is `stated` only where a sanctions entry, court or procurement record, or an official site pairs it with the unit; a lookup or encyclopedia is `lead`.
 - Each form has its own grade, so an official name can be `stated` while the в/ч is `lead` on the same record.
 
+## Internal reference aid (user, 05.10.2026: "only for internal reference")
+
+A crowd-compiled workbook of unit hierarchy and tactical markings (ОЗ) sits outside the repo (`~/Downloads/ОЗ ВС РФ.xlsx`). It is a finder, not a source: it tells us what an abbreviation means, which parent to look for and where a marking might be, so the real evidence can be hunted. It is never catalogued, never gets a source id, never appears in a record's citation, and is not copied into `data/sources/`. A unit fact graded `stated` still needs a document that states it; a marking matched against the workbook is a pointer for a person to follow, not corroboration, unless the same marking-to-unit link is documented in a source we can cite.
+
 ## Lookup (local, no network, no LLM; model: `registry_lookup.py`)
 
 `unit_lookup.py "237-му гвардейскому десантно-штурмовому полку"`:
