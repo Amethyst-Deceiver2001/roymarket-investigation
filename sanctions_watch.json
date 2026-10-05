@@ -1,11 +1,11 @@
 {
- "as_of": "2026-10-02",
+ "as_of": "2026-10-05",
  "lists": {
   "us": {
    "url": "https://www.treasury.gov/ofac/downloads/sdn.xml",
    "sha256": "0367408834e4af4d262ccc7e329e300b1a5b1430e1e4bcc4debbdd5b927b4cad",
    "bytes": 29240384,
-   "fetched": "2026-10-02T21:20:40+00:00",
+   "fetched": "2026-10-05T11:52:14+00:00",
    "entries": 19488,
    "with_ru_id": 3971,
    "entry_tag": "sdnEntry",
@@ -15,7 +15,7 @@
    "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/xmlFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
    "sha256": "cd59eccb0278d33181c1d87814236109287c9ea5925502f00acfd2e0fd7fe440",
    "bytes": 25791425,
-   "fetched": "2026-10-02T21:20:40+00:00",
+   "fetched": "2026-10-05T11:52:14+00:00",
    "entries": 6241,
    "with_ru_id": 1065,
    "entry_tag": "sanctionEntity",
@@ -25,7 +25,7 @@
    "url": "https://www.sesam.search.admin.ch/sesam-search-web/pages/downloadXmlGesamtliste.xhtml?lang=en&action=downloadXmlGesamtlisteAction",
    "sha256": "5f1315863aedf05c35c926ba32a5ff926a7466013cf769a4cd7807b47997e361",
    "bytes": 42306292,
-   "fetched": "2026-10-02T21:20:40+00:00",
+   "fetched": "2026-10-05T11:52:14+00:00",
    "entries": 17313,
    "with_ru_id": 1819,
    "entry_tag": "target",
@@ -35,7 +35,7 @@
    "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.xml",
    "sha256": "8e23b2d050ea2cc07319a19a7e71060f71ab560c979646c43f6efcec9e03250b",
    "bytes": 21899314,
-   "fetched": "2026-10-02T21:20:40+00:00",
+   "fetched": "2026-10-05T11:52:14+00:00",
    "entries": 6370,
    "with_ru_id": 504,
    "entry_tag": "Designation",
@@ -827,6 +827,30 @@
   },
   {
    "list": "us",
+   "entry_id": "50691",
+   "identifier": "771911447529",
+   "field": "inn_personal",
+   "slug": "kiselev-dmitriy-konstantinovich",
+   "kind": "person",
+   "registry_name": "Киселёв Дмитрий Константинович",
+   "list_names": [
+    "Dmitry Konstantinovich",
+    "KISELEV",
+    "KISELYOV"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [
+    "dateOfBirth=26 Apr 1954"
+   ],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
    "entry_id": "50741",
    "identifier": "7733393203",
    "field": "inn",
@@ -1427,6 +1451,38 @@
     "designationDate=2025-02-24",
     "entryIntoForceDate=2025-02-24",
     "issueDate=2023-07-21",
+    "publicationDate=2025-02-24"
+   ],
+   "refs": [
+    "2025/389 (OJ L24022025)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202500389"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.12764.77",
+   "identifier": "773514103490",
+   "field": "inn_personal",
+   "slug": "atlivanchik-sergey-nikolaevich",
+   "kind": "person",
+   "registry_name": "Атливанчик Сергей Николаевич",
+   "list_names": [
+    "Sergey Nikolaevich ATLIVANCHIK",
+    "Сергей Николаевич АТЛИВАНЧИК"
+   ],
+   "programs": [
+    "2025/389 (OJ L24022025)",
+    "UKR"
+   ],
+   "dates": [
+    "birthdate=1980-01-11",
+    "designationDate=2025-02-24",
+    "entryIntoForceDate=2025-02-24",
     "publicationDate=2025-02-24"
    ],
    "refs": [
@@ -2538,6 +2594,78 @@
   },
   {
    "list": "eu",
+   "entry_id": "EU.14160.3",
+   "identifier": "1207700279797",
+   "field": "ogrn",
+   "slug": "ooo-stims",
+   "kind": "entity",
+   "registry_name": "ООО «СТИМС»",
+   "list_names": [
+    "Gaskar Group of Companies",
+    "LLC Gaskar Group of the Skolkovo Innovation Center",
+    "LLC “Gaskar Group”",
+    "Limited Liability Company “Gaskar Group”",
+    "OOO “Гаскар Групп”",
+    "ГК «ГАСКАР»"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "issueDate=2020-08-07",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14160.3",
+   "identifier": "7734436058",
+   "field": "inn",
+   "slug": "ooo-stims",
+   "kind": "entity",
+   "registry_name": "ООО «СТИМС»",
+   "list_names": [
+    "Gaskar Group of Companies",
+    "LLC Gaskar Group of the Skolkovo Innovation Center",
+    "LLC “Gaskar Group”",
+    "Limited Liability Company “Gaskar Group”",
+    "OOO “Гаскар Групп”",
+    "ГК «ГАСКАР»"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "issueDate=2020-08-07",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509"
+   ]
+  },
+  {
+   "list": "eu",
    "entry_id": "EU.14563.36",
    "identifier": "1125263004162",
    "field": "ogrn",
@@ -3343,6 +3471,30 @@
   },
   {
    "list": "ch",
+   "entry_id": "88614",
+   "identifier": "773514103490",
+   "field": "inn_personal",
+   "slug": "atlivanchik-sergey-nikolaevich",
+   "kind": "person",
+   "registry_name": "Атливанчик Сергей Николаевич",
+   "list_names": [
+    "Atlivanchik",
+    "Nikolaevich",
+    "Sergey"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2025-03-04",
+    "enactment-date=2025-03-03",
+    "publication-date=2025-03-04"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
    "entry_id": "89489",
    "identifier": "1026701461160",
    "field": "ogrn",
@@ -3955,6 +4107,56 @@
     "Mikhailovna",
     "Olga",
     "Sokolova"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "104739",
+   "identifier": "1207700279797",
+   "field": "ogrn",
+   "slug": "ooo-stims",
+   "kind": "entity",
+   "registry_name": "ООО «СТИМС»",
+   "list_names": [
+    "Gaskar Group of Companies",
+    "LLC Gaskar Group of the Skolkovo Innovation Center",
+    "LLC “Gaskar Group”",
+    "Limited Liability Company “Gaskar Group”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "104739",
+   "identifier": "7734436058",
+   "field": "inn",
+   "slug": "ooo-stims",
+   "kind": "entity",
+   "registry_name": "ООО «СТИМС»",
+   "list_names": [
+    "Gaskar Group of Companies",
+    "LLC Gaskar Group of the Skolkovo Innovation Center",
+    "LLC “Gaskar Group”",
+    "Limited Liability Company “Gaskar Group”"
    ],
    "programs": [
     "27286"
@@ -4587,100 +4789,151 @@
   }
  ],
  "diff": {
-  "new": [],
-  "removed": [],
-  "listed_not_in_registry": [
+  "new": [
    {
-    "slug": "alyaska",
     "list": "ch",
-    "name": "ООО «ИОНОС»"
+    "entry_id": "88614",
+    "identifier": "773514103490",
+    "field": "inn_personal",
+    "slug": "atlivanchik-sergey-nikolaevich",
+    "kind": "person",
+    "registry_name": "Атливанчик Сергей Николаевич",
+    "list_names": [
+     "Atlivanchik",
+     "Nikolaevich",
+     "Sergey"
+    ],
+    "programs": [
+     "27286"
+    ],
+    "dates": [
+     "effective-date=2025-03-04",
+     "enactment-date=2025-03-03",
+     "publication-date=2025-03-04"
+    ],
+    "refs": [],
+    "urls": []
    },
    {
-    "slug": "andrey-turchak",
+    "list": "ch",
+    "entry_id": "104739",
+    "identifier": "7734436058",
+    "field": "inn",
+    "slug": "ooo-stims",
+    "kind": "entity",
+    "registry_name": "ООО «СТИМС»",
+    "list_names": [
+     "Gaskar Group of Companies",
+     "LLC Gaskar Group of the Skolkovo Innovation Center",
+     "LLC “Gaskar Group”",
+     "Limited Liability Company “Gaskar Group”"
+    ],
+    "programs": [
+     "27286"
+    ],
+    "dates": [
+     "effective-date=2026-05-22",
+     "enactment-date=2026-05-21",
+     "publication-date=2026-05-22"
+    ],
+    "refs": [],
+    "urls": []
+   },
+   {
+    "list": "eu",
+    "entry_id": "EU.12764.77",
+    "identifier": "773514103490",
+    "field": "inn_personal",
+    "slug": "atlivanchik-sergey-nikolaevich",
+    "kind": "person",
+    "registry_name": "Атливанчик Сергей Николаевич",
+    "list_names": [
+     "Sergey Nikolaevich ATLIVANCHIK",
+     "Сергей Николаевич АТЛИВАНЧИК"
+    ],
+    "programs": [
+     "2025/389 (OJ L24022025)",
+     "UKR"
+    ],
+    "dates": [
+     "birthdate=1980-01-11",
+     "designationDate=2025-02-24",
+     "entryIntoForceDate=2025-02-24",
+     "publicationDate=2025-02-24"
+    ],
+    "refs": [
+     "2025/389 (OJ L24022025)",
+     "UKR",
+     "amendment",
+     "en"
+    ],
+    "urls": [
+     "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202500389"
+    ]
+   },
+   {
+    "list": "eu",
+    "entry_id": "EU.14160.3",
+    "identifier": "7734436058",
+    "field": "inn",
+    "slug": "ooo-stims",
+    "kind": "entity",
+    "registry_name": "ООО «СТИМС»",
+    "list_names": [
+     "Gaskar Group of Companies",
+     "LLC Gaskar Group of the Skolkovo Innovation Center",
+     "LLC “Gaskar Group”",
+     "Limited Liability Company “Gaskar Group”",
+     "OOO “Гаскар Групп”",
+     "ГК «ГАСКАР»"
+    ],
+    "programs": [
+     "2026/509 (OJ L202600509)",
+     "UKR"
+    ],
+    "dates": [
+     "designationDate=2026-04-23",
+     "entryIntoForceDate=2026-04-23",
+     "issueDate=2020-08-07",
+     "publicationDate=2026-04-23"
+    ],
+    "refs": [
+     "2026/509 (OJ L202600509)",
+     "UKR",
+     "amendment",
+     "en"
+    ],
+    "urls": [
+     "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509"
+    ]
+   },
+   {
     "list": "us",
-    "name": "Андрей Турчак"
-   },
-   {
-    "slug": "antsev-georgiy-vladimirovich",
-    "list": "ch",
-    "name": "Анцев Георгий Владимирович"
-   },
-   {
-    "slug": "antsev-georgiy-vladimirovich",
-    "list": "eu",
-    "name": "Анцев Георгий Владимирович"
-   },
-   {
-    "slug": "chernyshov-pavel-alekseevich",
-    "list": "eu",
-    "name": "Чернышов Павел Алексеевич"
-   },
-   {
-    "slug": "kosolapov-oleg-yurevich",
-    "list": "ch",
-    "name": "Косолапов Олег Юрьевич"
-   },
-   {
-    "slug": "kosolapov-oleg-yurevich",
-    "list": "eu",
-    "name": "Косолапов Олег Юрьевич"
-   },
-   {
-    "slug": "npo-kaysant",
-    "list": "us",
-    "name": "НПО «КАЙСАНТ»"
-   },
-   {
-    "slug": "olga-sokolova",
-    "list": "ch",
-    "name": "Ольга Соколова"
-   },
-   {
-    "slug": "olga-sokolova",
-    "list": "eu",
-    "name": "Ольга Соколова"
-   },
-   {
-    "slug": "ooo-eliars",
-    "list": "ch",
-    "name": "ООО «Элиарс»"
-   },
-   {
-    "slug": "ooo-eliars",
-    "list": "eu",
-    "name": "ООО «Элиарс»"
-   },
-   {
-    "slug": "ooo-eliars",
-    "list": "us",
-    "name": "ООО «Элиарс»"
-   },
-   {
-    "slug": "ooo-radiofid-sistemy",
-    "list": "ch",
-    "name": "ООО «Радиофид Системы»"
-   },
-   {
-    "slug": "ooo-tskbr",
-    "list": "ch",
-    "name": "ООО «ЦКБР»"
-   },
-   {
-    "slug": "ooo-tskbr",
-    "list": "eu",
-    "name": "ООО «ЦКБР»"
-   },
-   {
-    "slug": "ooo-tskbr",
-    "list": "us",
-    "name": "ООО «ЦКБР»"
-   },
-   {
-    "slug": "uraldronzavod",
-    "list": "us",
-    "name": "ООО «Уралдронзавод»"
+    "entry_id": "50691",
+    "identifier": "771911447529",
+    "field": "inn_personal",
+    "slug": "kiselev-dmitriy-konstantinovich",
+    "kind": "person",
+    "registry_name": "Киселёв Дмитрий Константинович",
+    "list_names": [
+     "Dmitry Konstantinovich",
+     "KISELEV",
+     "KISELYOV"
+    ],
+    "programs": [
+     "RUSSIA-EO14024"
+    ],
+    "dates": [
+     "dateOfBirth=26 Apr 1954"
+    ],
+    "refs": [
+     "RUSSIA-EO14024"
+    ],
+    "urls": []
    }
   ],
+  "removed": [],
+  "listed_not_in_registry": [],
   "registry_claims_not_matched": [
    {
     "slug": "alyaska",
@@ -4726,6 +4979,16 @@
     "slug": "pao-bank-psb",
     "list": "uk",
     "name": "ПАО «Банк ПСБ»"
+   },
+   {
+    "slug": "uraldronzavod",
+    "list": "ch",
+    "name": "ООО «Уралдронзавод»"
+   },
+   {
+    "slug": "uraldronzavod",
+    "list": "eu",
+    "name": "ООО «Уралдронзавод»"
    }
   ]
  }
