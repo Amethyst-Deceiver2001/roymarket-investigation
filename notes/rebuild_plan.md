@@ -359,13 +359,19 @@ and `notes/SOURCE_REGISTER.md`; `notes/unverified_people_gap.md`,
 - **Pages (`docs/`, public on push):** the generated landing page and `images/`. The graph
   explorer was retired in its current form on 02.10.2026 (user) and archived; B6 builds its replacement. The seven case pages, profiles and `story.html`
   are archived (track A). Pushing `docs/` needs the user's go-ahead.
-- **Artifacts (private unless shared):** Ecosystem Model (working model),
-  «Булат» and «Капюшон» chain views (previews), landing preview, Investigation
-  Status Board (internal, slugs on purpose), Network Graph, Evidence Ledger and Product Icon Set
-  (their only links were on the archived pages), Multi-Role
-  Individuals (stale; `build_affiliation_matrix.py`), Архангел: Claimed
-  Components (kept until its stills are confirmed archived locally). Deleting
-  one needs the user's confirmation.
+- **Artifacts (private unless shared), reviewed 05.10.2026:** «Булат» and
+  «Капюшон» chain views (previews, frozen until the thesis is chosen), landing
+  preview (retire with the chain previews), Investigation Status Board
+  (internal, slugs on purpose; no longer refreshed automatically since the
+  cloud routine was deleted, republish by hand), Reader System (design tokens),
+  Гагаринг evidence-packet visual (awaiting the user's review), Архангел:
+  Claimed Components (kept until its stills are confirmed archived locally).
+  Deleted 05.10.2026 at the user's go-ahead: Ecosystem Model (local copy
+  `data/sources/ARTIFACT_20261002_ecosystem-model-v6.html`), Network Graph,
+  Evidence Ledger, Product Icon Set, Multi-Role Individuals (local sources in
+  `exhibits/`). The ecosystem model itself (`sells_for`, listings,
+  `platform_partners`) stays in the registry, frozen: extend it only if a chain
+  view needs the item. Deleting an artifact needs the user's confirmation.
 - **Internal only:** `notes/dossier_draft.html` (the old brief, never linked)
   and its snapshot `notes/archive/brief_snapshot_2026-08-21.html`.
 
