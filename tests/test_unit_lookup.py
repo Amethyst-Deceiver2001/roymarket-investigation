@@ -88,6 +88,32 @@ def main():
     for needle in ("number must be", "arm 'spaceship'", ".form 'nickname'", "value is required", "stated but has no source_id",
                    "not a unit slug", "must say in note"):
         assert any(needle in m for m in msgs), (needle, msgs)
+    # English label: generated from number, guards, arm and type; never a translation of honorifics.
+    assert un.name_en(TANK) == "237th Tank Regiment", un.name_en(TANK)
+    assert un.name_en(AIR) == "237th Guards Air Assault Regiment", un.name_en(AIR)
+    assert un.name_en(DIV) == "76th Guards Air Assault Division", un.name_en(DIV)
+    assert [un.ordinal_en(n) for n in (1, 2, 3, 4, 11, 12, 13, 21, 22, 102, 111)] == \
+        ["1st", "2nd", "3rd", "4th", "11th", "12th", "13th", "21st", "22nd", "102nd", "111th"]
+    assert un.name_en({"name_ru": "дивизион народного ополчения", "unit_type": "detachment"}) is None
+    assert un.name_en({"name_ru": "114-я ОМСБР", "unit_type": "brigade"}) == "114th Motor Rifle Brigade"
+    assert un.name_en({"name_ru": "91-я бригада управления", "unit_type": "brigade", "arm": "command"}) == "91st Command Brigade"
+
+    # The public card shows only stated items; internal pages also show leads, each with its grade.
+    by = {u["slug"]: u for u in UNITS}
+    pub = un.display_unit(TANK, by, public=True)
+    assert pub["head"] == "237th Tank Regiment" and pub["vch"] == [] and pub["short"] == []
+    assert [x["grade"] for x in pub["parents"]] == ["stated"], pub
+    inner = un.display_unit(TANK, by, public=False)
+    assert inner["vch"] == [{"value": "в/ч 91726", "grade": "lead"}], inner
+    assert un.display_unit(AIR, by, public=True)["parents"] == [], "a lead parent is not shown publicly"
+    assert un.display_unit(AIR, by, public=False)["parents"][0]["text"] == DIV["name_ru"]
+    assert un.display_unit(AIR, by, public=True)["ru"] == "237 гвардейский десантно-штурмовой Торуньский полк"
+
+    # A record with only the older free-text parent still narrows a lookup.
+    old = {"slug": "345", "name_ru": "345-й полк 104-й дивизии", "unit_type": "regiment", "parent_grouping": "104-я дивизия"}
+    other = {"slug": "345b", "name_ru": "345-й полк", "unit_type": "regiment", "parent_grouping": "7-я дивизия"}
+    r = ul.lookup("345-й полк 104-й дивизии", [old, other])
+    assert (r["state"], r["candidates"]) == ("resolved", ["345"]), r
     print("ok: unit_names / unit_lookup fixtures pass")
 
 

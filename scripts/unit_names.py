@@ -10,7 +10,7 @@ from __future__ import annotations
 import re
 
 KINDS = {"army", "division", "brigade", "regiment", "battalion", "detachment"}
-ARMS = {"tank", "air_assault", "airborne", "motor_rifle", "artillery", "recon", "spetsnaz", "marine", "engineer", "signals"}
+ARMS = {"tank", "air_assault", "airborne", "motor_rifle", "artillery", "recon", "spetsnaz", "marine", "engineer", "command"}
 # Airborne is the branch, air assault a type inside it: a post may use either for one formation.
 ARM_COMPATIBLE = {frozenset({"airborne", "air_assault"})}
 NAME_FORMS = {"official", "short", "informal", "post_wording", "vch"}
@@ -21,8 +21,8 @@ _KIND_STEMS = (("дивизион", "battalion"), ("дивизи", "division"), 
                ("батальон", "battalion"), ("разведотряд", "detachment"), ("отряд", "detachment"), ("арми", "army"))
 _ARM_STEMS = (("десантно-штурмов", "air_assault"), ("воздушно-десантн", "airborne"), ("танков", "tank"),
               ("мотострелков", "motor_rifle"), ("артиллерийск", "artillery"), ("разведыват", "recon"),
-              ("специального назначения", "spetsnaz"), ("морской пехоты", "marine"), ("инженерно", "engineer"),
-              ("управления", "signals"))
+              ("специального назначения", "spetsnaz"), ("спецназ", "spetsnaz"), ("морской пехоты", "marine"),
+              ("инженерно", "engineer"), ("разведк", "recon"), ("управления", "command"))
 # abbreviation -> (kind, arm); an army or branch abbreviation carries only one of them.
 _ABBR = {"тп": ("regiment", "tank"), "дшп": ("regiment", "air_assault"), "мсп": ("regiment", "motor_rifle"),
          "мсд": ("division", "motor_rifle"), "дшд": ("division", "air_assault"), "тд": ("division", "tank"),
@@ -42,6 +42,8 @@ def _word(tok: str) -> tuple[str | None, str | None]:
     """(kind, arm) a single token names, or (None, None)."""
     if tok in _ABBR:
         return _ABBR[tok]
+    if tok.startswith("разведотряд"):
+        return "detachment", "recon"
     kind = next((k for stem, k in _KIND_STEMS if tok.startswith(stem)), None)
     arm = next((a for stem, a in _ARM_STEMS if tok.startswith(stem)), None)
     return kind, arm
@@ -120,8 +122,13 @@ def forms(unit: dict) -> list[dict]:
 
 
 def parents_of(unit: dict, by_slug: dict) -> list[dict]:
-    """Parsed parents the record states or leads to (a parent_unit slug is resolved to its own form)."""
+    """Parsed parents the record states or leads to (a parent_unit slug is resolved to its own form).
+
+    A record with no parent_history falls back to the older free-text parent_grouping."""
     out = []
+    if not unit.get("parent_history") and unit.get("parent_grouping"):
+        p = parse(unit["parent_grouping"])
+        return [p] if p["number"] is not None else []
     for h in unit.get("parent_history") or []:
         text = h.get("parent_text")
         if h.get("parent_unit") in by_slug:
@@ -168,3 +175,52 @@ def validate_unit(u: dict, slugs: set) -> list[str]:
         if h.get("status") in ("lead", "open") and not (h.get("note") or "").strip():
             errs.append(f"{w} is a {h.get('status')} and must say in note where the lead came from")
     return errs
+
+
+_ARM_EN = {"tank": "Tank", "air_assault": "Air Assault", "airborne": "Airborne", "motor_rifle": "Motor Rifle",
+           "artillery": "Artillery", "recon": "Reconnaissance", "spetsnaz": "Spetsnaz", "marine": "Naval Infantry",
+           "engineer": "Engineer", "command": "Command"}
+_KIND_EN = {"army": "Army", "division": "Division", "brigade": "Brigade", "regiment": "Regiment",
+            "battalion": "Battalion", "detachment": "Detachment"}
+
+
+def ordinal_en(n: int) -> str:
+    suffix = "th" if 10 <= n % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
+    return f"{n}{suffix}"
+
+
+def is_guards(unit: dict) -> bool:
+    """Guards status as a stated name form gives it (an official or post wording says «гвардейск»)."""
+    return any("гвардейск" in fold(n.get("value")) for n in unit.get("names") or []
+               if n.get("grade") == "stated") or "гвардейск" in fold(unit.get("name_ru"))
+
+
+def name_en(unit: dict) -> str | None:
+    """A generated descriptive English label from number, type, arm and guards: «237th Guards Air Assault Regiment».
+
+    It is not an official English name and never translates honorifics; numberless units return None."""
+    n = unit.get("number")
+    if n is None:
+        n = parse(unit.get("name_ru") or "")["number"]
+    p = parse(unit.get("name_ru") or "")
+    kind = unit.get("unit_type") if unit.get("unit_type") in _KIND_EN else p["kind"]
+    if n is None or kind not in _KIND_EN:
+        return None
+    arm = unit.get("arm") or p["arm"]
+    parts = [ordinal_en(n)] + (["Guards"] if is_guards(unit) else []) + ([_ARM_EN[arm]] if arm in _ARM_EN else []) + [_KIND_EN[kind]]
+    return " ".join(parts)
+
+
+def display_unit(unit: dict, by_slug: dict, public: bool = False) -> dict:
+    """What a unit card shows: English label, best Russian name, and parent and в/ч each with its grade.
+
+    The public card shows only `stated` items; leads appear on internal pages only."""
+    names = unit.get("names") or []
+    ru = next((n["value"] for f in ("official", "post_wording") for n in names
+               if n.get("form") == f and n.get("grade") == "stated"), unit.get("name_ru"))
+    keep = lambda g: g == "stated" or not public
+    parents = [{"text": h.get("parent_text") or (by_slug.get(h.get("parent_unit")) or {}).get("name_ru"),
+                "grade": h.get("status")} for h in unit.get("parent_history") or [] if keep(h.get("status"))]
+    vch = [{"value": n["value"], "grade": n.get("grade")} for n in names if n.get("form") == "vch" and keep(n.get("grade"))]
+    short = [n["value"] for n in names if n.get("form") == "short" and keep(n.get("grade"))]
+    return {"head": name_en(unit) or ru, "ru": ru, "short": short, "parents": parents, "vch": vch}

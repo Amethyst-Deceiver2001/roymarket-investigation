@@ -6,7 +6,17 @@ What exists: `scripts/unit_names.py` (parser and field validation), `scripts/uni
 
 Departure from the design below: the record id stays the existing `slug`, not an opaque `u####`. The graph (`unit::<slug>`), media `about`, `battlefield_evidence.unit_slug` and handovers all key on it, and a slug never changes once set; `legacy_slugs[]` keeps the merged ones. Number, type and arm are read from the name forms at lookup time for the older records, so only new or merged records carry `number`, `arm`, `names[]` and `parent_history[]`.
 
-Not done: the other 24 older records are untouched (several are unnumbered groupings); handover h0040 («91-й бригады управления») has no unit record; no English form; no unit page.
+Done later the same day (05.10.2026): the 24 older records now carry explicit `number` and `arm` (read from their own names) and, for the 15 whose posts were archived (s9209-s9229), each post's own wording as a stated name form, checked verbatim against the post text; parents are `stated` only where a post says so (seven records). `91-я-бригада-управления` added for h0040. English label and card rules below.
+
+Correction found while doing it: the volunteer detachment «Валькирия» was recorded with the 4-я гвардейская военная база as its parent. Post 486 lists «добровольческому отряду «Валькирия», бойцам 10-го разведотряда 4-й гвардейской военной базы», which reads as two recipients or as one detachment of that base; the text does not say. The parent is now a `lead` with that caveat and `parent_grouping` is empty.
+
+Not done: five records sourced only to media items (337-й гв. полк, 9-й полк группировки «Центр», «Яким», the народное ополчение дивизион, the Васильевский подразделение) have no archived post and carry no name forms; the unnumbered units keep their hand-set slugs.
+
+## English label and card (built 05.10.2026; the user confirms or changes the convention)
+
+- `name_en(unit)` is a generated descriptive label, not an official English name and not a translation: ordinal + «Guards» (only where a stated name form says гвардейск) + arm + type, e.g. «237th Tank Regiment», «237th Guards Air Assault Regiment», «76th Guards Air Assault Division», «91st Command Brigade». Honorifics (Торуньский) stay in the Russian line. A unit with no number or no type has no label and the card leads with its Russian name.
+- A card shows: the label as its head; beneath it the best stated Russian name (official, else the post's own wording); then parent formation, в/ч and short forms each with its grade. **The public card shows only `stated` items; `lead` items appear on internal pages only**, so a в/ч from an encyclopedia or a parent from a user statement never reaches a reader. `display_unit(unit, by_slug, public)` returns exactly that; no page uses it yet (reader pages are not built).
+- The APP-6 glyph from echelon and branch stays a later decision with the unit page.
 
 ## Why
 
@@ -59,5 +69,4 @@ A `--check` mode warns when two records share number + type with different or un
 
 ## Open decisions for the user
 
-- English form and what the card shows (existing item in the plan).
 - Whether a division is a `unit_type` or only a parent.
