@@ -252,7 +252,7 @@
           "legal_form": "АНО",
           "variant": null,
           "product_count": 0,
-          "degree": 98
+          "degree": 99
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -1385,6 +1385,12 @@
           "degree": 1
         },
         {
+          "id": "customer::правительство-хабаровского-края",
+          "kind": "government_customer",
+          "label": "ПРАВИТЕЛЬСТВО  ХАБАРОВСКОГО КРАЯ",
+          "degree": 1
+        },
+        {
           "id": "customer::росморпорт",
           "kind": "government_customer",
           "label": "ФГУП «Росморпорт»",
@@ -2347,6 +2353,14 @@
           "name_latin": "Ivanov Evgeniy Andreevich",
           "sanctioned": false,
           "degree": 1
+        },
+        {
+          "id": "ivlev-artem-yurevich",
+          "kind": "person",
+          "label": "Ивлев Артём Юрьевич",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 3
         },
         {
           "id": "izmaylov-dmitriy-andreevich",
@@ -11194,6 +11208,71 @@
           "degree": 1
         },
         {
+          "id": "product::yarl::антидроновое-одеяло-ярл",
+          "kind": "product",
+          "label": "Антидроновое одеяло «ЯРЛ»",
+          "owner_slug": "yarl",
+          "source_id": "s9185",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::yarl::бронежилет-для-саперов-колонтарь",
+          "kind": "product",
+          "label": "Бронежилет для сапёров «Колонтарь»",
+          "owner_slug": "yarl",
+          "source_id": "s9186",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::yarl::бронежилет-для-собак-псы-войны",
+          "kind": "product",
+          "label": "Бронежилет для собак «Псы войны»",
+          "owner_slug": "yarl",
+          "source_id": "s5391",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::yarl::противоосколочная-рубашка",
+          "kind": "product",
+          "label": "Противоосколочная рубашка",
+          "owner_slug": "yarl",
+          "source_id": "s9184",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::yarl::противоосколочный-плащ-пончо",
+          "kind": "product",
+          "label": "Противоосколочный плащ «Пончо»",
+          "owner_slug": "yarl",
+          "source_id": "s9188",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "proekt-kb-arkhangel",
           "kind": "entity",
           "label": "Проект КБ «Архангел»",
@@ -12768,6 +12847,19 @@
           "name_latin": "Yantsevich Mikhail Vladimirovich",
           "sanctioned": false,
           "degree": 2
+        },
+        {
+          "id": "yarl",
+          "kind": "entity",
+          "label": "ООО «БПР ЯРЛ»",
+          "name_latin": null,
+          "inn": "9721200789",
+          "tier": "manufacturer",
+          "sanctioned": false,
+          "legal_form": null,
+          "variant": "defensive",
+          "product_count": 6,
+          "degree": 11
         },
         {
           "id": "yatsenko-viktor-vyacheslavovich",
@@ -19620,6 +19712,19 @@
           "grade": "doc"
         },
         {
+          "source": "customer::правительство-хабаровского-края",
+          "target": "yarl",
+          "type": "procures",
+          "label": "432/24.ЕД.Т",
+          "source_id": "s3392",
+          "as_of": "2024-12-10",
+          "weight": 782340.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
           "source": "customer::росморпорт",
           "target": "ao-pmts-avangard",
           "type": "procures",
@@ -23197,6 +23302,45 @@
           "confidence": null,
           "detail": null,
           "grade": "rep"
+        },
+        {
+          "source": "ivlev-artem-yurevich",
+          "target": "yarl",
+          "type": "directs",
+          "label": null,
+          "source_id": "s6767",
+          "as_of": "2025-04-30",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "ivlev-artem-yurevich",
+          "target": "yarl",
+          "type": "directs",
+          "label": null,
+          "source_id": "s0471",
+          "as_of": "2025-08-06",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "ivlev-artem-yurevich",
+          "target": "yarl",
+          "type": "founded",
+          "label": null,
+          "source_id": "s0471",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
         },
         {
           "source": "izmaylov-dmitriy-andreevich",
@@ -40382,6 +40526,84 @@
           "grade": "doc"
         },
         {
+          "source": "yarl",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "ЯРЛ's own words (bpryarl post 603, 24.02.2025, read in full): 'Совместно с Центром беспилотных систем и технологий мы...",
+          "source_id": "s9186",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc",
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "yarl",
+          "target": "product::yarl::антидроновое-одеяло-ярл",
+          "type": "produces",
+          "label": null,
+          "source_id": "s9185",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "rep"
+        },
+        {
+          "source": "yarl",
+          "target": "product::yarl::бронежилет-для-саперов-колонтарь",
+          "type": "produces",
+          "label": null,
+          "source_id": "s9186",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "rep"
+        },
+        {
+          "source": "yarl",
+          "target": "product::yarl::бронежилет-для-собак-псы-войны",
+          "type": "produces",
+          "label": null,
+          "source_id": "s5391",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "yarl",
+          "target": "product::yarl::противоосколочная-рубашка",
+          "type": "produces",
+          "label": null,
+          "source_id": "s9184",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "rep"
+        },
+        {
+          "source": "yarl",
+          "target": "product::yarl::противоосколочный-плащ-пончо",
+          "type": "produces",
+          "label": null,
+          "source_id": "s9188",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "rep"
+        },
+        {
           "source": "yatsenko-viktor-vyacheslavovich",
           "target": "ooo-aero-khit",
           "type": "directs",
@@ -40893,7 +41115,7 @@
           "legal_form": "АНО",
           "variant": null,
           "product_count": 0,
-          "degree": 98
+          "degree": 99
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -41763,6 +41985,14 @@
           "id": "ivan-igorevich-karabinskiy",
           "kind": "person",
           "label": "Иван Игоревич Карабинский",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 3
+        },
+        {
+          "id": "ivlev-artem-yurevich",
+          "kind": "person",
+          "label": "Ивлев Артём Юрьевич",
           "name_latin": null,
           "sanctioned": false,
           "degree": 3
@@ -44220,6 +44450,19 @@
           "degree": 5
         },
         {
+          "id": "yarl",
+          "kind": "entity",
+          "label": "ООО «БПР ЯРЛ»",
+          "name_latin": null,
+          "inn": "9721200789",
+          "tier": "manufacturer",
+          "sanctioned": false,
+          "legal_form": null,
+          "variant": "defensive",
+          "product_count": 6,
+          "degree": 11
+        },
+        {
           "id": "yatsenko-viktor-vyacheslavovich",
           "kind": "person",
           "label": "Яценко Виктор Вячеславович",
@@ -45417,6 +45660,32 @@
           "label": null,
           "source_id": "s0216",
           "as_of": "2021-12-17",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "ivlev-artem-yurevich",
+          "target": "yarl",
+          "type": "directs",
+          "label": null,
+          "source_id": "s6767",
+          "as_of": "2025-04-30",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "ivlev-artem-yurevich",
+          "target": "yarl",
+          "type": "directs",
+          "label": null,
+          "source_id": "s0471",
+          "as_of": "2025-08-06",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null,
@@ -48668,7 +48937,7 @@
           "legal_form": "АНО",
           "variant": null,
           "product_count": 0,
-          "degree": 98
+          "degree": 99
         },
         {
           "id": "antonova-tatyana-sergeevna",
@@ -49832,6 +50101,19 @@
           "name_latin": null,
           "sanctioned": true,
           "degree": 1
+        },
+        {
+          "id": "yarl",
+          "kind": "entity",
+          "label": "ООО «БПР ЯРЛ»",
+          "name_latin": null,
+          "inn": "9721200789",
+          "tier": "manufacturer",
+          "sanctioned": false,
+          "legal_form": null,
+          "variant": "defensive",
+          "product_count": 6,
+          "degree": 11
         },
         {
           "id": "zamyatin-aleksandr-yurevich",
@@ -51681,6 +51963,19 @@
           "grade": "rep"
         },
         {
+          "source": "yarl",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "ЯРЛ's own words (bpryarl post 603, 24.02.2025, read in full): 'Совместно с Центром беспилотных систем и технологий мы...",
+          "source_id": "s9186",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc",
+          "detail": null,
+          "grade": "doc"
+        },
+        {
           "source": "zamyatin-aleksandr-yurevich",
           "target": "ooo-npts-basirtk",
           "type": "role",
@@ -52210,6 +52505,19 @@
           "degree": 1
         },
         {
+          "id": "product::yarl::бпр-ярл",
+          "kind": "product",
+          "label": "БПР ЯРЛ",
+          "owner_slug": "yarl",
+          "source_id": null,
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "saidov-adil-abukovich",
           "kind": "person",
           "label": "Саидов Адиль Абукович",
@@ -52223,6 +52531,19 @@
           "label": "3mx (brand page wildberries.ru/brands/311445014-3mx)",
           "platform": "Wildberries (brand store 3mx)",
           "degree": 2
+        },
+        {
+          "id": "yarl",
+          "kind": "entity",
+          "label": "ООО «БПР ЯРЛ»",
+          "name_latin": null,
+          "inn": "9721200789",
+          "tier": "manufacturer",
+          "sanctioned": false,
+          "legal_form": null,
+          "variant": "defensive",
+          "product_count": 6,
+          "degree": 11
         }
       ],
       "edges": [
@@ -52602,6 +52923,19 @@
           "confidence": "doc",
           "detail": null,
           "grade": "doc"
+        },
+        {
+          "source": "yarl",
+          "target": "product::yarl::бпр-ярл",
+          "type": "produces",
+          "label": null,
+          "source_id": null,
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "open"
         }
       ]
     }
