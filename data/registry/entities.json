@@ -91782,6 +91782,11 @@
         "note": "The dealer's shop sign (s9308) reads «МАКС 911», «Официальный дилер 3mx», dji911.com, С1-042; dji911.com/contacts (s1388) names ИП Коровкин А.А. ИНН 780223272953 as the seller of 3MX equipment on marketplaces."
       }
     ],
+    "sanctions_review": {
+      "as_of": "2026-10-06",
+      "outcome": "closed",
+      "note": "ГУР screen of 06.10.2026 (single record): 4 profiles returned, none ID-confirmed (inn_match and ogrn_match false on all four). The captions are «SERGEY Anatolyevich LUKIN» (ИНН 710606343114), «VEDROV Alexander Anatolievich» (ИНН 781601153204), «KOCHERGIN Alexander Anatolyevich» and «SERYOZHENKO Alexander Anatolievich» (ИНН 2381711872): each shares only a patronymic or first name with this sole trader and prints a different ИНН or none. Namesake noise, not promoted to sanctions[]. OpenSanctions and Aleph not yet screened for this record (in the daily queue)."
+    },
     "_corrected": "05.10-06.10.2026: the dealer was already on file in prose (3mx's related_entities, s1388). Prompted by the user's pointer that «МАКС911» is a listed dealer on 3mx.ru/dilery/, the shop-front photo (ru3mx/415) was looked at in full, the post saved, and the ЕГРИП extract pulled; the dealer now has a record because the link to the maker is documented on the maker's own page.",
     "name_display": "IP Korovkin Aleksandr Anatolevich",
     "gur_matches": [
