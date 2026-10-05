@@ -97,6 +97,18 @@ KINDS = {
 }
 
 
+# A sanctions[] entry whose own note says no official list entry was read, or only an aggregator was.
+UNREAD_SANCTION = re.compile(r"not yet independently read|aggregator match|one level short", re.I)
+WEAK_TIES = {"t-open", "press"}   # ЦБСТ tie not backed by a document
+IDENTITY_UNPROVEN = re.compile(r"IDENTITY LINK UNPROVEN", re.I)
+SYSTEM_STATUS = {"ok", "watch", "act"}
+
+
+def sanction_primary_read(entity):
+    """True when at least one sanctions[] entry is not marked as an unread aggregator match."""
+    return any(not UNREAD_SANCTION.search(str(x.get("note") or "")) for x in entity.get("sanctions") or [] if isinstance(x, dict))
+
+
 def load(name):
     return json.loads((REG / name).read_text(encoding="utf-8"))
 
@@ -346,6 +358,13 @@ class Board:
             fl.append(flag("review", "screen_hits_unreviewed",
                            f"{n_risk} sanctions-type screening hit(s), no sanctions review recorded" + ps.pop("text_suffix", ""),
                            count=n_risk, **ps))
+        if e.get("sanctions") and not sanction_primary_read(e):
+            fl.append(flag("review", "sanction_unread",
+                           "Sanctions claim rests on an aggregator match; no entry read against an official list"))
+        tie = e.get("cbst_tie")
+        if isinstance(tie, dict) and tie.get("confidence") in WEAK_TIES:
+            fl.append(flag("review", "tie_not_documented",
+                           f"ЦБСТ tie is graded {tie['confidence']}: no document establishes it"))
         n_oq = open_items(e.get("open_questions")) + self.oq_by_slug.get(e["slug"], 0)
         if n_oq:
             fl.append(flag("review", "open_questions", f"{n_oq} open question(s)", count=n_oq))
@@ -421,6 +440,9 @@ class Board:
             fl.append(flag("review", "screen_hits_unreviewed",
                            f"{n_risk} sanctions-type screening hit(s), no sanctions entry recorded" + ps.pop("text_suffix", ""),
                            count=n_risk, **ps))
+        if any(IDENTITY_UNPROVEN.search(str(x.get("note") or "")) for x in p.get("sanctions") or [] if isinstance(x, dict)):
+            fl.append(flag("review", "identity_unproven",
+                           "Sanctions entry belongs to a same-name person; the link to this record is not proven by a document"))
         unsourced_roles = sum(1 for r in p.get("roles") or [] if isinstance(r, dict) and not r.get("source_id"))
         if unsourced_roles:
             fl.append(flag("gap", "unsourced_roles", f"{unsourced_roles} role(s) with no source", count=unsourced_roles))
@@ -512,6 +534,89 @@ class Board:
                         "in_local_scrape": k in local, "in_weekly_scan": k in scan, "flags": fl})
         return out
 
+    def system_checks(self):
+        """Whole-system parameters: how current the inputs are, and checks that belong to no single record."""
+        out = []
+
+        def add(cid, label, value, status, detail, as_of=None):
+            assert status in SYSTEM_STATUS, status
+            out.append({"id": cid, "label": label, "value": value, "status": status, "detail": detail, "as_of": as_of})
+
+        def aged(cid, label, d, ok_days, watch_days, detail):
+            if d is None:
+                add(cid, label, "unknown", "act", detail)
+                return
+            n = self.age(d)
+            add(cid, label, d.isoformat() + f" ({n} d ago)", "ok" if n <= ok_days else "watch" if n <= watch_days else "act",
+                detail, d.isoformat())
+
+        db = ROOT / "data" / "roymarket.db"
+        if db.exists():
+            try:
+                import sqlite3
+                con = sqlite3.connect(f"file:{db}?mode=ro", uri=True)
+                newest = con.execute("select max(date) from tg_posts").fetchone()[0]
+                con.close()
+                aged("tg_db_newest", "Newest post in the local Telegram scrape", parse_date(newest), 3, 10,
+                     "Refresh with scripts/tg_scan.py; every Telegram search and lead check reads this database.")
+            except sqlite3.Error:
+                pass
+        daily = sorted(REPO_WATCH.glob("daily/????-??-??.md")) if REPO_WATCH.exists() else []
+        aged("daily_round", "Last daily round report", parse_date(daily[-1].stem) if daily else None, 1, 3,
+             "The 09:15 Mac round (pulls, re-screens, ingest, board.json).")
+        if self.scan_state:
+            aged("weekly_scan", "Last weekly news and channel scan", parse_date(self.scan_state.get("last_run")), 8, 21,
+                 "On request since 05.10.2026; leads it reports land in developments.json.")
+        try:
+            import subprocess
+            r = subprocess.run(["git", "log", "-1", "--format=%cs", "--", "data/registry"], cwd=ROOT,
+                               capture_output=True, text=True, timeout=10)
+            if r.returncode == 0 and r.stdout.strip():
+                aged("registry_commit", "Registry last committed", parse_date(r.stdout.strip()), 2, 7,
+                     "Latest commit touching data/registry/.")
+        except (OSError, subprocess.SubprocessError):
+            pass
+        with_s = [e for e in self.entities if e.get("sanctions")]
+        read = sum(1 for e in with_s if sanction_primary_read(e))
+        add("sanctions_primary_read", "Entities whose sanctions claim is read against an official list",
+            f"{read} of {len(with_s)}", "ok" if read == len(with_s) else "act" if read < len(with_s) / 2 else "watch",
+            "A sanctions-gap submission needs the official entry; an aggregator match is a lead (flag sanction_unread).")
+        weak = sum(1 for e in self.entities if isinstance(e.get("cbst_tie"), dict) and e["cbst_tie"].get("confidence") in WEAK_TIES)
+        add("weak_ties", "ЦБСТ ties not backed by a document", str(weak), "ok" if not weak else "watch",
+            "Ties graded t-open or press (flag tie_not_documented).")
+        no_src = sum(1 for p in self.people if p.get("dob") and not p.get("dob_source"))
+        if no_src:
+            add("dob_unsourced", "People with a date of birth and no per-field source", str(no_src), "act",
+                "The PII rule wants every identifying field sourced on its own; people records have no dob_source field yet.")
+        try:
+            import unit_lookup
+            units = unit_lookup.load_units()
+            hand = load("handovers.json") if (REG / "handovers.json").exists() else []
+            tally = unit_lookup.recipient_tally(units, hand)
+            dups = unit_lookup.find_duplicates(units)
+            bad = tally["ambiguous"] + len(dups)
+            add("units", "Handover recipients resolved to a unit record",
+                f"{tally['resolved']} of {sum(tally.values())}; {tally['ambiguous']} ambiguous, {tally['unrecorded']} unrecorded; {len(dups)} possible duplicate record(s)",
+                "act" if bad else "watch" if tally["unrecorded"] else "ok",
+                "scripts/unit_lookup.py --check lists them; a bare number never resolves to a unit.")
+        except (OSError, ValueError, KeyError):
+            pass
+        qpath, lpath = ROOT / "data" / "sources" / "_media_triage" / "queue.json", REG / "_media_looked.json"
+        if qpath.exists() and lpath.exists():
+            try:
+                items = json.loads(qpath.read_text(encoding="utf-8")).get("items") or []
+                looked = json.loads(lpath.read_text(encoding="utf-8"))
+                left = sum(1 for it in items if it.get("key") not in looked)
+                add("media_backlog", "Queued media not yet looked at", f"{left} of {len(items)}", "ok" if not left else "watch",
+                    "Before near-duplicate folding; scripts/media_triage.py sheets builds the next contact sheets.")
+            except (OSError, ValueError):
+                pass
+        n_dev = sum(1 for it in (self.developments or {}).get("items", []) if it.get("status", "open") == "open")
+        if self.developments is not None:
+            add("open_developments", "Scan findings not yet in the record", str(n_dev), "ok" if not n_dev else "watch",
+                "Open items in developments.json.")
+        return out
+
     def build(self):
         rows = [self.entity_row(e) for e in self.entities]
         rows += [self.person_row(p) for p in self.people]
@@ -525,6 +630,7 @@ class Board:
             "thresholds": {"egrul_stale_days": EGRUL_STALE_DAYS, "screen_stale_days": SCREEN_STALE_DAYS,
                            **{f"{k}_stale_days": n for _, _, k, n in KEY_SCREENS}},
             "kinds": KINDS, "notes": self.notes, "rows": rows, "unattached_developments": orphans,
+            "system": self.system_checks(),
         }
 
 
@@ -577,6 +683,10 @@ def summary(board):
     lines.append("  flags:")
     for (k, c), n in sorted(fc.items()):
         lines.append(f"    {k:7} {c:28} {n}")
+    if board.get("system"):
+        lines.append("  system:")
+        for c in board["system"]:
+            lines.append(f"    {c['status']:5} {c['label']}: {c['value']}")
     behind = [(r, f) for r in rows for f in r["flags"] if f["code"] == "development"]
     if behind:
         lines.append("  open developments:")

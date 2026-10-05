@@ -63,11 +63,10 @@ def _answer(cands: list[dict], q: dict, bare: str | None, parent_unstated: bool,
             "why": "one record fits number, type and arm" + ("; the text names a parent the record does not state" if unstated else "")}
 
 
-def check(units: list[dict], strict: bool = False) -> int:
+def find_duplicates(units: list[dict]) -> list[tuple[str, str]]:
+    """Pairs of records that read as one unit: same number, compatible type and arm, parents not different."""
     by_slug = {u["slug"]: u for u in units}
-    problems = 0
-    print("Possible duplicate records (same number, compatible type and arm, parents not different):")
-    seen = False
+    out = []
     for i, a in enumerate(units):
         for b in units[i + 1:]:
             for fa in un.forms(a):
@@ -75,11 +74,29 @@ def check(units: list[dict], strict: bool = False) -> int:
                     pa, pb = un.parents_of(a, by_slug), un.parents_of(b, by_slug)
                     if pa and pb and not any(un.match(x, y) for x in pa for y in pb):
                         break
-                    print(f"  {a['slug']}  /  {b['slug']}")
-                    problems += 1
-                    seen = True
+                    out.append((a["slug"], b["slug"]))
                     break
-    if not seen:
+    return out
+
+
+def recipient_tally(units: list[dict], handovers: list[dict]) -> dict:
+    """How the handovers' free-text recipients resolve: resolved, ambiguous, unrecorded counts."""
+    tally = {"resolved": 0, "ambiguous": 0, "unrecorded": 0}
+    for h in handovers:
+        if h.get("recipient_raw"):
+            tally[lookup(h["recipient_raw"], units)["state"]] += 1
+    return tally
+
+
+def check(units: list[dict], strict: bool = False) -> int:
+    by_slug = {u["slug"]: u for u in units}
+    problems = 0
+    print("Possible duplicate records (same number, compatible type and arm, parents not different):")
+    dups = find_duplicates(units)
+    for a, b in dups:
+        print(f"  {a}  /  {b}")
+    problems += len(dups)
+    if not dups:
         print("  none")
     h_path = REG / "handovers.json"
     if h_path.exists():

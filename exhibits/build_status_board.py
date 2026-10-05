@@ -351,6 +351,26 @@ def attach_record_detail(board):
     return board
 
 
+STATUS_MARK = {"ok": "✓", "watch": "◐", "act": "●"}
+
+
+def sys_html(board):
+    rows = "".join(
+        f'<tr class="{html.escape(c["status"])}"><td class="m" title="{html.escape(c["status"])}">{STATUS_MARK[c["status"]]}</td>'
+        f'<th scope="row">{html.escape(c["label"])}</th><td>{html.escape(str(c["value"]))}</td>'
+        f'<td class="d">{html.escape(c.get("detail") or "")}</td></tr>'
+        for c in board.get("system") or [])
+    if not rows:
+        return ""
+    return f"""<section aria-labelledby="h-sys">
+  <h2 class="rm-h2" id="h-sys">System checks</h2>
+  <p class="count">How current the inputs are, and checks that belong to no single record. ● act, ◐ watch, ✓ fine.</p>
+  <style>.sys{{border-collapse:collapse;width:100%;font-size:14px}}.sys th,.sys td{{text-align:left;padding:6px 8px;border-bottom:1px solid var(--rule,#d5d9d4);vertical-align:top}}.sys th{{font-weight:500}}.sys .m{{width:1.5em}}.sys .d{{color:var(--ink-2,#555);font-size:13px}}.sys tr.act th,.sys tr.act .m{{font-weight:700}}</style>
+  <table class="sys"><tbody>{rows}</tbody></table>
+</section>
+"""
+
+
 def build(board):
     board = attach_record_detail(attach_commands(board))
     th = board["thresholds"]
@@ -367,7 +387,7 @@ def build(board):
   <p class="rm-dek">Every company, person, product and channel on file, with what its record is missing, what is out of date, and what the network has said since the record was last touched.</p>
   <p class="sb-meta">Built {sb_ru(board['generated'])} from the registry and the weekly scan. A register extract counts as stale after {th['egrul_stale_days']} days, a ГУР or Aleph screen after {th.get('gur_stale_days', th['screen_stale_days'])} days, an OpenSanctions screen after {th.get('opensanctions_stale_days', th['screen_stale_days'])} days (its monthly quota).{notes}</p>
 </header>
-<section aria-labelledby="h-sum">
+{sys_html(board)}<section aria-labelledby="h-sum">
   <h2 class="rm-h2" id="h-sum">Records needing work</h2>
   <div class="sb-strip" id="strip"></div>
 </section>
@@ -398,7 +418,7 @@ def build(board):
 </section>
 <section class="how" aria-labelledby="h-how">
   <h2 class="rm-h2" id="h-how">How this is made</h2>
-  <p>Every flag is a mechanical test in <code>scripts/status_board.py</code>, run over <code>data/registry/</code>, <code>config/channels.txt</code> and the weekly scan's files. A flag is a work item, not a finding: read the record before acting on it. Refresh with <code>python3 exhibits/build_status_board.py --out exhibits/status_board.html</code> and republish.</p>
+  <p>Every flag is a mechanical test in <code>scripts/status_board.py</code>, run over <code>data/registry/</code>, <code>config/channels.txt</code> and the weekly scan's files. A flag is a work item, not a finding: read the record before acting on it. Run <code>python3 exhibits/serve_status_board.py</code> and reload the tab: the page is rebuilt from the registry on every load.</p>
   <p><span class="mk">●</span> behind: the network said something the record lacks, or an own channel is unread. <span class="mk">◐</span> stale: a pull or screen past its threshold. <span class="mk">○</span> pull: a register extract, accounts or screen never done. <span class="mk">◆</span> review: open questions or unreviewed screening hits. <span class="mk">┄</span> gap: a field with no identifier or no source.</p>
 </section>
 </main>
