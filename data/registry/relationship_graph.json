@@ -1,8 +1,8 @@
 {
   "schema_version": 12,
   "generated_from": "data/registry/entities.json + people.json + programs.json + products.json",
-  "node_count": 1261,
-  "edge_count": 2182,
+  "node_count": 1263,
+  "edge_count": 2184,
   "unresolved_count": 114,
   "nodes": [
     {
@@ -253,7 +253,7 @@
       "legal_form": "АНО",
       "variant": null,
       "product_count": 0,
-      "degree": 99
+      "degree": 100
     },
     {
       "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -1762,7 +1762,7 @@
       "kind": "event",
       "label": "«Дронница» — Всероссийский слёт операторов боевых беспилотных систем",
       "subtype": "event_series",
-      "degree": 5
+      "degree": 6
     },
     {
       "id": "event::dronnitsa-2022",
@@ -1791,6 +1791,13 @@
       "label": "Дронница 2025 (IV)",
       "subtype": "event_edition",
       "degree": 5
+    },
+    {
+      "id": "event::dronnitsa-2026",
+      "kind": "event",
+      "label": "Дронница 2026 (V)",
+      "subtype": "event_edition",
+      "degree": 1
     },
     {
       "id": "evgeniy-sergeevich-ieto-yal",
@@ -11549,6 +11556,13 @@
       "degree": 5
     },
     {
+      "id": "program::cbst-eco-accelerator",
+      "kind": "program",
+      "label": "Акселератор экологических технологий для восстановления природной среды (ЦБСТ)",
+      "subtype": "accelerator",
+      "degree": 1
+    },
+    {
       "id": "program::cbst-residency",
       "kind": "program",
       "label": "Резидентство ЦБСТ",
@@ -14053,6 +14067,19 @@
       "label": "accelerator",
       "source_id": "s7522",
       "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc",
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "target": "program::cbst-eco-accelerator",
+      "type": "operates",
+      "label": "accelerator",
+      "source_id": "s9238",
+      "as_of": "2026-09-29",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": "doc",
@@ -21801,6 +21828,19 @@
       "label": "event_edition",
       "source_id": "s8841",
       "as_of": "2025-09-03",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "rep"
+    },
+    {
+      "source": "event::dronnitsa-2026",
+      "target": "event::dronnitsa",
+      "type": "part_of",
+      "label": "event_edition",
+      "source_id": "s9233",
+      "as_of": "2026-08-12",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null,
