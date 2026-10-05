@@ -15236,6 +15236,14 @@
               "Ukraine (Presidential sanctions decree/list)"
             ],
             "source_id": "s0763"
+          },
+          {
+            "date": "2022-02-25",
+            "source_id": "s9121",
+            "regime": [
+              "EU (Council Decision 2014/512/CFSP, Annex IV: military end-users and the defence and security sector; trade and export restrictions, not an asset freeze)"
+            ],
+            "note": "Read in the Official Journal text of Council Decision (CFSP) 2025/931 of 20 May 2025 (s9121), which replaces Annex IV of Decision 2014/512/CFSP: entry 42, «Rostekh – Azimuth», local name Акционерное Общество «Азимут» (АО «Азимут»), a.k.a. Azimut JSC, address 125167, Moscow, Naryshkinskaya Alleya, 5, Building 2, Floor 2, Premises X, Room 15, registration number 7701583410 (Tax ID/INN), date of listing 25.2.2022. The ИНН equals this record's own. The listing date is the act's own column in the Annex as replaced on 20.05.2025; the 2022 act that first listed the entity has not been read. The other aggregator-sourced regimes above (s0763) remain unread against their own lists; the sanctions watch of 05.10.2026 also matched Swiss SECO list entry 50653 to this ИНН (names «Azimut JSC», «Rostekh – Azimuth»), not yet read here."
           }
         ],
         "trademarks": [
@@ -17637,7 +17645,13 @@
             "s9108",
             "s9109"
           ]
-        }
+        },
+        "open_questions": [
+          {
+            "source_id": "s9121",
+            "text": "No EU listing found for this entity: its ИНН 7714390623 occurs 0 times in the text of Council Decision (CFSP) 2025/931 (s9121), which lists «Rostekh – Azimuth», АО «Азимут», ИНН 7701583410, as entry 42 of Annex IV, i.e. the other same-named company (АО ПК «Азимут», `ao-pk-azimut`). Only this one act was searched. The sanctions watch run of 05.10.2026 (US SDN, EU consolidated financial sanctions list, Swiss SECO, UK FCDO; matches on ИНН and ОГРН) has no entry with this ИНН; the EU financial sanctions list is a different list from Annex IV, and the earlier EU acts were not searched. The two share a director and the name, so any statement that «Azimut is sanctioned» must say which entity and cite the entry."
+          }
+        ]
       },
       "verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0106)",
       "why": [
@@ -28372,6 +28386,16 @@
             "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 9707004743 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИНВЕСТМЕНТС\"\". Topics: sanction.control, sanction.linked. Primary source URLs cited by OpenSanctions: none listed. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
             "regime": null,
             "source_id": "s0808"
+          }
+        ],
+        "open_questions": [
+          {
+            "source_id": "s6707",
+            "text": "Why Наша Правда holds 90.91% and not 100% (БФО end-2024 shows 100%): in part answered by the ЕГРЮЛ extract of 07.09.2026, read in full. АО «Борей» (ОГРН 1247700237663, ИНН 9701280698) was absorbed by присоединение: the start was entered 19.08.2025 (ГРН 2257720581875), completion 26.12.2025 (ГРН 2257724837060, document «Договор о присоединении»), and the charter in its new edition was registered on 20.01.2026 (ГРН 2267700289130). The participants section was entered on that date: Фонд «Наша Правда» ₽10,000 (90.91%) and Григорьев Дмитрий Евгеньевич (ИНН 772023793184) ₽1,000 (9.09%), charter capital ₽11,000. Григорьев has been general director of Инвестментс since 07.08.2023 (ГРН 1237700523895). So the change coincides with the accession; no document read says the ₽1,000 share was issued in exchange for Борей shares. Not established: whether Григорьев held Борей shares (an АО's holders are in a share register kept by a registrar, not in the ЕГРЮЛ), the exchange ratio, who else held Борей shares, and the charter capital before 20.01.2026 (the charter of 07.08.2023 in s7378 is a scanned image, not yet read)."
+          },
+          {
+            "source_id": "s6707",
+            "text": "The ЕГРЮЛ extract of 07.09.2026 records two entries by the ФНС of «сведений о недостоверности сведений о юридическом лице» (result of a check of the register's data): ГРН 2237710462867 of 30.10.2023 and ГРН 2267701527234 of 03.03.2026, both by МИФНС № 46 по г. Москве. The record-history section does not say which field was found unreliable, and the current-data sections of the extract carry no flag. Read the registry's own wording for each entry before any use; no conclusion about nominees or the address is drawn from it."
           }
         ]
       },
