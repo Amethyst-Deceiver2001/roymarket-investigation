@@ -314,6 +314,12 @@ Decided 2026-10-02 (rules in CLAUDE.md):
 - Everyone involved (donors, volunteers, carriers, sellers) is a person of
   interest; merely connected people (family with no stake) are not.
 - Donor and volunteer reports default to self-report.
+- Unit numbers collide (user, 05.10.2026): there are two 237th regiments, the
+  237-й танковый полк of the 3-я мотострелковая дивизия (Наша Правда post 532,
+  20.11.2025) and a 237-й гвардейский десантно-штурмовой полк (post 688, a
+  weekly-scan lead, not yet read). A unit is keyed on number plus type plus
+  parent formation, each from a source that states it; a bare number never
+  matches or merges two records. Neither is in `military_units.json` yet.
 - New reader pages go out as private Artifacts for preview; the public cutoff
   comes with the new landing page.
 
@@ -325,6 +331,7 @@ Waiting on the user:
   echelon and branch, hostile frame). Then extend `military_units.json` with
   `vch`, `name_official_ru`, `short_ru`, `informal_ru[]`, `name_en`,
   `short_en`, `echelon`, `branch`, each form with its source.
+- Наша Правда scrape (`tg_scan.py`, a command for the user): our copy stops at post 646, so post 688 («Скорая для бойцов», ambulance for the 237th air-assault regiment) is unread. After the scrape, read it in full and record the handover with unit type and parent formation as the post gives them. Raised in issue #31.
 - archive.org S3 keys for Wayback (faster, less rate-limited); batches started 02.10.2026 on the anonymous endpoint.
 - Graphic-content default; when to share the chain previews.
 - Review the Гагаринг evidence-packet visual (private Artifact, built 04.10.2026 on the РОЙ.МАРКЕТ Reader System tokens, from `notes/packets/ooo-gagaring.md`): https://claude.ai/artifact/J9u4BinqBuzt1tKDrLPQvS — not shared, nothing checked against it yet. If it holds up, the other six sanctions-gap packets (Гаскар, СТИМС, Смарт Текнолоджис, Киловатт, Экспломет, Метаскан) go out the same way.
