@@ -211,7 +211,44 @@ def name_en(unit: dict) -> str | None:
     return " ".join(parts)
 
 
-def display_unit(unit: dict, by_slug: dict, public: bool = False) -> dict:
+def _en_parsed(p: dict) -> str | None:
+    """English descriptor of a parsed phrase («3rd Motor Rifle Division»); None without a number."""
+    if p.get("number") is None:
+        return None
+    parts = [ordinal_en(p["number"])] + (["Guards"] if p.get("guards") else []) \
+        + ([_ARM_EN[p["arm"]]] if p.get("arm") in _ARM_EN else []) + ([_KIND_EN[p["kind"]]] if p.get("kind") in _KIND_EN else [])
+    return " ".join(parts)
+
+
+def siblings(unit: dict, units: list[dict]) -> list[dict]:
+    """Other records that share this unit's number with a compatible type and arm: the ones a bare label would confuse."""
+    mine = forms(unit)
+    return [o for o in units if o.get("slug") != unit.get("slug")
+            and any(match(f, g) for f in mine for g in forms(o))]
+
+
+def disambiguator(unit: dict, by_slug: dict, public: bool = False) -> dict | None:
+    """What tells this unit from a same-number sibling: its stated parent first, then a stated в/ч.
+
+    Returns {kind: parent|vch, text, grade} or None when the record gives neither. A lead is offered on
+    internal pages only, never on the public card, and always carries its grade."""
+    for h in unit.get("parent_history") or []:
+        if h.get("status") == "stated" or (not public and h.get("status") == "lead"):
+            ref = by_slug.get(h.get("parent_unit"))
+            text = (name_en(ref) if ref else None) or _en_parsed(parse(h.get("parent_text") or "")) or h.get("parent_text")
+            if text:
+                return {"kind": "parent", "text": text, "grade": h["status"]}
+    if not unit.get("parent_history") and unit.get("parent_grouping"):
+        text = _en_parsed(parse(unit["parent_grouping"]))
+        if text:
+            return {"kind": "parent", "text": text, "grade": "lead"} if not public else None
+    for n in unit.get("names") or []:
+        if n.get("form") == "vch" and (n.get("grade") == "stated" or not public):
+            return {"kind": "vch", "text": n["value"], "grade": n.get("grade")}
+    return None
+
+
+def display_unit(unit: dict, by_slug: dict, public: bool = False, units: list[dict] | None = None) -> dict:
     """What a unit card shows: English label, best Russian name, and parent and в/ч each with its grade.
 
     The public card shows only `stated` items; leads appear on internal pages only."""
@@ -223,4 +260,12 @@ def display_unit(unit: dict, by_slug: dict, public: bool = False) -> dict:
                 "grade": h.get("status")} for h in unit.get("parent_history") or [] if keep(h.get("status"))]
     vch = [{"value": n["value"], "grade": n.get("grade")} for n in names if n.get("form") == "vch" and keep(n.get("grade"))]
     short = [n["value"] for n in names if n.get("form") == "short" and keep(n.get("grade"))]
-    return {"head": name_en(unit) or ru, "ru": ru, "short": short, "parents": parents, "vch": vch}
+    head = name_en(unit) or ru
+    needs = False
+    if units is not None and siblings(unit, units):
+        d = disambiguator(unit, by_slug, public)
+        if d:
+            head = f"{head} ({d['text']})"
+        else:
+            needs = True  # a same-number sibling exists and this record states neither a parent nor a в/ч
+    return {"head": head, "ru": ru, "short": short, "parents": parents, "vch": vch, "needs_disambiguation": needs}

@@ -70,3 +70,12 @@ A `--check` mode warns when two records share number + type with different or un
 ## Open decisions for the user
 
 - Whether a division is a `unit_type` or only a parent.
+
+## Same number, different parent or в/ч (05.10.2026)
+
+Two records are *confusable* when they share a number with a compatible type and arm (`unit_names.siblings`). The two 237th regiments are not: their arms differ, so number + type + arm already separates them. The case this rule covers is one arm cannot settle (two «345-й мотострелковый полк» under different divisions).
+
+- The English head of a confusable record carries what tells it apart: its **stated parent** first («345th Motor Rifle Regiment (104th Division)»), then a **stated в/ч**. A lead parent or в/ч is shown on internal pages only, never on the public card.
+- A confusable record that states neither gets `needs_disambiguation` and a bare label; `unit_lookup.py --check` lists it as "NOTHING: needs a parent or a в/ч" and counts it as a problem.
+- Lookup was already safe: a bare number is `ambiguous`, and a parent or в/ч in the text decides.
+- Today's registry has no confusable pair (9, 18 and 114 differ by type; the 237s by arm).

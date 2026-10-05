@@ -98,6 +98,22 @@ def check(units: list[dict], strict: bool = False) -> int:
     problems += len(dups)
     if not dups:
         print("  none")
+    print("Same-number records (a label alone would confuse them) and what tells them apart:")
+    seen, groups = set(), 0
+    for u in units:
+        sib = un.siblings(u, units)
+        if not sib or u["slug"] in seen:
+            continue
+        grp = [u] + sib
+        seen.update(x["slug"] for x in grp)
+        groups += 1
+        for x in grp:
+            d = un.disambiguator(x, by_slug)
+            print(f"  {x['slug']}: " + (f"{d['kind']} {d['text']!r} ({d['grade']})" if d else "NOTHING: needs a parent or a в/ч"))
+            if not d:
+                problems += 1
+    if not groups:
+        print("  none")
     h_path = REG / "handovers.json"
     if h_path.exists():
         tally = {"resolved": 0, "ambiguous": 0, "unrecorded": 0}

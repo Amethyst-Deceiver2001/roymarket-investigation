@@ -109,6 +109,30 @@ def main():
     assert un.display_unit(AIR, by, public=False)["parents"][0]["text"] == DIV["name_ru"]
     assert un.display_unit(AIR, by, public=True)["ru"] == "237 гвардейский десантно-штурмовой Торуньский полк"
 
+    # Same number, same type and arm, different parents: the stated parent (or в/ч) goes into the label.
+    # (The two 237ths differ by arm, so their labels already differ; this is the case arm cannot settle.)
+    MA = {"slug": "345-a", "name_ru": "345-й мотострелковый полк", "unit_type": "regiment", "arm": "motor_rifle", "number": 345,
+          "parent_history": [{"parent_text": "104-я дивизия", "status": "stated", "source_id": "s1"}]}
+    MB = {"slug": "345-b", "name_ru": "345-й мотострелковый полк", "unit_type": "regiment", "arm": "motor_rifle", "number": 345,
+          "parent_history": [{"parent_text": "7-я дивизия", "status": "lead", "note": "user statement"}]}
+    MC = {"slug": "345-c", "name_ru": "345-й мотострелковый полк", "unit_type": "regiment", "arm": "motor_rifle", "number": 345,
+          "names": [{"form": "vch", "value": "в/ч 12345", "grade": "stated", "source_id": "s2"}]}
+    MD = {"slug": "345-d", "name_ru": "345-й мотострелковый полк", "unit_type": "regiment", "arm": "motor_rifle", "number": 345}
+    GRP = [MA, MB, MC, MD]
+    byg = {u["slug"]: u for u in GRP}
+    assert un.siblings(TANK, UNITS) == [] and un.siblings(DIV, UNITS) == [], "different arms are not confusable"
+    assert [x["slug"] for x in un.siblings(MA, GRP)] == ["345-b", "345-c", "345-d"]
+    assert un.display_unit(MA, byg, public=True, units=GRP)["head"] == "345th Motor Rifle Regiment (104th Division)"
+    pb = un.display_unit(MB, byg, public=True, units=GRP)
+    assert pb["head"] == "345th Motor Rifle Regiment" and pb["needs_disambiguation"], "a lead parent is not enough in public"
+    assert un.display_unit(MB, byg, public=False, units=GRP)["head"] == "345th Motor Rifle Regiment (7th Division)"
+    assert un.display_unit(MC, byg, public=True, units=GRP)["head"].endswith("(в/ч 12345)")
+    assert un.display_unit(MD, byg, public=False, units=GRP)["needs_disambiguation"]
+    assert un.display_unit(DIV, by, public=True, units=UNITS)["head"] == "76th Guards Air Assault Division", "no sibling, no suffix"
+    import contextlib as _c, io as _io
+    with _c.redirect_stdout(_io.StringIO()) as out2:
+        ul.check(GRP)
+    assert "345-d: NOTHING" in out2.getvalue() and "345-a: parent" in out2.getvalue(), out2.getvalue()
     # A record with only the older free-text parent still narrows a lookup.
     old = {"slug": "345", "name_ru": "345-й полк 104-й дивизии", "unit_type": "regiment", "parent_grouping": "104-я дивизия"}
     other = {"slug": "345b", "name_ru": "345-й полк", "unit_type": "regiment", "parent_grouping": "7-я дивизия"}
