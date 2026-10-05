@@ -31,6 +31,8 @@ assert "version not stated x3 A+E" in "\n".join(P.chain_lines(nver, {})) and "[s
 real = json.loads((ROOT / "data/registry/products.json").read_text(encoding="utf-8"))
 bulat = next(p for p in real if p["slug"] == "bulat")
 assert [l["id"] for l in bulat["listings"] if l["source_id"] is None] == ["bulat-wb-brand-v3", "bulat-wb-brand-v4"]
-assert len(bulat["deliveries"]) == 17 and all(d["donor"] == "fond-nasha-pravda" for d in bulat["deliveries"])
+nasha = [d for d in bulat["deliveries"] if d["donor"] == "fond-nasha-pravda"]
+assert len(nasha) == 17 and len(bulat["deliveries"]) == 18, "17 donor deliveries plus the maker's joint dispatch with Покров (bulat-d18)"
+assert [d for d in bulat["deliveries"] if d["donor"] != "fond-nasha-pravda"][0]["donor"] == "ooo-trimiks"
 assert all(d["credibility"] == "single" and d["version"] is None for d in bulat["deliveries"])
 print("product_chain: all checks passed")

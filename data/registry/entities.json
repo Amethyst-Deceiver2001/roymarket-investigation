@@ -21450,6 +21450,13 @@
         "context": "Posted in 3mx's own channel @ru3mx, 30.05.2025, as an announcement of the dealer's shop; the offer is the dealer's, published by the maker's channel. The post names goods that are not 3mx products (flashed DJI Matrice 4T, Starlink terminals); what «прошитые» means is not stated.",
         "source_id": "s9309",
         "as_of": "2025-05-30"
+      },
+      {
+        "text_ru": "MADRO - официальный дилер 3mx с сетью магазинов в России и на \"новых территориях\"! [...] 🏢 Магазин в Донецке (ДНР)\n📍 ул. Артёма, 138А, БЦ «Акула»\n📞 +79381240708\nTelegram: @madrodonetsk\n\n🏢 Магазин в Луганске (ЛНР)\n📍 ул. Советская, 40, офис 213\n📞 +79595797251\nTelegram: @Madrolugansk\n\n🏢 Офис в Мариуполе\n📞 +79496398426\n📞 +79035555035",
+        "text_en": "MADRO is an official dealer of 3mx with a network of shops in Russia and in the \"new territories\"! [...] Shop in Donetsk (DPR), 138A Artyoma street, business centre «Akula»; shop in Luhansk (LPR), 40 Sovetskaya street, office 213; office in Mariupol.",
+        "context": "Posted in 3mx's own channel @ru3mx on 02.06.2025 as the dealer's contact list; the brand's other outlets (Saint Petersburg office, Moscow shop and offices) are in the same post. Донецк, Луганск and Мариуполь are occupied territory of Ukraine. The post does not name the legal entity that runs any outlet.",
+        "source_id": "s9316",
+        "as_of": "2025-06-02"
       }
     ],
     "battlefield_evidence": [],
@@ -21586,10 +21593,8 @@
     ],
     "related_entities": [
       {
-        "relationship": [
-          "Named dealer, per 3mx.ru/dilery/ AND independently confirmed via madro.ru itself (23.08.2026): «Мэдро» (Madro) explicitly states \"официальный поставщик производителя «3mx»\" (official supplier of manufacturer 3mx) and sells its own branded EW line «УФ-МЭДРО» alongside 3mx products. Storefronts in Saint Petersburg (ул. Академика Павлова, 5В), Moscow (2 offices + a shop at Митинский радиорынок), and Mariupol (occupied Ukraine). Telegram @madro_sales. LEGAL ENTITY STILL UNRESOLVED: a web search surfaced ООО «МАДРО» (ИНН 7720923661, ОГРН 1247700133669, Moscow, registered 08.02.2024, declared activity \"specialized design work\") as a same-named candidate, but this was NOT independently confirmed as the same legal entity behind madro.ru — flagged as a lead, not a match, pending direct confirmation (e.g. the site's own offer/contract documents, which were not checked in this pass)."
-        ],
-        "slug": null,
+        "relationship": "Named dealer, per 3mx.ru/dilery/ AND independently confirmed via madro.ru itself (23.08.2026): «Мэдро» (Madro) explicitly states \"официальный поставщик производителя «3mx»\" (official supplier of manufacturer 3mx) and sells its own branded EW line «УФ-МЭДРО» alongside 3mx products. Storefronts in Saint Petersburg (ул. Академика Павлова, 5В), Moscow (2 offices + a shop at Митинский радиорынок), and Mariupol (occupied Ukraine). Telegram @madro_sales. LEGAL ENTITY STILL UNRESOLVED: a web search surfaced ООО «МАДРО» (ИНН 7720923661, ОГРН 1247700133669, Moscow, registered 08.02.2024, declared activity \"specialized design work\") as a same-named candidate, but this was NOT independently confirmed as the same legal entity behind madro.ru — flagged as a lead, not a match, pending direct confirmation (e.g. the site's own offer/contract documents, which were not checked in this pass). ENTITY RECORD MADE 06.10.2026 (ip-artemeva-viktoriya-mikhaylovna) for the Wildberries seller of record, after the ЕГРИП extract (s9310). The brand's outlets in Donetsk, Luhansk and Mariupol (post 416, s9316) are NOT tied to that sole trader; operator unresolved.",
+        "slug": "ip-artemeva-viktoriya-mikhaylovna",
         "source_id": "s0558",
         "relationship_type": "dealer"
       },
@@ -21678,7 +21683,8 @@
       "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
       "[2026-09-30 cross-reference] related_entities: dealer -> ip-kuznetsov-ruslan-nikolaevich",
       "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (Presidential sanctions decree/list).",
-      "06.10.2026: dealer «Макс 911» now has its own record; post 415 recorded as a marketing claim."
+      "06.10.2026: dealer «Макс 911» now has its own record; post 415 recorded as a marketing claim.",
+      "06.10.2026: dealer «Мэдро» now has a record (ИП Артемьева, Wildberries seller of record); post 416 recorded as a marketing claim with the occupied-territory outlets."
     ],
     "_verified_against": "s0225 — ООО «Тримикс»'s own full signed ЕГРЮЛ extract, pulled 18.08.2026",
     "name_display": "OOO «Trimiks»",
@@ -67345,7 +67351,8 @@
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "[2026-09-30] Added the company's own Telegram channel and four self-published claims (s8532, s8534, s8535) and a concert photo showing its logo (s8519). The owner Цыганов Вадим Борисович is the husband of the singer Вика Цыганова (s8537); see the people records. ПОКРОВ describes itself as 3mx's official dealer, not the manufacturer (s8535).",
       "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [485, 562] flagged by scripts/tg_post_coverage.py: namesake. Both posts use «ледяной покров» (ice cover) as a common noun in foreign-news digests.",
-      "2026-10-02 B2: products[] on state contracts from the contract documents (printed form / specification), read in full."
+      "2026-10-02 B2: products[] on state contracts from the contract documents (printed form / specification), read in full.",
+      "06.10.2026: post 376 of the maker's channel added to the dealer edge (joint dispatch of «Булаты» v4 with 3mx)."
     ],
     "sanctions_review": {
       "as_of": "2026-09-20",
@@ -67372,12 +67379,15 @@
         "basis": "doc",
         "source_id": "s1386",
         "as_of": null,
-        "note": "Named dealer of «3mx» per the maker's own dealer page; also sells its own EW line. Converted 2026-10-01 from the prose related_entities 'dealer' entry on ooo-trimiks, which stays on file.",
+        "note": "Named dealer of «3mx» per the maker's own dealer page; also sells its own EW line. Converted 2026-10-01 from the prose related_entities 'dealer' entry on ooo-trimiks, which stays on file. Post 376 in the maker's channel (28.04.2025, s9315) says 3mx and «the team of Покров» together sent «Булаты» v4 to servicemen (see delivery bulat-d18); the post is signed «Вика Цыганова» and links her channel.",
         "asserted_by": "counterparty",
         "credibility": "doc",
         "authorised": "yes",
         "open": "Named by the maker on its dealer page. The products it sells are not recorded on this edge.",
-        "role": "licensed_dealer"
+        "role": "licensed_dealer",
+        "products": [
+          "Булат v.4"
+        ]
       }
     ],
     "_verified_against": "egrul.nalog.ru open API, 2026-08-24",
@@ -91741,7 +91751,7 @@
         "basis": "doc",
         "source_id": "s0558",
         "as_of": "2025-05-30",
-        "note": "3mx.ru/dilery/ lists «Дилер Макс 911», +7 960 919 19 11, Telegram @dji911_operator (s0558 of 23.08.2026; the page text was unchanged on 06.10.2026, s9307). 3mx's own Telegram channel posted on 30.05.2025 (s9309): «На \"Горбушке\" Макс 911- официальный дилер 3мх! (Павильон С1-042)», listing «Булаты- 4 по офиц. цене 88 000», and the photo of the shop front with the sign «Официальный дилер 3mx» (s9308). The sole trader's identity comes from dji911.com/contacts (s1388) and is confirmed by the ЕГРИП extract of 06.10.2026 (s9306), which prints the same ИНН.",
+        "note": "3mx.ru/dilery/ lists «Дилер Макс 911», +7 960 919 19 11, Telegram @dji911_operator (s0558 of 23.08.2026; the page text was unchanged on 06.10.2026, s9307). 3mx's own Telegram channel posted on 30.05.2025 (s9309): «На \"Горбушке\" Макс 911- официальный дилер 3мх! (Павильон С1-042)», listing «Булаты- 4 по офиц. цене 88 000», and the photo of the shop front with the sign «Официальный дилер 3mx» (s9308). The sole trader's identity comes from dji911.com/contacts (s1388) and is confirmed by the ЕГРИП extract of 06.10.2026 (s9306), which prints the same ИНН. The maker's channel also names «Макс 911» as the organiser of Moscow quadcopter meets at which 3mx's jammer «Айрат 100» was tested against other makers' jammers (post 5 of 15.01.2023, s9313; post 9 of 02.02.2023, s9314) and carries a field test of «Булат-4» at 7.2 GHz credited to «Макс 911» (post 513 of 17.09.2025, s9317; post 537 of 01.10.2025, s9318).",
         "products": [
           "Булаты"
         ],
@@ -91774,5 +91784,150 @@
     ],
     "_corrected": "05.10-06.10.2026: the dealer was already on file in prose (3mx's related_entities, s1388). Prompted by the user's pointer that «МАКС911» is a listed dealer on 3mx.ru/dilery/, the shop-front photo (ru3mx/415) was looked at in full, the post saved, and the ЕГРИП extract pulled; the dealer now has a record because the link to the maker is documented on the maker's own page.",
     "name_display": "IP Korovkin Aleksandr Anatolevich"
+  },
+  {
+    "slug": "ip-artemeva-viktoriya-mikhaylovna",
+    "name_ru": "ИП Артемьева Виктория Михайловна",
+    "name_latin": null,
+    "legal_form": "ИП",
+    "brand_ru": null,
+    "brand_latin": null,
+    "inn": "350102453754",
+    "ogrn": "325784700034333",
+    "extra_ids": null,
+    "registered": "2025-02-03",
+    "address": null,
+    "okved_code": "47.42",
+    "okved_label": "Торговля розничная телекоммуникационным оборудованием, включая розничную торговлю мобильными телефонами, в специализированных магазинах",
+    "okved_mismatch": null,
+    "director": null,
+    "director_history": [],
+    "founders": [],
+    "founders_history": [],
+    "charter_capital": null,
+    "charter_capital_history": [],
+    "address_history": [],
+    "name_history": [],
+    "facility_type": null,
+    "facility_type_history": [],
+    "parents": [],
+    "subsidiaries": [],
+    "tier": "adjacent",
+    "tier_basis": "Seller of record of the Wildberries storefront whose own trademark field reads «madro - официальный дилер 3mx» (s1381, 25.08.2026); the brand Мэдро is named as a dealer on the maker's own page (3mx.ru/dilery/, s0558, s9307) and in the maker's own channel (post 416, s9316). A sole trader selling the maker's product; no other tie to ЦБСТ is on file.",
+    "cbst_tie": {
+      "claim": "None found.",
+      "confidence": "none",
+      "evidence": null,
+      "source_id": null
+    },
+    "wb_overlap": "not_checked",
+    "products": [],
+    "financials": [],
+    "egrul_flags": [],
+    "securing_measures": [],
+    "securing_measures_checked_at": null,
+    "sanctions": [],
+    "litigation": [],
+    "licences": [],
+    "trademarks": [],
+    "patents": [],
+    "foreign_components": [],
+    "government_contracts": [],
+    "workforce_history": [],
+    "state_programs": [],
+    "marketing_claims": [],
+    "battlefield_evidence": [],
+    "domain_history": [],
+    "web": {
+      "sites": [
+        "https://madro.ru/"
+      ],
+      "telegram": [
+        "@madro_sales",
+        "@madrodonetsk",
+        "@Madrolugansk"
+      ],
+      "vk": [],
+      "youtube": [],
+      "marketplace_listings": [
+        "https://www.wildberries.ru/seller/250074680"
+      ],
+      "other": []
+    },
+    "images": [],
+    "open_questions": [
+      {
+        "source_id": "s9310",
+        "text": "ЕГРИП extract of 06.10.2026 (single lookup): ИП Артемьева Виктория Михайловна, ОГРНИП 325784700034333, ИНН 350102453754, registered 03.02.2025 in Saint Petersburg, citizen of the Russian Federation; primary activity 47.42 (retail of telecommunications equipment), additional codes include 46.52, 47.19 and 47.91. The extract prints no residence address."
+      },
+      {
+        "source_id": "s9316",
+        "text": "The brand Мэдро (MADRO) has shops and offices outside this sole trader's documented footprint. The maker's own post 416 (02.06.2025) lists «Магазин в Донецке (ДНР)», «Магазин в Луганске (ЛНР)» and «Офис в Мариуполе» besides offices and a shop in Saint Petersburg and Moscow; madro.ru (s9312, 06.10.2026) lists «Пункт выдачи МЭДРО» in Mariupol and Donetsk. No document ties the operation of those outlets to this sole trader: the website prints no legal entity, and the sole trader was registered on 03.02.2025. The legal operator of the brand's outlets in occupied territory is unresolved."
+      },
+      {
+        "source_id": null,
+        "text": "A same-named company, ООО «МАДРО» (ИНН 7720923661, ОГРН 1247700133669, Moscow, registered 08.02.2024, declared activity specialised design work), surfaced in a web search on 23.08.2026 and is NOT confirmed as the operator behind madro.ru. It is a namesake lead only: no record is made and no tie is drawn."
+      },
+      {
+        "source_id": null,
+        "text": "madro.ru describes the company as the maker of REW systems under the mark «УФ-МЭДРО» and an «официальный поставщик производителя 3mx» (s9311). Which legal entity makes and sells the «УФ-МЭДРО» line is not established."
+      },
+      {
+        "source_id": null,
+        "text": "No person record is made for the sole trader: the PII policy admits a seller's owner only on user direction. The extract prints no residence address."
+      }
+    ],
+    "sources": [],
+    "confidence": null,
+    "_verified": false,
+    "_origin": "corrections:add_entities",
+    "_raw": {},
+    "city": null,
+    "ecosystem_roles": [
+      "seller_of_record",
+      "licensed_dealer"
+    ],
+    "sells_for": [
+      {
+        "slug": "ooo-trimiks",
+        "channel": "Wildberries storefront «Мэдро»; brand Мэдро named as official dealer on 3mx.ru/dilery/",
+        "basis": "doc",
+        "source_id": "s1381",
+        "as_of": "2025-11-20",
+        "note": "The Wildberries seller page (HAR capture of 25.08.2026, s1381) shows ИП Артемьева В. М. ИНН 350102453754 as the seller of record, 34 SKUs including «Детектор Булат v.4», antennas for «Булат» v4 and «Булат 4 Марс»; the seller registered on Wildberries on 20.11.2025 and shows 6,127 items sold. The maker's page 3mx.ru/dilery/ (s0558; unchanged on 06.10.2026, s9307) names «Дилер «Мэдро»» and the maker's channel post 416 of 02.06.2025 (s9316) names «MADRO - официальный дилер 3mx». That the sole trader is the dealer the maker names rests on the seller's own trademark field («madro - официальный дилер 3mx»), not on a maker document naming her.",
+        "products": [
+          "Булат v.4",
+          "антенны для «Булат» v4",
+          "«Булат 4 Марс»"
+        ],
+        "status_history": [
+          {
+            "status": "listed",
+            "as_of": "2026-08-25",
+            "source_id": "s1381",
+            "note": "Seller page captured with 34 SKUs; the WB registration date is 20.11.2025."
+          }
+        ],
+        "asserted_by": "platform",
+        "credibility": "corroborated",
+        "authorised": "yes",
+        "role": "seller_of_record",
+        "open": "No dealer agreement or certificate is on file. The brand's shops are not tied to this sole trader by any document (see the open questions)."
+      }
+    ],
+    "verified_against": "s9310 (ЕГРИП extract of 06.10.2026), s1381 (Wildberries seller page), s0558 and s9307 (3mx.ru/dilery/), s9316 (post 416), s9311 and s9312 (madro.ru).",
+    "brands": [
+      {
+        "name": "Madro",
+        "kind": "trade_name",
+        "registration": null,
+        "primary": true,
+        "source_id": "s1381",
+        "as_of": "2026-08-25",
+        "note": "Wildberries seller 250074680: the account's legal information reads «Индивидуальный предприниматель Артемьева Виктория Михайловна», ИНН 350102453754, ОГРНИП 325784700034333, and its trademark field reads «madro - официальный дилер 3mx». The brand's website madro.ru prints no legal entity (s9311, s9312)."
+      }
+    ],
+    "_corrected": "06.10.2026: the dealer was on file in prose only (3mx's related_entities, s1381). Same treatment as «Макс 911»: ЕГРИП extract pulled, the maker's channel searched (posts 416 and 683), the brand's site captured. The Wildberries seller page is the document that ties the ИНН to the brand; the brand's outlets are not tied to the sole trader.",
+    "name_display": "IP Artemeva Viktoriya Mikhaylovna"
   }
 ]

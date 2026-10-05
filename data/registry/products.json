@@ -100,9 +100,9 @@
         "channel": "Wildberries (dealer storefront «Мэдро»)",
         "url": "https://www.wildberries.ru/seller/250074680",
         "seller": {
-          "entity": null,
+          "entity": "ip-artemeva-viktoriya-mikhaylovna",
           "storefront": "Мэдро (WB seller 250074680)",
-          "identity": "unresolved as a registry entity; the HAR capture shows ИНН 350102453754 (ИП), s1381"
+          "identity": "resolved: Wildberries's own legal information for the seller account prints ИП Артемьева В. М., ИНН 350102453754 (s1381); the ЕГРИП extract (s9310) prints the same ИНН"
         },
         "status": "listed",
         "as_of": "2026-08-25",
@@ -475,6 +475,24 @@
         "credibility": "single",
         "source_id": "s8994",
         "note": "Found while building the «Капюшон» record (02.10.2026); the first «Булат» pass started at post 393. Civilian recipients, at the governor's request."
+      },
+      {
+        "id": "bulat-d18",
+        "date": "2025-04-28",
+        "version": null,
+        "item": "«Булаты» v4, count not stated; the post also names «Таиры» and two evacuation-assault REW complexes «Покров» ВЦ5",
+        "donor": "ooo-trimiks",
+        "co_donors": [
+          "ooo-pokrov"
+        ],
+        "carrier": "not stated; the aid was handed over at a concert in Kursk. The post is signed «Вика Цыганова» and links her channel t.me/vika_tsyganova63 (post 4780)",
+        "recipient": "боец группы «Пресса» спецназа «Ахмат» (Курская область)",
+        "source_channel": "@ru3mx",
+        "post_id": 376,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s9315",
+        "note": "3mx's own channel: «Наши друзья 3МХ производители оборудования поддержали акцию и совместно с командой «Покрова» направили военнослужащим «Булаты» v4 — детекторы дронов, показавшие себя лучшими на СВО». The post date is the report date, not the handover date. Recipient is a group of a unit, not a numbered unit; no unit record is made."
       }
     ],
     "claims": [

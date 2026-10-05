@@ -1,8 +1,8 @@
 {
   "schema_version": 12,
   "generated_from": "data/registry/entities.json + people.json + programs.json + products.json",
-  "node_count": 1265,
-  "edge_count": 2187,
+  "node_count": 1266,
+  "edge_count": 2189,
   "unresolved_count": 114,
   "nodes": [
     {
@@ -2230,6 +2230,19 @@
       "name_latin": "Ionov Anton Aleksandrovich",
       "sanctioned": false,
       "degree": 5
+    },
+    {
+      "id": "ip-artemeva-viktoriya-mikhaylovna",
+      "kind": "entity",
+      "label": "ИП Артемьева Виктория Михайловна",
+      "name_latin": null,
+      "inn": "350102453754",
+      "tier": "adjacent",
+      "sanctioned": false,
+      "legal_form": "ИП",
+      "variant": null,
+      "product_count": 0,
+      "degree": 2
     },
     {
       "id": "ip-bratenkov-andrey-alekseevich",
@@ -4631,7 +4644,7 @@
       "legal_form": "ООО",
       "variant": "defensive",
       "product_count": 4,
-      "degree": 24
+      "degree": 25
     },
     {
       "id": "ooo-tsentr-dinarus",
@@ -12145,7 +12158,7 @@
       "kind": "storefront",
       "label": "Мэдро (WB seller 250074680)",
       "platform": "Wildberries (dealer storefront «Мэдро»)",
-      "degree": 1
+      "degree": 2
     },
     {
       "id": "stroev-nikolay-nikolaevich",
@@ -23376,6 +23389,31 @@
       "grade": "doc"
     },
     {
+      "source": "ip-artemeva-viktoriya-mikhaylovna",
+      "target": "ooo-trimiks",
+      "type": "sells_for",
+      "label": "Wildberries storefront «Мэдро»; brand Мэдро named as official dealer on 3mx.ru/dilery/",
+      "source_id": "s1381",
+      "as_of": "2025-11-20",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc",
+      "detail": {
+        "products": [
+          "Булат v.4",
+          "антенны для «Булат» v4",
+          "«Булат 4 Марс»"
+        ],
+        "status": "listed",
+        "role": "seller_of_record",
+        "asserted_by": "platform",
+        "credibility": "corroborated",
+        "authorised": "yes",
+        "open": "No dealer agreement or certificate is on file. The brand's shops are not tied to this sole trader by any document (see the open questions)."
+      },
+      "grade": "doc"
+    },
+    {
       "source": "ip-bratenkov-andrey-alekseevich",
       "target": "kb-spektr-novosibirsk",
       "type": "related",
@@ -32764,6 +32802,9 @@
       "temporal_status": "unknown",
       "confidence": "doc",
       "detail": {
+        "products": [
+          "Булат v.4"
+        ],
         "role": "licensed_dealer",
         "asserted_by": "counterparty",
         "credibility": "doc",
@@ -38095,6 +38136,19 @@
       "type": "lists",
       "label": "Wildberries (brand store 3mx)",
       "source_id": null,
+      "as_of": "2026-08-25",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc",
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "storefront::wildberries-мэдро",
+      "target": "ip-artemeva-viktoriya-mikhaylovna",
+      "type": "operated_by",
+      "label": "seller",
+      "source_id": "s1381",
       "as_of": "2026-08-25",
       "weight": 1.0,
       "temporal_status": "unknown",

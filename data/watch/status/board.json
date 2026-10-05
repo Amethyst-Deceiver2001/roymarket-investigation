@@ -7243,6 +7243,36 @@
    ]
   },
   {
+   "kind": "entity",
+   "slug": "ip-artemeva-viktoriya-mikhaylovna",
+   "name": "ИП Артемьева Виктория Михайловна",
+   "latin": "IP Artemeva Viktoriya Mikhaylovna",
+   "tier": "adjacent",
+   "inn": "350102453754",
+   "channels": [],
+   "last_register_pull": "2026-10-06",
+   "screened": null,
+   "sanctioned": false,
+   "flags": [
+    {
+     "kind": "pull",
+     "code": "screen_never",
+     "text": "Never screened: OpenSanctions, ГУР war-sanctions, Aleph",
+     "due": [
+      "opensanctions",
+      "gur",
+      "aleph"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "5 open question(s)",
+     "count": 5
+    }
+   ]
+  },
+  {
    "kind": "person",
    "slug": "vladimir-vadimovich-yakushev",
    "name": "Владимир Владимирович Якушев",
@@ -13796,7 +13826,7 @@
    "tier": "product",
    "maker": "ooo-trimiks",
    "versions": 4,
-   "deliveries": 17,
+   "deliveries": 18,
    "last_delivery": "2026-05-19",
    "flags": [
     {
