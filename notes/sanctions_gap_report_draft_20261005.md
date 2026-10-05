@@ -15,18 +15,18 @@ packet's §7 leaves the conclusion and statutory criterion for whoever submits i
 
 ## 1. The finding
 
-The registry ties 74 organisations to ЦБСТ (Центр беспилотных систем и
+The registry ties 70 organisations to ЦБСТ (Центр беспилотных систем и
 технологий) / РОЙ.МАРКЕТ, Russia's state-linked drone-industry marketplace
 and its parent body. Checked against the EU, US (OFAC), UK and Swiss
 sanctions lists by ИНН/ОГРН as of the 05.10.2026 weekly watch run:
 
 - **22 listed** on at least one of the four regimes by identifier.
-- **52 carry no identifier match on any of the four**: not proof of
+- **48 carry no identifier match on any of the four**: not proof of
   absence (a list can name a company without its tax/registration number,
   and only four regimes were checked this way), but the gap the project
   exists to surface.
 
-Of those 52, **five have real, filed revenue large enough to matter and no
+Of those 48, **five have real, filed revenue large enough to matter and no
 Western designation at all**. These are the five packets:
 
 | Company | ИНН | FY2025 revenue (₽m) | ЦБСТ tie grade |
@@ -97,14 +97,18 @@ documented on the assumption that «Гаскар Групп» in ЦБСТ's post
 meant this company. The post prints no ИНН; a search for «Гаскар» in 2,474
 @ANO_CBST posts on 04.10.2026 returned that one hit. The tie is now
 "not established", so ООО «Гаскар» drops out of the table above (its ₽9.8bn
-revenue is no longer counted), and СТИМС's own tie is graded t-open (ЦБСТ's post
-names «Гаскар Групп» among the contour's EU-listed organisations, without
-identifiers). The Гаскар packet is kept only as the record of that correction. Its
+revenue is no longer counted), and СТИМС's own tie is graded t-doc (ЦБСТ's post
+names «Гаскар Групп» among the contour's organisations that the EU listed, and the EU act's
+printed identifiers for that entry give СТИМС; this regrade of 06.10.2026 is a judgment call stated in the record). The Гаскар packet is kept only as the record of that correction. Its
 Canada entry (an OpenSanctions record under the name "EVR") has not been read
 against Canada's list.
 
 **Why this matters for submission**: naming the wrong legal entity in a
 sanctions submission is the kind of error that gets a whole filing discounted.
+
+## 3a. The 14 weakest ties, reviewed (06.10.2026)
+
+Fourteen of the 74 ties were graded t-open or press: no document identified the company. Each was re-read against the posts and registers. Outcomes: **four withdrawn** (the association behind «Дронница 2024», which ЦБСТ never names and which stays as the event's organiser; «Пехтра» and «VA Technologies», accelerator participants now recorded as programme members; «РТД-Защита», tied only through a shared director), **one raised** (СТИМС, above), **one regraded down** (ООО «Группа компаний «Логос»» of Volgograd, from t-doc to t-open, because it matched on its legal name alone), and **eight kept at t-open or press** with their limits restated. The review also found that the identifier on the record for the ЦБСТ resident «группа компаний «Логос»» (ИНН 7839303129) belongs to a Saint Petersburg company liquidated in 2008, a wrong identifier of the same kind as the Гаскар and Александров cases; the record is now a brand stub, with three candidate companies on file and none confirmed. The number of tied organisations is 70, 61 documented before this regrading, 60 after it.
 
 ## 4. What else the verification pass fixed (no longer open)
 
@@ -190,7 +194,7 @@ what wasn't.
 - [ООО НПО «Киловатт» (Шестопалов)](packets/ooo-npo-kilovatt-shestopalov.md)
 - [ООО «ОПКБ Экспломет»](packets/ooo-opkb-eksplomet.md)
 - [ООО «Метаскан»](packets/ooo-metaskan.md)
-- [ООО «СТИМС»](packets/ooo-stims.md): listed (EU, Switzerland); tie graded t-open
+- [ООО «СТИМС»](packets/ooo-stims.md): listed (EU, Switzerland); tie graded t-doc
 - [ООО «Гаскар»](packets/ooo-gaskar.md): withdrawn from the set (§3); kept as the record of the correction
 
 ## 7. Recommended next step (not acted on — for Alexey to decide)

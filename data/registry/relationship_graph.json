@@ -2,7 +2,7 @@
   "schema_version": 12,
   "generated_from": "data/registry/entities.json + people.json + programs.json + products.json",
   "node_count": 1266,
-  "edge_count": 2189,
+  "edge_count": 2187,
   "unresolved_count": 114,
   "nodes": [
     {
@@ -253,7 +253,7 @@
       "legal_form": "АНО",
       "variant": null,
       "product_count": 0,
-      "degree": 100
+      "degree": 96
     },
     {
       "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -798,7 +798,7 @@
       "legal_form": null,
       "variant": null,
       "product_count": 0,
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "astakhov-sergey-petrovich",
@@ -2115,7 +2115,7 @@
       "kind": "entity",
       "label": "ГК «Логос»",
       "name_latin": null,
-      "inn": "7839303129",
+      "inn": null,
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
@@ -4410,7 +4410,7 @@
       "legal_form": "ООО",
       "variant": null,
       "product_count": 0,
-      "degree": 8
+      "degree": 7
     },
     {
       "id": "ooo-selskohozyaystvennye-bespilotnye-sistemy-mira",
@@ -11579,7 +11579,7 @@
       "kind": "program",
       "label": "Акселератор ЦБСТ для специальных проектов и проектов двойного назначения",
       "subtype": "accelerator",
-      "degree": 5
+      "degree": 7
     },
     {
       "id": "program::cbst-eco-accelerator",
@@ -14799,7 +14799,7 @@
       "source": "ao-npp-real",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
-      "label": "ЦБСТ's own channel names «НПП» and its representative Игорь Потапов as residents of ЦБСТ; АО «НПП» (Потапов, исполнит...",
+      "label": "ЦБСТ's own channel names «НПП» and its representative Игорь Потапов residents of ЦБСТ; АО «НПП» is matched to ИНН 972...",
       "source_id": "s7601",
       "as_of": null,
       "weight": 1.0,
@@ -16263,19 +16263,6 @@
       "confidence": null,
       "detail": null,
       "grade": "doc"
-    },
-    {
-      "source": "assotsiatsiya-vzaimopomoshch",
-      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-      "type": "cbst_tie",
-      "label": "Legal vehicle of the «Дронница» слёт, an event ЦБСТ lists in its own calendar and where its director lectured; person...",
-      "source_id": "s0445",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "t-open",
-      "detail": null,
-      "grade": "rep"
     },
     {
       "source": "assotsiatsiya-vzaimopomoshch",
@@ -22885,8 +22872,8 @@
       "source": "gk-logos",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
-      "label": "Own site (рэб.рус) states the group are \"Резиденты научных центров НПЦ БАС и ЦБСТ\" (residents of the НПЦ БАС and ЦБСТ...",
-      "source_id": "s8093",
+      "label": "ЦБСТ's own channel calls «группа компаний «Логос», developer of the «Дикобраз» jammers, a resident of ЦБСТ; the legal...",
+      "source_id": "s7585",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -28758,7 +28745,7 @@
       "source": "ooo-aeromaks",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
-      "label": "Named in ЦБСТ's own post of 24.04.2026 (t.me/ANO_CBST/2095) among «ряд других отечественных разработчиков дронов» add...",
+      "label": "ЦБСТ's own channel names «Аэромакс» three times, never as a resident: as a participant in a ЦБСТ-moderated panel, amo...",
       "source_id": "s7588",
       "as_of": null,
       "weight": 1.0,
@@ -30331,14 +30318,14 @@
       "source": "ooo-gk-logos",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
-      "label": "ЦБСТ's own channel directly names \"группа компаний «Логос»\" a \"резидентом ЦБСТ\" as the developer of the «Дикобраз» RF...",
+      "label": "ЦБСТ's own channel names «группа компаний «Логос»» a resident; this company carries that exact legal name, but the po...",
       "source_id": "s7585",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
-      "confidence": "t-doc",
+      "confidence": "t-open",
       "detail": null,
-      "grade": "doc"
+      "grade": "rep"
     },
     {
       "source": "ooo-goudron",
@@ -32741,19 +32728,6 @@
     },
     {
       "source": "ooo-pekhtra",
-      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-      "type": "cbst_tie",
-      "label": "Special-prize winner in ЦБСТ's 2025 accelerator (not stated as a resident).",
-      "source_id": "s7606",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "press",
-      "detail": null,
-      "grade": "rep"
-    },
-    {
-      "source": "ooo-pekhtra",
       "target": "product::ooo-pekhtra::периферийное-устройство-управления-компьютером-через-мышечные-сигналы",
       "type": "produces",
       "label": null,
@@ -32762,6 +32736,19 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null,
+      "detail": null,
+      "grade": "rep"
+    },
+    {
+      "source": "ooo-pekhtra",
+      "target": "program::cbst-accelerator",
+      "type": "resident_of",
+      "label": "participant",
+      "source_id": "s7606",
+      "as_of": "2025-06-04",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "press",
       "detail": null,
       "grade": "rep"
     },
@@ -32942,19 +32929,6 @@
       "confidence": null,
       "detail": null,
       "grade": "doc"
-    },
-    {
-      "source": "ooo-rtd-zashchita",
-      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-      "type": "cbst_tie",
-      "label": "Same director (Соколов Герман Олегович) as ООО «НПО Рустехдрон» (ИНН 5003155499, this registry's confirmed manufactur...",
-      "source_id": "s1161",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "press",
-      "detail": null,
-      "grade": "rep"
     },
     {
       "source": "ooo-sistemnyy-integrator",
@@ -33259,14 +33233,14 @@
       "source": "ooo-stims",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
-      "label": "Named by ЦБСТ's own channel, as «Гаскар Групп», among the organisations in its contour that the EU listed in its 20th...",
+      "label": "ЦБСТ's own channel states that «Гаскар Групп» is among the organisations in its contour that the EU listed in its 20t...",
       "source_id": "s7588",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
-      "confidence": "t-open",
+      "confidence": "t-doc",
       "detail": null,
-      "grade": "rep"
+      "grade": "doc"
     },
     {
       "source": "ooo-stratim",
@@ -40836,19 +40810,6 @@
     },
     {
       "source": "va-technologies",
-      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-      "type": "cbst_tie",
-      "label": "Participant in ЦБСТ's accelerator (third stream).",
-      "source_id": "s7605",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "t-open",
-      "detail": null,
-      "grade": "rep"
-    },
-    {
-      "source": "va-technologies",
       "target": "product::va-technologies::сова",
       "type": "produces",
       "label": null,
@@ -40859,6 +40820,19 @@
       "confidence": null,
       "detail": null,
       "grade": "open"
+    },
+    {
+      "source": "va-technologies",
+      "target": "program::cbst-accelerator",
+      "type": "resident_of",
+      "label": "participant",
+      "source_id": "s7605",
+      "as_of": "2026-08-03",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc",
+      "detail": null,
+      "grade": "doc"
     },
     {
       "source": "viktor-ilich-davydov",

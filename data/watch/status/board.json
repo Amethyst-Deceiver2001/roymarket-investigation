@@ -753,23 +753,18 @@
    "name": "ГК «Логос»",
    "latin": "GK «Logos»",
    "tier": "manufacturer",
-   "inn": "7839303129",
+   "inn": null,
    "channels": [
     "Logosrus"
    ],
-   "last_register_pull": "2026-09-07",
+   "last_register_pull": null,
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
     {
-     "kind": "stale",
-     "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
-     "as_of": "2026-09-05",
-     "age_days": 31,
-     "due": [
-      "gur"
-     ]
+     "kind": "gap",
+     "code": "identity_unresolved",
+     "text": "Brand without a resolved legal entity (recorded as unresolved)"
     },
     {
      "kind": "review",
@@ -779,8 +774,8 @@
     {
      "kind": "review",
      "code": "open_questions",
-     "text": "10 open question(s)",
-     "count": 10
+     "text": "12 open question(s)",
+     "count": 12
     },
     {
      "kind": "behind",
@@ -1376,11 +1371,6 @@
     },
     {
      "kind": "review",
-     "code": "tie_not_documented",
-     "text": "ЦБСТ tie is graded press: no document establishes it"
-    },
-    {
-     "kind": "review",
      "code": "open_questions",
      "text": "2 open question(s)",
      "count": 2
@@ -1797,11 +1787,6 @@
      "due": [
       "gur"
      ]
-    },
-    {
-     "kind": "review",
-     "code": "tie_not_documented",
-     "text": "ЦБСТ tie is graded t-open: no document establishes it"
     },
     {
      "kind": "review",
@@ -4209,6 +4194,11 @@
      "due": [
       "gur"
      ]
+    },
+    {
+     "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
     }
    ]
   },
@@ -4262,11 +4252,6 @@
      "kind": "review",
      "code": "sanction_unread",
      "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
-    },
-    {
-     "kind": "review",
-     "code": "tie_not_documented",
-     "text": "ЦБСТ tie is graded t-open: no document establishes it"
     },
     {
      "kind": "review",
@@ -4586,11 +4571,6 @@
      "due": [
       "gur"
      ]
-    },
-    {
-     "kind": "review",
-     "code": "tie_not_documented",
-     "text": "ЦБСТ tie is graded press: no document establishes it"
     },
     {
      "kind": "review",
@@ -7169,11 +7149,6 @@
       "opensanctions",
       "gur"
      ]
-    },
-    {
-     "kind": "review",
-     "code": "tie_not_documented",
-     "text": "ЦБСТ tie is graded t-open: no document establishes it"
     },
     {
      "kind": "review",
@@ -15188,7 +15163,7 @@
   {
    "id": "weak_ties",
    "label": "ЦБСТ ties not backed by a document",
-   "value": "14",
+   "value": "10",
    "status": "watch",
    "detail": "Ties graded t-open or press (flag tie_not_documented).",
    "as_of": null

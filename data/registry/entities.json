@@ -8757,7 +8757,7 @@
     "legal_form": null,
     "brand_ru": "«Логос» / РЭБ.РУС",
     "brand_latin": null,
-    "inn": "7839303129",
+    "inn": null,
     "ogrn": null,
     "registered": null,
     "address": null,
@@ -8815,10 +8815,10 @@
     "subsidiaries": [],
     "tier": "manufacturer",
     "cbst_tie": {
-      "claim": "Own site (рэб.рус) states the group are \"Резиденты научных центров НПЦ БАС и ЦБСТ\" (residents of the НПЦ БАС and ЦБСТ research centers) with proprietary counter-drone software.",
+      "claim": "ЦБСТ's own channel calls «группа компаний «Логос», developer of the «Дикобраз» jammers, a resident of ЦБСТ; the legal entity is unresolved.",
       "confidence": "t-open",
-      "evidence": "Self-declared on рэб.рус, checked directly 23.08.2026, archived 2026-09-29 (WEBCAPTURE, s8093): \"Резиденты НПЦ БАС, ЦБСТ — доступ к компетенциям и оборудованию\".",
-      "source_id": "s8093"
+      "evidence": "ЦБСТ's own channel, post 878 (04.07.2025, s7585), on the hand-over of REW kits to war correspondents: «средства радиоэлектронной борьбы «Дикобраз», разработанные группой компаний «Логос» — резидентом ЦБСТ». The group's own site (рэб.рус, s8093, s9321) lists the «Дикобраз» line and says «Резиденты НПЦ БАС, ЦБСТ»; its privacy page prints no legal entity (s9322). The ИНН 7839303129 formerly held on this record came from the retired brief and belongs to ООО ГРУППА КОМПАНИЙ «ЛОГОС» of Saint Petersburg, registered 25.08.2004 and LIQUIDATED 11.08.2008, last activity retail food trade (ЕГРЮЛ extracts s6754 of 07.09.2026 and s9320 of 06.10.2026): it cannot be the group behind «Дикобраз». The tie therefore attaches to the group brand, not to a legal entity.",
+      "source_id": "s7585"
     },
     "wb_overlap": "none_found",
     "products": [
@@ -8970,6 +8970,14 @@
       {
         "source_id": "s7585",
         "text": "IDENTITY OF THE «ЛОГОС» RESIDENT (2026-10-02): ЦБСТ post 878 (04.07.2025) says «группой компаний «Логос» — резидентом ЦБСТ» and names no legal form or ИНН. The cbst-residency membership on this record rests on the post plus this entity's own site (рэб.рус), which self-declares residency and sells «Дикобраз»-line jammers. The record of ooo-gk-logos (ИНН 3435149330, Волжский) reads the same post as naming it, and its legal name is literally «Группа компаний «Логос»». Neither reading is documented by an identifier. Also unreconciled: ooo-gk-logos's tier note gives ИНН 1001294845 for gk-logos, while this record carries 7839303129."
+      },
+      {
+        "source_id": "s9320",
+        "text": "Which legal entity is the resident «группа компаний «Логос»»? The three candidates are on file (a liquidated Saint Petersburg ООО, a 2025 Volgograd ООО, and ООО «РЕШЕНИЕ» of Petrozavodsk). A document that prints an ИНН for the maker of «Дикобраз» is needed: the Rospatent software certificate №2025682258 named in the group's presentation (s0546) or a contract or offer from рэб.рус."
+      },
+      {
+        "source_id": "s0569",
+        "text": "ООО «ГРУППА КОМПАНИЙ «ЛОГОС»» of Volgograd oblast (ИНН 3435149330, registered 16.06.2025, director Бурлака П. А.; record ooo-gk-logos) carries the group's exact legal name and was registered shortly before ЦБСТ's post 878. Whether it is a subsidiary, a distributor or an unrelated namesake of the group behind рэб.рус is not established; it is not a candidate here because it is a live record of its own."
       }
     ],
     "sources": [],
@@ -8997,6 +9005,33 @@
         "note": "ЦБСТ's own channel, post 878: «группой компаний «Логос» — резидентом ЦБСТ»."
       }
     ],
+    "cbst_channel_review": {
+      "as_of": "2026-10-06",
+      "outcome": "tie_wired",
+      "posts_read": [
+        878
+      ],
+      "note": "Post 878 names the group a resident (own channel, archived s7585). The identifier on this record was wrong (a company liquidated in 2008); the record is now a brand stub with candidate identities."
+    },
+    "legal_entity_status": "unresolved",
+    "candidate_identities": [
+      {
+        "name_ru": "ООО ГРУППА КОМПАНИЙ «ЛОГОС» (Санкт-Петербург)",
+        "inn": "7839303129",
+        "status": "rejected",
+        "as_of": "2026-10-06",
+        "source_id": "s9320",
+        "note": "ЕГРЮЛ extract of 06.10.2026: registered 25.08.2004, liquidated 11.08.2008, activity code 52.27.39 (retail of other food products), director and sole participant Тращёнок Л. Е. Rejected: a company that ceased in 2008 cannot be the maker of the «Дикобраз» line. This ИНН came from the retired brief."
+      },
+      {
+        "name_ru": "ООО «РЕШЕНИЕ» (Петрозаводск)",
+        "inn": "1001294845",
+        "status": "unverified",
+        "as_of": "2026-10-06",
+        "source_id": "s0546",
+        "note": "The group's own presentation (s0546) calls it «головная компания ГК Логос»; the accounts on this record were filed by it. The registry's earlier read of its extract records that it changed its activity codes to radio-electronic-warfare hardware manufacture on 20.06.2025 (see the notes on ooo-gk-logos). The name «Решение» is generic and no register document names the group as its brand; still the strongest candidate for the maker of the «Дикобраз» line."
+      }
+    ],
     "_corrected": [
       "Deck downloaded from spp.spb.ru (Союз промышленников и предпринимателей Санкт-Петербурга и Ленинградской области — a real regional industrialists' union), archived to data/sources/ (TRANSCRIPT_20260401_gk-logos-spp-spb-rebrus-pvo-presentation.pdf). Titled \"РЭБ.РУС — Создание единой системы обнаружения и подавления беспилотных аппаратов Региона\", presented by Николай Владимирович, директор по развитию ГК Логос, ООО «Решение». Content dated internally \"Актуальность: апрель 2026\".",
       "Confirms and extends the brief's existing scaffold: the pre-existing «Дикобраз» roof-box EW jammer description (400+ units fielded, war-correspondent vehicles) is the SAME product family as this deck's «Дикобраз-М6»/«Дикобраз-М8» line.",
@@ -9013,7 +9048,8 @@
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
       "[2026-09-15] wb_overlap=none_found: Brand-name search for «Дикобраз-М6»/«Дикобраз-М8»/«Логос С8» on wildberries.ru (2026-09-15) found no product listing — sold only via the entity's own site (рэб.рус).",
-      "2026-09-30: Labelled the five financials rows (s0553-s0557) as ООО «Решение»'s filings: the БФО zips are filed under ИНН 1001294845 (cover sheet read 2026-09-30, ООО «РЕШЕНИЕ», Петрозаводск), not this record's ИНН. The proxy is deliberate (parent per the group's own presentation, s0546, still an open question) but was unlabelled."
+      "2026-09-30: Labelled the five financials rows (s0553-s0557) as ООО «Решение»'s filings: the БФО zips are filed under ИНН 1001294845 (cover sheet read 2026-09-30, ООО «РЕШЕНИЕ», Петрозаводск), not this record's ИНН. The proxy is deliberate (parent per the group's own presentation, s0546, still an open question) but was unlabelled.",
+      "06.10.2026 tie closure pass (14 records graded t-open or press): gk-logos: ИНН 7839303129 removed (liquidated 2008 namesake); record is a brand stub, legal entity unresolved."
     ],
     "_verified_against": "TRANSCRIPT_20260401_gk-logos-spp-spb-rebrus-pvo-presentation.pdf (s0546); рэб.рус read directly 23.08.2026; b95.ru press coverage read via WebSearch 23.08.2026. Also: s0547 (srro.ru Rostov round table, 26.05.2026). Also: full EGRUL extract s0552; founding docs s0550; БФО FY2021-2025 (s0553, s0554, s0555, s0556, s0557).",
     "name_display": "GK «Logos»",
@@ -18814,6 +18850,14 @@
       "note": "Screened OpenSanctions, GUR (sanctions + UAV-industry registries), GUR components teardown, and Aleph/OCCRP (as_of 2026-09-05/06) — zero matches returned across all four sources. No designation evidence found."
     },
     "tier_basis": "Thin direct record — no sanctions, products or cbst_tie found; ОКВЭД is software consulting. Included on the strength of an own-name invention patent (RU2857656C1, filed 2025, \"Способ управления функционированием беспроводной сенсорной сети\" — a wireless sensor-network control method, a component technology relevant to UAV swarm/mesh communications) and ₽73m peak (FY2024) revenue; flagged as a comparatively weak basis pending a clearer product-level link.",
+    "cbst_channel_review": {
+      "as_of": "2026-10-06",
+      "outcome": "tie_wired",
+      "posts_read": [
+        2186
+      ],
+      "note": "Post 2186 names the company under a headline about residents without calling it one; grade kept."
+    },
     "_corrected": [
       "2026-09-19: cbst_tie added from ЦБСТ's own channel / press, quote and post read against the archived source; only ties where the text names the company or its director.",
       "full EGRUL extract pulled directly 23.08.2026 (ul-1227300004282-20260823131727.pdf). Sole founder = sole director. Ulyanovsk — same region as СКБ Пиранья in this same batch, both software-registered; worth checking whether Ulyanovsk is emerging as a regional cluster the way Zhukovsky/Taganrog are for aerospace-specific registrations.",
@@ -18822,7 +18866,8 @@
       "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 4 filing-year record(s).",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-      "[2026-09-30] products: added 2 product(s) from archived Telegram posts (s8551); descriptions restate the post, and specifications are the source's own claims."
+      "[2026-09-30] products: added 2 product(s) from archived Telegram posts (s8551); descriptions restate the post, and specifications are the source's own claims.",
+      "06.10.2026 tie closure pass (14 records graded t-open or press): ooo-eyartek: reviewed, grade kept."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "name_display": "OOO «EyArTek»",
@@ -20699,9 +20744,9 @@
     "subsidiaries": [],
     "tier": "manufacturer",
     "cbst_tie": {
-      "claim": "Special-prize winner in ЦБСТ's 2025 accelerator (not stated as a resident).",
-      "confidence": "press",
-      "evidence": "Наша Правда channel msg 443, 04.06.2025, citing Коммерсантъ: «Центр беспилотных систем и технологий, учрежденный фондом «Наша Правда» и ПСБ, подвел итоги акселератора проектов специального и двойного назначения ... Социальные проекты компаний «Ментастеп» ... и «Пехтра», занимающейся разработкой периферийного устройства управления компьютером через мышечные сигналы ... получили специальный приз от фонда «Наша Правда»». The five winners who become residents are named separately and do not include Пехтра. The post gives no ИНН; the match to ИНН 5261138034 rests on the product description and the registry's earlier identification.",
+      "claim": "Not established as a ЦБСТ tie. The company took part in the ЦБСТ accelerator (special-prize winner); that is a programme membership, recorded as such, not a tie to ЦБСТ.",
+      "confidence": "not_established",
+      "evidence": "ЦБСТ's 2025 accelerator: «Пехтра» is named as a special-prize winner (Наша Правда msg 443, citing Коммерсантъ, s7606); not a resident. Search «Пехтра» in the ЦБСТ channel: 0 hits. Accelerator participation does not make a company a resident, and no post says it did.",
       "source_id": "s7606"
     },
     "wb_overlap": "none_found",
@@ -20775,6 +20820,24 @@
       "brief:prose"
     ],
     "tier_basis": "Sanctioned per OpenSanctions (ID-confirmed via exact ИНН match; regime/primary source URL not returned by the aggregator, so treat as PLAUSIBLE pending a primary-list read). Founded/100%-owned by «Стартап-студия университета Лобачевского», an R&D-incubator vehicle; ОКВЭД is applied natural/technical-science research. No named product on file — thin direct evidence beyond the sanctions match and its incubator lineage; flagged for a closer look.",
+    "cbst_channel_review": {
+      "as_of": "2026-10-06",
+      "outcome": "named_no_tie",
+      "posts_read": [
+        443
+      ],
+      "note": "Read Наша Правда msg 443 (04.06.2025, s7606, citing Коммерсантъ): «Пехтра» is a special-prize winner of ЦБСТ's accelerator, not a resident. Search «Пехтра» in the ЦБСТ channel: 0 hits. Accelerator participant only; modelled as a membership of the accelerator programme."
+    },
+    "memberships": [
+      {
+        "program": "cbst-accelerator",
+        "role": "participant",
+        "basis": "press",
+        "source_id": "s7606",
+        "as_of": "2025-06-04",
+        "note": "special-prize winner. ЦБСТ's 2025 accelerator: «Пехтра» is named as a special-prize winner (Наша Правда msg 443, citing Коммерсантъ, s7606); not a resident. Search «Пехтра» in the ЦБСТ channel: 0 hits."
+      }
+    ],
     "_corrected": [
       "2026-09-19: cbst_tie added -- accelerator prize winner per Наша Правда's channel citing Коммерсантъ; press-tier because it is a prize, not residency, and the Коммерсантъ original was not retrieved.",
       "full EGRUL extract pulled directly 23.08.2026 (ul-1245200032406-20260823132846.pdf if applicable / actually 131828). ООО «Пехтра» is 100%-owned by ООО «Стартап-студия университета Лобачевского» (ИНН 5261135844) — Lobachevsky University's (Nizhny Novgorod) own startup incubator vehicle. A genuine university-technology-transfer link, distinct from the government/ЦБСТ-adjacent incubator pattern seen elsewhere in this registry (cf. Ушкуйник/Платформа НТИ) — worth tracking as a third institutional-sponsorship type if more university-owned entities turn up.",
@@ -20785,7 +20848,8 @@
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
       "[2026-09-30] products: added 1 product(s) from archived Telegram posts (s8547); descriptions restate the post, and specifications are the source's own claims.",
-      "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
+      "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions).",
+      "06.10.2026 tie closure pass (14 records graded t-open or press): ooo-pekhtra: ЦБСТ tie withdrawn; accelerator membership recorded."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "name_display": "OOO «Pekhtra»",
@@ -21939,7 +22003,7 @@
     "cbst_tie": {
       "claim": "ЦБСТ's channel calls the company's development director a ЦБСТ resident.",
       "confidence": "t-open",
-      "evidence": "ЦБСТ channel msg 1135, 22.08.2025: «директора по развитию компании «Боевые технологии» Владимира Потехина, резидента ЦБСТ». Matches by company name and the director's name; no ИНН in the post. The entity's earlier tier_basis says it is not part of the network and predates this post -- unreconciled, see open questions.",
+      "evidence": "ЦБСТ channel msg 1135, 22.08.2025: «директора по развитию компании «Боевые технологии» Владимира Потехина, резидента ЦБСТ». Matches by company name and the director's name; no ИНН in the post. The entity's earlier tier_basis says it is not part of the network and predates this post -- unreconciled, see open questions. Read again on 06.10.2026 (msg 1135, s9325, quoting Коммерсантъ): the post names Потехин as «директора по развитию компании «Боевые технологии»» and «резидента ЦБСТ». The ЕГРЮЛ of ООО «Боевые технологии» (ИНН 5262393781) lists Потехин Владимир Александрович as director and 100% founder. The first name and surname match, the post gives no patronymic or ИНН, and a development director is not the register's director, so the match supports but does not prove the identity.",
       "source_id": "s7602"
     },
     "wb_overlap": "not_checked",
@@ -22041,8 +22105,17 @@
         "source_id": "s5659"
       }
     ],
+    "cbst_channel_review": {
+      "as_of": "2026-10-06",
+      "outcome": "tie_wired",
+      "posts_read": [
+        1135
+      ],
+      "note": "Post 1135 calls Потехин of «Боевые технологии» a ЦБСТ resident. The register supports the identity by name only; grade kept."
+    },
     "_corrected": [
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "06.10.2026 tie closure pass (14 records graded t-open or press): ooo-boevye-tekhnologii: grade kept t-open; the ЕГРЮЛ name match recorded."
     ],
     "_verified_against": null,
     "name_display": "OOO «Boevye tekhnologii»",
@@ -26756,9 +26829,9 @@
     "subsidiaries": [],
     "tier": "manufacturer",
     "cbst_tie": {
-      "claim": "Participant in ЦБСТ's accelerator (third stream).",
-      "confidence": "t-open",
-      "evidence": "ЦБСТ channel msg 2379, 03.08.2026: «VA Technologies является участником третьего потока Акселератора Центра беспилотных систем и технологий (ЦБСТ)». Accelerator participant, not stated as a resident.",
+      "claim": "Not established as a ЦБСТ tie. The company took part in the ЦБСТ accelerator (participant, third stream); that is a programme membership, recorded as such, not a tie to ЦБСТ.",
+      "confidence": "not_established",
+      "evidence": "ЦБСТ msg 2379 (03.08.2026, s7605): «VA Technologies является участником третьего потока Акселератора ЦБСТ»; not a resident. Accelerator participation does not make a company a resident, and no post says it did.",
       "source_id": "s7605"
     },
     "wb_overlap": "none_found",
@@ -26836,6 +26909,24 @@
       "outcome": "closed",
       "note": "Screened OpenSanctions, GUR (sanctions + UAV-industry registries), GUR components teardown, and Aleph/OCCRP (as_of 2026-09-05/06) — zero matches returned across all four sources. No designation evidence found."
     },
+    "cbst_channel_review": {
+      "as_of": "2026-10-06",
+      "outcome": "named_no_tie",
+      "posts_read": [
+        2379
+      ],
+      "note": "Accelerator participant only; modelled as a membership of the accelerator programme."
+    },
+    "memberships": [
+      {
+        "program": "cbst-accelerator",
+        "role": "participant",
+        "basis": "doc",
+        "source_id": "s7605",
+        "as_of": "2026-08-03",
+        "note": "participant, third stream. ЦБСТ msg 2379 (03.08.2026, s7605): «VA Technologies является участником третьего потока Акселератора ЦБСТ»; not a resident."
+      }
+    ],
     "_corrected": [
       "2026-09-19: cbst_tie added from ЦБСТ's own channel / press, quote and post read against the archived source; only ties where the text names the company or its director.",
       "User-identified lead confirmed: VA Technologies (va-technologies.ru) is the product/brand site for ООО «Конструкторское бюро СОВА» (ИНН 2378001237, ОГРН 1252300058515) — the site's own product, «СОВА», is a direct name+description match to the pitch deck's \"SOVA\" navigation module, and the EGRUL extract's sole founder/director, Сотов Артём Александрович, matches the pitch deck's named founder \"Артём Сотов\" exactly.",
@@ -26845,7 +26936,8 @@
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (2378001237). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
-      "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
+      "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
+      "06.10.2026 tie closure pass (14 records graded t-open or press): va-technologies: ЦБСТ tie withdrawn; accelerator membership recorded."
     ],
     "_verified_against": "s0566; s0565; s0567; va-technologies.ru read directly 23.08.2026.",
     "name_display": "OOO «Konstruktorskoe byuro SOVA»",
@@ -26988,9 +27080,9 @@
     "tier": "manufacturer",
     "cbst_tie": {
       "claim": "ЦБСТ's channel names the UAVintec brand's general director, whose initials match this entity's director; which ИНТЭК entity is the resident is unresolved.",
-      "evidence": "ЦБСТ post 953, 24.07.2025: «Резиденты ЦБСТ продолжают развивать ключевые направления в области тяжёлых беспилотных систем… Разработанный компанией UAVintec дрон на гибкой мачте «Вихрь-1МП»… Генеральный директор UAVintec Калиновский Н.В уточнил» [s8667]; ЦБСТ post 2301, 09.07.2026: «Резидент ЦБСТ представил новые БпЛА на «Дрон Экспо» в Казани. Компания Intec… «Метеор-2»» [s8676]. The director of this entity is Калиновский Никита Владиславович (ЕГРЮЛ), but the @uavintec channel names the other entity, ООО «ИНТЭК ПРОМЫШЛЕННЫЕ СИСТЕМЫ» [s8677]. Identity basis: name_only (initials + brand).",
-      "source_id": "s8667",
-      "confidence": "t-open"
+      "confidence": "t-open",
+      "evidence": "ЦБСТ post 953, 24.07.2025: «Резиденты ЦБСТ продолжают развивать ключевые направления в области тяжёлых беспилотных систем… Разработанный компанией UAVintec дрон на гибкой мачте «Вихрь-1МП»… Генеральный директор UAVintec Калиновский Н.В уточнил» [s8667]; ЦБСТ post 2301, 09.07.2026: «Резидент ЦБСТ представил новые БпЛА на «Дрон Экспо» в Казани. Компания Intec… «Метеор-2»» [s8676]. The director of this entity is Калиновский Никита Владиславович (ЕГРЮЛ), but the @uavintec channel names the other entity, ООО «ИНТЭК ПРОМЫШЛЕННЫЕ СИСТЕМЫ» [s8677]. Identity basis: name_only (initials + brand). Reviewed 06.10.2026: the tie to the brand's resident status is held on the sibling ООО «ИНТЭК ПРОМЫШЛЕННЫЕ СИСТЕМЫ», which the brand's own channel names; this record keeps only the director match.",
+      "source_id": "s8667"
     },
     "wb_overlap": "none_found",
     "products": [
@@ -27067,6 +27159,15 @@
       "notes": "«Метеор-2» monitoring/reconnaissance quadcopter, shown at «Дрон Экспо» Kazan (09.07.2026), positioned as a domestic DJI Mavic analogue. Resolved 21.08.2026: ИНН 7000013316, ОГРН 1247000000488, registered 24.01.2024 — the drone-specific arm of the wider Группа компаний ИНТЭК (Tomsk), alongside sibling entities ООО «ИНТЭК ПРОМЫШЛЕННЫЕ СИСТЕМЫ» and ООО «ИНТЭК-ИНЖИНИРИНГ», both also directed by a Калиновский. Its FY2024–2025 БФО (nalog.gov.ru, user-supplied, 21.08.2026) shows no recorded revenue in either year (₽10k net loss in 2024, break-even in 2025) — the entity appears pre-revenue/newly spun-off, suggesting the actual «Метеор-2» commercial activity may run through a sibling ИНТЭК entity rather than this one."
     },
     "tier_basis": "Sanctioned per OpenSanctions (ID-confirmed via exact ИНН match; regime/primary source URL not returned by the aggregator, treat as PLAUSIBLE pending a primary-list read). Legal name itself declares UAV manufacture (\"ИНТЭК БЕСПИЛОТНЫЕ СИСТЕМЫ\"), with a named product (\"Метеор-2\") on file, jointly founded 50/50 by ООО «ИНТЭК» and an affiliated IT-services vehicle.",
+    "cbst_channel_review": {
+      "as_of": "2026-10-06",
+      "outcome": "lead_open",
+      "posts_read": [
+        953,
+        2301
+      ],
+      "note": "Posts 953 and 2301 name the brand; the director matches this entity, the channel names the sibling. Unresolved; grade kept."
+    },
     "_corrected": [
       "REAL FINDING — statutory director disqualification: this entity's EGRUL record's own filing history (record 7 of the extract's \"Сведения о записях\" log) shows «Принятие судом решения о дисквалификации лица, имеющего право без доверенности действовать от имени юридического лица» (court decision disqualifying the person with signing authority) — постановление dated 28.04.2025, entered into EGRUL 04.09.2025. This is a serious primary-document fact (a court-ordered director disqualification), not yet reflected anywhere else in this registry, and should be treated as an open question pending identification of who was disqualified and why.",
       "full EGRUL extract pulled directly 23.08.2026 (ul-1247000000488-20260823132000.pdf, 11pp). 25th listed secondary ОКВЭД is explicitly 25.40 \"Производство оружия и боеприпасов\" (arms and ammunition manufacture) — a direct, unambiguous defence-industrial code, alongside 30.30 (aircraft manufacture) — among the most explicit ОКВЭД profiles found in this registry so far, not requiring the \"declared vs actual\" inference this project usually has to make.",
@@ -27078,7 +27179,8 @@
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
       "[2026-10-01 ЦБСТ resident sweep] Products corrected: removed «Дрон Экспо» (an exhibition in Kazan, not a product), «ИНТЭК ПРОМЫШЛЕННЫЕ СИСТЕМЫ» (a separate company, now its own record `ooo-intek-promyshlennye-sistemy`) and «ИНТЭК-ИНЖИНИРИНГ» (appears in no archived post or page among 328k posts, so no source). «Метеор-2» is kept: ЦБСТ post 2301 presents it for Intec [s8676]. cbst_tie set t-open, not t-doc, because two ИНТЭК entities fit the brand.",
-      "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
+      "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions).",
+      "06.10.2026 tie closure pass (14 records graded t-open or press): ooo-intek-bespilotnye-sistemy: reviewed, unresolved between two ИНТЭК entities."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "name_display": "OOO «INTEK BESPILOTNYE SISTEMY»",
@@ -27317,9 +27419,9 @@
     "tier": "manufacturer",
     "cbst_tie": {
       "claim": "ЦБСТ's post of 17.04.2026 about portable charging stations «Эгеон» is headed «Резидент ЦБСТ…»; a forward of it in mil_hub names «Титан Северо-Запад» as the company, while ЦБСТ's current text of the same post does not.",
+      "confidence": "press",
       "evidence": "mil_hub/128337, copied 17.04.2026 10:46 UTC as a forward of ANO_CBST/2080: «Резидент ЦБСТ наладил производство портативных зарядных станций в виде кейсов. Петербургская компания «Титан Северо-Запад» развернула выпуск портативных зарядных станций (ПЗС) «Эгеон»» [s8675]. ЦБСТ's post 2080 as now stored reads «Компания из Санкт-Петербурга развернула выпуск…» and was edited 20.04.2026 [s8674]. The forward was itself edited on mil_hub at 15:27 UTC the same day, so the archive cannot show whether the name came from ЦБСТ's original text or from mil_hub. Graded press for that reason. Identity basis: press_named.",
-      "source_id": "s8675",
-      "confidence": "press"
+      "source_id": "s8675"
     },
     "wb_overlap": "none_found",
     "products": [
@@ -27471,6 +27573,14 @@
         "note": "mil_hub post 128337 (aggregator repost): «Резидент ЦБСТ наладил производство портативных зарядных станций…», «Петербургская компания «Титан Северо-Запад»». ЦБСТ edits posts after publication and a name was removed from its own post 2080; the original is not confirmed."
       }
     ],
+    "cbst_channel_review": {
+      "as_of": "2026-10-06",
+      "outcome": "tie_wired",
+      "posts_read": [
+        2080
+      ],
+      "note": "Search «Эгеон» in the channel: one hit, post 2080, whose current text does not name the company; the name rests on a forward. Grade kept at press."
+    },
     "_corrected": [
       "Rospatent full-roster sweep (s0433), 1 trademark filing(s) matched by ИНН.",
       "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 5 fiscal year(s) with revenue/profit data.",
@@ -27484,7 +27594,8 @@
       "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
       "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
       "[2026-10-01 ЦБСТ resident sweep] cbst_tie set press from the mil_hub forward [s8675]; found by scripts/cbst_resident_sweep.py, which matched «Титан Северо-Запад» despite the spaced hyphen in the registry name.",
-      "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
+      "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions).",
+      "06.10.2026 tie closure pass (14 records graded t-open or press): ooo-titan-severo-zapad: reviewed, grade kept at press."
     ],
     "_verified_against": null,
     "name_display": "OOO «TITAN - SEVERO-ZAPAD»",
@@ -29128,9 +29239,9 @@
     "tier": "manufacturer",
     "tier_basis": "brief section: 525 residents, and how many of them are under EU sanctions",
     "cbst_tie": {
-      "claim": "Named in ЦБСТ's own post of 24.04.2026 (t.me/ANO_CBST/2095) among «ряд других отечественных разработчиков дронов» added to the EU's 20th package (««Аэромакс», «Котлин-Новатор», «Клеверкоптер», а также МФТИ — за партнёрство с разработчиками БпЛА»). The post does not call the company a resident; the EU's Council Decision (CFSP) 2026/504 (entry 759) names LLC \"AEROMAKS\" (ИНН 7725347482) directly.",
+      "claim": "ЦБСТ's own channel names «Аэромакс» three times, never as a resident: as a participant in a ЦБСТ-moderated panel, among developments of the ЦБСТ ecosystem «и проектов более широкого отраслевого контура», and as one of the «других отечественных разработчиков» on the EU list. The channel prints no ИНН, so which Аэромакс entity is meant is open.",
       "confidence": "t-open",
-      "evidence": "ЦБСТ's own channel, post 2095, read in full (s7588): the six-name sentence («Технодрон», «Гаскар Групп», СКБ «Пиранья», «Аэро-Хит», «Атлант Аэро» и «Архангел») is followed by «В юбилейный санкционный реестр Брюсселя попали ряд других отечественных разработчиков дронов: «Аэромакс», «Котлин-Новатор», «Клеверкоптер», а также МФТИ». The earlier wording (\"named directly as a sanctioned resident\", t-doc) rested on a paraphrase in the retired dossier draft, not on the post. Applies to ООО «Аэромакс» (ИНН 7725347482) through the EU entry, not to АО «Аэромакс» (ИНН 7708407413) or to ООО «ГК «Аэромакс»» (ИНН 7710974353).",
+      "evidence": "ЦБСТ's own channel: msg 900 (09.07.2025, s9324): the panel «Вид сверху лучше» moderated by ЦБСТ's chairman included «руководители компаний «Сверх», «Флайдрон», «Аэромакс», НПО «ОРК»»; msg 1686 (27.12.2025, s9328): in a review of «разработки своих резидентов в гражданской сфере», item 2 «Аэромакс», within «решения компаний, входящих в экосистему ЦБСТ, а также проекты более широкого отраслевого контура»; msg 2095 (24.04.2026, s7588): «Аэромакс» is in the sentence about «ряд других отечественных разработчиков дронов», not in the sentence about organisations «входящие в контур» of ЦБСТ. The EU entry (2026/504, entry 759) carries ИНН 7725347482 (ООО «Аэромакс»); the channel does not. The earlier t-doc wording rested on a paraphrase in the retired draft.",
       "source_id": "s7588"
     },
     "wb_overlap": "none_found",
@@ -29518,6 +29629,16 @@
         "source_id": "s8065"
       }
     ],
+    "cbst_channel_review": {
+      "as_of": "2026-10-06",
+      "outcome": "lead_open",
+      "posts_read": [
+        900,
+        1686,
+        2095
+      ],
+      "note": "Three posts name Аэромакс; none calls it a resident, and msg 1686 does not say whether it belongs to the ecosystem or the wider contour. No change of grade (t-open)."
+    },
     "_corrected": [
       "Rospatent full-roster sweep (s0433), 4 trademark filing(s) matched by ИНН.",
       "Full signed ЕГРЮЛ extract read end-to-end (s0218, ul-1177746007900-20260820195721.pdf, 28pp, pulled 20.08.2026). Confirms ОГРН, registration 09.01.2017, address, GD Бессонов С.Н. (personal ИНН 644914040799, in post 11.09.2025), and charter capital of ₽3,177,522,000 — ₽3.18bn, orders of magnitude above the typical roster entity and a fact the brief did not carry. Ownership is unredacted: 100% held by ООО «ГК «Аэромакс»» (ИНН 7710974353, ОГРН 1147748024269), which is itself already a registry entity — so this is a confirmed internal parent-subsidiary edge, recorded in both founders[] and parents[]. LICENCE FINDING: holds Rosreestr licence Л036-00116-77/00129950 (16.04.2018) for geodetic and cartographic work whose scope explicitly includes creating STATE topographic maps and geodetic networks and 'установление, изменение и уточнение прохождения Государственной границы Российской Федерации' — establishing and altering the Russian state border, plus boundaries between federal subjects. For a sanctions dossier that is a materially different fact from 'aerial survey company': it is state-border cartography under federal licence.",
@@ -29537,7 +29658,8 @@
       "2026-09-16 (coverage-gap agent pass, verified independently before wiring): verified directly against the full docs/index.html paragraph (not just a fragment) before wiring -- an agent flagged this as a possible footnote error based on only the six-name contour sentence, but the fuller paragraph (already read in full this session) confirms Аэромакс is named in a separate clause of the same post, not fabricated.",
       "[2026-10-02 claim corrected] cbst_tie rewritten and downgraded t-doc to t-open: post 2095, read in full, lists Аэромакс among «других отечественных разработчиков», not among the residents. Whether another document ties it to ЦБСТ is open.",
       "[2026-10-03 first reading of the 02.10 pulls, approved by Alexey] state_programs: ₽500m grant of 2022 added from the 2022 БФО re-pull (s9008), ОЦИС page read in full; 2022 financials note explains the deferred-tax profit; open question on the grantor.",
-      "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (Presidential sanctions decree/list)."
+      "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (Presidential sanctions decree/list).",
+      "06.10.2026 tie closure pass (14 records graded t-open or press): ooo-aeromaks: grade kept t-open, evidence now lists all three posts and what each does and does not say."
     ],
     "_verified_against": "s0218 — ООО «Аэромакс»'s own full signed ЕГРЮЛ extract, pulled 20.08.2026",
     "name_display": "OOO «Aeromaks»",
@@ -54841,6 +54963,14 @@
       "outcome": "closed",
       "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05). Aleph: 5 match(es), dataset categories=['company'] No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]."
     },
+    "cbst_channel_review": {
+      "as_of": "2026-10-06",
+      "outcome": "tie_wired",
+      "posts_read": [
+        2198
+      ],
+      "note": "Post 2198 presents the developer by brand; grade kept."
+    },
     "_corrected": [
       "2026-09-19: cbst_tie added from ЦБСТ's own channel / press, quote and post read against the archived source; only ties where the text names the company or its director.",
       "Rospatent full-roster sweep (s0433), 1 trademark filing(s) matched by ИНН.",
@@ -54849,7 +54979,8 @@
       "Full product catalog extracted from https://orsyst.ru/ (23.08.2026, site sweep).",
       "2026-08-24 wb_overlap check: no seller in wb_watch.db carries this entity's own ИНН (7743939185). A brand/product-name string sweep against wb_watch's seller trademarks also returned no ID-confirmed match (several superficial name overlaps were checked individually and ruled out by mismatched ИНН — e.g. generic words like «Титан»/«Прайм»/«Колибри» collide with unrelated sellers). Does not rule out sales via a reseller/different legal entity — 'none_found', not 'confirmed absent'.",
       "2026-08-24: rospatent full-roster patent sweep second-triage pass -- reviewed and REJECTED, no genuine patentee match among 20 candidates -- old Soviet-era filings with no patentee data, plus several clearly unrelated companies/institutes.",
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "06.10.2026 tie closure pass (14 records graded t-open or press): ooo-orient-sistems: reviewed, grade kept."
     ],
     "_verified_against": null,
     "name_display": "OOO «ORIENT SISTEMS»",
@@ -62651,9 +62782,9 @@
     "tier": "plumbing",
     "tier_basis": "Physically handled equipment delivery for Наша Правда — distributed «Дикобраз» hardware (400+ units already in combat use per the manufacturer) to troops of the «Центр» grouping, 03.07.2025. NOT confirmed to be corporately related to ГК «Логос»/ООО «Решение» (gk-logos, ИНН 1001294845, Petrozavodsk) despite sharing the «Логос» brand name and product line — this Volzhsky entity has a different founder (Гарькуша В.В.) and director (Бурлака П.А.), registered 16.06.2025 in Volgograd oblast, three months after ООО «Решение» pivoted its OKVED into RF/EW hardware manufacture (20.06.2025). Could be a distribution subsidiary, an independent reseller, or coincidental brand reuse — genuinely unresolved, not assumed either way.",
     "cbst_tie": {
-      "claim": "ЦБСТ's own channel directly names \"группа компаний «Логос»\" a \"резидентом ЦБСТ\" as the developer of the «Дикобраз» RF/EW jamming kits distributed to «Центр» grouping troops via «Единая Россия»/фонд «Наша Правда», 03.07.2025 — the same «Дикобраз»/400+ units-in-combat detail already recorded in this entity's own tier_basis, confirming this ИНН (not the unrelated ИНН 7839303129 gk-logos/РЭБ.РУС record) is the entity ЦБСТ's post refers to.",
-      "confidence": "t-doc",
-      "evidence": "ЦБСТ's own channel, post 2159491523:878, 04.07.2025: \"Военкорам переданы средства радиоэлектронной борьбы «Дикобраз», разработанные группой компаний «Логос» — резидентом ЦБСТ... По данным производителя, более 400 единиц этих комплексов уже находятся на боевом применении.\" This project's own scraped Telegram data (data/roymarket.db), not a data/sources/ document — no s#### id applies; the channel/post/date is the citation.",
+      "claim": "ЦБСТ's own channel names «группа компаний «Логос»» a resident; this company carries that exact legal name, but the post prints no identifier and the link between the group and this company is not established.",
+      "confidence": "t-open",
+      "evidence": "ЦБСТ's own channel, post 2159491523:878, 04.07.2025: \"Военкорам переданы средства радиоэлектронной борьбы «Дикобраз», разработанные группой компаний «Логос» — резидентом ЦБСТ... По данным производителя, более 400 единиц этих комплексов уже находятся на боевом применении.\" This project's own scraped Telegram data (data/roymarket.db), not a data/sources/ document — no s#### id applies; the channel/post/date is the citation. Regraded from t-doc on 06.10.2026: the match is by the name alone, and the group's own presentation names another company (ООО «Решение», Petrozavodsk) as its parent; this company was registered on 16.06.2025, three weeks before the post, after the «Дикобраз» line was already in use.",
       "source_id": "s7585"
     },
     "wb_overlap": "not_checked",
@@ -62726,8 +62857,17 @@
       "Disambiguation note added 23.08.2026 after ГК «Логос»'s actual parent, ООО «Решение» (Petrozavodsk, ИНН 1001294845), was fully identified and found to have NO confirmed corporate link to this Volzhsky entity — kept as a separate, independently-verified record rather than merged or removed, since its own facts (EGRUL registration, the 03.07.2025 «Дикобраз» delivery) stand on their own regardless of the relationship question.",
       "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. ОГРН/registration date/region confirmed via egrul.nalog.ru open-API (queried_inn=3435149330, file cited as source s0569). Director confirmed: Бурлака Павел Анатольевич.",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-      "2026-09-14: found via ЦБСТ-resident cross-reference research pass, which flagged a possible ГК «Логос» duplicate-slug issue between gk-logos (ИНН 7839303129, self-declared cbst_tie already wired) and ooo-gk-logos (ИНН 3435149330, this record). Checked: these are NOT duplicates — two genuinely distinct legal entities sharing the «Логос» brand name, already correctly disambiguated in this entity's own tier_basis field (which explicitly notes the relationship to gk-logos/ООО «Решение» is unconfirmed). What was actually missing was cbst_tie on THIS entity: the «Дикобраз»/400+ units detail in its own tier_basis exactly matches ЦБСТ's own 04.07.2025 post naming «группа компаний «Логос»» a resident — so this ИНН, not gk-logos, is the one the ЦБСТ post refers to. No merge needed; both records stay separate, each now with its own independently-sourced cbst_tie."
+      "2026-09-14: found via ЦБСТ-resident cross-reference research pass, which flagged a possible ГК «Логос» duplicate-slug issue between gk-logos (ИНН 7839303129, self-declared cbst_tie already wired) and ooo-gk-logos (ИНН 3435149330, this record). Checked: these are NOT duplicates — two genuinely distinct legal entities sharing the «Логос» brand name, already correctly disambiguated in this entity's own tier_basis field (which explicitly notes the relationship to gk-logos/ООО «Решение» is unconfirmed). What was actually missing was cbst_tie on THIS entity: the «Дикобраз»/400+ units detail in its own tier_basis exactly matches ЦБСТ's own 04.07.2025 post naming «группа компаний «Логос»» a resident — so this ИНН, not gk-logos, is the one the ЦБСТ post refers to. No merge needed; both records stay separate, each now with its own independently-sourced cbst_tie.",
+      "06.10.2026: cbst_tie regraded t-doc to t-open (name-only match; see gk-logos)."
     ],
+    "cbst_channel_review": {
+      "as_of": "2026-10-06",
+      "outcome": "tie_wired",
+      "posts_read": [
+        878
+      ],
+      "note": "Post 878 names the group a resident. This company is matched by legal name only and the group's parent is another company, so the grade is t-open, the same standard as the Гаскар correction."
+    },
     "_verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0569)",
     "name_display": "OOO «Gruppa kompaniy «Logos»»",
     "opensanctions_matches": [],
@@ -62996,9 +63136,9 @@
     "tier": "money-layer",
     "tier_basis": "Self-declared ₽309.87m (2024) in receipts, explicitly funds БПЛА/РЭБ procurement and «Дронница» — a real money-flow node, not incidental infrastructure. Reclassified from plumbing.",
     "cbst_tie": {
-      "claim": "Legal vehicle of the «Дронница» слёт, an event ЦБСТ lists in its own calendar and where its director lectured; personal tie to ЦБСТ through Любимов. No corporate or financial link found.",
-      "confidence": "t-open",
-      "evidence": "The association's own 2024 charitable-activity report (s0445, signed 14.04.2025) states it ran the «Ежегодный всероссийский слет инструкторов и операторов боевых БПЛА «Дронница»». ЦБСТ channel msg 1161 (31.08.2025) lists «Всероссийский Слёт операторов боевых квадрокоптеров «Дронница»» in its September calendar and msg 1180 (04.09.2025, archived s7607) announces «Лекция Гендиректора ЦБСТ Дмитрия Рубинштейна на «Дроннице 2025»». Msg 508 (03.03.2025) calls Александр Любимов, the association's chairman, «Наш коллега и друг». The association is not itself named in any ЦБСТ post.",
+      "claim": "Not established as a ЦБСТ tie. The association is the organiser of «Дронница 2024» (see the event record); ЦБСТ takes part in the event, which is participation, not a tie between the association and ЦБСТ.",
+      "confidence": "not_established",
+      "evidence": "The association's own 2024 charitable-activity report (s0445) says it ran the «Ежегодный всероссийский слет… «Дронница»». ЦБСТ's channel lists the event in its calendar (msg 1161, 31.08.2025, s9326) and announces a lecture by its director at «Дронница 2025» (msg 1180, s7607); msg 508 calls the association's chairman Любимов «Наш коллега и друг». No ЦБСТ post names the association itself (search «Взаимопомощь» in 2,474 posts, 06.10.2026: 0 hits). Dronnitsa 2025 is organised by КЦПН and НПЦ «Ушкуйник» with ЦБСТ participating, so the event is not ЦБСТ's own.",
       "source_id": "s0445"
     },
     "wb_overlap": "not_checked",
@@ -63110,8 +63250,19 @@
       "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0737).",
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "[2026-10-03 first reading of the 02.10 pulls, approved by Alexey] financials replaced: БФО 2021–2025 (s8996–s9000), targeted-funds lines read in full. The former 2024 entry stored the Минюст report figure as revenue; it is kept in the 2024 note, since a non-profit's receipts are never revenue.",
-      "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
+      "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions).",
+      "06.10.2026 tie closure pass (14 records graded t-open or press): assotsiatsiya-vzaimopomoshch: ЦБСТ tie withdrawn; the organiser edge to «Дронница 2024» stays."
     ],
+    "cbst_channel_review": {
+      "as_of": "2026-10-06",
+      "outcome": "named_no_tie",
+      "posts_read": [
+        1161,
+        1180,
+        508
+      ],
+      "note": "No ЦБСТ post names the association; the link is through the event and a person. The association stays in the graph as organiser of the 2024 edition; the ЦБСТ tie is withdrawn."
+    },
     "_verified_against": "Ассоциация «Взаимопомощь»'s own 2024 «Отчет о благотворительной деятельности», filed with Минюст СПб, signed 14.04.2025",
     "name_display": "Assotsiatsiya blagotvoritelnoy pomoshchi «Vzaimopomoshch»",
     "opensanctions_matches": [
@@ -67995,9 +68146,9 @@
     "tier": "plumbing",
     "tier_basis": null,
     "cbst_tie": {
-      "claim": "Same director (Соколов Герман Олегович) as ООО «НПО Рустехдрон» (ИНН 5003155499, this registry's confirmed manufacturer-tier entity with a Дронница/GUR-documented UAV product line). Formerly registered under a near-identical name, «ООО НИПП Рустехдрон», before renaming to «РТД-Защита» -- the \"РТД\" prefix matches the RTD-K10/RTD-K8/RTD-4M product-naming convention GUR's teardown catalogue already documents for the main Рустехдрон entity (see foreign_components[] / GUR screening on ooo-npo-rustekhdron).",
-      "confidence": "press",
-      "evidence": "Common director + name lineage (НИПП Рустехдрон -> РТД-Защита) + shared \"РТД\" brand prefix. Not yet independently verified: what РТД-Защита actually produces/does (name suggests a protection/defense-systems angle, e.g. counter-drone or EW, but this is inference from the name only, not confirmed). UPDATE 2026-09-05: the name lineage itself is now independently confirmed via primary устав documents (UD_1992856.zip, s0195), not just name-similarity inference — see name_history.",
+      "claim": "Not established as a ЦБСТ tie. The company shares its director (Соколов Герман Олегович) with ООО «НПО Рустехдрон» and descends from its name; no ЦБСТ post or document names it.",
+      "confidence": "not_established",
+      "evidence": "Common director + name lineage (НИПП Рустехдрон -> РТД-Защита) + shared \"РТД\" brand prefix. Not yet independently verified: what РТД-Защита actually produces/does (name suggests a protection/defense-systems angle, e.g. counter-drone or EW, but this is inference from the name only, not confirmed). UPDATE 2026-09-05: the name lineage itself is now independently confirmed via primary устав documents (UD_1992856.zip, s0195), not just name-similarity inference — see name_history. Reviewed 06.10.2026: «Рустехдрон» is named a ЦБСТ resident (ЦБСТ msg 1074, s6924); «РТД-Защита» is named nowhere in the ЦБСТ channel. A shared director is an affiliation with a tied company, not a tie of its own; the director and name edges to Рустехдрон stay.",
       "source_id": "s1161"
     },
     "wb_overlap": "not_checked",
@@ -68074,8 +68225,17 @@
     "_verified_against": "EGRUL open-API lookup only (egrul.nalog.ru) -- not a full EGRUL PDF extract. Aggregator confirmation (checko.ru, rusprofile, spark-interfax) attempted via curl but blocked (Cloudflare); relying on WebSearch's own result summaries for the director-name cross-reference, consistent with this session's Кайсант-ownership precedent.",
     "kpp": "500301001",
     "_corrected": [
-      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+      "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+      "06.10.2026 tie closure pass (14 records graded t-open or press): ooo-rtd-zashchita: ЦБСТ tie withdrawn; the shared director with Рустехдрон stays as its own edge."
     ],
+    "cbst_channel_review": {
+      "as_of": "2026-10-06",
+      "outcome": "named_no_tie",
+      "posts_read": [
+        1074
+      ],
+      "note": "No ЦБСТ post names РТД-Защита; the link is through the director. Tie withdrawn; director edges kept."
+    },
     "name_display": "OOO «RTD-Zashchita»",
     "opensanctions_matches": [
       {
@@ -74658,7 +74818,7 @@
     "cbst_tie": {
       "claim": "ЦБСТ's own channel names the project's Туапсе school as a site running a ЦБСТ resident's anti-UAV simulator mode (a deployment callout, not a residency claim).",
       "confidence": "t-open",
-      "evidence": "ЦБСТ's own channel, post 2159491523:1562 (t.me/ANO_CBST/1562), 25.11.2025, on the resident «Квадросим»: «режим внедрён в Михайловской военной артиллерийской академии и в новом учебном центре БПЛА «Архангел» в Туапсе, который готовит операторов для объектов прибрежной инфраструктуры. Всего сценарий перехвата отработали 120 операторов и курсантов на трёх площадках». The project's own post 10400 (29.06.2026) advertises «Школа операторов БПЛА «Архангел» в Туапсе». Limits: the school is a user of a resident's product, not itself called a resident; the post names no legal entity; «Квадросим» is not yet on file (no matching company in an ЕГРЮЛ name search).",
+      "evidence": "ЦБСТ's own channel, post 2159491523:1562 (t.me/ANO_CBST/1562), 25.11.2025, on the resident «Квадросим»: «режим внедрён в Михайловской военной артиллерийской академии и в новом учебном центре БПЛА «Архангел» в Туапсе, который готовит операторов для объектов прибрежной инфраструктуры. Всего сценарий перехвата отработали 120 операторов и курсантов на трёх площадках». The project's own post 10400 (29.06.2026) advertises «Школа операторов БПЛА «Архангел» в Туапсе». Limits: the school is a user of a resident's product, not itself called a resident; the post names no legal entity; «Квадросим» is not yet on file (no matching company in an ЕГРЮЛ name search). Reviewed 06.10.2026: the channel calls «Квадросим» a resident in msg 1562 and 1584; «Квадросим» still has no record here (a lead for the resident sweep).",
       "source_id": "s8651"
     },
     "wb_overlap": "none_found",
@@ -75330,7 +75490,8 @@
     "_corrected": [
       "[2026-09-15] wb_overlap=none_found: Brand-name search for дрон-перехватчик «Архангел» on wildberries.ru (2026-09-15) found no product listing (same finding as sibling Архангел-network entities) — only branded project merchandise found, not the drone.",
       "[2026-09-30 ЦБСТ posts 1976/1562] cbst_tie set none → t-open on ЦБСТ post 1562 (Tuapse school named as a Квадросим deployment site). This is a second, independent documentary path from the Проект «Архангел» cluster to ЦБСТ, besides the ГЕРМЕС radio link in the case note; it is weaker (user of a resident's product).",
-      "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [120, 123, 1562] flagged by scripts/tg_post_coverage.py: tie_wired. Posts 120 and 123 (2024-09) repeat a third-party analysis citing «проекта «Архангел» 2023» as a volunteer example; not a ЦБСТ statement about a company, not wired. Post 1562 is wired as the t-open tie (s8651)."
+      "[2026-10-01 ЦБСТ channel coverage review] Read ЦБСТ channel posts [120, 123, 1562] flagged by scripts/tg_post_coverage.py: tie_wired. Posts 120 and 123 (2024-09) repeat a third-party analysis citing «проекта «Архангел» 2023» as a volunteer example; not a ЦБСТ statement about a company, not wired. Post 1562 is wired as the t-open tie (s8651).",
+      "06.10.2026 tie closure pass (14 records graded t-open or press): proekt-kb-arkhangel: reviewed, grade kept."
     ],
     "sanctions_review": {
       "as_of": "2026-09-15",
@@ -75338,14 +75499,13 @@
       "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05). Aleph: 5 match(es), dataset categories=['leak', 'library'] No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]."
     },
     "cbst_channel_review": {
-      "as_of": "2026-10-01",
+      "as_of": "2026-10-06",
       "outcome": "tie_wired",
       "posts_read": [
-        120,
-        123,
-        1562
+        1562,
+        1584
       ],
-      "note": "Posts 120 and 123 (2024-09) repeat a third-party analysis citing «проекта «Архангел» 2023» as a volunteer example; not a ЦБСТ statement about a company, not wired. Post 1562 is wired as the t-open tie (s8651)."
+      "note": "Post 1562 names the school as a user of a resident's product; grade kept."
     },
     "_verified_against": null,
     "name_display": "Proekt KB «Arkhangel»",
@@ -76913,9 +77073,9 @@
     "tier": "manufacturer",
     "tier_basis": "RESOLVED 2026-09-05, closing the ao-npp-bat disambiguation question: this is the REAL legal entity behind the t.me/potapov_npp channel's active РЭБ/counter-UAV product line (Барьер, Перехват, Сигнал 2.0, Сковородка), NOT `ao-npp-bat` (ИНН 9718238013), the dormant single-employee shell that also happens to be named around \"АО «НПП»\" and is separately owned by the same Игорь Потапов. Its официальный ('сокращенное наименование') name IS LITERALLY 'АО «НПП»' — no fuller expansion exists in ЕГРЮЛ (full name: 'Акционерное общество «Научно-производственное предприятие»', with no further qualifying words) — confirming that even TASS's own editorial copy, which consistently uses only the bare 'АО «НПП»' across every article quoting Игорь Потапов (confirmed directly on the archived text of tass.ru/armiya-i-opk/22608317, 'Сковородка' REB jammer story), was not truncating or abbreviating anything — that is this company's actual registered short name. Found via its OKVED list (26.11/26.12/26.20/26.30-series electronics/comms/radiolocation production, plus 30.30 aircraft manufacturing) matching the channel's product line exactly, and via its sole shareholder/GD, Семенов Игорь Георгиевич — the SAME name that appears as co-inventor alongside Потапов Игорь Владимирович on the 'Многопульный патрон' utility patent (RU233454U1) already on file on ao-npp-bat's own record, where the patentee string 'Акционерное общество «Научно-производственное предприятие»' had been flagged as 'ambiguous, truncated' — it was not truncated, it is this entity's exact name. Потапов himself is not the registered owner or director here (Семенов is) — consistent with Потапов's own self-description as 'управляющий партнер' (managing partner), an operational/commercial role, and with his public role as the company's media-facing spokesperson (\"официальный представитель АО «НПП»\", per every TASS citation) rather than its legal principal. No БФО filing pulled yet for this entity — a real next step given the scale mismatch with the dormant ao-npp-bat.",
     "cbst_tie": {
-      "claim": "ЦБСТ's own channel names «НПП» and its representative Игорь Потапов as residents of ЦБСТ; АО «НПП» (Потапов, исполнительный директор) is that company by the registry's own resolution.",
+      "claim": "ЦБСТ's own channel names «НПП» and its representative Игорь Потапов residents of ЦБСТ; АО «НПП» is matched to ИНН 9722048270 through the potapov_npp channel's product line, not through a register entry naming Потапов.",
       "confidence": "t-open",
-      "evidence": "ЦБСТ channel msg 629, 16.04.2025: «Резиденты Центра беспилотных систем и технологий — компания «НПП» и её официальный представитель Игорь Потапов». Msg 1683 (26.12.2025): «резидента ЦБСТ, исполнительного директора АО «НПП» Игоря Потапова». The posts use the short name and give no ИНН; matching it to ИНН 9722048270 is the registry's inference, hence t-open not t-doc.",
+      "evidence": "ЦБСТ channel msg 629, 16.04.2025: «Резиденты Центра беспилотных систем и технологий — компания «НПП» и её официальный представитель Игорь Потапов». Msg 1683 (26.12.2025): «резидента ЦБСТ, исполнительного директора АО «НПП» Игоря Потапова». The posts use the short name and give no ИНН; matching it to ИНН 9722048270 is the registry's inference, hence t-open not t-doc. Read again on 06.10.2026: the ЕГРЮЛ lists Семенов Игорь Георгиевич as director and sole founder, so «исполнительный директор Игорь Потапов» is not an officer in the register; the match rests on the channel's product line and on the exact short name «НПП», a common acronym.",
       "source_id": "s7601"
     },
     "wb_overlap": "not_checked",
@@ -77029,12 +77189,22 @@
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
       "2026-09-07: founding-document bundle (s6910) OCR'd and read in full -- corroborates the existing ₽30,000 charter capital and sole-founder (Семенов И.Г., 100%) structure already on file from the EGRUL выписка; the устав body itself does not name the founder (standard post-2009 pattern), so no new identity detail beyond what was already confirmed. No aviation/UAV/military terminology found in the purpose clause on this OCR pass -- appears to be a generic-activity charter.",
       "[2026-09-15] wb_overlap review: no brand_ru/products[] name on this record to search on wildberries.ru — legal-name-only searches are known to return false negatives per this project's own precedent, so left genuinely un-screenable rather than guessed at. Left as not_checked, reviewed not unread.",
-      "[2026-09-30 product research] Channels name only «АО «НПП»». Tie to 9722048270: patent RU233454U1's patentee is exactly this ИНН's EGRUL full name, with Потапов among inventors; the other Потапов entity (9718238013) carries the longer name «…Беспилотные авиационные технологии». «Ястреб 1.0» (TASS link preview only) left out until the TASS article is read."
+      "[2026-09-30 product research] Channels name only «АО «НПП»». Tie to 9722048270: patent RU233454U1's patentee is exactly this ИНН's EGRUL full name, with Потапов among inventors; the other Потапов entity (9718238013) carries the longer name «…Беспилотные авиационные технологии». «Ястреб 1.0» (TASS link preview only) left out until the TASS article is read.",
+      "06.10.2026 tie closure pass (14 records graded t-open or press): ao-npp-real: grade kept; limits restated (Потапов is not in the ЕГРЮЛ; Семенов is director and founder)."
     ],
     "sanctions_review": {
       "as_of": "2026-09-15",
       "outcome": "closed",
       "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05). OpenSanctions: 5 match(es), top='Joint Stock Company “Research And Production Enterprise ‘Polet’”' (score 0.9375, topics=['sanction', 'debarment', 'export.control', 'poi']) No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]."
+    },
+    "cbst_channel_review": {
+      "as_of": "2026-10-06",
+      "outcome": "tie_wired",
+      "posts_read": [
+        629,
+        1683
+      ],
+      "note": "Posts 629 and 1683 name «НПП» and Потапов as residents. Identity of the legal entity rests on the potapov_npp channel, not on a register entry; no change of grade."
     },
     "_verified_against": null,
     "name_display": "AO «Nauchno-proizvodstvennoe predpriyatie»",
@@ -91369,9 +91539,9 @@
     "tier": "adjacent",
     "tier_basis": "Listed by the EU (23.04.2026) and Switzerland (21.05.2026) as «Гаскар Групп» under this ИНН and ОГРН (s9114, s9106). ЦБСТ's own channel names «Гаскар Групп» among the organisations in its contour (post 2095). No manufacturing or ЦБСТ document ties the registered company itself to either; its registered activities are software, construction, consulting and R&D.",
     "cbst_tie": {
-      "claim": "Named by ЦБСТ's own channel, as «Гаскар Групп», among the organisations in its contour that the EU listed in its 20th package.",
-      "confidence": "t-open",
-      "evidence": "ЦБСТ's own channel, post 2159491523:2095, 24.04.2026: «В 20-й пакет ограничительных мер Европейского союза были включены организации, входящие в контур Центра беспилотных систем и технологий. Среди них «Технодрон», «Гаскар Групп», СКБ «Пиранья», «Аэро-Хит», «Атлант Аэро» и «Архангел».» The post prints no ИНН or ОГРН. The EU act lists a «Гаскар Групп» under ИНН 7734436058 and ОГРН 1207700279797 (s9114), which the ЕГРЮЛ extract of 03.10.2026 shows as ООО «СТИМС» (s9112); the link from the post to this company therefore runs through the name used on the list, and ЦБСТ states no identifier. Whether ЦБСТ means this company or the «Гаскар» group brand is not shown. Search «Гаскар» in 2,474 @ANO_CBST posts, 04.10.2026: 1 hit (post 2095); «СТИМС»: 0.",
+      "claim": "ЦБСТ's own channel states that «Гаскар Групп» is among the organisations in its contour that the EU listed in its 20th package; the EU act lists «Gaskar Group» under the identifiers of ООО «СТИМС».",
+      "confidence": "t-doc",
+      "evidence": "ЦБСТ's own channel, post 2095 (24.04.2026, s7588): «В 20-й пакет ограничительных мер Европейского союза были включены организации, входящие в контур Центра беспилотных систем и технологий. Среди них «Технодрон», «Гаскар Групп», СКБ «Пиранья», «Аэро-Хит», «Атлант Аэро» и «Архангел»». The sentence is about organisations the EU listed, so «Гаскар Групп» is the entry of that package: the EU act (s9114) lists «Gaskar Group» under ИНН 7734436058 and ОГРН 1207700279797, which the ЕГРЮЛ extract of 03.10.2026 shows as ООО «СТИМС» (s9112). The post itself prints no identifier. Search «Гаскар» in 2,474 posts (04.10.2026): 1 hit; «СТИМС»: 0. Grade raised from t-open on 06.10.2026 because the post defines the group by the list, and the list's printed identifiers give the entity.",
       "source_id": "s7588"
     },
     "wb_overlap": "not_checked",
@@ -91483,7 +91653,17 @@
     "_raw": {},
     "city": "Москва",
     "ecosystem_roles": [],
-    "_corrected": null,
+    "_corrected": [
+      "06.10.2026 tie closure pass (14 records graded t-open or press): ooo-stims: raised t-open to t-doc: the post defines the group by the EU list, whose identifiers give СТИМС. Judgment call, stated in the evidence."
+    ],
+    "cbst_channel_review": {
+      "as_of": "2026-10-06",
+      "outcome": "tie_wired",
+      "posts_read": [
+        2095
+      ],
+      "note": "Post 2095 defines «Гаскар Групп» as an entity of the EU's 20th package; the act's identifiers give ООО «СТИМС». Raised to t-doc, with the reasoning in the evidence; a person may reverse it."
+    },
     "_verified_against": null,
     "name_display": "OOO «STIMS»",
     "aleph_matches": [

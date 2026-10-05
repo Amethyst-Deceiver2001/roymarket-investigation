@@ -1,6 +1,6 @@
 # Evidence packet: ООО «Гагаринг»
 
-**DRAFT, generated 05.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
+**DRAFT, generated 06.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
 
 ## 1. Identification
 

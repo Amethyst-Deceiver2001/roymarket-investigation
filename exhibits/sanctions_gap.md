@@ -12,7 +12,7 @@ EU/US/UK/CH columns from the sanctions watch of 2026-10-05:
 
 Known limit: the watcher matches only identifiers already in the registry. A listed group company held under another ИНН shows here as `no ID match` for its sibling. Example lead (02.10.2026): ЦБСТ's channel says the EU's 20th package named «Гаскар Групп», while ООО «Гаскар» (ИНН 9710112989) has no ID match on the EU list; check the EU entry's name and identifiers before treating Гаскар as unlisted.
 
-74 organisations: 52 no ID match on any, 22 listed
+70 organisations: 48 no ID match on any, 22 listed
 
 | Organisation | ИНН | Tie | Revenue ₽m (year) | Contracts | EU | US | UK | CH | UA |
 |---|---|---|---|---|---|---|---|---|---|
@@ -27,9 +27,8 @@ Known limit: the watcher matches only identifiers already in the registry. A lis
 | ООО «Авирон» (`ooo-aviron`) | 7743451768 | doc | 273.9 (2025) | 0 | no ID match | no ID match | no ID match | no ID match |  |
 | ООО «ТИ ЭС ДЖИ ГРУПП» (`ooo-ti-es-dzhi-grupp`) | 3257085996 | doc | 190.3 (2025) | 1 | no ID match | no ID match | no ID match | no ID match |  |
 | ООО «Боевые технологии» (Военторг «ИРПТОРГ») (`ooo-boevye-tekhnologii`) | 5262393781 | rep | 164.7 (2025) | 0 | no ID match | no ID match | no ID match | no ID match |  |
-| Ассоциация благотворительной помощи «Взаимопомощь» (`assotsiatsiya-vzaimopomoshch`) | 4707039070 | rep | 139.7 (2025, non-profit funds, not revenue) | 0 | no ID match | no ID match | no ID match | no ID match | registry: listed [s0737] |
 | НПП «ЭЛВО» (`npp-elvo-kolskaya-verf`) | 7810918592 | doc | 113.0 (2025) | 0 | no ID match | no ID match | no ID match | no ID match |  |
-| ООО «Группа компаний «Логос»» (`ooo-gk-logos`) | 3435149330 | doc | 112.3 (2025) | 0 | no ID match | no ID match | no ID match | no ID match |  |
+| ООО «Группа компаний «Логос»» (`ooo-gk-logos`) | 3435149330 | rep | 112.3 (2025) | 0 | no ID match | no ID match | no ID match | no ID match |  |
 | ООО «НПЦ БАСИРТК» (`ooo-npts-basirtk`) | 3300009049 | doc | 83.7 (2025) | 0 | no ID match | no ID match | no ID match | no ID match |  |
 | ООО «Визионеро» (`ooo-vizionero`) | 5902056314 | doc | 72.8 (2025) | 0 | no ID match | no ID match | no ID match | no ID match |  |
 | ООО «КоптерЛаб» (`ooo-kopterlab`) | 7720925267 | doc | 64.1 (2025) | 0 | no ID match | no ID match | no ID match | no ID match |  |
@@ -38,7 +37,7 @@ Known limit: the watcher matches only identifiers already in the registry. A lis
 | АО «Нейрореволюция» (`ao-neyrorevolyutsiya`) | 9701255148 | doc | 54.7 (2025) | 0 | no ID match | no ID match | no ID match | no ID match |  |
 | ООО «Аркодим» (`ooo-arkodim`) | 1659101884 | doc | 45.9 (2025) | 0 | no ID match | no ID match | no ID match | no ID match |  |
 | ООО «ТИТАН - СЕВЕРО-ЗАПАД» (`ooo-titan-severo-zapad`) | 7838380755 | rep | 41.1 (2025) | 0 | no ID match | no ID match | no ID match | no ID match |  |
-| ГК «Логос» (`gk-logos`) | 7839303129 | rep | 36.5 (2025) | 0 | no ID match | no ID match | no ID match | no ID match |  |
+| ГК «Логос» (`gk-logos`) |  | rep | 36.5 (2025) | 0 | no ID match | no ID match | no ID match | no ID match |  |
 | ООО «ОРИЕНТ СИСТЕМС» (`ooo-orient-sistems`) | 7743939185 | rep | 33.2 (2025) | 0 | no ID match | no ID match | no ID match | no ID match |  |
 | АО «Школа БПЛА Октагон» (`ao-shkola-bpla-oktagon`) | 7806616655 | doc | 27.2 (2025) | 0 | no ID match | no ID match | no ID match | no ID match |  |
 | Акционерное общество «Научно-производственное предприятие» (`ao-npp-real`) | 9722048270 | rep | 20.0 (2025) | 0 | no ID match | no ID match | no ID match | no ID match |  |
@@ -49,8 +48,6 @@ Known limit: the watcher matches only identifiers already in the registry. A lis
 | АНО «Платформа НТИ» (`ano-platforma-nti`) | 7703469180 | doc | 1.6 (2025, non-profit funds, not revenue) | 0 | no ID match | no ID match | no ID match | no ID match | registry: listed [s0765] |
 | ООО «МПТМ» (`ooo-mptm`) | 9714068459 | doc | 1.0 (2025) | 0 | no ID match | no ID match | no ID match | no ID match |  |
 | ООО «Центр Динарус» (`ooo-tsentr-dinarus`) | 5022077503 | doc | 0.9 (2025) | 0 | no ID match | no ID match | no ID match | no ID match |  |
-| ООО «РТД-Защита» (`ooo-rtd-zashchita`) | 5003153526 | rep | 0.6 (2025) | 0 | no ID match | no ID match | no ID match | no ID match | registry: listed [s7871] |
-| ООО «Пехтра» (`ooo-pekhtra`) | 5261138034 | rep | 0.3 (2025) | 0 | no ID match | no ID match | no ID match | no ID match |  |
 | АНО ДПО «Образовательный центр Гагаринг» (`ano-dpo-obrazovatelny-tsentr-gagaring`) | 2310240630 | doc |  | 0 | no ID match | no ID match | no ID match | no ID match |  |
 | АО «Научно-производственное предприятие Беспилотные авиационные технологии» (`ao-npp-bat`) | 9718238013 | doc |  | 0 | no ID match | no ID match | no ID match | no ID match |  |
 | АО «Спецтех Инвестиции» (`ao-spetstekh-investitsii-ao-spetstekh-pervyy`) | 9703232234 | doc |  | 0 | no ID match | no ID match | no ID match | no ID match |  |
@@ -67,7 +64,6 @@ Known limit: the watcher matches only identifiers already in the registry. A lis
 | ООО «Системный интегратор» (`ooo-sistemnyy-integrator`) | 4632306583 | doc |  | 0 | no ID match | no ID match | no ID match | no ID match |  |
 | ООО «ВИЛЛИС» (`ooo-villis-wheelies`) | 9200026034 | doc |  | 0 | no ID match | no ID match | no ID match | no ID match |  |
 | Проект КБ «Архангел» (`proekt-kb-arkhangel`) |  | rep |  | 0 | no ID match | no ID match | no ID match | no ID match |  |
-| ООО «Конструкторское бюро СОВА» (`va-technologies`) | 2378001237 | rep |  | 0 | no ID match | no ID match | no ID match | no ID match |  |
 | ООО «Центр управления городской аэромобильностью» (`ooo-tsugam`) | 9731094770 | doc | 59574.8 (2025) | 0 | listed: entry EU.13801.69 (2025/2035 (OJ L202502035); UKR) | no ID match | no ID match | listed: entry 99053 (27286) | registry: listed [s0820, s8564] |
 | ООО «Атлант Аэро» (`ooo-atlant-aero`) | 6154165878 | doc | 57800.0 (2025, press-relayed) | 0 | listed: entry EU.14159.25 (2026/509 (OJ L202600509); UKR) | no ID match | no ID match | listed: entry 104723 (27286) | registry: listed [s0750] |
 | ООО «ИОНОС» (`alyaska`) | 6168719068 | doc | 3900.9 (2025) | 0 | no ID match; registry: listed | no ID match | no ID match | listed: entry 107260 (27286) | registry: listed [s9106] |
@@ -78,7 +74,7 @@ Known limit: the watcher matches only identifiers already in the registry. A lis
 | АО «Стратим» (`ao-stratim`) | 7720901379 | doc | 606.8 (2025) | 0 | listed: entry EU.13073.69 (2025/933 (OJ L202500933); UKR) | listed: entry 50246 (RUSSIA-EO14024) | no ID match | listed: entry 91706, 93372 (27286; 29445) | registry: listed [s0779, s6145] |
 | ООО «ЦКБР» (`ooo-tskbr`) | 5040176793 | doc | 551.0 (2025) | 0 | listed: entry EU.13077.65 (2025/933 (OJ L202500933); UKR) | listed: entry 48441 (RUSSIA-EO14024) | no ID match | listed: entry 92761, 96063 (27286; 29445) | registry: listed [s9106, s9107] |
 | ООО «Уралдронзавод» (`uraldronzavod`) | 6671284030 | doc | 438.5 (2024) | 0 | no ID match; registry: listed | listed: entry 49954 (RUSSIA-EO14024) | no ID match | no ID match; registry: listed | registry: listed [s9106, s9107] |
-| ООО «СТИМС» (`ooo-stims`) | 7734436058 | rep | 349.6 (2025) | 0 | listed: entry EU.14160.3 (2026/509 (OJ L202600509); UKR) | no ID match | no ID match | listed: entry 104739 (27286) | registry: listed [s9106] |
+| ООО «СТИМС» (`ooo-stims`) | 7734436058 | doc | 349.6 (2025) | 0 | listed: entry EU.14160.3 (2026/509 (OJ L202600509); UKR) | no ID match | no ID match | listed: entry 104739 (27286) | registry: listed [s9106] |
 | ООО «Аэромакс» (`ooo-aeromaks`) | 7725347482 | rep | 256.9 (2022) | 13 | listed: entry EU.14137.89 (2026/509 (OJ L202600509); UKR) | listed: entry 50772 (RUSSIA-EO14024) | no ID match | listed: entry 105434 (27286) | registry: listed [s0780] |
 | АО «Площадь» (`ao-ploshchad`) | 9723203841 | doc | 87.9 (2025) | 1 | listed: entry EU.13402.32 (2025/1476 (OJ L202501476); UKR) | listed: entry 50792 (RUSSIA-EO14024) | no ID match | listed: entry 95826 (27286) | registry: listed [s0815, s9305] |
 | АНО «НПЦ «Ушкуйник»» (`ano-npts-ushkuynik`) | 5300010714 | doc | 46.8 (2025, non-profit funds, not revenue) | 13 | listed: entry EU.13083.38 (2025/933 (OJ L202500933); UKR) | no ID match | no ID match | listed: entry 92836 (27286) | registry: listed [s0748] |
