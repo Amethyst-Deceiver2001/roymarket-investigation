@@ -7227,12 +7227,17 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions, Aleph",
+     "text": "Never screened: OpenSanctions, Aleph",
      "due": [
       "opensanctions",
-      "gur",
       "aleph"
      ]
+    },
+    {
+     "kind": "review",
+     "code": "screen_hits_unreviewed",
+     "text": "4 sanctions-type screening hit(s), no sanctions review recorded",
+     "count": 4
     },
     {
      "kind": "review",
