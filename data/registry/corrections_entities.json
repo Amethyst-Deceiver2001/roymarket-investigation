@@ -10748,6 +10748,101 @@
       },
       "why": "Packet check of 03.10.2026 (issue #20): the dealer named on the maker's certificate is ИП Пинимасов Александр Вячеславович; the packet had attached the dealer role to ИП Пинимасова Елена Александровна. ЕГРИП extract pulled 04.10.2026 (single lookup) and the certificate read from the page.",
       "verified_against": "s9119 (ЕГРИП extract of 04.10.2026), s0537 (dealer certificate №2106/2024)."
+    },
+    {
+      "slug": "ip-korovkin-aleksandr-anatolevich",
+      "name_ru": "ИП Коровкин Александр Анатольевич",
+      "name_latin": null,
+      "legal_form": "ИП",
+      "brand_ru": null,
+      "inn": "780223272953",
+      "ogrn": "323784700072451",
+      "registered": "2023-03-07",
+      "city": null,
+      "address": null,
+      "director": null,
+      "charter_capital": null,
+      "okved_code": "46.73.6",
+      "okved_label": "Торговля оптовая прочими строительными материалами и изделиями",
+      "tier": "adjacent",
+      "tier_basis": "Named as «Дилер Макс 911» on the maker's own dealer page (3mx.ru/dilery/, s0558, again 06.10.2026, s9307); the maker's own Telegram channel announces the dealer's shop (post 415, 30.05.2025, s9309). A sole trader selling the maker's product; no other tie to ЦБСТ is on file.",
+      "ecosystem_roles": [
+        "licensed_dealer"
+      ],
+      "sells_for": [
+        {
+          "slug": "ooo-trimiks",
+          "channel": "official dealer (named on 3mx.ru/dilery/; shop at Горбушка, pavilion С1-042; Ozon storefront)",
+          "basis": "doc",
+          "source_id": "s0558",
+          "as_of": "2025-05-30",
+          "note": "3mx.ru/dilery/ lists «Дилер Макс 911», +7 960 919 19 11, Telegram @dji911_operator (s0558 of 23.08.2026; the page text was unchanged on 06.10.2026, s9307). 3mx's own Telegram channel posted on 30.05.2025 (s9309): «На \"Горбушке\" Макс 911- официальный дилер 3мх! (Павильон С1-042)», listing «Булаты- 4 по офиц. цене 88 000», and the photo of the shop front with the sign «Официальный дилер 3mx» (s9308). The sole trader's identity comes from dji911.com/contacts (s1388) and is confirmed by the ЕГРИП extract of 06.10.2026 (s9306), which prints the same ИНН.",
+          "products": [
+            "Булаты"
+          ],
+          "status_history": [
+            {
+              "status": "listed",
+              "as_of": "2025-05-30",
+              "source_id": "s9309",
+              "note": "Post names «Булаты- 4 по офиц. цене 88 000» in stock at pavilion С1-042."
+            }
+          ],
+          "asserted_by": "counterparty",
+          "credibility": "doc",
+          "authorised": "yes",
+          "role": "licensed_dealer",
+          "open": "The dealer page and the post state the dealer relationship; no dealer agreement or certificate is on file. The same post also advertises goods that are not 3mx products (see the open questions)."
+        }
+      ],
+      "cbst_tie": {
+        "claim": "None found.",
+        "confidence": "none",
+        "evidence": null,
+        "source_id": null
+      },
+      "wb_overlap": "not_checked",
+      "open_questions": [
+        {
+          "source_id": "s9306",
+          "text": "ЕГРИП extract of 06.10.2026 (single lookup): ИП Коровкин Александр Анатольевич, ОГРНИП 323784700072451, ИНН 780223272953, registered 07.03.2023, citizen of the Russian Federation, active at the date of the extract; primary activity 46.73.6 (wholesale of other building materials), additional codes include 46.90 and 47.91 (internet retail, both entered 18.05.2026), 45.31.1, 45.32, 49.41. No code covers electronics or drone retail. The extract prints no residence address."
+        },
+        {
+          "source_id": "s9309",
+          "text": "Post 415 in 3mx's channel (30.05.2025) advertises, besides «Булаты», «Дроны различных типов», «Новейшие прошитые Matrice 4Т, которые летают в РФ (можем прошить и ваш)», «Старлинки» and «Инкубаторы 2.0, 3.0». The photo shows a DJI Matrice 4T case and a box marked STARLINK in the window (s9308). What «прошитые» means (modified firmware, removal of manufacturer restrictions) is not stated and not established; the dealer's source for Starlink terminals is not on file."
+        },
+        {
+          "source_id": null,
+          "text": "No person record is made for the sole trader: the PII policy admits a seller's owner only on user direction. The man in the shop-front photo (s9308) is not named by any source and is not identified."
+        }
+      ],
+      "web": {
+        "sites": [
+          "https://dji911.com/"
+        ],
+        "telegram": [
+          "@dji911_operator"
+        ],
+        "vk": [],
+        "youtube": [],
+        "marketplace_listings": [
+          "https://www.ozon.ru/seller/maks-911-4233382/"
+        ],
+        "other": []
+      },
+      "why": "05.10-06.10.2026: the dealer was already on file in prose (3mx's related_entities, s1388). Prompted by the user's pointer that «МАКС911» is a listed dealer on 3mx.ru/dilery/, the shop-front photo (ru3mx/415) was looked at in full, the post saved, and the ЕГРИП extract pulled; the dealer now has a record because the link to the maker is documented on the maker's own page.",
+      "verified_against": "s9306 (ЕГРИП extract of 06.10.2026), s0558 and s9307 (3mx.ru/dilery/), s9309 (post 415), s9308 (photo), s1388 (dji911.com/contacts).",
+      "brands": [
+        {
+          "name": "Макс 911",
+          "kind": "trade_name",
+          "registration": null,
+          "primary": true,
+          "source_id": "s1388",
+          "as_of": "2026-08-25",
+          "note": "The dealer's shop sign (s9308) reads «МАКС 911», «Официальный дилер 3mx», dji911.com, С1-042; dji911.com/contacts (s1388) names ИП Коровкин А.А. ИНН 780223272953 as the seller of 3MX equipment on marketplaces."
+        }
+      ]
     }
   ],
   "entities": {
@@ -36994,8 +37089,8 @@
             "relationship_type": "dealer"
           },
           {
-            "relationship": "Named dealer, per 3mx.ru/dilery/: «Макс 911» (Max 911) — dji911.com. Telegram @dji911_operator. CONFIRMED via dji911.com itself (23.08.2026): explicitly states \"официальный дилер\" for 3mx and sells «Булат V.4» (\"Булат-4\"), «Марс», «Инкубатор» (remote antenna) and its own «Neobooster» DJI signal-amplifier accessory. LEGAL ENTITY RESOLVED 2026-08-25 (dji911.com/contacts, s1388, direct curl archive): \"Продажу оборудования 3MX на маркетплейсах осуществляет ИП Коровкин А.А. ИНН 780223272953\" -- full name confirmed via egrul.nalog.ru open API (s1387): ИП Коровкин Александр Анатольевич, ОГРНИП 323784700072451 (active, registered 07.03.2023; a prior ОГРНИП 319784700120061 under the same ИНН was terminated 29.12.2022). Checksum-valid ИНН. Incidental retail dealer, not a network principal -- not otherwise PII-profiled per project policy (same treatment as Мэдро's ИП). Also has an Ozon storefront (2026-08-25, user-supplied browser HAR capture, s1384): https://www.ozon.ru/seller/maks-911-4233382/, self-declared page title \"МАКС 911- офиц. дилер 3mx\" -- not independently ИНН-confirmed to Коровкин on that marketplace (sellerTransparency widget not captured there), but consistent given the matching branding.",
-            "slug": null,
+            "relationship": "Named dealer, per 3mx.ru/dilery/: «Макс 911» (Max 911) — dji911.com. Telegram @dji911_operator. CONFIRMED via dji911.com itself (23.08.2026): explicitly states \"официальный дилер\" for 3mx and sells «Булат V.4» (\"Булат-4\"), «Марс», «Инкубатор» (remote antenna) and its own «Neobooster» DJI signal-amplifier accessory. LEGAL ENTITY RESOLVED 2026-08-25 (dji911.com/contacts, s1388, direct curl archive): \"Продажу оборудования 3MX на маркетплейсах осуществляет ИП Коровкин А.А. ИНН 780223272953\" -- full name confirmed via egrul.nalog.ru open API (s1387): ИП Коровкин Александр Анатольевич, ОГРНИП 323784700072451 (active, registered 07.03.2023; a prior ОГРНИП 319784700120061 under the same ИНН was terminated 29.12.2022). Checksum-valid ИНН. Incidental retail dealer, not a network principal -- not otherwise PII-profiled per project policy (same treatment as Мэдро's ИП). Also has an Ozon storefront (2026-08-25, user-supplied browser HAR capture, s1384): https://www.ozon.ru/seller/maks-911-4233382/, self-declared page title \"МАКС 911- офиц. дилер 3mx\" -- not independently ИНН-confirmed to Коровкин on that marketplace (sellerTransparency widget not captured there), but consistent given the matching branding. ENTITY RECORD MADE 06.10.2026 (ip-korovkin-aleksandr-anatolevich) after the ЕГРИП extract (s9306); shop at Горбушка С1-042 shown by 3mx's own post 415 (s9309) and photo (s9308).",
+            "slug": "ip-korovkin-aleksandr-anatolevich",
             "source_id": "s1388",
             "relationship_type": "dealer"
           },
@@ -37202,6 +37297,13 @@
             "context": "3mx rep in the company's customer chat (+BlOqwGbeNGk3OTVi), msg 42146, 02.09.2026, directly after a customer's question (msg 42145): «Новая версия булата будет выставлена к продаже на рой маркет?». The reply-to link is not stored in the DB; the pairing rests on adjacency (13 minutes later, no other message between). Msg 42151, another customer: «Очень нужно что бы Вашим дилером стал рой маркет». The responder is not named in the archive.",
             "source_id": "s8860",
             "as_of": "2026-09-02"
+          },
+          {
+            "text_ru": "На \"Горбушке\" Макс 911- официальный дилер 3мх! (Павильон С1-042)\n=====\nВ наличии:\n1) Булаты- 4 по офиц. цене 88 000.\n2) Дроны различных типов.\n3) Новейшие прошитые Matrice 4Т, которые летают в РФ (можем прошить и ваш).\n4) Старлинки.\n5) Инкубаторы 2.0, 3.0.",
+            "text_en": "At Gorbushka, Макс 911 is the official dealer of 3mx (pavilion С1-042). In stock: 1) Bulats, 4 at the official price of 88,000. 2) Drones of various types. 3) The newest flashed Matrice 4T that fly in Russia (we can flash yours too). 4) Starlinks. 5) Incubators 2.0, 3.0.",
+            "context": "Posted in 3mx's own channel @ru3mx, 30.05.2025, as an announcement of the dealer's shop; the offer is the dealer's, published by the maker's channel. The post names goods that are not 3mx products (flashed DJI Matrice 4T, Starlink terminals); what «прошитые» means is not stated.",
+            "source_id": "s9309",
+            "as_of": "2025-05-30"
           }
         ],
         "participations": [
@@ -37261,7 +37363,8 @@
         "2026-09-15: informal-cooperation triage (LEAD 3) -- re-read chadayevru msg 2722 in full (the leads file only quoted a snippet) and found it directly names both organizations' representatives as speakers at the same 12.04.2024 conference, a stronger single-document confirmation than the leads file's 'series inference' framing. Recorded as related_entities.",
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
         "[2026-09-30 cross-reference] related_entities: dealer -> ip-kuznetsov-ruslan-nikolaevich",
-        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (Presidential sanctions decree/list)."
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (Presidential sanctions decree/list).",
+        "06.10.2026: dealer «Макс 911» now has its own record; post 415 recorded as a marketing claim."
       ]
     },
     "ooo-tsentr-bespilotnykh-sistem-tula": {

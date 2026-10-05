@@ -101,6 +101,8 @@ def test_packet_exhibit_titles():
                        ("UKSL_7300024069_20261005_x-RUS1402.xml", "UK Sanctions List (FCDO), entry, 05.10.2026")):
         t, _ = C.cite(rec(name, captured_date="2026-10-05"), {})
         assert t == want, (name, t)
+    t, _ = C.cite(rec("EGRUL_780223272953_20261006_inn-780223272953.pdf", captured_date="2026-10-06"), {})
+    assert t == "Sole-trader register extract (ЕГРИП, Federal Tax Service) for ИНН 780223272953, 06.10.2026", t
     t, u = C.cite(rec("UKAZ_415-2025_20250620_president-decree-nsdc-sanctions.html", captured_date="2026-10-05"), {})
     assert t.startswith("Decree of the President of Ukraine no. 415/2025") and u == "https://zakon.rada.gov.ua/laws/show/415/2025", (t, u)
     t, _ = C.cite(rec("OFAC_20240823_recent-action-russia-related-designations.html", captured_date="2026-10-05"), {})

@@ -17,7 +17,7 @@ import html
 import re
 from pathlib import Path
 
-CITE_VERSION = 7
+CITE_VERSION = 8
 REPO = Path(__file__).resolve().parent.parent
 
 
@@ -230,6 +230,8 @@ def _cite(s: dict, f: dict | None) -> tuple[str, str | None]:
         return f"Job vacancy posted on hh.ru{dated}", None
     if prefix == "CERT" and "dealer" in name:
         return f"Official dealer certificate issued by the manufacturer{dated}", None
+    if prefix == "EGRUL" and re.match(r"EGRUL_\d{12}_", name):   # a sole trader's extract (12-digit ИНН) is from the ЕГРИП
+        return f"Sole-trader register extract (ЕГРИП, Federal Tax Service) for ИНН {name.split('_')[1]}{dated}", None
     if prefix == "EGRUL" or name.startswith("ul-") or typ == "egrul":
         m = re.match(r"EGRUL_(\d{10})_", name) or re.match(r"ul-(\d{13})-", name)
         ident = (f" for ИНН {m.group(1)}" if len(m.group(1)) == 10 else f" for ОГРН {m.group(1)}") if m else ""

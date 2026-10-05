@@ -2257,6 +2257,19 @@
           "degree": 1
         },
         {
+          "id": "ip-korovkin-aleksandr-anatolevich",
+          "kind": "entity",
+          "label": "ИП Коровкин Александр Анатольевич",
+          "name_latin": null,
+          "inn": "780223272953",
+          "tier": "adjacent",
+          "sanctioned": false,
+          "legal_form": "ИП",
+          "variant": null,
+          "product_count": 0,
+          "degree": 2
+        },
+        {
           "id": "ip-kuznetsov-ruslan-nikolaevich",
           "kind": "entity",
           "label": "ИП Кузнецов Руслан Николаевич",
@@ -4617,7 +4630,7 @@
           "legal_form": "ООО",
           "variant": "defensive",
           "product_count": 4,
-          "degree": 23
+          "degree": 24
         },
         {
           "id": "ooo-tsentr-dinarus",
@@ -10926,7 +10939,7 @@
             "uav_platform": "unknown",
             "ew_installation": "unknown"
           },
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "product::ooo-trimiks::азар",
@@ -11828,6 +11841,13 @@
           "label": "kilowat48.ru («Дилерский магазин НПО «КИЛОВАТТ»»)",
           "platform": "dealer shop kilowat48.ru (Москва, ул. Коптевская, 22)",
           "degree": 1
+        },
+        {
+          "id": "storefront::dealer-shop-горбушка-pavilion-с1-042-макс-911",
+          "kind": "storefront",
+          "label": "Макс 911 (Горбушка, С1-042)",
+          "platform": "dealer shop, Горбушка, pavilion С1-042 (Москва)",
+          "degree": 2
         },
         {
           "id": "storefront::dealer-site-pokrovsystem-ru-покров",
@@ -23048,6 +23068,29 @@
             "credibility": "doc",
             "authorised": "unknown",
             "open": "The panel prints the seller of record; it does not say the bureau authorised the sale."
+          },
+          "grade": "doc"
+        },
+        {
+          "source": "ip-korovkin-aleksandr-anatolevich",
+          "target": "ooo-trimiks",
+          "type": "sells_for",
+          "label": "official dealer (named on 3mx.ru/dilery/; shop at Горбушка, pavilion С1-042; Ozon storefront)",
+          "source_id": "s0558",
+          "as_of": "2025-05-30",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": {
+            "products": [
+              "Булаты"
+            ],
+            "status": "listed",
+            "role": "licensed_dealer",
+            "asserted_by": "counterparty",
+            "credibility": "doc",
+            "authorised": "yes",
+            "open": "The dealer page and the post state the dealer relationship; no dealer agreement or certificate is on file. The same post also advertises goods that are not 3mx products (see the open questions)."
           },
           "grade": "doc"
         },
@@ -37316,6 +37359,32 @@
           "grade": "doc"
         },
         {
+          "source": "storefront::dealer-shop-горбушка-pavilion-с1-042-макс-911",
+          "target": "ip-korovkin-aleksandr-anatolevich",
+          "type": "operated_by",
+          "label": "seller",
+          "source_id": "s9309",
+          "as_of": "2025-05-30",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "storefront::dealer-shop-горбушка-pavilion-с1-042-макс-911",
+          "target": "product::ooo-trimiks::bulat",
+          "type": "lists",
+          "label": "dealer shop, Горбушка, pavilion С1-042 (Москва)",
+          "source_id": "s9309",
+          "as_of": "2025-05-30",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null,
+          "grade": "doc"
+        },
+        {
           "source": "storefront::dealer-site-pokrovsystem-ru-покров",
           "target": "ooo-pokrov",
           "type": "operated_by",
@@ -49911,7 +49980,7 @@
           "legal_form": "ООО",
           "variant": "defensive",
           "product_count": 4,
-          "degree": 23
+          "degree": 24
         },
         {
           "id": "ooo-tsentr-dinarus",
@@ -52268,7 +52337,7 @@
           "legal_form": "ООО",
           "variant": "defensive",
           "product_count": 4,
-          "degree": 23
+          "degree": 24
         },
         {
           "id": "ooo-ushkuynik-sp",
@@ -52536,7 +52605,7 @@
             "uav_platform": "unknown",
             "ew_installation": "unknown"
           },
-          "degree": 6
+          "degree": 7
         },
         {
           "id": "product::ooo-villis-wheelies::программная-платформа-wheelies-для-управления-беспилотными-системами",
