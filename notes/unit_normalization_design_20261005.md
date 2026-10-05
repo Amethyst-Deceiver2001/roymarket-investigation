@@ -1,6 +1,12 @@
 # Unit name normalization: design, 05.10.2026
 
-Status: DESIGN ONLY, no code or schema change yet. Freeze broken for this by the user on 05.10.2026 ("yes, break freeze"). Extends the "Unit naming" item in `notes/rebuild_plan.md`.
+Status: BUILT 05.10.2026 (freeze broken for this by the user, "built unit schema overriding freeze"). Extends the "Unit naming" item in `notes/rebuild_plan.md`.
+
+What exists: `scripts/unit_names.py` (parser and field validation), `scripts/unit_lookup.py` (lookup and `--check`), checks in `check_registry.py`, `division` added to `UNIT_TYPES`, fixtures in `tests/test_unit_lookup.py`. Records: the two 76th records merged into `76-я-гвардейская-десантно-штурмовая-дивизия`; the two 237ths added; handovers h0009, h0025, h0041, h0042 point at them.
+
+Departure from the design below: the record id stays the existing `slug`, not an opaque `u####`. The graph (`unit::<slug>`), media `about`, `battlefield_evidence.unit_slug` and handovers all key on it, and a slug never changes once set; `legacy_slugs[]` keeps the merged ones. Number, type and arm are read from the name forms at lookup time for the older records, so only new or merged records carry `number`, `arm`, `names[]` and `parent_history[]`.
+
+Not done: the other 24 older records are untouched (several are unnumbered groupings); handover h0040 («91-й бригады управления») has no unit record; no English form; no unit page.
 
 ## Why
 
@@ -44,9 +50,9 @@ A `--check` mode warns when two records share number + type with different or un
 | 237 tp | 237 | танковый полк | 3-я мсд (user; ruwiki, its Interfax footnote does not mention the unit) | 91726 (ruwiki, uncited there) | all `lead` |
 | 237 гв. дшп | 237 | гвардейский дшп | 76-я гв. дшд (user; en-wiki) | none (12865 from a search summary, unsupported) | name `stated` (Указ № 478), rest `lead` |
 
-## Migration
+## Migration (as built; see status)
 
-1. Add `u` ids and `legacy_slugs[]`; no record is dropped.
+1. `legacy_slugs[]` on merged records; the slug stays the id.
 2. `handovers.json`: keep `recipient_raw`; set `recipient_unit_slug` only when the lookup says `resolved`.
 3. Graph: unit nodes and edges keep working off the legacy slug until the builder is switched in one step; `check_registry.py` validates the new fields; fixtures in `tests/test_unit_lookup.py`.
 4. Review the 26 existing records for duplicates with a person reading the posts; no automatic merge.

@@ -325,7 +325,7 @@ Decided 2026-10-02 (rules in CLAUDE.md):
 
 Waiting on the user:
 
-- Unit naming: the English convention and what the card shows (proposal:
+- Unit naming (name normalization built 05.10.2026, `notes/unit_normalization_design_20261005.md`: `unit_lookup.py`, number + type + arm + parent): still open are the English convention and what the card shows (proposal:
   English short form with the Russian abbreviation and в/ч number, full
   official and informal names on a unit page; APP-6 glyph from the unit's
   echelon and branch, hostile frame). Then extend `military_units.json` with

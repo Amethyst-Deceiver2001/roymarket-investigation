@@ -271,42 +271,6 @@
     ]
   },
   {
-    "slug": "76-я-бригада-вдв",
-    "name_ru": "76-я бригада ВДВ",
-    "unit_type": "brigade",
-    "designation_confidence": "named",
-    "parent_grouping": "ВДВ",
-    "sector_direction_history": [
-      {
-        "value": "Запорожском направлении",
-        "as_of": "2024-01-25",
-        "source_id": "nashapravda-msg232"
-      }
-    ],
-    "notes": null,
-    "sources": [
-      "nashapravda-msg232"
-    ]
-  },
-  {
-    "slug": "76-я-гвардейская-десантно-штурмовая-бригада",
-    "name_ru": "76-я гвардейская десантно-штурмовая бригада",
-    "unit_type": "brigade",
-    "designation_confidence": "named",
-    "parent_grouping": "ВДВ",
-    "sector_direction_history": [
-      {
-        "value": "Запорожском направлении",
-        "as_of": "2025-04-10",
-        "source_id": "nashapravda-msg421"
-      }
-    ],
-    "notes": null,
-    "sources": [
-      "nashapravda-msg421"
-    ]
-  },
-  {
     "slug": "9-й-полк-группировки-центр",
     "name_ru": "9-й полк группировки «Центр»",
     "unit_type": "regiment",
@@ -434,6 +398,164 @@
       "nashapravda-msg502",
       "nashapravda-msg545",
       "nashapravda-msg560"
+    ]
+  },
+  {
+    "slug": "76-я-гвардейская-десантно-штурмовая-дивизия",
+    "name_ru": "76-я гвардейская десантно-штурмовая дивизия",
+    "unit_type": "division",
+    "designation_confidence": "named",
+    "parent_grouping": "ВДВ",
+    "sector_direction_history": [
+      {
+        "value": "Запорожском направлении",
+        "as_of": "2024-01-25",
+        "source_id": "nashapravda-msg232"
+      },
+      {
+        "value": "Запорожском направлении",
+        "as_of": "2025-04-10",
+        "source_id": "nashapravda-msg421"
+      }
+    ],
+    "notes": "Merged 05.10.2026 on the user's statement that the «76-я бригада ВДВ» and the «76-я гвардейская десантно-штурмовая бригада» of earlier posts are one formation, the 76-я гвардейская десантно-штурмовая дивизия. The donor's own channel says «бригада» (posts 232, 421) and «дивизия» (post 440). A document giving the formation's official title has not been read.",
+    "sources": [
+      "nashapravda-msg232",
+      "nashapravda-msg421",
+      "s9206",
+      "s7593",
+      "s9207"
+    ],
+    "number": 76,
+    "arm": "air_assault",
+    "legacy_slugs": [
+      "76-я-бригада-вдв",
+      "76-я-гвардейская-десантно-штурмовая-бригада"
+    ],
+    "names": [
+      {
+        "form": "post_wording",
+        "value": "76-й бригады ВДВ",
+        "grade": "stated",
+        "source_id": "s9206",
+        "as_of": "2024-01-25"
+      },
+      {
+        "form": "post_wording",
+        "value": "76-й гвардейской десантно-штурмовой бригаде",
+        "grade": "stated",
+        "source_id": "s7593",
+        "as_of": "2025-04-10"
+      },
+      {
+        "form": "post_wording",
+        "value": "76-й гвардейской десантно-штурмовой дивизии",
+        "grade": "stated",
+        "source_id": "s9207",
+        "as_of": "2025-05-14"
+      }
+    ],
+    "parent_history": [
+      {
+        "parent_text": "ВДВ",
+        "status": "stated",
+        "as_of": "2024-01-25",
+        "source_id": "s9206",
+        "note": "post 232: «76-й бригады ВДВ»; the branch, not a division-level parent"
+      }
+    ]
+  },
+  {
+    "slug": "237-й-танковый-полк",
+    "name_ru": "237-й танковый полк",
+    "unit_type": "regiment",
+    "designation_confidence": "named",
+    "parent_grouping": "3-я мотострелковая дивизия",
+    "sector_direction_history": [
+      {
+        "value": "ЛНР и ДНР",
+        "as_of": "2025-11-20",
+        "source_id": "s9203"
+      }
+    ],
+    "notes": "Not the 237-й гвардейский десантно-штурмовой полк (237-й-гвардейский-десантно-штурмовой-полк): a bare number does not identify a unit. в/ч 91726 is a lead only (ru.wikipedia.org, no footnote there).",
+    "sources": [
+      "s9203"
+    ],
+    "number": 237,
+    "arm": "tank",
+    "names": [
+      {
+        "form": "post_wording",
+        "value": "237-го танкового полка 3-й мотострелковой дивизии",
+        "grade": "stated",
+        "source_id": "s9203",
+        "as_of": "2025-11-20"
+      },
+      {
+        "form": "short",
+        "value": "237 тп",
+        "grade": "lead",
+        "note": "ru.wikipedia.org/wiki/237-й_танковый_полк (read 05.10.2026), not a primary source"
+      },
+      {
+        "form": "vch",
+        "value": "в/ч 91726",
+        "grade": "lead",
+        "note": "ru.wikipedia.org/wiki/237-й_танковый_полк (read 05.10.2026), no footnote on the number; no document pairing it with the regiment has been read"
+      }
+    ],
+    "parent_history": [
+      {
+        "parent_text": "3-я мотострелковая дивизия",
+        "status": "stated",
+        "as_of": "2025-11-20",
+        "source_id": "s9203",
+        "note": "the donor's own wording in post 532"
+      },
+      {
+        "parent_text": "20-я армия",
+        "status": "lead",
+        "note": "the user, 05.10.2026; ru.wikipedia.org says 20-я гвардейская общевойсковая армия, and the Interfax article of 15.01.2017 its footnote cites does not mention the 237th"
+      }
+    ]
+  },
+  {
+    "slug": "237-й-гвардейский-десантно-штурмовой-полк",
+    "name_ru": "237-й гвардейский десантно-штурмовой полк",
+    "unit_type": "regiment",
+    "designation_confidence": "named",
+    "parent_grouping": null,
+    "sector_direction_history": [],
+    "notes": "Not the 237-й танковый полк (237-й-танковый-полк). Parent formation and в/ч are not stated by any document read: 12865 from a web-search summary is unsupported and is not recorded.",
+    "sources": [
+      "s9204",
+      "s9205"
+    ],
+    "number": 237,
+    "arm": "air_assault",
+    "names": [
+      {
+        "form": "official",
+        "value": "237 гвардейский десантно-штурмовой Торуньский полк",
+        "grade": "stated",
+        "source_id": "s9205",
+        "as_of": "2023-06-29"
+      },
+      {
+        "form": "post_wording",
+        "value": "237-му гвардейскому десантно-штурмовому полку",
+        "grade": "stated",
+        "source_id": "s9204",
+        "as_of": "2026-10-03"
+      }
+    ],
+    "parent_history": [
+      {
+        "parent_unit": "76-я-гвардейская-десантно-штурмовая-дивизия",
+        "status": "lead",
+        "note": "the user, 05.10.2026; en.wikipedia.org/wiki/76th_Guards_Air_Assault_Division lists the regiment, no document read states it"
+      }
     ]
   }
 ]

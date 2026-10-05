@@ -20,7 +20,7 @@ EDGE_TYPES = {"owns", "related", "founded", "directs", "role", "produces",
               "banks_with", "acquiring_via", "ships_via", "lists", "operated_by"}
 TEMPORAL_STATUSES = {"current", "historical", "unknown"}
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
-UNIT_TYPES = {"army", "brigade", "regiment", "battalion", "detachment",
+UNIT_TYPES = {"army", "division", "brigade", "regiment", "battalion", "detachment",
               "volunteer_detachment", "unit_designator", "grouping",
               "unspecified_role"}
 UNIT_DESIGNATION_CONFIDENCE = {"named", "descriptive", "grouping"}

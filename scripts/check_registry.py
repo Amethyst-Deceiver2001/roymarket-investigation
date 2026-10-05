@@ -45,6 +45,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from reverse_source_index import build_index  # noqa: E402
+import unit_names  # noqa: E402
 from graph_contract import (validate_graph, validate_views, SELLS_FOR_BASIS, SALE_STATUSES, ASSERTED_BY,
                             CREDIBILITY, AUTHORISED, BASIS_CREDIBILITY, RELATION_ROLES, PARTNER_KIND_EDGE,  # noqa: E402
                             ECOSYSTEM_ROLES, LEGAL_ENTITY_STATUS, PROGRAM_KINDS, PROGRAM_SUBTYPES,
@@ -811,7 +812,13 @@ def main() -> int:
     media_path = REG / "media.json"
     media = json.loads(media_path.read_text(encoding="utf-8")) if media_path.exists() else []
     units_path = REG / "military_units.json"
-    unit_slugs = {u.get("slug") for u in (json.loads(units_path.read_text(encoding="utf-8")) if units_path.exists() else [])}
+    unit_records = json.loads(units_path.read_text(encoding="utf-8")) if units_path.exists() else []
+    unit_slugs = {u.get("slug") for u in unit_records}
+    for u in unit_records:
+        errors.extend(unit_names.validate_unit(u, unit_slugs))
+        for old_slug in u.get("legacy_slugs") or []:
+            if old_slug in unit_slugs:
+                errors.append(f"military_units[{u.get('slug')}].legacy_slugs {old_slug!r} is also a live unit slug")
     about_ids = {"entity": live_slugs, "person": people_slugs, "product": seen_products, "version": version_slugs,
                  "delivery": delivery_ids - {None}, "listing": all_listing_ids - {None}, "unit": unit_slugs,
                  "program": {r.get("slug") for r in programs}}
