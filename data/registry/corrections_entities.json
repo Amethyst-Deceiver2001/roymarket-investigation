@@ -42967,6 +42967,15 @@
             "source_id": "s7908",
             "note": "Уставный капитал per the ЕГРЮЛ выписка (ГРН 1257700027090, entered 24.01.2025 with the registration); no later change in the extract."
           }
+        ],
+        "financials": [
+          {
+            "year": "2025",
+            "revenue": 2883000,
+            "profit": 1000,
+            "source_id": "s9200",
+            "note": "Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 05.10.2026), reported in тыс. руб. and converted to whole rubles. Expenses 2,832; other income 140; other expenses 9; income tax 181 (printed without brackets; the lines sum to the printed profit of 1). Total assets 44 тыс., equity 11 тыс. against charter capital ₽10,000, so the units are consistent. The first filing: the company was registered 24.01.2025 and the 2023-2024 columns are empty. Signed by Еськов Николай Леонидович (ректор), the ЕГРЮЛ director."
+          }
         ]
       },
       "why": [
@@ -43801,7 +43810,30 @@
             2538
           ],
           "note": "Posts 2342 and 2538 name the volunteer centre «БАРС-Сармат» (ЦСН), not this foundation (ИНН 6154168283); no link to the foundation is stated."
-        }
+        },
+        "financials": [
+          {
+            "year": "2025",
+            "revenue": 1994000,
+            "profit": 1784000,
+            "funds_balance_start": 10895000,
+            "funds_received": 228395000,
+            "funds_used": 45690000,
+            "funds_balance_end": 193600000,
+            "source_id": "s9194",
+            "note": "Non-profit фонд (КНД 0710099): funds_* are the «Отчет о целевом использовании средств», funds, not revenue; revenue (line 2110) 1,994 and profit (2400) 1,784 as printed. Received 228,395: «Добровольные имущественные взносы и пожертвования» 226,611 (line 6230) and profit from income-generating activity 1,784; the donor is not stated. Used 45,690: targeted measures 44,459 (all «прочие»), administration 1,231. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 05.10.2026), reported in тыс. руб. and converted to whole rubles. The report states a start balance of 10,895 while the balance sheet for 31.12.2024 prints zero total assets; the filing does not explain it. Total assets 193,813 тыс., target funds 193,600 тыс. Signed by Найманов Эдуард Русланович; the registry's director is Гамируллин Марат Джаудатович, so the signer differs and is not resolved here."
+          }
+        ],
+        "open_questions": [
+          {
+            "source_id": "s7870",
+            "text": "Two founders are Рогозин-linked (Алексей himself; АНО ЦРТТ, where he is director) and the third, АО «МИКЦ» (ИНН 7714486438), is on file: check what the ЕГРЮЛ says of its owners and whether it ties to Рогозин or ЦБСТ. Who directed the fund before Гамируллин (entry of 09.07.2026) is unknown; a first выписка for 2024-2026 or the history extract would show it."
+          },
+          {
+            "source_id": "s9194",
+            "text": "The 2025 filing is signed by Найманов Эдуард Русланович as руководитель, while the registry's director is Гамируллин Марат Джаудатович. Which of the two heads the fund, and since when, needs the current ЕГРЮЛ extract; none is on file. The fund's start balance of 10,895 тыс. (line 6100) against a zero balance sheet at 31.12.2024 is also unexplained."
+          }
+        ]
       }
     },
     "fgup-zashchitainfotrans": {
@@ -43997,6 +44029,61 @@
             "label": "Ремонт компьютеров и периферийного компьютерного оборудования",
             "as_of": "2004-12-24",
             "source_id": "s8933"
+          }
+        ],
+        "financials": [
+          {
+            "year": "2021",
+            "revenue": 15135000,
+            "profit": 1141000,
+            "source_id": "s9189",
+            "note": "Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 05.10.2026), reported in тыс. руб. and converted to whole rubles. Total assets 14,403 тыс., equity 13,275 тыс. against charter capital ₽617,454.53 (units consistent)."
+          },
+          {
+            "year": "2022",
+            "revenue": 13701000,
+            "profit": 707000,
+            "source_id": "s9190",
+            "note": "Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 05.10.2026), reported in тыс. руб. and converted to whole rubles. Total assets 15,012 тыс., equity 13,308 тыс. against charter capital ₽617,454.53 (units consistent). The 2023 filing restates 2022 total assets as 15,275 and payables 1,966 (first filed 15,012 and 1,704)."
+          },
+          {
+            "year": "2023",
+            "revenue": 13813000,
+            "profit": 400000,
+            "source_id": "s9191",
+            "note": "Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 05.10.2026), reported in тыс. руб. and converted to whole rubles. Total assets 8,513 тыс., equity 6,225 тыс. against charter capital ₽617,454.53 (units consistent). Equity fell from 13,308 to 6,225 while profit was 400; the lines read do not say why."
+          },
+          {
+            "year": "2024",
+            "revenue": 25318000,
+            "profit": 2823000,
+            "source_id": "s9192",
+            "note": "Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 05.10.2026), reported in тыс. руб. and converted to whole rubles. Total assets 11,922 тыс., equity 9,040 тыс. against charter capital ₽617,454.53 (units consistent)."
+          },
+          {
+            "year": "2025",
+            "revenue": 34078000,
+            "profit": 796000,
+            "source_id": "s9193",
+            "note": "Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 05.10.2026), reported in тыс. руб. and converted to whole rubles. Total assets 12,187 тыс., equity 9,835 тыс. against charter capital ₽617,454.53 (units consistent). Borrowings 94 long-term and 500 short-term. Signed by Холкин Олег Валерьевич, the ЕГРЮЛ director."
+          }
+        ],
+        "open_questions": [
+          {
+            "source_id": "s8933",
+            "text": "The ЕГРЮЛ name is «Московское отделение Пензенского научно-исследовательского электротехнического института-Краскрипт», a Красноярск company registered 1999/2002 with a primary ОКВЭД of IT services; why a drone school sits under that name is not established. Who runs DRONTECH.PRO is established by the school's own site (s8941), whose footer prints this company's ОГРН and ИНН and the licence number, and which names «кандидат технических наук Олег Холкин» as the school's founder; the sole owner and director is Холкин Олег Валерьевич (s8933), and the two are linked by name, not by a printed personal ИНН. A person record was made 04.10.2026 (kholkin-oleg-valerevich)."
+          },
+          {
+            "source_id": "s8941",
+            "text": "The school's site names «Александр Холкин» (world and Russian drone-racing champion) as the course author. His relation to Холкин Олег Валерьевич is not stated in anything read; same surname only. No record is made."
+          },
+          {
+            "source_id": "s9078",
+            "text": "Aleph search of 03.10.2026 (5 hits): the company's register records and two pages of one 2020 reply letter in the 2022 Tendertech leak. None mentions Холкин or DRONTECH; nothing taken from them."
+          },
+          {
+            "source_id": "s9191",
+            "text": "Equity fell from 13,308 тыс. at 31.12.2022 to 6,225 тыс. at 31.12.2023 while the year's profit was 400 тыс.; the balance and income lines read from the 2021-2025 filings do not say why (a distribution to the participant is one possibility; the equity-movement pages were not read). Revenue then rose to 25,318 (2024) and 34,078 (2025)."
           }
         ]
       },
@@ -44513,6 +44600,134 @@
             "revenue": 349650000,
             "profit": 217975000,
             "source_id": "s9131"
+          }
+        ]
+      }
+    },
+    "ooo-uk-komaks": {
+      "set": {
+        "financials": [
+          {
+            "year": "2021",
+            "revenue": 52647000,
+            "profit": -5521000,
+            "source_id": "s9145",
+            "note": "Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 05.10.2026), reported in тыс. руб. and converted to whole rubles. Total assets 124,956 тыс., equity 53,723 тыс. Long-term borrowings 38,812, short-term 18,716, payables 4,750. The 2020 column shows the same revenue (52,647) and a profit of 7,435."
+          },
+          {
+            "year": "2022",
+            "revenue": 52647000,
+            "profit": -267464000,
+            "source_id": "s9146",
+            "note": "Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 05.10.2026), reported in тыс. руб. and converted to whole rubles. Total assets 6,978,980 тыс., equity -213,937 тыс. Long-term borrowings 7,136,801, short-term 18,717, payables 28,287. Revenue is identical to 2021 to the thousand. The filing restates 2021: profit (5,717) against (5,521) first filed, total assets 124,711 against 124,956."
+          },
+          {
+            "year": "2023",
+            "revenue": 73800000,
+            "profit": -557342000,
+            "source_id": "s9147",
+            "note": "Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 05.10.2026), reported in тыс. руб. and converted to whole rubles. Total assets 7,291,571 тыс., equity -771,279 тыс. Long-term borrowings 7,802,070, short-term 226,249, payables 21,405. The 2024 filing restates 2023: profit (548,575) against (557,342), equity (762,512), total assets 7,300,338."
+          },
+          {
+            "year": "2024",
+            "revenue": 73800000,
+            "profit": 1145281000,
+            "source_id": "s9148",
+            "note": "Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 05.10.2026), reported in тыс. руб. and converted to whole rubles. Total assets 665,654 тыс., equity 347,453 тыс. Long-term borrowings 0 (7,802,070 a year earlier), short-term 250,181, payables 41,673. Revenue is identical to 2023. The lines read do not say what extinguished the long-term debt."
+          },
+          {
+            "year": "2025",
+            "revenue": 73800000,
+            "profit": 70687000,
+            "source_id": "s9149",
+            "note": "Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 05.10.2026), reported in тыс. руб. and converted to whole rubles. Total assets 733,795 тыс., equity 418,140 тыс. Long-term borrowings 193,413, short-term 18,717, payables 71,204. Revenue is identical to 2023 and 2024. Signed by Аширов Ярослав Олегович, the ЕГРЮЛ director."
+          }
+        ],
+        "open_questions": [
+          {
+            "source_id": "s9146",
+            "text": "Who lent ООО «УК КОМАКС» about ₽7.1bn (long-term borrowings 7,136,801 тыс. at 31.12.2022, 7,802,070 тыс. at 31.12.2023) and what extinguished the debt in 2024 (borrowings 0, profit ₽1,145m) is not stated in the balance and income lines read from the five filings (2021-2025). The notes pages were not read for counterparties. Revenue is identical to the thousand in 2021-2022 (52,647) and in 2023-2025 (73,800)."
+          }
+        ]
+      }
+    },
+    "ooo-startap-studiya-universiteta-lobachevskogo": {
+      "set": {
+        "financials": [
+          {
+            "year": "2024",
+            "revenue": null,
+            "profit": -4907000,
+            "source_id": "s9139",
+            "note": "Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 05.10.2026), reported in тыс. руб. and converted to whole rubles. Line 2110 printed as «-»: no revenue. Management expenses 4,883, commercial 2, other expenses 22. Total assets 97,884 тыс. (long-term borrowings 101,417), equity (3,624) тыс. Registered 06.12.2023; charter capital ₽12,962.96."
+          },
+          {
+            "year": "2025",
+            "revenue": null,
+            "profit": -6781000,
+            "source_id": "s9140",
+            "note": "Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 05.10.2026), reported in тыс. руб. and converted to whole rubles. No revenue line printed. Management expenses 6,934, commercial 4, interest payable 199, other expenses 42. Total assets 191,119 тыс. (long-term borrowings 201,417), equity (10,405) тыс. Signed by Федотов Михаил Львович, the ЕГРЮЛ director."
+          }
+        ]
+      }
+    },
+    "fond-razvitiya-promyshlennosti-tulskoy-oblasti": {
+      "set": {
+        "financials": [
+          {
+            "year": "2021",
+            "revenue": 15668000,
+            "profit": 12805000,
+            "funds_balance_start": 277560000,
+            "funds_received": 291431000,
+            "funds_used": 75772000,
+            "funds_balance_end": 493219000,
+            "source_id": "s9195",
+            "note": "Non-profit фонд (КНД 0710099): the funds_* figures are the «Отчет о целевом использовании средств» (lines 6100-6400), funds, not revenue; revenue and profit are lines 2110 and 2400 as printed. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 05.10.2026), reported in тыс. руб. and converted to whole rubles. Total assets 506,614. The 2022 filing restates the 2021 closing target funds as 493,210."
+          },
+          {
+            "year": "2022",
+            "revenue": 9322000,
+            "profit": 14425000,
+            "funds_balance_start": 493210000,
+            "funds_received": 1270730000,
+            "funds_used": 582298000,
+            "funds_balance_end": 1181641000,
+            "source_id": "s9196",
+            "note": "Non-profit фонд (КНД 0710099): the funds_* figures are the «Отчет о целевом использовании средств» (lines 6100-6400), funds, not revenue; revenue and profit are lines 2110 and 2400 as printed. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 05.10.2026), reported in тыс. руб. and converted to whole rubles. Total assets 1,292,096; target funds 1,181,642 on the balance sheet. Targeted measures 569,034 (social and charitable 391,871)."
+          },
+          {
+            "year": "2023",
+            "revenue": 23705000,
+            "profit": 5731000,
+            "funds_balance_start": 1181642000,
+            "funds_received": 1243646000,
+            "funds_used": 1175334000,
+            "funds_balance_end": 1249955000,
+            "source_id": "s9197",
+            "note": "Non-profit фонд (КНД 0710099): the funds_* figures are the «Отчет о целевом использовании средств» (lines 6100-6400), funds, not revenue; revenue and profit are lines 2110 and 2400 as printed. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 05.10.2026), reported in тыс. руб. and converted to whole rubles. Total assets 1,478,094. Targeted measures 1,155,028 (social and charitable 1,081,428). The 2024 filing restates 2023: closing target funds 1,249,432, total assets 1,477,996, used 1,175,857."
+          },
+          {
+            "year": "2024",
+            "revenue": 60700000,
+            "profit": 28524000,
+            "funds_balance_start": 1249432000,
+            "funds_received": 1280663000,
+            "funds_used": 1161247000,
+            "funds_balance_end": 1368848000,
+            "source_id": "s9198",
+            "note": "Non-profit фонд (КНД 0710099): the funds_* figures are the «Отчет о целевом использовании средств» (lines 6100-6400), funds, not revenue; revenue and profit are lines 2110 and 2400 as printed. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 05.10.2026), reported in тыс. руб. and converted to whole rubles. Total assets 1,644,215. Targeted measures 1,135,895 (social and charitable 1,023,295)."
+          },
+          {
+            "year": "2025",
+            "revenue": 28000,
+            "profit": 27377000,
+            "funds_balance_start": 1368848000,
+            "funds_received": 947390000,
+            "funds_used": 712019000,
+            "funds_balance_end": 1604218000,
+            "source_id": "s9199",
+            "note": "Non-profit фонд (КНД 0710099): the funds_* figures are the «Отчет о целевом использовании средств» (lines 6100-6400), funds, not revenue; revenue and profit are lines 2110 and 2400 as printed. Read in full from the signed БФО filing (bo.nalog.gov.ru, pulled 05.10.2026), reported in тыс. руб. and converted to whole rubles. Total assets 1,896,947. Targeted measures 671,581 (all social and charitable). Revenue line printed as 28 against 60,700 a year earlier. Signed by Груданова Нина Олеговна, the director on file."
           }
         ]
       }
