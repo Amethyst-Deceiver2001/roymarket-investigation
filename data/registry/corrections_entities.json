@@ -15860,12 +15860,12 @@
             "source_id": "s0815"
           },
           {
-            "date": null,
+            "date": "2024-10-30",
             "source_id": "s9267",
             "regime": [
               "US (OFAC SDN list, programme RUSSIA-EO14024)"
             ],
-            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 50792, which prints 1237700463032, 9723203841 (the entry's XML is saved as the cited source). Names on the entry: AREA JOINT STOCK COMPANY; AO PLOSHCHAD. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry."
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 50792, which prints 1237700463032, 9723203841 (the entry's XML is saved as the cited source). Names on the entry: AREA JOINT STOCK COMPANY; AO PLOSHCHAD. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry. Listing date 30.10.2024 from the OFAC recent-actions notice of that day (s9300), which prints this record's identifiers among the designations; the notice was found through the GUR portal page for this entity (s6150), whose USA field links it."
           },
           {
             "date": "2025-07-18",
@@ -15882,6 +15882,14 @@
               "Switzerland (SECO sanctions list)"
             ],
             "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 95826, which prints 1237700463032, 9723203841 (the entry's XML is saved as the cited source). Names on the entry: Joint Stock Company “Ploshchad”; JSC “Ploshchad”; JSC “Square”. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2025-08-12."
+          },
+          {
+            "date": "2025-07-27",
+            "source_id": "s9305",
+            "regime": [
+              "Ukraine (Presidential Decree no. 554/2025 of 27.07.2025, bringing into force a decision of the National Security and Defence Council)"
+            ],
+            "note": "The GUR portal page for this entity (s6150) gives Ukraine: 27.07.2025, and links decree no. 554/2025. The decree page on zakon.rada.gov.ua was read: it brings into force the NSDC decision of that date «Про застосування персональних спеціальних економічних та інших обмежувальних заходів (санкцій)». The decision's annex, where subjects are named, was NOT read (president.gov.ua refused scripted requests with 403; the Rada page carries only the decree itself), so that this entity is named in it rests on the GUR portal."
           }
         ],
         "wb_overlap": "none_found",
@@ -15997,7 +16005,8 @@
         "2026-09-15: informal-cooperation triage (LEAD 3) -- confirmed the projectArchangel/Archangel_Forum joint-exhibitor listing verbatim against data/roymarket.db. Recorded as related_entities per CLAUDE.md's existing mechanism, not a new cbst_tie (it's the Архангел project's own event, not ЦБСТ's).",
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
         "2026-09-16 (coverage-gap agent pass, verified independently before wiring): source_id left null, same precedent as ooo-aviron above.",
-        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list)."
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list).",
+        "05.10.2026: US listing date and Ukraine act/date added from the saved GUR portal page, the OFAC recent-actions notice and the Presidential decree page (read on zakon.rada.gov.ua); decision annex unread, see sanctions[] notes."
       ]
     },
     "ao-pmts-avangard": {
@@ -16914,12 +16923,12 @@
             "source_id": "s0779"
           },
           {
-            "date": null,
+            "date": "2024-08-23",
             "source_id": "s9261",
             "regime": [
               "US (OFAC SDN list, programme RUSSIA-EO14024)"
             ],
-            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 50246, which prints 1237700447324, 7720901379 (the entry's XML is saved as the cited source). Names on the entry: JOINT STOCK COMPANY STRATIM; JSC STRATIM; STRATIM DESIGN BUREAU; STRATIM COMPANY. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry."
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 50246, which prints 1237700447324, 7720901379 (the entry's XML is saved as the cited source). Names on the entry: JOINT STOCK COMPANY STRATIM; JSC STRATIM; STRATIM DESIGN BUREAU; STRATIM COMPANY. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry. Listing date 23.08.2024 from the OFAC recent-actions notice of that day (s9299), which prints this record's identifiers among the designations; the notice was found through the GUR portal page for this entity (s6145), whose USA field links it."
           },
           {
             "date": "2025-05-20",
@@ -16952,6 +16961,14 @@
               "Switzerland (SECO sanctions list)"
             ],
             "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 91706, which prints 7720901379 (the entry's XML is saved as the cited source). Names on the entry: JSC “STRATIM”; STRATIM DESIGN BUREAU. Sanctions-set id 29445 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2025-06-03."
+          },
+          {
+            "date": "2024-12-02",
+            "source_id": "s6145",
+            "regime": [
+              "Ukraine (NSDC sanctions, date and act as stated on the GUR portal)"
+            ],
+            "note": "The GUR portal page for this entity states Ukraine: 02.12.2024 and links only the general decrees page (https://www.rnbo.gov.ua/ua/Ukazy/). The decree itself is not identified and not read; the date is the portal's statement."
           }
         ],
         "wb_overlap": "none_found",
@@ -17075,7 +17092,8 @@
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
         "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
-        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list)."
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list).",
+        "05.10.2026: US listing date and Ukraine act/date added from the saved GUR portal page, the OFAC recent-actions notice and the Presidential decree page (read on zakon.rada.gov.ua); decision annex unread, see sanctions[] notes."
       ]
     },
     "ao-tekhnodinamika": {
@@ -17444,6 +17462,14 @@
               "Switzerland (SECO sanctions list)"
             ],
             "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 105821, which prints 1247700354175, 9704241986 (the entry's XML is saved as the cited source). Names on the entry: JSC Technodron. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2026-05-22."
+          },
+          {
+            "date": "2026-05-29",
+            "source_id": "s9302",
+            "regime": [
+              "Ukraine (Presidential Decree no. 447/2026 of 29.05.2026, bringing into force a decision of the National Security and Defence Council)"
+            ],
+            "note": "The GUR portal page for this entity (s6149) gives Ukraine: 29.05.2026, and links decree no. 447/2026. The decree page on zakon.rada.gov.ua was read: it brings into force the NSDC decision of that date «Про застосування персональних спеціальних економічних та інших обмежувальних заходів (санкцій)». The decision's annex, where subjects are named, was NOT read (president.gov.ua refused scripted requests with 403; the Rada page carries only the decree itself), so that this entity is named in it rests on the GUR portal."
           }
         ],
         "wb_overlap": "none_found",
@@ -17512,7 +17538,8 @@
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
         "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s7588; the earlier cbst_tie record is unchanged.",
-        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list)."
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list).",
+        "05.10.2026: US listing date and Ukraine act/date added from the saved GUR portal page, the OFAC recent-actions notice and the Presidential decree page (read on zakon.rada.gov.ua); decision annex unread, see sanctions[] notes."
       ]
     },
     "ao-tsentr-telko": {
@@ -22999,12 +23026,12 @@
             "source_id": "s0729"
           },
           {
-            "date": null,
+            "date": "2024-06-12",
             "source_id": "s9254",
             "regime": [
               "US (OFAC SDN list, programme RUSSIA-EO14024)"
             ],
-            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 49193, which prints 1232700009398, 2700012608 (the entry's XML is saved as the cited source). Names on the entry: LIMITED LIABILITY COMPANY AERO-HIT; LLC AERO-HIT. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry."
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 49193, which prints 1232700009398, 2700012608 (the entry's XML is saved as the cited source). Names on the entry: LIMITED LIABILITY COMPANY AERO-HIT; LLC AERO-HIT. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry. Listing date 12.06.2024 from the OFAC recent-actions notice of that day (s9298), which prints this record's identifiers among the designations; the notice was found through the GUR portal page for this entity (s6138), whose USA field links it."
           },
           {
             "date": "2026-04-23",
@@ -23021,6 +23048,14 @@
               "Switzerland (SECO sanctions list)"
             ],
             "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 105290, which prints 1232700009398, 2700012608 (the entry's XML is saved as the cited source). Names on the entry: Limited Liability Company Aero-HIT; LLC “AERO-HIT”. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2026-05-22."
+          },
+          {
+            "date": "2025-06-20",
+            "source_id": "s9301",
+            "regime": [
+              "Ukraine (Presidential Decree no. 415/2025 of 20.06.2025, bringing into force a decision of the National Security and Defence Council)"
+            ],
+            "note": "The GUR portal page for this entity (s6138) gives Ukraine: 20.06.2025, and links decree no. 415/2025. The decree page on zakon.rada.gov.ua was read: it brings into force the NSDC decision of that date «Про застосування персональних спеціальних економічних та інших обмежувальних заходів (санкцій)». The decision's annex, where subjects are named, was NOT read (president.gov.ua refused scripted requests with 403; the Rada page carries only the decree itself), so that this entity is named in it rests on the GUR portal."
           }
         ],
         "state_programs": [
@@ -23119,7 +23154,8 @@
         "2026-09-07: merged dormant duplicate correction key '2700012608' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
         "2026-09-16 (coverage-gap agent pass, verified independently before wiring): same post/precedent as the other five already-tied entities from this exact post.",
-        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list)."
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list).",
+        "05.10.2026: US listing date and Ukraine act/date added from the saved GUR portal page, the OFAC recent-actions notice and the Presidential decree page (read on zakon.rada.gov.ua); decision annex unread, see sanctions[] notes."
       ]
     },
     "ooo-aeromaks": {
@@ -31747,6 +31783,14 @@
               "Switzerland (SECO sanctions list)"
             ],
             "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 92861, which prints 1235000022179, 5003155499 (the entry's XML is saved as the cited source). Names on the entry: Limited Liability Company “Scientific And Production Association Rustecdrone”; LLC NPO Rustecdrone. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2025-06-03."
+          },
+          {
+            "date": "2024-12-02",
+            "source_id": "s6139",
+            "regime": [
+              "Ukraine (NSDC sanctions, date and act as stated on the GUR portal)"
+            ],
+            "note": "The GUR portal page for this entity states Ukraine: 02.12.2024 and links only the general decrees page (https://www.rnbo.gov.ua/ua/Ukazy/). The decree itself is not identified and not read; the date is the portal's statement."
           }
         ],
         "state_programs": [
@@ -31906,7 +31950,8 @@
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
         "2026-09-15: added counterparty related_entities[] edges to ooo-dsg and ooo-spetsialnye-poleznye-tekhnologii (new relationship_type value, same session) -- both already fully documented in this record's own litigation[] but never converted into a graph edge. No new lookups; cited to the same litigation source_ids already on file.",
         "[2026-09-30] director_history: the sourceless checko.ru entry is replaced by the ЕГРЮЛ open-data record shown on the company's OpenSanctions page (s8543): Соколов Герман Олегович, генеральный директор, 27.02.2023–11.03.2025. The registry records that period only. It does not record him as the current director, because the ЕГРЮЛ director section has been restricted since 12.03.2025 (s6718) and no document states who holds the post now. Same page lists his 14.75% stake (to 11.03.2025) among a partial owner list that includes АО «ТР КОРП» 29.5% and АО «Спорт и образование» 21%; not wired as founders_history because the list is incomplete on the page.",
-        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list)."
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list).",
+        "05.10.2026: US listing date and Ukraine act/date added from the saved GUR portal page, the OFAC recent-actions notice and the Presidential decree page (read on zakon.rada.gov.ua); decision annex unread, see sanctions[] notes."
       ]
     },
     "ooo-npts-basirtk": {
@@ -35223,12 +35268,12 @@
             "source_id": "s0761"
           },
           {
-            "date": null,
+            "date": "2024-08-23",
             "source_id": "s9257",
             "regime": [
               "US (OFAC SDN list, programme RUSSIA-EO14024)"
             ],
-            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 49943, which prints 1237300010430, 7300024069 (the entry's XML is saved as the cited source). Names on the entry: LIMITED LIABILITY COMPANY SIMBIRSKOE KONSTRUKTORSKOE BYURO PIRANYA; SKB PIRANHA; SKB PIRANYA; SIMBIRSK DESIGN BUREAU. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry."
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 49943, which prints 1237300010430, 7300024069 (the entry's XML is saved as the cited source). Names on the entry: LIMITED LIABILITY COMPANY SIMBIRSKOE KONSTRUKTORSKOE BYURO PIRANYA; SKB PIRANHA; SKB PIRANYA; SIMBIRSK DESIGN BUREAU. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry. Listing date 23.08.2024 from the OFAC recent-actions notice of that day (s9299), which prints this record's identifiers among the designations; the notice was found through the GUR portal page for this entity (s6143), whose USA field links it."
           },
           {
             "date": "2026-04-23",
@@ -35245,6 +35290,14 @@
               "Switzerland (SECO sanctions list)"
             ],
             "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 105178, which prints 1237300010430, 7300024069 (the entry's XML is saved as the cited source). Names on the entry: Limited Liability Company Simbirsk Design Bureau “Piranya”; LLC SDB “Piranya”; Limited Liability Company Simbirskoe Konstruktrskoe Byuro “Piranya”. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2026-05-22."
+          },
+          {
+            "date": "2024-12-02",
+            "source_id": "s6143",
+            "regime": [
+              "Ukraine (NSDC sanctions, date and act as stated on the GUR portal)"
+            ],
+            "note": "The GUR portal page for this entity states Ukraine: 02.12.2024 and links only the general decrees page (https://www.rnbo.gov.ua/ua/Ukazy/). The decree itself is not identified and not read; the date is the portal's statement."
           }
         ],
         "wb_overlap": "none_found",
@@ -35448,7 +35501,8 @@
         "2026-09-15: 4 images added following a local Telegram-DB media pull (tg_media_pull.py, @piranhafpv channel) surfaced by a case-study evidence-depth research pass — this entity had 0 images despite 3 marketing_claims/4 battlefield_evidence already on file. Files copied to docs/images/, archived+indexed as s7509/s7512/s7513/s7514. Source posts also carry additional marketing copy not yet in marketing_claims[] (verbatim self-incriminating claims: \"Первый танк «ABRAMS» был подбит БПЛА «Пиранья 10»\", \"Производство более 4 000 аппаратов ежемесячно\" [post 360, 01.04.2025]; \"Наша компания Пиранья гордится тем, что производит высококачественное оптоволокно для управления дронами с дальностью до 30 км\" [post 384, 01.08.2025] — a direct claim of supplying the fiber-optic cable used in a MoD-press-service-reported tank-destruction near Kursk) -- flagged here for a follow-up pass to also populate marketing_claims[]/battlefield_evidence[], not done in this edit to keep this change scoped to images.",
         "2026-09-15: fixed a field-shape bug in the images[] entries added above — they used 'file'/'caption_ru'/'caption_en' keys, but the registry's own images[] schema (see every other entity's images[]) is 'path' (relative to docs/, e.g. 'images/<file>')/'caption' (single field). The mismatch was silent until build_company_profile.py's --all run crashed on it (KeyError: 'path') during unrelated product-profile work. Fixed to 'path'/'caption' (using the English caption text to match this project's EN-is-analysis convention for profile pages); the Russian caption text is not lost, just no longer duplicated in a second field this schema has no display path for — recoverable from git history if needed.",
         "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s7588; the earlier cbst_tie record is unchanged.",
-        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list)."
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list).",
+        "05.10.2026: US listing date and Ukraine act/date added from the saved GUR portal page, the OFAC recent-actions notice and the Presidential decree page (read on zakon.rada.gov.ua); decision annex unread, see sanctions[] notes."
       ]
     },
     "ooo-smart-teknolodzhis": {
@@ -35663,6 +35717,14 @@
               "Switzerland (SECO sanctions list)"
             ],
             "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 86958, which prints 7838044584 (the entry's XML is saved as the cited source). Names on the entry: LLC SPDBBK. Sanctions-set id 29445 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2024-12-24."
+          },
+          {
+            "date": "2025-07-08",
+            "source_id": "s9303",
+            "regime": [
+              "Ukraine (Presidential Decree no. 472/2025 of 08.07.2025, bringing into force a decision of the National Security and Defence Council)"
+            ],
+            "note": "The GUR portal page for this entity (s6147) gives Ukraine: 08.07.2025, and links decree no. 472/2025. The decree page on zakon.rada.gov.ua was read: it brings into force the NSDC decision of that date «Про застосування персональних спеціальних економічних та інших обмежувальних заходів (санкцій)». The decision's annex, where subjects are named, was NOT read (president.gov.ua refused scripted requests with 403; the Rada page carries only the decree itself), so that this entity is named in it rests on the GUR portal."
           }
         ],
         "wb_overlap": "none_found",
@@ -35779,7 +35841,8 @@
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
         "04.10.2026: the EU entry is Annex IV of Regulation 833/2014 (export restrictions), checked in the Official Journal text (s9120); relabelled so it is not read as an asset freeze.",
-        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list)."
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list).",
+        "05.10.2026: US listing date and Ukraine act/date added from the saved GUR portal page, the OFAC recent-actions notice and the Presidential decree page (read on zakon.rada.gov.ua); decision annex unread, see sanctions[] notes."
       ]
     },
     "ooo-spetsialnye-poleznye-tekhnologii": {
@@ -35957,12 +36020,12 @@
             "source_id": "s0745"
           },
           {
-            "date": null,
+            "date": "2024-08-23",
             "source_id": "s9255",
             "regime": [
               "US (OFAC SDN list, programme RUSSIA-EO14024)"
             ],
-            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 50274, which prints 1245200009075, 5260494520 (the entry's XML is saved as the cited source). Names on the entry: STRATIM LIMITED LIABILITY COMPANY; STRATIM LLC. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry."
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 50274, which prints 1245200009075, 5260494520 (the entry's XML is saved as the cited source). Names on the entry: STRATIM LIMITED LIABILITY COMPANY; STRATIM LLC. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry. Listing date 23.08.2024 from the OFAC recent-actions notice of that day (s9299), which prints this record's identifiers among the designations; the notice was found through the GUR portal page for this entity (s6140), whose USA field links it."
           },
           {
             "date": null,
@@ -35971,6 +36034,14 @@
               "Switzerland (SECO sanctions list)"
             ],
             "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 91832, which prints 5260494520 (the entry's XML is saved as the cited source). Names on the entry: LLC “STRATIM”. Sanctions-set id 29445 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2025-06-03."
+          },
+          {
+            "date": "2025-07-08",
+            "source_id": "s9304",
+            "regime": [
+              "Ukraine (Presidential Decree no. 473/2025 of 08.07.2025, bringing into force a decision of the National Security and Defence Council)"
+            ],
+            "note": "The GUR portal page for this entity (s6140) gives Ukraine: 08.07.2025, and links decree no. 473/2025. The decree page on zakon.rada.gov.ua was read: it brings into force the NSDC decision of that date «Про застосування персональних спеціальних економічних та інших обмежувальних заходів (санкцій)». The decision's annex, where subjects are named, was NOT read (president.gov.ua refused scripted requests with 403; the Rada page carries only the decree itself), so that this entity is named in it rests on the GUR portal."
           }
         ],
         "wb_overlap": "none_found",
@@ -36061,7 +36132,8 @@
         "2026-09-14: Founding-document bundle (data/sources/UD_1245200009075_20260914_ooo-stratim.zip, s7427) read in full, OCR'd (scanned TIFF, 17 pages, Протокол №1 общего собрания учредителей, 27.03.2024). Generic 'any lawful activity' purpose clause. Note: this is ООО «Стратим» (ИНН 5260494520), distinct from the already-deprioritized АО «Стратим» (ИНН 7720901379, 'документ формируется' at ФНС per founding_docs_gap.md) -- same brand name, confirmed different legal entity by ИНН, no relationship established. Corroborates existing record, no new fact.",
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
         "04.10.2026: the EU entry is Annex IV of Regulation 833/2014 (export restrictions), checked in the Official Journal text (s9121); relabelled so it is not read as an asset freeze.",
-        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list)."
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list).",
+        "05.10.2026: US listing date and Ukraine act/date added from the saved GUR portal page, the OFAC recent-actions notice and the Presidential decree page (read on zakon.rada.gov.ua); decision annex unread, see sanctions[] notes."
       ]
     },
     "ooo-stroystandart": {
@@ -37700,6 +37772,14 @@
               "Switzerland (SECO sanctions list)"
             ],
             "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 99053, which prints 1227700378553, 9731094770 (the entry's XML is saved as the cited source). Names on the entry: Limited Liability Company “Urban Air Mobility Operations Center”; LLC “UAMOC”. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2025-12-13."
+          },
+          {
+            "date": "2025-09-20",
+            "source_id": "s8564",
+            "regime": [
+              "Ukraine (NSDC sanctions, date and act as stated on the GUR portal)"
+            ],
+            "note": "The GUR portal page for this entity states Ukraine: 20.09.2025 and links only the general decrees page (https://www.president.gov.ua/). The decree itself is not identified and not read; the date is the portal's statement."
           }
         ],
         "trademarks": [
@@ -37804,7 +37884,8 @@
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "GUR (war-sanctions.gur.gov.ua/en/uav/companies/14306) ID-confirmed via ИНН 9731094770 — exact match, screen_gur.py sweep, 2026-08-24. GUR describes this as a Moscow Innovation Cluster / Skolkovo Foundation project — a 400-hectare UAS test site in Skolkovo responsible for participant selection, pilot/aircraft admission and safety monitoring, which \"produces FPV drones used in the war against Ukraine\" (no specific model named).",
         "2026-09-07: merged dormant duplicate correction key '9731094770' into this slug-keyed entry (registry-hardening pass, no field conflict).",
-        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Canada (Special Economic Measures Act), Ukraine (Presidential sanctions decree/list)."
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Canada (Special Economic Measures Act), Ukraine (Presidential sanctions decree/list).",
+        "05.10.2026: US listing date and Ukraine act/date added from the saved GUR portal page, the OFAC recent-actions notice and the Presidential decree page (read on zakon.rada.gov.ua); decision annex unread, see sanctions[] notes."
       ]
     },
     "ooo-tsyus": {
@@ -38521,12 +38602,12 @@
             "source_id": "s0760"
           },
           {
-            "date": null,
+            "date": "2024-10-30",
             "source_id": "s9256",
             "regime": [
               "US (OFAC SDN list, programme RUSSIA-EO14024)"
             ],
-            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 50791, which prints 1237100015767, 7100046925 (the entry's XML is saved as the cited source). Names on the entry: LIMITED LIABILITY COMPANY VOZDUSHNYI TRAKTAT; OOO VOZDUSHNY TRAKT. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry."
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 50791, which prints 1237100015767, 7100046925 (the entry's XML is saved as the cited source). Names on the entry: LIMITED LIABILITY COMPANY VOZDUSHNYI TRAKTAT; OOO VOZDUSHNY TRAKT. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry. Listing date 30.10.2024 from the OFAC recent-actions notice of that day (s9300), which prints this record's identifiers among the designations; the notice was found through the GUR portal page for this entity (s6142), whose USA field links it."
           }
         ],
         "wb_overlap": "none_found",
@@ -38589,7 +38670,8 @@
         "2026-09-07: merged dormant duplicate correction key '7100046925' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "2026-09-14: Founding-document bundle (data/sources/UD_1237100015767_20260914_ooo-vozdushnyy-traktat.zip, s7425) read in full -- original 2023 founding decision plus a 2024 устав restatement, both sole-founder (Черезов А.П., matches existing record). Generic 'any lawful activity' purpose clause, no UAV-specific self-declaration despite the entity's aviation-suggestive name. Corroborates existing record, no new fact.",
         "[2026-10-02 Овод residency decision] cbst_tie set to not_established: no ЦБСТ document names this company; see the new open question.",
-        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)."
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing).",
+        "05.10.2026: US listing date and Ukraine act/date added from the saved GUR portal page, the OFAC recent-actions notice and the Presidential decree page (read on zakon.rada.gov.ua); decision annex unread, see sanctions[] notes."
       ]
     },
     "ooo-zavolzhskoe": {

@@ -17,7 +17,7 @@ import html
 import re
 from pathlib import Path
 
-CITE_VERSION = 6
+CITE_VERSION = 7
 REPO = Path(__file__).resolve().parent.parent
 
 
@@ -259,6 +259,12 @@ def _cite(s: dict, f: dict | None) -> tuple[str, str | None]:
         return f"Rospatent register search{dated}", None
     if prefix == "GUR":
         return f"Ukraine's defence intelligence (ГУР) War & Sanctions portal{dated}", url
+    if prefix == "OFAC" and "recent-action" in name:
+        return f"US Treasury (OFAC) recent actions notice{dated}", None
+    if prefix == "UKAZ":
+        m = re.match(r"UKAZ_(\d+)-(\d{4})_", name)
+        return (f"Decree of the President of Ukraine no. {m.group(1)}/{m.group(2)} bringing into force a decision of the National Security and Defence Council{dated}"
+                if m else f"Decree of the President of Ukraine{dated}"), (f"https://zakon.rada.gov.ua/laws/show/{m.group(1)}/{m.group(2)}" if m else None)
     if prefix == "EU" and "-fsf-" in name:
         return f"EU consolidated financial sanctions list, entry{dated}", None
     if prefix == "EU":
