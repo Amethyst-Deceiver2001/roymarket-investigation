@@ -363,7 +363,7 @@ and `notes/SOURCE_REGISTER.md`; `notes/unverified_people_gap.md`,
   «Капюшон» chain views (previews, frozen until the thesis is chosen), landing
   preview (retire with the chain previews), Investigation Status Board
   (internal, slugs on purpose; no longer refreshed automatically since the
-  cloud routine was deleted, republish by hand), Reader System (design tokens),
+  cloud routine was deleted; the live view is now local: `python3 exhibits/serve_status_board.py` in its own terminal, http://127.0.0.1:8765/, rebuilt on every page load), Reader System (design tokens),
   Гагаринг evidence-packet visual (awaiting the user's review), Архангел:
   Claimed Components (kept until its stills are confirmed archived locally).
   Deleted 05.10.2026 at the user's go-ahead: Ecosystem Model (local copy
