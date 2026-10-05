@@ -21288,6 +21288,17 @@
       "s7417 -- НПП «ЭЛВО»/Кольская верфь's own full signed ЕГРЮЛ выписка, pulled directly 2026-09-14.",
       "Independently corroborated by s6750, the same identity/ИНН pulled 2026-09-07."
     ],
+    "opensanctions_matches": [
+      {
+        "match_id": "ru-inn-770101770296",
+        "caption": "ВЛАДИМИР АЛЕКСЕЕВИЧ ПЕРЬКОВ",
+        "schema": "Person",
+        "score": 0.8796,
+        "topics": [],
+        "source_urls": []
+      }
+    ],
+    "opensanctions_screened_at": "2026-10-05",
     "egrip_hits": [
       {
         "ogrnip": "320784700113086",
@@ -50337,6 +50348,8 @@
     "_corrected": [
       "2026-09-08: found via ООО «Открытое небо»'s own EGRUL выписка (s7355), surfaced from a lead-mining pass over @projectArchangel."
     ],
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-10-05",
     "aleph_matches": [
       {
         "note": "2 results, both from Russian Unified State Register of Legal Entities (EGRUL) collection (itsoft.ru mirror) -- generic EGRUL-derived entries only, no sanctions/PEP dataset.",
@@ -50656,7 +50669,9 @@
     "_raw": {},
     "_corrected": [
       "2026-09-19: added as the registered head of ano-tsvp-zov-aa (affiliated-organisation principal under the PII policy)."
-    ]
+    ],
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-10-05"
   },
   {
     "slug": "gamirullin-marat-dzhaudatovich",
@@ -50881,7 +50896,18 @@
     "_verified": false,
     "_origin": "corrections:add_entities",
     "_raw": {},
-    "_corrected": null
+    "_corrected": null,
+    "opensanctions_matches": [
+      {
+        "match_id": "ru-inn-645403994412",
+        "caption": "АНДРЕЙ АЛЕКСАНДРОВИЧ ПАНКРАТОВ",
+        "schema": "Person",
+        "score": 1.0,
+        "topics": [],
+        "source_urls": []
+      }
+    ],
+    "opensanctions_screened_at": "2026-10-05"
   },
   {
     "slug": "bratenkov-andrey-alekseevich",

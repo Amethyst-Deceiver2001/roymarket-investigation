@@ -2454,10 +2454,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -2490,10 +2489,12 @@
      ]
     },
     {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
+     "kind": "review",
+     "code": "bfo_unread",
+     "text": "БФО for 2025 pulled but not yet read into financials[]",
+     "years_on_disk": [
+      2025
+     ]
     },
     {
      "kind": "review",
@@ -3661,10 +3662,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -3697,10 +3697,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -3726,10 +3725,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -3873,10 +3871,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     }
    ]
@@ -4237,10 +4234,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     }
    ]
@@ -4260,10 +4256,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     }
    ]
@@ -4531,10 +4526,16 @@
      ]
     },
     {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
+     "kind": "review",
+     "code": "bfo_unread",
+     "text": "БФО for 2021, 2022, 2023, 2024, 2025 pulled but not yet read into financials[]",
+     "years_on_disk": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+     ]
     }
    ]
   },
@@ -4843,10 +4844,12 @@
      ]
     },
     {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
+     "kind": "review",
+     "code": "bfo_unread",
+     "text": "БФО for 2025 pulled but not yet read into financials[]",
+     "years_on_disk": [
+      2025
+     ]
     },
     {
      "kind": "review",
@@ -4874,10 +4877,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -5180,10 +5182,16 @@
      ]
     },
     {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
+     "kind": "review",
+     "code": "bfo_unread",
+     "text": "БФО for 2021, 2022, 2023, 2024, 2025 pulled but not yet read into financials[]",
+     "years_on_disk": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+     ]
     },
     {
      "kind": "review",
@@ -7328,18 +7336,9 @@
    "tier": "person",
    "role": "Генеральный директор",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-05",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -11636,18 +11635,9 @@
    "tier": "person",
    "role": "Генеральный директор, 15% founder",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-05",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -11687,18 +11677,9 @@
    "tier": "person",
    "role": "Председатель (sole person acting without a power of attorney)",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-05",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -11732,17 +11713,9 @@
    "tier": "person",
    "role": "Генеральный директор",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-05",
    "sanctioned": false,
    "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    },
     {
      "kind": "pull",
      "code": "other_entities_unchecked",
