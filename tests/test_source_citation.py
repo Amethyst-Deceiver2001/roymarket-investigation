@@ -95,6 +95,12 @@ def test_packet_exhibit_titles():
     assert t == "Auditor's report on the annual accounts, as published on Fedresurs, FY 2025, 03.09.2026", t
     t, _ = C.cite(rec("FEDRESURS_ABC_20260903_notice.pdf", captured_date="2026-09-03"), {})
     assert t.startswith("Fedresurs register record"), t
+    for name, want in (("OFAC_7300024069_20261005_ooo-skb-piranya-sdn-49943.xml", "US Treasury (OFAC) Specially Designated Nationals list, entry, 05.10.2026"),
+                       ("SECO_7300024069_20261005_ooo-skb-piranya-105178.xml", "Swiss SECO sanctions list, entry, 05.10.2026"),
+                       ("EU_7300024069_20261005_ooo-skb-piranya-fsf-EU.14019.43.xml", "EU consolidated financial sanctions list, entry, 05.10.2026"),
+                       ("UKSL_7300024069_20261005_x-RUS1402.xml", "UK Sanctions List (FCDO), entry, 05.10.2026")):
+        t, _ = C.cite(rec(name, captured_date="2026-10-05"), {})
+        assert t == want, (name, t)
     t, _ = C.cite(rec("HHRU_2312321660_20260904_gagaring-vacancy-lawyer-goz.txt", captured_date="2026-08-07"), {})
     assert t == "Job vacancy posted on hh.ru, 07.08.2026", t
     t, _ = C.cite(rec("CERT_4800016776_20260823_kilovatt-official-dealer-2106-2024.pdf", captured_date="2026-08-23"), {})

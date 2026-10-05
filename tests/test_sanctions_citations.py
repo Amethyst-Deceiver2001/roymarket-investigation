@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """Fixtures for scripts/sanctions_citations.py (plain assertions, run directly).
 
-Real registry, synthetic watcher result: Тримикс's registry claims rest only on
-OpenSanctions, so it must appear with the official entries found and the
+Synthetic registry and watcher result (a real record stops being OpenSanctions-only once its
+official entries are read, so the fixture must not depend on the live registry): a record
+whose claims rest only on OpenSanctions must appear with the official entries found and the
 unmatched claims listed as look-ups.
 """
+import json
 import sys
+import tempfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
@@ -21,6 +24,14 @@ WATCH = {"as_of": "2026-10-02", "lists": {"us": {}, "eu": {}, "uk": {"error": "x
 
 
 def main():
+    tmp = Path(tempfile.mkdtemp())
+    (tmp / "entities.json").write_text(json.dumps([{"slug": "ooo-trimiks", "name_ru": "ООО «Тримикс»", "sanctions": [
+        {"source_id": "s1", "regime": ["US (OFAC)", "EU (Ukraine-related restrictive measures)",
+                                       "Switzerland (SECO)", "Ukraine (Presidential sanctions decree/list)"]}]}]), encoding="utf-8")
+    (tmp / "people.json").write_text("[]", encoding="utf-8")
+    (tmp / "sources.json").write_text(json.dumps([{"id": "s1", "title": "Sanctions-list entries compiled by OpenSanctions",
+                                                    "path": "data/sources/OPENSANCTIONS_x.json"}]), encoding="utf-8")
+    sc.REG = tmp
     rows = {r["slug"]: r for r in sc.build(WATCH)}
     t = rows["ooo-trimiks"]
     assert t["os_only"], "Тримикс's sanctions rest only on OpenSanctions"

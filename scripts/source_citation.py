@@ -17,7 +17,7 @@ import html
 import re
 from pathlib import Path
 
-CITE_VERSION = 5
+CITE_VERSION = 6
 REPO = Path(__file__).resolve().parent.parent
 
 
@@ -155,6 +155,9 @@ SIMPLE = {  # prefix -> title stem; the date is appended
     "GISP": "State industry information system (ГИСП) data",
     "AERONEXT": "АЭРОНЕКСТ association member record",
     "NSDC": "Extract from Ukraine's State Register of Sanctions",
+    "OFAC": "US Treasury (OFAC) Specially Designated Nationals list, entry",
+    "SECO": "Swiss SECO sanctions list, entry",
+    "UKSL": "UK Sanctions List (FCDO), entry",
     "RUSPROFILE": "Rusprofile company page, archived",
     "OZON": "Ozon marketplace page, archived",
     "WILDBERRIES": "Wildberries seller page, archived",
@@ -256,6 +259,8 @@ def _cite(s: dict, f: dict | None) -> tuple[str, str | None]:
         return f"Rospatent register search{dated}", None
     if prefix == "GUR":
         return f"Ukraine's defence intelligence (ГУР) War & Sanctions portal{dated}", url
+    if prefix == "EU" and "-fsf-" in name:
+        return f"EU consolidated financial sanctions list, entry{dated}", None
     if prefix == "EU":
         m = re.search(r"(implementing-regulation|council-decision|regulation|decision)-(\d{4})-(\d+)", name)
         kind = {"implementing-regulation": "Council Implementing Regulation (EU)", "council-decision": "Council Decision (CFSP)",

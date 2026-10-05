@@ -74,9 +74,14 @@
    "flags": [
     {
      "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
      "code": "open_questions",
-     "text": "3 open question(s)",
-     "count": 3
+     "text": "4 open question(s)",
+     "count": 4
     }
    ]
   },
@@ -127,9 +132,14 @@
    "flags": [
     {
      "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
      "code": "open_questions",
-     "text": "1 open question(s)",
-     "count": 1
+     "text": "2 open question(s)",
+     "count": 2
     }
    ]
   },
@@ -252,9 +262,14 @@
    "flags": [
     {
      "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
      "code": "open_questions",
-     "text": "3 open question(s)",
-     "count": 3
+     "text": "4 open question(s)",
+     "count": 4
     }
    ]
   },
@@ -289,7 +304,19 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -302,7 +329,19 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -503,6 +542,11 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -807,6 +851,11 @@
    "flags": [
     {
      "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
+    },
+    {
+     "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
      "count": 1
@@ -887,9 +936,19 @@
    "flags": [
     {
      "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded press: no document establishes it"
+    },
+    {
+     "kind": "review",
      "code": "open_questions",
-     "text": "1 open question(s)",
-     "count": 1
+     "text": "2 open question(s)",
+     "count": 2
     }
    ]
   },
@@ -959,6 +1018,11 @@
    "flags": [
     {
      "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
+    },
+    {
+     "kind": "review",
      "code": "open_questions",
      "text": "2 open question(s)",
      "count": 2
@@ -1025,7 +1089,19 @@
    "last_register_pull": "2026-09-14",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -1168,6 +1244,11 @@
    "flags": [
     {
      "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
+    },
+    {
+     "kind": "review",
      "code": "open_questions",
      "text": "2 open question(s)",
      "count": 2
@@ -1188,9 +1269,19 @@
    "flags": [
     {
      "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
+    },
+    {
+     "kind": "review",
      "code": "open_questions",
-     "text": "3 open question(s)",
-     "count": 3
+     "text": "4 open question(s)",
+     "count": 4
     }
    ]
   },
@@ -1208,9 +1299,19 @@
    "flags": [
     {
      "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded press: no document establishes it"
+    },
+    {
+     "kind": "review",
      "code": "open_questions",
-     "text": "1 open question(s)",
-     "count": 1
+     "text": "2 open question(s)",
+     "count": 2
     }
    ]
   },
@@ -1228,9 +1329,14 @@
    "flags": [
     {
      "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
      "code": "open_questions",
-     "text": "2 open question(s)",
-     "count": 2
+     "text": "3 open question(s)",
+     "count": 3
     }
    ]
   },
@@ -1245,7 +1351,19 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -1281,9 +1399,14 @@
    "flags": [
     {
      "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
      "code": "open_questions",
-     "text": "1 open question(s)",
-     "count": 1
+     "text": "2 open question(s)",
+     "count": 2
     }
    ]
   },
@@ -1307,6 +1430,11 @@
      "text": "Latest accounts on file are for 2022; 2025 should be filed",
      "latest_year": 2022,
      "on_disk": true
+    },
+    {
+     "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
     },
     {
      "kind": "review",
@@ -1337,9 +1465,14 @@
    "flags": [
     {
      "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
      "code": "open_questions",
-     "text": "2 open question(s)",
-     "count": 2
+     "text": "3 open question(s)",
+     "count": 3
     }
    ]
   },
@@ -1370,9 +1503,14 @@
    "flags": [
     {
      "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
      "code": "open_questions",
-     "text": "1 open question(s)",
-     "count": 1
+     "text": "2 open question(s)",
+     "count": 2
     }
    ]
   },
@@ -1447,7 +1585,19 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -1590,7 +1740,19 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -1982,7 +2144,19 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -1995,7 +2169,19 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -2187,6 +2373,11 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -2547,7 +2738,19 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -2641,9 +2844,14 @@
    "flags": [
     {
      "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
      "code": "open_questions",
-     "text": "2 open question(s)",
-     "count": 2
+     "text": "3 open question(s)",
+     "count": 3
     },
     {
      "kind": "gap",
@@ -2680,9 +2888,14 @@
    "flags": [
     {
      "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
      "code": "open_questions",
-     "text": "1 open question(s)",
-     "count": 1
+     "text": "2 open question(s)",
+     "count": 2
     }
    ]
   },
@@ -2723,7 +2936,24 @@
    "last_register_pull": "2026-09-29",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -2934,6 +3164,11 @@
    "screened": "2026-09-06",
    "sanctioned": true,
    "flags": [
+    {
+     "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded press: no document establishes it"
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -3409,6 +3644,11 @@
     },
     {
      "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
+    },
+    {
+     "kind": "review",
      "code": "open_questions",
      "text": "58 open question(s)",
      "count": 58
@@ -3533,7 +3773,13 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -5192,6 +5438,11 @@
     },
     {
      "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
+    },
+    {
+     "kind": "review",
      "code": "open_questions",
      "text": "6 open question(s)",
      "count": 6
@@ -5343,7 +5594,13 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "review",
+     "code": "identity_unproven",
+     "text": "Sanctions entry belongs to a same-name person; the link to this record is not proven by a document"
+    }
+   ]
   },
   {
    "kind": "person",
@@ -13093,5 +13350,87 @@
    ]
   }
  ],
- "unattached_developments": []
+ "unattached_developments": [],
+ "system": [
+  {
+   "id": "tg_db_newest",
+   "label": "Newest post in the local Telegram scrape",
+   "value": "2026-10-04 (1 d ago)",
+   "status": "ok",
+   "detail": "Refresh with scripts/tg_scan.py; every Telegram search and lead check reads this database.",
+   "as_of": "2026-10-04"
+  },
+  {
+   "id": "daily_round",
+   "label": "Last daily round report",
+   "value": "2026-10-05 (0 d ago)",
+   "status": "ok",
+   "detail": "The 09:15 Mac round (pulls, re-screens, ingest, board.json).",
+   "as_of": "2026-10-05"
+  },
+  {
+   "id": "weekly_scan",
+   "label": "Last weekly news and channel scan",
+   "value": "2026-10-05 (0 d ago)",
+   "status": "ok",
+   "detail": "On request since 05.10.2026; leads it reports land in developments.json.",
+   "as_of": "2026-10-05"
+  },
+  {
+   "id": "registry_commit",
+   "label": "Registry last committed",
+   "value": "2026-10-05 (0 d ago)",
+   "status": "ok",
+   "detail": "Latest commit touching data/registry/.",
+   "as_of": "2026-10-05"
+  },
+  {
+   "id": "sanctions_primary_read",
+   "label": "Entities whose sanctions claim is read against an official list",
+   "value": "51 of 73",
+   "status": "watch",
+   "detail": "A sanctions-gap submission needs the official entry; an aggregator match is a lead (flag sanction_unread).",
+   "as_of": null
+  },
+  {
+   "id": "weak_ties",
+   "label": "ЦБСТ ties not backed by a document",
+   "value": "14",
+   "status": "watch",
+   "detail": "Ties graded t-open or press (flag tie_not_documented).",
+   "as_of": null
+  },
+  {
+   "id": "dob_unsourced",
+   "label": "People with a date of birth and no per-field source",
+   "value": "86",
+   "status": "act",
+   "detail": "The PII rule wants every identifying field sourced on its own; people records have no dob_source field yet.",
+   "as_of": null
+  },
+  {
+   "id": "units",
+   "label": "Handover recipients resolved to a unit record",
+   "value": "34 of 42; 0 ambiguous, 8 unrecorded; 0 possible duplicate record(s)",
+   "status": "watch",
+   "detail": "scripts/unit_lookup.py --check lists them; a bare number never resolves to a unit.",
+   "as_of": null
+  },
+  {
+   "id": "media_backlog",
+   "label": "Queued media not yet looked at",
+   "value": "395 of 939",
+   "status": "watch",
+   "detail": "Before near-duplicate folding; scripts/media_triage.py sheets builds the next contact sheets.",
+   "as_of": null
+  },
+  {
+   "id": "open_developments",
+   "label": "Scan findings not yet in the record",
+   "value": "1",
+   "status": "watch",
+   "detail": "Open items in developments.json.",
+   "as_of": null
+  }
+ ]
 }

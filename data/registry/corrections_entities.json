@@ -12001,6 +12001,12 @@
             "as_of": "2024-09-06",
             "note": "Agreement with the Правительство Новгородской области (Богданов, Силинг), including support for НПЦ «Ушкуйник»."
           }
+        ],
+        "open_questions": [
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 7703469180, 1197700000376; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: sanction; regime: Ukraine (Presidential sanctions decree/list)). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0765"
+          }
         ]
       },
       "verified_against": "АНО «Платформа НТИ»'s own «Отчет о деятельности НКО за 2025 г.», filed with Минюст, pulled 23.08.2026",
@@ -12011,7 +12017,8 @@
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "АНО «Платформа НТИ» is an institutional actor, not a producer.",
-        "2026-09-07: merged dormant duplicate correction key '7703469180' into this slug-keyed entry (registry-hardening pass, no field conflict)."
+        "2026-09-07: merged dormant duplicate correction key '7703469180' into this slug-keyed entry (registry-hardening pass, no field conflict).",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ano-tsasd-demyansk": {
@@ -12068,6 +12075,10 @@
           {
             "source_id": "s0570",
             "text": "2026-08-24 money-layer/plumbing tier verification pass — cross-checked against the ЕГРЮЛ open-API pull (egrul.nalog.ru) already on file for every one of these entities. Director/leadership not returned by the open-API quick-lookup for this ИНН (large АО, likely board-governed rather than a single listed GD in this lookup format) -- a full signed EGRUL extract would be needed to resolve founders/leadership structure."
+          },
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 5300008970, 1235300001947; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: sanction.linked; regime: none stated). Topics «sanction.linked» and «sanction.control» are OpenSanctions' own labels; their definition was not re-read for this note, and on their names they mark a link to a sanctioned party rather than a designation of this entity (the matching official entry, if any, is what shows a designation). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0747"
           }
         ],
         "registered": "24.05.2023",
@@ -12100,7 +12111,8 @@
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0747).",
         "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
         "2026-09-02: verified postanovleniye 838/15.09.2023 (s5300) against the actual originating platform, not just smolin.info's re-hosted copy, per user instruction to check sberbank-ast/local-govt sources directly. The district's official site is demadmin.gosuslugi.ru (a real, live gosuslugi-hosted municipal portal, confirmed via WebFetch -- 10,113-document normative-act archive under /ofitsialno/dokumenty/postanovleniya/, organized by year including postanovleniya-2023-goda/). Document itself is digitally signed (cert serial 07FC71FBD0E958D12254F84B9CF62082, signer Сапогов Андрей Николаевич, глава района, signed 15.09.2023 09:58) and self-cites its own publication requirement ('Опубликовать постановление в Информационном Бюллетене Демянского муниципального района и разместить на официальном сайте'). Could not pin an exact deep-link to this specific document via scripted pagination in the time available (the archive's pagination did not respond to a ?page= param through WebFetch) -- site and category confirmed genuine and consistent with the document, but the direct URL is not yet located. smolin.info's re-hosted PDF (s5300) remains the working citation; a manual browser search of demadmin.gosuslugi.ru/ofitsialno/dokumenty/postanovleniya/postanovleniya-2023-goda/ for №838 would close this out.",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ano-tsbst-centre-for-unmanned-systems-technologies": {
@@ -12485,6 +12497,16 @@
             "source_id": "s6867",
             "note": "Должность: ДИРЕКТОР, личный ИНН 770301599800. Full signed ЕГРЮЛ выписка pulled 2026-09-07."
           }
+        ],
+        "open_questions": [
+          {
+            "source_id": null,
+            "text": "Function of this entity within the network is not yet established beyond Рогозин's directorship — worth a closer read."
+          },
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 9724066980, 1217700636306; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: sanction; regime: Ukraine (Presidential sanctions decree/list)). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0817"
+          }
         ]
       },
       "verified_against": "АНО «Центр развития транспортных технологий»'s own «Отчет о деятельности НКО за 2025 г.», filed with Минюст, pulled 23.08.2026",
@@ -12493,7 +12515,8 @@
         "Full text read of the organization's own «Отчет о деятельности некоммерческой организации за 2025 г.», filed with Минюст (Главное управление по Москве, form УН000Х, pulled 23.08.2026). CONFIRMS Рогозин Алексей Дмитриевич as учредитель (founder) — already flagged in the brief via a separate lead (Alexey Rogozin, son of Dmitry Rogozin, already documented heading a «Барс-Сармат» drone-testing detachment at Дронница and chairing АО «Эколибри»'s advisory council); this is now a primary-document confirmation of the АНО «ЦРТТ» tie specifically, not inference from name+patronymic. Address at Каширское ш. 3, к. 2 — Moscow.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0817).",
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 4 filing-year record(s).",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ao-aeromaks": {
@@ -12513,6 +12536,10 @@
           {
             "source_id": "s1168",
             "text": "Featured in rk.2035.university's curated БАС-industry showcase as \"АО «Аэромакс»\" (civil БАС helicopter/plane-type operator) -- legal form in the catalog text (АО) matches this entity specifically, distinguishing it from the registry's separate ooo-aeromaks (ООО, different ИНН) -- see the Аэромакс name-collision case in the rk_2035_university_bas_registry memory."
+          },
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 7708407413, 1227700471020; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: export.control.linked, sanction.control, sanction.linked; regime: none stated). Topics «sanction.linked» and «sanction.control» are OpenSanctions' own labels; their definition was not re-read for this note, and on their names they mark a link to a sanctioned party rather than a designation of this entity (the matching official entry, if any, is what shows a designation). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0771"
           }
         ],
         "products": [],
@@ -12607,7 +12634,8 @@
         "network (that is ООО «Аэромакс», ИНН 7725347482). Tiering it as a",
         "manufacturer would put a ruled-out company in the supplier list.",
         "2026-09-07: merged dormant duplicate correction key '7708407413' into this slug-keyed entry (registry-hardening pass, no field conflict).",
-        "2026-09-14: removed 3 products (previously wired 2026-08-24 from s1169) -- reassigned to ooo-aeromaks. See that entity's why[] for the full reasoning; this entity's own rk.2035.university tie rested only on the showcase blurb's contradictory \"АО\" wording, not on the per-product manufacturer field (which says ООО) or any independent membership corroboration."
+        "2026-09-14: removed 3 products (previously wired 2026-08-24 from s1169) -- reassigned to ooo-aeromaks. See that entity's why[] for the full reasoning; this entity's own rk.2035.university tie rested only on the showcase blurb's contradictory \"АО\" wording, not on the per-product manufacturer field (which says ООО) or any independent membership corroboration.",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ao-aurin": {
@@ -13535,6 +13563,22 @@
               "EU (Ukraine-related restrictive measures)"
             ],
             "source_id": "s0796"
+          },
+          {
+            "date": "2026-04-23",
+            "source_id": "s9248",
+            "regime": [
+              "EU (consolidated financial sanctions list, programme UKR)"
+            ],
+            "note": "Read on the EU consolidated financial sanctions list (list generated 22.09.2026, SHA-256 cd59eccb0278d331…), entry EU.14138.88, which prints 1027806064571, 7811075899 (the entry's XML is saved as the cited source). Names on the entry: АО «Котлин-Новатор»; JSC ”Kotlin-Novator”. Programme UKR; acts cited on the entry: 2026/509 (OJ L202600509); earliest designation date on the entry 2026-04-23. Act text: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509."
+          },
+          {
+            "date": null,
+            "source_id": "s9285",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 105445, which prints 1027806064571, 7811075899 (the entry's XML is saved as the cited source). Names on the entry: JSC “Kotlin-Novator”. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2026-05-22."
           }
         ],
         "trademarks": [
@@ -13680,7 +13724,8 @@
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
         "2026-09-16 (coverage-gap agent pass, verified independently before wiring): same post already used for ao-tekhnodron/ooo-arkhangel/ooo-atlant-aero's cbst_tie; source_id null matches that precedent.",
-        "[2026-09-30] products: added 2 product(s) from archived Telegram posts (s8544, s8545); descriptions restate the post, and specifications are the source's own claims."
+        "[2026-09-30] products: added 2 product(s) from archived Telegram posts (s8544, s8545); descriptions restate the post, and specifications are the source's own claims.",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list), Ukraine (war-sanctions.gur.gov.ua, military-industry listing)."
       ]
     },
     "ao-mikts": {
@@ -14264,6 +14309,30 @@
               "EU (Ukraine-related restrictive measures)"
             ],
             "source_id": "s0756"
+          },
+          {
+            "date": "2025-07-19",
+            "source_id": "s9242",
+            "regime": [
+              "EU (consolidated financial sanctions list, programme UKR)"
+            ],
+            "note": "Read on the EU consolidated financial sanctions list (list generated 22.09.2026, SHA-256 cd59eccb0278d331…), entry EU.13366.27, which prints 1026701461160, 6730046954 (the entry's XML is saved as the cited source). Names on the entry: АО “НИИ СТТ”; AO “NII STT”; JSC “Research Institute of Modern Telecommunication Technologies”. Programme UKR; acts cited on the entry: 2025/1476 (OJ L202501476); earliest designation date on the entry 2025-07-19. Act text: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202501476."
+          },
+          {
+            "date": null,
+            "source_id": "s9272",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 89489, which prints 1026701461160 (the entry's XML is saved as the cited source). Names on the entry: Scientific Research Institute for Modern Telecommunications Technologies (NII STT); АО НИИ СТТ; JSC NII STT. Sanctions-set id 29445 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2025-03-04."
+          },
+          {
+            "date": null,
+            "source_id": "s9273",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 95532, which prints 1026701461160, 6730046954 (the entry's XML is saved as the cited source). Names on the entry: Joint Stock Company “Research Institute of Modern Telecommunication Technologies”; JSC “Research Institute of Modern Telecommunication Technologies”; AO “NII STT”. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2025-08-12."
           }
         ],
         "trademarks": [
@@ -14376,7 +14445,8 @@
         "RKN Единый реестр частотных присвоений screen (2026-09-07, source s6447): 2 frequency-assignment records, consistent with the entity's existing telecommunications-research profile.",
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
         "2026-09-15: relationship-coverage audit (subagent pass, verified individually, not a raw count) found АО «НИИ СТТ» had zero related_entities[] despite four already-researched litigation counterparties the entity's own litigation[] notes explicitly flag as notable institutional/commercial ties (Кронштадт, МВД НПО СТС, 18 ЦНИИ, в/ч 68240). Wired all four as `counterparty` (schema addition from earlier today) -- none get a registry slug since none of the four named parties exist as their own entity record yet; each cites its own litigation source_id.",
-        "04.10.2026: «US-BIS-EL» is the US Commerce Department's Entity List (export control), not an OFAC listing; relabelled. No OFAC SDN entry carries this ИНН or a matching name."
+        "04.10.2026: «US-BIS-EL» is the US Commerce Department's Entity List (export control), not an OFAC listing; relabelled. No OFAC SDN entry carries this ИНН or a matching name.",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list), Ukraine (war-sanctions.gur.gov.ua, military-industry listing), US (Commerce Entity List, export control: not an OFAC sanction)."
       ]
     },
     "ao-nii-vektor": {
@@ -14824,6 +14894,38 @@
               "Ukraine (Presidential sanctions decree/list)"
             ],
             "source_id": "s0797"
+          },
+          {
+            "date": null,
+            "source_id": "s9265",
+            "regime": [
+              "US (OFAC SDN list, programme RUSSIA-EO14024)"
+            ],
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 35156, which prints 1117847020400, 7813491943 (the entry's XML is saved as the cited source). Names on the entry: AO NII VEKTOR; JOINT STOCK COMPANY SCIENTIFIC-RESEARCH INSTITUTE VEKTOR. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry."
+          },
+          {
+            "date": "2023-06-23",
+            "source_id": "s9249",
+            "regime": [
+              "EU (consolidated financial sanctions list, programme UKR)"
+            ],
+            "note": "Read on the EU consolidated financial sanctions list (list generated 22.09.2026, SHA-256 cd59eccb0278d331…), entry EU.10373.35, which prints 7813491943 (the entry's XML is saved as the cited source). Names on the entry: Vektor SA; ОАО НИИ Вектор; АКЦИОНЕРНОЕ ОБЩЕСТВО “НАУЧНО-ИССЛЕДОВАТЕЛЬСК ИЙ ИНСТИТУТ ‘ВЕКТОР’”. Programme UKR; acts cited on the entry: 2023/1216 (OJ L159 I); earliest designation date on the entry 2023-06-23. Act text: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1216."
+          },
+          {
+            "date": null,
+            "source_id": "s9286",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 63612, which prints 7813491943 (the entry's XML is saved as the cited source). Names on the entry: Vektor JSC; AO “NII ‘VEKTOR’”; AKTSIONERNOE OBSHCHESTVO “NAUCHNO-ISSLEDOVATELSKII INSTITUT ‘VEKTOR’”. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2023-06-28."
+          },
+          {
+            "date": "2022-05-04",
+            "source_id": "s9296",
+            "regime": [
+              "UK (Sanctions List, The Russia (Sanctions) (EU Exit) Regulations 2019)"
+            ],
+            "note": "Read on the UK Sanctions List (FCDO) (list dated 02.10.2026, SHA-256 8e23b2d050ea2cc0…), entry RUS1402, which prints 1117847020400, 7813491943 (the entry's XML is saved as the cited source). Names on the entry: AO NII VEKTOR; JOINT STOCK COMPANY SCIENTIFIC-RESEARCH INSTITUTE VEKTOR. Regime: The Russia (Sanctions) (EU Exit) Regulations 2019; date designated 2022-05-04."
           }
         ],
         "wb_overlap": "none_found",
@@ -15037,7 +15139,8 @@
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 5 product(s) not previously documented.",
         "2026-09-07: merged duplicate correction key '7813491943' into this slug-keyed entry (registry-hardening pass; check_registry.py now detects this collision class).",
-        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
+        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, military-industry listing), Australia (Autonomous Sanctions, Russia), US-BIS-EL, NZ-RSA2022, Ukraine (Presidential sanctions decree/list), UK (Sanctions List, The Russia (Sanctions) (EU Exit) Regulations 2019)."
       ]
     },
     "ao-npp-bat": {
@@ -15755,6 +15858,30 @@
               "EU (Ukraine-related restrictive measures)"
             ],
             "source_id": "s0815"
+          },
+          {
+            "date": null,
+            "source_id": "s9267",
+            "regime": [
+              "US (OFAC SDN list, programme RUSSIA-EO14024)"
+            ],
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 50792, which prints 1237700463032, 9723203841 (the entry's XML is saved as the cited source). Names on the entry: AREA JOINT STOCK COMPANY; AO PLOSHCHAD. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry."
+          },
+          {
+            "date": "2025-07-18",
+            "source_id": "s9252",
+            "regime": [
+              "EU (consolidated financial sanctions list, programme UKR)"
+            ],
+            "note": "Read on the EU consolidated financial sanctions list (list generated 22.09.2026, SHA-256 cd59eccb0278d331…), entry EU.13402.32, which prints 1237700463032, 9723203841 (the entry's XML is saved as the cited source). Names on the entry: Societatea pe  acțiuni «Ploshchad»; sociedade por  ações “Ploshchad”; »Ploshchad« Részvénytársaság. Programme UKR; acts cited on the entry: 2025/1476 (OJ L202501476); earliest designation date on the entry 2025-07-18. Act text: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202501476."
+          },
+          {
+            "date": null,
+            "source_id": "s9292",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 95826, which prints 1237700463032, 9723203841 (the entry's XML is saved as the cited source). Names on the entry: Joint Stock Company “Ploshchad”; JSC “Ploshchad”; JSC “Square”. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2025-08-12."
           }
         ],
         "wb_overlap": "none_found",
@@ -15869,7 +15996,8 @@
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
         "2026-09-15: informal-cooperation triage (LEAD 3) -- confirmed the projectArchangel/Archangel_Forum joint-exhibitor listing verbatim against data/roymarket.db. Recorded as related_entities per CLAUDE.md's existing mechanism, not a new cbst_tie (it's the Архангел project's own event, not ЦБСТ's).",
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
-        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): source_id left null, same precedent as ooo-aviron above."
+        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): source_id left null, same precedent as ooo-aviron above.",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list)."
       ]
     },
     "ao-pmts-avangard": {
@@ -16232,6 +16360,12 @@
             "source_id": "s7353",
             "note": "Current name. Renamed per внеочередное заседание общего собрания акционеров протокол от 22.12.2025 (устав в новой редакции, GRN 2257724857124) — the most recent of 4 charter documents on file, so this is confirmed current as of this pass."
           }
+        ],
+        "open_questions": [
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 9714004945, 1237700148180; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: sanction.linked; regime: none stated). Topics «sanction.linked» and «sanction.control» are OpenSanctions' own labels; their definition was not re-read for this note, and on their names they mark a link to a sanctioned party rather than a designation of this entity (the matching official entry, if any, is what shows a designation). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0811"
+          }
         ]
       },
       "verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0152)",
@@ -16243,7 +16377,8 @@
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "An ownership vehicle, not a manufacturer.",
         "2026-09-07: merged dormant duplicate correction key '9714004945' into this slug-keyed entry (registry-hardening pass, no field conflict).",
-        "2026-09-08: read all 4 founding-document revisions (устав + 3 amendments, OCR'd, s7353) obtained via the ФНС portal — recovered a 2-rename history not previously on file: Концерн «Авиамеханика» (2023-02-21) -> Техноимпульс Инвест (2023-12-18) -> ПромИнвест (2025-12-29, current). Explains why the OpenSanctions designation caption reads 'Техноимпульс Инвест' rather than the current name. No specific business-purpose clause found in any revision (generic 'извлечение прибыли' profit clause throughout) — consistent with a holding/trust-management vehicle, not an operating company."
+        "2026-09-08: read all 4 founding-document revisions (устав + 3 amendments, OCR'd, s7353) obtained via the ФНС portal — recovered a 2-rename history not previously on file: Концерн «Авиамеханика» (2023-02-21) -> Техноимпульс Инвест (2023-12-18) -> ПромИнвест (2025-12-29, current). Explains why the OpenSanctions designation caption reads 'Техноимпульс Инвест' rather than the current name. No specific business-purpose clause found in any revision (generic 'извлечение прибыли' profit clause throughout) — consistent with a holding/trust-management vehicle, not an operating company.",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ao-ross": {
@@ -16551,7 +16686,13 @@
           "confidence": "t-doc",
           "evidence": "founders[] entry: АНО «ЦБСТ» (ИНН 9702064851) 100% owner, per full signed ЕГРЮЛ выписка. Corroborated in docs/index.html prose.",
           "source_id": "s0436"
-        }
+        },
+        "open_questions": [
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 9703232234, 1257700523079; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: export.control.linked, sanction.control, sanction.linked; regime: none stated). Topics «sanction.linked» and «sanction.control» are OpenSanctions' own labels; their definition was not re-read for this note, and on their names they mark a link to a sanctioned party rather than a designation of this entity (the matching official entry, if any, is what shows a designation). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0804"
+          }
+        ]
       },
       "verified_against": null,
       "why": [
@@ -16563,7 +16704,8 @@
         "Full signed ЕГРЮЛ extract read end-to-end (ul-1257700523079-20260823014851.pdf, 8pp, pulled 23.08.2026 — source_id pending next registry regeneration, see below). KEY FINDING: 100% DIRECT ownership by АНО «ЦБСТ» itself (ИНН 9702064851, ОГРН 1247700190430) as единственный акционер (sole shareholder) — not a layer removed, ЦБСТ is the immediate parent. GD Рубинштейн Дмитрий Владимирович (personal ИНН 771537069549). ₽100,000 charter capital, primary ОКВЭД 64.30 investment-fund activity, holding-company code (64.20) as secondary — an investment-vehicle profile, not an operating company. Registrar АО «РТ-Регистратор» (ИНН 5407175878) — this is the same ИНН that was incorrectly flagged as an orphan correction key earlier this session (removed then as 'matches no record' because it's a registrar, not a registry entity in its own right — confirms that removal was correct, not a missed entity).",
         "2026-09-14: founding-document bundle (data/sources/UD_1976582.zip, s0189, устав от 20.10.2025) read in full — corroborates the 100% ЦБСТ ownership already established via the EGRUL выписка: §8.4 names 'Учредитель Общества - Автономная некоммерческая организация «Центр Беспилотных Систем и Технологий» ... ОГРН: 1247700190430 ... («ЦБСТ»)' verbatim in the устав's own founder-rights clause. No new fact, but confirms the ownership tie is stated in the company's own founding legal document, not only in a registry extract. Also resolves the stale 2026-09-07 'документ формируется' status recorded in notes/founding_docs_gap.md's deprioritized-entity table — ФНС digitized this bundle by 16.08.2026 (per its own Opis.pdf date), before that deprioritization note was even written; the gap file's deprioritized entry for this entity is now corrected.",
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
-        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): s0436 verified to exist in sources.json (data/sources/ul-1257700523079-20260823014851.pdf)."
+        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): s0436 verified to exist in sources.json (data/sources/ul-1257700523079-20260823014851.pdf).",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ao-spetstekh-perviy": {
@@ -16630,7 +16772,12 @@
         "ogrn": "1267700128376",
         "okved_code": "64.30",
         "okved_label": "Деятельность инвестиционных фондов и аналогичных финансовых организаций",
-        "open_questions": [],
+        "open_questions": [
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 9703244871, 1267700128376; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: export.control.linked, sanction.control, sanction.linked; regime: none stated). Topics «sanction.linked» and «sanction.control» are OpenSanctions' own labels; their definition was not re-read for this note, and on their names they mark a link to a sanctioned party rather than a designation of this entity (the matching official entry, if any, is what shows a designation). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0805"
+          }
+        ],
         "parents": [
           {
             "inn": "9702064851",
@@ -16673,7 +16820,8 @@
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0805).",
         "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
+        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ao-stratim": {
@@ -16764,6 +16912,46 @@
               "Ukraine (Presidential sanctions decree/list)"
             ],
             "source_id": "s0779"
+          },
+          {
+            "date": null,
+            "source_id": "s9261",
+            "regime": [
+              "US (OFAC SDN list, programme RUSSIA-EO14024)"
+            ],
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 50246, which prints 1237700447324, 7720901379 (the entry's XML is saved as the cited source). Names on the entry: JOINT STOCK COMPANY STRATIM; JSC STRATIM; STRATIM DESIGN BUREAU; STRATIM COMPANY. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry."
+          },
+          {
+            "date": "2025-05-20",
+            "source_id": "s9245",
+            "regime": [
+              "EU (consolidated financial sanctions list, programme UKR)"
+            ],
+            "note": "Read on the EU consolidated financial sanctions list (list generated 22.09.2026, SHA-256 cd59eccb0278d331…), entry EU.13073.69, which prints 1237700447324 (the entry's XML is saved as the cited source). Names on the entry: Акционерное Общество “Стратим”; Joint Stock Company Stratim; JSC Stratim. Programme UKR; acts cited on the entry: 2025/933 (OJ L202500933); earliest designation date on the entry 2025-05-20. Act text: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500933."
+          },
+          {
+            "date": null,
+            "source_id": "s9280",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 93372, which prints 1237700447324 (the entry's XML is saved as the cited source). Names on the entry: Joint Stock Company Stratim. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: none."
+          },
+          {
+            "date": null,
+            "source_id": "s9279",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 93372, which prints 1237700447324 (the entry's XML is saved as the cited source). Names on the entry: Joint Stock Company Stratim. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2025-06-03, 2025-08-12."
+          },
+          {
+            "date": null,
+            "source_id": "s9278",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 91706, which prints 7720901379 (the entry's XML is saved as the cited source). Names on the entry: JSC “STRATIM”; STRATIM DESIGN BUREAU. Sanctions-set id 29445 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2025-06-03."
           }
         ],
         "wb_overlap": "none_found",
@@ -16886,7 +17074,8 @@
         "2026-09-07: merged dormant duplicate correction key '7720901379' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
-        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only."
+        "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list)."
       ]
     },
     "ao-tekhnodinamika": {
@@ -16932,6 +17121,46 @@
               "EU (Ukraine-related restrictive measures)"
             ],
             "source_id": "s0778"
+          },
+          {
+            "date": null,
+            "source_id": "s9260",
+            "regime": [
+              "US (OFAC SDN list, programme UKRAINE-EO13662, RUSSIA-EO14024)"
+            ],
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 18774, which prints 1037719005873, 7719265496 (the entry's XML is saved as the cited source). Names on the entry: JOINT STOCK COMPANY TEKHNODINAMIKA; JSC TEKHNODINAMIKA; AKTSIONERNOE OBSCHESTVO TEKHNODINAMIKA; AO TEKHNODINAMIKA. Programme: UKRAINE-EO13662, RUSSIA-EO14024; remarks: linked to STATE CORPORATION ROSTEC. The SDN file carries no listing date on the entry."
+          },
+          {
+            "date": "2022-12-16",
+            "source_id": "s9244",
+            "regime": [
+              "EU (consolidated financial sanctions list, programme UKR)"
+            ],
+            "note": "Read on the EU consolidated financial sanctions list (list generated 22.09.2026, SHA-256 cd59eccb0278d331…), entry EU.9381.47, which prints 1037719005873 (the entry's XML is saved as the cited source). Names on the entry: JSC Technodinamika; AO Технодинамика; Těchnodinamika. Programme UKR; acts cited on the entry: 2024/2455 (OJ L13092024); 2022/2476 (OJ L322-I); earliest designation date on the entry 2022-12-16. Act text: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402455."
+          },
+          {
+            "date": null,
+            "source_id": "s9276",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 59234, which prints 1037719005873, 7719265496 (the entry's XML is saved as the cited source). Names on the entry: JSC Technodinamika; Technodinamika. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2022-12-21, 2024-12-13, 2026-02-24."
+          },
+          {
+            "date": null,
+            "source_id": "s9277",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 61629, which prints 7719265496 (the entry's XML is saved as the cited source). Names on the entry: Technodinamika, JSC; JSC Aviation Equipment; JSC Technodynamics. Sanctions-set id 29445 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2023-03-29, 2023-08-16, 2026-08-17."
+          },
+          {
+            "date": "2025-09-12",
+            "source_id": "s9295",
+            "regime": [
+              "UK (Sanctions List, The Russia (Sanctions) (EU Exit) Regulations 2019)"
+            ],
+            "note": "Read on the UK Sanctions List (FCDO) (list dated 02.10.2026, SHA-256 8e23b2d050ea2cc0…), entry RUS2921, which prints 1037719005873, 7719265496 (the entry's XML is saved as the cited source). Names on the entry: JSC TECHNODINAMIKA; JOINT STOCK COMPANY AVIATION EQUIPMENT; Joint Stock Company Technodinamika. Regime: The Russia (Sanctions) (EU Exit) Regulations 2019; date designated 2025-09-12."
           }
         ],
         "trademarks": [
@@ -17132,7 +17361,8 @@
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "An ownership vehicle, not a manufacturer.",
         "2026-09-07: merged dormant duplicate correction key '7719265496' into this slug-keyed entry (registry-hardening pass, no field conflict).",
-        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
+        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: NZ-RSA2022, Australia (Autonomous Sanctions, Russia), US-UKRRUS-REL, Canada (Special Economic Measures Act), Ukraine (Presidential sanctions decree/list), US-SSI, Ukraine (war-sanctions.gur.gov.ua, military-industry listing), US-BIS-EL, UK (Sanctions List, The Russia (Sanctions) (EU Exit) Regulations 2019)."
       ]
     },
     "ao-tekhnodron": {
@@ -17198,6 +17428,22 @@
               "Ukraine (Presidential sanctions decree/list)"
             ],
             "source_id": "s0806"
+          },
+          {
+            "date": "2026-04-23",
+            "source_id": "s9251",
+            "regime": [
+              "EU (consolidated financial sanctions list, programme UKR)"
+            ],
+            "note": "Read on the EU consolidated financial sanctions list (list generated 22.09.2026, SHA-256 cd59eccb0278d331…), entry EU.14155.29, which prints 1247700354175, 9704241986 (the entry's XML is saved as the cited source). Names on the entry: АО “Технодрон”; JSC Technodron. Programme UKR; acts cited on the entry: 2026/509 (OJ L202600509); earliest designation date on the entry 2026-04-23. Act text: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509."
+          },
+          {
+            "date": null,
+            "source_id": "s9291",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 105821, which prints 1247700354175, 9704241986 (the entry's XML is saved as the cited source). Names on the entry: JSC Technodron. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2026-05-22."
           }
         ],
         "wb_overlap": "none_found",
@@ -17265,7 +17511,8 @@
         "2026-09-07: merged dormant duplicate correction key '9704241986' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s7588; the earlier cbst_tie record is unchanged."
+        "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s7588; the earlier cbst_tie record is unchanged.",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list)."
       ]
     },
     "ao-tsentr-telko": {
@@ -17812,7 +18059,13 @@
           }
         ],
         "tier": "money-layer",
-        "tier_basis": "Self-declared ₽309.87m (2024) in receipts, explicitly funds БПЛА/РЭБ procurement and «Дронница» — a real money-flow node, not incidental infrastructure. Reclassified from plumbing."
+        "tier_basis": "Self-declared ₽309.87m (2024) in receipts, explicitly funds БПЛА/РЭБ procurement and «Дронница» — a real money-flow node, not incidental infrastructure. Reclassified from plumbing.",
+        "open_questions": [
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 4707039070, 1164700050734; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: sanction; regime: Ukraine (Presidential sanctions decree/list)). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0737"
+          }
+        ]
       },
       "verified_against": "Ассоциация «Взаимопомощь»'s own 2024 «Отчет о благотворительной деятельности», filed with Минюст СПб, signed 14.04.2025",
       "why": [
@@ -17820,7 +18073,8 @@
         "Full text read of the organization's own 2024 «Отчет о благотворительной деятельности» filed with Минюст (Главное управление по СПб и Ленинградской области, signed 14.04.2025, pulled 23.08.2026). SELF-DECLARED FINDING: total receipts ₽309,867,111.76 (₽309.87m) for 2024. Expenditure lines explicitly list purchases including «БПЛА, средства радиоэлектронной борьбы, иные виды оборудования» (UAVs, EW equipment, other equipment), operator training explicitly framed as preparing specialists for reconnaissance/combat-support UAV operation, and book publishing on military tactics. The narrative section explicitly states the organization ran the «Ежегодный всероссийский слет инструкторов и операторов боевых БПЛА 'Дронница'» — this is the FIRST primary document confirming Ассоциация «Взаимопомощь» as Дронница's actual legal/financial vehicle, not just an operator name association. Governing-body roster names Любимов Александр Сергеевич (Председатель), Мартынова Майя Владимировна, and Любимов Сергей Александрович (shared surname/patronymic pattern with the chairman — possible family control, flagged not confirmed) — no DOB/personal ИНН given in this document (all fields '-'). Tier upgraded from plumbing to money-layer: this is a real, quantified money-flow node, not incidental infrastructure.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0737).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "[2026-10-03 first reading of the 02.10 pulls, approved by Alexey] financials replaced: БФО 2021–2025 (s8996–s9000), targeted-funds lines read in full. The former 2024 entry stored the Минюст report figure as revenue; it is kept in the 2024 note, since a non-profit's receipts are never revenue."
+        "[2026-10-03 first reading of the 02.10 pulls, approved by Alexey] financials replaced: БФО 2021–2025 (s8996–s9000), targeted-funds lines read in full. The former 2024 entry stored the Минюст report figure as revenue; it is kept in the 2024 note, since a non-profit's receipts are never revenue.",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "bf-ktspn-barnaul": {
@@ -18192,6 +18446,10 @@
             "source_id": "s0389",
             "status": "resolved",
             "text": "RESOLVED 2026-09-16, correcting an earlier same-day dead-end (see this project's own commit history, 67162e6): docs/index.html's \"FY2024 filing names its governing bodies in full\" claim IS the БФО filing (s0389) after all. Two earlier attempts to OCR this zip only ever ran OCR against its audit-opinion attachment (page-numbered \"0280\"), never against the actual пояснительная записка PDF (NO_BUHPZ_...) sitting in the same zip -- that file is a 36-page scan that also needed its own OCR pass and had never gotten one. Once OCR'd directly, its own §1.2 табл.3/4 names all 8 people exactly as docs/index.html paraphrases them: Наблюдательный совет = Давыдов (Фонд «ДАР»), Елисеев (no employer listed), Карабинский (Фонд «Градислава»), Устратов (Фонд Поддержки нац. морских проектов), Антонова (no employer listed); Попечительский совет = Тихонов (Фонд «ДАР»), Манецкий (Фонд «Градислава»), Дукал (Фонд «ДАР»). All 8 roles wired on the person side (fond-nasha-pravda, source_id s0389). Lesson for future OCR passes on a multi-file zip: OCR every scanned PDF in the archive, not just the one that happens to have the identifiable filename pattern already used elsewhere."
+          },
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 9705196180, 1237700218612; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: sanction; regime: Ukraine (Presidential sanctions decree/list)). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0575"
           }
         ],
         "registered": "21.03.2023",
@@ -18242,7 +18500,8 @@
         "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 2 fiscal year(s) with revenue/profit data.",
         "Full signed ЕГРЮЛ extract read end-to-end (s0221, ul-1237700218612-20260815010023.pdf, pulled 15.08.2026). Confirms ОГРН, registration date, address, English legal name, and GD Бровченко А.Р. (personal ИНН 501105677892) in post since registration. TWO findings beyond field-filling: (1) the extract contains NO учредители section — a Фонд's founders are not published in ЕГРЮЛ at all, so the brief's Фонд «ДАР»/«Градислава» attribution is neither confirmed nor refuted here and needs the Устав instead; logged as an open question rather than left implicitly sourced. (2) ОКВЭД mismatch: the codes this 'foundation for supporting patriotic initiatives' DECLARED at founding (21.03.2023) were 64.99 other financial services, 68.10 buying/selling own real estate, 68.20 property rental — finance and property dealing, not social or patriotic work. The 88.99 social-services code is Rosstat-reported (отчетного типа), added only 02.04.2026, three years later.",
         "SHARED-ADDRESS FINDING (primary-source, both sides): Фонд «Градислава» has been registered at 115172, Москва, наб. Котельническая, д. 25, стр. 1, ОФИС 18 since 05.09.2013 (ГРН 2137799137815). Фонд «Наша Правда» was registered on 21.03.2023 at the same building, стр. 1, ОФИС 18 КОМНАТА 5 — a room inside that same suite. Each address is taken from that fund's OWN signed ЕГРЮЛ extract, so the overlap is documented on both sides rather than inferred from a third-party database. This puts the ЦБСТ-side fund physically inside the office of the fund the brief ties to Medvedev's undisclosed assets — a registry fact, distinct from the FBK/press sourcing that currently carries that link.",
-        "2026-09-14: cbst_tie wired from own-channel evidence (msg 421, msg 656) -- entity had 'cbst-core' tier assigned already but no cbst_tie field populated. Both posts name ЦБСТ directly as a co-deliverer alongside the Fund and Единая Россия, not a mere brand mention."
+        "2026-09-14: cbst_tie wired from own-channel evidence (msg 421, msg 656) -- entity had 'cbst-core' tier assigned already but no cbst_tie field populated. Both posts name ЦБСТ directly as a co-deliverer alongside the Fund and Единая Россия, not a mere brand mention.",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "fond-podderzhki-natsionalnykh-morskikh-programm": {
@@ -18662,6 +18921,30 @@
               "Ukraine (Presidential sanctions decree/list)"
             ],
             "source_id": "s0767"
+          },
+          {
+            "date": null,
+            "source_id": "s9258",
+            "regime": [
+              "US (OFAC SDN list, programme UKRAINE-EO13662, RUSSIA-EO14024)"
+            ],
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 17260, which prints 1077799030847, 7704274402 (the entry's XML is saved as the cited source). Names on the entry: STATE CORPORATION ROSTEC; STATE CORPORATION FOR THE PROMOTION OF THE DEVELOPMENT, MANUFACTURE, AND EXPORT OF HIGH TECH PRODUCTS ROSTEC. Programme: UKRAINE-EO13662, RUSSIA-EO14024. The SDN file carries no listing date on the entry."
+          },
+          {
+            "date": null,
+            "source_id": "s9275",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 50649, which prints 7704274402 (the entry's XML is saved as the cited source). Names on the entry: Rostec (Russian Technologies State Corporation); State Corporation for the Promotion of the Development, Manufacture, and Export of High-Tech Products “Rostec”; Rostekh. Sanctions-set id 29445 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2022-03-04, 2023-08-16, 2026-08-17."
+          },
+          {
+            "date": "2022-02-24",
+            "source_id": "s9294",
+            "regime": [
+              "UK (Sanctions List, The Russia (Sanctions) (EU Exit) Regulations 2019)"
+            ],
+            "note": "Read on the UK Sanctions List (FCDO) (list dated 02.10.2026, SHA-256 8e23b2d050ea2cc0…), entry RUS0238, which prints 1077799030847 (the entry's XML is saved as the cited source). Names on the entry: State Corporation for the Promotion of the Development, Manufacture and Export of High Technology Products \"Rostec\"; Rostec. Regime: The Russia (Sanctions) (EU Exit) Regulations 2019; date designated 2022-02-24."
           }
         ],
         "trademarks": [
@@ -18913,7 +19196,8 @@
         "Swept into the manufacturer tier by section position — Ростех is named in the residents roll-call as an owner of other entities, not as a resident.",
         "2026-09-07: merged dormant duplicate correction key '7704274402' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
-        "[2026-10-01 Ростех–ЦБСТ follow-up] cbst_tie set from a documented two-sided agreement; found by scripts/tg_post_coverage.py (7 ЦБСТ posts name Ростех, registry had tie none). Independent confirmation read on Ростех's own channel [s8656]."
+        "[2026-10-01 Ростех–ЦБСТ follow-up] cbst_tie set from a documented two-sided agreement; found by scripts/tg_post_coverage.py (7 ЦБСТ posts name Ростех, registry had tie none). Independent confirmation read on Ростех's own channel [s8656].",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Canada (Special Economic Measures Act), US-UKRRUS-REL, US-SSI, US-BIS-EL, NZ-RSA2022, AU-UKRAINE, Ukraine (Presidential sanctions decree/list), UK (Sanctions List, The Russia (Sanctions) (EU Exit) Regulations 2019)."
       ]
     },
     "ip-kuznetsov-ruslan-nikolaevich": {
@@ -20954,6 +21238,54 @@
               "EU (Ukraine-related restrictive measures)"
             ],
             "source_id": "s0798"
+          },
+          {
+            "date": null,
+            "source_id": "s9266",
+            "regime": [
+              "US (OFAC SDN list, programme RUSSIA-EO14024)"
+            ],
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 37667, which prints 1027807560186, 7814027653 (the entry's XML is saved as the cited source). Names on the entry: JOINT STOCK COMPANY RESEARCH AND PRODUCTION ENTERPRISE RADAR MMS; JOINT STOCK COMPANY RADAR MMS; RADAR MMS NPP; SCIENTIFIC PRODUCTION ASSOCIATION RADAR MMS JSC. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry."
+          },
+          {
+            "date": "2024-02-23",
+            "source_id": "s9250",
+            "regime": [
+              "EU (consolidated financial sanctions list, programme UKR)"
+            ],
+            "note": "Read on the EU consolidated financial sanctions list (list generated 22.09.2026, SHA-256 cd59eccb0278d331…), entry EU.11374.22, which prints 7814027653 (the entry's XML is saved as the cited source). Names on the entry: Radar MMS (Акционерное общество научно-производственное предприятие “РАДАР ММС”); sociedad anónima Research and Production Enterprise Radar MMS; акционерно дружество (изследователско и производствено предприятие) „RADAR MMS“. Programme UKR; acts cited on the entry: 2024/753-corr 2024/90233 (OJ L12042024); 2024/753 (OJ L23022024); earliest designation date on the entry 2024-02-23. Act text: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202490233."
+          },
+          {
+            "date": null,
+            "source_id": "s9287",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 61734, which prints 7814027653 (the entry's XML is saved as the cited source). Names on the entry: Joint Stock Company Research and Production Enterprise Radar MMS; JSC Radar MMS; NPP Radar MMS. Sanctions-set id 29445 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2023-03-29, 2023-08-16, 2026-08-17."
+          },
+          {
+            "date": null,
+            "source_id": "s9289",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 73410, which prints 7814027653 (the entry's XML is saved as the cited source). Names on the entry: Joint Stock Company Research and Production Enterprise “RADAR MMS”; JSC “NPP ‘Radar MMS’”; Radar MMS. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: none."
+          },
+          {
+            "date": null,
+            "source_id": "s9288",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 73410, which prints 1027807560186, 7814027653 (the entry's XML is saved as the cited source). Names on the entry: Joint Stock Company Research and Production Enterprise “RADAR MMS”; JSC “NPP ‘Radar MMS’”; Radar MMS. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2024-03-01, 2024-03-22, 2024-06-04, 2025-12-13, 2026-04-01."
+          },
+          {
+            "date": "2023-12-06",
+            "source_id": "s9297",
+            "regime": [
+              "UK (Sanctions List, The Russia (Sanctions) (EU Exit) Regulations 2019)"
+            ],
+            "note": "Read on the UK Sanctions List (FCDO) (list dated 02.10.2026, SHA-256 8e23b2d050ea2cc0…), entry RUS2019, which prints 1027807560186, 7814027653 (the entry's XML is saved as the cited source). Names on the entry: JSC Research and Production Enterprise Radar MMS. Regime: The Russia (Sanctions) (EU Exit) Regulations 2019; date designated 2023-12-06."
           }
         ],
         "trademarks": [
@@ -21262,7 +21594,8 @@
         "RKN Единый реестр частотных присвоений screen (2026-09-07, source s6450): 32 total frequency-assignment records (page-0 sample of 20 pulled), consistent with the entity's known radar/RF-equipment manufacturing profile — routine for this class of entity, not itemized in full.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-07: merged dormant duplicate correction key '7814027653' into this slug-keyed entry (registry-hardening pass, no field conflict).",
-        "2026-09-15: filled subject_ru on 43 of 44 government_contracts[] records that had empty items/subject_ru, by extracting the 'Объекты закупки' field from each reg_number's already-archived ZAKUPKI_contract_*.html card (data/sources/) -- see the ao-tsentr-telko correction note in this same file for the parser-bug root cause and fix (div- vs span-titled field, scripts/mine_zakupki.py's parse_contract_card_html). One record (reg_number 0173100004513001187) is deliberately left unfilled -- its card has 5 line items but only ever renders a bare 'Этап 1' placeholder plus a 'Посмотреть все (5)' link this scrape never fetched, so there is no genuine single-string subject on file for it; see this entity's zakupki_review note. Every filled value hand-verified against the source card before being written here."
+        "2026-09-15: filled subject_ru on 43 of 44 government_contracts[] records that had empty items/subject_ru, by extracting the 'Объекты закупки' field from each reg_number's already-archived ZAKUPKI_contract_*.html card (data/sources/) -- see the ao-tsentr-telko correction note in this same file for the parser-bug root cause and fix (div- vs span-titled field, scripts/mine_zakupki.py's parse_contract_card_html). One record (reg_number 0173100004513001187) is deliberately left unfilled -- its card has 5 line items but only ever renders a bare 'Этап 1' placeholder plus a 'Посмотреть все (5)' link this scrape never fetched, so there is no genuine single-string subject on file for it; see this entity's zakupki_review note. Every filled value hand-verified against the source card before being written here.",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: NZ-RSA2022, Australia (Autonomous Sanctions, Russia), Canada (Special Economic Measures Act), Ukraine (Presidential sanctions decree/list), Ukraine (war-sanctions.gur.gov.ua, military-industry listing), US-BIS-EL, UK (Sanctions List, The Russia (Sanctions) (EU Exit) Regulations 2019)."
       ]
     },
     "npts-elvis": {
@@ -21766,6 +22099,22 @@
               "Ukraine (Presidential sanctions decree/list)"
             ],
             "source_id": "s0789"
+          },
+          {
+            "date": null,
+            "source_id": "s9263",
+            "regime": [
+              "US (OFAC SDN list, programme RUSSIA-EO14024)"
+            ],
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 39179, which prints 7735582816 (the entry's XML is saved as the cited source). Names on the entry: ELVEES RESEARCH AND DEVELOPMENT CENTER JSC; ELVEES R AND D CENTER JSC; ELVEES R&amp;D CENTER JSC; JSC SPC ELVIS. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry."
+          },
+          {
+            "date": null,
+            "source_id": "s9282",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 52539, which prints 7735582816 (the entry's XML is saved as the cited source). Names on the entry: Electronic Computing and Information Systems; JSC Research and Development Center ELVEES; ELVIS. Sanctions-set id 29445 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2022-03-25, 2023-08-16, 2026-08-17."
           }
         ],
         "trademarks": [
@@ -22191,7 +22540,8 @@
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
-        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
+        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Canada (Special Economic Measures Act), US-BIS-EL, Ukraine (Presidential sanctions decree/list)."
       ]
     },
     "npts-ushkuynik": {
@@ -22647,6 +22997,30 @@
               "EU (Ukraine-related restrictive measures)"
             ],
             "source_id": "s0729"
+          },
+          {
+            "date": null,
+            "source_id": "s9254",
+            "regime": [
+              "US (OFAC SDN list, programme RUSSIA-EO14024)"
+            ],
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 49193, which prints 1232700009398, 2700012608 (the entry's XML is saved as the cited source). Names on the entry: LIMITED LIABILITY COMPANY AERO-HIT; LLC AERO-HIT. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry."
+          },
+          {
+            "date": "2026-04-23",
+            "source_id": "s9239",
+            "regime": [
+              "EU (consolidated financial sanctions list, programme UKR)"
+            ],
+            "note": "Read on the EU consolidated financial sanctions list (list generated 22.09.2026, SHA-256 cd59eccb0278d331…), entry EU.14023.18, which prints 1232700009398, 2700012608 (the entry's XML is saved as the cited source). Names on the entry: Общество с ограниченной ответственностью “Аэро-ХИТ”; LLC “AERO-HIT”; OOO “АЭРО-ХИТ”. Programme UKR; acts cited on the entry: 2026/509 (OJ L202600509); earliest designation date on the entry 2026-04-23. Act text: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509."
+          },
+          {
+            "date": null,
+            "source_id": "s9268",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 105290, which prints 1232700009398, 2700012608 (the entry's XML is saved as the cited source). Names on the entry: Limited Liability Company Aero-HIT; LLC “AERO-HIT”. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2026-05-22."
           }
         ],
         "state_programs": [
@@ -22744,7 +23118,8 @@
         "GUR also states cooperation with Chinese manufacturer Autel Robotics on localizing Autel UAV production in Russia — a foreign-component/tech-transfer lead worth an independent check, not yet corroborated beyond this one GUR note.",
         "2026-09-07: merged dormant duplicate correction key '2700012608' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): same post/precedent as the other five already-tied entities from this exact post."
+        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): same post/precedent as the other five already-tied entities from this exact post.",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list)."
       ]
     },
     "ooo-aeromaks": {
@@ -22932,6 +23307,30 @@
               "Switzerland (SECO, Ukraine-related measures)"
             ],
             "source_id": "s0780"
+          },
+          {
+            "date": null,
+            "source_id": "s9262",
+            "regime": [
+              "US (OFAC SDN list, programme RUSSIA-EO14024)"
+            ],
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 50772, which prints 1177746007900, 7725347482 (the entry's XML is saved as the cited source). Names on the entry: LIMITED LIABILITY COMPANY AEROMAKS; AEROMAX GROUP; AEROMAX LTD. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry."
+          },
+          {
+            "date": "2026-04-23",
+            "source_id": "s9246",
+            "regime": [
+              "EU (consolidated financial sanctions list, programme UKR)"
+            ],
+            "note": "Read on the EU consolidated financial sanctions list (list generated 22.09.2026, SHA-256 cd59eccb0278d331…), entry EU.14137.89, which prints 1177746007900, 7725347482 (the entry's XML is saved as the cited source). Names on the entry: ОOO &quot;АЭРОМАКС&quot;; LLC &quot;AEROMAKS&quot;. Programme UKR; acts cited on the entry: 2026/509 (OJ L202600509); earliest designation date on the entry 2026-04-23. Act text: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509."
+          },
+          {
+            "date": null,
+            "source_id": "s9281",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 105434, which prints 1177746007900, 7725347482 (the entry's XML is saved as the cited source). Names on the entry: LLC “AEROMAKS”. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2026-05-22."
           }
         ],
         "trademarks": [
@@ -23208,7 +23607,8 @@
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
         "2026-09-16 (coverage-gap agent pass, verified independently before wiring): verified directly against the full docs/index.html paragraph (not just a fragment) before wiring -- an agent flagged this as a possible footnote error based on only the six-name contour sentence, but the fuller paragraph (already read in full this session) confirms Аэромакс is named in a separate clause of the same post, not fabricated.",
         "[2026-10-02 claim corrected] cbst_tie rewritten and downgraded t-doc to t-open: post 2095, read in full, lists Аэромакс among «других отечественных разработчиков», not among the residents. Whether another document ties it to ЦБСТ is open.",
-        "[2026-10-03 first reading of the 02.10 pulls, approved by Alexey] state_programs: ₽500m grant of 2022 added from the 2022 БФО re-pull (s9008), ОЦИС page read in full; 2022 financials note explains the deferred-tax profit; open question on the grantor."
+        "[2026-10-03 first reading of the 02.10 pulls, approved by Alexey] state_programs: ₽500m grant of 2022 added from the 2022 БФО re-pull (s9008), ОЦИС page read in full; 2022 financials note explains the deferred-tax profit; open question on the grantor.",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (Presidential sanctions decree/list)."
       ]
     },
     "ooo-aeroplatformy": {
@@ -24836,6 +25236,10 @@
           {
             "source_id": null,
             "text": "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no website found, no EGRUL contact info. Registered OKVED is \"прочая деятельность в области спорта\" (other sports activities) across 27 registered activity types -- broad-OKVED-list pattern consistent with a generic multi-purpose shell. No drone/defense signal found; relevance unconfirmed."
+          },
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 9724002908, 1207700030493; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: sanction; regime: Ukraine (Presidential sanctions decree/list)). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0816"
           }
         ],
         "sanctions": [
@@ -24974,7 +25378,8 @@
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-15: added a counterparty related_entities[] edge to ooo-npo-rustekhdron (new relationship_type value, same session) -- already documented in this record's own litigation[]/why[] but never converted into a graph edge.",
-        "[2026-09-30 product research] Product research: the court filing on file shows ДСГ as a BUYER (30 F1-grenade drop systems, 50 GAONENG FPV batteries), not a maker. No product found."
+        "[2026-09-30 product research] Product research: the court filing on file shows ДСГ as a BUYER (30 F1-grenade drop systems, 50 GAONENG FPV batteries), not a maker. No product found.",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ooo-ekolibri-bt": {
@@ -26869,7 +27274,12 @@
         "ogrn": "1207700344037",
         "okved_code": "72.19",
         "okved_label": "Научные исследования и разработки в области естественных и технических наук прочие",
-        "open_questions": [],
+        "open_questions": [
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 9731070264, 1207700344037; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: sanction.control, sanction.linked; regime: none stated). Topics «sanction.linked» and «sanction.control» are OpenSanctions' own labels; their definition was not re-read for this note, and on their names they mark a link to a sanctioned party rather than a designation of this entity (the matching official entry, if any, is what shows a designation). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0819"
+          }
+        ],
         "sanctions": [
           {
             "date": null,
@@ -26954,7 +27364,8 @@
         "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "[2026-09-30 product research] Product research: gaskar.group (s7569, s8644) names no legal entity (its privacy policy names ООО «Диджитал Лаб», s8643); this ИНН is tied only by its EGRUL e-mail domain. Group products are therefore not attached here. Its only contract is civilian software licences."
+        "[2026-09-30 product research] Product research: gaskar.group (s7569, s8644) names no legal entity (its privacy policy names ООО «Диджитал Лаб», s8643); this ИНН is tied only by its EGRUL e-mail domain. Group products are therefore not attached here. Its only contract is civilian software licences.",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ooo-geron": {
@@ -27326,6 +27737,12 @@
             "share_percent": 99.902,
             "as_of": "2019-07-10"
           }
+        ],
+        "open_questions": [
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 7706809928, 1147746575767; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: sanction.control, sanction.linked; regime: none stated). Topics «sanction.linked» and «sanction.control» are OpenSanctions' own labels; their definition was not re-read for this note, and on their names they mark a link to a sanctioned party rather than a designation of this entity (the matching official entry, if any, is what shows a designation). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0770"
+          }
         ]
       },
       "verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0100)",
@@ -27334,7 +27751,8 @@
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0770).",
         "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ooo-gk-aeromaks": {
@@ -27395,6 +27813,10 @@
           {
             "source_id": "s5342",
             "text": "Минпромторг России's national БАС-classification chart (s5342, «О реализации национального проекта «Беспилотные авиационные системы» в период до 2030 года», p.2) lists «SH-750 (Аэромакс)» as the representative example product for the вертолетный тип / тяжелый (более 500 кг) UAV category — the heaviest helicopter-type class. \"SH-750\" doesn't match any model currently in products[] on any of the three Аэромакс-named entities (ao-aeromaks: AS-32-10/AS-32-8/Д-12К fixed-wing/VTOL; ooo-aeromaks: B-120/B-200/B-700 helicopter-type, А-5/А-5 М/Л/A-50 aircraft/multicopter-type; ooo-gk-aeromaks: none listed). Given ooo-aeromaks already carries the B-series helicopter line and B-700 is noted as \"in development — no dedicated page yet\", SH-750 may be a renamed/rebranded designation for B-700 or a newer heavy model entirely — needs checking against the group's current product pages (aeromaks brand site/VK/Rosteh press) before wiring to any specific entity's products[]."
+          },
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 7710974353, 1147748024269; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: sanction.linked; regime: none stated). Topics «sanction.linked» and «sanction.control» are OpenSanctions' own labels; their definition was not re-read for this note, and on their names they mark a link to a sanctioned party rather than a designation of this entity (the matching official entry, if any, is what shows a designation). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0772"
           }
         ],
         "sanctions": [
@@ -27520,7 +27942,8 @@
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-08: RTI-Радио's own EGRUL confirms Аэромакс Group's 100% acquisition and director installation",
-        "[2026-09-30 product research] Not a maker on its own: EGRUL codes are head-office/holding (70.10, 64.20). The group UAV line (B-120, B-200, А-5, A-50) is on aeromax-group.ru, operated by the separate ООО «Аэромакс» (7725347482, s8614). The Moscow Times (10.04.2026, s8576), citing CNews, reports that the owner of АО «Кронштадт», ООО ГК «Кронштадт», booked a ₽4.6bn loss for 2025 — this ИНН under its former group name."
+        "[2026-09-30 product research] Not a maker on its own: EGRUL codes are head-office/holding (70.10, 64.20). The group UAV line (B-120, B-200, А-5, A-50) is on aeromax-group.ru, operated by the separate ООО «Аэромакс» (7725347482, s8614). The Moscow Times (10.04.2026, s8576), citing CNews, reports that the owner of АО «Кронштадт», ООО ГК «Кронштадт», booked a ₽4.6bn loss for 2025 — this ИНН under its former group name.",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ooo-gk-logos": {
@@ -28225,6 +28648,10 @@
           {
             "source_id": "s8677",
             "text": "Which of the two ИНТЭК entities makes the INTEC/UAVintec drones («Вихрь-1М», «Вихрь-1МП», «Метеор-2», DGF-R4X300): the @uavintec profile names ООО «ИНТЭК ПРОМЫШЛЕННЫЕ СИСТЕМЫ» (7017396681), while the general director quoted by ЦБСТ (Калиновский Н.В.) matches the director of this entity. A purchase contract, a Rospatent entry or a site footer printing an ИНН would settle it."
+          },
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 7000013316, 1247000000488; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: sanction.control, sanction.linked; regime: none stated). Topics «sanction.linked» and «sanction.control» are OpenSanctions' own labels; their definition was not re-read for this note, and on their names they mark a link to a sanctioned party rather than a designation of this entity (the matching official entry, if any, is what shows a designation). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0758"
           }
         ],
         "sanctions": [
@@ -28275,7 +28702,8 @@
         "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "[2026-10-01 ЦБСТ resident sweep] Products corrected: removed «Дрон Экспо» (an exhibition in Kazan, not a product), «ИНТЭК ПРОМЫШЛЕННЫЕ СИСТЕМЫ» (a separate company, now its own record `ooo-intek-promyshlennye-sistemy`) and «ИНТЭК-ИНЖИНИРИНГ» (appears in no archived post or page among 328k posts, so no source). «Метеор-2» is kept: ЦБСТ post 2301 presents it for Intec [s8676]. cbst_tie set t-open, not t-doc, because two ИНТЭК entities fit the brand."
+        "[2026-10-01 ЦБСТ resident sweep] Products corrected: removed «Дрон Экспо» (an exhibition in Kazan, not a product), «ИНТЭК ПРОМЫШЛЕННЫЕ СИСТЕМЫ» (a separate company, now its own record `ooo-intek-promyshlennye-sistemy`) and «ИНТЭК-ИНЖИНИРИНГ» (appears in no archived post or page among 328k posts, so no source). «Метеор-2» is kept: ЦБСТ post 2301 presents it for Intec [s8676]. cbst_tie set t-open, not t-doc, because two ИНТЭК entities fit the brand.",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ooo-investments": {
@@ -28396,6 +28824,10 @@
           {
             "source_id": "s6707",
             "text": "The ЕГРЮЛ extract of 07.09.2026 records two entries by the ФНС of «сведений о недостоверности сведений о юридическом лице» (result of a check of the register's data): ГРН 2237710462867 of 30.10.2023 and ГРН 2267701527234 of 03.03.2026, both by МИФНС № 46 по г. Москве. The record-history section does not say which field was found unreliable, and the current-data sections of the extract carry no flag. Read the registry's own wording for each entry before any use; no conclusion about nominees or the address is drawn from it."
+          },
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 9707004743, 1237700523895; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: sanction.control, sanction.linked; regime: none stated). Topics «sanction.linked» and «sanction.control» are OpenSanctions' own labels; their definition was not re-read for this note, and on their names they mark a link to a sanctioned party rather than a designation of this entity (the matching official entry, if any, is what shows a designation). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0808"
           }
         ]
       },
@@ -28407,7 +28839,8 @@
         "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
         "RESOLVED 2026-09-05: read all 4 archived А40-119451/26 filings (s0016-s0019). The defendant is ООО «Атлантика. Финансы и Консалтинг» (ИНН 7724943210, ОГРН 5147746318957) -- NOT ООО «Инвестментс» (ИНН different, no ownership link found to Инвестментс or ФОНД «НАША ПРАВДА»). \"АФК\" is that entity's own initialism (АтлантиКа. Финансы и Консалтинг), not an abbreviation of anything network-related. The ₽83.27m open question at docs/index.html's kad.arbitr.ru card was a false lead -- corrected there. This entity's own real litigation history remains whatever is already on file; this case does not belong to it.",
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 2 filing-year record(s).",
-        "2026-09-13: founding-document bundle (UD_1237700523895_20260913_ooo-investments.zip, s7378) read in full — both the original 07.08.2023 charter (sole-founder, ₽10,000 capital, declared purpose is financial services/investment/real estate — pure money-layer activity, no UAV-related language) and the 2026 restatement. KEY FINDING: the 2026 restatement's own preamble states the company absorbed АО «Борей» (`ao-borey-absorbed-no-longer-exists`, ИНН 9701280698) via присоединение, per a joint meeting of both companies' participants/shareholders 17.11.2025 — this is the mechanism behind Борей's own slug note (\"absorbed, no longer exists\"), previously unsourced. ₽11,000 capital and the Наша Правда/Григорьев cap table already on file (source s0223) are corroborated, not changed."
+        "2026-09-13: founding-document bundle (UD_1237700523895_20260913_ooo-investments.zip, s7378) read in full — both the original 07.08.2023 charter (sole-founder, ₽10,000 capital, declared purpose is financial services/investment/real estate — pure money-layer activity, no UAV-related language) and the 2026 restatement. KEY FINDING: the 2026 restatement's own preamble states the company absorbed АО «Борей» (`ao-borey-absorbed-no-longer-exists`, ИНН 9701280698) via присоединение, per a joint meeting of both companies' participants/shareholders 17.11.2025 — this is the mechanism behind Борей's own slug note (\"absorbed, no longer exists\"), previously unsourced. ₽11,000 capital and the Наша Правда/Григорьев cap table already on file (source s0223) are corroborated, not changed.",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ooo-kb-sinergiya": {
@@ -28679,6 +29112,22 @@
               "Switzerland (SECO, Ukraine-related measures)"
             ],
             "source_id": "s0744"
+          },
+          {
+            "date": "2026-04-23",
+            "source_id": "s9241",
+            "regime": [
+              "EU (consolidated financial sanctions list, programme UKR)"
+            ],
+            "note": "Read on the EU consolidated financial sanctions list (list generated 22.09.2026, SHA-256 cd59eccb0278d331…), entry EU.14080.29, which prints 1185275047176, 5257183517 (the entry's XML is saved as the cited source). Names on the entry: ООО “Клеверкоптер“; LLC “KLEVERCOPTER”. Programme UKR; acts cited on the entry: 2026/509 (OJ L202600509); earliest designation date on the entry 2026-04-23. Act text: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509."
+          },
+          {
+            "date": null,
+            "source_id": "s9270",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 105506, which prints 1185275047176, 5257183517 (the entry's XML is saved as the cited source). Names on the entry: LLC “KLEVERCOPTER”. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2026-05-22."
           }
         ],
         "trademarks": [
@@ -28789,7 +29238,8 @@
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "2026-09-14: enriched/added products[] with structured type_bvs/production_status/specs from rk.2035.university's own technical_specifications sub-catalog (s1169) -- 6 products total after this pass.",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): same post/precedent as ao-kotlin-novator."
+        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): same post/precedent as ao-kotlin-novator.",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (Presidential sanctions decree/list)."
       ]
     },
     "ooo-konstruktorskoe-byuro-sinergiya": {
@@ -29712,6 +30162,12 @@
             "as_of": "2026-04-11",
             "note": "ЦБСТ's own channel, post 2067, headline «Резидент ЦБСТ запустил производство складного FPV-дрона с донаведением», next sentence «Петербургская компания «Кравт»»."
           }
+        ],
+        "open_questions": [
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 7802693899, 1197847166560; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: sanction.linked; regime: none stated). Topics «sanction.linked» and «sanction.control» are OpenSanctions' own labels; their definition was not re-read for this note, and on their names they mark a link to a sanctioned party rather than a designation of this entity (the matching official entry, if any, is what shows a designation). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0794"
+          }
         ]
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
@@ -29727,7 +30183,8 @@
         "GISP goods-catalog full-roster sweep (2026-09-03, s5391) added 14 product(s) not previously documented.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): quoted directly from docs/index.html; post not yet archived as a discrete file."
+        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): quoted directly from docs/index.html; post not yet archived as a discrete file.",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ooo-kravt-udmurtiya": {
@@ -29933,6 +30390,12 @@
             "as_of": "2016-07-21",
             "source_id": "s6697"
           }
+        ],
+        "open_questions": [
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 6330030244, 1066330007798; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: sanction.control, sanction.linked; regime: none stated). Topics «sanction.linked» and «sanction.control» are OpenSanctions' own labels; their definition was not re-read for this note, and on their names they mark a link to a sanctioned party rather than a designation of this entity (the matching official entry, if any, is what shows a designation). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0752"
+          }
         ]
       },
       "verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0083)",
@@ -29943,7 +30406,8 @@
         "2026-08-24 Rospatent full-roster patent sweep (name-matched — this dataset has no ИНН/ОГРН column): matched by name only, CHECKED and REJECTED. All matched patent(s) predate 2010 (reg. no. ≤ 2341453, vs. this network's own confirmed patents in the 2020s numbering range) and cover unrelated subject matter. Common-name collision, not the same entity/person.",
         "2026-08-25: normalized a placeholder sanctions[].regime string (e.g. \"(regime code not returned by OpenSanctions for this match)\") to null -- three different spellings of the same \"not known\" state, now using the registry's existing null convention instead of proliferating placeholder text.",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "2026-09-07: backfilled missing source_id on founders[] (Михельсон/Симановский) -- the data was already correct but had no citation; now points at s6697, the full ЕГРЮЛ выписка already used for director_history/founders_history."
+        "2026-09-07: backfilled missing source_id on founders[] (Михельсон/Симановский) -- the data was already correct but had no citation; now points at s6697, the full ЕГРЮЛ выписка already used for director_history/founders_history.",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ooo-mentastep": {
@@ -30396,6 +30860,12 @@
             "as_of": "2019-10-14",
             "source_id": "s6810"
           }
+        ],
+        "open_questions": [
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 6330037352, 1086330002549; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: sanction.control, sanction.linked; regime: none stated). Topics «sanction.linked» and «sanction.control» are OpenSanctions' own labels; their definition was not re-read for this note, and on their names they mark a link to a sanctioned party rather than a designation of this entity (the matching official entry, if any, is what shows a designation). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0753"
+          }
         ]
       },
       "verified_against": "egrul.nalog.ru open-API pull, 2026-08-24 (source s0084)",
@@ -30408,7 +30878,8 @@
         "RKN comms-license registry cross-check (rkn.gov.ru/activity/connection/register/license/, scripts/screen_rkn_comms_license.py, 2026-09-06 full 176-entity sweep) — 3 license record(s) not previously on file. See s6440.",
         "RKN Единый реестр частотных присвоений screen (2026-09-07, source s6446): 11 frequency-assignment records (6 active, 5 expired), routine periodic re-licensing consistent with the entity's existing МЧС/RKN comms-license footprint already documented.",
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 5 filing-year record(s).",
-        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
+        "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ooo-npo-kilovatt": {
@@ -31260,6 +31731,22 @@
               "Switzerland (SECO, Ukraine-related measures)"
             ],
             "source_id": "s0738"
+          },
+          {
+            "date": "2025-05-20",
+            "source_id": "s9240",
+            "regime": [
+              "EU (consolidated financial sanctions list, programme UKR)"
+            ],
+            "note": "Read on the EU consolidated financial sanctions list (list generated 22.09.2026, SHA-256 cd59eccb0278d331…), entry EU.13274.86, which prints 1235000022179, 5003155499 (the entry's XML is saved as the cited source). Names on the entry: »Rustecdrone Tudományos és Gyártási Szövetség« Korlátolt Felelősségű Társaság; NPO Rustecdrone Kft.; LLC NPO Rustecdrone. Programme UKR; acts cited on the entry: 2025/933 (OJ L202500933); earliest designation date on the entry 2025-05-20. Act text: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500933."
+          },
+          {
+            "date": null,
+            "source_id": "s9269",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 92861, which prints 1235000022179, 5003155499 (the entry's XML is saved as the cited source). Names on the entry: Limited Liability Company “Scientific And Production Association Rustecdrone”; LLC NPO Rustecdrone. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2025-06-03."
           }
         ],
         "state_programs": [
@@ -31418,7 +31905,8 @@
         "2026-09-14: enriched/added products[] with structured type_bvs/production_status/specs from rk.2035.university's own technical_specifications sub-catalog (s1169) -- 15 products total after this pass.",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
         "2026-09-15: added counterparty related_entities[] edges to ooo-dsg and ooo-spetsialnye-poleznye-tekhnologii (new relationship_type value, same session) -- both already fully documented in this record's own litigation[] but never converted into a graph edge. No new lookups; cited to the same litigation source_ids already on file.",
-        "[2026-09-30] director_history: the sourceless checko.ru entry is replaced by the ЕГРЮЛ open-data record shown on the company's OpenSanctions page (s8543): Соколов Герман Олегович, генеральный директор, 27.02.2023–11.03.2025. The registry records that period only. It does not record him as the current director, because the ЕГРЮЛ director section has been restricted since 12.03.2025 (s6718) and no document states who holds the post now. Same page lists his 14.75% stake (to 11.03.2025) among a partial owner list that includes АО «ТР КОРП» 29.5% and АО «Спорт и образование» 21%; not wired as founders_history because the list is incomplete on the page."
+        "[2026-09-30] director_history: the sourceless checko.ru entry is replaced by the ЕГРЮЛ open-data record shown on the company's OpenSanctions page (s8543): Соколов Герман Олегович, генеральный директор, 27.02.2023–11.03.2025. The registry records that period only. It does not record him as the current director, because the ЕГРЮЛ director section has been restricted since 12.03.2025 (s6718) and no document states who holds the post now. Same page lists his 14.75% stake (to 11.03.2025) among a partial owner list that includes АО «ТР КОРП» 29.5% and АО «Спорт и образование» 21%; not wired as founders_history because the list is incomplete on the page.",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list)."
       ]
     },
     "ooo-npts-basirtk": {
@@ -32714,6 +33202,10 @@
           {
             "source_id": null,
             "text": "2026-08-23 web-search sweep (legal name + ИНН + сайт, batch of 46 never-searched manufacturers): no website found, no EGRUL contact info. Very recently registered (10.12.2024, ~20 months old), generic \"other scientific R&D\" OKVED -- thin registry footprint, relevance unconfirmed either way."
+          },
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 5261138034, 1245200032406; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: export.control.linked, sanction.control, sanction.linked; regime: none stated). Topics «sanction.linked» and «sanction.control» are OpenSanctions' own labels; their definition was not re-read for this note, and on their names they mark a link to a sanctioned party rather than a designation of this entity (the matching official entry, if any, is what shows a designation). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0746"
           }
         ],
         "sanctions": [
@@ -32770,7 +33262,8 @@
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 1 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
-        "[2026-09-30] products: added 1 product(s) from archived Telegram posts (s8547); descriptions restate the post, and specifications are the source's own claims."
+        "[2026-09-30] products: added 1 product(s) from archived Telegram posts (s8547); descriptions restate the post, and specifications are the source's own claims.",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ooo-pokrov": {
@@ -34129,6 +34622,14 @@
               "Ukraine (Presidential sanctions decree/list)"
             ],
             "source_id": "s0768"
+          },
+          {
+            "date": null,
+            "source_id": "s9259",
+            "regime": [
+              "US (OFAC SDN list, programme RUSSIA-EO14024)"
+            ],
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 37792, which prints 1147746392200, 7704861136 (the entry's XML is saved as the cited source). Names on the entry: RT-BUSINESS DEVELOPMENT; RT-RAZVITIE BIZNESA, OOO. Programme: RUSSIA-EO14024; remarks: linked to STATE CORPORATION ROSTEC. The SDN file carries no listing date on the entry."
           }
         ],
         "bfo_review": {
@@ -34142,7 +34643,8 @@
         "Full signed ЕГРЮЛ extract read end-to-end (s0217, ul-1147746392200-20260818193210.pdf, 19pp, pulled 18.08.2026). Confirms 100% ownership by ГК «Ростех» (ИНН 7704274402, ОГРН 1077799030847) at a nominal ₽45,104,750,000 — ₽45.1bn charter capital, recorded 04.12.2025 — making this a direct, unredacted state-corporation ownership edge, recorded in founders[] and parents[]. Its DIRECTOR, by contrast, has been EGRUL-access-restricted since 12.12.2022: the owner is public, the manager is hidden. Primary ОКВЭД 70.10 «Деятельность головных офисов» — a holding-company function, consistent with the money-layer classification rather than any operating business.",
         "2026-08-24: OpenSanctions full-roster screening, ID-confirmed exact ИНН match (source s0768).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
-        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
+        "2026-09-14: not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap.",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: NZ-RSA2022, Ukraine (Presidential sanctions decree/list)."
       ]
     },
     "ooo-sibirskaya-navigatsionnaya-kompaniya": {
@@ -34216,6 +34718,10 @@
           {
             "source_id": "s8646",
             "text": "Which same-name company holds patents RU2851338C1 and RU2856043C1 (radio-network gateway; satellite-comms kit)? Rospatent prints no ОГРН/ИНН; the Новосибирск ООО (5403081107, ОКВЭД 26.30) is at least as plausible as this entity. A fee/assignment record or the patent attorney's file would settle it."
+          },
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 4205376019, 1184205024849; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: sanction.linked; regime: none stated). Topics «sanction.linked» and «sanction.control» are OpenSanctions' own labels; their definition was not re-read for this note, and on their names they mark a link to a sanctioned party rather than a designation of this entity (the matching official entry, if any, is what shows a designation). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0734"
           }
         ],
         "patents": [
@@ -34303,7 +34809,8 @@
         "2026-09-07: merged dormant duplicate correction key '4205376019' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
         "[2026-09-30 product research] Short name ООО «СИБНК» per own выписка (s6716); absorbs the wrong-entity ooo-sibnk stub. The Insider (16.05.2025, s8573) names it as controlling owner of ООО «ЭВР» (now ООО «Гаскар»), maker of «Сибирячок». The two patents already on file name the patentee by name only; a second active ООО «Сибирская навигационная компания» exists (ИНН 5403081107, Новосибирск, s8562), so they are not listed as this ИНН's products until the Rospatent holder record with ОГРН is checked.",
-        "[2026-09-30 ЕГРЮЛ/Rospatent pull] Rospatent pull done: holder identity cannot be resolved from the patent documents; see the caveat on each patent."
+        "[2026-09-30 ЕГРЮЛ/Rospatent pull] Rospatent pull done: holder identity cannot be resolved from the patent documents; see the caveat on each patent.",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ooo-sibnk": {
@@ -34453,7 +34960,13 @@
           "confidence": "t-doc",
           "evidence": "founders[] entry: АНО «ЦБСТ» 100% owner, confirmed independently via this entity's own FY2025 filing, not just EGRUL.",
           "source_id": "s0435"
-        }
+        },
+        "open_questions": [
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 4632306583, 1254600002920; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: export.control.linked, sanction.control, sanction.linked; regime: none stated). Topics «sanction.linked» and «sanction.control» are OpenSanctions' own labels; their definition was not re-read for this note, and on their names they mark a link to a sanctioned party rather than a designation of this entity (the matching official entry, if any, is what shows a designation). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0736"
+          }
+        ]
       },
       "verified_against": null,
       "why": [
@@ -34464,7 +34977,8 @@
         "БФО filings parsed (parse_bfo_financials.py, 2026-08-22), 1 fiscal year(s) with revenue/profit data.",
         "Full signed ЕГРЮЛ extract read end-to-end (ul-1254600002920-20260823014908.pdf, pulled 23.08.2026). THIRD confirmed direct-ЦБСТ-owned entity (alongside Спецтех Инвестиции and Спецтех Первый) — but materially different in kind: located in Kursk, not Moscow, and its ОКВЭД profile is genuinely industrial rather than a financial shell — primary 62.01 software development, secondaries 26.30.15 radio-electronic communications equipment, 26.51.2 radiolocation/radio-navigation and remote-control radio equipment, 27.90 other electrical equipment. GD Михайлов Ю.Г. (personal ИНН 502902982507). ₽30,000 charter capital. This reads as ЦБСТ's actual R&D/systems-integration operating arm, distinct from the two Moscow investment shells.",
         "2026-09-07: merged dormant duplicate correction key '4632306583' into this slug-keyed entry (registry-hardening pass, no field conflict).",
-        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): s0435 verified to exist in sources.json (data/sources/ul-1254600002920-20260823014908.pdf)."
+        "2026-09-16 (coverage-gap agent pass, verified independently before wiring): s0435 verified to exist in sources.json (data/sources/ul-1254600002920-20260823014908.pdf).",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ooo-skay-avia-grupp": {
@@ -34707,6 +35221,30 @@
               "EU (Ukraine-related restrictive measures)"
             ],
             "source_id": "s0761"
+          },
+          {
+            "date": null,
+            "source_id": "s9257",
+            "regime": [
+              "US (OFAC SDN list, programme RUSSIA-EO14024)"
+            ],
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 49943, which prints 1237300010430, 7300024069 (the entry's XML is saved as the cited source). Names on the entry: LIMITED LIABILITY COMPANY SIMBIRSKOE KONSTRUKTORSKOE BYURO PIRANYA; SKB PIRANHA; SKB PIRANYA; SIMBIRSK DESIGN BUREAU. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry."
+          },
+          {
+            "date": "2026-04-23",
+            "source_id": "s9243",
+            "regime": [
+              "EU (consolidated financial sanctions list, programme UKR)"
+            ],
+            "note": "Read on the EU consolidated financial sanctions list (list generated 22.09.2026, SHA-256 cd59eccb0278d331…), entry EU.14019.43, which prints 1237300010430, 7300024069 (the entry's XML is saved as the cited source). Names on the entry: Limited Liability Company Simbirskoe Konstruktrskoe Byuro “Piranya”; LLC SDB “Piranya”; Общество с Ограниченной Ответственностью Симбирское Конструкторское Бюро “Пиранья”. Programme UKR; acts cited on the entry: 2026/509 (OJ L202600509); earliest designation date on the entry 2026-04-23. Act text: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509."
+          },
+          {
+            "date": null,
+            "source_id": "s9274",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 105178, which prints 1237300010430, 7300024069 (the entry's XML is saved as the cited source). Names on the entry: Limited Liability Company Simbirsk Design Bureau “Piranya”; LLC SDB “Piranya”; Limited Liability Company Simbirskoe Konstruktrskoe Byuro “Piranya”. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2026-05-22."
           }
         ],
         "wb_overlap": "none_found",
@@ -34909,7 +35447,8 @@
         "2026-09-07: founding-document bundle (s6909, both the original устав 13.09.2023 and its новая редакция 03.10.2024) OCR'd and read in full -- confirms Ульяновск address and ₽15,000 capital already on file (EGRUL-выписка-sourced), and surfaces that the original устав was approved by a founders' MEETING (plural), not a sole founder, as an open question against the single-founder founders[] currently on file. The новая редакция (03.10.2024) itself OCR'd poorly (cover-page/stamp text only legible) -- no further content extracted from it.",
         "2026-09-15: 4 images added following a local Telegram-DB media pull (tg_media_pull.py, @piranhafpv channel) surfaced by a case-study evidence-depth research pass — this entity had 0 images despite 3 marketing_claims/4 battlefield_evidence already on file. Files copied to docs/images/, archived+indexed as s7509/s7512/s7513/s7514. Source posts also carry additional marketing copy not yet in marketing_claims[] (verbatim self-incriminating claims: \"Первый танк «ABRAMS» был подбит БПЛА «Пиранья 10»\", \"Производство более 4 000 аппаратов ежемесячно\" [post 360, 01.04.2025]; \"Наша компания Пиранья гордится тем, что производит высококачественное оптоволокно для управления дронами с дальностью до 30 км\" [post 384, 01.08.2025] — a direct claim of supplying the fiber-optic cable used in a MoD-press-service-reported tank-destruction near Kursk) -- flagged here for a follow-up pass to also populate marketing_claims[]/battlefield_evidence[], not done in this edit to keep this change scoped to images.",
         "2026-09-15: fixed a field-shape bug in the images[] entries added above — they used 'file'/'caption_ru'/'caption_en' keys, but the registry's own images[] schema (see every other entity's images[]) is 'path' (relative to docs/, e.g. 'images/<file>')/'caption' (single field). The mismatch was silent until build_company_profile.py's --all run crashed on it (KeyError: 'path') during unrelated product-profile work. Fixed to 'path'/'caption' (using the English caption text to match this project's EN-is-analysis convention for profile pages); the Russian caption text is not lost, just no longer duplicated in a second field this schema has no display path for — recoverable from git history if needed.",
-        "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s7588; the earlier cbst_tie record is unchanged."
+        "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s7588; the earlier cbst_tie record is unchanged.",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list)."
       ]
     },
     "ooo-smart-teknolodzhis": {
@@ -35116,6 +35655,14 @@
               "Switzerland (SECO, Ukraine-related measures)"
             ],
             "source_id": "s0799"
+          },
+          {
+            "date": null,
+            "source_id": "s9290",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 86958, which prints 7838044584 (the entry's XML is saved as the cited source). Names on the entry: LLC SPDBBK. Sanctions-set id 29445 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2024-12-24."
           }
         ],
         "wb_overlap": "none_found",
@@ -35231,7 +35778,8 @@
       },
       "verified_against": "full EGRUL extract pulled directly 23.08.2026",
       "why": [
-        "04.10.2026: the EU entry is Annex IV of Regulation 833/2014 (export restrictions), checked in the Official Journal text (s9120); relabelled so it is not read as an asset freeze."
+        "04.10.2026: the EU entry is Annex IV of Regulation 833/2014 (export restrictions), checked in the Official Journal text (s9120); relabelled so it is not read as an asset freeze.",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list)."
       ]
     },
     "ooo-spetsialnye-poleznye-tekhnologii": {
@@ -35407,6 +35955,22 @@
               "Ukraine (Presidential sanctions decree/list)"
             ],
             "source_id": "s0745"
+          },
+          {
+            "date": null,
+            "source_id": "s9255",
+            "regime": [
+              "US (OFAC SDN list, programme RUSSIA-EO14024)"
+            ],
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 50274, which prints 1245200009075, 5260494520 (the entry's XML is saved as the cited source). Names on the entry: STRATIM LIMITED LIABILITY COMPANY; STRATIM LLC. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry."
+          },
+          {
+            "date": null,
+            "source_id": "s9271",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 91832, which prints 5260494520 (the entry's XML is saved as the cited source). Names on the entry: LLC “STRATIM”. Sanctions-set id 29445 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2025-06-03."
           }
         ],
         "wb_overlap": "none_found",
@@ -35496,7 +36060,8 @@
         "2026-09-07: merged dormant duplicate correction key '5260494520' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "2026-09-14: Founding-document bundle (data/sources/UD_1245200009075_20260914_ooo-stratim.zip, s7427) read in full, OCR'd (scanned TIFF, 17 pages, Протокол №1 общего собрания учредителей, 27.03.2024). Generic 'any lawful activity' purpose clause. Note: this is ООО «Стратим» (ИНН 5260494520), distinct from the already-deprioritized АО «Стратим» (ИНН 7720901379, 'документ формируется' at ФНС per founding_docs_gap.md) -- same brand name, confirmed different legal entity by ИНН, no relationship established. Corroborates existing record, no new fact.",
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
-        "04.10.2026: the EU entry is Annex IV of Regulation 833/2014 (export restrictions), checked in the Official Journal text (s9121); relabelled so it is not read as an asset freeze."
+        "04.10.2026: the EU entry is Annex IV of Regulation 833/2014 (export restrictions), checked in the Official Journal text (s9121); relabelled so it is not read as an asset freeze.",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list)."
       ]
     },
     "ooo-stroystandart": {
@@ -36089,6 +36654,10 @@
           {
             "source_id": "s8675",
             "text": "Name removed from ЦБСТ's post after publication: compare [s8674] (current text, no name, edited 20.04.2026) with the mil_hub forward [s8675] (names «Титан Северо-Запад»). This company is OpenSanctions-matched as sanctioned (see sanctions[]). A third-party channel, KARABAS_RAZOBRAS, posts about «ПЗС ЭГЕОН 800» in Feb–Mar 2025 and is not yet tied to this ИНН. Whether ЦБСТ removed the name deliberately is not established; it edited many posts and the archive holds only 10% of them as forwards (see scripts/tg_forward_diff.py)."
+          },
+          {
+            "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 7838380755, 1077847345179; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: sanction.control, sanction.linked; regime: none stated). Topics «sanction.linked» and «sanction.control» are OpenSanctions' own labels; their definition was not re-read for this note, and on their names they mark a link to a sanctioned party rather than a designation of this entity (the matching official entry, if any, is what shows a designation). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
+            "source_id": "s0800"
           }
         ],
         "memberships": [
@@ -36115,7 +36684,8 @@
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
         "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified) -- an identical value is already recorded with its own ЕГРЮЛ source; kept that entry only.",
-        "[2026-10-01 ЦБСТ resident sweep] cbst_tie set press from the mil_hub forward [s8675]; found by scripts/cbst_resident_sweep.py, which matched «Титан Северо-Запад» despite the spaced hyphen in the registry name."
+        "[2026-10-01 ЦБСТ resident sweep] cbst_tie set press from the mil_hub forward [s8675]; found by scripts/cbst_resident_sweep.py, which matched «Титан Северо-Запад» despite the spaced hyphen in the registry name.",
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
       ]
     },
     "ooo-trimiks": {
@@ -36394,6 +36964,38 @@
               "Ukraine (Presidential sanctions decree/list)"
             ],
             "source_id": "s0795"
+          },
+          {
+            "date": null,
+            "source_id": "s9264",
+            "regime": [
+              "US (OFAC SDN list, programme RUSSIA-EO14024)"
+            ],
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 47713, which prints 1237800084235, 7802942873 (the entry's XML is saved as the cited source). Names on the entry: LIMITED LIABILITY COMPANY TRIMIX; 3MX; OBSHCHESTVO S OGRANICHENNOI OTVETSTVENNOSTIU 3MKH. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry."
+          },
+          {
+            "date": "2025-02-24",
+            "source_id": "s9247",
+            "regime": [
+              "EU (consolidated financial sanctions list, programme UKR)"
+            ],
+            "note": "Read on the EU consolidated financial sanctions list (list generated 22.09.2026, SHA-256 cd59eccb0278d331…), entry EU.12748.38, which prints 1237800084235, 7802942873 (the entry's XML is saved as the cited source). Names on the entry: »TRIMIX« Korlátolt Felelősségű  Társaság; Limited Liability Company “TRIMIX”; ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “ТРИМИКС”. Programme UKR; acts cited on the entry: 2025/389 (OJ L24022025); earliest designation date on the entry 2025-02-24. Act text: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202500389."
+          },
+          {
+            "date": null,
+            "source_id": "s9284",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 89623, which prints 1237800084235, 7802942873 (the entry's XML is saved as the cited source). Names on the entry: Limited Liability Company “TRIMIX”; LLC 3MX. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: none."
+          },
+          {
+            "date": null,
+            "source_id": "s9283",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 89623, which prints 1237800084235, 7802942873 (the entry's XML is saved as the cited source). Names on the entry: Limited Liability Company “TRIMIX”; LLC 3MX. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2025-03-04, 2026-04-01."
           }
         ],
         "trademarks": [
@@ -36593,7 +37195,8 @@
         "tier_basis backfill pass (2026-09-15): synthesized from fields already sourced on this record (sanctions[], products[], cbst_tie, financials[], government_contracts[], state_programs[], trademarks[]/patents[]) — no new research performed.",
         "2026-09-15: informal-cooperation triage (LEAD 3) -- re-read chadayevru msg 2722 in full (the leads file only quoted a snippet) and found it directly names both organizations' representatives as speakers at the same 12.04.2024 conference, a stronger single-document confirmation than the leads file's 'series inference' framing. Recorded as related_entities.",
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
-        "[2026-09-30 cross-reference] related_entities: dealer -> ip-kuznetsov-ruslan-nikolaevich"
+        "[2026-09-30 cross-reference] related_entities: dealer -> ip-kuznetsov-ruslan-nikolaevich",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (Presidential sanctions decree/list)."
       ]
     },
     "ooo-tsentr-bespilotnykh-sistem-tula": {
@@ -37081,6 +37684,22 @@
               "EU (Ukraine-related restrictive measures)"
             ],
             "source_id": "s0820"
+          },
+          {
+            "date": "2025-10-23",
+            "source_id": "s9253",
+            "regime": [
+              "EU (consolidated financial sanctions list, programme UKR)"
+            ],
+            "note": "Read on the EU consolidated financial sanctions list (list generated 22.09.2026, SHA-256 cd59eccb0278d331…), entry EU.13801.69, which prints 1227700378553, 9731094770 (the entry's XML is saved as the cited source). Names on the entry: Sociedade de responsabilidade limitada “Urban Air Mobility Operations Centre”; »UAMOC« Kft.; »Urban Air Mobility Operations Center« korlátolt felelősségű társaság. Programme UKR; acts cited on the entry: 2025/2035 (OJ L202502035); earliest designation date on the entry 2025-10-23. Act text: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202502035."
+          },
+          {
+            "date": null,
+            "source_id": "s9293",
+            "regime": [
+              "Switzerland (SECO sanctions list)"
+            ],
+            "note": "Read on the Swiss SECO sanctions list (list dated 28.09.2026, SHA-256 5f1315863aedf05c…), entry 99053, which prints 1227700378553, 9731094770 (the entry's XML is saved as the cited source). Names on the entry: Limited Liability Company “Urban Air Mobility Operations Center”; LLC “UAMOC”. Sanctions-set id 27286 (as the list gives it; the act it refers to is not read here). Effective dates on the entry: 2025-12-13."
           }
         ],
         "trademarks": [
@@ -37184,7 +37803,8 @@
         "2026-09-07: bo.nalog.gov.ru БФО sweep (bfo_pull.py --all-missing) added 4 filing-year record(s).",
         "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py).",
         "GUR (war-sanctions.gur.gov.ua/en/uav/companies/14306) ID-confirmed via ИНН 9731094770 — exact match, screen_gur.py sweep, 2026-08-24. GUR describes this as a Moscow Innovation Cluster / Skolkovo Foundation project — a 400-hectare UAS test site in Skolkovo responsible for participant selection, pilot/aircraft admission and safety monitoring, which \"produces FPV drones used in the war against Ukraine\" (no specific model named).",
-        "2026-09-07: merged dormant duplicate correction key '9731094770' into this slug-keyed entry (registry-hardening pass, no field conflict)."
+        "2026-09-07: merged dormant duplicate correction key '9731094770' into this slug-keyed entry (registry-hardening pass, no field conflict).",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Canada (Special Economic Measures Act), Ukraine (Presidential sanctions decree/list)."
       ]
     },
     "ooo-tsyus": {
@@ -37899,6 +38519,14 @@
               "Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)"
             ],
             "source_id": "s0760"
+          },
+          {
+            "date": null,
+            "source_id": "s9256",
+            "regime": [
+              "US (OFAC SDN list, programme RUSSIA-EO14024)"
+            ],
+            "note": "Read on the US OFAC SDN list (list dated 02.10.2026, SHA-256 0367408834e4af4d…), entry 50791, which prints 1237100015767, 7100046925 (the entry's XML is saved as the cited source). Names on the entry: LIMITED LIABILITY COMPANY VOZDUSHNYI TRAKTAT; OOO VOZDUSHNY TRAKT. Programme: RUSSIA-EO14024. The SDN file carries no listing date on the entry."
           }
         ],
         "wb_overlap": "none_found",
@@ -37960,7 +38588,8 @@
         "GUR (war-sanctions.gur.gov.ua/en/uav/companies/14072) ID-confirmed via ИНН 7100046925 — exact match, screen_gur.py sweep, 2026-08-24. GUR profile text is near-identical to the sister Ovod LLC (7100027464) profile — same product, same address city (Tula, Ryazanskaya street 3D, different office number), corroborating the existing registry note that this entity's «Овод»/«Провод» participation runs alongside РЛВТ (ovod) rather than independently.",
         "2026-09-07: merged dormant duplicate correction key '7100046925' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "2026-09-14: Founding-document bundle (data/sources/UD_1237100015767_20260914_ooo-vozdushnyy-traktat.zip, s7425) read in full -- original 2023 founding decision plus a 2024 устав restatement, both sole-founder (Черезов А.П., matches existing record). Generic 'any lawful activity' purpose clause, no UAV-specific self-declaration despite the entity's aviation-suggestive name. Corroborates existing record, no new fact.",
-        "[2026-10-02 Овод residency decision] cbst_tie set to not_established: no ЦБСТ document names this company; see the new open question."
+        "[2026-10-02 Овод residency decision] cbst_tie set to not_established: no ЦБСТ document names this company; see the new open question.",
+        "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing)."
       ]
     },
     "ooo-zavolzhskoe": {
