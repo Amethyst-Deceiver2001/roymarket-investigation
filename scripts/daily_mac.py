@@ -11,9 +11,14 @@ Chains tools that already exist, in the order CLAUDE.md gives them:
                           steps the queue prints (inventory, manifest, parsers,
                           extract_registry, build_relationship_graph,
                           check_registry)
-  3. first_reading.py     export the day's new pulls as text (to the private
-                          `pull-inbox` branch unless --no-push, and locally),
-                          then `read` them into a worksheet beside the registry
+  3. first_reading.py     export the day's new pulls as text locally, then
+                          `read` them into a worksheet beside the registry
+                          (the cloud first-reading routine and the
+                          `pull-inbox` push it depended on were retired
+                          05.10.2026, issue #30: main already re-reads every
+                          document in full before applying a correction, so
+                          a second cloud read of the same pulls was pure
+                          duplication)
   4. archive_sources.py   only with --archive N: one Wayback batch of N cited URLs
   5. status_board.py      board after, and the flags new or cleared today; the board is
                           written to data/watch/status/board.json for the cloud status step
@@ -152,9 +157,8 @@ def main():
     has_pulls = any("_pull.py" in l or "/screen_" in l for l in queue)  # pulls or capped re-screens
     steps = queue if has_pulls and not a.skip_pulls else []
     if not any("first_reading.py export" in l for l in steps):  # the queue ends with one when it pulled
-        steps.append(f"python3 scripts/first_reading.py export --since {day} --local-dir data/sources/_inbox"
-                     + ("" if a.no_push else " --push"))
-    elif a.no_push:
+        steps.append(f"python3 scripts/first_reading.py export --since {day} --local-dir data/sources/_inbox")
+    else:
         steps = [l.replace(" --push", "") if "first_reading.py export" in l else l for l in steps]
     if a.archive:
         steps.append(f"python3 scripts/archive_sources.py run --limit {a.archive}")

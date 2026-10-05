@@ -682,10 +682,13 @@ def pull_queue(board, cap=PULL_CAP, used=None):
               "python3 scripts/build_relationship_graph.py",
               "python3 scripts/check_registry.py"]
     if egrul or bfo:
-        # Text of each new pull to the pull-inbox side branch, for the cloud's
-        # first reading the same morning (user, 02.10.2026: "push"). PDFs stay local.
-        lines += ["# Send the text of today's pulls for first reading (pull-inbox branch, never merged).",
-                  "python3 scripts/first_reading.py export --push --local-dir data/sources/_inbox"]
+        # Text of each new pull, local only -- the cloud first-reading routine
+        # and the pull-inbox branch it read were retired 05.10.2026 (issue
+        # #30): main re-reads every document in full before applying a
+        # correction anyway, so a second cloud read of the same text was
+        # pure duplication. PDFs stay local too.
+        lines += ["# Export today's pulls for first reading, local only.",
+                  "python3 scripts/first_reading.py export --local-dir data/sources/_inbox"]
     return "\n".join(l for l in lines if l)
 
 
