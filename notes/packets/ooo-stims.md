@@ -1,6 +1,6 @@
 # Evidence packet: ООО «СТИМС»
 
-**DRAFT, generated 04.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
+**DRAFT, generated 05.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
 
 ## 1. Identification
 
@@ -13,7 +13,19 @@
 
 ## 2. Sanctions status
 
-Not in the sanctions-gap table.
+Weekly identifier check of the official lists, run of 02.10.2026. "No ID match" means no entry on that list carries this ИНН or ОГРН; a list can still name the company without them, so search each list by name before calling it unlisted.
+
+| Regime | Status |
+|---|---|
+| EU | listed: entry EU.14160.3 (2026/509 (OJ L202600509); UKR) |
+| US (OFAC) | no ID match |
+| UK | no ID match |
+| Switzerland (SECO) | listed: entry 104739 (27286) |
+| Ukraine | registry: listed [s9106] |
+| Canada | nothing in the registry; not checked by the weekly run |
+| Australia | nothing in the registry; not checked by the weekly run |
+| Japan | nothing in the registry; not checked by the weekly run |
+| New Zealand | nothing in the registry; not checked by the weekly run |
 - Registry entry: EU (Council Regulation (EU) No 269/2014, Annex I, entry 704; reference EU.14160.3) [E2]
 - Registry entry: Switzerland (SECO, Ukraine-related measures) [E3]
 
@@ -40,6 +52,8 @@ Identifying detail on file for the people above (field-level sources are not rec
 | 2023 | ₽1.8m | ₽0.0m | [E6] |
 | 2024 | ₽3.2m | ₽0.0m | [E7] |
 | 2025 | ₽349.6m | ₽218.0m | [E8] |
+
+- FY2024: The 2024 filing's own year gives net profit as ₽2 thousand; the 2025 filing's prior-year comparative column gives ₽3 thousand for the same year. Recorded from the filing's own-year figure per the project convention; the ₽1 thousand discrepancy is rounding-scale, not investigated further.
 
 
 ## 5. Tie to ЦБСТ

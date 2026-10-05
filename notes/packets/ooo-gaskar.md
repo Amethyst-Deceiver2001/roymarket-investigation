@@ -1,6 +1,6 @@
 # Evidence packet: ООО «Гаскар»
 
-**DRAFT, generated 04.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
+**DRAFT, generated 05.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
 
 ## 1. Identification
 
@@ -15,19 +15,7 @@
 
 ## 2. Sanctions status
 
-Weekly identifier check of the official lists, run of 02.10.2026. "No ID match" means no entry on that list carries this ИНН or ОГРН; a list can still name the company without them, so search each list by name before calling it unlisted.
-
-| Regime | Status |
-|---|---|
-| EU | no ID match |
-| US (OFAC) | no ID match |
-| UK | no ID match |
-| Switzerland (SECO) | no ID match |
-| Ukraine | nothing in the registry; not checked by the weekly run |
-| Canada | registry: listed [s0809] |
-| Australia | nothing in the registry; not checked by the weekly run |
-| Japan | nothing in the registry; not checked by the weekly run |
-| New Zealand | nothing in the registry; not checked by the weekly run |
+Not in the sanctions-gap table.
 - Registry entry: Canada (Special Economic Measures Act, Schedule 1 Part 2, item 833) [E3]
 
 ## 3. Owners and directors
@@ -48,6 +36,9 @@ Weekly identifier check of the official lists, run of 02.10.2026. "No ID match" 
 | 2024 | ₽4,376.4m | ₽659.2m | [E6] |
 | 2025 | ₽9,824.7m | −₽1,069.4m | [E7] |
 
+- FY2024: БФО filing (thousands RUB in original: 4.37642e+06 / (659246)), converted to whole rubles here.
+- FY2025: БФО filing (thousands RUB in original: 9.82467e+06 / (-1.06945e+06)), converted to whole rubles here.
+
 
 ## 5. Tie to ЦБСТ
 
@@ -64,6 +55,7 @@ No ЦБСТ edge in the graph.
 - Беспилотная авиационная система «Сибирь-1» [E9]
 - Беспилотная авиационная система «Сибирячок с совмещенной камерой в видимом и инфракрасном диапазонах» [E9]
 - State programme or association: Каталог продукции ГИСП — отрасль БАС (Manufacturer listed with an active БАС-category (беспилотные авиационные системы) product entry in gisp.gov.ru's official product catalog (industry filter 68/product-group 144), the federal government's industrial-product registry platform. ИНН-matched to this entity exactly.) [E10]
+- State programme or association: Экскурсия на производство ООО «Гаскар» по городскому проекту профориентации «Мастерство начинается здесь» (The @gaskargroup channel's own post (546, read in full) names the legal entity directly -- not the ambiguous 'Гаскар Групп' brand -- as the production site a school group visited: 'Ученики 9 "Г" и 9 "Д" классов образовательной площадки "Энергия"... посетили экскурсию... в ООО "Гаскар"'. This is the first primary document that pins a real, physical production site specifically to this entity (ИНН 9710112989) rather than to the group brand -- relevant to the open question below about which Гаскар entity actually holds the product line.) [E11]
 
 ## 7. Draft statement of reasons
 
@@ -89,6 +81,7 @@ Every document cited above. Telegram posts and web pages are archived and hashed
 | E8 | Ozon marketplace page, archived 25.08.2026 | none public; copy on file | `e96c650c7293cbba` | s1385 |
 | E9 | State industry information system (ГИСП) data, 03.09.2026 | none public; copy on file | `3d14461a13900a39` | s5391 |
 | E10 | State industry information system (ГИСП) data, 03.09.2026 | none public; copy on file | `4335307d4861296b` | s5344 |
+| E11 | Picture posted on Telegram, @gaskargroup, message 536, 26.03.2025 | https://t.me/gaskargroup/536 | `c6f5b17857a7b76c` | s9181 |
 
 ## Appendix (internal, drop before sending): open questions in the record
 
@@ -98,3 +91,5 @@ Research notes as the registry holds them. Some may weaken a line above; read th
 - products[] carried a single bare entry "СИБНК" -- suspected to be a mis-recorded reference to the 100%-owning founder, ООО «Сибирская навигационная компания» (ИНН 4205376019, ОГРН 1184205024849), not an actual product/brand. A separate archived source (ALEPH_ooo-sibnk_..., MANIFEST row) treats "ООО «СИБНК»" as its own distinct entity name, adding to the confusion. Web search for "СИБНК" as a Wildberries product (2026-08-25) found nothing. RESOLVED 2026-08-25 (partial): wb_overlap=confirmed's actual basis is corroborated on Ozon too -- the entity trades FPV components (motors, propellers) under the brand «ГАСКАР», not «СИБНК». RESOLVED 2026-09-28: confirmed "СИБНК" is not a product -- it is the entity's own founder record (founders[0].inn 4205376019 matches exactly). Cleared from products[] via corrections; same mis-scaffolded-ownership-as-product pattern already found and cleared for ooo-atlant-aero's "Технодинамика".
 - rk.2035.university BAS-company directory (pull of 2026-10-01, s8721) carries this ИНН with site https://gaskar.group/ (self-declared). That same site is already recorded for the sister entity ooo-gaskar-integratsiya (ИНН 7733894200; capture s7569, home page titled «Группа компаний Гаскар. Беспилотные и роботизированные системы, инфраструктура управления и связи», no ИНН printed). It is a group site; the registry holds three Гаскар entities, so it is not attributed to this one pending a printed ИНН or requisites page (/contacts returned 403 on 2026-10-01). (s8721)
 - Resolved 04.10.2026 by identifiers: the EU and Swiss «Гаскар Групп» is ООО «СТИМС» (ИНН 7734436058), not this company (ooo-stims; s9106, s9112, s9114). The earlier question of which Гаскар entity the post meant is closed for the listing; the product line still has no registered holder (s1169). (s9114)
+- @gaskargroup post 343 (03.04.2024, read in full): «Гаскар Групп» и «Колледж автоматизации и информационных технологий № 20» (КАИТ №20) signed a partnership agreement on БАС workforce training, under the federal project «Кадры для беспилотных авиационных систем». Names the brand, not a legal entity -- not attributed to this record (ooo-gaskar) specifically, same caution as the withdrawn cbst_tie above and the rk.2035.university product-line question. A group-level programs.json record may be the right home for this once that pattern is needed for more than one fact. (s9176)
+- @gaskargroup post 446 (21.10.2024, read in full): business programme of the Winline drone-racing festival named Василий Лобанов as 'директор по развитию образовательных программ «Гаскар»' alongside Олег Винокуров (проректор РТУ МИРЭА), Андрей Брабец (vice-president, Федерация гонок дронов России) and Алексей Галкин (vice-president, Федерация гонок дронов Москвы). Again names the «Гаскар» brand in a role title, not a legal entity by ИНН -- not attributed to this record specifically, same caution as above. (s9178)

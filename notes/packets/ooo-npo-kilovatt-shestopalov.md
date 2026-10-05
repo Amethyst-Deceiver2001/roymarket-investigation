@@ -1,6 +1,6 @@
 # Evidence packet: ООО «Научно-производственное объединение «Киловатт»»
 
-**DRAFT, generated 04.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
+**DRAFT, generated 05.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
 
 ## 1. Identification
 
@@ -50,6 +50,9 @@ Identifying detail on file for the people above (field-level sources are not rec
 |---|---|---|---|
 | 2024 | ₽1,208.4m | ₽193.2m | [E5] |
 | 2025 | ₽1,158.6m | ₽71.9m | [E6] |
+
+- FY2024: БФО filing (thousands RUB in original: 1.20836e+06 / (193245)), converted to whole rubles here.
+- FY2025: БФО filing (thousands RUB in original: 1.15863e+06 / (719391)), converted to whole rubles here.
 
 
 ## 5. Tie to ЦБСТ

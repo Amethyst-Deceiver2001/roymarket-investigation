@@ -27,6 +27,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 import sys
 from datetime import date
 from pathlib import Path
@@ -245,6 +246,10 @@ def build(slug: str, external: bool, gap_path: Path, gap_as_of: str) -> str:
         L += ["| Year | Revenue | Net profit | Source |", "|---|---|---|---|"]
         for f in fin:
             L.append(f"| {f.get('year')} | {rub_m(f.get('revenue'))} | {rub_m(f.get('profit'))} | {X.ref(f.get('source_id'))} |")
+        L.append("")
+        for f in fin:
+            if f.get("note"):
+                L.append(f"- FY{f.get('year')}: {re.sub(r' ?\(s\d{4}\)', '', f['note'])}")
         L.append("")
     for w in e.get("workforce_history") or []:
         L.append(f"- Staff {w.get('count')} as of {iso_or_ru(w.get('as_of'))} {X.ref(w.get('source_id'))}")

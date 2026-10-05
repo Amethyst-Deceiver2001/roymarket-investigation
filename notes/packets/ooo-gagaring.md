@@ -1,6 +1,6 @@
 # Evidence packet: ООО «Гагаринг»
 
-**DRAFT, generated 04.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
+**DRAFT, generated 05.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
 
 ## 1. Identification
 
@@ -48,8 +48,8 @@ Weekly identifier check of the official lists, run of 02.10.2026. "No ID match" 
 
 Identifying detail on file for the people above (field-level sources are not recorded for date and place of birth; confirm each against a document before use):
 
-- Александров Алексей Витальевич: ИНН 027313454520
-- Барашков Александр Сергеевич: ДР 03.11.1979; born Хабаровск / Khabarovsk; ИНН 252201766438
+- Александров Алексей Витальевич: ИНН 231015713057
+- Барашков Александр Сергеевич: ДР 03.11.1979; ИНН 252201766438
 
 ## 4. Filed accounts and staff
 
@@ -58,6 +58,8 @@ Identifying detail on file for the people above (field-level sources are not rec
 | 2023 | ₽1.2m | −₽0.5m | [E6] |
 | 2024 | ₽84.5m | ₽20.9m | [E7] |
 | 2025 | ₽2,159.0m | ₽664.2m | [E8] |
+
+- FY2024: As filed in the FY2024 accounts. The FY2025 filing restates 2024 net profit as ₽15 361 тыс. (₽15,361,000); revenue ₽84 503 тыс. is unchanged. Read from the signed filing, which reports in тыс. руб.
 
 - Staff 4 as of 31.12.2023 [E1]
 - Staff 34 as of 31.12.2024 [E1]
@@ -113,34 +115,33 @@ Other links in the record:
 - Изделие «РОСЯНКА 12х76» [E23]
 - Набор «Дронобой» [E23]
 - Оптоволоконный вынос Совы «ОВС-1» [E24]
-- invention № RU2792246C1 «Способ и система плазменной сварки плавящимся электродом», holder Барашков Александр Сергеевич (RU) [E25]
 
 In the company's own words or the press (verbatim, Russian original first):
 
 > «Ваш опыт и инженерная школа Volkswagen бесценны, и мы готовы предложить вам конкретное применение»
 >
-> Working translation: Your Volkswagen experience and engineering school are invaluable, and we're ready to offer you a concrete application for them. [E26]
+> Working translation: Your Volkswagen experience and engineering school are invaluable, and we're ready to offer you a concrete application for them. [E25]
 
 > «Мой проект Антифорбс рассказывает о том, как я вижу русское предпринимательство. Для меня это в первую очередь профессия, которая приносит пользу стране и обществу.»
 >
-> Working translation: My Antiforbes project tells the story of how I see Russian entrepreneurship. For me it is first and foremost a profession that benefits the country and society. [E27]
+> Working translation: My Antiforbes project tells the story of how I see Russian entrepreneurship. For me it is first and foremost a profession that benefits the country and society. [E26]
 
 > «Прототип «Кузнечика» был представлен ещё в 2023 году, но масштабные поставки в войска начались только после вторжения ВСУ в Курскую область. По информации, которую мы получаем от наших военных, FPV-дроны, оснащённые «Кузнечиками», поразили сотни единиц военной техники, включая тяжело бронированные образцы западного производства.»
 >
-> Working translation: The Kuznechik prototype was unveiled back in 2023, but large-scale deliveries to the troops began only after the AFU incursion into Kursk oblast. According to information we get from our military, FPV drones equipped with Kuznechiks have struck hundreds of units of military equipment, including heavily armored Western-made examples. [E28]
+> Working translation: The Kuznechik prototype was unveiled back in 2023, but large-scale deliveries to the troops began only after the AFU incursion into Kursk oblast. According to information we get from our military, FPV drones equipped with Kuznechiks have struck hundreds of units of military equipment, including heavily armored Western-made examples. [E27]
 
-> «Система связи и управление «Кузнечик» для FPV-дронов активно используется российскими военными в зоне специальной военной операции на Украине... Барашков отметил, что не может раскрывать количество поставленных систем и их распределение по подразделениям, так как эта информация является закрытой.»
+> «Система связи и управления «Кузнечик» для FPV-дронов активно используется российскими военными в зоне специальной военной операции на Украине, сообщает ТАСС. [...] Он также сообщил, что не может раскрывать количество поставленных систем и их распределение по подразделениям, так как эта информация является закрытой.»
 >
-> Working translation: The Kuznechik communications/control system for FPV drones is actively used by Russian forces in the SVO zone... Barashkov noted he cannot disclose the quantity of systems delivered or their distribution among units, as this information is classified. [E29]
+> Working translation: The Kuznechik communications and control system for FPV drones is actively used by Russian forces in the zone of the special military operation in Ukraine, TASS reports. [...] He also said he cannot disclose the number of systems delivered or their distribution among units, because this information is classified. [E28]
 
 > «Выражаю огромную благодарность Товарищу Александру Сергеевичу и всему коллективу лаборатории «Гагаринг» за предоставленные «Кузнечики» в количестве 500 шт. Благодарим за постоянную поддержку!»
 >
-> Working translation: I express my deep gratitude to Comrade Aleksandr Sergeyevich and the whole Gagaring lab team for the 500 Kuznechik units provided. Thank you for your constant support! [E30]
+> Working translation: I express my deep gratitude to Comrade Aleksandr Sergeyevich and the whole Gagaring lab team for the 500 Kuznechik units provided. Thank you for your constant support! [E29]
 
-- State programme or association: Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭБ) (член ассоциации (per Гагаринг's own FY2025 audit report, related-party/affiliated-organizations disclosure)) [E1]
+- State programme or association: Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭБ) (Listed among related parties in Гагаринг's FY2025 audit report (related-party disclosure); the report does not say «член» or «участник». That Гагаринг is a founder/participant of the association is shown by the association's own ЕГРЮЛ extract (the «Сведения об участниках / учредителях» section).) [E1]
 - State programme or association: Субсидия на возмещение затрат, связанных с приобретением оборудования (Получатель субсидии в размере 8 594 804,00 руб. на возмещение затрат, связанных с приобретением «Установки послойного селективного лазерного сплавления металлических порошков 3DLAM Mid.», дата ввода в эксплуатацию 18.07.2025г. (metal-powder selective laser melting / metal 3D-printing machine)) [E1]
-- State programme or association: Атлас промышленности ГИСП (Государственная информационная система промышленности) (Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase (orbis_id 20052703), classified under industry 'Радиоэлектронная промышленность' (radio-electronics industry) with primary ОКВЭД 26.11 — independently corroborates the entity's ИНН/ОГРН/address (matches EGRUL exactly) and its declared radio-electronics/UAV-component industry classification via a second, unrelated federal data source. Geolocated point (39.128152, 45.032572) falls within the registered Пашковский жилой массив address area of Краснодар. Record also confirms no official company website (site: 'Нет').) [E31]
-- State programme or association: Хакатон «Воронка инновационных стартапов» — партнёр (Фонд развития инноваций Краснодарского края) [E32]
+- State programme or association: Атлас промышленности ГИСП (Государственная информационная система промышленности) (Company listed in the Ministry of Industry and Trade's industrial-facility geodatabase (record id 20052703), industry 'Радиоэлектронная промышленность', primary ОКВЭД 26.11. The record prints the same ИНН and ОГРН as the ЕГРЮЛ; its address line is «350912, КРАСНОДАРСКИЙ КРАЙ, КРАСНОДАР Г., УЛ. ИМ. ФАДЕЕВА (ПАШКОВСКИЙ ЖИЛОЙ МАССИВ ТЕР.), Д. 429/3, ПОМЕЩ. 11», without the «комната 4» that the extract and the audit report carry. It gives a point (39.128152, 45.032572); the record does not say what the point lies within. Its site field reads «Нет», which does not confirm the website https://gagaring.ru/ given elsewhere.) [E30]
+- State programme or association: Хакатон «Воронка инновационных стартапов» — партнёр (Фонд развития инноваций Краснодарского края) [E31]
 
 ## 7. Draft statement of reasons
 
@@ -180,14 +181,13 @@ Every document cited above. Telegram posts and web pages are archived and hashed
 | E22 | Telegram, @my_el_lab, posts read together | https://t.me/my_el_lab | `e8a38eb88d61fa94` | s5444 |
 | E23 | Telegram, @my_el_lab, posts read together | https://t.me/my_el_lab | `8bc0df7a03809895` | s5445 |
 | E24 | Telegram, @my_el_lab, post 3003, 06.02.2026 | https://t.me/my_el_lab/3003 | `55f52878ee3cff9f` | s5442 |
-| E25 | Open government dataset, 24.08.2026 | none public; copy on file | `0ce3979342ee7dcf` | s1170 |
-| E26 | Press article, 09.07.2026 | none public; copy on file | `36714211e382f182` | s5428 |
-| E27 | Telegram, @my_el_lab, post 4297, 10.08.2026 | https://t.me/my_el_lab/4297 | `70dc71feaeab0097` | s5433 |
-| E28 | Press article, 02.11.2024 | none public; copy on file | `5b4efd0b2ec65048` | s5435 |
-| E29 | Press article, 08.04.2025 | none public; copy on file | `00eaf4f444ecc45e` | s5436 |
-| E30 | Telegram, @my_el_lab, posts read together | https://t.me/my_el_lab | `67afbabfd0fe5457` | s5447 |
-| E31 | State industry information system (ГИСП) data, 03.09.2026 | none public; copy on file | `b9b690fc25b9f317` | s5345 |
-| E32 | «В Краснодаре разработали решения для навигации в условиях потери сигнала. Инвестиционный портал Краснодарского края», press article, 30.06.2026 | none public; copy on file | `fd0102c71aa0c9d4` | s5425 |
+| E25 | Press article, 09.07.2026 | none public; copy on file | `36714211e382f182` | s5428 |
+| E26 | Telegram, @my_el_lab, post 4297, 10.08.2026 | https://t.me/my_el_lab/4297 | `70dc71feaeab0097` | s5433 |
+| E27 | Press article, 02.11.2024 | none public; copy on file | `5b4efd0b2ec65048` | s5435 |
+| E28 | Press article, 08.04.2025 | none public; copy on file | `00eaf4f444ecc45e` | s5436 |
+| E29 | Telegram, @my_el_lab, posts read together | https://t.me/my_el_lab | `67afbabfd0fe5457` | s5447 |
+| E30 | State industry information system (ГИСП) data, 03.09.2026 | none public; copy on file | `b9b690fc25b9f317` | s5345 |
+| E31 | «В Краснодаре разработали решения для навигации в условиях потери сигнала. Инвестиционный портал Краснодарского края», press article, 30.06.2026 | none public; copy on file | `fd0102c71aa0c9d4` | s5425 |
 
 ## Appendix (internal, drop before sending): open questions in the record
 
@@ -217,3 +217,4 @@ Research notes as the registry holds them. Some may weaken a line above; read th
 - A new development, first appearing 2026-08-28 (16 days after defunding the earlier «Последний рубеж» training program, already on file): Гагаринг launched an active recruitment campaign for its own armed detachment, «отряд Гагаринг», via @gagaring_recruit_bot, for МОГ (Мобильные огневые группы/Mobile Fire Groups) work. Explicitly structured as a sub-unit of БАРС (Боевой армейский резерв страны — a real Russian Armed Forces reservist framework), legally scoped to territorial counter-UAV defense of Краснодарский край specifically ("Служба на территории Краснодарского края" per the contract wording), not frontline deployment — recruiting via Cossack-structure channels as well. Барашков/Гагаринг explicitly denies PMC/Wagner-comparison framing ("Мы не создаем ЧВК") while acknowledging others draw that comparison, and claims state approval ("нам это одобрили"). Over 1,000 applications received within the first week. Recruits women too, with a stated need for medics. This is a materially new development — Гагаринг standing up its own formal, legally-structured reservist detachment, not merely selling equipment to existing units — worth its own dedicated follow-up (confirm the БАРС sub-unit's formal registration/legal basis, track its actual deployment). (s5447)
 - The auditor's report on FY2025 prints other holdings (Авирон 36.8%, Эйлер 50%, Лаборатория Янгеля 50% from s7362) that have not been checked against those companies' own ЕГРЮЛ extracts; the Интел Дрон share (50% in the report) is 40% in the register, so the others may differ as well. (s5333)
 - Ownership conflict, status 04.10.2026: the register (re-read 04.10.2026) gives 49.5/50.5 since the entry of 15.04.2026; the FY2025 audit report gives 50/50 as of 31.12.2025. These may describe different dates: a 0.5% transfer entered on 15.04.2026 would produce exactly this register picture, and the audit report (signed 04.06.2026) would then be stating the year-end split without noting the later change. This reading is NOT confirmed: no document on file records a transfer or the pre-April split. A ЕГРЮЛ extract shows current records only; the earlier split would need a register entry history (ГРН 2262300538091 and its predecessor record, via a request to the inspectorate) or the 31.03.2026 version of the audit report. (s9126)
+- Patent RU2792246C1 (plasma welding with a consumable electrode, published 21.03.2023, patentee «Барашков Александр Сергеевич (RU)») was recorded under this company from a name-only match in the Rospatent bulk search (s1170): the entry prints no ИНН, address or date of birth, and a welding method is not a company product. Removed from patents[] on 05.10.2026 after the packet check; not shown to be this person's or this company's. (s1170)

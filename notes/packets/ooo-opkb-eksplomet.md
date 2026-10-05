@@ -1,6 +1,6 @@
 # Evidence packet: ООО «ОПКБ Экспломет»
 
-**DRAFT, generated 04.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
+**DRAFT, generated 05.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
 
 ## 1. Identification
 
@@ -51,6 +51,8 @@ Identifying detail on file for the people above (field-level sources are not rec
 | 2023 | ₽716.8m | ₽54.4m | [E6] |
 | 2024 | ₽210.5m | −₽114.6m | [E7] |
 | 2025 | ₽782.4m | ₽63.9m | [E8] |
+
+- FY2023: As filed in the FY2023 accounts. The FY2024 filing restates 2023 revenue as ₽716 762 тыс. and net profit as ₽55 705 тыс. Read from the signed filings, which report in тыс. руб.
 
 
 ## 5. Tie to ЦБСТ

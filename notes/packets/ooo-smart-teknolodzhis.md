@@ -1,6 +1,6 @@
 # Evidence packet: ООО «Смарт Текнолоджис»
 
-**DRAFT, generated 04.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
+**DRAFT, generated 05.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
 
 ## 1. Identification
 
@@ -50,6 +50,7 @@ Identifying detail on file for the people above (field-level sources are not rec
 | 2023 | ₽2,813.0m | ₽475.3m | [E5] |
 | 2024 | ₽2,919.5m | ₽33.8m | [E6] |
 | 2025 | ₽3,929.6m | ₽222.0m | [E7] |
+
 
 
 ## 5. Tie to ЦБСТ

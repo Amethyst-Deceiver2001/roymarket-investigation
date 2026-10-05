@@ -225,10 +225,11 @@
     },
     "aleksandrov-aleksey-vitalevich": {
       "set": {
-        "inn_personal": "027313454520"
+        "inn_personal": "231015713057"
       },
       "why": [
-        "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2578)."
+        "2026-08-26 aleph_followup.py bulk fetch pass (tier=None full-roster triage tail): exact full-ФИО match, Aleph EGRUL/OGRN record gives personal ИНН directly (source s2578).",
+        "05.10.2026: the earlier value 027313454520 (an Aleph/EGRIP exact-name match, s2578) belongs to ИП Александров А.В. of Уфа, a same-name person; the ЕГРЮЛ extract of ООО «Гагаринг» (s9126, items 29-30) prints «АЛЕКСАНДРОВ АЛЕКСЕЙ ВИТАЛЬЕВИЧ, ИНН 231015713057», citizen of Belarus. Replaced with the extract's value."
       ]
     },
     "aleshin-boris-sergeevich": {
@@ -665,7 +666,7 @@
       "set": {
         "photo": "images/gagaring_barashkov_portrait.jpg",
         "address": "г. Краснодар, ул. Черкасская, д. 97, кв. 25 (current, per multiple 2023–2024 records — Росреестр, ОСАГО policy, ФССП debtor record; earlier registered address through ~2019 was Приморский край, Октябрьский р-н, с. Покровка, ул. Энгельса, 13, кв. 1, matching the registry's existing note on his ОГРНИП's original 2013 Приморье registration)",
-        "birthplace": "Хабаровск / Khabarovsk",
+        "birthplace": null,
         "dob": "1979-11-03",
         "inn_personal": "252201766438",
         "notes": "Photo: portrait cropped from a photo at a «Gagaring» training-centre field course, t.me/my_el_lab/4210, 03.08.2026 [s5387]. ЕГРИП (s0050, pulled 19.08.2026): also an active individual entrepreneur (ИП, ОГРНИП 313251103800105, registered 07.02.2013 in Краснодар, no termination record on file). Основной ОКВЭД 70.10.1 «Деятельность по управлению финансово-промышленными группами» (financial-industrial group management); secondary codes cover internet retail (47.91/47.99) and land passenger transport (49.3) — commercial activity unrelated to the training-center/УАV work that is his primary role in this network.",
@@ -774,7 +775,8 @@
         "2026-08-24: user-supplied HimeraSearch OSINT-leak-aggregator dossier (s1171, a Химера-style compilation of breached Russian consumer/courier/banking/Rosreestr/tax records, NOT a government registry) matches this person on an EXACT identifier — ИНН 252201766438, the same personal ИНН already on this record — across every one of its ~40 constituent leaked-dataset entries, all under the same DOB (03.11.1979). Confirms dob and adds birthplace (Хабаровск, consistent across three independent Росреестр pulls dated 2022–2024) and current address (Краснодар, ул. Черкасская 97-25, consistent across a 2024 ФССП debtor record, a 2024 ОСАГО policy and multiple 2024 Росреестр vehicle-registration entries). Employment history in the dossier — director/владелец of ИП Барашков Александр Сергеевич and multiple SDEK Krasnodar courier-franchise entities, 2018–2023, before the shift to «Гагаринг» — corroborates the registry's own existing note that this is a \"гаражники\"-era startup founder, and independently confirms the Приморье→Краснодар address move already inferred from the ОГРНИП/tax-jurisdiction record. One dossier entry (LEADER-ID.RU ПОЛЬЗОВАТЕЛИ 2023, no user_id given, photo file 145752.jpg, address Краснодар, occupation «Предприниматель») is a plausible third leader-id.ru account for this person, distinct from the two non-matching accounts already recorded in leader_id_matches (a Nerekhta schoolboy and a blank Moscow account) — not promoted here since the dossier gives no leader-id user_id to cross-check, left as an open lead only. NOT promoting the dossier's passport numbers, SNILS, phone numbers or vehicle/insurance detail into the registry — out of scope for what a company-profile record needs; ИНН/dob/birthplace/address already give sanctions screening a workable identifier set. Also noted but not acted on: a debt record (ФССП, Прикубанский округ Краснодара, ₽132,554, 2023) — ordinary consumer debt, not evidence of anything relevant to this investigation.",
         "2026-08-24: resolved this person's `_candidate` role at ООО «Гагаринг» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-gagaring, source s0455) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
         "2026-09-07: verification backlog closure — identity already confirmed by ООО «Гагаринг»'s (ooo-gagaring) own director_history entry (s0455), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
-        "2026-09-14: screen_upr_uchr.py (manual-captcha run) other_entities scan found this director link via egrul.nalog.ru open API; the entity's own director_history already carries s6777 naming this person, but roles[] had no reciprocal entry — added it, same source already on file."
+        "2026-09-14: screen_upr_uchr.py (manual-captcha run) other_entities scan found this director link via egrul.nalog.ru open API; the entity's own director_history already carries s6777 naming this person, but roles[] had no reciprocal entry — added it, same source already on file.",
+        "05.10.2026: birthplace «Хабаровск / Khabarovsk» removed: no document on file states it (the leak-database report s1171 gives only the date of birth 3.11.1979 and ИНН 252201766438; the ЕГРИП extract s0050 gives neither). The date of birth rests on s1171 alone, a compiled report and so reported, not documented; it matches the OpenSanctions query only because we sent it."
       ]
     },
     "barkhatov-aleksey-vladimirovich": {

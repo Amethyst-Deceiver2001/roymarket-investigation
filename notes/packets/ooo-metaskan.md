@@ -1,6 +1,6 @@
 # Evidence packet: ООО «Метаскан»
 
-**DRAFT, generated 04.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
+**DRAFT, generated 05.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
 
 ## 1. Identification
 
@@ -52,6 +52,12 @@ Identifying detail on file for the people above (field-level sources are not rec
 | 2023 | ₽15.4m | ₽1.2m | [E5] |
 | 2024 | ₽207.4m | ₽109.8m | [E6] |
 | 2025 | ₽764.7m | ₽16.3m | [E7] |
+
+- FY2021: БФО filing (thousands RUB in original: 11593 / (1374)), converted to whole rubles here.
+- FY2022: БФО filing (thousands RUB in original: 23206 / (2569)), converted to whole rubles here.
+- FY2023: БФО filing (thousands RUB in original: 15423 / (1169)), converted to whole rubles here.
+- FY2024: БФО filing (thousands RUB in original: 207440 / (109805)), converted to whole rubles here.
+- FY2025: БФО filing (thousands RUB in original: 764654 / (162801)), converted to whole rubles here.
 
 
 ## 5. Tie to ЦБСТ

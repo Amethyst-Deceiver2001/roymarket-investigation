@@ -26166,22 +26166,13 @@
           {
             "source_id": "s9126",
             "text": "Ownership conflict, status 04.10.2026: the register (re-read 04.10.2026) gives 49.5/50.5 since the entry of 15.04.2026; the FY2025 audit report gives 50/50 as of 31.12.2025. These may describe different dates: a 0.5% transfer entered on 15.04.2026 would produce exactly this register picture, and the audit report (signed 04.06.2026) would then be stating the year-end split without noting the later change. This reading is NOT confirmed: no document on file records a transfer or the pre-April split. A ЕГРЮЛ extract shows current records only; the earlier split would need a register entry history (ГРН 2262300538091 and its predecessor record, via a request to the inspectorate) or the 31.03.2026 version of the audit report."
-          }
-        ],
-        "patents": [
+          },
           {
-            "holder": "Барашков Александр Сергеевич (RU)",
-            "inventors": [
-              "Барашков Александр Сергеевич (RU)"
-            ],
-            "note": "Found via searchplatform.rospatent.gov.ru full-roster sweep, 2026-08-24 -- own-name (confirmed-director personal-name) patentee match. Bulk-API-sourced (title/holder/inventor from the sweep's own response) -- NOT individually pulled/archived from FIPS the way the first promotion batch was; lighter provenance tier, individual FIPS verification not yet done. Plausible for this director (b. 1979) — published 2023, consistent with an adult career.",
-            "published": "2023.03.21",
-            "reg_number": "RU2792246C1",
-            "source_id": "s1170",
-            "title": "Способ и система плазменной сварки плавящимся электродом",
-            "type": "invention"
+            "text": "Patent RU2792246C1 (plasma welding with a consumable electrode, published 21.03.2023, patentee «Барашков Александр Сергеевич (RU)») was recorded under this company from a name-only match in the Rospatent bulk search (s1170): the entry prints no ИНН, address or date of birth, and a welding method is not a company product. Removed from patents[] on 05.10.2026 after the packet check; not shown to be this person's or this company's.",
+            "source_id": "s1170"
           }
         ],
+        "patents": [],
         "products": [
           {
             "description": "ПО системы связи для БПЛА «Кузнечик» — учтено как нематериальный актив (капитальные вложения), оставшийся срок полезного использования 75–110 месяцев по состоянию на 31.12.2025. Explicitly a UAV (БПЛА) communications-system software product, per FY2025 audit report intangible-assets note.",
@@ -26356,7 +26347,7 @@
             "as_of": "2025-12-31",
             "name_en": "Association of developers of advanced electronic-reconnaissance, electronic-warfare, and communications systems",
             "name_ru": "Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭБ)",
-            "role": "член ассоциации (per Гагаринг's own FY2025 audit report, related-party/affiliated-organizations disclosure)",
+            "role": "Listed among related parties in Гагаринг's FY2025 audit report (related-party disclosure); the report does not say «член» or «участник». That Гагаринг is a founder/participant of the association is shown by the association's own ЕГРЮЛ extract (the «Сведения об участниках / учредителях» section).",
             "source_id": "s5333"
           },
           {
@@ -26371,7 +26362,7 @@
             "as_of": "2026-09-03",
             "name_en": "GISP (State Industrial Information System) Industrial Atlas — federal company-registry map layer",
             "name_ru": "Атлас промышленности ГИСП (Государственная информационная система промышленности)",
-            "role": "Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase (orbis_id 20052703), classified under industry 'Радиоэлектронная промышленность' (radio-electronics industry) with primary ОКВЭД 26.11 — independently corroborates the entity's ИНН/ОГРН/address (matches EGRUL exactly) and its declared radio-electronics/UAV-component industry classification via a second, unrelated federal data source. Geolocated point (39.128152, 45.032572) falls within the registered Пашковский жилой массив address area of Краснодар. Record also confirms no official company website (site: 'Нет').",
+            "role": "Company listed in the Ministry of Industry and Trade's industrial-facility geodatabase (record id 20052703), industry 'Радиоэлектронная промышленность', primary ОКВЭД 26.11. The record prints the same ИНН and ОГРН as the ЕГРЮЛ; its address line is «350912, КРАСНОДАРСКИЙ КРАЙ, КРАСНОДАР Г., УЛ. ИМ. ФАДЕЕВА (ПАШКОВСКИЙ ЖИЛОЙ МАССИВ ТЕР.), Д. 429/3, ПОМЕЩ. 11», without the «комната 4» that the extract and the audit report carry. It gives a point (39.128152, 45.032572); the record does not say what the point lies within. Its site field reads «Нет», which does not confirm the website https://gagaring.ru/ given elsewhere.",
             "source_id": "s5345"
           },
           {
@@ -26396,9 +26387,9 @@
             }
           },
           {
-            "text_ru": "Система связи и управление «Кузнечик» для FPV-дронов активно используется российскими военными в зоне специальной военной операции на Украине... Барашков отметил, что не может раскрывать количество поставленных систем и их распределение по подразделениям, так как эта информация является закрытой.",
-            "text_en": "The Kuznechik communications/control system for FPV drones is actively used by Russian forces in the SVO zone... Barashkov noted he cannot disclose the quantity of systems delivered or their distribution among units, as this information is classified.",
-            "context": "Independent confirmation via Народный фронт (ONF, a state-linked movement) → ТАСС → vz.ru/ridus.ru republication (08.04.2025), distinct from Гагаринг's own marketing copy. Notable self-admission: Барашков will make broad battlefield-effectiveness claims on record but explicitly declines to give verifiable deployment-scale figures, calling them classified.",
+            "text_ru": "Система связи и управления «Кузнечик» для FPV-дронов активно используется российскими военными в зоне специальной военной операции на Украине, сообщает ТАСС. [...] Он также сообщил, что не может раскрывать количество поставленных систем и их распределение по подразделениям, так как эта информация является закрытой.",
+            "text_en": "The Kuznechik communications and control system for FPV drones is actively used by Russian forces in the zone of the special military operation in Ukraine, TASS reports. [...] He also said he cannot disclose the number of systems delivered or their distribution among units, because this information is classified.",
+            "context": "Independent confirmation via Народный фронт (ONF, a state-linked movement) → ТАСС → vz.ru/ridus.ru republication (08.04.2025), distinct from Гагаринг's own marketing copy. Note on voice: the first sentence is the wire's own narration (the vz.ru republication of TASS, citing Народный фронт); the second is the wire's report of what Барашков said, in reported speech, not his direct words. Both sentences are verbatim from the saved page, joined with [...] (the sentences between are omitted). Notable self-admission: Барашков will make broad battlefield-effectiveness claims on record but explicitly declines to give verifiable deployment-scale figures, calling them classified.",
             "source_id": "s5436",
             "as_of": "2025-04-08",
             "event_type": "field_confirmation",
@@ -26411,14 +26402,14 @@
           {
             "text_ru": "Выражаю огромную благодарность Товарищу Александру Сергеевичу и всему коллективу лаборатории «Гагаринг» за предоставленные «Кузнечики» в количестве 500 шт. Благодарим за постоянную поддержку!",
             "text_en": "I express my deep gratitude to Comrade Aleksandr Sergeyevich and the whole Gagaring lab team for the 500 Kuznechik units provided. Thank you for your constant support!",
-            "context": "Field acknowledgment credited to channel @RuFront (30.08.2026) — a quantified (500 units), third-party-attributed confirmation of Кузнечик supply to a named front-line-adjacent channel, independent of Гагаринг's own marketing. Also a military thank-you letter genre post (see CLAUDE.md's documented pattern) -- a near-duplicate second entry with the identical Russian original but no source_id was removed 2026-09-15 (found during product-profile review) as the same underlying post catalogued twice, not independent corroboration.",
+            "context": "Post in Гагаринг's own channel @my_el_lab (msg 4546, 30.08.2026) that is a FORWARD of @RuFront (fwd msg 23532, 30.08.2026, channel title «🇷🇺Южный Фронт🇷🇺»): the text ends «@RuFront». The speaker is an unnamed author on @RuFront, not Гагаринг; the post is re-posted by Гагаринг's channel, which makes it the company's chosen amplification of a third party's thank-you, not the company's own wording. Quantified (500 units) but unattributed to a named unit. A near-duplicate second entry with the identical Russian original but no source_id was removed 2026-09-15 as the same post catalogued twice.",
             "source_id": "s5447",
             "as_of": "2026-08-30",
             "event_type": "thank_you_letter",
             "actor_to": {
               "kind": "military_unit",
               "id": null,
-              "label": "unnamed front-line unit (via @RuFront)"
+              "label": "unnamed author on @RuFront (forwarded by @my_el_lab)"
             }
           }
         ],
@@ -26564,7 +26555,9 @@
         "04.10.2026 (packet check of 03.10.2026, issue #20): read the ЕГРЮЛ extract s6776 against the packet. CORRECTED the date of the 50.5/49.5 row: Александров's participant entry is 22.12.2023, the split is the record of 15.04.2026; the audit-report conflict stays open.",
         "04.10.2026: registered address and its entry date read from the ЕГРЮЛ extract (s6776).",
         "04.10.2026 (packet check of 03.10.2026): Интел Дрон share corrected to the register's 40% (the audit report's 50% kept as a note); the 2024 profit restatement in the FY2025 filing noted.",
-        "04.10.2026: fresh extract (s9126) re-read; ownership unchanged, conflict with the audit report recorded as a date difference that is plausible but unproven."
+        "04.10.2026: fresh extract (s9126) re-read; ownership unchanged, conflict with the audit report recorded as a date difference that is plausible but unproven.",
+        "05.10.2026 packet check (claim-verifier, read-only, then checked by the main session): (a) the battlefield-evidence quote for s5436 spliced a wire sentence with reported speech and is now two verbatim sentences with the voice stated; (b) the s5447 post is a forward from @RuFront, context corrected; (c) «член ассоциации» is not in the audit report, role reworded; (d) patent RU2792246C1 removed (name-only match).",
+        "05.10.2026: ГИСП entry reworded to what the record prints (address not an exact match; no statement about the point; site field «Нет»)."
       ]
     },
     "ooo-garant-klub": {
