@@ -19,7 +19,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "exhibits"))
 sys.path.insert(0, str(REPO / "scripts"))
-from build_chain_view import CBST, Chain, cap, esc, load, money  # noqa: E402
+from build_chain_view import CBST, REGIMES, Chain, cap, esc, load, money  # noqa: E402
 from display_helpers import design_head, display_name, reader_grade, ru_date  # noqa: E402
 from graph_contract import source_grade  # noqa: E402
 
@@ -136,7 +136,13 @@ class Landing(Chain):
         slugs = {(e["source"] if CBST not in e["source"] else e["target"]).split("::")[-1]: reader_grade(e.get("confidence"))
                  for e in ties}
         by = {g: sum(1 for v in slugs.values() if v == g) for g in ("doc", "rep")}
-        sanc = sum(1 for s in slugs if self.ents.get(s, {}).get("sanctions"))
+        # Listed means a sanctions[] entry that names a regime, the same test the cards use to print "Sanctioned".
+        # An entry with no regime (an aggregator's "linked" topic) is not a listing.
+        def listed(e):
+            return any(key in str(r) for s in e.get("sanctions") or [] if isinstance(s, dict)
+                       for r in ((s.get("regime") if isinstance(s.get("regime"), list) else [s.get("regime")]) if s.get("regime") else [])
+                       for key, _ in REGIMES)
+        sanc = sum(1 for s in slugs if listed(self.ents.get(s, {})))
         return len(slugs), by, sanc
 
     def chain_card(self, slug, href):
