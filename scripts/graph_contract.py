@@ -10,7 +10,7 @@ from __future__ import annotations
 import re
 from collections import Counter
 
-GRAPH_SCHEMA_VERSION = 12
+GRAPH_SCHEMA_VERSION = 13
 NODE_KINDS = {"entity", "person", "product", "unresolved",
               "government_customer", "military_unit", "program", "event", "group", "storefront"}
 EDGE_TYPES = {"owns", "related", "founded", "directs", "role", "produces",
@@ -27,7 +27,7 @@ UNIT_DESIGNATION_CONFIDENCE = {"named", "descriptive", "grouping"}
 
 NODE_FIELDS = {
     "entity": {"id", "kind", "label", "name_latin", "inn", "tier",
-               "sanctioned", "legal_form", "degree", "variant", "product_count"},
+               "sanctioned", "legal_form", "degree", "product_count"},
     "person": {"id", "kind", "label", "name_latin", "sanctioned", "degree"},
     "product": {"id", "kind", "label", "owner_slug", "source_id",
                 "classification", "degree"},

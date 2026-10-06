@@ -1,5 +1,5 @@
 {
-  "schema_version": 12,
+  "schema_version": 13,
   "generated_from": "relationship_graph.json",
   "views": {
     "cited_only": {
@@ -93,7 +93,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 1,
           "degree": 8
         },
@@ -146,7 +145,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "АНО",
-          "variant": null,
           "product_count": 0,
           "degree": 8
         },
@@ -159,7 +157,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": "Ассоциация",
-          "variant": null,
           "product_count": 0,
           "degree": 11
         },
@@ -172,7 +169,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": "АНО",
-          "variant": null,
           "product_count": 0,
           "degree": 17
         },
@@ -185,7 +181,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "АНО",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -198,7 +193,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АНО",
-          "variant": "dual",
           "product_count": 8,
           "degree": 50
         },
@@ -211,7 +205,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -224,7 +217,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": "АНО",
-          "variant": null,
           "product_count": 0,
           "degree": 9
         },
@@ -237,7 +229,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -250,7 +241,6 @@
           "tier": "cbst-core",
           "sanctioned": true,
           "legal_form": "АНО",
-          "variant": null,
           "product_count": 0,
           "degree": 96
         },
@@ -263,7 +253,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -276,7 +265,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "АНО",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -329,7 +317,6 @@
           "tier": "adjacent",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -342,7 +329,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -355,7 +341,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -368,7 +353,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 8,
           "degree": 23
         },
@@ -381,7 +365,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -394,7 +377,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -407,7 +389,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -420,7 +401,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 2,
           "degree": 8
         },
@@ -433,7 +413,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": null,
-          "variant": "offensive",
           "product_count": 8,
           "degree": 45
         },
@@ -446,7 +425,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -459,7 +437,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 4
         },
@@ -472,7 +449,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 2,
           "degree": 56
         },
@@ -485,7 +461,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": "defensive",
           "product_count": 6,
           "degree": 96
         },
@@ -498,7 +473,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -511,7 +485,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": "defensive",
           "product_count": 5,
           "degree": 11
         },
@@ -524,7 +497,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 10
         },
@@ -537,7 +509,6 @@
           "tier": "money-layer",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 52,
           "degree": 56
         },
@@ -550,7 +521,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": "offensive",
           "product_count": 5,
           "degree": 14
         },
@@ -563,7 +533,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": "defensive",
           "product_count": 2,
           "degree": 17
         },
@@ -576,7 +545,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -589,7 +557,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -602,7 +569,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -615,7 +581,6 @@
           "tier": "cbst-core",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -628,7 +593,6 @@
           "tier": "cbst-core",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -641,7 +605,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": "offensive",
           "product_count": 4,
           "degree": 20
         },
@@ -654,7 +617,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 5
         },
@@ -667,7 +629,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 2,
           "degree": 3
         },
@@ -680,7 +641,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": "offensive",
           "product_count": 5,
           "degree": 8
         },
@@ -693,7 +653,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 15
         },
@@ -706,7 +665,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "УК",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -719,7 +677,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -732,7 +689,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -745,7 +701,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -782,7 +737,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -795,7 +749,6 @@
           "tier": "money-layer",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -1152,7 +1105,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 8
         },
@@ -1847,7 +1799,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "Общественная организация",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -1860,7 +1811,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -1913,7 +1863,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "Фонд",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -1926,7 +1875,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "Фонд",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -1939,7 +1887,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 1
         },
@@ -1952,7 +1899,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -1965,7 +1911,6 @@
           "tier": "cbst-core",
           "sanctioned": true,
           "legal_form": "Фонд",
-          "variant": null,
           "product_count": 0,
           "degree": 19
         },
@@ -1978,7 +1923,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -1991,7 +1935,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -2004,7 +1947,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "Фонд",
-          "variant": null,
           "product_count": 0,
           "degree": 9
         },
@@ -2017,7 +1959,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -2118,7 +2059,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "defensive",
           "product_count": 5,
           "degree": 12
         },
@@ -2131,7 +2071,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": "ГК",
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -2239,7 +2178,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ИП",
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -2252,7 +2190,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ИП",
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -2265,7 +2202,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ИП",
-          "variant": null,
           "product_count": 0,
           "degree": 1
         },
@@ -2278,7 +2214,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ИП",
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -2291,7 +2226,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ИП",
-          "variant": null,
           "product_count": 1,
           "degree": 4
         },
@@ -2304,7 +2238,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ИП",
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -2317,7 +2250,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ИП",
-          "variant": null,
           "product_count": 0,
           "degree": 1
         },
@@ -2330,7 +2262,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ИП",
-          "variant": null,
           "product_count": 0,
           "degree": 1
         },
@@ -2343,7 +2274,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ИП",
-          "variant": "defensive",
           "product_count": 1,
           "degree": 9
         },
@@ -2460,7 +2390,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 4,
           "degree": 10
         },
@@ -2753,7 +2682,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 5,
           "degree": 6
         },
@@ -2790,7 +2718,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 3
         },
@@ -3035,7 +2962,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -3104,7 +3030,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": "Некоммерческое партнёрство",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -3117,7 +3042,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "НПО",
-          "variant": "defensive",
           "product_count": 13,
           "degree": 24
         },
@@ -3130,7 +3054,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ИП",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -3143,7 +3066,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "НПП",
-          "variant": null,
           "product_count": 1,
           "degree": 12
         },
@@ -3156,7 +3078,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "НПП",
-          "variant": null,
           "product_count": 22,
           "degree": 114
         },
@@ -3169,7 +3090,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "НПЦ",
-          "variant": null,
           "product_count": 49,
           "degree": 152
         },
@@ -3182,7 +3102,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "НПЦ",
-          "variant": "defensive",
           "product_count": 1,
           "degree": 15
         },
@@ -3211,7 +3130,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 10,
           "degree": 15
         },
@@ -3224,7 +3142,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 1,
           "degree": 6
         },
@@ -3237,7 +3154,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -3250,7 +3166,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -3263,7 +3178,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 9,
           "degree": 38
         },
@@ -3276,7 +3190,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -3289,7 +3202,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 2,
           "degree": 14
         },
@@ -3302,7 +3214,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 10
         },
@@ -3315,7 +3226,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -3328,7 +3238,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 9
         },
@@ -3341,7 +3250,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 12
         },
@@ -3354,7 +3262,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 10
         },
@@ -3367,7 +3274,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 1,
           "degree": 16
         },
@@ -3380,7 +3286,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 1,
           "degree": 8
         },
@@ -3393,7 +3298,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 11
         },
@@ -3406,7 +3310,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 3,
           "degree": 27
         },
@@ -3419,7 +3322,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 9
         },
@@ -3432,7 +3334,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 3,
           "degree": 9
         },
@@ -3445,7 +3346,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 2,
           "degree": 16
         },
@@ -3458,7 +3358,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 8
         },
@@ -3471,7 +3370,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -3484,7 +3382,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 5,
           "degree": 14
         },
@@ -3497,7 +3394,6 @@
           "tier": "unverified",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -3510,7 +3406,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 7
         },
@@ -3523,7 +3418,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 9
         },
@@ -3536,7 +3430,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -3549,7 +3442,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -3562,7 +3454,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -3575,7 +3466,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -3588,7 +3478,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 8
         },
@@ -3601,7 +3490,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -3614,7 +3502,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -3627,7 +3514,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 10
         },
@@ -3640,7 +3526,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 2,
           "degree": 17
         },
@@ -3653,7 +3538,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -3666,7 +3550,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "dual",
           "product_count": 24,
           "degree": 44
         },
@@ -3679,7 +3562,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -3692,7 +3574,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 5,
           "degree": 23
         },
@@ -3705,7 +3586,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -3718,7 +3598,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "offensive",
           "product_count": 3,
           "degree": 9
         },
@@ -3731,7 +3610,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 10
         },
@@ -3744,7 +3622,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 8
         },
@@ -3757,7 +3634,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 1,
           "degree": 7
         },
@@ -3770,7 +3646,6 @@
           "tier": "adjacent",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -3783,7 +3658,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "defensive",
           "product_count": 1,
           "degree": 9
         },
@@ -3796,7 +3670,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 6
         },
@@ -3809,7 +3682,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 7
         },
@@ -3822,7 +3694,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 4
         },
@@ -3835,7 +3706,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 11
         },
@@ -3848,7 +3718,6 @@
           "tier": "money-layer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -3861,7 +3730,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -3874,7 +3742,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 2,
           "degree": 6
         },
@@ -3887,7 +3754,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 6,
           "degree": 13
         },
@@ -3900,7 +3766,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 2,
           "degree": 9
         },
@@ -3913,7 +3778,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 8,
           "degree": 16
         },
@@ -3926,7 +3790,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -3939,7 +3802,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 24,
           "degree": 33
         },
@@ -3952,7 +3814,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 15
         },
@@ -3965,7 +3826,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 1
         },
@@ -3978,7 +3838,6 @@
           "tier": "network",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -3991,7 +3850,6 @@
           "tier": "money-layer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 9
         },
@@ -4004,7 +3862,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 2,
           "degree": 7
         },
@@ -4017,7 +3874,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 1,
           "degree": 10
         },
@@ -4030,7 +3886,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -4043,7 +3898,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -4056,7 +3910,6 @@
           "tier": "unverified",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -4069,7 +3922,6 @@
           "tier": "cbst-core",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 9
         },
@@ -4082,7 +3934,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -4095,7 +3946,6 @@
           "tier": "money-layer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -4108,7 +3958,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 12
         },
@@ -4121,7 +3970,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 8
         },
@@ -4134,7 +3982,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 10
         },
@@ -4147,7 +3994,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -4160,7 +4006,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "defensive",
           "product_count": 1,
           "degree": 8
         },
@@ -4173,7 +4018,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": null,
-          "variant": "dual",
           "product_count": 47,
           "degree": 57
         },
@@ -4186,7 +4030,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -4199,7 +4042,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 15,
           "degree": 29
         },
@@ -4212,7 +4054,6 @@
           "tier": "cbst-core",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 11
         },
@@ -4225,7 +4066,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -4238,7 +4078,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 13,
           "degree": 19
         },
@@ -4251,7 +4090,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 10,
           "degree": 18
         },
@@ -4264,7 +4102,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -4277,7 +4114,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -4290,7 +4126,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 7
         },
@@ -4303,7 +4138,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 10
         },
@@ -4316,7 +4150,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 6,
           "degree": 16
         },
@@ -4329,7 +4162,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 1,
           "degree": 7
         },
@@ -4342,7 +4174,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -4355,7 +4186,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -4368,7 +4198,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 11
         },
@@ -4381,7 +4210,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -4394,7 +4222,6 @@
           "tier": "money-layer",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -4407,7 +4234,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -4420,7 +4246,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -4433,7 +4258,6 @@
           "tier": "cbst-core",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 1,
           "degree": 5
         },
@@ -4446,7 +4270,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 8
         },
@@ -4459,7 +4282,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "dual",
           "product_count": 8,
           "degree": 19
         },
@@ -4472,7 +4294,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 6
         },
@@ -4485,7 +4306,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 2,
           "degree": 5
         },
@@ -4498,7 +4318,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -4511,7 +4330,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -4524,7 +4342,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -4537,7 +4354,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -4550,7 +4366,6 @@
           "tier": "adjacent",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -4563,7 +4378,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 4,
           "degree": 12
         },
@@ -4576,7 +4390,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -4589,7 +4402,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 7
         },
@@ -4602,7 +4414,6 @@
           "tier": "unverified",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -4615,7 +4426,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "dual",
           "product_count": 6,
           "degree": 13
         },
@@ -4628,7 +4438,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 6,
           "degree": 12
         },
@@ -4641,7 +4450,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 4,
           "degree": 25
         },
@@ -4654,7 +4462,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 7
         },
@@ -4667,7 +4474,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 1,
           "degree": 12
         },
@@ -4680,7 +4486,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": null,
-          "variant": "offensive",
           "product_count": 4,
           "degree": 10
         },
@@ -4693,7 +4498,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -4706,7 +4510,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -4719,7 +4522,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -4732,7 +4534,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 4
         },
@@ -4745,7 +4546,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -4758,7 +4558,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 3,
           "degree": 18
         },
@@ -4771,7 +4570,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -4784,7 +4582,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 2,
           "degree": 7
         },
@@ -4797,7 +4594,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -4810,7 +4606,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 9
         },
@@ -4823,7 +4618,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 17
         },
@@ -4852,7 +4646,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": null,
-          "variant": "offensive",
           "product_count": 3,
           "degree": 15
         },
@@ -4873,7 +4666,6 @@
           "tier": "cbst-core",
           "sanctioned": true,
           "legal_form": "ПАО",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -11314,7 +11106,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "defensive",
           "product_count": 4,
           "degree": 25
         },
@@ -12742,7 +12533,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 1,
           "degree": 4
         },
@@ -12779,7 +12569,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "defensive",
           "product_count": 1,
           "degree": 4
         },
@@ -12904,7 +12693,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "defensive",
           "product_count": 6,
           "degree": 11
         },
@@ -41159,7 +40947,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 1,
           "degree": 8
         },
@@ -41172,7 +40959,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "АНО",
-          "variant": null,
           "product_count": 0,
           "degree": 8
         },
@@ -41185,7 +40971,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": "Ассоциация",
-          "variant": null,
           "product_count": 0,
           "degree": 11
         },
@@ -41198,7 +40983,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": "АНО",
-          "variant": null,
           "product_count": 0,
           "degree": 17
         },
@@ -41211,7 +40995,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АНО",
-          "variant": "dual",
           "product_count": 8,
           "degree": 50
         },
@@ -41224,7 +41007,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": "АНО",
-          "variant": null,
           "product_count": 0,
           "degree": 9
         },
@@ -41237,7 +41019,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -41250,7 +41031,6 @@
           "tier": "cbst-core",
           "sanctioned": true,
           "legal_form": "АНО",
-          "variant": null,
           "product_count": 0,
           "degree": 96
         },
@@ -41263,7 +41043,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -41276,7 +41055,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "АНО",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -41297,7 +41075,6 @@
           "tier": "adjacent",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -41310,7 +41087,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -41323,7 +41099,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -41336,7 +41111,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 8,
           "degree": 23
         },
@@ -41349,7 +41123,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -41362,7 +41135,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -41375,7 +41147,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -41388,7 +41159,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 2,
           "degree": 8
         },
@@ -41401,7 +41171,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": null,
-          "variant": "offensive",
           "product_count": 8,
           "degree": 45
         },
@@ -41414,7 +41183,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -41427,7 +41195,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 2,
           "degree": 56
         },
@@ -41440,7 +41207,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": "defensive",
           "product_count": 6,
           "degree": 96
         },
@@ -41453,7 +41219,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -41466,7 +41231,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": "defensive",
           "product_count": 5,
           "degree": 11
         },
@@ -41479,7 +41243,6 @@
           "tier": "money-layer",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 52,
           "degree": 56
         },
@@ -41492,7 +41255,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": "offensive",
           "product_count": 5,
           "degree": 14
         },
@@ -41505,7 +41267,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": "defensive",
           "product_count": 2,
           "degree": 17
         },
@@ -41518,7 +41279,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -41531,7 +41291,6 @@
           "tier": "cbst-core",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -41544,7 +41303,6 @@
           "tier": "cbst-core",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -41557,7 +41315,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": "offensive",
           "product_count": 4,
           "degree": 20
         },
@@ -41570,7 +41327,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 5
         },
@@ -41583,7 +41339,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 2,
           "degree": 3
         },
@@ -41596,7 +41351,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": "offensive",
           "product_count": 5,
           "degree": 8
         },
@@ -41609,7 +41363,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 15
         },
@@ -41622,7 +41375,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "УК",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -41635,7 +41387,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -41648,7 +41399,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -41661,7 +41411,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -41682,7 +41431,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -41695,7 +41443,6 @@
           "tier": "money-layer",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -41812,7 +41559,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 8
         },
@@ -41857,7 +41603,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "Общественная организация",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -41870,7 +41615,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -41907,7 +41651,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "Фонд",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -41920,7 +41663,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "Фонд",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -41933,7 +41675,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 1
         },
@@ -41946,7 +41687,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -41959,7 +41699,6 @@
           "tier": "cbst-core",
           "sanctioned": true,
           "legal_form": "Фонд",
-          "variant": null,
           "product_count": 0,
           "degree": 19
         },
@@ -41972,7 +41711,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -41985,7 +41723,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -41998,7 +41735,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "Фонд",
-          "variant": null,
           "product_count": 0,
           "degree": 9
         },
@@ -42011,7 +41747,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -42056,7 +41791,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "defensive",
           "product_count": 5,
           "degree": 12
         },
@@ -42069,7 +41803,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": "ГК",
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -42106,7 +41839,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ИП",
-          "variant": "defensive",
           "product_count": 1,
           "degree": 9
         },
@@ -42343,7 +42075,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -42380,7 +42111,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": "Некоммерческое партнёрство",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -42393,7 +42123,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "НПП",
-          "variant": null,
           "product_count": 1,
           "degree": 12
         },
@@ -42406,7 +42135,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "НПП",
-          "variant": null,
           "product_count": 22,
           "degree": 114
         },
@@ -42435,7 +42163,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 10,
           "degree": 15
         },
@@ -42448,7 +42175,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 1,
           "degree": 6
         },
@@ -42461,7 +42187,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -42474,7 +42199,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -42487,7 +42211,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 9,
           "degree": 38
         },
@@ -42500,7 +42223,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -42513,7 +42235,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 2,
           "degree": 14
         },
@@ -42526,7 +42247,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 10
         },
@@ -42539,7 +42259,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -42552,7 +42271,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 9
         },
@@ -42565,7 +42283,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 10
         },
@@ -42578,7 +42295,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 1,
           "degree": 16
         },
@@ -42591,7 +42307,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 1,
           "degree": 8
         },
@@ -42604,7 +42319,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 11
         },
@@ -42617,7 +42331,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 3,
           "degree": 27
         },
@@ -42630,7 +42343,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 9
         },
@@ -42643,7 +42355,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 3,
           "degree": 9
         },
@@ -42656,7 +42367,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 2,
           "degree": 16
         },
@@ -42669,7 +42379,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 5,
           "degree": 14
         },
@@ -42682,7 +42391,6 @@
           "tier": "unverified",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -42695,7 +42403,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 7
         },
@@ -42708,7 +42415,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 9
         },
@@ -42721,7 +42427,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -42734,7 +42439,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -42747,7 +42451,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -42760,7 +42463,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 8
         },
@@ -42773,7 +42475,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -42786,7 +42487,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -42799,7 +42499,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 2,
           "degree": 17
         },
@@ -42812,7 +42511,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -42825,7 +42523,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "dual",
           "product_count": 24,
           "degree": 44
         },
@@ -42838,7 +42535,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -42851,7 +42547,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 5,
           "degree": 23
         },
@@ -42864,7 +42559,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -42877,7 +42571,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "offensive",
           "product_count": 3,
           "degree": 9
         },
@@ -42890,7 +42583,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 10
         },
@@ -42903,7 +42595,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 8
         },
@@ -42916,7 +42607,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 1,
           "degree": 7
         },
@@ -42929,7 +42619,6 @@
           "tier": "adjacent",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -42942,7 +42631,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "defensive",
           "product_count": 1,
           "degree": 9
         },
@@ -42955,7 +42643,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 6
         },
@@ -42968,7 +42655,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 7
         },
@@ -42981,7 +42667,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 11
         },
@@ -42994,7 +42679,6 @@
           "tier": "money-layer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -43007,7 +42691,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -43020,7 +42703,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 2,
           "degree": 6
         },
@@ -43033,7 +42715,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 6,
           "degree": 13
         },
@@ -43046,7 +42727,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 2,
           "degree": 9
         },
@@ -43059,7 +42739,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 8,
           "degree": 16
         },
@@ -43072,7 +42751,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -43085,7 +42763,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 24,
           "degree": 33
         },
@@ -43098,7 +42775,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 15
         },
@@ -43111,7 +42787,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 1
         },
@@ -43124,7 +42799,6 @@
           "tier": "network",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -43137,7 +42811,6 @@
           "tier": "money-layer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 9
         },
@@ -43150,7 +42823,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 2,
           "degree": 7
         },
@@ -43163,7 +42835,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 1,
           "degree": 10
         },
@@ -43176,7 +42847,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -43189,7 +42859,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -43202,7 +42871,6 @@
           "tier": "unverified",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -43215,7 +42883,6 @@
           "tier": "cbst-core",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 9
         },
@@ -43228,7 +42895,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -43241,7 +42907,6 @@
           "tier": "money-layer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -43254,7 +42919,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 12
         },
@@ -43267,7 +42931,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -43280,7 +42943,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "defensive",
           "product_count": 1,
           "degree": 8
         },
@@ -43293,7 +42955,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": null,
-          "variant": "dual",
           "product_count": 47,
           "degree": 57
         },
@@ -43306,7 +42967,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -43319,7 +42979,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 15,
           "degree": 29
         },
@@ -43332,7 +42991,6 @@
           "tier": "cbst-core",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 11
         },
@@ -43345,7 +43003,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -43358,7 +43015,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 13,
           "degree": 19
         },
@@ -43371,7 +43027,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 10,
           "degree": 18
         },
@@ -43384,7 +43039,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -43397,7 +43051,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -43410,7 +43063,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 7
         },
@@ -43423,7 +43075,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 6,
           "degree": 16
         },
@@ -43436,7 +43087,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 1,
           "degree": 7
         },
@@ -43449,7 +43099,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -43462,7 +43111,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 11
         },
@@ -43475,7 +43123,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -43488,7 +43135,6 @@
           "tier": "money-layer",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 3
         },
@@ -43501,7 +43147,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -43514,7 +43159,6 @@
           "tier": "cbst-core",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 1,
           "degree": 5
         },
@@ -43527,7 +43171,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 8
         },
@@ -43540,7 +43183,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "dual",
           "product_count": 8,
           "degree": 19
         },
@@ -43553,7 +43195,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 6
         },
@@ -43566,7 +43207,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -43579,7 +43219,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -43592,7 +43231,6 @@
           "tier": "adjacent",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -43605,7 +43243,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 4,
           "degree": 12
         },
@@ -43618,7 +43255,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -43631,7 +43267,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 7
         },
@@ -43644,7 +43279,6 @@
           "tier": "unverified",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -43657,7 +43291,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "dual",
           "product_count": 6,
           "degree": 13
         },
@@ -43670,7 +43303,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 6,
           "degree": 12
         },
@@ -43683,7 +43315,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": null,
-          "variant": "offensive",
           "product_count": 4,
           "degree": 10
         },
@@ -43696,7 +43327,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -43709,7 +43339,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -43722,7 +43351,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -43735,7 +43363,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 3,
           "degree": 18
         },
@@ -43748,7 +43375,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -43761,7 +43387,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 2,
           "degree": 7
         },
@@ -43774,7 +43399,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -43787,7 +43411,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 9
         },
@@ -43800,7 +43423,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 17
         },
@@ -43813,7 +43435,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": null,
-          "variant": "offensive",
           "product_count": 3,
           "degree": 15
         },
@@ -43834,7 +43455,6 @@
           "tier": "cbst-core",
           "sanctioned": true,
           "legal_form": "ПАО",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -44521,7 +44141,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 1,
           "degree": 4
         },
@@ -44550,7 +44169,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "defensive",
           "product_count": 1,
           "degree": 4
         },
@@ -44595,7 +44213,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "defensive",
           "product_count": 6,
           "degree": 11
         },
@@ -49012,7 +48629,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 1,
           "degree": 8
         },
@@ -49033,7 +48649,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": "АНО",
-          "variant": null,
           "product_count": 0,
           "degree": 17
         },
@@ -49046,7 +48661,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АНО",
-          "variant": "dual",
           "product_count": 8,
           "degree": 50
         },
@@ -49059,7 +48673,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": "АНО",
-          "variant": null,
           "product_count": 0,
           "degree": 9
         },
@@ -49072,7 +48685,6 @@
           "tier": "cbst-core",
           "sanctioned": true,
           "legal_form": "АНО",
-          "variant": null,
           "product_count": 0,
           "degree": 96
         },
@@ -49093,7 +48705,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 2,
           "degree": 8
         },
@@ -49106,7 +48717,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 4
         },
@@ -49119,7 +48729,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -49132,7 +48741,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "АО",
-          "variant": "defensive",
           "product_count": 5,
           "degree": 11
         },
@@ -49145,7 +48753,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": "offensive",
           "product_count": 5,
           "degree": 14
         },
@@ -49158,7 +48765,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 2
         },
@@ -49171,7 +48777,6 @@
           "tier": "cbst-core",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -49184,7 +48789,6 @@
           "tier": "cbst-core",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -49197,7 +48801,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": "offensive",
           "product_count": 4,
           "degree": 20
         },
@@ -49210,7 +48813,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 5
         },
@@ -49223,7 +48825,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АО",
-          "variant": "offensive",
           "product_count": 5,
           "degree": 8
         },
@@ -49282,7 +48883,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "Фонд",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -49295,7 +48895,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "Фонд",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -49308,7 +48907,6 @@
           "tier": "cbst-core",
           "sanctioned": true,
           "legal_form": "Фонд",
-          "variant": null,
           "product_count": 0,
           "degree": 19
         },
@@ -49321,7 +48919,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "defensive",
           "product_count": 5,
           "degree": 12
         },
@@ -49334,7 +48931,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": "ГК",
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -49355,7 +48951,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 4,
           "degree": 10
         },
@@ -49384,7 +48979,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 5,
           "degree": 6
         },
@@ -49397,7 +48991,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 3
         },
@@ -49434,7 +49027,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "НПО",
-          "variant": "defensive",
           "product_count": 13,
           "degree": 24
         },
@@ -49447,7 +49039,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "НПП",
-          "variant": null,
           "product_count": 1,
           "degree": 12
         },
@@ -49460,7 +49051,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "НПЦ",
-          "variant": "defensive",
           "product_count": 1,
           "degree": 15
         },
@@ -49473,7 +49063,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 1,
           "degree": 6
         },
@@ -49486,7 +49075,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 9,
           "degree": 38
         },
@@ -49499,7 +49087,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 2,
           "degree": 14
         },
@@ -49512,7 +49099,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 10
         },
@@ -49525,7 +49111,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 10
         },
@@ -49538,7 +49123,6 @@
           "tier": "plumbing",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 11
         },
@@ -49551,7 +49135,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 3,
           "degree": 27
         },
@@ -49564,7 +49147,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 2,
           "degree": 16
         },
@@ -49577,7 +49159,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 5,
           "degree": 14
         },
@@ -49590,7 +49171,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 7
         },
@@ -49603,7 +49183,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 2,
           "degree": 17
         },
@@ -49616,7 +49195,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "dual",
           "product_count": 24,
           "degree": 44
         },
@@ -49629,7 +49207,6 @@
           "tier": "plumbing",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 0,
           "degree": 8
         },
@@ -49642,7 +49219,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 1,
           "degree": 7
         },
@@ -49655,7 +49231,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 7
         },
@@ -49668,7 +49243,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 4
         },
@@ -49681,7 +49255,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 11
         },
@@ -49694,7 +49267,6 @@
           "tier": "money-layer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -49707,7 +49279,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 2,
           "degree": 6
         },
@@ -49720,7 +49291,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 6,
           "degree": 13
         },
@@ -49733,7 +49303,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 2,
           "degree": 9
         },
@@ -49746,7 +49315,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 8,
           "degree": 16
         },
@@ -49759,7 +49327,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 24,
           "degree": 33
         },
@@ -49772,7 +49339,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 2,
           "degree": 7
         },
@@ -49785,7 +49351,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 1,
           "degree": 10
         },
@@ -49798,7 +49363,6 @@
           "tier": "cbst-core",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 9
         },
@@ -49811,7 +49375,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": null,
-          "variant": "dual",
           "product_count": 47,
           "degree": 57
         },
@@ -49824,7 +49387,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 15,
           "degree": 29
         },
@@ -49837,7 +49399,6 @@
           "tier": "cbst-core",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 11
         },
@@ -49850,7 +49411,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 13,
           "degree": 19
         },
@@ -49863,7 +49423,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 10,
           "degree": 18
         },
@@ -49876,7 +49435,6 @@
           "tier": "cbst-core",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 1,
           "degree": 5
         },
@@ -49889,7 +49447,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "dual",
           "product_count": 8,
           "degree": 19
         },
@@ -49902,7 +49459,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 6
         },
@@ -49915,7 +49471,6 @@
           "tier": "adjacent",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 5
         },
@@ -49928,7 +49483,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 7
         },
@@ -49941,7 +49495,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "dual",
           "product_count": 6,
           "degree": 13
         },
@@ -49954,7 +49507,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 6,
           "degree": 12
         },
@@ -49967,7 +49519,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 4,
           "degree": 25
         },
@@ -49980,7 +49531,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 7
         },
@@ -49993,7 +49543,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 1,
           "degree": 12
         },
@@ -50006,7 +49555,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": null,
-          "variant": "offensive",
           "product_count": 4,
           "degree": 10
         },
@@ -50019,7 +49567,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 4
         },
@@ -50032,7 +49579,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 3,
           "degree": 18
         },
@@ -50045,7 +49591,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": null,
-          "variant": "offensive",
           "product_count": 3,
           "degree": 15
         },
@@ -50058,7 +49603,6 @@
           "tier": "cbst-core",
           "sanctioned": true,
           "legal_form": "ПАО",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -50105,7 +49649,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "defensive",
           "product_count": 4,
           "degree": 25
         },
@@ -50166,7 +49709,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 1,
           "degree": 4
         },
@@ -50203,7 +49745,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "defensive",
           "product_count": 6,
           "degree": 11
         },
@@ -52054,7 +51595,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "АНО",
-          "variant": "dual",
           "product_count": 8,
           "degree": 50
         },
@@ -52067,7 +51607,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 4
         },
@@ -52080,7 +51619,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 5
         },
@@ -52093,7 +51631,6 @@
           "tier": "money-layer",
           "sanctioned": false,
           "legal_form": "УК",
-          "variant": null,
           "product_count": 0,
           "degree": 7
         },
@@ -52129,7 +51666,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "НПО",
-          "variant": "defensive",
           "product_count": 13,
           "degree": 24
         },
@@ -52142,7 +51678,6 @@
           "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ИП",
-          "variant": null,
           "product_count": 0,
           "degree": 4
         },
@@ -52155,7 +51690,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "НПЦ",
-          "variant": "defensive",
           "product_count": 1,
           "degree": 15
         },
@@ -52168,7 +51702,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 9,
           "degree": 38
         },
@@ -52181,7 +51714,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 5,
           "degree": 23
         },
@@ -52194,7 +51726,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 1,
           "degree": 7
         },
@@ -52207,7 +51738,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 4
         },
@@ -52220,7 +51750,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 24,
           "degree": 33
         },
@@ -52233,7 +51762,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": "offensive",
           "product_count": 1,
           "degree": 10
         },
@@ -52246,7 +51774,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 6,
           "degree": 12
         },
@@ -52259,7 +51786,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": "defensive",
           "product_count": 4,
           "degree": 25
         },
@@ -52272,7 +51798,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 0,
           "degree": 6
         },
@@ -52285,7 +51810,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": null,
           "product_count": 1,
           "degree": 4
         },
@@ -52298,7 +51822,6 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "ООО",
-          "variant": null,
           "product_count": 2,
           "degree": 7
         },
@@ -52594,7 +52117,6 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "variant": "defensive",
           "product_count": 6,
           "degree": 11
         }
