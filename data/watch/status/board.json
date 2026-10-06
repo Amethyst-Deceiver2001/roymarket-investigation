@@ -3776,11 +3776,16 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
+    },
+    {
+     "kind": "review",
+     "code": "screen_hits_unreviewed",
+     "text": "1 sanctions-type screening hit(s), no sanctions review recorded",
+     "count": 1
     },
     {
      "kind": "review",
@@ -6152,11 +6157,16 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
+    },
+    {
+     "kind": "review",
+     "code": "screen_hits_unreviewed",
+     "text": "1 sanctions-type screening hit(s), no sanctions review recorded",
+     "count": 1
     }
    ]
   },
@@ -6473,11 +6483,16 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
+    },
+    {
+     "kind": "review",
+     "code": "screen_hits_unreviewed",
+     "text": "1 sanctions-type screening hit(s), no sanctions review recorded",
+     "count": 1
     }
    ]
   },
@@ -6496,10 +6511,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     }
    ]
@@ -6779,10 +6793,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -7081,10 +7094,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -7202,10 +7214,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, Aleph",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "aleph"
+      "opensanctions"
      ]
     },
     {
@@ -7231,12 +7242,16 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions, Aleph",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur",
-      "aleph"
+      "opensanctions"
      ]
+    },
+    {
+     "kind": "review",
+     "code": "screen_hits_unreviewed",
+     "text": "5 sanctions-type screening hit(s), no sanctions review recorded",
+     "count": 5
     },
     {
      "kind": "review",
@@ -13357,18 +13372,9 @@
    "tier": "person",
    "role": "founder (100%, at incorporation) / General Director",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-06",
    "sanctioned": true,
-   "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -13455,16 +13461,14 @@
    "tier": "person",
    "role": "Участник (21.7098%, номинал ₽25,698,196)",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-06",
    "sanctioned": false,
    "flags": [
     {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
+     "kind": "review",
+     "code": "screen_hits_unreviewed",
+     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded",
+     "count": 1
     }
    ]
   },
@@ -13476,21 +13480,19 @@
    "tier": "person",
    "role": "Self-described \"флагман движения\" (movement flagship/figurehead) -- named backer, corroborated by his own channel",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-06",
    "sanctioned": false,
    "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    },
     {
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
+    },
+    {
+     "kind": "review",
+     "code": "screen_hits_unreviewed",
+     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded",
+     "count": 1
     }
    ]
   },
@@ -13774,17 +13776,9 @@
    "tier": "person",
    "role": "Заместитель генерального директора (named on a presentation slide at an award ceremony)",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-06",
    "sanctioned": false,
    "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    },
     {
      "kind": "gap",
      "code": "no_inn",
@@ -15131,10 +15125,10 @@
   {
    "id": "daily_round",
    "label": "Last daily round report",
-   "value": "2026-10-05 (1 d ago)",
+   "value": "2026-10-06 (0 d ago)",
    "status": "ok",
    "detail": "The 09:15 Mac round (pulls, re-screens, ingest, board.json).",
-   "as_of": "2026-10-05"
+   "as_of": "2026-10-06"
   },
   {
    "id": "weekly_scan",

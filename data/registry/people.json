@@ -48785,6 +48785,19 @@
       "note": "Scanned by personal ИНН, zero hits in zakupki.gov.ru contract registry."
     },
     "_verified_against": null,
+    "opensanctions_matches": [
+      {
+        "match_id": "NK-VPkW9fUyzqrZToromxWF3o",
+        "caption": "Шестопалов Сергій Анатолійович",
+        "schema": "Person",
+        "score": 1.0,
+        "topics": [
+          "sanction"
+        ],
+        "source_urls": []
+      }
+    ],
+    "opensanctions_screened_at": "2026-10-06",
     "aleph_matches": [
       {
         "entity_id": "ru-inn-480601511636.8fa9179d8d6b4f622a479d7137e53951214afdfa",
@@ -49297,6 +49310,45 @@
     "_corrected": [
       "2026-09-07: added as ООО «Левит»'s other major co-owner (21.71%), already named in docs/index.html's Михельсон/Левит/ДАР narrative and in the entity's own founders[] but never promoted to a person record."
     ],
+    "opensanctions_matches": [
+      {
+        "match_id": "Q4419490",
+        "caption": "Leonid Jakovlevitch Simanovskiy",
+        "schema": "Person",
+        "score": 1.0,
+        "topics": [
+          "export.control",
+          "role.pep",
+          "role.pol",
+          "debarment",
+          "sanction",
+          "corp.disqual",
+          "poi",
+          "role.oligarch"
+        ],
+        "source_urls": [
+          "https://home.treasury.gov/news/press-releases/jy0677",
+          "https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=3919",
+          "https://prod-upp-image-read.ft.com/40911a30-057c-11e8-9650-9c0ad2d7c5b5",
+          "https://peps.dossier.center/person/simanovskij-leonid-yakovlevich/",
+          "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0269",
+          "https://war-sanctions.gur.gov.ua/en/sanctions/persons/397",
+          "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=35524",
+          "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R1529",
+          "http://duma.gov.ru/duma/persons/99110096/",
+          "https://find-and-update.company-information.service.gov.uk/disqualified-officers/natural/bE4UQN9hmsmTvPVUTM8DbbTipTQ"
+        ]
+      },
+      {
+        "match_id": "ru-inn-770100058167",
+        "caption": "ЛЕОНИД ЯКОВЛЕВИЧ СИМАНОВСКИЙ",
+        "schema": "Person",
+        "score": 1.0,
+        "topics": [],
+        "source_urls": []
+      }
+    ],
+    "opensanctions_screened_at": "2026-10-06",
     "aleph_matches": [
       {
         "entity_id": "ru-inn-770100058167.5b25de0cd5aced8c8398f89de5330897bce28271",
@@ -49395,6 +49447,32 @@
     "_corrected": [
       "2026-09-07: surfaced while investigating the «Хаб СВО» lead from screen_upr_uchr.py -- a significant PEP-adjacency finding for the whole Архангел network, not previously on file."
     ],
+    "opensanctions_matches": [
+      {
+        "match_id": "Q737463",
+        "caption": "Dmitry Rogozin",
+        "schema": "Person",
+        "score": 1.0,
+        "topics": [
+          "role.diplo",
+          "role.pol",
+          "poi",
+          "debarment",
+          "sanction",
+          "role.pep"
+        ],
+        "source_urls": [
+          "https://peps.dossier.center/person/rogozin-dmitrij/",
+          "http://council.gov.ru/en/structure/persons/1665/",
+          "https://sanctionssearch.ofac.treas.gov/Details.aspx?id=16649",
+          "https://war-sanctions.gur.gov.ua/en/sanctions/persons/4008",
+          "https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=1392",
+          "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0269",
+          "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202400849"
+        ]
+      }
+    ],
+    "opensanctions_screened_at": "2026-10-06",
     "aleph_matches": [
       {
         "entity_id": "30a36366daf14bd4b22710bf1024fa670701c8f7.fa6f9febce14995555ec2816a53bd91526cef9d2",
@@ -51092,6 +51170,8 @@
     "_raw": {},
     "_corrected": [
       "s9169 -- award-ceremony presentation slide, photographed and posted by АО «Котлин-Новатор»'s own channel."
-    ]
+    ],
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-10-06"
   }
 ]

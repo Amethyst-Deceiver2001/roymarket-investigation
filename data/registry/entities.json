@@ -59873,7 +59873,20 @@
     "_verified_against": null,
     "name_display": "IP Gabitov Radik Alferdovich",
     "aleph_matches": [],
-    "aleph_screened_at": "2026-10-03"
+    "aleph_screened_at": "2026-10-03",
+    "gur_matches": [
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/29155",
+        "caption": "GABITOV Marat Khanbalevich",
+        "own_tin": "501003306539",
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      }
+    ],
+    "gur_screened_at": "2026-10-06"
   },
   {
     "slug": "ip-popov-aleksandr-sergeevich",
@@ -82475,6 +82488,19 @@
       }
     ],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/15021",
+        "caption": "ASSOCIATION SOUTH URALS INDUSTRIAL CLUSTER OF UNMANNED AERIAL VEHICLES",
+        "own_tin": "7451471189",
+        "own_reg_number": "1247400031746",
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan Ukraine",
+        "has_confirmed_listing_language": false
+      }
+    ],
+    "gur_screened_at": "2026-10-06",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -86680,7 +86706,20 @@
         "ui_link": "https://aleph.occrp.org/entities/dba62cb3a0941a7ff4effb86e565882254fefb36.d87504266a6e0a27e27df2f3ddd1996ac11d95af"
       }
     ],
-    "aleph_screened_at": "2026-09-19"
+    "aleph_screened_at": "2026-09-19",
+    "gur_matches": [
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/15554",
+        "caption": "LIMITED LIABILITY COMPANY DIGITAL DEVELOPMENT AGENCY",
+        "own_tin": "5190091997",
+        "own_reg_number": "1225100003831",
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan Ukraine",
+        "has_confirmed_listing_language": false
+      }
+    ],
+    "gur_screened_at": "2026-10-06"
   },
   {
     "slug": "fgup-zashchitainfotrans",
@@ -86880,7 +86919,9 @@
         "ui_link": "https://aleph.occrp.org/entities/76618632.5150b76875e7966346131ab24ef093fb92cdf064"
       }
     ],
-    "aleph_screened_at": "2026-09-19"
+    "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-06"
   },
   {
     "slug": "ooo-proizvodstvo-obuchayushchikh-sistem-i-tekhnologiy",
@@ -89464,7 +89505,9 @@
     "_verified_against": null,
     "name_display": "Obshchestvenno poleznyy fond nauchno-tekhnologicheskogo i sotsialno-ekonomicheskogo razvitiya «Sarmat»",
     "aleph_matches": [],
-    "aleph_screened_at": "2026-09-19"
+    "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-06"
   },
   {
     "slug": "ano-tsvp-zov-aa",
@@ -91066,7 +91109,9 @@
         "ui_link": "https://aleph.occrp.org/entities/ru-59549040039d9fd60199c5b9bb33f69eb43dde02.b172d38018deed8e998454d1c39fe2d00a305c72"
       }
     ],
-    "aleph_screened_at": "2026-10-03"
+    "aleph_screened_at": "2026-10-03",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-06"
   },
   {
     "slug": "ooo-mo-pniei-kraskript",
@@ -91969,6 +92014,19 @@
     },
     "_corrected": "05.10-06.10.2026: the dealer was already on file in prose (3mx's related_entities, s1388). Prompted by the user's pointer that «МАКС911» is a listed dealer on 3mx.ru/dilery/, the shop-front photo (ru3mx/415) was looked at in full, the post saved, and the ЕГРИП extract pulled; the dealer now has a record because the link to the maker is documented on the maker's own page.",
     "name_display": "IP Korovkin Aleksandr Anatolevich",
+    "aleph_matches": [
+      {
+        "entity_id": "2b69b84e2a0df5eb3ecbcf694261714effeae107.6f613597d2a9924c212872382f4cefba1f8ff3cf",
+        "caption": "КОРОВКИН АЛЕКСАНДР АНАТОЛЬЕВИЧ",
+        "schema": "Person",
+        "score": 7.1074,
+        "dataset_label": "Russian companies (OGRN, 2016)",
+        "dataset_category": "company",
+        "countries": [],
+        "ui_link": "https://aleph.occrp.org/entities/2b69b84e2a0df5eb3ecbcf694261714effeae107.6f613597d2a9924c212872382f4cefba1f8ff3cf"
+      }
+    ],
+    "aleph_screened_at": "2026-10-06",
     "gur_matches": [
       {
         "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/28515",
@@ -92156,6 +92214,61 @@
       }
     ],
     "_corrected": "06.10.2026: the dealer was on file in prose only (3mx's related_entities, s1381). Same treatment as «Макс 911»: ЕГРИП extract pulled, the maker's channel searched (posts 416 and 683), the brand's site captured. The Wildberries seller page is the document that ties the ИНН to the brand; the brand's outlets are not tied to the sole trader.",
-    "name_display": "IP Artemeva Viktoriya Mikhaylovna"
+    "name_display": "IP Artemeva Viktoriya Mikhaylovna",
+    "aleph_matches": [],
+    "aleph_screened_at": "2026-10-06",
+    "gur_matches": [
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/17075",
+        "caption": "NIKIFOROVA Victoria Vitalievna",
+        "own_tin": null,
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/27067",
+        "caption": "SERDYUKOVA Viktoria Alexandrovna",
+        "own_tin": null,
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/8974",
+        "caption": "DAINEKO Victoria Petrovna",
+        "own_tin": null,
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/29143",
+        "caption": "SAVRUK Viktoriya Orestovna",
+        "own_tin": null,
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/2882",
+        "caption": "ABRAMCHENKO Viktoriya Valerievna",
+        "own_tin": null,
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      }
+    ],
+    "gur_screened_at": "2026-10-06"
   }
 ]
