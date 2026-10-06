@@ -1,6 +1,6 @@
 # Evidence packet: ООО «Гагаринг»
 
-**DRAFT, generated 02.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
+**DRAFT, generated 06.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
 
 ## 1. Identification
 
@@ -34,11 +34,13 @@ Weekly identifier check of the official lists, run of 02.10.2026. "No ID match" 
 
 | As of | Owner | Share | Personal ИНН | Source |
 |---|---|---|---|---|
-| 04.09.2023 | Барашков Александр Сергеевич | 50.5% | 252201766438 | [E3] |
-| 04.09.2023 | Александров Алексей Витальевич | 49.5% | 231015713057 | [E3] |
 | 31.12.2025 | Барашков Александр Сергеевич | 50.0% | — | [E1] |
 | 31.12.2025 | Александров Алексей Витальевич | 50.0% | — | [E1] |
+| 15.04.2026 | Барашков Александр Сергеевич | 50.5% | 252201766438 | [E3] |
+| 15.04.2026 | Александров Алексей Витальевич | 49.5% | 231015713057 | [E3] |
 | 15.04.2026 | Александров Алексей Витальевич 49.5% (₽4 950) / Барашков Александр Сергеевич 50.5% (₽5 050) | — | — | [E4] |
+| 04.10.2026 | Барашков Александр Сергеевич | 50.5% | 252201766438 | [E5] |
+| 04.10.2026 | Александров Алексей Витальевич | 49.5% | 231015713057 | [E5] |
 
 | As of | General director | Source |
 |---|---|---|
@@ -46,72 +48,73 @@ Weekly identifier check of the official lists, run of 02.10.2026. "No ID match" 
 
 Identifying detail on file for the people above (field-level sources are not recorded for date and place of birth; confirm each against a document before use):
 
-- Александров Алексей Витальевич: ИНН 027313454520
-- Барашков Александр Сергеевич: ДР 03.11.1979; born Хабаровск / Khabarovsk; ИНН 252201766438
+- Александров Алексей Витальевич: ИНН 231015713057
+- Барашков Александр Сергеевич: ДР 03.11.1979; ИНН 252201766438
 
 ## 4. Filed accounts and staff
 
 | Year | Revenue | Net profit | Source |
 |---|---|---|---|
-| 2023 | ₽1.2m | −₽0.5m | [E5] |
-| 2024 | ₽84.5m | ₽20.9m | [E6] |
-| 2025 | ₽2,159.0m | ₽664.2m | [E7] |
+| 2023 | ₽1.2m | −₽0.5m | [E6] |
+| 2024 | ₽84.5m | ₽20.9m | [E7] |
+| 2025 | ₽2,159.0m | ₽664.2m | [E8] |
+
+- FY2024: As filed in the FY2024 accounts. The FY2025 filing restates 2024 net profit as ₽15 361 тыс. (₽15,361,000); revenue ₽84 503 тыс. is unchanged. Read from the signed filing, which reports in тыс. руб.
 
 - Staff 4 as of 31.12.2023 [E1]
 - Staff 34 as of 31.12.2024 [E1]
 - Staff 105 as of 31.12.2025 [E1]
-- Staff 74 as of 31.12.2025 [E8]
+- Staff 74 as of 31.12.2025 [E9]
 
 ## 5. Tie to ЦБСТ
 
-- **Documented**: Named directly as "Резидент ЦБСТ" (ЦБСТ resident) in the headline and lede of a post on ЦБСТ's own Telegram channel. [E9]
-- Programme membership: Резидентство ЦБСТ as resident, 02.05.2026, graded Documented [E9]
+- **Documented**: Named directly as "Резидент ЦБСТ" (ЦБСТ resident) in the headline and lede of a post on ЦБСТ's own Telegram channel. [E10]
+- Programme membership: Резидентство ЦБСТ as resident, 02.05.2026, graded Documented [E10]
 
 Other links in the record:
 
 | Link | Grade | Source |
 |---|---|---|
-| АО «Площадь» related to ООО «Гагаринг» (co-exhibited) | Reported | [E10] |
-| ООО «Гагаринг» founded Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭР, РЭБ и связи) | Documented | [E11] |
-| ООО «Гагаринг» founded АНО ДПО «Образовательный центр Гагаринг» | Documented | [E1] |
+| АО «Площадь» related to ООО «Гагаринг» (co-exhibited) | Reported | [E11] |
+| ООО «Гагаринг» is a recorded participant of Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭР, РЭБ и связи) | Documented | [E12] |
+| ООО «Гагаринг» is a recorded participant of АНО ДПО «Образовательный центр Гагаринг» | Documented | [E1] |
 | ООО «Гагаринг» owns АНО ДПО «Образовательный центр Гагаринг» (учредитель) | Documented | [E1] |
-| ООО «Гагаринг» related to АО «Площадь» (co-exhibited) | Reported | [E10] |
+| ООО «Гагаринг» related to АО «Площадь» (co-exhibited) | Reported | [E11] |
 | ООО «Гагаринг» owns ООО «Авирон» (доля участия 36,8%) | Documented | [E1] |
-| ООО «Гагаринг» founded ООО «Интел Дрон» | Documented | [E12] |
-| ООО «Гагаринг» owns ООО «Интел Дрон» (доля участия 50%) | Documented | [E1] |
-| ООО «Гагаринг» founded Общество с ограниченной ответственностью «Лаборатория Янгеля» | Documented | [E13] |
-| ООО «Гагаринг» owns Общество с ограниченной ответственностью «Лаборатория Янгеля» (доля участия 50%) | Documented | [E13] |
-| ООО «Гагаринг» founded ООО «НПО Эйлер» (Научно-производственное объединение «Эйлер») | Documented | [E14] |
+| ООО «Гагаринг» is a recorded participant of ООО «Интел Дрон» | Documented | [E13] |
+| ООО «Гагаринг» owns ООО «Интел Дрон» (доля участия 40% (₽4 000)) | Documented | [E13] |
+| ООО «Гагаринг» is a recorded participant of Общество с ограниченной ответственностью «Лаборатория Янгеля» | Documented | [E14] |
+| ООО «Гагаринг» owns Общество с ограниченной ответственностью «Лаборатория Янгеля» (доля участия 50%) | Documented | [E14] |
+| ООО «Гагаринг» is a recorded participant of ООО «НПО Эйлер» (Научно-производственное объединение «Эйлер») | Documented | [E15] |
 | ООО «Гагаринг» owns ООО «НПО Эйлер» (Научно-производственное объединение «Эйлер») (доля участия 50%) | Documented | [E1] |
-| ООО «Гагаринг» resident of Резидентство ЦБСТ (resident) | Documented | [E9] |
+| ООО «Гагаринг» resident of Резидентство ЦБСТ (resident) | Documented | [E10] |
 
 ## 6. Products and what is said about their use
 
 - Система связи «Кузнечик» [E1]
-- Детектор портативный «ЮРКА 1.2» [E15]
-- Детектор портативный «ЮРКА 1.2ВП» [E16]
-- Детектор портативный «ЮРКА 1.2СК» [E17]
-- Видеоприемник выносной «СОВА» [E18]
-- РЭБ-глушитель «Звезда 1» [E19]
-- РЭБ-глушитель «Звезда 2» [E19]
-- Вынос FPV-передатчика «Нить» [E19]
-- Дрон-детектор «ГОРН» [E20]
-- Режим «Подхват» (модуль связи «Кузнечик») [E9]
-- БПЛА разведчик «СКАУТ-1» [E21]
-- БПЛА квадрокоптер «СКАУТ-10» [E21]
-- БПЛА самолёт «СКАУТ-5» [E21]
-- FPV дрон «Секира» 10/13 [E21]
-- Беспилотная гусеничная платформа «Молот» [E21]
-- Самоходная тележка «Молекула» [E21]
-- Универсальная гусеничная платформа «Атом» [E21]
-- FPV дрон «Грузовичок» (доставка) [E21]
-- Комплекс датчиков сигнализационный «Капкан» [E21]
-- Персональный детектор дронов «Сонар-2» [E22]
-- Детектор Анализатор Радио Сигналов «ДАРС» [E22]
-- Изделие «РОСЯНКА 12х76» [E22]
-- Набор «Дронобой» [E22]
-- Оптоволоконный вынос Совы «ОВС-1» [E23]
-- invention № RU2792246C1 «Способ и система плазменной сварки плавящимся электродом», holder Барашков Александр Сергеевич (RU) [E24]
+- Детектор портативный «ЮРКА 1.2» [E16]
+- Детектор портативный «ЮРКА 1.2ВП» [E17]
+- Детектор портативный «ЮРКА 1.2СК» [E18]
+- Видеоприемник выносной «СОВА» [E19]
+- РЭБ-глушитель «Звезда 1» [E20]
+- РЭБ-глушитель «Звезда 2» [E20]
+- Вынос FPV-передатчика «Нить» [E20]
+- Дрон-детектор «ГОРН» [E21]
+- Режим «Подхват» (модуль связи «Кузнечик») [E10]
+- БПЛА разведчик «СКАУТ-1» [E22]
+- БПЛА квадрокоптер «СКАУТ-10» [E22]
+- БПЛА самолёт «СКАУТ-5» [E22]
+- FPV дрон «Секира» 10/13 [E22]
+- Беспилотная гусеничная платформа «Молот» [E22]
+- Самоходная тележка «Молекула» [E22]
+- Универсальная гусеничная платформа «Атом» [E22]
+- FPV дрон «Грузовичок» (доставка) [E22]
+- Комплекс датчиков сигнализационный «Капкан» [E22]
+- Персональный детектор дронов «Сонар-2» [E23]
+- Детектор Анализатор Радио Сигналов «ДАРС» [E23]
+- Изделие «РОСЯНКА 12х76» [E23]
+- Набор «Дронобой» [E23]
+- Оптоволоконный вынос Совы «ОВС-1» [E24]
 
 In the company's own words or the press (verbatim, Russian original first):
 
@@ -127,24 +130,24 @@ In the company's own words or the press (verbatim, Russian original first):
 >
 > Working translation: The Kuznechik prototype was unveiled back in 2023, but large-scale deliveries to the troops began only after the AFU incursion into Kursk oblast. According to information we get from our military, FPV drones equipped with Kuznechiks have struck hundreds of units of military equipment, including heavily armored Western-made examples. [E27]
 
-> «Система связи и управление «Кузнечик» для FPV-дронов активно используется российскими военными в зоне специальной военной операции на Украине... Барашков отметил, что не может раскрывать количество поставленных систем и их распределение по подразделениям, так как эта информация является закрытой.»
+> «Система связи и управления «Кузнечик» для FPV-дронов активно используется российскими военными в зоне специальной военной операции на Украине, сообщает ТАСС. [...] Он также сообщил, что не может раскрывать количество поставленных систем и их распределение по подразделениям, так как эта информация является закрытой.»
 >
-> Working translation: The Kuznechik communications/control system for FPV drones is actively used by Russian forces in the SVO zone... Barashkov noted he cannot disclose the quantity of systems delivered or their distribution among units, as this information is classified. [E28]
+> Working translation: The Kuznechik communications and control system for FPV drones is actively used by Russian forces in the zone of the special military operation in Ukraine, TASS reports. [...] He also said he cannot disclose the number of systems delivered or their distribution among units, because this information is classified. [E28]
 
 > «Выражаю огромную благодарность Товарищу Александру Сергеевичу и всему коллективу лаборатории «Гагаринг» за предоставленные «Кузнечики» в количестве 500 шт. Благодарим за постоянную поддержку!»
 >
 > Working translation: I express my deep gratitude to Comrade Aleksandr Sergeyevich and the whole Gagaring lab team for the 500 Kuznechik units provided. Thank you for your constant support! [E29]
 
-- State programme or association: Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭБ) (член ассоциации (per Гагаринг's own FY2025 audit report, related-party/affiliated-organizations disclosure)) [E1]
+- State programme or association: Ассоциация разработчиков перспективных систем радиоэлектронной разведки, радиоэлектронной борьбы и связи (РЭБ) (Listed among related parties in Гагаринг's FY2025 audit report (related-party disclosure); the report does not say «член» or «участник». That Гагаринг is a founder/participant of the association is shown by the association's own ЕГРЮЛ extract (the «Сведения об участниках / учредителях» section).) [E1]
 - State programme or association: Субсидия на возмещение затрат, связанных с приобретением оборудования (Получатель субсидии в размере 8 594 804,00 руб. на возмещение затрат, связанных с приобретением «Установки послойного селективного лазерного сплавления металлических порошков 3DLAM Mid.», дата ввода в эксплуатацию 18.07.2025г. (metal-powder selective laser melting / metal 3D-printing machine)) [E1]
-- State programme or association: Атлас промышленности ГИСП (Государственная информационная система промышленности) (Company listed in the Ministry of Industry and Trade's official industrial-facility geodatabase (orbis_id 20052703), classified under industry 'Радиоэлектронная промышленность' (radio-electronics industry) with primary ОКВЭД 26.11 — independently corroborates the entity's ИНН/ОГРН/address (matches EGRUL exactly) and its declared radio-electronics/UAV-component industry classification via a second, unrelated federal data source. Geolocated point (39.128152, 45.032572) falls within the registered Пашковский жилой массив address area of Краснодар. Record also confirms no official company website (site: 'Нет').) [E30]
+- State programme or association: Атлас промышленности ГИСП (Государственная информационная система промышленности) (Company listed in the Ministry of Industry and Trade's industrial-facility geodatabase (record id 20052703), industry 'Радиоэлектронная промышленность', primary ОКВЭД 26.11. The record prints the same ИНН and ОГРН as the ЕГРЮЛ; its address line is «350912, КРАСНОДАРСКИЙ КРАЙ, КРАСНОДАР Г., УЛ. ИМ. ФАДЕЕВА (ПАШКОВСКИЙ ЖИЛОЙ МАССИВ ТЕР.), Д. 429/3, ПОМЕЩ. 11», without the «комната 4» that the extract and the audit report carry. It gives a point (39.128152, 45.032572); the record does not say what the point lies within. Its site field reads «Нет», which does not confirm the website https://gagaring.ru/ given elsewhere.) [E30]
 - State programme or association: Хакатон «Воронка инновационных стартапов» — партнёр (Фонд развития инноваций Краснодарского края) [E31]
 
 ## 7. Draft statement of reasons
 
 *Facts only, in the order an EU listing puts them. The submitter chooses the legal route (for example the asset-freeze criteria of Council Decision 2014/145/CFSP, or the military end-user list in Annex IV to Council Regulation (EU) No 833/2014) and writes the conclusion.*
 
-OOO «Gagaring» (ООО «Гагаринг»; ИНН 2312321660; ОГРН 1232300051235) is a company registered in Russia on 04.09.2023, in Краснодар. Its general director is Барашков Александр Сергеевич [E3]. Its owners are Александров Алексей Витальевич 49.5% (₽4 950) / Барашков Александр Сергеевич 50.5% (₽5 050) [E4]. Its tie to the Centre for Unmanned Systems and Technologies (АНО «ЦБСТ»): Named directly as "Резидент ЦБСТ" (ЦБСТ resident) in the headline and lede of a post on ЦБСТ's own Telegram channel. [E9]. Its products include Система связи «Кузнечик», Детектор портативный «ЮРКА 1.2», Детектор портативный «ЮРКА 1.2ВП», Детектор портативный «ЮРКА 1.2СК», Видеоприемник выносной «СОВА», РЭБ-глушитель «Звезда 1» [E1]. Its filed revenue for 2025 was ₽2,159.0m [E7].
+OOO «Gagaring» (ООО «Гагаринг»; ИНН 2312321660; ОГРН 1232300051235) is a company registered in Russia on 04.09.2023, in Краснодар. Its general director is Барашков Александр Сергеевич [E3]. Its owners, as of 04.10.2026, are Барашков Александр Сергеевич (50.5%), Александров Алексей Витальевич (49.5%) [E5]. Another document gives different shares as of 31.12.2025 [E1]; the two are not reconciled (see the open questions). Its tie to the Centre for Unmanned Systems and Technologies (АНО «ЦБСТ»): Named directly as "Резидент ЦБСТ" (ЦБСТ resident) in the headline and lede of a post on ЦБСТ's own Telegram channel. [E10]. Its products include Система связи «Кузнечик», Детектор портативный «ЮРКА 1.2», Детектор портативный «ЮРКА 1.2ВП», Детектор портативный «ЮРКА 1.2СК», Видеоприемник выносной «СОВА», РЭБ-глушитель «Звезда 1» [E1]. Its filed revenue for 2025 was ₽2,159.0m [E8].
 
 [Conclusion and criterion: for the submitter.]
 
@@ -154,30 +157,30 @@ Every document cited above. Telegram posts and web pages are archived and hashed
 
 | No. | Document | Public link | SHA-256 (first 16) | Internal id |
 |---|---|---|---|---|
-| E1 | Fedresurs register record, 03.09.2026 | none public; copy on file | `17e88a3d2a21fd13` | s5333 |
-| E2 | Press article, 25.08.2026 | none public; copy on file | `682bb10c75102205` | s5420 |
+| E1 | Auditor's report on the annual accounts, as published on Fedresurs, FY 2025, 03.09.2026 | none public; copy on file | `17e88a3d2a21fd13` | s5333 |
+| E2 | Job vacancy posted on hh.ru, 25.08.2026 | none public; copy on file | `682bb10c75102205` | s5420 |
 | E3 | Company register extract (ЕГРЮЛ, Federal Tax Service) for ОГРН 1232300051235, 23.08.2026 | none public; copy on file | `0c46187cf4eff1aa` | s0455 |
 | E4 | Company register extract (ЕГРЮЛ, Federal Tax Service) for ИНН 2312321660, 07.09.2026 | none public; copy on file | `ac78145a101678b0` | s6776 |
-| E5 | Annual accounts filed with the Federal Tax Service, ИНН 2312321660, FY 2023 | none public; copy on file | `dbafc03df0b303a8` | s0241 |
-| E6 | Annual accounts filed with the Federal Tax Service, ИНН 2312321660, FY 2024 | none public; copy on file | `ca59315c09037ef5` | s0242 |
-| E7 | Annual accounts filed with the Federal Tax Service, ИНН 2312321660, FY 2025 | none public; copy on file | `e1cba6da005603b3` | s0243 |
-| E8 | Archived document, 08.09.2026 | none public; copy on file | `1f94bcca764f196e` | s7361 |
-| E9 | Telegram, @ANO_CBST, post 2109, 02.05.2026 | https://t.me/ANO_CBST/2109 | `45c39c28c0b02ac4` | s5440 |
-| E10 | Telegram, @projectArchangel, post 4504, 05.06.2024 | https://t.me/projectArchangel/4504 | `7f6630cce64839de` | s8067 |
-| E11 | Company register extract (ЕГРЮЛ, Federal Tax Service) for ИНН 2312325336, 07.09.2026 | none public; copy on file | `ec555eb6bc72fd9f` | s6777 |
-| E12 | Company register extract (ЕГРЮЛ, Federal Tax Service) for ИНН 7448259249, 07.09.2026 | none public; copy on file | `df9834d989ff312b` | s6815 |
-| E13 | Company register extract (ЕГРЮЛ, Federal Tax Service) for ИНН 2373028450, 08.09.2026 | none public; copy on file | `7f553de17160b885` | s7362 |
-| E14 | Company register extract (ЕГРЮЛ, Federal Tax Service) for ИНН 7100069249, 07.09.2026 | none public; copy on file | `355d7dd81b79a52f` | s6814 |
-| E15 | «Детектор портативный ЮРКА 1.2 | Гагаринг», web page on gagaring.ru, archived 23.09.2026 | https://gagaring.ru/product/detektor-portativnyy-yurka-1-2-DY12001 | `e4ace8733658aee6` | s8007 |
-| E16 | «Детектор портативный ЮРКА 1.2ВП с видеоперехватом | Гагаринг», web page on gagaring.ru, archived 23.09.2026 | https://gagaring.ru/product/detektor-portativnyy-yurka-1-2vp-s-videoperehvatom-DY12V01 | `83b053f5f0001a68` | s8009 |
-| E17 | «Детектор портативный ЮРКА 1.2СК с сухим контактом для РЭБ | Гагаринг», web page on gagaring.ru, archived 23.09.2026 | https://gagaring.ru/product/detektor-portativnyy-yurka-1-2sk-s-suhim-kontaktom-dlya-reb-DY12K01 | `f5dd0a2a598cad69` | s8008 |
-| E18 | «Видеоприёмник выносной СОВА 5.8 5.8 с кабелем | Гагаринг», web page on gagaring.ru, archived 23.09.2026 | https://gagaring.ru/product/videopriemnik-vynosnoy-sova-5-8-5-8-s-kabelem-RS58581 | `e458ab882b69be5b` | s8010 |
-| E19 | Telegram, @my_el_lab, post 950, 20.10.2024 | https://t.me/my_el_lab/950 | `1df1b1b6f8b4ba26` | s5437 |
-| E20 | Telegram, @my_el_lab, post 2218, 28.07.2025 | https://t.me/my_el_lab/2218 | `8e73cd120585364b` | s5439 |
-| E21 | Telegram, @my_el_lab, posts read together | https://t.me/my_el_lab | `e8a38eb88d61fa94` | s5444 |
-| E22 | Telegram, @my_el_lab, posts read together | https://t.me/my_el_lab | `8bc0df7a03809895` | s5445 |
-| E23 | Telegram, @my_el_lab, post 3003, 06.02.2026 | https://t.me/my_el_lab/3003 | `55f52878ee3cff9f` | s5442 |
-| E24 | Open government dataset, 24.08.2026 | none public; copy on file | `0ce3979342ee7dcf` | s1170 |
+| E5 | Company register extract (ЕГРЮЛ, Federal Tax Service) for ИНН 2312321660, 04.10.2026 | none public; copy on file | `06af0b86cad69495` | s9126 |
+| E6 | Annual accounts filed with the Federal Tax Service, ИНН 2312321660, FY 2023 | none public; copy on file | `dbafc03df0b303a8` | s0241 |
+| E7 | Annual accounts filed with the Federal Tax Service, ИНН 2312321660, FY 2024 | none public; copy on file | `ca59315c09037ef5` | s0242 |
+| E8 | Annual accounts filed with the Federal Tax Service, ИНН 2312321660, FY 2025 | none public; copy on file | `e1cba6da005603b3` | s0243 |
+| E9 | Archived document, 08.09.2026 | none public; copy on file | `1f94bcca764f196e` | s7361 |
+| E10 | Telegram, @ANO_CBST, post 2109, 02.05.2026 | https://t.me/ANO_CBST/2109 | `45c39c28c0b02ac4` | s5440 |
+| E11 | Telegram, @projectArchangel, post 4504, 05.06.2024 | https://t.me/projectArchangel/4504 | `7f6630cce64839de` | s8067 |
+| E12 | Company register extract (ЕГРЮЛ, Federal Tax Service) for ИНН 2312325336, 07.09.2026 | none public; copy on file | `ec555eb6bc72fd9f` | s6777 |
+| E13 | Company register extract (ЕГРЮЛ, Federal Tax Service) for ИНН 7448259249, 07.09.2026 | none public; copy on file | `df9834d989ff312b` | s6815 |
+| E14 | Company register extract (ЕГРЮЛ, Federal Tax Service) for ИНН 2373028450, 08.09.2026 | none public; copy on file | `7f553de17160b885` | s7362 |
+| E15 | Company register extract (ЕГРЮЛ, Federal Tax Service) for ИНН 7100069249, 07.09.2026 | none public; copy on file | `355d7dd81b79a52f` | s6814 |
+| E16 | «Детектор портативный ЮРКА 1.2 | Гагаринг», web page on gagaring.ru, archived 23.09.2026 | https://gagaring.ru/product/detektor-portativnyy-yurka-1-2-DY12001 | `e4ace8733658aee6` | s8007 |
+| E17 | «Детектор портативный ЮРКА 1.2ВП с видеоперехватом | Гагаринг», web page on gagaring.ru, archived 23.09.2026 | https://gagaring.ru/product/detektor-portativnyy-yurka-1-2vp-s-videoperehvatom-DY12V01 | `83b053f5f0001a68` | s8009 |
+| E18 | «Детектор портативный ЮРКА 1.2СК с сухим контактом для РЭБ | Гагаринг», web page on gagaring.ru, archived 23.09.2026 | https://gagaring.ru/product/detektor-portativnyy-yurka-1-2sk-s-suhim-kontaktom-dlya-reb-DY12K01 | `f5dd0a2a598cad69` | s8008 |
+| E19 | «Видеоприёмник выносной СОВА 5.8 5.8 с кабелем | Гагаринг», web page on gagaring.ru, archived 23.09.2026 | https://gagaring.ru/product/videopriemnik-vynosnoy-sova-5-8-5-8-s-kabelem-RS58581 | `e458ab882b69be5b` | s8010 |
+| E20 | Telegram, @my_el_lab, post 950, 20.10.2024 | https://t.me/my_el_lab/950 | `1df1b1b6f8b4ba26` | s5437 |
+| E21 | Telegram, @my_el_lab, post 2218, 28.07.2025 | https://t.me/my_el_lab/2218 | `8e73cd120585364b` | s5439 |
+| E22 | Telegram, @my_el_lab, posts read together | https://t.me/my_el_lab | `e8a38eb88d61fa94` | s5444 |
+| E23 | Telegram, @my_el_lab, posts read together | https://t.me/my_el_lab | `8bc0df7a03809895` | s5445 |
+| E24 | Telegram, @my_el_lab, post 3003, 06.02.2026 | https://t.me/my_el_lab/3003 | `55f52878ee3cff9f` | s5442 |
 | E25 | Press article, 09.07.2026 | none public; copy on file | `36714211e382f182` | s5428 |
 | E26 | Telegram, @my_el_lab, post 4297, 10.08.2026 | https://t.me/my_el_lab/4297 | `70dc71feaeab0097` | s5433 |
 | E27 | Press article, 02.11.2024 | none public; copy on file | `5b4efd0b2ec65048` | s5435 |
@@ -212,3 +215,6 @@ Research notes as the registry holds them. Some may weaken a line above; read th
 - cbst_tie remains UNRESOLVED — the single most consequential open question for this project specifically, since it determines whether Гагаринг belongs to the ЦБСТ/РОЙ.МАРКЕТ network this investigation is about, or is a parallel/independent UAV-electronics producer. Attempted 2026-09-04: fetched роймаркет.рф directly — the live public page is a supplier APPLICATION form (dual-use-goods sales channel, positioned as a Wildberries/Ozon alternative for professional buyers), not a browsable/searchable vendor catalog; no seller-listing search was possible from it, and no mention of Гагаринг appears on the application page itself. Per Безруков's own 29.12.2025 ТАСС quote (already on file elsewhere in this project), the actual marketplace is a gated pilot used by specific military units, not a public catalog — so this negative result is INCONCLUSIVE, not a real absence-of-tie finding. No dedicated screening script exists for this platform (unlike wb_watch's WB-seller matching, screen_wb.py, already run clean). A real answer needs either a buyer-side login (not available to this investigation) or a future public catalog/press leak naming its actual vendor roster. RESOLVED 2026-09-04 (user tip, not this investigation's own search): ЦБСТ's OWN channel (t.me/ANO_CBST/2109, 02.05.2026, s5440) directly names «Лаборатория Гагаринг» a "Резидент ЦБСТ" in its own headline/lede — a third-party primary-source confirmation, highest confidence tier available. See cbst_tie field. РОЙ.МАРКЕТ-specific vendor status (whether Гагаринг actually SELLS through the platform, as opposed to being a ЦБСТ resident generally) remains untested — роймаркет.рф itself is still not browsable/searchable without a buyer login, so that narrower question stays open even though the broader ЦБСТ-residency question is now closed.
 - Кузнечик origin story, self-told (25.09.2024, in a shared community chat rather than their own channel): first shown at Дронница 2023, and for over a year afterward unnamed parties ("нас просили не светить изделие и рабочие частоты") asked Гагаринг NOT to publicize the product or its working frequencies, while promised interest from major BPLA manufacturers never materialized — Гагаринг decided to sell it publicly only after competing products emerged in the meantime. Suggests an informal/official-channel involvement or expectation of exclusivity that went unrewarded before commercialization. Names "Флэш" as an early combat tester who posted a public review shortly after — not identified against this project's people.json, a lead for a future pass. (s5441)
 - A new development, first appearing 2026-08-28 (16 days after defunding the earlier «Последний рубеж» training program, already on file): Гагаринг launched an active recruitment campaign for its own armed detachment, «отряд Гагаринг», via @gagaring_recruit_bot, for МОГ (Мобильные огневые группы/Mobile Fire Groups) work. Explicitly structured as a sub-unit of БАРС (Боевой армейский резерв страны — a real Russian Armed Forces reservist framework), legally scoped to territorial counter-UAV defense of Краснодарский край specifically ("Служба на территории Краснодарского края" per the contract wording), not frontline deployment — recruiting via Cossack-structure channels as well. Барашков/Гагаринг explicitly denies PMC/Wagner-comparison framing ("Мы не создаем ЧВК") while acknowledging others draw that comparison, and claims state approval ("нам это одобрили"). Over 1,000 applications received within the first week. Recruits women too, with a stated need for medics. This is a materially new development — Гагаринг standing up its own formal, legally-structured reservist detachment, not merely selling equipment to existing units — worth its own dedicated follow-up (confirm the БАРС sub-unit's formal registration/legal basis, track its actual deployment). (s5447)
+- The auditor's report on FY2025 prints other holdings (Авирон 36.8%, Эйлер 50%, Лаборатория Янгеля 50% from s7362) that have not been checked against those companies' own ЕГРЮЛ extracts; the Интел Дрон share (50% in the report) is 40% in the register, so the others may differ as well. (s5333)
+- Ownership conflict, status 04.10.2026: the register (re-read 04.10.2026) gives 49.5/50.5 since the entry of 15.04.2026; the FY2025 audit report gives 50/50 as of 31.12.2025. These may describe different dates: a 0.5% transfer entered on 15.04.2026 would produce exactly this register picture, and the audit report (signed 04.06.2026) would then be stating the year-end split without noting the later change. This reading is NOT confirmed: no document on file records a transfer or the pre-April split. A ЕГРЮЛ extract shows current records only; the earlier split would need a register entry history (ГРН 2262300538091 and its predecessor record, via a request to the inspectorate) or the 31.03.2026 version of the audit report. (s9126)
+- Patent RU2792246C1 (plasma welding with a consumable electrode, published 21.03.2023, patentee «Барашков Александр Сергеевич (RU)») was recorded under this company from a name-only match in the Rospatent bulk search (s1170): the entry prints no ИНН, address or date of birth, and a welding method is not a company product. Removed from patents[] on 05.10.2026 after the packet check; not shown to be this person's or this company's. (s1170)

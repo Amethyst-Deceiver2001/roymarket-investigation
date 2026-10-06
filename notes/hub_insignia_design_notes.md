@@ -1,3 +1,5 @@
+> **STATUS (06.10.2026): historical.** This log describes the old graph explorer, retired 02.10.2026 (its page is in `exhibits/archive/site_2026-10-02/`; do not restore it). The artifact links below are for that retired page. The hub badge (offensive / defensive / dual) was a keyword read over each entity's product text, labelled a presentation aid; it had no consumer after the explorer went, and it **was removed from the graph on 06.10.2026** (`classify_variant()` deleted, `variant` dropped from the node contract, schema version 13): characterising a company as «offensive» without a document is not something a reader page should carry. The design reasoning and the numbered principles below stay as rationale. Principles 3, 4 and 9 are carried into `design/README.md`. The reader grades (documented, reported, not documented) and the sanctions-only red in the design system replace the badge's role.
+
 # Hub Insignia — design notes
 
 Started as a standalone mockup:

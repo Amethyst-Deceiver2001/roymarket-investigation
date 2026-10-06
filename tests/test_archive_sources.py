@@ -64,7 +64,18 @@ def test_telegram_capture_never_stale_and_variant_follows_base():
         "https://t.me/a/2?embed=1&mode=tme": {"tier": 1, "kind": "telegram", "captures": [],
                                               "variant_of": "https://t.me/a/2"},
         "https://t.me/a/2": {"tier": 1, "kind": "telegram", "captures": []}}}
-    assert A.pending(data, {1}, today) == ["https://t.me/a/2", "https://t.me/a/2?embed=1&mode=tme"]
+    assert A.pending(data, {1}, today) == [], "Telegram posts are not archived by default (user, 03.10.2026)"
+    A.INCLUDE_TELEGRAM = True
+    try:
+        assert A.pending(data, {1}, today)[0] == "https://t.me/a/2"
+        _telegram_variant_checks(data, today)
+    finally:
+        A.INCLUDE_TELEGRAM = False
+
+
+def _telegram_variant_checks(data, today):
+    # a captured post whose saved text is unavailable keeps its embed view (cannot rule out truncation)
+    assert "https://t.me/a/1?embed=1&mode=tme" in A.pending(data, {1}, today)
 
 
 def test_tiers():
@@ -109,7 +120,12 @@ def test_pending_skips_fresh_and_dropped():
         "e": {"tier": 3, "kind": "web", "captures": []},
         "f": {"tier": 2, "kind": "archived", "captures": [{"method": "cited"}]},
     }}
-    assert A.pending(data, {1, 2}, today) == ["c", "b"], "telegram first, stale capture re-saved"
+    assert A.pending(data, {1, 2}, today) == ["b"], "Telegram skipped by default, stale capture re-saved"
+    A.INCLUDE_TELEGRAM = True
+    try:
+        assert A.pending(data, {1, 2}, today) == ["c", "b"], "with the switch on: telegram first, stale capture re-saved"
+    finally:
+        A.INCLUDE_TELEGRAM = False
 
 
 if __name__ == "__main__":

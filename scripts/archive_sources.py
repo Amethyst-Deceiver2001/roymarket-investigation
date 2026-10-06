@@ -227,14 +227,46 @@ def channel_hits(rows: list[list[str]]) -> dict[tuple[str, str, bool], dict]:
     return out
 
 
+# Telegram cuts the text in a post page's og:description at about 1,000 characters (seen
+# 03.10.2026, e.g. t.me/vadim_dzema_fpv/378). Only the embed view and the channel preview
+# carry a long post whole, so a post that long keeps its embed view in the queue.
+# user, 03.10.2026: Telegram posts are not archived on the Wayback Machine ("we're not web archiving telegram posts");
+# their preservation is our own record, the RFC 3161 stamps and a per-post evidence bundle. The code stays behind
+# --include-telegram; every Telegram URL enters a batch through pending(), so this one switch covers lookup, preview
+# pages and per-post saves.
+INCLUDE_TELEGRAM = False
+LONG_POST_BYTES = 800
+
+
+def needs_embed(data: dict, e: dict) -> bool:
+    """True when a cited post's saved text is long enough that the post page may be truncated."""
+    try:
+        sources = {s["id"]: s for s in json.loads(SOURCES_JSON.read_text(encoding="utf-8"))}
+    except (OSError, ValueError):
+        return True
+    base = data["urls"].get(e.get("variant_of") or "", {})
+    sids = base.get("source_ids") or e.get("source_ids") or []
+    if not sids:
+        return True
+    for sid in sids:
+        p = REPO / (sources.get(sid, {}).get("path") or "")
+        if p.is_file() and p.stat().st_size > LONG_POST_BYTES:
+            return True
+        if not p.is_file():
+            return True  # cannot tell: keep the embed view
+    return False
+
+
 def pending(data: dict, tiers: set[int], today: date, *, skip_looked_up: bool = False) -> list[str]:
     out = []
     for u, e in data["urls"].items():
         if e.get("dropped") or e.get("tier") not in tiers or is_current(e, today):
             continue
+        if e.get("kind") == "telegram" and not INCLUDE_TELEGRAM:
+            continue
         base = data["urls"].get(e.get("variant_of") or "")
-        if base and is_current(base, today):
-            continue  # the post itself is captured; its embed view adds nothing
+        if base and is_current(base, today) and not needs_embed(data, e):
+            continue  # the post page is captured and the post is short enough to be whole in it
         if skip_looked_up and e.get("looked_up") == today.isoformat():
             continue
         out.append(u)
@@ -649,7 +681,11 @@ def main(argv=None) -> int:
         p = sub.add_parser(name)
         p.add_argument("--limit", type=int, default=150, help="URLs per batch (default 150)")
         p.add_argument("--tier", default="1,2", help="comma-separated tiers (default 1,2)")
+        p.add_argument("--include-telegram", action="store_true",
+                       help="also archive Telegram posts (off by default, user decision 03.10.2026)")
     args = ap.parse_args(argv)
+    global INCLUDE_TELEGRAM
+    INCLUDE_TELEGRAM = bool(getattr(args, "include_telegram", False))
     sys.stdout.reconfigure(line_buffering=True)  # a batch killed midway still leaves its log
     if args.cmd == "plan":
         cmd_plan(args)

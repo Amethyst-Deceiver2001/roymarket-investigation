@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-03",
+ "generated": "2026-10-06",
  "thresholds": {
   "egrul_stale_days": 45,
   "screen_stale_days": 30,
@@ -33,16 +33,6 @@
      "code": "open_questions",
      "text": "8 open question(s)",
      "count": 8
-    },
-    {
-     "kind": "behind",
-     "code": "development",
-     "text": "КБ «СПЕКТР» announces a new Армамид propeller series for РОЙ.МАРКЕТ and Ozon «через неделю». Seller is already `listed` (post 321); the record lacks this product. Post date needs reading.",
-     "url": "https://t.me/kb_spektr/337",
-     "found": "2026-10-02",
-     "dev_kind": "update",
-     "archived": true,
-     "dev_id": "2026-10-02-03"
     }
    ]
   },
@@ -65,26 +55,6 @@
      "code": "open_questions",
      "text": "12 open question(s)",
      "count": 12
-    },
-    {
-     "kind": "behind",
-     "code": "development",
-     "text": "Сидякин proposed to chair the new Duma committee on digital development and AI, which covers marketplaces and drones (~24.09.2026). Person record has no such role.",
-     "url": "https://t.me/ANO_CBST/2565",
-     "found": "2026-10-02",
-     "dev_kind": "update",
-     "archived": true,
-     "dev_id": "2026-10-02-01"
-    },
-    {
-     "kind": "behind",
-     "code": "development",
-     "text": "ЦБСТ digest: «Овод» footage published by Минобороны; an unnamed accelerator stream III participant tested a cargo ground robot. Read in full.",
-     "url": "https://t.me/ANO_CBST/2570",
-     "found": "2026-10-02",
-     "dev_kind": "new",
-     "archived": false,
-     "dev_id": "2026-10-02-06"
     }
    ]
   },
@@ -104,19 +74,14 @@
    "flags": [
     {
      "kind": "review",
-     "code": "open_questions",
-     "text": "3 open question(s)",
-     "count": 3
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
     },
     {
-     "kind": "behind",
-     "code": "development",
-     "text": "Delivery candidate: 91st control brigade signallers got ₽1.2m of equipment from «Наша Правда», with ЕР. No product named.",
-     "url": "https://t.me/nashapravdafond/678",
-     "found": "2026-10-02",
-     "dev_kind": "new",
-     "archived": true,
-     "dev_id": "2026-10-02-04"
+     "kind": "review",
+     "code": "open_questions",
+     "text": "4 open question(s)",
+     "count": 4
     }
    ]
   },
@@ -167,9 +132,14 @@
    "flags": [
     {
      "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
      "code": "open_questions",
-     "text": "1 open question(s)",
-     "count": 1
+     "text": "2 open question(s)",
+     "count": 2
     }
    ]
   },
@@ -186,12 +156,14 @@
    "sanctioned": false,
    "flags": [
     {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "The only risky hit is ООО «Орион», ИНН 2308299972 (Rostov-on-Don, registered 04.02.2025). Ours is ИНН 7706664648. Already rejected in the record on 24.08.2026."
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
     },
     {
      "kind": "review",
@@ -214,6 +186,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -232,7 +214,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -245,7 +238,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -258,7 +262,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -271,7 +286,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -284,7 +310,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -299,10 +336,25 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
      "kind": "review",
      "code": "open_questions",
-     "text": "1 open question(s)",
-     "count": 1
+     "text": "4 open question(s)",
+     "count": 4
     }
    ]
   },
@@ -318,6 +370,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -337,7 +399,29 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -350,7 +434,29 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -364,6 +470,16 @@
    "screened": "2026-09-06",
    "sanctioned": true,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -383,7 +499,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -396,7 +523,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -411,12 +549,20 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "2 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 2,
-     "presort": "likely_false_positive",
-     "presort_why": "Both ГУР hits are other companies: «Unmanned Systems» LLC (ИНН 1831156383) and «BVS Systems» LLC (ИНН 7820061973). Ours is 7714390623. ГУР's own identifier check returned no match for either."
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
     }
    ]
   },
@@ -431,7 +577,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -445,6 +602,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -464,7 +631,24 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -480,6 +664,16 @@
    "screened": "2026-09-06",
    "sanctioned": true,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "behind",
      "code": "bfo_behind",
@@ -512,30 +706,20 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "4 open question(s)",
      "count": 4
-    },
-    {
-     "kind": "behind",
-     "code": "development",
-     "text": "«Овод» combat posts naming units (15th special-purpose drone company, 14 ОБрСпН, БАРС 8) and the fibre-optic «Провод» at 40.4 km. Maker's marketing: candidates for marketing claims, not unit records.",
-     "url": "https://t.me/tulaovod/956",
-     "found": "2026-10-02",
-     "dev_kind": "new",
-     "archived": true,
-     "dev_id": "2026-10-02-05"
-    },
-    {
-     "kind": "behind",
-     "code": "development",
-     "text": "ЦБСТ digest: «Овод» footage published by Минобороны; an unnamed accelerator stream III participant tested a cargo ground robot. Read in full.",
-     "url": "https://t.me/ANO_CBST/2570",
-     "found": "2026-10-02",
-     "dev_kind": "new",
-     "archived": false,
-     "dev_id": "2026-10-02-06"
     }
    ]
   },
@@ -550,7 +734,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -558,19 +753,29 @@
    "name": "ГК «Логос»",
    "latin": "GK «Logos»",
    "tier": "manufacturer",
-   "inn": "7839303129",
+   "inn": null,
    "channels": [
     "Logosrus"
    ],
-   "last_register_pull": "2026-09-07",
+   "last_register_pull": null,
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
     {
+     "kind": "gap",
+     "code": "identity_unresolved",
+     "text": "Brand without a resolved legal entity (recorded as unresolved)"
+    },
+    {
+     "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
+    },
+    {
      "kind": "review",
      "code": "open_questions",
-     "text": "10 open question(s)",
-     "count": 10
+     "text": "12 open question(s)",
+     "count": 12
     },
     {
      "kind": "behind",
@@ -594,6 +799,16 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -614,6 +829,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "2 open question(s)",
@@ -632,7 +857,18 @@
    "last_register_pull": "2026-09-14",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -645,7 +881,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -658,7 +905,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -673,10 +931,20 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
-     "text": "3 open question(s)",
-     "count": 3
+     "text": "6 open question(s)",
+     "count": 6
     }
    ]
   },
@@ -695,6 +963,16 @@
    "screened": "2026-09-06",
    "sanctioned": true,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -730,6 +1008,16 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "3 open question(s)",
@@ -750,6 +1038,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "4 open question(s)",
@@ -768,7 +1066,18 @@
    "last_register_pull": "2026-09-14",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -781,7 +1090,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -795,6 +1115,16 @@
    "screened": "2026-09-06",
    "sanctioned": true,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -814,7 +1144,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -828,6 +1169,16 @@
    "screened": "2026-09-06",
    "sanctioned": true,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -849,6 +1200,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -868,6 +1229,21 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -889,6 +1265,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -909,10 +1295,20 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
-     "text": "1 open question(s)",
-     "count": 1
+     "text": "2 open question(s)",
+     "count": 2
     }
    ]
   },
@@ -928,6 +1324,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -949,10 +1355,25 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
      "kind": "review",
      "code": "open_questions",
-     "text": "1 open question(s)",
-     "count": 1
+     "text": "2 open question(s)",
+     "count": 2
     }
    ]
   },
@@ -971,11 +1392,21 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "behind",
      "code": "channel_unread",
      "text": "@bpryarl is on the weekly scan but has not been read yet",
      "channel": "bpryarl",
-     "last_archived": null
+     "last_archived": 603
     }
    ]
   },
@@ -994,6 +1425,16 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "behind",
      "code": "bfo_behind",
      "text": "Latest accounts on file are for 2023; 2025 should be filed",
@@ -1005,16 +1446,6 @@
      "code": "open_questions",
      "text": "6 open question(s)",
      "count": 6
-    },
-    {
-     "kind": "behind",
-     "code": "development",
-     "text": "«Булат» в.6 announced, limited version for Q4 2026. Product record has в.3, в.4 and «Булат-Онлайн» only.",
-     "url": "https://t.me/ru3mx/741",
-     "found": "2026-10-02",
-     "dev_kind": "update",
-     "archived": true,
-     "dev_id": "2026-10-02-02"
     }
    ]
   },
@@ -1030,6 +1461,21 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -1052,6 +1498,16 @@
    "screened": "2026-09-06",
    "sanctioned": true,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -1080,6 +1536,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -1098,7 +1564,29 @@
    "last_register_pull": "2026-09-14",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -1111,7 +1599,24 @@
    "last_register_pull": "2026-09-14",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -1151,12 +1656,14 @@
    "sanctioned": false,
    "flags": [
     {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "5 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 5,
-     "presort": "likely_false_positive",
-     "presort_why": "This record is ИП Пинимасова Елена Александровна. The five ГУР hits are women with other surnames who share only the patronymic Александровна (Kulikova, Pereselyak, Topchi, Rubtsova, Tyurina)."
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
     },
     {
      "kind": "review",
@@ -1179,6 +1686,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -1197,7 +1714,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -1213,6 +1741,16 @@
    "screened": "2026-09-06",
    "sanctioned": true,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -1241,6 +1779,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "2 open question(s)",
@@ -1261,10 +1809,30 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
+    },
+    {
      "kind": "review",
      "code": "open_questions",
-     "text": "3 open question(s)",
-     "count": 3
+     "text": "4 open question(s)",
+     "count": 4
     }
    ]
   },
@@ -1281,10 +1849,30 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded press: no document establishes it"
+    },
+    {
      "kind": "review",
      "code": "open_questions",
-     "text": "1 open question(s)",
-     "count": 1
+     "text": "2 open question(s)",
+     "count": 2
     }
    ]
   },
@@ -1301,10 +1889,25 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
      "kind": "review",
      "code": "open_questions",
-     "text": "2 open question(s)",
-     "count": 2
+     "text": "3 open question(s)",
+     "count": 3
     }
    ]
   },
@@ -1319,7 +1922,29 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -1333,6 +1958,16 @@
    "screened": "2026-09-06",
    "sanctioned": true,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -1354,10 +1989,25 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
      "kind": "review",
      "code": "open_questions",
-     "text": "1 open question(s)",
-     "count": 1
+     "text": "2 open question(s)",
+     "count": 2
     }
    ]
   },
@@ -1376,11 +2026,26 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "behind",
      "code": "bfo_behind",
      "text": "Latest accounts on file are for 2022; 2025 should be filed",
      "latest_year": 2022,
      "on_disk": true
+    },
+    {
+     "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
     },
     {
      "kind": "review",
@@ -1410,10 +2075,25 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
      "kind": "review",
      "code": "open_questions",
-     "text": "2 open question(s)",
-     "count": 2
+     "text": "3 open question(s)",
+     "count": 3
     }
    ]
   },
@@ -1428,7 +2108,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -1443,10 +2134,25 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
      "kind": "review",
      "code": "open_questions",
-     "text": "1 open question(s)",
-     "count": 1
+     "text": "2 open question(s)",
+     "count": 2
     }
    ]
   },
@@ -1462,6 +2168,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -1483,6 +2199,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "2 open question(s)",
@@ -1503,6 +2229,16 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -1521,7 +2257,29 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -1535,6 +2293,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -1556,6 +2324,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -1575,6 +2353,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "behind",
      "code": "bfo_behind",
@@ -1599,6 +2387,16 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "behind",
      "code": "channel_unread",
      "text": "@germesfpv is on the weekly scan but has not been read yet",
@@ -1620,6 +2418,16 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "4 open question(s)",
@@ -1639,6 +2447,16 @@
    "screened": "2026-09-06",
    "sanctioned": true,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -1664,7 +2482,29 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -1677,7 +2517,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -1691,6 +2542,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "behind",
      "code": "bfo_behind",
@@ -1719,6 +2580,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -1738,6 +2609,16 @@
    "screened": "2026-09-06",
    "sanctioned": true,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -1759,6 +2640,16 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -1777,7 +2668,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -1791,6 +2693,16 @@
    "screened": "2026-09-06",
    "sanctioned": true,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -1812,6 +2724,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -1831,6 +2753,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -1852,6 +2784,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "3 open question(s)",
@@ -1870,7 +2812,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -1884,6 +2837,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -1905,6 +2868,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -1924,6 +2897,16 @@
    "screened": "2026-09-06",
    "sanctioned": true,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -1945,6 +2928,16 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -1964,6 +2957,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -1985,12 +2988,14 @@
    "sanctioned": false,
    "flags": [
     {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "The ГУР hit is a different company, ИНН 7804317900. Ours is 7805728050."
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
     },
     {
      "kind": "review",
@@ -2011,7 +3016,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -2025,6 +3041,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "behind",
      "code": "bfo_behind",
@@ -2053,12 +3079,14 @@
    "sanctioned": false,
    "flags": [
     {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "The ГУР hit is a person, Savitskaya Svetlana Evgenievna. The record does not name her anywhere; its director is Рябико Ольга Александровна."
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
     }
    ]
   },
@@ -2073,7 +3101,29 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -2086,7 +3136,29 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -2099,7 +3171,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -2112,7 +3195,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -2125,7 +3219,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -2139,6 +3244,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -2160,6 +3275,16 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "3 open question(s)",
@@ -2178,7 +3303,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -2192,6 +3328,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "gap",
      "code": "unsourced_history",
@@ -2215,6 +3361,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "behind",
      "code": "channel_unwatched",
      "text": "Own Telegram not on the weekly scan: @nponebo",
@@ -2237,6 +3393,16 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -2256,6 +3422,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -2278,6 +3454,21 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -2304,7 +3495,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -2318,6 +3520,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -2339,6 +3551,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "pull",
      "code": "bfo_missing",
      "text": "No annual accounts (БФО) on file",
@@ -2358,6 +3580,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -2379,6 +3611,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -2398,6 +3640,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -2422,6 +3674,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "behind",
      "code": "channel_unread",
      "text": "@asel_labs is on the weekly scan but has not been read yet",
@@ -2440,15 +3702,25 @@
    "channels": [
     "my_el_lab"
    ],
-   "last_register_pull": "2026-09-07",
+   "last_register_pull": "2026-10-04",
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
-     "text": "22 open question(s)",
-     "count": 22
+     "text": "25 open question(s)",
+     "count": 25
     },
     {
      "kind": "behind",
@@ -2472,6 +3744,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "4 open question(s)",
@@ -2494,11 +3776,16 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
+    },
+    {
+     "kind": "review",
+     "code": "screen_hits_unreviewed",
+     "text": "1 sanctions-type screening hit(s), no sanctions review recorded",
+     "count": 1
     },
     {
      "kind": "review",
@@ -2523,11 +3810,10 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions, Aleph",
+     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
      "due": [
       "opensanctions",
-      "gur",
-      "aleph"
+      "gur"
      ]
     },
     {
@@ -2553,17 +3839,10 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
-    },
-    {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
     },
     {
      "kind": "review",
@@ -2588,18 +3867,11 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions, Aleph",
+     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
      "due": [
       "opensanctions",
-      "gur",
-      "aleph"
+      "gur"
      ]
-    },
-    {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
     },
     {
      "kind": "review",
@@ -2620,7 +3892,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -2634,6 +3917,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -2653,7 +3946,29 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -2667,6 +3982,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -2687,6 +4012,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -2710,6 +4045,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "3 open question(s)",
@@ -2720,6 +4065,16 @@
      "code": "unsourced_history",
      "text": "2 history entr(ies) with no source",
      "count": 2
+    },
+    {
+     "kind": "behind",
+     "code": "development",
+     "text": "НПЦ БАСиРТК стал членом Федерации космонавтики России (per the scan's fetch, not read).",
+     "url": "https://t.me/UAS_development/705",
+     "found": "2026-10-05",
+     "dev_kind": "update",
+     "archived": false,
+     "dev_id": "2026-10-05-05"
     }
    ]
   },
@@ -2736,10 +4091,25 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
      "kind": "review",
      "code": "open_questions",
-     "text": "2 open question(s)",
-     "count": 2
+     "text": "3 open question(s)",
+     "count": 3
     },
     {
      "kind": "gap",
@@ -2760,7 +4130,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -2775,10 +4156,25 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
      "kind": "review",
      "code": "open_questions",
-     "text": "1 open question(s)",
-     "count": 1
+     "text": "2 open question(s)",
+     "count": 2
     }
    ]
   },
@@ -2795,12 +4191,19 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "2 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 2,
-     "presort": "likely_false_positive",
-     "presort_why": "Both ГУР hits are other companies (ИНН 5263093100 and 7802703755). Ours is 3435149330."
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
     }
    ]
   },
@@ -2815,7 +4218,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -2828,7 +4242,29 @@
    "last_register_pull": "2026-09-29",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "sanction_unread",
+     "text": "Sanctions claim rests on an aggregator match; no entry read against an official list"
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -2842,6 +4278,16 @@
    "screened": "2026-09-06",
    "sanctioned": true,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -2863,6 +4309,16 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -2881,7 +4337,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -2895,6 +4362,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -2916,6 +4393,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -2936,6 +4423,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -2955,6 +4452,16 @@
    "screened": "2026-09-06",
    "sanctioned": true,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -3005,7 +4512,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -3019,6 +4537,16 @@
    "screened": "2026-09-06",
    "sanctioned": true,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -3040,6 +4568,16 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -3060,6 +4598,16 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -3078,7 +4626,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -3091,7 +4650,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -3105,6 +4675,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -3143,7 +4723,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -3157,6 +4748,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "behind",
      "code": "bfo_behind",
@@ -3179,6 +4780,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -3199,6 +4810,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "behind",
      "code": "bfo_behind",
      "text": "Latest accounts on file are for 2023; 2025 should be filed",
@@ -3218,7 +4839,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -3231,7 +4863,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -3244,7 +4887,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -3257,7 +4911,18 @@
    "last_register_pull": "2026-09-29",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -3272,12 +4937,14 @@
    "sanctioned": false,
    "flags": [
     {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "The ГУР hit is a different company, ИНН 7726700284. Ours is 7802145959."
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
     }
    ]
   },
@@ -3294,12 +4961,14 @@
    "sanctioned": false,
    "flags": [
     {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "6 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 6,
-     "presort": "likely_match",
-     "presort_why": "Identity confirmed by ИНН 9704220859 on two hits: the ГУР UAV-companies entry (ГУР's own ИНН check says match) and OpenSanctions' record from ГУР's database. OpenSanctions says it is not on any international sanctions list; it is a ГУР 'person of interest' and is owned by ООО «УК КОМАКС» (ИНН 7704790277), which the registry already records as NSDC-listed. Proposed: record a ГУР database listing, not a designation."
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
     }
    ]
   },
@@ -3316,12 +4985,14 @@
    "sanctioned": false,
    "flags": [
     {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "6 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 6,
-     "presort": "likely_match",
-     "presort_why": "Identity confirmed: the OpenSanctions hit is ru-inn-9718293790, our own ИНН. It is flagged only because its 100% owner is ООО «УК КОМАКС» (NSDC-listed, per the registry). OpenSanctions says the company itself is on no sanctions list. The five ГУР hits are other Аэро-Хит/aviation companies with other ИНН. Proposed: no designation; record the owner link."
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
     }
    ]
   },
@@ -3337,6 +5008,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "pull",
      "code": "bfo_missing",
@@ -3356,7 +5037,18 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -3370,6 +5062,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -3390,6 +5092,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -3412,6 +5124,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -3440,6 +5162,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "12 open question(s)",
@@ -3459,6 +5191,16 @@
    "screened": "2026-09-06",
    "sanctioned": true,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -3480,6 +5222,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
@@ -3499,6 +5251,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "pull",
      "code": "bfo_missing",
@@ -3541,6 +5303,11 @@
     },
     {
      "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
+    },
+    {
+     "kind": "review",
      "code": "open_questions",
      "text": "58 open question(s)",
      "count": 58
@@ -3567,6 +5334,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "7 open question(s)",
@@ -3586,6 +5363,16 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -3607,12 +5394,14 @@
    "sanctioned": false,
    "flags": [
     {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "3 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 3,
-     "presort": "likely_false_positive",
-     "presort_why": "All three hits are other «Архангел» companies: the Melitopol ООО «Архангел» (ИНН 9001027869, NSDC-listed), the Melitopol ООО «Архангел» (ИНН 9500026652, linked only) and ООО «Архангел-Центр» (ИНН 5032379630, EU-listed). Ours is 5017140245. The record already calls these name-only false positives (05.09.2026)."
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
     },
     {
      "kind": "review",
@@ -3635,6 +5424,16 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "4 open question(s)",
@@ -3655,12 +5454,14 @@
    "sanctioned": false,
    "flags": [
     {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "3 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 3,
-     "presort": "likely_false_positive",
-     "presort_why": "Same three other «Архангел» companies; ours is ИНН 9108131213. Not the same entity, but the record has a real link: its director Тимофеев В.С. was appointed director of the Melitopol ООО «Архангел» (ИНН 9500026652) three days before this company was registered. That is a relationship to record, not a listing of this company."
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
     },
     {
      "kind": "review",
@@ -3681,7 +5482,23 @@
    "last_register_pull": "2026-09-07",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-05",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "tie_not_documented",
+     "text": "ЦБСТ tie is graded t-open: no document establishes it"
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -3772,14 +5589,6 @@
    "flags": [
     {
      "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "2 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 2,
-     "presort": "likely_false_positive",
-     "presort_why": "Both ГУР hits are other companies (ИНН 1831117433 and 1831156383). Ours is 7801320277. The sanctioned АО «Кронштадт» (ИНН 7808035536) is a separate legal entity, noted in the record as a lead."
-    },
-    {
-     "kind": "review",
      "code": "open_questions",
      "text": "1 open question(s)",
      "count": 1
@@ -3827,10 +5636,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -3863,10 +5671,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -3892,10 +5699,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -3930,16 +5736,7 @@
    "last_register_pull": "2026-09-08",
    "screened": "2026-09-30",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions review recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "The ГУР hit is a different company, «NPK …» ИНН 1683010356. Ours is 6154166381."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "entity",
@@ -4048,10 +5845,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     }
    ]
@@ -4228,12 +6024,6 @@
      "due": [
       "opensanctions"
      ]
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions review recorded",
-     "count": 1
     }
    ]
   },
@@ -4367,11 +6157,16 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
+    },
+    {
+     "kind": "review",
+     "code": "screen_hits_unreviewed",
+     "text": "1 sanctions-type screening hit(s), no sanctions review recorded",
+     "count": 1
     }
    ]
   },
@@ -4390,10 +6185,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -4419,17 +6213,10 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
-    },
-    {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
     }
    ]
   },
@@ -4448,17 +6235,10 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
-    },
-    {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
     }
    ]
   },
@@ -4497,17 +6277,16 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
     }
    ]
   },
@@ -4526,17 +6305,16 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
     }
    ]
   },
@@ -4555,17 +6333,16 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
     }
    ]
   },
@@ -4584,17 +6361,10 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
-    },
-    {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
     }
    ]
   },
@@ -4613,17 +6383,10 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
-    },
-    {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
     }
    ]
   },
@@ -4642,10 +6405,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     }
    ]
@@ -4665,10 +6427,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -4694,10 +6455,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -4723,17 +6483,16 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
+     "kind": "review",
+     "code": "screen_hits_unreviewed",
+     "text": "1 sanctions-type screening hit(s), no sanctions review recorded",
+     "count": 1
     }
    ]
   },
@@ -4752,17 +6511,10 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
-    },
-    {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
     }
    ]
   },
@@ -4781,10 +6533,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -4810,17 +6561,16 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
     }
    ]
   },
@@ -4839,10 +6589,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     }
    ]
@@ -4856,23 +6605,14 @@
    "inn": "5040181970",
    "channels": [],
    "last_register_pull": "2026-09-19",
-   "screened": null,
+   "screened": "2026-10-04",
    "sanctioned": false,
    "flags": [
     {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
-     "due": [
-      "opensanctions",
-      "gur"
-     ]
-    },
-    {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
+     "kind": "review",
+     "code": "open_questions",
+     "text": "1 open question(s)",
+     "count": 1
     }
    ]
   },
@@ -4891,10 +6631,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -4920,10 +6659,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -5055,23 +6793,16 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
-    },
-    {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
     },
     {
      "kind": "review",
      "code": "open_questions",
-     "text": "1 open question(s)",
-     "count": 1
+     "text": "2 open question(s)",
+     "count": 2
     }
    ]
   },
@@ -5093,23 +6824,16 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
-    },
-    {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
     },
     {
      "kind": "review",
      "code": "open_questions",
-     "text": "3 open question(s)",
-     "count": 3
+     "text": "4 open question(s)",
+     "count": 4
     },
     {
      "kind": "behind",
@@ -5193,10 +6917,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -5259,12 +6982,6 @@
     },
     {
      "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "3 sanctions-type screening hit(s), no sanctions review recorded",
-     "count": 3
-    },
-    {
-     "kind": "review",
      "code": "open_questions",
      "text": "2 open question(s)",
      "count": 2
@@ -5301,16 +7018,6 @@
      "code": "open_questions",
      "text": "5 open question(s)",
      "count": 5
-    },
-    {
-     "kind": "behind",
-     "code": "development",
-     "text": "КБ «СПЕКТР» announces a new Армамид propeller series for РОЙ.МАРКЕТ and Ozon «через неделю». Seller is already `listed` (post 321); the record lacks this product. Post date needs reading.",
-     "url": "https://t.me/kb_spektr/337",
-     "found": "2026-10-02",
-     "dev_kind": "update",
-     "archived": true,
-     "dev_id": "2026-10-02-03"
     }
    ]
   },
@@ -5329,11 +7036,10 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions, Aleph",
+     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
      "due": [
       "opensanctions",
-      "gur",
-      "aleph"
+      "gur"
      ]
     },
     {
@@ -5359,11 +7065,10 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions, Aleph",
+     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
      "due": [
       "opensanctions",
-      "gur",
-      "aleph"
+      "gur"
      ]
     },
     {
@@ -5389,10 +7094,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -5412,36 +7116,148 @@
    "inn": "2466077563",
    "channels": [],
    "last_register_pull": "2026-10-02",
-   "screened": null,
+   "screened": "2026-10-04",
    "sanctioned": false,
    "flags": [
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions, Aleph",
+     "text": "Never screened: ГУР war-sanctions",
      "due": [
-      "opensanctions",
-      "gur",
-      "aleph"
+      "gur"
      ]
-    },
-    {
-     "kind": "pull",
-     "code": "bfo_missing",
-     "text": "No annual accounts (БФО) on file",
-     "on_disk": false
     },
     {
      "kind": "review",
      "code": "open_questions",
-     "text": "1 open question(s)",
-     "count": 1
+     "text": "4 open question(s)",
+     "count": 4
     },
     {
      "kind": "gap",
      "code": "unsourced_history",
      "text": "1 history entr(ies) with no source",
      "count": 1
+    }
+   ]
+  },
+  {
+   "kind": "entity",
+   "slug": "ooo-stims",
+   "name": "ООО «СТИМС»",
+   "latin": "OOO «STIMS»",
+   "tier": "adjacent",
+   "inn": "7734436058",
+   "channels": [],
+   "last_register_pull": "2026-10-03",
+   "screened": null,
+   "sanctioned": true,
+   "flags": [
+    {
+     "kind": "pull",
+     "code": "screen_never",
+     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "due": [
+      "opensanctions",
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "6 open question(s)",
+     "count": 6
+    }
+   ]
+  },
+  {
+   "kind": "entity",
+   "slug": "ip-pinimasov-aleksandr-vyacheslavovich",
+   "name": "ИП Пинимасов Александр Вячеславович",
+   "latin": "IP Pinimasov Aleksandr Vyacheslavovich",
+   "tier": "adjacent",
+   "inn": "583680188519",
+   "channels": [],
+   "last_register_pull": "2026-10-04",
+   "screened": null,
+   "sanctioned": false,
+   "flags": [
+    {
+     "kind": "pull",
+     "code": "screen_never",
+     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "due": [
+      "opensanctions",
+      "gur"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "3 open question(s)",
+     "count": 3
+    }
+   ]
+  },
+  {
+   "kind": "entity",
+   "slug": "ip-korovkin-aleksandr-anatolevich",
+   "name": "ИП Коровкин Александр Анатольевич",
+   "latin": "IP Korovkin Aleksandr Anatolevich",
+   "tier": "adjacent",
+   "inn": "780223272953",
+   "channels": [],
+   "last_register_pull": "2026-10-06",
+   "screened": null,
+   "sanctioned": false,
+   "flags": [
+    {
+     "kind": "pull",
+     "code": "screen_never",
+     "text": "Never screened: OpenSanctions",
+     "due": [
+      "opensanctions"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "3 open question(s)",
+     "count": 3
+    }
+   ]
+  },
+  {
+   "kind": "entity",
+   "slug": "ip-artemeva-viktoriya-mikhaylovna",
+   "name": "ИП Артемьева Виктория Михайловна",
+   "latin": "IP Artemeva Viktoriya Mikhaylovna",
+   "tier": "adjacent",
+   "inn": "350102453754",
+   "channels": [],
+   "last_register_pull": "2026-10-06",
+   "screened": null,
+   "sanctioned": false,
+   "flags": [
+    {
+     "kind": "pull",
+     "code": "screen_never",
+     "text": "Never screened: OpenSanctions",
+     "due": [
+      "opensanctions"
+     ]
+    },
+    {
+     "kind": "review",
+     "code": "screen_hits_unreviewed",
+     "text": "5 sanctions-type screening hit(s), no sanctions review recorded",
+     "count": 5
+    },
+    {
+     "kind": "review",
+     "code": "open_questions",
+     "text": "5 open question(s)",
+     "count": 5
     }
    ]
   },
@@ -5454,17 +7270,8 @@
    "role": "Chairman of the Supervisory Board; Secretary of United Russia's General Council; First Deputy Chairman of the Federation Council",
    "channels": [],
    "screened": "2026-09-06",
-   "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Date of birth 14.06.1968, birthplace Neftekamsk and ИНН 890304549930 on the OpenSanctions record all match ours. Listed by the US (OFAC SDN), UK, Canada, Australia, New Zealand and Ukraine's NSDC, plus US and Taiwan export-control lists. The registry has no sanctions entry for him. Confirm against the OFAC entry before recording."
-    }
-   ]
+   "sanctioned": true,
+   "flags": []
   },
   {
    "kind": "person",
@@ -5496,16 +7303,6 @@
      "code": "open_questions",
      "text": "3 open question(s)",
      "count": 3
-    },
-    {
-     "kind": "behind",
-     "code": "development",
-     "text": "Сидякин proposed to chair the new Duma committee on digital development and AI, which covers marketplaces and drones (~24.09.2026). Person record has no such role.",
-     "url": "https://t.me/ANO_CBST/2565",
-     "found": "2026-10-02",
-     "dev_kind": "update",
-     "archived": true,
-     "dev_id": "2026-10-02-01"
     }
    ]
   },
@@ -5532,14 +7329,6 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "2 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 2,
-     "presort": "likely_match",
-     "presort_why": "Two hits. NK-XU3ivbw (PESKOV Dmitry Nikolaevich): date of birth 26.12.1975, birthplace Voronezh and ИНН 772919018611 all match ours, but it is a ГУР-database 'person of interest' only; OpenSanctions says he is on no sanctions list. The other hit, Q111263326, is Nikolay Dmitrievich Peskov (b. 03.02.1990, son of the press secretary): a false positive. Its alternate birth date happens to be our Peskov's, which looks like a data merge error at OpenSanctions. Proposed: no designation; note the ГУР database entry."
-    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -5575,14 +7364,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "3 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 3,
-     "presort": "likely_match",
-     "presort_why": "Resolved: candidate Q124215058, Кузнецов Михаил Михайлович, is described as head of the ОНФ executive committee since 09.03.2022, our record's role. b. 18.08.1979, Moscow; ИНН 773714338411. Listed by the EU, Switzerland, France, Belgium, Monaco, NSDC. The other two candidates are different people (a Sovcomflot director b. 1979-06-20; a former LDPR Duma deputy b. 1968). Our record's patronymic is missing; confirm the EU entry."
     }
    ]
   },
@@ -5596,7 +7377,13 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "review",
+     "code": "identity_unproven",
+     "text": "Sanctions entry belongs to a same-name person; the link to this record is not proven by a document"
+    }
+   ]
   },
   {
    "kind": "person",
@@ -6226,14 +8013,6 @@
    "flags": [
     {
      "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Identity confirmed: the hit is ru-inn-732102513469, the ИНН read from ООО «Клеверкоптер»'s ЕГРЮЛ extract. Flagged 'sanction-linked' only, not designated; the link is explained by «Клеверкоптер», which the registry already records as sanctioned. Proposed: no personal designation."
-    },
-    {
-     "kind": "review",
      "code": "open_questions",
      "text": "2 open question(s)",
      "count": 2
@@ -6425,16 +8204,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Identity confirmed by own ИНН 165043571104. 'Sanction-linked' only; explained by ООО «СибНК», where he is director and which the registry records as sanctioned. Proposed: no personal designation."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -6446,16 +8216,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 1,
-     "presort": "needs_checking",
-     "presort_why": "Hit ru-inn-263114465785 ('sanction-linked'): a namesake in the Russian company register. The record has no ИНН of its own, so this is name-only. Settle it by reading his ИНН from an ЕГРЮЛ extract."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -6521,16 +8282,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Settled: birth date 18.10.1983 and ИНН 636501893256 both match ours. NSDC-listed (first seen 09.05.2025); the entry ties her to ООО «Тримикс» (100% owner 21.07.2023–26.02.2024)."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -6542,16 +8294,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Settled: birth date 06.05.1986 and ИНН 471010513778 both match ours. NSDC-listed (09.05.2025); 15% of ООО «Тримикс» 27.02–31.10.2024."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -6563,16 +8306,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Settled by ИНН: the NSDC entry prints ИНН 773376903806, ours. It gives b. 20.04.1990 (a lead for the record) and ties her to ООО «Аргус-М» and НПП «Аргата». NSDC since 08.02.2026."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -6584,16 +8318,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Settled by ИНН: the NSDC entry prints ИНН 712802968839, ours. b. 04.07.1984; 100% owner of ООО «Русская лаборатория воздушного транспорта». NSDC since 02.12.2024."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -6607,20 +8332,12 @@
     "chadayevru"
    ],
    "screened": "2026-09-06",
-   "sanctioned": false,
+   "sanctioned": true,
    "flags": [
     {
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Name, patronymic and public role fit: OpenSanctions cites an EU listing (OJ L 2025/933, CELEX 32025D0936) and ГУР's propaganda section, and his own channel (post 4636, 29.03.2026) says he is under personal EU sanctions. The record has no birth date or ИНН to compare, so read the EU Official Journal entry for his birth date before recording."
     },
     {
      "kind": "review",
@@ -6636,18 +8353,15 @@
    "name": "Атливанчик Сергей Николаевич",
    "latin": null,
    "tier": "person",
-   "role": null,
+   "role": "Генеральный директор",
    "channels": [],
    "screened": "2026-09-06",
-   "sanctioned": false,
+   "sanctioned": true,
    "flags": [
     {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Official entry read: Council Implementing Regulation (EU) 2025/389 of 24.02.2025, Annex entry 1904: 'General Director of LLC Eliars; DOB: 11.1.1980; Tax Identification Number: 773514103490'; listed for Элиарс's «Зонт» anti-drone system used by Russian forces; date of listing 24.2.2025. Our registry has him as Элиарс's director; the record has no ИНН yet, so this EU entry is the citable source for it. Also Switzerland, France, Belgium, Monaco, NSDC."
+     "kind": "pull",
+     "code": "other_entities_unchecked",
+     "text": "Other companies under this personal ИНН not checked"
     }
    ]
   },
@@ -6697,16 +8411,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "The only risky hit (Q120853992) is a Myrotvorets entry, which OpenSanctions tags 'war crimes' but is not a sanctions list. Name-only; no designation."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -6790,16 +8495,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Identity confirmed by own ИНН 784804037752. 'Sanction-linked' only; explained by ООО «КРАВТ» (director), recorded as sanctioned. Proposed: no personal designation."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -6877,16 +8573,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Identity confirmed by own ИНН 510203980877. 'Sanction-linked' only; explained by АО «Стратим» (director), recorded as sanctioned. Proposed: no personal designation."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -6915,14 +8602,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 1,
-     "presort": "needs_checking",
-     "presort_why": "Hit ru-inn-780158682795 ('sanction-linked'). Name-only; our Любимов (chair of Ассоциация «Взаимопомощь», co-organiser of «Дронница») has no ИНН on file. The association's ЕГРЮЛ extract would give it."
     }
    ]
   },
@@ -7310,16 +8989,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "The NSDC-listed Климов Максим Олександрович carries ИНН 695004552407 per the earlier OpenSanctions read noted in the record; our АРРС founder's ИНН from the 29.09.2026 ЕГРЮЛ extract is 410201675667. A personal ИНН does not change, so these look like two people. Note: the record's notes still say 'confirmed … see sanctions[]', but sanctions[] is empty; the notes need correcting either way."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -7466,14 +9136,6 @@
    "screened": "2026-09-06",
    "sanctioned": false,
    "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Identity confirmed by own ИНН 774305253744 (read from АО «Эколибри»'s FY2025 accounts, related-parties list). 'Sanction-linked' only; explained by «Эколибри» (board member), recorded on the ГУР list. The record's open question from 24.08 about two namesakes is now answered by that ИНН and can be closed. Proposed: no personal designation."
-    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -7640,18 +9302,9 @@
    "tier": "person",
    "role": "Генеральный директор / sole founder (100%)",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-03",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -7673,18 +9326,9 @@
    "tier": "person",
    "role": "Генеральный директор",
    "channels": [],
-   "screened": null,
-   "sanctioned": false,
-   "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    }
-   ]
+   "screened": "2026-10-04",
+   "sanctioned": true,
+   "flags": []
   },
   {
    "kind": "person",
@@ -7694,18 +9338,9 @@
    "tier": "person",
    "role": "Генеральный директор",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-05",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -7807,14 +9442,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 1,
-     "presort": "needs_checking",
-     "presort_why": "Hit ru-inn-615424668354 ('sanction-linked'). Name-only; co-inventor at ООО «Атлант Аэро», no ИНН on file."
     }
    ]
   },
@@ -7929,17 +9556,8 @@
    "role": "co-inventor (patent RU2705387C1)",
    "channels": [],
    "screened": "2026-09-06",
-   "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Strongest case in the set. The weekly official-list watcher (draft PR #4, run of 02.10.2026) found our ИНН 780105167705 printed in his entries on the EU consolidated list and the Swiss SECO list. OpenSanctions also cites EU acts 2024/753 and 2025/1895, France and ГУР. Our Анцев is a co-inventor on НПП «Радар ммс» patents. Read the EU entry and record it."
-    }
-   ]
+   "sanctioned": true,
+   "flags": []
   },
   {
    "kind": "person",
@@ -7950,17 +9568,8 @@
    "role": "co-inventor (patent RU2705387C1)",
    "channels": [],
    "screened": "2026-09-06",
-   "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Official entry read: Council Implementing Regulation (EU) 2025/389 of 24.02.2025, Annex entry 1884: 'Executive Director of JSC NPP Radar MMS; DOB: 4.8.1985; POB: Leningrad, USSR (now St. Petersburg)'; date of listing 24.2.2025. The EU entry prints no ИНН; ИНН 780156016060 (ours) comes from the NSDC entry via OpenSanctions. Also Switzerland, France, Belgium, Monaco, NSDC."
-    }
-   ]
+   "sanctioned": true,
+   "flags": []
   },
   {
    "kind": "person",
@@ -8512,16 +10121,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Settled by ИНН: the NSDC entry prints ИНН 695001185808, ours. b. 27.01.1960; listed as general director of АО «МКБ «Факел» им. Грушина» since 21.10.2014, a role our record lacks (lead). NSDC since 20.04.2023."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -8802,14 +10402,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 1,
-     "presort": "needs_checking",
-     "presort_why": "The listed Kozlov (OFAC 15.01.2025, NSDC) is b. 07.08.1969 in St Petersburg, ИНН 782023355772, Pushkin address. Our Козлов is a co-inventor at АО «НИИ «Вектор»» (St Petersburg) with no ИНН on file. Same city, common name: compare the ИНН from any Вектор document that names him."
     }
    ]
   },
@@ -8828,14 +10420,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 1,
-     "presort": "needs_checking",
-     "presort_why": "The listed Комаров (NSDC, 09.05.2025) is b. 06.07.1968, ИНН 500908329403, 34% of ООО «Интермаш». Our Комаров is a co-inventor at ООО «КРАВТ-Удмуртия» with no ИНН; nothing links him to Интермаш. Leaning false positive, but unproven."
     }
    ]
   },
@@ -8902,14 +10486,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 1,
-     "presort": "needs_checking",
-     "presort_why": "Hit ru-inn-471203835475 ('sanction-linked'). Name-only; co-inventor at НПЦ «Элвис», no ИНН on file."
     }
    ]
   },
@@ -8976,14 +10552,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "Hit Q133295749 (score 0.96) is Aliaksandr Lukjanaŭ, a Belarusian listed by the EU under its Belarus regime (OJ L 2024/1746). Our record is Лукиянов, a co-inventor at АО «НИИ «Вектор»»."
     }
    ]
   },
@@ -9134,14 +10702,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "Hit Q62841889 is Oleg Nikolaev, head of the Chuvash Republic (OFAC, UK, ГУР). Our record is a co-inventor on a «Вектор» patent; nothing ties him to the governor. Name-only."
     }
    ]
   },
@@ -9184,14 +10744,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "2 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 2,
-     "presort": "needs_checking",
-     "presort_why": "The Q120852989 entry is a Wagner member on Myrotvorets only, not on any sanctions list: ignore it. What remains is ru-inn-532001062101 ('sanction-linked'), name-only because we hold no ИНН for our НПЦ «Элвис» co-inventor."
     }
    ]
   },
@@ -9582,14 +11134,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "Hit Q15066899 (score 0.91) is Aleksey Zakharov, a different surname (Захаров, not Сахаров), flagged only as a relative of a listed person."
     }
    ]
   },
@@ -9717,16 +11261,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Settled by ИНН: the entry prints ИНН 780212544531, ours. b. 14 or 15.08.1978; director at АО «Завод «Энергия»». Listed by Ukraine's NSDC (13.12.2023) and Canada (06.08.2024), plus the ГУР database."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -10277,14 +11812,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Match by ownership: the NSDC entry records a 93.33% stake in НПО «Кайсант», the same stake our record holds from aggregators. It prints ИНН 504508740969 and b. 15.03.1984; confirm the ИНН from Кайсант's ЕГРЮЛ extract before recording. NSDC since 08.02.2026."
     },
     {
      "kind": "gap",
@@ -10862,14 +12389,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 1,
-     "presort": "needs_checking",
-     "presort_why": "Hit ru-inn-027503961630 ('sanction-linked', score 0.97). Name-only; former director of ООО «Гаскар Интеграция», no ИНН on file. The company's ЕГРЮЛ extract would give it."
     }
    ]
   },
@@ -11015,16 +12534,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Settled by ИНН: the NSDC entry prints ИНН 561012075269, ours. b. 03.05.1980; general director of the Tula ООО «Центр беспилотных систем» 2023–2024, later of АНО «НПЦ БАС «Туладрон»». NSDC since 13.12.2023."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -11126,16 +12636,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "The only risky hit (Q120853949) is a Myrotvorets entry, not a sanctions list. Name-only. Worth a glance only because he was a director of ООО «Ушкуйник»."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -11207,16 +12708,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "2 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 2,
-     "presort": "needs_checking",
-     "presort_why": "The listed Yatsenko (Q108060327) is a former DNR 'minister of communications', b. 22.04.1985 in Kherson, passport 0311 988150, no ИНН printed. Our Яценко is general director of ООО «Аэро-Хит» (ИНН 231907430700). The Аэро-Хит group has a Kherson company, but nothing on file ties the two. Needs his birth date from an ЕГРЮЛ-adjacent source or a passport match."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -11228,16 +12720,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: needs checking, awaiting your confirmation)",
-     "count": 1,
-     "presort": "needs_checking",
-     "presort_why": "The listed Zhigulin is a DNR People's Council member since 2014, b. 29.01.1979 in Semey; EU, UK, Switzerland, Canada, Japan, NSDC. Our record (director of ООО «Аэро-Хит М») already notes a press allegation of DNR-linked membership, so a match is plausible, but no ИНН is printed on the list and we hold no birth date."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -11654,14 +13137,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely false positive, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_false_positive",
-     "presort_why": "Hit Q4181368, Dmitry Zhukov, flagged only as a relative or close associate of a listed person. Our record is an «Архангел» course participant with no patronymic, known by a Telegram handle. Name-only on one of the commonest Russian names."
     }
    ]
   },
@@ -11779,16 +13254,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Identity confirmed by own ИНН 910520449851. 'Sanction-linked' only. OpenSanctions' page for ООО «Архангел-Центр» names him as 50% owner and says neither owner is separately designated. Proposed: no personal designation; the record already says this."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -11800,16 +13266,7 @@
    "channels": [],
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Identity confirmed by own ИНН 026105732534. Same as Чапурин: director and 50% owner of the EU-listed ООО «Архангел-Центр», not separately designated. Proposed: no personal designation."
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -11886,14 +13343,6 @@
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded (pre-sorted: likely match, awaiting your confirmation)",
-     "count": 1,
-     "presort": "likely_match",
-     "presort_why": "Match by directorship: the NSDC entry lists her at ООО «Аэромакс», where our record has her as general director, and at ООО «Кронштадт Инновации» (since 14.03.2025, new to us). It prints ИНН 525630892605 and b. 11.12.1996; confirm the ИНН from Аэромакс's ЕГРЮЛ extract. NSDC since 02.12.2024."
     }
    ]
   },
@@ -11923,18 +13372,9 @@
    "tier": "person",
    "role": "founder (100%, at incorporation) / General Director",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-06",
    "sanctioned": true,
-   "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -11966,18 +13406,12 @@
    "role": null,
    "channels": [],
    "screened": "2026-10-03",
-   "sanctioned": false,
+   "sanctioned": true,
    "flags": [
     {
-     "kind": "gap",
-     "code": "no_inn",
-     "text": "Holds a company role but no personal ИНН on file"
-    },
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded",
-     "count": 1
+     "kind": "pull",
+     "code": "other_entities_unchecked",
+     "text": "Other companies under this personal ИНН not checked"
     }
    ]
   },
@@ -11990,15 +13424,8 @@
    "role": "Генеральный директор (per Aleph EGRUL mirror, snapshot 2025-12-14)",
    "channels": [],
    "screened": "2026-10-03",
-   "sanctioned": false,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "screen_hits_unreviewed",
-     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded",
-     "count": 1
-    }
-   ]
+   "sanctioned": true,
+   "flags": []
   },
   {
    "kind": "person",
@@ -12034,16 +13461,14 @@
    "tier": "person",
    "role": "Участник (21.7098%, номинал ₽25,698,196)",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-06",
    "sanctioned": false,
    "flags": [
     {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
+     "kind": "review",
+     "code": "screen_hits_unreviewed",
+     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded",
+     "count": 1
     }
    ]
   },
@@ -12055,21 +13480,19 @@
    "tier": "person",
    "role": "Self-described \"флагман движения\" (movement flagship/figurehead) -- named backer, corroborated by his own channel",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-06",
    "sanctioned": false,
    "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    },
     {
      "kind": "gap",
      "code": "no_inn",
      "text": "Holds a company role but no personal ИНН on file"
+    },
+    {
+     "kind": "review",
+     "code": "screen_hits_unreviewed",
+     "text": "1 sanctions-type screening hit(s), no sanctions entry recorded",
+     "count": 1
     }
    ]
   },
@@ -12201,18 +13624,9 @@
    "tier": "person",
    "role": "Генеральный директор, 15% founder",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-05",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -12222,18 +13636,9 @@
    "tier": "person",
    "role": "85% founder (majority owner)",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-03",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -12243,16 +13648,13 @@
    "tier": "person",
    "role": null,
    "channels": [],
-   "screened": null,
-   "sanctioned": false,
+   "screened": "2026-10-04",
+   "sanctioned": true,
    "flags": [
     {
      "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
+     "code": "other_entities_unchecked",
+     "text": "Other companies under this personal ИНН not checked"
     }
    ]
   },
@@ -12264,18 +13666,9 @@
    "tier": "person",
    "role": "Председатель (sole person acting without a power of attorney)",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-05",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -12285,18 +13678,9 @@
    "tier": "person",
    "role": "Директор (sole person acting without a power of attorney)",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-03",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -12306,18 +13690,9 @@
    "tier": "person",
    "role": "Ректор (sole person acting without a power of attorney)",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-03",
    "sanctioned": false,
-   "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "person",
@@ -12327,17 +13702,9 @@
    "tier": "person",
    "role": "Генеральный директор",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-05",
    "sanctioned": false,
    "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    },
     {
      "kind": "pull",
      "code": "other_entities_unchecked",
@@ -12373,21 +13740,49 @@
    "tier": "person",
    "role": "Индивидуальный предприниматель; seller of record of the Ozon storefront «СПЕКТР конструкторское бюро»",
    "channels": [],
-   "screened": null,
+   "screened": "2026-10-04",
    "sanctioned": false,
    "flags": [
     {
      "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: OpenSanctions",
-     "due": [
-      "opensanctions"
-     ]
-    },
+     "code": "other_entities_unchecked",
+     "text": "Other companies under this personal ИНН not checked"
+    }
+   ]
+  },
+  {
+   "kind": "person",
+   "slug": "kholkin-oleg-valerevich",
+   "name": "Холкин Олег Валерьевич",
+   "latin": "Kholkin Oleg Valerevich",
+   "tier": "person",
+   "role": "Генеральный директор; единственный участник (100%, с 12.11.2025)",
+   "channels": [],
+   "screened": "2026-10-04",
+   "sanctioned": false,
+   "flags": [
     {
      "kind": "pull",
      "code": "other_entities_unchecked",
      "text": "Other companies under this personal ИНН not checked"
+    }
+   ]
+  },
+  {
+   "kind": "person",
+   "slug": "shingareev-renat-rifkatovich",
+   "name": "Шингареев Ренат Рифкатович",
+   "latin": "Shingareev Renat Rifkatovich",
+   "tier": "person",
+   "role": "Заместитель генерального директора (named on a presentation slide at an award ceremony)",
+   "channels": [],
+   "screened": "2026-10-06",
+   "sanctioned": false,
+   "flags": [
+    {
+     "kind": "gap",
+     "code": "no_inn",
+     "text": "Holds a company role but no personal ИНН on file"
     }
    ]
   },
@@ -12399,7 +13794,7 @@
    "tier": "product",
    "maker": "ooo-trimiks",
    "versions": 4,
-   "deliveries": 17,
+   "deliveries": 18,
    "last_delivery": "2026-05-19",
    "flags": [
     {
@@ -12419,16 +13814,6 @@
      "code": "open_questions",
      "text": "6 open question(s)",
      "count": 6
-    },
-    {
-     "kind": "behind",
-     "code": "development",
-     "text": "«Булат» в.6 announced, limited version for Q4 2026. Product record has в.3, в.4 and «Булат-Онлайн» only.",
-     "url": "https://t.me/ru3mx/741",
-     "found": "2026-10-02",
-     "dev_kind": "update",
-     "archived": true,
-     "dev_id": "2026-10-02-02"
     }
    ]
   },
@@ -12523,17 +13908,17 @@
    "owners": [
     "ano-tsbst-centre-for-unmanned-systems-technologies"
    ],
-   "high_water": 2580,
-   "last_archived": 2565,
+   "high_water": 2602,
+   "last_archived": 2583,
    "in_local_scrape": true,
    "in_weekly_scan": true,
    "flags": [
     {
      "kind": "review",
      "code": "posts_since_archive",
-     "text": "15 post number(s) since the last archived post",
-     "high_water": 2580,
-     "last_archived": 2565
+     "text": "19 post number(s) since the last archived post",
+     "high_water": 2602,
+     "last_archived": 2583
     }
    ]
   },
@@ -12659,7 +14044,7 @@
    "owners": [
     "aleksandr-sidyakin"
    ],
-   "high_water": 1292,
+   "high_water": 1305,
    "last_archived": 1230,
    "in_local_scrape": true,
    "in_weekly_scan": true,
@@ -12667,8 +14052,8 @@
     {
      "kind": "review",
      "code": "posts_since_archive",
-     "text": "62 post number(s) since the last archived post",
-     "high_water": 1292,
+     "text": "75 post number(s) since the last archived post",
+     "high_water": 1305,
      "last_archived": 1230
     }
    ]
@@ -12679,7 +14064,7 @@
    "name": "@bayraktar1070",
    "tier": "channel",
    "owners": [],
-   "high_water": 7878,
+   "high_water": 7903,
    "last_archived": null,
    "in_local_scrape": false,
    "in_weekly_scan": true,
@@ -12692,8 +14077,8 @@
     {
      "kind": "review",
      "code": "channel_never_archived",
-     "text": "No post archived; channel is at post 7878",
-     "high_water": 7878
+     "text": "No post archived; channel is at post 7903",
+     "high_water": 7903
     }
    ]
   },
@@ -12718,7 +14103,7 @@
     "yarl"
    ],
    "high_water": null,
-   "last_archived": null,
+   "last_archived": 603,
    "in_local_scrape": true,
    "in_weekly_scan": true,
    "flags": [
@@ -12737,17 +14122,17 @@
    "owners": [
     "chadaev-aleksey-viktorovich"
    ],
-   "high_water": 5064,
-   "last_archived": 5061,
+   "high_water": 5086,
+   "last_archived": 5078,
    "in_local_scrape": true,
    "in_weekly_scan": true,
    "flags": [
     {
      "kind": "review",
      "code": "posts_since_archive",
-     "text": "3 post number(s) since the last archived post",
-     "high_water": 5064,
-     "last_archived": 5061
+     "text": "8 post number(s) since the last archived post",
+     "high_water": 5086,
+     "last_archived": 5078
     }
    ]
   },
@@ -12812,19 +14197,11 @@
    "name": "@dronnitsa",
    "tier": "channel",
    "owners": [],
-   "high_water": 648,
-   "last_archived": 644,
+   "high_water": 666,
+   "last_archived": 666,
    "in_local_scrape": true,
    "in_weekly_scan": true,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "posts_since_archive",
-     "text": "4 post number(s) since the last archived post",
-     "high_water": 648,
-     "last_archived": 644
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "channel",
@@ -12920,7 +14297,7 @@
    "name": "@kb_spektr",
    "tier": "channel",
    "owners": [],
-   "high_water": 345,
+   "high_water": 350,
    "last_archived": 337,
    "in_local_scrape": true,
    "in_weekly_scan": true,
@@ -12928,8 +14305,8 @@
     {
      "kind": "review",
      "code": "posts_since_archive",
-     "text": "8 post number(s) since the last archived post",
-     "high_water": 345,
+     "text": "13 post number(s) since the last archived post",
+     "high_water": 350,
      "last_archived": 337
     }
    ]
@@ -13069,19 +14446,11 @@
    "owners": [
     "fond-nasha-pravda"
    ],
-   "high_water": 687,
-   "last_archived": 686,
+   "high_water": 688,
+   "last_archived": 688,
    "in_local_scrape": true,
    "in_weekly_scan": true,
-   "flags": [
-    {
-     "kind": "review",
-     "code": "posts_since_archive",
-     "text": "1 post number(s) since the last archived post",
-     "high_water": 687,
-     "last_archived": 686
-    }
-   ]
+   "flags": []
   },
   {
    "kind": "channel",
@@ -13134,15 +14503,17 @@
    "name": "@nvgushkuynik",
    "tier": "channel",
    "owners": [],
-   "high_water": null,
-   "last_archived": 130,
+   "high_water": 159,
+   "last_archived": 155,
    "in_local_scrape": true,
    "in_weekly_scan": true,
    "flags": [
     {
-     "kind": "behind",
-     "code": "channel_unread",
-     "text": "On the weekly scan, not read yet"
+     "kind": "review",
+     "code": "posts_since_archive",
+     "text": "4 post number(s) since the last archived post",
+     "high_water": 159,
+     "last_archived": 155
     }
    ]
   },
@@ -13192,15 +14563,17 @@
    "name": "@potapov_npp",
    "tier": "channel",
    "owners": [],
-   "high_water": null,
+   "high_water": 6317,
    "last_archived": 6105,
    "in_local_scrape": true,
    "in_weekly_scan": true,
    "flags": [
     {
-     "kind": "behind",
-     "code": "channel_unread",
-     "text": "On the weekly scan, not read yet"
+     "kind": "review",
+     "code": "posts_since_archive",
+     "text": "212 post number(s) since the last archived post",
+     "high_water": 6317,
+     "last_archived": 6105
     }
    ]
   },
@@ -13302,11 +14675,19 @@
    "owners": [
     "ooo-trimiks"
    ],
-   "high_water": 742,
+   "high_water": 755,
    "last_archived": 742,
    "in_local_scrape": true,
    "in_weekly_scan": true,
-   "flags": []
+   "flags": [
+    {
+     "kind": "review",
+     "code": "posts_since_archive",
+     "text": "13 post number(s) since the last archived post",
+     "high_water": 755,
+     "last_archived": 742
+    }
+   ]
   },
   {
    "kind": "channel",
@@ -13482,7 +14863,7 @@
    "owners": [
     "ooo-npts-basirtk"
    ],
-   "high_water": 704,
+   "high_water": 705,
    "last_archived": 700,
    "in_local_scrape": true,
    "in_weekly_scan": true,
@@ -13490,8 +14871,8 @@
     {
      "kind": "review",
      "code": "posts_since_archive",
-     "text": "4 post number(s) since the last archived post",
-     "high_water": 704,
+     "text": "5 post number(s) since the last archived post",
+     "high_water": 705,
      "last_archived": 700
     }
    ]
@@ -13502,7 +14883,7 @@
    "name": "@uavdev",
    "tier": "channel",
    "owners": [],
-   "high_water": 12894,
+   "high_water": 12914,
    "last_archived": null,
    "in_local_scrape": false,
    "in_weekly_scan": true,
@@ -13515,8 +14896,8 @@
     {
      "kind": "review",
      "code": "channel_never_archived",
-     "text": "No post archived; channel is at post 12894",
-     "high_water": 12894
+     "text": "No post archived; channel is at post 12914",
+     "high_water": 12914
     }
    ]
   },
@@ -13731,42 +15112,87 @@
    ]
   }
  ],
- "unattached_developments": [
+ "unattached_developments": [],
+ "system": [
   {
-   "id": "2026-10-02-07",
-   "found": "2026-10-02",
-   "report": "reports/2026-10-02_trial.md",
-   "url": "https://t.me/chadayevru/5061",
-   "channel": "chadayevru",
-   "post": 5061,
-   "about": [],
-   "kind": "lead",
-   "status": "open",
-   "summary": "Lead: director of Tula НПЦ «ТулаДрон» (Евгений Григорьев) arrested; Чадаев links its Минпромторг subsidy to Ушкуйник's. No registry match."
+   "id": "tg_db_newest",
+   "label": "Newest post in the local Telegram scrape",
+   "value": "2026-10-04 (2 d ago)",
+   "status": "ok",
+   "detail": "Refresh with scripts/tg_scan.py; every Telegram search and lead check reads this database.",
+   "as_of": "2026-10-04"
   },
   {
-   "id": "2026-10-02-09",
-   "found": "2026-10-02",
-   "report": "reports/2026-10-02_trial.md",
-   "url": "https://www.aviaport.ru/news/dlya-dronov-smyagchat-lokalizatsiyu-batarey-akkamulyatornye-yacheyki-ostanutsya-importnymi/",
-   "channel": null,
-   "post": null,
-   "about": [],
-   "kind": "lead",
-   "status": "open",
-   "summary": "Context: amendments to Government Resolution №719 relax drone-battery localisation (Russian cells only from 2029); article concedes Chinese cells. Read the resolution before citing against foreign_components findings."
+   "id": "daily_round",
+   "label": "Last daily round report",
+   "value": "2026-10-06 (0 d ago)",
+   "status": "ok",
+   "detail": "The 09:15 Mac round (pulls, re-screens, ingest, board.json).",
+   "as_of": "2026-10-06"
   },
   {
-   "id": "2026-10-02-10",
-   "found": "2026-10-02",
-   "report": "reports/2026-10-02_trial.md",
-   "url": "https://www.aviaport.ru/news/na-proekt-bespilotnye-aviatsionnye-sistemy-vydelyat-svyshe-100-mlrd-rubley/",
-   "channel": null,
-   "post": null,
-   "about": [],
-   "kind": "lead",
-   "status": "open",
-   "summary": "Context: national project «Беспилотные авиационные системы» gets ₽103bn for 2027-2029 in the draft budget (TASS). For the БАС program record."
+   "id": "weekly_scan",
+   "label": "Last weekly news and channel scan",
+   "value": "2026-10-05 (1 d ago)",
+   "status": "ok",
+   "detail": "On request since 05.10.2026; leads it reports land in developments.json.",
+   "as_of": "2026-10-05"
+  },
+  {
+   "id": "registry_commit",
+   "label": "Registry last committed",
+   "value": "2026-10-06 (0 d ago)",
+   "status": "ok",
+   "detail": "Latest commit touching data/registry/.",
+   "as_of": "2026-10-06"
+  },
+  {
+   "id": "sanctions_primary_read",
+   "label": "Entities whose sanctions claim is read against an official list",
+   "value": "51 of 73",
+   "status": "watch",
+   "detail": "A sanctions-gap submission needs the official entry; an aggregator match is a lead (flag sanction_unread).",
+   "as_of": null
+  },
+  {
+   "id": "weak_ties",
+   "label": "ЦБСТ ties not backed by a document",
+   "value": "10",
+   "status": "watch",
+   "detail": "Ties graded t-open or press (flag tie_not_documented).",
+   "as_of": null
+  },
+  {
+   "id": "dob_unsourced",
+   "label": "People with a date of birth and no per-field source",
+   "value": "86",
+   "status": "act",
+   "detail": "The PII rule wants every identifying field sourced on its own; people records have no dob_source field yet.",
+   "as_of": null
+  },
+  {
+   "id": "units",
+   "label": "Handover recipients resolved to a unit record",
+   "value": "34 of 42; 0 ambiguous, 8 unrecorded; 0 possible duplicate record(s)",
+   "status": "watch",
+   "detail": "scripts/unit_lookup.py --check lists them; a bare number never resolves to a unit.",
+   "as_of": null
+  },
+  {
+   "id": "media_backlog",
+   "label": "Queued media not yet looked at",
+   "value": "235 of 939",
+   "status": "watch",
+   "detail": "Before near-duplicate folding; scripts/media_triage.py sheets builds the next contact sheets.",
+   "as_of": null
+  },
+  {
+   "id": "open_developments",
+   "label": "Scan findings not yet in the record",
+   "value": "1",
+   "status": "watch",
+   "detail": "Open items in developments.json.",
+   "as_of": null
   }
  ]
 }

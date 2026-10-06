@@ -85,3 +85,14 @@ All are in `roymarket.css`, prefixed `rm-`:
 - `rm-ref` footnote numbers and the `rm-sources` list.
 
 Footnotes resolve to plain words and a public link, never to a source id (STYLE_GUIDE §3.4–3.5).
+
+## Rules carried over from the insignia notes (06.10.2026)
+
+From `notes/hub_insignia_design_notes.md` (the old graph explorer's design log, now historical). They apply to every new reader page:
+
+1. **An element laid over a picture gets its own opaque surface.** Never rely on the picture's tone for contrast: a badge, a caption or a logo on a photo has a solid backing of its own (every contrast bug in the log came from skipping this).
+2. **Card corners carry classification marks, not raw data.** A grade chip, a kind label or a flag belongs in prime space; an ИНН, a full legal name or a citation belongs in the body, where it is read.
+3. **A certain grouping is drawn, not implied.** If membership is known (a chain, a programme, an organisation's products), show the boundary or the row; do not make the reader infer it from proximity.
+4. **Shape and colour are both load-bearing.** Test any mark in grayscale. Colour reinforces and never carries a category alone.
+
+A mark that characterises a company (offensive, defensive, dual-use) is not drawn at all unless a cited document says so; the keyword-based badge of the old explorer was removed for that reason.

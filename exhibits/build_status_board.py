@@ -76,8 +76,28 @@ PAGE_CSS = r"""
 .more { justify-self: start; font: 600 11px/1 var(--font-mono); letter-spacing: .05em; text-transform: uppercase;
   padding: 9px 12px; border: 1px solid var(--ink); background: var(--panel); color: var(--ink); border-radius: 3px; cursor: pointer; }
 .count { font-size: var(--t-note); color: var(--ink-3); margin: 0; }
+.cp { font: 600 10px/1 var(--font-mono); letter-spacing: .05em; text-transform: uppercase; padding: 4px 6px; margin-left: 4px;
+  border: 1px solid var(--ink-3); background: var(--panel); color: var(--ink); border-radius: 3px; cursor: pointer; white-space: nowrap; }
+.cp:hover { border-color: var(--ink); }
+.cp[data-done] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.queue { display: grid; gap: var(--space-2); }
+.qi { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; align-items: start; padding: 10px 12px;
+  background: var(--panel); border: 1px solid var(--rule); border-radius: var(--radius); }
+.qi .ql { font-size: var(--t-note); color: var(--ink-2); overflow-wrap: anywhere; }
+.qi pre { grid-column: 1; margin: 0; font: 400 12px/1.45 var(--font-mono); white-space: pre-wrap; overflow-wrap: anywhere; color: var(--ink); }
+.qi .cp { grid-column: 2; grid-row: 1 / span 2; align-self: center; padding: 8px 10px; }
 .how { font-size: var(--t-note); color: var(--ink-2); max-width: var(--measure); }
 .how code { font: 400 12px/1.4 var(--font-mono); background: var(--panel-2); padding: 1px 4px; border-radius: 2px; overflow-wrap: anywhere; }
+.ids { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.id { font: 400 11.5px/1.2 var(--font-mono); padding: 3px 6px; border: 1px dashed var(--ink-3); background: var(--panel);
+  color: var(--ink); border-radius: 3px; cursor: pointer; font-variant-numeric: tabular-nums; }
+.id:hover { border-style: solid; border-color: var(--ink); }
+.id[data-done] { background: var(--ink); color: var(--paper); }
+.oq { flex: 1 1 100%; font-size: var(--t-note); }
+.oq summary { cursor: pointer; font: 600 11px/1.4 var(--font-mono); letter-spacing: .05em; text-transform: uppercase; color: var(--ink-2); }
+.oq .q { padding: 6px 0; border-top: 1px solid var(--rule-soft); }
+.oq .q p { margin: 0 0 2px; max-width: var(--measure); overflow-wrap: anywhere; }
+.oq .k { font: 400 11px/1.3 var(--font-mono); color: var(--ink-3); }
 @media (max-width: 760px) {
   .row { grid-template-columns: minmax(0, 1fr); }
   .hdr { display: none; }
@@ -98,8 +118,22 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const ru = d => d ? d.slice(8,10)+"."+d.slice(5,7)+"."+d.slice(0,4) : "";
 const age = d => d ? Math.round((new Date(B.generated) - new Date(d))/86400000) : null;
 
+// Copy a command to the clipboard (inside the click, so the browser allows it); select-text fallback.
+async function copyText(btn, text) {
+  let ok = false;
+  try { await navigator.clipboard.writeText(text); ok = true; } catch(e) {}
+  if (!ok) {
+    const ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.select(); try { ok = document.execCommand('copy'); } catch(e) {} ta.remove();
+  }
+  const was = btn.textContent; btn.textContent = ok ? "Copied" : "Copy failed"; btn.dataset.done = "";
+  setTimeout(() => { btn.textContent = was; delete btn.dataset.done; }, 1600);
+}
+const CMDS = [];
+const cpBtn = (cmd, label) => { CMDS.push(cmd); return `<button class="cp" type="button" data-c="${CMDS.length-1}" title="${esc(cmd)}">${label||"Copy cmd"}</button>`; };
 function chip(f) {
   let t = esc(f.text);
+  if (f.cmds) t += f.cmds.map(c => cpBtn(c.cmd, c.label)).join("");
   if (f.url) t += ` <a href="${esc(f.url)}" target="_blank" rel="noopener">post</a>`;
   if (f.code === "development" && f.archived) t += ` <span class="k">archived, not closed</span>`;
   return `<span class="chip ${f.kind}"><span class="k"><span class="mk" aria-hidden="true">${MARK[f.kind]}</span>${f.kind}</span><span>${t}</span></span>`;
@@ -107,7 +141,6 @@ function chip(f) {
 function facts(r) {
   const out = [];
   if (r.kind === "entity") {
-    if (r.inn) out.push("ИНН " + r.inn);
     out.push(r.last_register_pull ? `register ${ru(r.last_register_pull)} (${age(r.last_register_pull)}d)` : "register: none");
   }
   if (r.kind === "entity" || r.kind === "person") out.push(r.screened ? `screened ${ru(r.screened)} (${age(r.screened)}d)` : "screened: never");
@@ -126,7 +159,11 @@ function rowHTML(r) {
   const role = r.role ? `<div class="sub">${esc(r.role)}</div>` : "";
   const sanc = r.sanctioned ? ` <span class="rm-sanction">Sanctioned</span>` : "";
   const fl = r.flags.length ? r.flags.map(chip).join("") : `<span class="ok">No flags</span>`;
-  return `<div class="row"><div><div class="nm">${esc(r.name || r.slug)}${sanc}</div>${lat}${role}<div class="sub">${esc(sub)}</div></div><div class="facts">${facts(r)}</div><div class="fl">${fl}</div></div>`;
+  const idc = [["ИНН", r.inn], ["ОГРН", r.ogrn], ["ИНН физ.", r.inn_personal]].filter(x => x[1])
+    .map(x => `<button class="id" type="button" data-t="${esc(x[1])}" title="Copy ${x[0]} ${esc(x[1])}">${x[0]} ${esc(x[1])}</button>`).join("");
+  const oqs = (r.oq||[]).length ? `<details class="oq"><summary>Open questions (${r.oq.length})</summary>` + r.oq.map(q =>
+    `<div class="q"><p>${esc(q.t)}</p>${q.s ? `<span class="k">${esc(q.s)}</span>` : ""}</div>`).join("") + `</details>` : "";
+  return `<div class="row"><div><div class="nm">${esc(r.name || r.slug)}${sanc}</div>${lat}${role}<div class="sub">${esc(sub)}</div>${idc ? `<div class="ids">${idc}</div>` : ""}</div><div class="facts">${facts(r)}</div><div class="fl">${fl}${oqs}</div></div>`;
 }
 function match(r) {
   if (st.kind !== "all" && r.kind !== st.kind) return false;
@@ -145,6 +182,7 @@ const score = r => r.flags.reduce((s,f) => s + W[f.kind], 0);
 function render() {
   const rows = B.rows.filter(match).sort((a,b) => score(b)-score(a) || TIERS.indexOf(a.tier)-TIERS.indexOf(b.tier) || String(a.name).localeCompare(String(b.name),"ru"));
   const shown = rows.slice(0, st.shown);
+  CMDS.length = QN;
   document.getElementById('rows').innerHTML = `<div class="row hdr"><div>Record</div><div>Last pulls</div><div>Flags</div></div>` + shown.map(rowHTML).join("");
   document.getElementById('count').textContent = `${rows.length} record${rows.length===1?"":"s"} match` + (rows.length > shown.length ? `, showing ${shown.length}` : "");
   const m = document.getElementById('more'); m.hidden = rows.length <= shown.length;
@@ -153,6 +191,20 @@ function render() {
   document.getElementById('flagged').checked = st.flaggedOnly;
   document.getElementById('tier').value = st.tier;
 }
+// Today's capped queue, one copy button per command.
+const q = document.getElementById('queue');
+q.innerHTML = (B.queue||[]).map(it => `<div class="qi"><span class="ql">${esc(it.label)}</span><pre>${esc(it.cmd)}</pre>${cpBtn(it.cmd, "Copy")}</div>`).join("") || `<p class="count">Nothing queued today.</p>`;
+const QN = CMDS.length;
+document.addEventListener('click', e => {
+  const i = e.target.closest('.id'); if (i) { copyText(i, i.dataset.t); return; }
+  const b = e.target.closest('.cp'); if (!b) return; copyText(b, CMDS[+b.dataset.c]);
+});
+// Every one-record pull command on the rows currently shown, to paste to the Mac in one go.
+document.getElementById('bulk').addEventListener('click', e => {
+  const seen = new Set(), out = [];
+  B.rows.filter(match).slice(0, st.shown).forEach(r => r.flags.forEach(f => (f.cmds||[]).forEach(c => { if (!seen.has(c.cmd)) { seen.add(c.cmd); out.push(c.cmd); } })));
+  copyText(e.currentTarget, out.join("\n") || "# no pullable flags on the rows shown");
+});
 // Summary tiles: records carrying at least one flag of each kind.
 const strip = document.getElementById('strip');
 strip.innerHTML = Object.entries(B.kinds).map(([k,l]) => {
@@ -212,11 +264,115 @@ def dev_html(board):
     return "\n".join(out)
 
 
+FLAG_CMDS = {
+    "egrul_missing": ("ЕГРЮЛ", "python3 scripts/egrul_vypiska_pull.py --inn {inn}"),
+    "egrul_stale": ("ЕГРЮЛ", "python3 scripts/egrul_vypiska_pull.py --inn {inn}"),
+    "bfo_missing": ("БФО", "python3 scripts/bfo_pull.py --inn {inn}"),
+    "bfo_behind": ("БФО", "python3 scripts/bfo_pull.py --inn {inn}"),
+}
+
+
+def attach_commands(board):
+    """Give each pullable flag the exact command for that one record, and the page today's capped queue.
+
+    The page only copies these to the clipboard; nothing runs from it. The
+    commands are the same ones status_board.py --pull-queue prints, for one
+    record at a time (an OpenSanctions screen of one uses 1 of its monthly quota).
+    """
+    board = json.loads(json.dumps(board))
+    for r in board["rows"]:
+        for f in r["flags"]:
+            cmds = []
+            if f["code"] in FLAG_CMDS and r.get("inn"):
+                label, cmd = FLAG_CMDS[f["code"]]
+                cmds.append({"label": "Copy " + label, "cmd": cmd.format(inn=r["inn"])})
+            elif f["code"] in ("screen_never", "screen_stale"):
+                for key in f.get("due") or []:
+                    if key in sb.SCREEN_COMMANDS:
+                        cmds.append({"label": "Copy " + key,
+                                     "cmd": sb.SCREEN_COMMANDS[key].format(n=1, slugs=r["slug"])})
+            if cmds:
+                f["cmds"] = cmds
+    queue, label, chain = [], "", []
+    for line in sb.pull_queue(board, used=sb.done_today(date.fromisoformat(board["generated"]))).splitlines():
+        if line.startswith("#"):
+            label = line.lstrip("# ")
+        elif any(k in line for k in ("egrul_vypiska_pull", "bfo_pull", "screen_")):
+            queue.append({"label": label, "cmd": line})
+        else:
+            chain.append(line)
+    if queue:
+        queue.append({"label": "Then index, parse and check what arrived, and send the text for first reading.",
+                      "cmd": "\n".join(chain)})
+        queue.append({"label": "Or run the whole round in one go (queue, pulls, ingest, export, report).",
+                      "cmd": "python3 scripts/daily_mac.py"})
+    board["queue"] = queue
+    return board
+
+
 def sb_ru(d):
     return f"{d[8:10]}.{d[5:7]}.{d[:4]}" if d and len(d) >= 10 else (d or "")
 
 
+def attach_record_detail(board):
+    """Add what a person at the dashboard copies or reads: ОГРН / personal ИНН and the open questions.
+
+    Read from data/registry/ (committed, so it works in the cloud). Only open
+    questions are carried; nothing here is written back.
+    """
+    reg = ROOT / "data" / "registry"
+    def load(name):
+        try:
+            d = json.loads((reg / name).read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            return []
+        return list(d.values()) if isinstance(d, dict) else d
+    ents = {e.get("slug"): e for e in load("entities.json")}
+    ppl = {p.get("slug"): p for p in load("people.json")}
+    oq = {}
+    for q in load("open_questions.json"):
+        for key in ("entity_slug", "person_slug"):
+            if q.get(key) and q.get("status", "open") == "open":
+                oq.setdefault(q[key], []).append({"t": q.get("text", ""), "s": q.get("source_id")})
+    board = json.loads(json.dumps(board))
+    for r in board["rows"]:
+        rec = ents.get(r["slug"]) if r["kind"] == "entity" else ppl.get(r["slug"]) if r["kind"] == "person" else None
+        if rec:
+            if r["kind"] == "entity":
+                r["ogrn"] = rec.get("ogrn") or None
+            else:
+                r["inn_personal"] = rec.get("inn_personal") or None
+        qs = [{"t": q.get("text", ""), "s": q.get("source_id")}
+              for q in (rec or {}).get("open_questions") or [] if q.get("status", "open") == "open"]
+        seen = {q["t"] for q in qs}
+        qs += [q for q in oq.get(r["slug"], []) if q["t"] not in seen]
+        if qs:
+            r["oq"] = qs
+    return board
+
+
+STATUS_MARK = {"ok": "✓", "watch": "◐", "act": "●"}
+
+
+def sys_html(board):
+    rows = "".join(
+        f'<tr class="{html.escape(c["status"])}"><td class="m" title="{html.escape(c["status"])}">{STATUS_MARK[c["status"]]}</td>'
+        f'<th scope="row">{html.escape(c["label"])}</th><td>{html.escape(str(c["value"]))}</td>'
+        f'<td class="d">{html.escape(c.get("detail") or "")}</td></tr>'
+        for c in board.get("system") or [])
+    if not rows:
+        return ""
+    return f"""<section aria-labelledby="h-sys">
+  <h2 class="rm-h2" id="h-sys">System checks</h2>
+  <p class="count">How current the inputs are, and checks that belong to no single record. ● act, ◐ watch, ✓ fine.</p>
+  <style>.sys{{border-collapse:collapse;width:100%;font-size:14px}}.sys th,.sys td{{text-align:left;padding:6px 8px;border-bottom:1px solid var(--rule,#d5d9d4);vertical-align:top}}.sys th{{font-weight:500}}.sys .m{{width:1.5em}}.sys .d{{color:var(--ink-2,#555);font-size:13px}}.sys tr.act th,.sys tr.act .m{{font-weight:700}}</style>
+  <table class="sys"><tbody>{rows}</tbody></table>
+</section>
+"""
+
+
 def build(board):
+    board = attach_record_detail(attach_commands(board))
     th = board["thresholds"]
     notes = "".join(f"<br>{html.escape(n)}" for n in board["notes"])
     data = json.dumps(board, ensure_ascii=False).replace("</", "<\\/")
@@ -231,9 +387,14 @@ def build(board):
   <p class="rm-dek">Every company, person, product and channel on file, with what its record is missing, what is out of date, and what the network has said since the record was last touched.</p>
   <p class="sb-meta">Built {sb_ru(board['generated'])} from the registry and the weekly scan. A register extract counts as stale after {th['egrul_stale_days']} days, a ГУР or Aleph screen after {th.get('gur_stale_days', th['screen_stale_days'])} days, an OpenSanctions screen after {th.get('opensanctions_stale_days', th['screen_stale_days'])} days (its monthly quota).{notes}</p>
 </header>
-<section aria-labelledby="h-sum">
+{sys_html(board)}<section aria-labelledby="h-sum">
   <h2 class="rm-h2" id="h-sum">Records needing work</h2>
   <div class="sb-strip" id="strip"></div>
+</section>
+<section aria-labelledby="h-q">
+  <h2 class="rm-h2" id="h-q">Today's pull queue</h2>
+  <p class="count">The capped commands <code>status_board.py --pull-queue</code> prints for today. Copy one and paste it to the Mac session; nothing runs from this page (a page cannot reach the Mac). Click an ИНН or ОГРН on any row to copy it. A pulled document is read before any fact from it enters the registry, and a screen hit is a lead to read. Pullable flags below carry their own one-record copy button.</p>
+  <div class="queue" id="queue"></div>
 </section>
 <section aria-labelledby="h-dev">
   <h2 class="rm-h2" id="h-dev">Behind on developments</h2>
@@ -249,6 +410,7 @@ def build(board):
     </div>
     <select id="tier" aria-label="Tier"><option value="">Any tier</option></select>
     <label><input type="checkbox" id="flagged"> Only records with flags</label>
+    <button class="cp" id="bulk" type="button" title="Copy every pull command on the rows shown">Copy pull commands for rows shown</button>
   </div>
   <p class="count" id="count"></p>
   <div class="rows" id="rows"></div>
@@ -256,7 +418,7 @@ def build(board):
 </section>
 <section class="how" aria-labelledby="h-how">
   <h2 class="rm-h2" id="h-how">How this is made</h2>
-  <p>Every flag is a mechanical test in <code>scripts/status_board.py</code>, run over <code>data/registry/</code>, <code>config/channels.txt</code> and the weekly scan's files. A flag is a work item, not a finding: read the record before acting on it. Refresh with <code>python3 exhibits/build_status_board.py --out exhibits/status_board.html</code> and republish.</p>
+  <p>Every flag is a mechanical test in <code>scripts/status_board.py</code>, run over <code>data/registry/</code>, <code>config/channels.txt</code> and the weekly scan's files. A flag is a work item, not a finding: read the record before acting on it. Run <code>python3 exhibits/serve_status_board.py</code> and reload the tab: the page is rebuilt from the registry on every load.</p>
   <p><span class="mk">●</span> behind: the network said something the record lacks, or an own channel is unread. <span class="mk">◐</span> stale: a pull or screen past its threshold. <span class="mk">○</span> pull: a register extract, accounts or screen never done. <span class="mk">◆</span> review: open questions or unreviewed screening hits. <span class="mk">┄</span> gap: a field with no identifier or no source.</p>
 </section>
 </main>

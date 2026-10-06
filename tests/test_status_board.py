@@ -66,8 +66,8 @@ def main():
     bfo_line = [l for l in q.splitlines() if l.startswith("python3 scripts/bfo_pull.py")]
     assert len(bfo_line) == 1 and bfo_line[0].count("--inn") <= 3, q
     assert "python3 scripts/check_registry.py" in q.splitlines(), q
-    # After pulls, their text goes to the pull-inbox branch for first reading.
-    assert q.rstrip().endswith("first_reading.py export --push --local-dir data/sources/_inbox"), q
+    # After pulls, their text is exported locally for first reading (pull-inbox retired, issue #30).
+    assert q.rstrip().endswith("first_reading.py export --local-dir data/sources/_inbox"), q
     # Re-screens are queued per screen, capped, by slug; OpenSanctions within its quota cap.
     for key, cap in sb.SCREEN_CAPS.items():
         line = [l for l in sb.pull_queue(board).splitlines() if l.startswith(sb.SCREEN_COMMANDS[key].split(" --")[0])]
@@ -115,6 +115,46 @@ def main():
         sb.MISSES.write_text(_json.dumps({"bfo": {"7700000003": "2026-08-01"}}))
         assert "b-never" in sb.pull_queue(rows, cap=1), "an old miss is retried"
     sb.MISSES = orig
+
+    # A second run on the same day takes only what is left of each cap.
+    never2 = b.bfo_flags({"inn": "7700000004", "financials": []})
+    rows2 = {"generated": "2026-10-02", "rows": [
+        {"kind": "entity", "slug": f"c{n}", "inn": f"770000000{n}", "tier": "manufacturer", "flags": never2}
+        for n in range(5, 9)]}
+    assert sb.pull_queue(rows2, cap=3).count("--inn") == 3
+    assert sb.pull_queue(rows2, cap=3, used={"bfo": 2}).count("--inn") == 1, "one slot left"
+    q = sb.pull_queue(rows2, cap=3, used={"bfo": 3})
+    assert "--inn" not in q and "caps are used up" in q, "cap used: no pull command, and it says why"
+    scr = {"generated": "2026-10-02", "rows": [
+        {"kind": "person", "slug": f"p{n}", "tier": "x", "flags": [{"kind": "screen", "code": "screen_never",
+         "text": "never", "due": ["opensanctions"]}]} for n in range(6)]}
+    assert "screen_opensanctions" not in sb.pull_queue(scr, used={"opensanctions": 4}), "screen cap used up"
+    assert "screen_opensanctions" in sb.pull_queue(scr, used={"opensanctions": 3}), "one screen left"
+
+    # A sanctions claim counts as read only when an entry is not marked as an unread aggregator match.
+    base = {"slug": "t-co", "name_ru": "T", "inn": None, "ogrn": None}
+    unread = {"note": "Confirmed via OpenSanctions API match. NOT yet independently read against each underlying primary designation document."}
+    official = {"note": "Read in the Official Journal text of the act, entry 42."}
+    assert sb.sanction_primary_read({"sanctions": [unread]}) is False
+    assert sb.sanction_primary_read({"sanctions": [unread, official]}) is True
+    assert "sanction_unread" in codes(b.entity_row(dict(base, sanctions=[unread])))
+    assert "sanction_unread" not in codes(b.entity_row(dict(base, sanctions=[unread, official])))
+    assert "sanction_unread" not in codes(b.entity_row(dict(base)))
+    # A ЦБСТ tie without a document is flagged; a documented one is not.
+    assert "tie_not_documented" in codes(b.entity_row(dict(base, cbst_tie={"confidence": "t-open"})))
+    assert "tie_not_documented" in codes(b.entity_row(dict(base, cbst_tie={"confidence": "press"})))
+    assert "tie_not_documented" not in codes(b.entity_row(dict(base, cbst_tie={"confidence": "t-doc"})))
+    # A sanctions entry that says the identity link is unproven flags the person.
+    person = {"slug": "t-p", "fio_ru": "T", "sanctions": [{"note": "IDENTITY LINK UNPROVEN (reviewed): ..."}]}
+    assert "identity_unproven" in codes(b.person_row(person))
+    assert "identity_unproven" not in codes(b.person_row(dict(person, sanctions=[{"note": "Read in full."}])))
+    # System checks: declared statuses, the expected ids, and each carries a label and a value.
+    sysc = board["system"]
+    assert {c["status"] for c in sysc} <= sb.SYSTEM_STATUS, sysc
+    ids = {c["id"] for c in sysc}
+    assert {"sanctions_primary_read", "weak_ties", "daily_round"} <= ids, ids
+    assert all(c["label"] and c["value"] for c in sysc), sysc
+    assert "system:" in sb.summary(board)
 
     # Every flag kind is a declared one.
     assert {f["kind"] for row in board["rows"] for f in row["flags"]} <= set(sb.KINDS)

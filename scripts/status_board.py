@@ -97,6 +97,18 @@ KINDS = {
 }
 
 
+# A sanctions[] entry whose own note says no official list entry was read, or only an aggregator was.
+UNREAD_SANCTION = re.compile(r"not yet independently read|aggregator match|one level short", re.I)
+WEAK_TIES = {"t-open", "press"}   # ЦБСТ tie not backed by a document
+IDENTITY_UNPROVEN = re.compile(r"IDENTITY LINK UNPROVEN", re.I)
+SYSTEM_STATUS = {"ok", "watch", "act"}
+
+
+def sanction_primary_read(entity):
+    """True when at least one sanctions[] entry is not marked as an unread aggregator match."""
+    return any(not UNREAD_SANCTION.search(str(x.get("note") or "")) for x in entity.get("sanctions") or [] if isinstance(x, dict))
+
+
 def load(name):
     return json.loads((REG / name).read_text(encoding="utf-8"))
 
@@ -346,6 +358,13 @@ class Board:
             fl.append(flag("review", "screen_hits_unreviewed",
                            f"{n_risk} sanctions-type screening hit(s), no sanctions review recorded" + ps.pop("text_suffix", ""),
                            count=n_risk, **ps))
+        if e.get("sanctions") and not sanction_primary_read(e):
+            fl.append(flag("review", "sanction_unread",
+                           "Sanctions claim rests on an aggregator match; no entry read against an official list"))
+        tie = e.get("cbst_tie")
+        if isinstance(tie, dict) and tie.get("confidence") in WEAK_TIES:
+            fl.append(flag("review", "tie_not_documented",
+                           f"ЦБСТ tie is graded {tie['confidence']}: no document establishes it"))
         n_oq = open_items(e.get("open_questions")) + self.oq_by_slug.get(e["slug"], 0)
         if n_oq:
             fl.append(flag("review", "open_questions", f"{n_oq} open question(s)", count=n_oq))
@@ -421,6 +440,9 @@ class Board:
             fl.append(flag("review", "screen_hits_unreviewed",
                            f"{n_risk} sanctions-type screening hit(s), no sanctions entry recorded" + ps.pop("text_suffix", ""),
                            count=n_risk, **ps))
+        if any(IDENTITY_UNPROVEN.search(str(x.get("note") or "")) for x in p.get("sanctions") or [] if isinstance(x, dict)):
+            fl.append(flag("review", "identity_unproven",
+                           "Sanctions entry belongs to a same-name person; the link to this record is not proven by a document"))
         unsourced_roles = sum(1 for r in p.get("roles") or [] if isinstance(r, dict) and not r.get("source_id"))
         if unsourced_roles:
             fl.append(flag("gap", "unsourced_roles", f"{unsourced_roles} role(s) with no source", count=unsourced_roles))
@@ -512,6 +534,89 @@ class Board:
                         "in_local_scrape": k in local, "in_weekly_scan": k in scan, "flags": fl})
         return out
 
+    def system_checks(self):
+        """Whole-system parameters: how current the inputs are, and checks that belong to no single record."""
+        out = []
+
+        def add(cid, label, value, status, detail, as_of=None):
+            assert status in SYSTEM_STATUS, status
+            out.append({"id": cid, "label": label, "value": value, "status": status, "detail": detail, "as_of": as_of})
+
+        def aged(cid, label, d, ok_days, watch_days, detail):
+            if d is None:
+                add(cid, label, "unknown", "act", detail)
+                return
+            n = self.age(d)
+            add(cid, label, d.isoformat() + f" ({n} d ago)", "ok" if n <= ok_days else "watch" if n <= watch_days else "act",
+                detail, d.isoformat())
+
+        db = ROOT / "data" / "roymarket.db"
+        if db.exists():
+            try:
+                import sqlite3
+                con = sqlite3.connect(f"file:{db}?mode=ro", uri=True)
+                newest = con.execute("select max(date) from tg_posts").fetchone()[0]
+                con.close()
+                aged("tg_db_newest", "Newest post in the local Telegram scrape", parse_date(newest), 3, 10,
+                     "Refresh with scripts/tg_scan.py; every Telegram search and lead check reads this database.")
+            except sqlite3.Error:
+                pass
+        daily = sorted(REPO_WATCH.glob("daily/????-??-??.md")) if REPO_WATCH.exists() else []
+        aged("daily_round", "Last daily round report", parse_date(daily[-1].stem) if daily else None, 1, 3,
+             "The 09:15 Mac round (pulls, re-screens, ingest, board.json).")
+        if self.scan_state:
+            aged("weekly_scan", "Last weekly news and channel scan", parse_date(self.scan_state.get("last_run")), 8, 21,
+                 "On request since 05.10.2026; leads it reports land in developments.json.")
+        try:
+            import subprocess
+            r = subprocess.run(["git", "log", "-1", "--format=%cs", "--", "data/registry"], cwd=ROOT,
+                               capture_output=True, text=True, timeout=10)
+            if r.returncode == 0 and r.stdout.strip():
+                aged("registry_commit", "Registry last committed", parse_date(r.stdout.strip()), 2, 7,
+                     "Latest commit touching data/registry/.")
+        except (OSError, subprocess.SubprocessError):
+            pass
+        with_s = [e for e in self.entities if e.get("sanctions")]
+        read = sum(1 for e in with_s if sanction_primary_read(e))
+        add("sanctions_primary_read", "Entities whose sanctions claim is read against an official list",
+            f"{read} of {len(with_s)}", "ok" if read == len(with_s) else "act" if read < len(with_s) / 2 else "watch",
+            "A sanctions-gap submission needs the official entry; an aggregator match is a lead (flag sanction_unread).")
+        weak = sum(1 for e in self.entities if isinstance(e.get("cbst_tie"), dict) and e["cbst_tie"].get("confidence") in WEAK_TIES)
+        add("weak_ties", "ЦБСТ ties not backed by a document", str(weak), "ok" if not weak else "watch",
+            "Ties graded t-open or press (flag tie_not_documented).")
+        no_src = sum(1 for p in self.people if p.get("dob") and not p.get("dob_source"))
+        if no_src:
+            add("dob_unsourced", "People with a date of birth and no per-field source", str(no_src), "act",
+                "The PII rule wants every identifying field sourced on its own; people records have no dob_source field yet.")
+        try:
+            import unit_lookup
+            units = unit_lookup.load_units()
+            hand = load("handovers.json") if (REG / "handovers.json").exists() else []
+            tally = unit_lookup.recipient_tally(units, hand)
+            dups = unit_lookup.find_duplicates(units)
+            bad = tally["ambiguous"] + len(dups)
+            add("units", "Handover recipients resolved to a unit record",
+                f"{tally['resolved']} of {sum(tally.values())}; {tally['ambiguous']} ambiguous, {tally['unrecorded']} unrecorded; {len(dups)} possible duplicate record(s)",
+                "act" if bad else "watch" if tally["unrecorded"] else "ok",
+                "scripts/unit_lookup.py --check lists them; a bare number never resolves to a unit.")
+        except (OSError, ValueError, KeyError):
+            pass
+        qpath, lpath = ROOT / "data" / "sources" / "_media_triage" / "queue.json", REG / "_media_looked.json"
+        if qpath.exists() and lpath.exists():
+            try:
+                items = json.loads(qpath.read_text(encoding="utf-8")).get("items") or []
+                looked = json.loads(lpath.read_text(encoding="utf-8"))
+                left = sum(1 for it in items if it.get("key") not in looked)
+                add("media_backlog", "Queued media not yet looked at", f"{left} of {len(items)}", "ok" if not left else "watch",
+                    "Before near-duplicate folding; scripts/media_triage.py sheets builds the next contact sheets.")
+            except (OSError, ValueError):
+                pass
+        n_dev = sum(1 for it in (self.developments or {}).get("items", []) if it.get("status", "open") == "open")
+        if self.developments is not None:
+            add("open_developments", "Scan findings not yet in the record", str(n_dev), "ok" if not n_dev else "watch",
+                "Open items in developments.json.")
+        return out
+
     def build(self):
         rows = [self.entity_row(e) for e in self.entities]
         rows += [self.person_row(p) for p in self.people]
@@ -525,6 +630,7 @@ class Board:
             "thresholds": {"egrul_stale_days": EGRUL_STALE_DAYS, "screen_stale_days": SCREEN_STALE_DAYS,
                            **{f"{k}_stale_days": n for _, _, k, n in KEY_SCREENS}},
             "kinds": KINDS, "notes": self.notes, "rows": rows, "unattached_developments": orphans,
+            "system": self.system_checks(),
         }
 
 
@@ -577,6 +683,10 @@ def summary(board):
     lines.append("  flags:")
     for (k, c), n in sorted(fc.items()):
         lines.append(f"    {k:7} {c:28} {n}")
+    if board.get("system"):
+        lines.append("  system:")
+        for c in board["system"]:
+            lines.append(f"    {c['status']:5} {c['label']}: {c['value']}")
     behind = [(r, f) for r in rows for f in r["flags"] if f["code"] == "development"]
     if behind:
         lines.append("  open developments:")
@@ -590,7 +700,40 @@ def summary(board):
 PULL_CAP = 8  # per registry per day: "a handful" in the pull scripts' own policy wording
 
 
-def pull_queue(board, cap=PULL_CAP):
+def done_today(day):
+    """What today's runs already used, so a second run on the same day (a manual pull, a rerun of the daily
+    round) takes only what is left of each cap: {"bfo": n, "egrul": n, "opensanctions": n, "gur": n, "aleph": n}.
+    Pulls count distinct ИНН with a file written today or a miss recorded today; screens count records whose
+    <key>_screened_at is today. Local files only; a missing file counts as zero."""
+    iso = day.isoformat()
+    used = {k: 0 for k in ("bfo", "egrul", *SCREEN_CAPS)}
+    for key in SCREEN_CAPS:
+        n = 0
+        for name in ("entities.json", "people.json"):
+            try:
+                raw = json.loads((REG / name).read_text(encoding="utf-8"))
+            except (OSError, ValueError):
+                continue
+            recs = raw if isinstance(raw, list) else next((v for v in raw.values() if isinstance(v, list)), [])
+            n += sum(1 for r in recs if isinstance(r, dict) and str(r.get(f"{key}_screened_at") or "")[:10] == iso)
+        used[key] = n
+    src = ROOT / "data" / "sources"
+    for registry, pattern in (("bfo", "BFO_*_*"), ("egrul", "EGRUL_*_*")):
+        inns = set()
+        for f in src.glob(pattern):
+            m = re.match(r"(?:BFO|EGRUL)_(\d{10,12})_", f.name)
+            if m and date.fromtimestamp(f.stat().st_mtime) == day:
+                inns.add(m.group(1))
+        try:
+            misses = json.loads(MISSES.read_text(encoding="utf-8")).get(registry, {})
+        except (OSError, ValueError):
+            misses = {}
+        inns |= {inn for inn, d in misses.items() if d == iso}
+        used[registry] = len(inns)
+    return used
+
+
+def pull_queue(board, cap=PULL_CAP, used=None):
     """Shell commands that pull what the board flags as missing or stale.
 
     Registry sites are unreachable from the cloud, so this is run on the
@@ -604,6 +747,7 @@ def pull_queue(board, cap=PULL_CAP):
     A pulled file is a document to read, not a fact: wiring into the registry
     still goes through corrections_*.json after reading it (CLAUDE.md hard rule).
     """
+    used = used or {}
     rank = {t: i for i, t in enumerate(TIER_ORDER)}
     ents = sorted((r for r in board["rows"] if r["kind"] == "entity" and r.get("inn")),
                   key=lambda r: (rank.get(r["tier"], 99), r["slug"]))
@@ -611,16 +755,17 @@ def pull_queue(board, cap=PULL_CAP):
     missed = {"bfo": recent_misses(gen, "bfo"), "egrul": recent_misses(gen, "egrul")}
 
     def pick(codes, registry=None):
+        room = max(0, cap - used.get(registry, 0))
         # Records whose register was already asked (a filing on disk, just not the
         # latest year) go after those never pulled, so a company that has not filed
         # yet cannot hold the day's slots; the tier order holds within each group.
         hits = [r for r in ents if any(f["code"] in codes for f in r["flags"])
                 and r["inn"] not in missed.get(registry, ())]
         asked = lambda r: any(f.get("on_disk") for f in r["flags"] if f["code"] in codes)
-        return sorted(hits, key=asked)[:cap]
+        return sorted(hits, key=asked)[:room]
     egrul = pick({"egrul_missing", "egrul_stale"}, "egrul")
     bfo = pick({"bfo_missing", "bfo_behind"}, "bfo")
-    screens = screen_queue(board, rank)
+    screens = screen_queue(board, rank, used)
     lines = [f"# Pull queue for {board['generated']} from scripts/status_board.py (cap {cap} per registry).",
              "# Live lookups against egrul.nalog.ru / bo.nalog.gov.ru: run from the repo root on a machine that reaches them."]
     if egrul:
@@ -632,8 +777,11 @@ def pull_queue(board, cap=PULL_CAP):
     for key, slugs in screens.items():
         lines.append(f"# {key} screen missing or out of date (cap {SCREEN_CAPS[key]} a day): " + ", ".join(slugs))
         lines.append(SCREEN_COMMANDS[key].format(n=len(slugs), slugs=",".join(slugs)))
+    if used and any(used.get(k) for k in ("bfo", "egrul", *SCREEN_CAPS)):
+        lines.insert(2, "# Already used today: " + ", ".join(f"{k} {v}" for k, v in used.items() if v)
+                     + "  (each cap counts the whole day, so a rerun takes only what is left)")
     if not (egrul or bfo or screens):
-        lines.append("# Nothing to pull today.")
+        lines.append("# Nothing to pull today." + (" Today's caps are used up." if used and any(used.values()) else ""))
         return "\n".join(lines)
     lines += ["# Index and parse what arrived, then check the registry.",
               "python3 scripts/inventory_sources.py",
@@ -644,17 +792,21 @@ def pull_queue(board, cap=PULL_CAP):
               "python3 scripts/build_relationship_graph.py",
               "python3 scripts/check_registry.py"]
     if egrul or bfo:
-        # Text of each new pull to the pull-inbox side branch, for the cloud's
-        # first reading the same morning (user, 02.10.2026: "push"). PDFs stay local.
-        lines += ["# Send the text of today's pulls for first reading (pull-inbox branch, never merged).",
-                  "python3 scripts/first_reading.py export --push --local-dir data/sources/_inbox"]
+        # Text of each new pull, local only -- the cloud first-reading routine
+        # and the pull-inbox branch it read were retired 05.10.2026 (issue
+        # #30): main re-reads every document in full before applying a
+        # correction anyway, so a second cloud read of the same text was
+        # pure duplication. PDFs stay local too.
+        lines += ["# Export today's pulls for first reading, local only.",
+                  "python3 scripts/first_reading.py export --local-dir data/sources/_inbox"]
     return "\n".join(l for l in lines if l)
 
 
-def screen_queue(board, rank):
+def screen_queue(board, rank, used=None):
     """{screen key: [slugs]} due today, capped by SCREEN_CAPS."""
     out = {}
     for key, cap in SCREEN_CAPS.items():
+        cap = max(0, cap - (used or {}).get(key, 0))
         due = []
         for r in board["rows"]:
             if r["kind"] not in ("entity", "person"):
@@ -665,7 +817,7 @@ def screen_queue(board, rank):
                                 key == "opensanctions" and r["kind"] != "person",
                                 -(f.get("age_days") or 0),
                                 rank.get(r.get("tier"), 99), r["slug"]))
-        if due:
+        if due and cap:
             out[key] = [d[-1] for d in sorted(due)[:cap]]
     return out
 
@@ -712,7 +864,7 @@ def main():
         print(f"no record {a.slug}", file=sys.stderr)
         return 1
     if a.pull_queue is not None:
-        print(pull_queue(board, a.pull_queue))
+        print(pull_queue(board, a.pull_queue, done_today(today)))
         return 0
     print(summary(board))
     if a.diff:

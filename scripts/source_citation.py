@@ -17,7 +17,7 @@ import html
 import re
 from pathlib import Path
 
-CITE_VERSION = 5
+CITE_VERSION = 8
 REPO = Path(__file__).resolve().parent.parent
 
 
@@ -155,6 +155,9 @@ SIMPLE = {  # prefix -> title stem; the date is appended
     "GISP": "State industry information system (ГИСП) data",
     "AERONEXT": "АЭРОНЕКСТ association member record",
     "NSDC": "Extract from Ukraine's State Register of Sanctions",
+    "OFAC": "US Treasury (OFAC) Specially Designated Nationals list, entry",
+    "SECO": "Swiss SECO sanctions list, entry",
+    "UKSL": "UK Sanctions List (FCDO), entry",
     "RUSPROFILE": "Rusprofile company page, archived",
     "OZON": "Ozon marketplace page, archived",
     "WILDBERRIES": "Wildberries seller page, archived",
@@ -175,6 +178,9 @@ SIMPLE = {  # prefix -> title stem; the date is appended
 def cite(s: dict, f: dict | None) -> tuple[str, str | None]:
     """(title, public_url) for one sources.json record."""
     title, url = _cite(s, f)
+    name = Path(s["path"]).name
+    if name.startswith("TGPOST_") and "tie-evidence" in name:  # our transcript of the database text, not a page capture
+        title += " (transcript of the database text, not a capture of the page)"
     return title[:1].upper() + title[1:], url
 
 
@@ -217,6 +223,15 @@ def _cite(s: dict, f: dict | None) -> tuple[str, str | None]:
             return (f"State procurement search for supplier ИНН {m.group(1)}, zakupki.gov.ru{dated}",
                     f"https://zakupki.gov.ru/epz/contract/search/results.html?supplierTitle={m.group(1)}")
         return f"State procurement record, zakupki.gov.ru{dated}", None
+    if prefix == "FEDRESURS" and "audit-report" in name:
+        m = re.search(r"(\d{4})fy", name)
+        return f"Auditor's report on the annual accounts, as published on Fedresurs{', FY ' + m.group(1) if m else ''}{dated}", None
+    if prefix == "HHRU":
+        return f"Job vacancy posted on hh.ru{dated}", None
+    if prefix == "CERT" and "dealer" in name:
+        return f"Official dealer certificate issued by the manufacturer{dated}", None
+    if prefix == "EGRUL" and re.match(r"EGRUL_\d{12}_", name):   # a sole trader's extract (12-digit ИНН) is from the ЕГРИП
+        return f"Sole-trader register extract (ЕГРИП, Federal Tax Service) for ИНН {name.split('_')[1]}{dated}", None
     if prefix == "EGRUL" or name.startswith("ul-") or typ == "egrul":
         m = re.match(r"EGRUL_(\d{10})_", name) or re.match(r"ul-(\d{13})-", name)
         ident = (f" for ИНН {m.group(1)}" if len(m.group(1)) == 10 else f" for ОГРН {m.group(1)}") if m else ""
@@ -246,6 +261,14 @@ def _cite(s: dict, f: dict | None) -> tuple[str, str | None]:
         return f"Rospatent register search{dated}", None
     if prefix == "GUR":
         return f"Ukraine's defence intelligence (ГУР) War & Sanctions portal{dated}", url
+    if prefix == "OFAC" and "recent-action" in name:
+        return f"US Treasury (OFAC) recent actions notice{dated}", None
+    if prefix == "UKAZ":
+        m = re.match(r"UKAZ_(\d+)-(\d{4})_", name)
+        return (f"Decree of the President of Ukraine no. {m.group(1)}/{m.group(2)} bringing into force a decision of the National Security and Defence Council{dated}"
+                if m else f"Decree of the President of Ukraine{dated}"), (f"https://zakon.rada.gov.ua/laws/show/{m.group(1)}/{m.group(2)}" if m else None)
+    if prefix == "EU" and "-fsf-" in name:
+        return f"EU consolidated financial sanctions list, entry{dated}", None
     if prefix == "EU":
         m = re.search(r"(implementing-regulation|council-decision|regulation|decision)-(\d{4})-(\d+)", name)
         kind = {"implementing-regulation": "Council Implementing Regulation (EU)", "council-decision": "Council Decision (CFSP)",

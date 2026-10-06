@@ -1,9 +1,9 @@
 {
-  "schema_version": 12,
+  "schema_version": 13,
   "generated_from": "data/registry/entities.json + people.json + programs.json + products.json",
-  "node_count": 1261,
-  "edge_count": 2182,
-  "unresolved_count": 115,
+  "node_count": 1266,
+  "edge_count": 2187,
+  "unresolved_count": 114,
   "nodes": [
     {
       "id": "abdulov-aleksandr-alekseevich",
@@ -94,7 +94,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": "offensive",
       "product_count": 1,
       "degree": 8
     },
@@ -147,7 +146,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "АНО",
-      "variant": null,
       "product_count": 0,
       "degree": 8
     },
@@ -160,7 +158,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": "Ассоциация",
-      "variant": null,
       "product_count": 0,
       "degree": 11
     },
@@ -173,7 +170,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": "АНО",
-      "variant": null,
       "product_count": 0,
       "degree": 17
     },
@@ -186,7 +182,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "АНО",
-      "variant": null,
       "product_count": 0,
       "degree": 7
     },
@@ -199,7 +194,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "АНО",
-      "variant": "dual",
       "product_count": 8,
       "degree": 50
     },
@@ -212,7 +206,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 3
     },
@@ -225,7 +218,6 @@
       "tier": "plumbing",
       "sanctioned": true,
       "legal_form": "АНО",
-      "variant": null,
       "product_count": 0,
       "degree": 9
     },
@@ -238,7 +230,6 @@
       "tier": "plumbing",
       "sanctioned": true,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 2
     },
@@ -251,9 +242,8 @@
       "tier": "cbst-core",
       "sanctioned": true,
       "legal_form": "АНО",
-      "variant": null,
       "product_count": 0,
-      "degree": 98
+      "degree": 96
     },
     {
       "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -264,7 +254,6 @@
       "tier": "plumbing",
       "sanctioned": true,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 5
     },
@@ -277,7 +266,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "АНО",
-      "variant": null,
       "product_count": 0,
       "degree": 7
     },
@@ -310,7 +298,7 @@
       "kind": "person",
       "label": "Анцев Георгий Владимирович",
       "name_latin": "Antsev Georgiy Vladimirovich",
-      "sanctioned": false,
+      "sanctioned": true,
       "degree": 5
     },
     {
@@ -318,7 +306,7 @@
       "kind": "person",
       "label": "Анцев Иван Георгиевич",
       "name_latin": "Antsev Ivan Georgievich",
-      "sanctioned": false,
+      "sanctioned": true,
       "degree": 2
     },
     {
@@ -330,7 +318,6 @@
       "tier": "adjacent",
       "sanctioned": true,
       "legal_form": "АО",
-      "variant": null,
       "product_count": 0,
       "degree": 3
     },
@@ -343,7 +330,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": "АО",
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -356,7 +342,6 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "АО",
-      "variant": null,
       "product_count": 0,
       "degree": 2
     },
@@ -369,7 +354,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "АО",
-      "variant": null,
       "product_count": 8,
       "degree": 23
     },
@@ -382,7 +366,6 @@
       "tier": "plumbing",
       "sanctioned": true,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 2
     },
@@ -395,7 +378,6 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "АО",
-      "variant": null,
       "product_count": 0,
       "degree": 2
     },
@@ -408,7 +390,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 2
     },
@@ -421,9 +402,8 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "АО",
-      "variant": null,
       "product_count": 2,
-      "degree": 7
+      "degree": 8
     },
     {
       "id": "ao-kronshtadt",
@@ -434,7 +414,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": null,
-      "variant": "offensive",
       "product_count": 8,
       "degree": 45
     },
@@ -447,7 +426,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "АО",
-      "variant": null,
       "product_count": 0,
       "degree": 2
     },
@@ -460,7 +438,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 1,
       "degree": 4
     },
@@ -473,7 +450,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "АО",
-      "variant": null,
       "product_count": 2,
       "degree": 56
     },
@@ -486,7 +462,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "АО",
-      "variant": "defensive",
       "product_count": 6,
       "degree": 96
     },
@@ -499,7 +474,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "АО",
-      "variant": null,
       "product_count": 0,
       "degree": 6
     },
@@ -512,7 +486,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "АО",
-      "variant": "defensive",
       "product_count": 5,
       "degree": 11
     },
@@ -525,7 +498,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "АО",
-      "variant": null,
       "product_count": 0,
       "degree": 10
     },
@@ -538,7 +510,6 @@
       "tier": "money-layer",
       "sanctioned": true,
       "legal_form": null,
-      "variant": null,
       "product_count": 52,
       "degree": 56
     },
@@ -551,7 +522,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "АО",
-      "variant": "offensive",
       "product_count": 5,
       "degree": 14
     },
@@ -564,7 +534,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "АО",
-      "variant": "defensive",
       "product_count": 2,
       "degree": 17
     },
@@ -577,7 +546,6 @@
       "tier": "plumbing",
       "sanctioned": true,
       "legal_form": "АО",
-      "variant": null,
       "product_count": 0,
       "degree": 6
     },
@@ -590,7 +558,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "АО",
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -603,7 +570,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 2
     },
@@ -616,7 +582,6 @@
       "tier": "cbst-core",
       "sanctioned": true,
       "legal_form": "АО",
-      "variant": null,
       "product_count": 0,
       "degree": 5
     },
@@ -629,7 +594,6 @@
       "tier": "cbst-core",
       "sanctioned": true,
       "legal_form": "АО",
-      "variant": null,
       "product_count": 0,
       "degree": 5
     },
@@ -642,7 +606,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "АО",
-      "variant": "offensive",
       "product_count": 4,
       "degree": 20
     },
@@ -655,7 +618,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 1,
       "degree": 5
     },
@@ -668,7 +630,6 @@
       "tier": "plumbing",
       "sanctioned": true,
       "legal_form": "АО",
-      "variant": null,
       "product_count": 2,
       "degree": 3
     },
@@ -681,7 +642,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "АО",
-      "variant": "offensive",
       "product_count": 5,
       "degree": 8
     },
@@ -694,7 +654,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": "АО",
-      "variant": null,
       "product_count": 0,
       "degree": 15
     },
@@ -707,7 +666,6 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "УК",
-      "variant": null,
       "product_count": 0,
       "degree": 7
     },
@@ -720,7 +678,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 3
     },
@@ -733,7 +690,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": "АО",
-      "variant": null,
       "product_count": 0,
       "degree": 3
     },
@@ -746,7 +702,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 2
     },
@@ -783,7 +738,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -796,9 +750,8 @@
       "tier": "money-layer",
       "sanctioned": true,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "astakhov-sergey-petrovich",
@@ -981,7 +934,7 @@
       "kind": "person",
       "label": "Богатиков Сергей Анатольевич",
       "name_latin": "Bogatikov Sergey Anatolevich",
-      "sanctioned": false,
+      "sanctioned": true,
       "degree": 2
     },
     {
@@ -1077,7 +1030,7 @@
       "kind": "person",
       "label": "Чадаев Алексей Викторович",
       "name_latin": null,
-      "sanctioned": false,
+      "sanctioned": true,
       "degree": 3
     },
     {
@@ -1153,7 +1106,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 8
     },
@@ -1383,6 +1335,12 @@
       "id": "customer::пограничное-управление-федеральной-службы-безопасности-российской-федерации-по-городу-санкт-петербургу-и-ленинградской-области",
       "kind": "government_customer",
       "label": "Пограничное управление Федеральной службы безопасности Российской Федерации по городу Санкт-Петербургу и Ленинградской области",
+      "degree": 1
+    },
+    {
+      "id": "customer::правительство-хабаровского-края",
+      "kind": "government_customer",
+      "label": "ПРАВИТЕЛЬСТВО  ХАБАРОВСКОГО КРАЯ",
       "degree": 1
     },
     {
@@ -1756,7 +1714,7 @@
       "kind": "event",
       "label": "«Дронница» — Всероссийский слёт операторов боевых беспилотных систем",
       "subtype": "event_series",
-      "degree": 5
+      "degree": 6
     },
     {
       "id": "event::dronnitsa-2022",
@@ -1785,6 +1743,13 @@
       "label": "Дронница 2025 (IV)",
       "subtype": "event_edition",
       "degree": 5
+    },
+    {
+      "id": "event::dronnitsa-2026",
+      "kind": "event",
+      "label": "Дронница 2026 (V)",
+      "subtype": "event_edition",
+      "degree": 1
     },
     {
       "id": "evgeniy-sergeevich-ieto-yal",
@@ -1835,7 +1800,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "Общественная организация",
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -1848,7 +1812,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 6
     },
@@ -1901,7 +1864,6 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "Фонд",
-      "variant": null,
       "product_count": 0,
       "degree": 7
     },
@@ -1914,7 +1876,6 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "Фонд",
-      "variant": null,
       "product_count": 0,
       "degree": 7
     },
@@ -1927,7 +1888,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 1
     },
@@ -1940,7 +1900,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 2
     },
@@ -1953,7 +1912,6 @@
       "tier": "cbst-core",
       "sanctioned": true,
       "legal_form": "Фонд",
-      "variant": null,
       "product_count": 0,
       "degree": 19
     },
@@ -1966,7 +1924,6 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -1979,7 +1936,6 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -1992,7 +1948,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "Фонд",
-      "variant": null,
       "product_count": 0,
       "degree": 9
     },
@@ -2005,7 +1960,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 2
     },
@@ -2102,11 +2056,10 @@
       "kind": "entity",
       "label": "ГК «Логос»",
       "name_latin": null,
-      "inn": "7839303129",
+      "inn": null,
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": "defensive",
       "product_count": 5,
       "degree": 12
     },
@@ -2119,7 +2072,6 @@
       "tier": "plumbing",
       "sanctioned": true,
       "legal_form": "ГК",
-      "variant": null,
       "product_count": 0,
       "degree": 6
     },
@@ -2219,6 +2171,18 @@
       "degree": 5
     },
     {
+      "id": "ip-artemeva-viktoriya-mikhaylovna",
+      "kind": "entity",
+      "label": "ИП Артемьева Виктория Михайловна",
+      "name_latin": null,
+      "inn": "350102453754",
+      "tier": "adjacent",
+      "sanctioned": false,
+      "legal_form": "ИП",
+      "product_count": 0,
+      "degree": 2
+    },
+    {
       "id": "ip-bratenkov-andrey-alekseevich",
       "kind": "entity",
       "label": "ИП Братеньков Андрей Алексеевич (прекратил деятельность 23.04.2020)",
@@ -2227,7 +2191,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ИП",
-      "variant": null,
       "product_count": 0,
       "degree": 3
     },
@@ -2240,9 +2203,20 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ИП",
-      "variant": null,
       "product_count": 0,
       "degree": 1
+    },
+    {
+      "id": "ip-korovkin-aleksandr-anatolevich",
+      "kind": "entity",
+      "label": "ИП Коровкин Александр Анатольевич",
+      "name_latin": null,
+      "inn": "780223272953",
+      "tier": "adjacent",
+      "sanctioned": false,
+      "legal_form": "ИП",
+      "product_count": 0,
+      "degree": 2
     },
     {
       "id": "ip-kuznetsov-ruslan-nikolaevich",
@@ -2253,7 +2227,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ИП",
-      "variant": null,
       "product_count": 1,
       "degree": 4
     },
@@ -2266,9 +2239,20 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ИП",
-      "variant": null,
       "product_count": 0,
       "degree": 2
+    },
+    {
+      "id": "ip-pinimasov-aleksandr-vyacheslavovich",
+      "kind": "entity",
+      "label": "ИП Пинимасов Александр Вячеславович",
+      "name_latin": null,
+      "inn": "583680188519",
+      "tier": "adjacent",
+      "sanctioned": false,
+      "legal_form": "ИП",
+      "product_count": 0,
+      "degree": 1
     },
     {
       "id": "ip-shandobylo-sergey-sergeevich",
@@ -2279,7 +2263,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ИП",
-      "variant": null,
       "product_count": 0,
       "degree": 1
     },
@@ -2292,7 +2275,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ИП",
-      "variant": "defensive",
       "product_count": 1,
       "degree": 9
     },
@@ -2335,6 +2317,14 @@
       "name_latin": "Ivanov Evgeniy Andreevich",
       "sanctioned": false,
       "degree": 1
+    },
+    {
+      "id": "ivlev-artem-yurevich",
+      "kind": "person",
+      "label": "Ивлев Артём Юрьевич",
+      "name_latin": null,
+      "sanctioned": false,
+      "degree": 3
     },
     {
       "id": "izmaylov-dmitriy-andreevich",
@@ -2401,7 +2391,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 4,
       "degree": 10
     },
@@ -2428,6 +2417,14 @@
       "name_latin": "Khamukhin Anatoliy Vladimirovich",
       "sanctioned": false,
       "degree": 3
+    },
+    {
+      "id": "kholkin-oleg-valerevich",
+      "kind": "person",
+      "label": "Холкин Олег Валерьевич",
+      "name_latin": "Kholkin Oleg Valerevich",
+      "sanctioned": false,
+      "degree": 4
     },
     {
       "id": "khristyuk-ekaterina-valerevna",
@@ -2474,7 +2471,7 @@
       "kind": "person",
       "label": "Киселёв Дмитрий Константинович",
       "name_latin": "Dmitry Konstantinovich Kiselev",
-      "sanctioned": false,
+      "sanctioned": true,
       "degree": 1
     },
     {
@@ -2566,14 +2563,6 @@
       "degree": 3
     },
     {
-      "id": "konstantinov-evgeniy-aleksandrovich",
-      "kind": "person",
-      "label": "Константинов Евгений Александрович",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 2
-    },
-    {
       "id": "korchagina-olga-aleksandrovna",
       "kind": "person",
       "label": "Корчагина Ольга Александровна",
@@ -2602,7 +2591,7 @@
       "kind": "person",
       "label": "Косолапов Олег Юрьевич",
       "name_latin": "Kosolapov Oleg Yurevich",
-      "sanctioned": false,
+      "sanctioned": true,
       "degree": 3
     },
     {
@@ -2694,7 +2683,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 5,
       "degree": 6
     },
@@ -2731,7 +2719,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 1,
       "degree": 3
     },
@@ -2976,7 +2963,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 3
     },
@@ -3045,7 +3031,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": "Некоммерческое партнёрство",
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -3058,7 +3043,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "НПО",
-      "variant": "defensive",
       "product_count": 13,
       "degree": 24
     },
@@ -3071,9 +3055,8 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ИП",
-      "variant": null,
       "product_count": 0,
-      "degree": 5
+      "degree": 4
     },
     {
       "id": "npp-elvo-kolskaya-verf",
@@ -3084,7 +3067,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "НПП",
-      "variant": null,
       "product_count": 1,
       "degree": 12
     },
@@ -3097,7 +3079,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "НПП",
-      "variant": null,
       "product_count": 22,
       "degree": 114
     },
@@ -3110,7 +3091,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "НПЦ",
-      "variant": null,
       "product_count": 49,
       "degree": 152
     },
@@ -3123,7 +3103,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "НПЦ",
-      "variant": "defensive",
       "product_count": 1,
       "degree": 15
     },
@@ -3152,7 +3131,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 10,
       "degree": 15
     },
@@ -3165,7 +3143,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": "offensive",
       "product_count": 1,
       "degree": 6
     },
@@ -3178,7 +3155,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -3191,7 +3167,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 2
     },
@@ -3204,7 +3179,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 9,
       "degree": 38
     },
@@ -3217,7 +3191,6 @@
       "tier": "plumbing",
       "sanctioned": true,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 7
     },
@@ -3230,7 +3203,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 2,
       "degree": 14
     },
@@ -3243,7 +3215,6 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 10
     },
@@ -3256,7 +3227,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 5
     },
@@ -3269,7 +3239,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 9
     },
@@ -3282,7 +3251,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 12
     },
@@ -3295,7 +3263,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 10
     },
@@ -3308,7 +3275,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": "defensive",
       "product_count": 1,
       "degree": 16
     },
@@ -3321,7 +3287,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": "defensive",
       "product_count": 1,
       "degree": 8
     },
@@ -3334,7 +3299,6 @@
       "tier": "plumbing",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 11
     },
@@ -3347,7 +3311,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": "defensive",
       "product_count": 3,
       "degree": 27
     },
@@ -3360,7 +3323,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 9
     },
@@ -3373,7 +3335,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 3,
       "degree": 9
     },
@@ -3386,7 +3347,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": "offensive",
       "product_count": 2,
       "degree": 16
     },
@@ -3399,7 +3359,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 8
     },
@@ -3412,7 +3371,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 3
     },
@@ -3425,7 +3383,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": "offensive",
       "product_count": 5,
       "degree": 14
     },
@@ -3438,7 +3395,6 @@
       "tier": "unverified",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 5
     },
@@ -3451,7 +3407,6 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 1,
       "degree": 7
     },
@@ -3464,7 +3419,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 9
     },
@@ -3477,7 +3431,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 3
     },
@@ -3490,7 +3443,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 3
     },
@@ -3503,7 +3455,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -3516,7 +3467,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -3529,7 +3479,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 8
     },
@@ -3542,7 +3491,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -3555,7 +3503,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 6
     },
@@ -3568,7 +3515,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 10
     },
@@ -3581,7 +3527,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 2,
       "degree": 17
     },
@@ -3594,7 +3539,6 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 7
     },
@@ -3607,7 +3551,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": "dual",
       "product_count": 24,
       "degree": 44
     },
@@ -3620,22 +3563,8 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 4
-    },
-    {
-      "id": "ooo-gaskar",
-      "kind": "entity",
-      "label": "ООО «Гаскар»",
-      "name_latin": null,
-      "inn": "9710112989",
-      "tier": "manufacturer",
-      "sanctioned": true,
-      "legal_form": "ООО",
-      "variant": null,
-      "product_count": 8,
-      "degree": 13
     },
     {
       "id": "ooo-gaskar-integratsiya",
@@ -3646,7 +3575,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 5,
       "degree": 23
     },
@@ -3659,7 +3587,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 7
     },
@@ -3672,7 +3599,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": "offensive",
       "product_count": 3,
       "degree": 9
     },
@@ -3685,7 +3611,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 10
     },
@@ -3698,7 +3623,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 8
     },
@@ -3711,7 +3635,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": "defensive",
       "product_count": 1,
       "degree": 7
     },
@@ -3724,7 +3647,6 @@
       "tier": "adjacent",
       "sanctioned": true,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 6
     },
@@ -3737,7 +3659,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": "defensive",
       "product_count": 1,
       "degree": 9
     },
@@ -3750,7 +3671,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 1,
       "degree": 6
     },
@@ -3763,7 +3683,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 1,
       "degree": 7
     },
@@ -3776,7 +3695,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 1,
       "degree": 4
     },
@@ -3789,7 +3707,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 1,
       "degree": 11
     },
@@ -3802,7 +3719,6 @@
       "tier": "money-layer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -3815,7 +3731,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 3
     },
@@ -3828,7 +3743,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 2,
       "degree": 6
     },
@@ -3841,7 +3755,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 6,
       "degree": 13
     },
@@ -3854,7 +3767,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": "defensive",
       "product_count": 2,
       "degree": 9
     },
@@ -3867,7 +3779,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 8,
       "degree": 16
     },
@@ -3880,7 +3791,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -3893,7 +3803,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 24,
       "degree": 33
     },
@@ -3906,7 +3815,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 1,
       "degree": 15
     },
@@ -3919,7 +3827,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 1
     },
@@ -3932,7 +3839,6 @@
       "tier": "network",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 5
     },
@@ -3945,7 +3851,6 @@
       "tier": "money-layer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 9
     },
@@ -3958,7 +3863,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": "defensive",
       "product_count": 2,
       "degree": 7
     },
@@ -3971,7 +3875,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": "offensive",
       "product_count": 1,
       "degree": 10
     },
@@ -3984,7 +3887,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -3997,9 +3899,8 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
-      "degree": 3
+      "degree": 5
     },
     {
       "id": "ooo-momento-rubinshteyn",
@@ -4010,7 +3911,6 @@
       "tier": "unverified",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 5
     },
@@ -4023,7 +3923,6 @@
       "tier": "cbst-core",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 9
     },
@@ -4036,7 +3935,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 7
     },
@@ -4049,7 +3947,6 @@
       "tier": "money-layer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 5
     },
@@ -4062,7 +3959,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 12
     },
@@ -4075,7 +3971,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 8
     },
@@ -4088,7 +3983,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 10
     },
@@ -4101,7 +3995,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 7
     },
@@ -4114,7 +4007,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": "defensive",
       "product_count": 1,
       "degree": 8
     },
@@ -4127,7 +4019,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": null,
-      "variant": "dual",
       "product_count": 47,
       "degree": 57
     },
@@ -4140,7 +4031,6 @@
       "tier": "plumbing",
       "sanctioned": true,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 3
     },
@@ -4153,7 +4043,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": "offensive",
       "product_count": 15,
       "degree": 29
     },
@@ -4166,7 +4055,6 @@
       "tier": "cbst-core",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 1,
       "degree": 11
     },
@@ -4179,7 +4067,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 6
     },
@@ -4192,7 +4079,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 13,
       "degree": 19
     },
@@ -4205,7 +4091,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 10,
       "degree": 18
     },
@@ -4218,7 +4103,6 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -4231,7 +4115,6 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -4244,7 +4127,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 1,
       "degree": 7
     },
@@ -4257,7 +4139,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 10
     },
@@ -4270,7 +4151,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": null,
-      "variant": null,
       "product_count": 6,
       "degree": 16
     },
@@ -4283,7 +4163,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": "defensive",
       "product_count": 1,
       "degree": 7
     },
@@ -4296,7 +4175,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 3
     },
@@ -4309,7 +4187,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 5
     },
@@ -4322,7 +4199,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 11
     },
@@ -4335,7 +4211,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 5
     },
@@ -4348,7 +4223,6 @@
       "tier": "money-layer",
       "sanctioned": true,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 3
     },
@@ -4361,9 +4235,8 @@
       "tier": "plumbing",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
-      "degree": 8
+      "degree": 7
     },
     {
       "id": "ooo-selskohozyaystvennye-bespilotnye-sistemy-mira",
@@ -4374,22 +4247,8 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 6
-    },
-    {
-      "id": "ooo-sibirskaya-navigatsionnaya-kompaniya",
-      "kind": "entity",
-      "label": "ООО «Сибирская навигационная компания»",
-      "name_latin": null,
-      "inn": "4205376019",
-      "tier": "manufacturer",
-      "sanctioned": true,
-      "legal_form": "ООО",
-      "variant": null,
-      "product_count": 0,
-      "degree": 8
     },
     {
       "id": "ooo-sistemnyy-integrator",
@@ -4400,7 +4259,6 @@
       "tier": "cbst-core",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": "defensive",
       "product_count": 1,
       "degree": 5
     },
@@ -4413,7 +4271,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 1,
       "degree": 8
     },
@@ -4426,7 +4283,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": "dual",
       "product_count": 8,
       "degree": 19
     },
@@ -4439,7 +4295,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 1,
       "degree": 6
     },
@@ -4452,7 +4307,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 2,
       "degree": 5
     },
@@ -4465,7 +4319,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 3
     },
@@ -4478,7 +4331,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 6
     },
@@ -4491,7 +4343,6 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 5
     },
@@ -4504,9 +4355,20 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 6
+    },
+    {
+      "id": "ooo-stims",
+      "kind": "entity",
+      "label": "ООО «СТИМС»",
+      "name_latin": null,
+      "inn": "7734436058",
+      "tier": "adjacent",
+      "sanctioned": true,
+      "legal_form": "ООО",
+      "product_count": 0,
+      "degree": 5
     },
     {
       "id": "ooo-stratim",
@@ -4517,7 +4379,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": "offensive",
       "product_count": 4,
       "degree": 12
     },
@@ -4530,7 +4391,6 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -4543,7 +4403,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 1,
       "degree": 7
     },
@@ -4556,7 +4415,6 @@
       "tier": "unverified",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -4569,7 +4427,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": "dual",
       "product_count": 6,
       "degree": 13
     },
@@ -4582,7 +4439,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 6,
       "degree": 12
     },
@@ -4595,9 +4451,8 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": "defensive",
       "product_count": 4,
-      "degree": 23
+      "degree": 25
     },
     {
       "id": "ooo-tsentr-dinarus",
@@ -4608,7 +4463,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 1,
       "degree": 7
     },
@@ -4621,7 +4475,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": "offensive",
       "product_count": 1,
       "degree": 12
     },
@@ -4634,7 +4487,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": null,
-      "variant": "offensive",
       "product_count": 4,
       "degree": 10
     },
@@ -4647,9 +4499,8 @@
       "tier": "plumbing",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
-      "degree": 6
+      "degree": 7
     },
     {
       "id": "ooo-uk-komaks",
@@ -4660,7 +4511,6 @@
       "tier": "plumbing",
       "sanctioned": true,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 6
     },
@@ -4673,7 +4523,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 6
     },
@@ -4686,7 +4535,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 1,
       "degree": 4
     },
@@ -4699,7 +4547,6 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -4712,7 +4559,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 3,
       "degree": 18
     },
@@ -4725,7 +4571,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 4
     },
@@ -4738,7 +4583,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 2,
       "degree": 7
     },
@@ -4751,7 +4595,6 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 5
     },
@@ -4764,7 +4607,6 @@
       "tier": "adjacent",
       "sanctioned": false,
       "legal_form": null,
-      "variant": null,
       "product_count": 0,
       "degree": 9
     },
@@ -4777,7 +4619,6 @@
       "tier": "money-layer",
       "sanctioned": false,
       "legal_form": "ООО",
-      "variant": null,
       "product_count": 0,
       "degree": 17
     },
@@ -4806,7 +4647,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": null,
-      "variant": "offensive",
       "product_count": 3,
       "degree": 15
     },
@@ -4827,7 +4667,6 @@
       "tier": "cbst-core",
       "sanctioned": true,
       "legal_form": "ПАО",
-      "variant": null,
       "product_count": 0,
       "degree": 7
     },
@@ -8772,110 +8611,6 @@
       "degree": 1
     },
     {
-      "id": "product::ooo-gaskar::беспилотная-авиационная-система-втулка",
-      "kind": "product",
-      "label": "Беспилотная авиационная система \"Втулка\"",
-      "owner_slug": "ooo-gaskar",
-      "source_id": "s5391",
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
-      "id": "product::ooo-gaskar::беспилотная-авиационная-система-сибирь-1",
-      "kind": "product",
-      "label": "Беспилотная авиационная система «Сибирь-1»",
-      "owner_slug": "ooo-gaskar",
-      "source_id": "s5391",
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
-      "id": "product::ooo-gaskar::беспилотная-авиационная-система-сибирь-2",
-      "kind": "product",
-      "label": "Беспилотная авиационная система «Сибирь-2»",
-      "owner_slug": "ooo-gaskar",
-      "source_id": "s5391",
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
-      "id": "product::ooo-gaskar::беспилотная-авиационная-система-сибирячок-5",
-      "kind": "product",
-      "label": "Беспилотная авиационная система \"Сибирячок-5\"",
-      "owner_slug": "ooo-gaskar",
-      "source_id": "s5391",
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
-      "id": "product::ooo-gaskar::беспилотная-авиационная-система-сибирячок-с-совмещенной-камерой-в-видимом-и-инфракрасном-диапазонах",
-      "kind": "product",
-      "label": "Беспилотная авиационная система «Сибирячок с совмещенной камерой в видимом и инфракрасном диапазонах»",
-      "owner_slug": "ooo-gaskar",
-      "source_id": "s5391",
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
-      "id": "product::ooo-gaskar::беспилотная-авиационная-система-шторм",
-      "kind": "product",
-      "label": "Беспилотная авиационная система \"Шторм\"",
-      "owner_slug": "ooo-gaskar",
-      "source_id": "s5391",
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
-      "id": "product::ooo-gaskar::мотор-py3115-1300kv-бесколлекторный-fpv",
-      "kind": "product",
-      "label": "Мотор PY3115 1300KV бесколлекторный FPV",
-      "owner_slug": "ooo-gaskar",
-      "source_id": "s1385",
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
-      "id": "product::ooo-gaskar::пропеллеры-10-дюймов-3-лопасти-fpv",
-      "kind": "product",
-      "label": "Пропеллеры 10 дюймов 3 лопасти FPV (совместимость 3115 900KV)",
-      "owner_slug": "ooo-gaskar",
-      "source_id": "s1385",
-      "classification": {
-        "status": "unclassified",
-        "uav_platform": "unknown",
-        "ew_installation": "unknown"
-      },
-      "degree": 1
-    },
-    {
       "id": "product::ooo-geron::бпла-удар",
       "kind": "product",
       "label": "БПЛА «Удар»",
@@ -11226,7 +10961,7 @@
         "uav_platform": "unknown",
         "ew_installation": "unknown"
       },
-      "degree": 6
+      "degree": 7
     },
     {
       "id": "product::ooo-trimiks::азар",
@@ -11541,6 +11276,84 @@
       "degree": 1
     },
     {
+      "id": "product::yarl::антидроновое-одеяло-ярл",
+      "kind": "product",
+      "label": "Антидроновое одеяло «ЯРЛ»",
+      "owner_slug": "yarl",
+      "source_id": "s9185",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::yarl::бпр-ярл",
+      "kind": "product",
+      "label": "БПР ЯРЛ",
+      "owner_slug": "yarl",
+      "source_id": null,
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::yarl::бронежилет-для-саперов-колонтарь",
+      "kind": "product",
+      "label": "Бронежилет для сапёров «Колонтарь»",
+      "owner_slug": "yarl",
+      "source_id": "s9186",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::yarl::бронежилет-для-собак-псы-войны",
+      "kind": "product",
+      "label": "Бронежилет для собак «Псы войны»",
+      "owner_slug": "yarl",
+      "source_id": "s5391",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::yarl::противоосколочная-рубашка",
+      "kind": "product",
+      "label": "Противоосколочная рубашка",
+      "owner_slug": "yarl",
+      "source_id": "s9184",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
+      "id": "product::yarl::противоосколочный-плащ-пончо",
+      "kind": "product",
+      "label": "Противоосколочный плащ «Пончо»",
+      "owner_slug": "yarl",
+      "source_id": "s9188",
+      "classification": {
+        "status": "unclassified",
+        "uav_platform": "unknown",
+        "ew_installation": "unknown"
+      },
+      "degree": 1
+    },
+    {
       "id": "proekt-kb-arkhangel",
       "kind": "entity",
       "label": "Проект КБ «Архангел»",
@@ -11549,7 +11362,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": "defensive",
       "product_count": 4,
       "degree": 25
     },
@@ -11558,7 +11370,14 @@
       "kind": "program",
       "label": "Акселератор ЦБСТ для специальных проектов и проектов двойного назначения",
       "subtype": "accelerator",
-      "degree": 5
+      "degree": 7
+    },
+    {
+      "id": "program::cbst-eco-accelerator",
+      "kind": "program",
+      "label": "Акселератор экологических технологий для восстановления природной среды (ЦБСТ)",
+      "subtype": "accelerator",
+      "degree": 1
     },
     {
       "id": "program::cbst-residency",
@@ -11722,7 +11541,7 @@
       "label": "Саитов Ренат Фаритович",
       "name_latin": "Renat Faritovich Saitov",
       "sanctioned": false,
-      "degree": 2
+      "degree": 3
     },
     {
       "id": "sakharov-aleksey-yurevich",
@@ -11891,6 +11710,14 @@
       "name_latin": "Sheynin Yuriy Evgenevich",
       "sanctioned": false,
       "degree": 2
+    },
+    {
+      "id": "shingareev-renat-rifkatovich",
+      "kind": "person",
+      "label": "Шингареев Ренат Рифкатович",
+      "name_latin": "Shingareev Renat Rifkatovich",
+      "sanctioned": false,
+      "degree": 1
     },
     {
       "id": "shmyrin-mikhail-sergeevich",
@@ -12076,6 +11903,13 @@
       "degree": 1
     },
     {
+      "id": "storefront::dealer-shop-горбушка-pavilion-с1-042-макс-911",
+      "kind": "storefront",
+      "label": "Макс 911 (Горбушка, С1-042)",
+      "platform": "dealer shop, Горбушка, pavilion С1-042 (Москва)",
+      "degree": 2
+    },
+    {
       "id": "storefront::dealer-site-pokrovsystem-ru-покров",
       "kind": "storefront",
       "label": "Покров",
@@ -12115,7 +11949,7 @@
       "kind": "storefront",
       "label": "Мэдро (WB seller 250074680)",
       "platform": "Wildberries (dealer storefront «Мэдро»)",
-      "degree": 1
+      "degree": 2
     },
     {
       "id": "stroev-nikolay-nikolaevich",
@@ -12192,6 +12026,12 @@
       "degree": 1
     },
     {
+      "id": "stub::inn-9704078560",
+      "kind": "unresolved",
+      "label": "ООО «Аметист Кэпитал»",
+      "degree": 2
+    },
+    {
       "id": "stub::абрамов юрий александрович",
       "kind": "unresolved",
       "label": "Абрамов Юрий Александрович",
@@ -12237,12 +12077,6 @@
       "id": "stub::амбаров петр андреевич",
       "kind": "unresolved",
       "label": "Амбаров Петр Андреевич",
-      "degree": 1
-    },
-    {
-      "id": "stub::аметист кэпитал",
-      "kind": "unresolved",
-      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АМЕТИСТ КЭПИТАЛ\"",
       "degree": 1
     },
     {
@@ -12522,6 +12356,12 @@
       "degree": 1
     },
     {
+      "id": "stub::мингалимов ленар нуриахметович",
+      "kind": "unresolved",
+      "label": "Мингалимов Ленар Нуриахметович",
+      "degree": 2
+    },
+    {
       "id": "stub::мирошниченко павел александрович",
       "kind": "unresolved",
       "label": "Мирошниченко Павел Александрович",
@@ -12762,21 +12602,9 @@
       "degree": 3
     },
     {
-      "id": "stub::холкин олег валерьевич",
-      "kind": "unresolved",
-      "label": "Холкин Олег Валерьевич",
-      "degree": 2
-    },
-    {
       "id": "stub::хоук холдинг",
       "kind": "unresolved",
       "label": "Акционерное общество \"Хоук Холдинг\"",
-      "degree": 1
-    },
-    {
-      "id": "stub::централизованная юридическая служба",
-      "kind": "unresolved",
-      "label": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦЕНТРАЛИЗОВАННАЯ ЮРИДИЧЕСКАЯ СЛУЖБА\"",
       "degree": 1
     },
     {
@@ -12814,14 +12642,6 @@
       "kind": "unresolved",
       "label": "Яковенко Ирина Геннадьевна",
       "degree": 2
-    },
-    {
-      "id": "stupnikov-andrey-genadevich",
-      "kind": "person",
-      "label": "Ступников Андрей Генадьевич",
-      "name_latin": null,
-      "sanctioned": false,
-      "degree": 6
     },
     {
       "id": "sugak-mikhail-ivanovich",
@@ -12976,7 +12796,6 @@
       "tier": "manufacturer",
       "sanctioned": true,
       "legal_form": "ООО",
-      "variant": "offensive",
       "product_count": 1,
       "degree": 4
     },
@@ -13013,7 +12832,6 @@
       "tier": "manufacturer",
       "sanctioned": false,
       "legal_form": null,
-      "variant": "defensive",
       "product_count": 1,
       "degree": 4
     },
@@ -13038,7 +12856,7 @@
       "kind": "person",
       "label": "Владимир Владимирович Якушев",
       "name_latin": null,
-      "sanctioned": false,
+      "sanctioned": true,
       "degree": 1
     },
     {
@@ -13128,6 +12946,18 @@
       "name_latin": "Yantsevich Mikhail Vladimirovich",
       "sanctioned": false,
       "degree": 2
+    },
+    {
+      "id": "yarl",
+      "kind": "entity",
+      "label": "ООО «БПР ЯРЛ»",
+      "name_latin": null,
+      "inn": "9721200789",
+      "tier": "manufacturer",
+      "sanctioned": false,
+      "legal_form": null,
+      "product_count": 6,
+      "degree": 11
     },
     {
       "id": "yatsenko-viktor-vyacheslavovich",
@@ -14066,6 +13896,19 @@
     },
     {
       "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "target": "program::cbst-eco-accelerator",
+      "type": "operates",
+      "label": "accelerator",
+      "source_id": "s9238",
+      "as_of": "2026-09-29",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc",
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "target": "program::cbst-residency",
       "type": "operates",
       "label": "residency programme",
@@ -14744,7 +14587,7 @@
       "source": "ao-npp-real",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
-      "label": "ЦБСТ's own channel names «НПП» and its representative Игорь Потапов as residents of ЦБСТ; АО «НПП» (Потапов, исполнит...",
+      "label": "ЦБСТ's own channel names «НПП» and its representative Игорь Потапов residents of ЦБСТ; АО «НПП» is matched to ИНН 972...",
       "source_id": "s7601",
       "as_of": null,
       "weight": 1.0,
@@ -16208,19 +16051,6 @@
       "confidence": null,
       "detail": null,
       "grade": "doc"
-    },
-    {
-      "source": "assotsiatsiya-vzaimopomoshch",
-      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-      "type": "cbst_tie",
-      "label": "Legal vehicle of the «Дронница» слёт, an event ЦБСТ lists in its own calendar and where its director lectured; person...",
-      "source_id": "s0445",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "t-open",
-      "detail": null,
-      "grade": "rep"
     },
     {
       "source": "assotsiatsiya-vzaimopomoshch",
@@ -20045,6 +19875,19 @@
       "grade": "doc"
     },
     {
+      "source": "customer::правительство-хабаровского-края",
+      "target": "yarl",
+      "type": "procures",
+      "label": "432/24.ЕД.Т",
+      "source_id": "s3392",
+      "as_of": "2024-12-10",
+      "weight": 782340.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
       "source": "customer::росморпорт",
       "target": "ao-pmts-avangard",
       "type": "procures",
@@ -21800,6 +21643,19 @@
       "grade": "rep"
     },
     {
+      "source": "event::dronnitsa-2026",
+      "target": "event::dronnitsa",
+      "type": "part_of",
+      "label": "event_edition",
+      "source_id": "s9233",
+      "as_of": "2026-08-12",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "rep"
+    },
+    {
       "source": "evgeniy-sergeevich-ieto-yal",
       "target": "proekt-kb-arkhangel",
       "type": "role",
@@ -22804,8 +22660,8 @@
       "source": "gk-logos",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
-      "label": "Own site (рэб.рус) states the group are \"Резиденты научных центров НПЦ БАС и ЦБСТ\" (residents of the НПЦ БАС and ЦБСТ...",
-      "source_id": "s8093",
+      "label": "ЦБСТ's own channel calls «группа компаний «Логос», developer of the «Дикобраз» jammers, a resident of ЦБСТ; the legal...",
+      "source_id": "s7585",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -23308,6 +23164,31 @@
       "grade": "doc"
     },
     {
+      "source": "ip-artemeva-viktoriya-mikhaylovna",
+      "target": "ooo-trimiks",
+      "type": "sells_for",
+      "label": "Wildberries storefront «Мэдро»; brand Мэдро named as official dealer on 3mx.ru/dilery/",
+      "source_id": "s1381",
+      "as_of": "2025-11-20",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc",
+      "detail": {
+        "products": [
+          "Булат v.4",
+          "антенны для «Булат» v4",
+          "«Булат 4 Марс»"
+        ],
+        "status": "listed",
+        "role": "seller_of_record",
+        "asserted_by": "platform",
+        "credibility": "corroborated",
+        "authorised": "yes",
+        "open": "No dealer agreement or certificate is on file. The brand's shops are not tied to this sole trader by any document (see the open questions)."
+      },
+      "grade": "doc"
+    },
+    {
       "source": "ip-bratenkov-andrey-alekseevich",
       "target": "kb-spektr-novosibirsk",
       "type": "related",
@@ -23341,6 +23222,29 @@
         "credibility": "doc",
         "authorised": "unknown",
         "open": "The panel prints the seller of record; it does not say the bureau authorised the sale."
+      },
+      "grade": "doc"
+    },
+    {
+      "source": "ip-korovkin-aleksandr-anatolevich",
+      "target": "ooo-trimiks",
+      "type": "sells_for",
+      "label": "official dealer (named on 3mx.ru/dilery/; shop at Горбушка, pavilion С1-042; Ozon storefront)",
+      "source_id": "s0558",
+      "as_of": "2025-05-30",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc",
+      "detail": {
+        "products": [
+          "Булаты"
+        ],
+        "status": "listed",
+        "role": "licensed_dealer",
+        "asserted_by": "counterparty",
+        "credibility": "doc",
+        "authorised": "yes",
+        "open": "The dealer page and the post state the dealer relationship; no dealer agreement or certificate is on file. The same post also advertises goods that are not 3mx products (see the open questions)."
       },
       "grade": "doc"
     },
@@ -23396,6 +23300,25 @@
         "credibility": "doc",
         "authorised": "unknown",
         "open": "The panel prints the seller of record next to the bureau's logo; it does not say the bureau authorised the sale. Products are not itemised on this edge."
+      },
+      "grade": "doc"
+    },
+    {
+      "source": "ip-pinimasov-aleksandr-vyacheslavovich",
+      "target": "ooo-npo-kilovatt-shestopalov",
+      "type": "sells_for",
+      "label": "official dealer (certificate №2106/2024)",
+      "source_id": "s0537",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc",
+      "detail": {
+        "role": "licensed_dealer",
+        "asserted_by": "counterparty",
+        "credibility": "doc",
+        "authorised": "yes",
+        "open": "The certificate is undated and names no product; where and when the dealer sells is not shown. The ИНН printed on it matches this ЕГРИП record."
       },
       "grade": "doc"
     },
@@ -23616,6 +23539,45 @@
       "confidence": null,
       "detail": null,
       "grade": "rep"
+    },
+    {
+      "source": "ivlev-artem-yurevich",
+      "target": "yarl",
+      "type": "directs",
+      "label": null,
+      "source_id": "s6767",
+      "as_of": "2025-04-30",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "ivlev-artem-yurevich",
+      "target": "yarl",
+      "type": "directs",
+      "label": null,
+      "source_id": "s0471",
+      "as_of": "2025-08-06",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "ivlev-artem-yurevich",
+      "target": "yarl",
+      "type": "founded",
+      "label": null,
+      "source_id": "s0471",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
     },
     {
       "source": "izmaylov-dmitriy-andreevich",
@@ -24089,6 +24051,58 @@
       "label": "co-inventor (patent RU2746394C1)",
       "source_id": "s1019",
       "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "kholkin-oleg-valerevich",
+      "target": "ooo-mo-pniei-kraskript",
+      "type": "directs",
+      "label": null,
+      "source_id": "s8933",
+      "as_of": "2023-05-19",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "kholkin-oleg-valerevich",
+      "target": "ooo-mo-pniei-kraskript",
+      "type": "founded",
+      "label": null,
+      "source_id": "s8933",
+      "as_of": "2025-11-12",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "kholkin-oleg-valerevich",
+      "target": "ooo-mo-pniei-kraskript",
+      "type": "role",
+      "label": "Основатель школы дронов DRONTECH.PRO (per the school's own site: «основатель школы кандидат технических наук Олег Холкин»)",
+      "source_id": "s8941",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "rep"
+    },
+    {
+      "source": "kholkin-oleg-valerevich",
+      "target": "ooo-mo-pniei-kraskript",
+      "type": "role",
+      "label": "Генеральный директор; единственный участник (100%, с 12.11.2025)",
+      "source_id": "s8933",
+      "as_of": "2023-05-19",
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null,
@@ -25090,32 +25104,6 @@
       "label": "Генеральный директор",
       "source_id": "s6956",
       "as_of": "2026-06-05",
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "konstantinov-evgeniy-aleksandrovich",
-      "target": "ooo-gaskar",
-      "type": "directs",
-      "label": null,
-      "source_id": "s0468",
-      "as_of": "2026-04-23",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "konstantinov-evgeniy-aleksandrovich",
-      "target": "ooo-sibirskaya-navigatsionnaya-kompaniya",
-      "type": "founded",
-      "label": null,
-      "source_id": "s0451",
-      "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null,
@@ -28545,7 +28533,7 @@
       "source": "ooo-aeromaks",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
-      "label": "Named in ЦБСТ's own post of 24.04.2026 (t.me/ANO_CBST/2095) among «ряд других отечественных разработчиков дронов» add...",
+      "label": "ЦБСТ's own channel names «Аэромакс» three times, never as a resident: as a participant in a ЦБСТ-moderated panel, amo...",
       "source_id": "s7588",
       "as_of": null,
       "weight": 1.0,
@@ -29559,9 +29547,9 @@
       "source": "ooo-gagaring",
       "target": "ooo-intel-dron",
       "type": "owns",
-      "label": "доля участия 50%",
-      "source_id": "s5333",
-      "as_of": "2025-12-31",
+      "label": "доля участия 40% (₽4 000)",
+      "source_id": "s6815",
+      "as_of": "2025-07-02",
       "weight": 1.0,
       "temporal_status": "historical",
       "confidence": null,
@@ -29946,123 +29934,6 @@
       "grade": "doc"
     },
     {
-      "source": "ooo-gaskar",
-      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-      "type": "cbst_tie",
-      "label": "EU-sanctioned as one of six named ЦБСТ residents (\"Гаскар Групп\") in the EU's 20th sanctions package, per ЦБСТ's own ...",
-      "source_id": "s7588",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "t-doc",
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "ooo-gaskar",
-      "target": "product::ooo-gaskar::беспилотная-авиационная-система-втулка",
-      "type": "produces",
-      "label": null,
-      "source_id": "s5391",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "ooo-gaskar",
-      "target": "product::ooo-gaskar::беспилотная-авиационная-система-сибирь-1",
-      "type": "produces",
-      "label": null,
-      "source_id": "s5391",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "ooo-gaskar",
-      "target": "product::ooo-gaskar::беспилотная-авиационная-система-сибирь-2",
-      "type": "produces",
-      "label": null,
-      "source_id": "s5391",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "ooo-gaskar",
-      "target": "product::ooo-gaskar::беспилотная-авиационная-система-сибирячок-5",
-      "type": "produces",
-      "label": null,
-      "source_id": "s5391",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "ooo-gaskar",
-      "target": "product::ooo-gaskar::беспилотная-авиационная-система-сибирячок-с-совмещенной-камерой-в-видимом-и-инфракрасном-диапазонах",
-      "type": "produces",
-      "label": null,
-      "source_id": "s5391",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "ooo-gaskar",
-      "target": "product::ooo-gaskar::беспилотная-авиационная-система-шторм",
-      "type": "produces",
-      "label": null,
-      "source_id": "s5391",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "ooo-gaskar",
-      "target": "product::ooo-gaskar::мотор-py3115-1300kv-бесколлекторный-fpv",
-      "type": "produces",
-      "label": null,
-      "source_id": "s1385",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "rep"
-    },
-    {
-      "source": "ooo-gaskar",
-      "target": "product::ooo-gaskar::пропеллеры-10-дюймов-3-лопасти-fpv",
-      "type": "produces",
-      "label": null,
-      "source_id": "s1385",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "rep"
-    },
-    {
       "source": "ooo-gaskar-integratsiya",
       "target": "product::ooo-gaskar-integratsiya::hive",
       "type": "produces",
@@ -30235,14 +30106,14 @@
       "source": "ooo-gk-logos",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
-      "label": "ЦБСТ's own channel directly names \"группа компаний «Логос»\" a \"резидентом ЦБСТ\" as the developer of the «Дикобраз» RF...",
+      "label": "ЦБСТ's own channel names «группа компаний «Логос»» a resident; this company carries that exact legal name, but the po...",
       "source_id": "s7585",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
-      "confidence": "t-doc",
+      "confidence": "t-open",
       "detail": null,
-      "grade": "doc"
+      "grade": "rep"
     },
     {
       "source": "ooo-goudron",
@@ -31197,7 +31068,7 @@
       "source": "ooo-metaskan",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
-      "label": "ЦБСТ's own \"gift convoy\" delivery reporting: «Арена 5М» demining detonators handed over to Kursk-direction sappers, 1...",
+      "label": "ЦБСТ's own post of 12.05.2025 lists «Арена 5М» demining firing devices (ООО «Метаскан») among the goods it handed ove...",
       "source_id": "s7594",
       "as_of": null,
       "weight": 1.0,
@@ -31320,19 +31191,6 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": "t-doc",
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "ooo-npo-kilovatt-shestopalov",
-      "target": "npo-kilobatt",
-      "type": "related",
-      "label": "dealer",
-      "source_id": "s0537",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
       "detail": null,
       "grade": "doc"
     },
@@ -32283,7 +32141,7 @@
       "source": "ooo-opkb-eksplomet",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
-      "label": "ЦБСТ (АНО «Центр беспилотных систем и технологий») and ООО «ОПКБ ЭКСПЛОМЕТ» signed a formal strategic-cooperation agr...",
+      "label": "ЦБСТ's own post of 12.08.2025 says it and ООО «ОПКБ ЭКСПЛОМЕТ» signed a strategic-cooperation agreement («соглашение ...",
       "source_id": "s7595",
       "as_of": null,
       "weight": 1.0,
@@ -32658,19 +32516,6 @@
     },
     {
       "source": "ooo-pekhtra",
-      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-      "type": "cbst_tie",
-      "label": "Special-prize winner in ЦБСТ's 2025 accelerator (not stated as a resident).",
-      "source_id": "s7606",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "press",
-      "detail": null,
-      "grade": "rep"
-    },
-    {
-      "source": "ooo-pekhtra",
       "target": "product::ooo-pekhtra::периферийное-устройство-управления-компьютером-через-мышечные-сигналы",
       "type": "produces",
       "label": null,
@@ -32679,6 +32524,19 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null,
+      "detail": null,
+      "grade": "rep"
+    },
+    {
+      "source": "ooo-pekhtra",
+      "target": "program::cbst-accelerator",
+      "type": "resident_of",
+      "label": "participant",
+      "source_id": "s7606",
+      "as_of": "2025-06-04",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "press",
       "detail": null,
       "grade": "rep"
     },
@@ -32719,6 +32577,9 @@
       "temporal_status": "unknown",
       "confidence": "doc",
       "detail": {
+        "products": [
+          "Булат v.4"
+        ],
         "role": "licensed_dealer",
         "asserted_by": "counterparty",
         "credibility": "doc",
@@ -32853,45 +32714,6 @@
       "as_of": "2025-12-31",
       "weight": 1.0,
       "temporal_status": "current",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "ooo-rtd-zashchita",
-      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-      "type": "cbst_tie",
-      "label": "Same director (Соколов Герман Олегович) as ООО «НПО Рустехдрон» (ИНН 5003155499, this registry's confirmed manufactur...",
-      "source_id": "s1161",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "press",
-      "detail": null,
-      "grade": "rep"
-    },
-    {
-      "source": "ooo-sibirskaya-navigatsionnaya-kompaniya",
-      "target": "ooo-gaskar",
-      "type": "founded",
-      "label": null,
-      "source_id": "s0468",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "ooo-sibirskaya-navigatsionnaya-kompaniya",
-      "target": "ooo-gaskar",
-      "type": "owns",
-      "label": null,
-      "source_id": "s6759",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
       "confidence": null,
       "detail": null,
       "grade": "doc"
@@ -33082,7 +32904,7 @@
       "source": "ooo-smart-teknolodzhis",
       "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
       "type": "cbst_tie",
-      "label": "Named directly as \"резидент ЦБСТ\" by ЦБСТ's own channel.",
+      "label": "Named by ЦБСТ's own channel as «Резидент Центра беспилотных систем и технологий (ЦБСТ)».",
       "source_id": "s7581",
       "as_of": null,
       "weight": 1.0,
@@ -33194,6 +33016,19 @@
       "confidence": null,
       "detail": null,
       "grade": "rep"
+    },
+    {
+      "source": "ooo-stims",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "cbst_tie",
+      "label": "ЦБСТ's own channel states that «Гаскар Групп» is among the organisations in its contour that the EU listed in its 20t...",
+      "source_id": "s7588",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "t-doc",
+      "detail": null,
+      "grade": "doc"
     },
     {
       "source": "ooo-stratim",
@@ -33701,6 +33536,19 @@
       "confidence": null,
       "detail": null,
       "grade": "rep"
+    },
+    {
+      "source": "ooo-tsyus",
+      "target": "ooo-metaskan",
+      "type": "founded",
+      "label": null,
+      "source_id": "s6712",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
     },
     {
       "source": "ooo-uk-komaks",
@@ -34994,7 +34842,7 @@
       "target": "ooo-metaskan",
       "type": "directs",
       "label": null,
-      "source_id": "s0481",
+      "source_id": "s6712",
       "as_of": "2025-07-09",
       "weight": 1.0,
       "temporal_status": "current",
@@ -35007,7 +34855,7 @@
       "target": "ooo-metaskan",
       "type": "founded",
       "label": null,
-      "source_id": "s0481",
+      "source_id": "s6712",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -36014,7 +35862,7 @@
       "temporal_status": "unknown",
       "confidence": null,
       "detail": null,
-      "grade": "rep"
+      "grade": "open"
     },
     {
       "source": "saidov-asker-kazbekovich",
@@ -36126,6 +35974,19 @@
       "type": "role",
       "label": "Генеральный директор ООО «Гаскар Интеграция» (2019)",
       "source_id": "s1548",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "saitov-renat-faritovich",
+      "target": "ooo-stims",
+      "type": "founded",
+      "label": null,
+      "source_id": "s9112",
       "as_of": null,
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -36860,6 +36721,19 @@
       "confidence": null,
       "detail": null,
       "grade": "doc"
+    },
+    {
+      "source": "shingareev-renat-rifkatovich",
+      "target": "ao-kotlin-novator",
+      "type": "role",
+      "label": "Заместитель генерального директора (named on a presentation slide at an award ceremony)",
+      "source_id": "s9169",
+      "as_of": "2024-02-06",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "rep"
     },
     {
       "source": "shmyrin-mikhail-sergeevich",
@@ -37902,6 +37776,32 @@
       "grade": "doc"
     },
     {
+      "source": "storefront::dealer-shop-горбушка-pavilion-с1-042-макс-911",
+      "target": "ip-korovkin-aleksandr-anatolevich",
+      "type": "operated_by",
+      "label": "seller",
+      "source_id": "s9309",
+      "as_of": "2025-05-30",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc",
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "storefront::dealer-shop-горбушка-pavilion-с1-042-макс-911",
+      "target": "product::ooo-trimiks::bulat",
+      "type": "lists",
+      "label": "dealer shop, Горбушка, pavilion С1-042 (Москва)",
+      "source_id": "s9309",
+      "as_of": "2025-05-30",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc",
+      "detail": null,
+      "grade": "doc"
+    },
+    {
       "source": "storefront::dealer-site-pokrovsystem-ru-покров",
       "target": "ooo-pokrov",
       "type": "operated_by",
@@ -37998,6 +37898,19 @@
       "type": "lists",
       "label": "Wildberries (brand store 3mx)",
       "source_id": null,
+      "as_of": "2026-08-25",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc",
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "storefront::wildberries-мэдро",
+      "target": "ip-artemeva-viktoriya-mikhaylovna",
+      "type": "operated_by",
+      "label": "seller",
+      "source_id": "s1381",
       "as_of": "2026-08-25",
       "weight": 1.0,
       "temporal_status": "unknown",
@@ -38240,6 +38153,32 @@
       "grade": "doc"
     },
     {
+      "source": "stub::inn-9704078560",
+      "target": "ooo-gaskar-tekhnologii",
+      "type": "founded",
+      "label": "60%",
+      "source_id": "s6772",
+      "as_of": "2026-06-03",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "stub::inn-9704078560",
+      "target": "ooo-stims",
+      "type": "founded",
+      "label": null,
+      "source_id": "s9112",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
       "source": "stub::абрамов юрий александрович",
       "target": "ooo-ti-es-dzhi-grupp",
       "type": "founded",
@@ -38376,19 +38315,6 @@
       "label": null,
       "source_id": "s7636",
       "as_of": "2023-10-03",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "stub::аметист кэпитал",
-      "target": "ooo-gaskar-tekhnologii",
-      "type": "founded",
-      "label": "60%",
-      "source_id": "s6772",
-      "as_of": "2026-06-03",
       "weight": 1.0,
       "temporal_status": "current",
       "confidence": null,
@@ -39189,6 +39115,32 @@
       "grade": "doc"
     },
     {
+      "source": "stub::мингалимов ленар нуриахметович",
+      "target": "ooo-stims",
+      "type": "directs",
+      "label": null,
+      "source_id": "s9112",
+      "as_of": "2026-05-18",
+      "weight": 1.0,
+      "temporal_status": "current",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "stub::мингалимов ленар нуриахметович",
+      "target": "ooo-stims",
+      "type": "founded",
+      "label": null,
+      "source_id": "s9112",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
       "source": "stub::мирошниченко павел александрович",
       "target": "ooo-zit-tsi-otraslevoy-tsentr-importozameshcheniya",
       "type": "directs",
@@ -39917,51 +39869,12 @@
       "grade": "doc"
     },
     {
-      "source": "stub::холкин олег валерьевич",
-      "target": "ooo-mo-pniei-kraskript",
-      "type": "directs",
-      "label": null,
-      "source_id": "s8933",
-      "as_of": "2023-05-19",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "stub::холкин олег валерьевич",
-      "target": "ooo-mo-pniei-kraskript",
-      "type": "founded",
-      "label": null,
-      "source_id": "s8933",
-      "as_of": "2025-11-12",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
       "source": "stub::хоук холдинг",
       "target": "ao-stratim",
       "type": "founded",
       "label": null,
       "source_id": "s0332",
       "as_of": "2025-12-31",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "stub::централизованная юридическая служба",
-      "target": "ooo-metaskan",
-      "type": "founded",
-      "label": "50%",
-      "source_id": "s6712",
-      "as_of": "2025-07-09",
       "weight": 1.0,
       "temporal_status": "current",
       "confidence": null,
@@ -40094,84 +40007,6 @@
       "as_of": "2026-08-24",
       "weight": 1.0,
       "temporal_status": "current",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "stupnikov-andrey-genadevich",
-      "target": "ooo-gaskar",
-      "type": "role",
-      "label": "signed on behalf of sole participant ООО «СибНК» to order the ЭВР->Гаскар rename",
-      "source_id": "s7354",
-      "as_of": "2026-06-09",
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "stupnikov-andrey-genadevich",
-      "target": "ooo-sibirskaya-navigatsionnaya-kompaniya",
-      "type": "directs",
-      "label": null,
-      "source_id": "s0451",
-      "as_of": "2023-04-20",
-      "weight": 1.0,
-      "temporal_status": "current",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "stupnikov-andrey-genadevich",
-      "target": "ooo-sibirskaya-navigatsionnaya-kompaniya",
-      "type": "founded",
-      "label": null,
-      "source_id": "s0451",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "stupnikov-andrey-genadevich",
-      "target": "ooo-sibirskaya-navigatsionnaya-kompaniya",
-      "type": "role",
-      "label": "director",
-      "source_id": "s8112",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "stupnikov-andrey-genadevich",
-      "target": "ooo-sibirskaya-navigatsionnaya-kompaniya",
-      "type": "role",
-      "label": "founder",
-      "source_id": "s8112",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": null,
-      "detail": null,
-      "grade": "doc"
-    },
-    {
-      "source": "stupnikov-andrey-genadevich",
-      "target": "ooo-sibirskaya-navigatsionnaya-kompaniya",
-      "type": "role",
-      "label": "Генеральный директор",
-      "source_id": "s0451",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
       "confidence": null,
       "detail": null,
       "grade": "doc"
@@ -40763,19 +40598,6 @@
     },
     {
       "source": "va-technologies",
-      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
-      "type": "cbst_tie",
-      "label": "Participant in ЦБСТ's accelerator (third stream).",
-      "source_id": "s7605",
-      "as_of": null,
-      "weight": 1.0,
-      "temporal_status": "unknown",
-      "confidence": "t-open",
-      "detail": null,
-      "grade": "rep"
-    },
-    {
-      "source": "va-technologies",
       "target": "product::va-technologies::сова",
       "type": "produces",
       "label": null,
@@ -40785,7 +40607,20 @@
       "temporal_status": "unknown",
       "confidence": null,
       "detail": null,
-      "grade": "rep"
+      "grade": "open"
+    },
+    {
+      "source": "va-technologies",
+      "target": "program::cbst-accelerator",
+      "type": "resident_of",
+      "label": "participant",
+      "source_id": "s7605",
+      "as_of": "2026-08-03",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "doc",
+      "detail": null,
+      "grade": "doc"
     },
     {
       "source": "viktor-ilich-davydov",
@@ -41256,6 +41091,97 @@
       "grade": "doc"
     },
     {
+      "source": "yarl",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "cbst_tie",
+      "label": "ЯРЛ's own words (bpryarl post 603, 24.02.2025, read in full): 'Совместно с Центром беспилотных систем и технологий мы...",
+      "source_id": "s9186",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "t-doc",
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "yarl",
+      "target": "product::yarl::антидроновое-одеяло-ярл",
+      "type": "produces",
+      "label": null,
+      "source_id": "s9185",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "rep"
+    },
+    {
+      "source": "yarl",
+      "target": "product::yarl::бпр-ярл",
+      "type": "produces",
+      "label": null,
+      "source_id": null,
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "open"
+    },
+    {
+      "source": "yarl",
+      "target": "product::yarl::бронежилет-для-саперов-колонтарь",
+      "type": "produces",
+      "label": null,
+      "source_id": "s9186",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "rep"
+    },
+    {
+      "source": "yarl",
+      "target": "product::yarl::бронежилет-для-собак-псы-войны",
+      "type": "produces",
+      "label": null,
+      "source_id": "s5391",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "yarl",
+      "target": "product::yarl::противоосколочная-рубашка",
+      "type": "produces",
+      "label": null,
+      "source_id": "s9184",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "rep"
+    },
+    {
+      "source": "yarl",
+      "target": "product::yarl::противоосколочный-плащ-пончо",
+      "type": "produces",
+      "label": null,
+      "source_id": "s9188",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "rep"
+    },
+    {
       "source": "yatsenko-viktor-vyacheslavovich",
       "target": "ooo-aero-khit",
       "type": "directs",
@@ -41422,7 +41348,7 @@
       "temporal_status": "unknown",
       "confidence": null,
       "detail": null,
-      "grade": "rep"
+      "grade": "open"
     },
     {
       "source": "zaytsev-aleksey-viktorovich",
@@ -41726,6 +41652,13 @@
       ]
     },
     {
+      "id": "stub::inn-9704078560",
+      "raw_name": "ООО «Аметист Кэпитал»",
+      "contexts": [
+        "founder of ooo-stims"
+      ]
+    },
+    {
       "id": "stub::абрамов юрий александрович",
       "raw_name": "Абрамов Юрий Александрович",
       "contexts": [
@@ -41781,13 +41714,6 @@
       "raw_name": "Амбаров Петр Андреевич",
       "contexts": [
         "founder of ooo-gruppa-promavto"
-      ]
-    },
-    {
-      "id": "stub::аметист кэпитал",
-      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АМЕТИСТ КЭПИТАЛ\"",
-      "contexts": [
-        "former founder of ooo-gaskar-tekhnologii"
       ]
     },
     {
@@ -42124,6 +42050,14 @@
       ]
     },
     {
+      "id": "stub::мингалимов ленар нуриахметович",
+      "raw_name": "Мингалимов Ленар Нуриахметович",
+      "contexts": [
+        "founder of ooo-stims",
+        "director of ooo-stims"
+      ]
+    },
+    {
       "id": "stub::мирошниченко павел александрович",
       "raw_name": "Мирошниченко Павел Александрович",
       "contexts": [
@@ -42413,25 +42347,10 @@
       ]
     },
     {
-      "id": "stub::холкин олег валерьевич",
-      "raw_name": "Холкин Олег Валерьевич",
-      "contexts": [
-        "former founder of ooo-mo-pniei-kraskript",
-        "director of ooo-mo-pniei-kraskript"
-      ]
-    },
-    {
       "id": "stub::хоук холдинг",
       "raw_name": "Акционерное общество \"Хоук Холдинг\"",
       "contexts": [
         "founder of ao-stratim"
-      ]
-    },
-    {
-      "id": "stub::централизованная юридическая служба",
-      "raw_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЦЕНТРАЛИЗОВАННАЯ ЮРИДИЧЕСКАЯ СЛУЖБА\"",
-      "contexts": [
-        "former founder of ooo-metaskan"
       ]
     },
     {
@@ -42515,7 +42434,6 @@
     "customer::муниципальное-унитарное-предприятие-городского-округа-город-воронеж-воронежская-горэлектросеть",
     "customer::муниципальное-унитарное-предприятие-новодвинская-энергетическая-сетевая-компания-муниципального-образования-город-новодвинск",
     "customer::областное-государственное-казенное-учреждение-управление-по-делам-гражданской-обороны-и-чрезвычайным-ситуациям-белгородской-области",
-    "customer::правительство-хабаровского-края",
     "customer::региональное-таможенное-управление-радиоэлектронной-безопасности-объектов-таможенной-инфраструктуры-фтс-россии-инн-7708098645",
     "customer::санкт-петербургское-государственное-унитарное-предприятие-ленсвет",
     "customer::северодвинское-муниципальное-унитарное-предприятие-горсвет",
@@ -42542,10 +42460,10 @@
     "ip-gabitov-r-a",
     "ip-popov-aleksandr-sergeevich",
     "ip-sidorov-andrey-sergeevich",
-    "ivlev-artem-yurevich",
     "kashnikov-konstantin-nikolaevich",
     "kindyakov-andrey-andreevich",
     "kolskaya-verf",
+    "konstantinov-evgeniy-aleksandrovich",
     "korolev-dmitriy-alekseevich",
     "krylov-andrey-olegovich",
     "kurteev-aleksandr-sergeevich",
@@ -42573,6 +42491,7 @@
     "ooo-dronnet",
     "ooo-dronomir",
     "ooo-eliars",
+    "ooo-gaskar",
     "ooo-ges-2",
     "ooo-instekh",
     "ooo-mobil-grup",
@@ -42583,6 +42502,7 @@
     "ooo-prommash",
     "ooo-radiofid-sistemy",
     "ooo-rokot-tekh",
+    "ooo-sibirskaya-navigatsionnaya-kompaniya",
     "ooo-tsentr-bespilotnykh-sistem-tula",
     "ooo-tstp-tsifrovaya-transportnaya-platforma",
     "ooo-zetaks",
@@ -42624,6 +42544,14 @@
     "product::ooo-eliars::парс-4",
     "product::ooo-eliars::прибор-активации-режимов-самоспасения",
     "product::ooo-eliars::сектор",
+    "product::ooo-gaskar::беспилотная-авиационная-система-втулка",
+    "product::ooo-gaskar::беспилотная-авиационная-система-сибирь-1",
+    "product::ooo-gaskar::беспилотная-авиационная-система-сибирь-2",
+    "product::ooo-gaskar::беспилотная-авиационная-система-сибирячок-5",
+    "product::ooo-gaskar::беспилотная-авиационная-система-сибирячок-с-совмещенной-камерой-в-видимом-и-инфракрасном-диапазонах",
+    "product::ooo-gaskar::беспилотная-авиационная-система-шторм",
+    "product::ooo-gaskar::мотор-py3115-1300kv-бесколлекторный-fpv",
+    "product::ooo-gaskar::пропеллеры-10-дюймов-3-лопасти-fpv",
     "product::ooo-instekh::антидрон-система-aura",
     "product::ooo-instekh::система-оповещения-нежеголь-оборудование-орало-150",
     "product::ooo-npo-nebo::скарабей-sd-138",
@@ -42635,8 +42563,6 @@
     "product::ooo-rokot-tekh::пропеллеры-10-дюймов-для-fpv-дрона",
     "product::ooo-rokot-tekh::пропеллеры-9-дюймов-для-fpv-дрона",
     "product::ooo-zetaks::образовательные-коптеры",
-    "product::yarl::бпр-ярл",
-    "product::yarl::бронежилет-для-собак-псы-войны",
     "protsenko-artem-vitalevich",
     "shatskikh-aleksandr-vladimirovich",
     "skoryatin-georgiy-andreevich",
@@ -42672,6 +42598,7 @@
     "stub::шаповалов сергей михайлович",
     "stub::шпак максим викторович",
     "stub::щанович инга сергеевна",
+    "stupnikov-andrey-genadevich",
     "sukhonenkova-nadezhda-andreevna",
     "tarasenko-irina-anatolevna",
     "tg-arkhangel-spetsnaza",
@@ -42687,16 +42614,18 @@
     "unit::18-я-бригада-цво",
     "unit::2-й-мотострелковый-батальон-4-й-бригады",
     "unit::20-я-армия",
+    "unit::237-й-гвардейский-десантно-штурмовой-полк",
+    "unit::237-й-танковый-полк",
     "unit::24-я-бригада-спецназа",
     "unit::337-й-гвардейский-полк",
     "unit::345-й-полк-104-й-дивизии",
     "unit::423-й-полк",
     "unit::49-я-армия",
     "unit::58-я-армия",
-    "unit::76-я-бригада-вдв",
-    "unit::76-я-гвардейская-десантно-штурмовая-бригада",
+    "unit::76-я-гвардейская-десантно-штурмовая-дивизия",
     "unit::9-й-полк-группировки-центр",
     "unit::9-я-бригада-группировки-центр",
+    "unit::91-я-бригада-управления",
     "unit::батальон-специального-назначения-бахмут",
     "unit::войсковая-часть-33000",
     "unit::группировка-центр",
@@ -42705,7 +42634,6 @@
     "unit::отряд-яким",
     "unit::подразделение-васильевский-р-н",
     "voenkor-evgeniy-lisitsyn",
-    "yarl",
     "yastrebov-sergey-vladimirovich",
     "zagorskiy-aleksandr-sergeevich",
     "zao-kurskpromteplitsa",

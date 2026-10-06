@@ -11,11 +11,17 @@ Chains tools that already exist, in the order CLAUDE.md gives them:
                           steps the queue prints (inventory, manifest, parsers,
                           extract_registry, build_relationship_graph,
                           check_registry)
-  3. first_reading.py     export the day's new pulls as text (to the private
-                          `pull-inbox` branch unless --no-push, and locally),
-                          then `read` them into a worksheet beside the registry
+  3. first_reading.py     export the day's new pulls as text locally, then
+                          `read` them into a worksheet beside the registry
+                          (the cloud first-reading routine and the
+                          `pull-inbox` push it depended on were retired
+                          05.10.2026, issue #30: main already re-reads every
+                          document in full before applying a correction, so
+                          a second cloud read of the same pulls was pure
+                          duplication)
   4. archive_sources.py   only with --archive N: one Wayback batch of N cited URLs
-  5. status_board.py      board after, and the flags new or cleared today
+  5. status_board.py      board after, and the flags new or cleared today; the board is
+                          written to data/watch/status/board.json for the cloud status step
 
 The day's report goes to data/watch/daily/<date>.md, which the cloud routines
 read through git; the texts stay in gitignored data/sources/_inbox/. With
@@ -49,7 +55,21 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import status_board as sb  # noqa: E402
 
 DAILY = ROOT / "data" / "watch" / "daily"
+STATUS = ROOT / "data" / "watch" / "status"
 INBOX = ROOT / "data" / "sources" / "_inbox"
+
+
+def publish_board(after, path=None):
+    """Write the day's board where the cloud status routine reads it; return what changed since the file it replaced.
+
+    The board is built here once, on the Mac that holds the data, so the cloud step only builds the page from
+    board.json and publishes it (issue #27, 03.10.2026). The HTML is not committed (.gitignore).
+    """
+    path = path or STATUS / "board.json"
+    prev = json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(after, ensure_ascii=False, indent=1), encoding="utf-8")
+    return sb.diff(prev, after) if prev else "no earlier board.json to compare with"
 
 
 def board_now(today):
@@ -74,6 +94,22 @@ def git(*a):
 
 def tracked_changes():
     return [l for l in git("status", "--porcelain").stdout.splitlines() if not l.startswith("??")]
+
+
+# Files the round itself regenerates or appends to. A manual pull or ingest leaves these modified, and the
+# round commits them with its own outputs, so they must not block it; a hand-held file (corrections_*,
+# products.json, handovers.json, programs.json, ...) or any code file still does.
+GENERATED = {"data/registry/" + n for n in (
+    "_pull_misses.json", "source_archives.json", "_source_ids.json", "_source_content_cache.json",
+    "_bfo_financials.json", "_scaffold_leads.json", "entities.json", "people.json", "sources.json",
+    "quotes.json", "open_questions.json", "relationship_graph.json", "relationship_graph_views.json")}
+# A step in this chain reads what the one before wrote: after a failure the rest would run on stale input.
+INGEST = ("inventory_sources.py", "scan_sources.py", "parse_bfo_financials.py", "parse_egrul_vypiska.py",
+          "extract_registry.py", "build_relationship_graph.py", "check_registry.py")
+
+
+def hand_changes():
+    return [l for l in tracked_changes() if l[3:].strip() not in GENERATED and not l[3:].startswith("data/watch/")]
 
 
 def publish(day, summary):
@@ -108,24 +144,30 @@ def main():
 
     blocked = None
     if a.publish and not a.dry_run:
-        if tracked_changes():
-            blocked = "not published: the working tree had uncommitted changes before the round"
+        if hand_changes():
+            blocked = ("not published: the working tree had uncommitted changes before the round ("
+                       + ", ".join(l[3:].strip() for l in hand_changes()[:4]) + ")")
         elif git("pull", "--rebase", "-q").returncode:
             blocked = "not published: could not update from origin"
 
     today = date.today()
     day = today.isoformat()
     before = board_now(today)
-    queue = [l for l in sb.pull_queue(before, a.cap).splitlines() if l.startswith("python3 ")]
+    queue = [l for l in sb.pull_queue(before, a.cap, sb.done_today(today)).splitlines() if l.startswith("python3 ")]
     has_pulls = any("_pull.py" in l or "/screen_" in l for l in queue)  # pulls or capped re-screens
     steps = queue if has_pulls and not a.skip_pulls else []
     if not any("first_reading.py export" in l for l in steps):  # the queue ends with one when it pulled
-        steps.append(f"python3 scripts/first_reading.py export --since {day} --local-dir data/sources/_inbox"
-                     + ("" if a.no_push else " --push"))
-    elif a.no_push:
+        steps.append(f"python3 scripts/first_reading.py export --since {day} --local-dir data/sources/_inbox")
+    else:
         steps = [l.replace(" --push", "") if "first_reading.py export" in l else l for l in steps]
     if a.archive:
         steps.append(f"python3 scripts/archive_sources.py run --limit {a.archive}")
+    if (ROOT / "data" / "sources" / "_media_triage" / "files").exists():  # after a media download: local only
+        steps.append("python3 scripts/media_triage.py process")
+        venv_py = Path.home() / ".venvs" / "roymarket-media" / "bin" / "python"
+        if venv_py.exists():  # CLIP ranking needs open_clip, which lives in that venv, not in Homebrew's Python
+            steps.append(f"{venv_py} scripts/media_triage.py rank")
+        steps.append("python3 scripts/media_triage.py sheets")
 
     if a.dry_run:
         print("\n".join(steps))
@@ -134,9 +176,16 @@ def main():
 
     DAILY.mkdir(parents=True, exist_ok=True)
     log, failed = [], []
+    ingest_broken = False
     for cmd in steps:
+        is_ingest = any(x in cmd for x in INGEST)
+        if is_ingest and ingest_broken:
+            print(f"\n$ {cmd}\nskipped: an earlier ingest step failed", flush=True)
+            log.append(f"$ {cmd}\n(skipped: an earlier ingest step failed)\n")
+            continue
         if run(cmd, log):
             failed.append(cmd.split()[1])
+            ingest_broken = ingest_broken or is_ingest
 
     reading = INBOX / day / "reading.md"
     if (INBOX / day / "manifest.json").exists():
@@ -145,6 +194,7 @@ def main():
 
     after = board_now(today)
     changes = sb.diff(before, after)
+    since_published = publish_board(after)
     pulled = sum(1 for l in log if "_pull.py" in l.splitlines()[0])
     screened = sum(1 for l in log if "/screen_" in l.splitlines()[0])
     summary = f"{pulled} pull step(s), {screened} screen step(s), {len(failed)} failed"
@@ -153,7 +203,9 @@ def main():
               "Pulls: " + ("skipped" if a.skip_pulls else "ran" if has_pulls else "nothing flagged"),
               "First-reading worksheet: " + (str(reading.relative_to(ROOT)) if reading.exists() else "none (no new pulls)"),
               "Failed steps: " + (", ".join(failed) or "none"), "",
-              "```", changes, "```", "", "## Log", "", *log]
+              "```", changes, "```", "",
+              "Board for the cloud status step: data/watch/status/board.json", "```", since_published, "```", "",
+              "## Log", "", *log]
     out = DAILY / f"{day}.md"
     out.write_text("\n".join(report), encoding="utf-8")
     print("\n" + changes)

@@ -24,6 +24,8 @@ into a repeatable two-step pipeline for any company's channel:
      doesn't turn into the kind of scripted-loop-at-scale that policy
      reserves for a user-run command (see egrul_batch_pull.py precedent).
 
+  3. `download --queue <queue.json>` — the media_triage.py queue: photos in full, a video's thumbnail
+     only, into data/sources/_media_triage/files/ (a working folder). Live job: the user runs it.
   3. `download` — authenticated Telethon download of ANY media (PDF/doc/video/
      photo) for a msg_id list, for what the public preview cannot give (documents,
      private chats). A live Telegram job: hand the exact command to the user, do
@@ -198,7 +200,60 @@ def cmd_fetch(args) -> None:
         print(out_text)
 
 
+def cmd_download_queue(args) -> None:
+    """Fetch what scripts/media_triage.py queued: a photo in full (Telegram photos are small), a video's
+    thumbnail only. Files go to the triage working folder, never to data/sources/ itself; a kept item is
+    promoted later. Resumable: a file already present is skipped."""
+    sys.path.insert(0, str(REPO))
+    from tg import client as tg_client
+    from tg import scraper
+
+    items = json.loads(Path(args.queue).read_text(encoding="utf-8"))["items"]
+    out_dir = SOURCES_DIR / "_media_triage" / "files"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    todo: dict[str, list[dict]] = {}
+    for it in items:
+        if not (out_dir / it["file"]).exists():
+            todo.setdefault(it["channel"], []).append(it)
+    print(f"{sum(map(len, todo.values()))} of {len(items)} queued files to fetch from {len(todo)} channel(s)")
+    done = failed = 0
+    client = tg_client.make_client()
+    with client:
+        for channel, its in todo.items():
+            ref = channel if not channel.isdigit() else str(its[0]["channel_id"])
+            entity = scraper.resolve_channel(client, ref)
+            by_id = {it["msg_id"]: it for it in its}
+            ids = sorted(by_id)
+            for i in range(0, len(ids), 100):
+                for msg in client.get_messages(entity, ids=ids[i:i + 100]):
+                    if msg is None or not msg.media:
+                        continue
+                    it = by_id[msg.id]
+                    dest = out_dir / it["file"]
+                    try:
+                        if it["kind"] == "video":
+                            got = client.download_media(msg, file=str(dest), thumb=-1)
+                        else:
+                            got = client.download_media(msg, file=str(dest))
+                    except Exception as exc:  # noqa: BLE001 - keep going; a rerun resumes
+                        print(f"failed {channel}/{msg.id}: {exc}")
+                        failed += 1
+                        continue
+                    if got and Path(got) != dest and Path(got).exists():
+                        Path(got).replace(dest)  # Telethon may append its own extension
+                    done += 1
+                    if done % 25 == 0:
+                        print(f"  {done} fetched", flush=True)
+                    time.sleep(0.5)
+    print(f"{done} fetched, {failed} failed. Rerun the same command to resume.")
+    print("next: python3 scripts/media_triage.py process && python3 scripts/media_triage.py sheets")
+
+
 def cmd_download(args) -> None:
+    if args.queue:
+        return cmd_download_queue(args)
+    if not (args.channel and args.msg_ids):
+        sys.exit("download needs --channel and --msg-ids, or --queue")
     sys.path.insert(0, str(REPO))
     from tg import client as tg_client
     from tg import scraper
@@ -340,8 +395,9 @@ def main() -> None:
     ap_a.add_argument("--dry-run", action="store_true", help="local only: count files and MB from the scraped catalog")
     ap_a.set_defaults(func=cmd_download_all)
     ap_d = sub.add_parser("download", help="Telethon download of any media (live job: user runs it)")
-    ap_d.add_argument("--channel", required=True, help="username, numeric id, or t.me link")
-    ap_d.add_argument("--msg-ids", required=True, help="comma-separated msg_id list")
+    ap_d.add_argument("--channel", default=None, help="username, numeric id, or t.me link")
+    ap_d.add_argument("--msg-ids", default=None, help="comma-separated msg_id list")
+    ap_d.add_argument("--queue", default=None, help="a media_triage.py queue.json: photos in full, video thumbnails")
     ap_d.add_argument("--inn", default=None, help="optional ИНН for the filename; omitted when none")
     ap_d.add_argument("--label", default=None, help="channel label for the filename (default: channel arg)")
     ap_d.set_defaults(func=cmd_download)

@@ -100,9 +100,9 @@
         "channel": "Wildberries (dealer storefront «Мэдро»)",
         "url": "https://www.wildberries.ru/seller/250074680",
         "seller": {
-          "entity": null,
+          "entity": "ip-artemeva-viktoriya-mikhaylovna",
           "storefront": "Мэдро (WB seller 250074680)",
-          "identity": "unresolved as a registry entity; the HAR capture shows ИНН 350102453754 (ИП), s1381"
+          "identity": "resolved: Wildberries's own legal information for the seller account prints ИП Артемьева В. М., ИНН 350102453754 (s1381); the ЕГРИП extract (s9310) prints the same ИНН"
         },
         "status": "listed",
         "as_of": "2026-08-25",
@@ -119,7 +119,7 @@
         "seller": {
           "entity": null,
           "storefront": "МАКС 911 (Ozon seller 4233382)",
-          "identity": "unresolved as a registry entity; ИП Коровкин А.А. ИНН 780223272953 from dji911.com/contacts (s1388), not confirmed against the Ozon widget"
+          "identity": "not drawn to a registry entity: dji911.com/contacts (s1388) names ИП Коровкин А.А. ИНН 780223272953 as the seller of 3MX equipment on marketplaces, and the ЕГРИП extract (s9306) prints that ИНН (record ip-korovkin-aleksandr-anatolevich), but the Ozon legal-information block was never captured, so Ozon itself does not tie this account to that ИНН"
         },
         "status": "listed",
         "as_of": "2026-08-25",
@@ -161,6 +161,23 @@
         "basis": "doc",
         "asserted_by": "self",
         "note": "Sells «Булат» at 88 000 ₽; not a named dealer on 3mx.ru."
+      },
+      {
+        "id": "bulat-gorbushka-maks911",
+        "version": null,
+        "channel": "dealer shop, Горбушка, pavilion С1-042 (Москва)",
+        "url": "https://t.me/ru3mx/415",
+        "seller": {
+          "entity": "ip-korovkin-aleksandr-anatolevich",
+          "storefront": "Макс 911 (Горбушка, С1-042)",
+          "identity": "resolved"
+        },
+        "status": "listed",
+        "as_of": "2025-05-30",
+        "source_id": "s9309",
+        "basis": "doc",
+        "asserted_by": "self",
+        "note": "3mx's own channel announces the dealer's shop and lists «Булаты- 4 по офиц. цене 88 000» in stock; the photo of the shop front (s9308) shows the sign «Официальный дилер 3mx». Price as the post states it; version not named."
       }
     ],
     "deliveries": [
@@ -458,6 +475,24 @@
         "credibility": "single",
         "source_id": "s8994",
         "note": "Found while building the «Капюшон» record (02.10.2026); the first «Булат» pass started at post 393. Civilian recipients, at the governor's request."
+      },
+      {
+        "id": "bulat-d18",
+        "date": "2025-04-28",
+        "version": null,
+        "item": "«Булаты» v4, count not stated; the post also names «Таиры» and two evacuation-assault REW complexes «Покров» ВЦ5",
+        "donor": "ooo-trimiks",
+        "co_donors": [
+          "ooo-pokrov"
+        ],
+        "carrier": "not stated; the aid was handed over at a concert in Kursk. The post is signed «Вика Цыганова» and links her channel t.me/vika_tsyganova63 (post 4780)",
+        "recipient": "боец группы «Пресса» спецназа «Ахмат» (Курская область)",
+        "source_channel": "@ru3mx",
+        "post_id": 376,
+        "asserted_by": "self",
+        "credibility": "single",
+        "source_id": "s9315",
+        "note": "3mx's own channel: «Наши друзья 3МХ производители оборудования поддержали акцию и совместно с командой «Покрова» направили военнослужащим «Булаты» v4 — детекторы дронов, показавшие себя лучшими на СВО». The post date is the report date, not the handover date. Recipient is a group of a unit, not a numbered unit; no unit record is made."
       }
     ],
     "claims": [

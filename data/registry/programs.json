@@ -632,5 +632,74 @@
         "asserted_by": "organisers (@dronnitsa)"
       }
     ]
+  },
+  {
+    "slug": "dronnitsa-2026",
+    "kind": "event",
+    "subtype": "event_edition",
+    "parent": "dronnitsa",
+    "parent_source_id": "s9233",
+    "parent_as_of": "2026-08-12",
+    "name_ru": "Дронница 2026 (V)",
+    "claims": [
+      {
+        "text_ru": "Мы долго готовили 5 Всероссийский Слёт операторов боевых беспилотных систем «Дронница». Он должен был состояться 29–30 августа 2026 в Великом Новгороде",
+        "metric": "dates and place (as planned)",
+        "value": "29-30 Aug 2026, Великий Новгород (planned)",
+        "as_of": "2026-08-12",
+        "source_id": "s9233",
+        "asserted_by": "organisers (@dronnitsa)"
+      },
+      {
+        "text_ru": "Мы не отменяем «Дронницу 2026», мы её переносим!",
+        "metric": "status",
+        "value": "postponed; no new date in the post",
+        "as_of": "2026-08-12",
+        "source_id": "s9233",
+        "asserted_by": "organisers (@dronnitsa)"
+      },
+      {
+        "text_ru": "Аналитический центр КЦПН получил точные и достоверные сведения о планах противника нанести удар по Слёту в момент его проведения",
+        "metric": "stated reason",
+        "value": "the organisers say they received reliable information of a planned enemy strike during the event; not verified",
+        "as_of": "2026-08-12",
+        "source_id": "s9233",
+        "asserted_by": "organisers (@dronnitsa)"
+      },
+      {
+        "text_ru": "Сейчас наша команда прорабатывает новый формат мероприятия. О точных датах и месте будет объявлено во второй половине сентября.",
+        "metric": "new dates",
+        "value": "new format; dates and place to be announced in the second half of September 2026",
+        "as_of": "2026-08-26",
+        "source_id": "s9234",
+        "asserted_by": "organisers (@dronnitsa)"
+      }
+    ]
+  },
+  {
+    "slug": "cbst-eco-accelerator",
+    "kind": "program",
+    "subtype": "accelerator",
+    "name_ru": "Акселератор экологических технологий для восстановления природной среды (ЦБСТ)",
+    "operators": [
+      {
+        "slug": "ano-tsbst-centre-for-unmanned-systems-technologies",
+        "role": "accelerator",
+        "basis": "doc",
+        "source_id": "s9238",
+        "as_of": "2026-09-29"
+      }
+    ],
+    "claims": [
+      {
+        "text_ru": "первый в России Акселератор экологических технологий для восстановления природной среды, который реализует ЦБСТ. Заявки на участие принимаются до 19 октября.",
+        "metric": "applications",
+        "value": "open until 19 Oct 2026; ЦБСТ calls it the first in Russia",
+        "as_of": "2026-09-29",
+        "source_id": "s9238",
+        "asserted_by": "ЦБСТ (@ANO_CBST)"
+      }
+    ],
+    "notes": "Named at the end of a ЦБСТ post about a water-sampling drone built by a schoolboy with НГТУ НЭТИ and the plant «Альтерна» (Новосибирск). The programme's own page (cbst.ru/eco_accelerator_cbst) is linked in the post and was not read, so scope, selection and funding are open."
   }
 ]

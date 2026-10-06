@@ -234,51 +234,6 @@ def classify_product(name: str, description: str | None) -> dict:
     }
 
 
-# Offensive/defensive/dual-use classification for the hub glyph badges
-# (hex-pattern glyph — see notes/hub_insignia_design_notes.md's "v5" entry
-# for the design rationale). Distinct from classify_product() above: this
-# is a coarser, entity-level read of the SAME products[] text, kept
-# deliberately separate because it answers a different question (does
-# this manufacturer's overall catalogue skew offensive/defensive/both)
-# than classify_product()'s per-product platform/installation read. A
-# presentation judgment for the graph's icon layer only, not a sourced
-# registry field.
-_OFFENSIVE_TERMS = [
-    "камикадзе", "kamikaze", "ударный дрон", "ударн", "боеприпас",
-    "боевая часть", "warhead", "боеголов", "снаряд", "авиабомб", "бомб",
-    "штурмов",
-]
-_DEFENSIVE_TERMS = [
-    "рэб", "радиоэлектронн", "подавлен", "антидрон", "anti-drone",
-    "counter-drone", "counter-uav", "jam", "глушен", "детектор бпла",
-    "обнаружен", "щит", "перехватчик", "антиспуфинг", "радиоподавлен",
-]
-
-
-def classify_variant(entity: dict) -> str | None:
-    if entity.get("tier") not in ("manufacturer", "cbst-core"):
-        return None
-    chunks = []
-    for prod in entity.get("products") or []:
-        if isinstance(prod, dict):
-            chunks.append(str(prod.get("name_ru") or ""))
-            chunks.append(str(prod.get("description") or ""))
-        elif isinstance(prod, str):
-            chunks.append(prod)
-    text = " ".join(chunks).lower()
-    if not text.strip():
-        return None
-    off = any(term in text for term in _OFFENSIVE_TERMS)
-    dfn = any(term in text for term in _DEFENSIVE_TERMS)
-    if off and dfn:
-        return "dual"
-    if off:
-        return "offensive"
-    if dfn:
-        return "defensive"
-    return None
-
-
 def _date_and_source(item: dict) -> tuple[str | None, str | None]:
     as_of, source_id = item.get("as_of"), item.get("source_id")
     return (as_of if isinstance(as_of, str) and _DATE_RE.fullmatch(as_of) else None,
@@ -383,7 +338,7 @@ def build_graph(entities: list[dict], people: list[dict],
             label=entity.get("name_ru") or entity.get("brand_ru") or entity["slug"],
             name_latin=entity.get("name_latin"), inn=entity.get("inn"),
             tier=entity.get("tier"), sanctioned=bool(entity.get("sanctions")),
-            legal_form=entity.get("legal_form"), variant=classify_variant(entity),
+            legal_form=entity.get("legal_form"),
         )
     for person in people:
         add_node(

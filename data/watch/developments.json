@@ -1,162 +1,364 @@
 {
- "_note": "Findings of the weekly scan, one item per development. The scan appends items; a person or a thread closes one by setting status to recorded (wired into the registry) or dismissed, with a note. scripts/status_board.py reads this file and flags each open item on the records named in `about` (registry slugs, or @channel). Seeded 02.10.2026 from reports/2026-10-02_trial.md.",
- "items": [
-  {
-   "id": "2026-10-02-01",
-   "found": "2026-10-02",
-   "report": "reports/2026-10-02_trial.md",
-   "url": "https://t.me/ANO_CBST/2565",
-   "channel": "ANO_CBST",
-   "post": 2565,
-   "also": [
-    "https://t.me/nashapravdafond/686",
-    "https://zona.media/news/2026/09/24/komitet"
-   ],
-   "about": [
-    "aleksandr-sidyakin",
-    "ano-tsbst-centre-for-unmanned-systems-technologies"
-   ],
-   "kind": "update",
-   "status": "recorded",
-   "summary": "Сидякин proposed to chair the new Duma committee on digital development and AI, which covers marketplaces and drones (~24.09.2026). Person record has no such role.",
-   "note": "03.10.2026: role added to Сидякин's record from Наша Правда post 686 (s9050); ЦБСТ post 2565 (s9049) read in full. The Duma vote date is not read from a Duma record and stays an open question on his record."
+  "_note": "Findings of the weekly scan, one item per development. The scan appends items; a person or a thread closes one by setting status to recorded (wired into the registry) or dismissed, with a note. scripts/status_board.py reads this file and flags each open item on the records named in `about` (registry slugs, or @channel). Seeded 02.10.2026 from reports/2026-10-02_trial.md.",
+  "items": [
+    {
+      "id": "2026-10-02-01",
+      "found": "2026-10-02",
+      "report": "reports/2026-10-02_trial.md",
+      "url": "https://t.me/ANO_CBST/2565",
+      "channel": "ANO_CBST",
+      "post": 2565,
+      "also": [
+        "https://t.me/nashapravdafond/686",
+        "https://zona.media/news/2026/09/24/komitet"
+      ],
+      "about": [
+        "aleksandr-sidyakin",
+        "ano-tsbst-centre-for-unmanned-systems-technologies"
+      ],
+      "kind": "update",
+      "status": "recorded",
+      "summary": "Сидякин proposed to chair the new Duma committee on digital development and AI, which covers marketplaces and drones (~24.09.2026). Person record has no such role.",
+      "note": "03.10.2026: role added to Сидякин's record from Наша Правда post 686 (s9050); ЦБСТ post 2565 (s9049) read in full. The Duma vote date is not read from a Duma record and stays an open question on his record."
+    },
+    {
+      "id": "2026-10-02-02",
+      "found": "2026-10-02",
+      "report": "reports/2026-10-02_trial.md",
+      "url": "https://t.me/ru3mx/741",
+      "channel": "ru3mx",
+      "post": 741,
+      "about": [
+        "bulat",
+        "ooo-trimiks"
+      ],
+      "kind": "update",
+      "status": "recorded",
+      "summary": "«Булат» в.6 announced, limited version for Q4 2026. Product record has в.3, в.4 and «Булат-Онлайн» only.",
+      "note": "03.10.2026: «Булат» в.6 added to the product record as an announced version, source s9046 (ru3mx 741, 05.06.2026, an announcement only; no specification or firmware seen)."
+    },
+    {
+      "id": "2026-10-02-03",
+      "found": "2026-10-02",
+      "report": "reports/2026-10-02_trial.md",
+      "url": "https://t.me/kb_spektr/337",
+      "channel": "kb_spektr",
+      "post": 337,
+      "about": [
+        "kb-spektr-novosibirsk",
+        "ooo-mptm"
+      ],
+      "kind": "update",
+      "status": "recorded",
+      "summary": "КБ «СПЕКТР» announces a new Армамид propeller series for РОЙ.МАРКЕТ and Ozon «через неделю». Seller is already `listed` (post 321); the record lacks this product. Post date needs reading.",
+      "note": "03.10.2026: post 337 (14.08.2026, s9048) recorded in the open field of the КБ «СПЕКТР» to РОЙ.МАРКЕТ link as an announcement; the link stays listed (post 321, s8848)."
+    },
+    {
+      "id": "2026-10-02-04",
+      "found": "2026-10-02",
+      "report": "reports/2026-10-02_trial.md",
+      "url": "https://t.me/nashapravdafond/678",
+      "channel": "nashapravdafond",
+      "post": 678,
+      "about": [
+        "fond-nasha-pravda"
+      ],
+      "kind": "new",
+      "status": "recorded",
+      "summary": "Delivery candidate: 91st control brigade signallers got ₽1.2m of equipment from «Наша Правда», with ЕР. No product named.",
+      "note": "03.10.2026: handover h0040 in handovers.json (s9077), the donor's own report: asserted_by self, credibility single; no unit record."
+    },
+    {
+      "id": "2026-10-02-05",
+      "found": "2026-10-02",
+      "report": "reports/2026-10-02_trial.md",
+      "url": "https://t.me/tulaovod/956",
+      "channel": "tulaovod",
+      "post": 956,
+      "also": [
+        "https://t.me/tulaovod/958",
+        "https://t.me/tulaovod/959",
+        "https://t.me/tulaovod/945"
+      ],
+      "about": [
+        "ovod"
+      ],
+      "kind": "new",
+      "status": "recorded",
+      "summary": "«Овод» combat posts naming units (15th special-purpose drone company, 14 ОБрСпН, БАРС 8) and the fibre-optic «Провод» at 40.4 km. Maker's marketing: candidates for marketing claims, not unit records.",
+      "note": "03.10.2026: added to the «Овод» record's battlefield_evidence as the maker's own post (s9074); the unit is named only by the maker, so no unit record."
+    },
+    {
+      "id": "2026-10-02-06",
+      "found": "2026-10-02",
+      "report": "reports/2026-10-02_trial.md",
+      "url": "https://t.me/ANO_CBST/2570",
+      "channel": "ANO_CBST",
+      "post": 2570,
+      "about": [
+        "ano-tsbst-centre-for-unmanned-systems-technologies",
+        "ovod"
+      ],
+      "kind": "new",
+      "status": "recorded",
+      "summary": "ЦБСТ digest: «Овод» footage published by Минобороны; an unnamed accelerator stream III participant tested a cargo ground robot. Read in full.",
+      "note": "03.10.2026: ЦБСТ posts 2557 (Defence Ministry video, s9076) added to the «Овод» record; post 2554 (accelerator participant's ground robot, s9075) kept as an open question on the accelerator programme, no company or surname given."
+    },
+    {
+      "id": "2026-10-02-07",
+      "found": "2026-10-02",
+      "report": "reports/2026-10-02_trial.md",
+      "url": "https://t.me/chadayevru/5061",
+      "channel": "chadayevru",
+      "post": 5061,
+      "about": [],
+      "kind": "lead",
+      "status": "recorded",
+      "summary": "Lead: director of Tula НПЦ «ТулаДрон» (Евгений Григорьев) arrested; Чадаев links its Минпромторг subsidy to Ушкуйник's. No registry match.",
+      "note": "03.10.2026: kept as a lead only, an open question on the НПЦ БАС network programme (zona.media s9070, Чадаев post 5061 s9073). No court record or registry record; no ЦБСТ tie."
+    },
+    {
+      "id": "2026-10-02-08",
+      "found": "2026-10-02",
+      "report": "reports/2026-10-02_trial.md",
+      "url": "https://t.me/bayraktar1070/7863",
+      "channel": "bayraktar1070",
+      "post": 7863,
+      "about": [
+        "uraldronzavod"
+      ],
+      "kind": "new",
+      "status": "dismissed",
+      "summary": "Director Владимир Ткачук injured and his guard killed in a bombing in Yekaterinburg (forwarded post, date not yet confirmed from press). Ткачук has no person record.",
+      "note": "03.10.2026: attack (05.08.2026) already recorded on uraldronzavod from ЦБСТ post 2383 (s6911); the forward adds nothing. Person record for Ткачук still missing: see notes/scan_wiring_20261003.md."
+    },
+    {
+      "id": "2026-10-02-09",
+      "found": "2026-10-02",
+      "report": "reports/2026-10-02_trial.md",
+      "url": "https://www.aviaport.ru/news/dlya-dronov-smyagchat-lokalizatsiyu-batarey-akkamulyatornye-yacheyki-ostanutsya-importnymi/",
+      "channel": null,
+      "post": null,
+      "about": [],
+      "kind": "lead",
+      "status": "dismissed",
+      "summary": "Context: amendments to Government Resolution №719 relax drone-battery localisation (Russian cells only from 2029); article concedes Chinese cells. Read the resolution before citing against foreign_components findings.",
+      "note": "03.10.2026: article saved as s9072; a draft amendment to Постановление №719, not part of any registry record yet. Reopen when the resolution itself is read."
+    },
+    {
+      "id": "2026-10-02-10",
+      "found": "2026-10-02",
+      "report": "reports/2026-10-02_trial.md",
+      "url": "https://www.aviaport.ru/news/na-proekt-bespilotnye-aviatsionnye-sistemy-vydelyat-svyshe-100-mlrd-rubley/",
+      "channel": null,
+      "post": null,
+      "about": [],
+      "kind": "lead",
+      "status": "recorded",
+      "summary": "Context: national project «Беспилотные авиационные системы» gets ₽103bn for 2027-2029 in the draft budget (TASS). For the БАС program record.",
+      "note": "03.10.2026: ₽28,034.4m / 31,961.3m / 43,296.6m for 2027-2029 added to the national project's claims, source s9071 (TASS via АвиаПорт)."
+    },
+    {
+      "id": "2026-10-05-01",
+      "found": "2026-10-05",
+      "url": "https://t.me/nashapravdafond/688",
+      "channel": "nashapravdafond",
+      "post": 688,
+      "about": [
+        "fond-nasha-pravda"
+      ],
+      "kind": "new",
+      "status": "recorded",
+      "summary": "Фонд «Наша Правда» передал 237-му гвардейскому десантно-штурмовому полку автомобиль скорой помощи, 5,48 млн руб.",
+      "note": "05.10.2026: handover h0042 in handovers.json (s9204), the donor's own report; the regiment is a new unit record, not the 237th tank regiment of h0041."
+    },
+    {
+      "id": "2026-10-05-02",
+      "found": "2026-10-05",
+      "url": "https://t.me/dronnitsa/665",
+      "channel": "dronnitsa",
+      "post": 665,
+      "about": [],
+      "kind": "update",
+      "status": "recorded",
+      "summary": "Дронница-2026 (29-30.08.2026, Великий Новгород) перенесена; video statement 26.08.2026 (666): new format, dates to be announced in the second half of September.",
+      "note": "05.10.2026: edition dronnitsa-2026 in programs.json (s9233, s9234). The postponement and its stated reason (an enemy strike reportedly planned for the event) are the organisers' own claims, unverified. No later post in the local scrape (channel at 666). Post 665 also says a new commander of Войска Беспилотных Систем was appointed, with no name: not recorded, unverified."
+    },
+    {
+      "id": "2026-10-05-03",
+      "found": "2026-10-05",
+      "url": "https://t.me/chadayevru/5076",
+      "channel": "chadayevru",
+      "post": 5076,
+      "about": [],
+      "kind": "lead",
+      "status": "dismissed",
+      "summary": "Чадаев on procurement law (275-ФЗ), arrests in the drone industry and the removal of Барашков from the Duma lists (posts 5076-5078).",
+      "note": "05.10.2026: read in full; archived as s9235-s9237. An opinion thread of 07.09.2026 by a person on file; its claims about law and prosecutors' checks are his own and cite no document, so nothing enters a registry field. Context for any later piece on procurement."
+    },
+    {
+      "id": "2026-10-05-04",
+      "found": "2026-10-05",
+      "url": "https://t.me/dronnitsa/649",
+      "channel": "dronnitsa",
+      "post": 649,
+      "about": [],
+      "kind": "new",
+      "status": "recorded",
+      "summary": "КЦПН head named: Александр Любимов («Акела»), head of the organising committee of Дронница-2026.",
+      "note": "05.10.2026: note appended to Любимов Александр Сергеевич (s9232, s9234); no patronymic in the posts, so the identity with the Ассоциация «Взаимопомощь» chair is not established. No КЦПН entity: no identifier."
+    },
+    {
+      "id": "2026-10-05-05",
+      "found": "2026-10-05",
+      "url": "https://t.me/UAS_development/705",
+      "channel": "UAS_development",
+      "post": 705,
+      "about": [
+        "ooo-npts-basirtk"
+      ],
+      "kind": "update",
+      "status": "open",
+      "summary": "НПЦ БАСиРТК стал членом Федерации космонавтики России (per the scan's fetch, not read).",
+      "note": "05.10.2026: post 705 is not in the local scrape (channel at 704 in data/roymarket.db). Needs a tg_scan of @UAS_development, then a full read before any record."
+    },
+    {
+      "id": "2026-10-05-06",
+      "found": "2026-10-05",
+      "url": "https://t.me/ANO_CBST/2583",
+      "channel": "ANO_CBST",
+      "post": 2583,
+      "about": [
+        "ano-tsbst-centre-for-unmanned-systems-technologies"
+      ],
+      "kind": "new",
+      "status": "recorded",
+      "summary": "ЦБСТ: «первый в России Акселератор экологических технологий», заявки до 19 октября.",
+      "note": "05.10.2026: programme cbst-eco-accelerator in programs.json (s9238). ЦБСТ's own description; the programme page was not read."
+    },
+    {
+      "id": "2026-10-05-07",
+      "found": "2026-10-05",
+      "url": "https://t.me/nvgushkuynik/155",
+      "channel": "nvgushkuynik",
+      "post": 155,
+      "about": [],
+      "kind": "lead",
+      "status": "dismissed",
+      "summary": "Business may buy anti-drone systems for units (mechanism reported by РБК, 28.05.2026).",
+      "note": "05.10.2026: post dated 29.05.2026, not new; it relays unnamed РБК sources about a mechanism, not a document. Archived s9231; context for the legal-framework note, not our network."
+    }
+  ],
+  "2026-10-05-01": {
+    "id": "2026-10-05-01",
+    "found": "2026-10-05",
+    "report": "reports/2026-10-05.md",
+    "url": "https://t.me/nashapravdafond/688",
+    "channel": "nashapravdafond",
+    "post": 688,
+    "also": [],
+    "about": [
+      "fond-nasha-pravda"
+    ],
+    "kind": "new",
+    "status": "open",
+    "summary": "Фонд «Наша Правда» reports handing a 5.48 m RUB ambulance to the 237th guards air assault regiment; a delivery to record (recipient unit not in military_units.json)."
   },
-  {
-   "id": "2026-10-02-02",
-   "found": "2026-10-02",
-   "report": "reports/2026-10-02_trial.md",
-   "url": "https://t.me/ru3mx/741",
-   "channel": "ru3mx",
-   "post": 741,
-   "about": [
-    "bulat",
-    "ooo-trimiks"
-   ],
-   "kind": "update",
-   "status": "recorded",
-   "summary": "«Булат» в.6 announced, limited version for Q4 2026. Product record has в.3, в.4 and «Булат-Онлайн» only.",
-   "note": "03.10.2026: «Булат» в.6 added to the product record as an announced version, source s9046 (ru3mx 741, 05.06.2026, an announcement only; no specification or firmware seen)."
+  "2026-10-05-02": {
+    "id": "2026-10-05-02",
+    "found": "2026-10-05",
+    "report": "reports/2026-10-05.md",
+    "url": "https://t.me/dronnitsa/666",
+    "channel": "dronnitsa",
+    "post": 666,
+    "also": [
+      "https://t.me/dronnitsa/665",
+      "https://t.me/nvgushkuynik/159"
+    ],
+    "about": [
+      "@dronnitsa"
+    ],
+    "kind": "update",
+    "status": "open",
+    "summary": "Дронница-2026 announced as postponed and transformed (post 666); the 5th all-Russian operators' rally was announced in 665. Event record has no postponement."
   },
-  {
-   "id": "2026-10-02-03",
-   "found": "2026-10-02",
-   "report": "reports/2026-10-02_trial.md",
-   "url": "https://t.me/kb_spektr/337",
-   "channel": "kb_spektr",
-   "post": 337,
-   "about": [
-    "kb-spektr-novosibirsk",
-    "ooo-mptm"
-   ],
-   "kind": "update",
-   "status": "recorded",
-   "summary": "КБ «СПЕКТР» announces a new Армамид propeller series for РОЙ.МАРКЕТ and Ozon «через неделю». Seller is already `listed` (post 321); the record lacks this product. Post date needs reading.",
-   "note": "03.10.2026: post 337 (14.08.2026, s9048) recorded in the open field of the КБ «СПЕКТР» to РОЙ.МАРКЕТ link as an announcement; the link stays listed (post 321, s8848)."
+  "2026-10-05-03": {
+    "id": "2026-10-05-03",
+    "found": "2026-10-05",
+    "report": "reports/2026-10-05.md",
+    "url": "https://t.me/chadayevru/5076",
+    "channel": "chadayevru",
+    "post": 5076,
+    "also": [
+      "https://t.me/chadayevru/5077",
+      "https://t.me/chadayevru/5078"
+    ],
+    "about": [
+      "chadaev-aleksey-viktorovich",
+      "barashkov-aleksandr-sergeevich"
+    ],
+    "kind": "lead",
+    "status": "open",
+    "summary": "Чадаев posts on defence procurement law 275-ФЗ, Барашков's candidacy and drone-industry political representation (summary only, read the posts in full)."
   },
-  {
-   "id": "2026-10-02-04",
-   "found": "2026-10-02",
-   "report": "reports/2026-10-02_trial.md",
-   "url": "https://t.me/nashapravdafond/678",
-   "channel": "nashapravdafond",
-   "post": 678,
-   "about": [
-    "fond-nasha-pravda"
-   ],
-   "kind": "new",
-   "status": "recorded",
-   "summary": "Delivery candidate: 91st control brigade signallers got ₽1.2m of equipment from «Наша Правда», with ЕР. No product named.",
-   "note": "03.10.2026: handover h0040 in handovers.json (s9077), the donor's own report: asserted_by self, credibility single; no unit record."
+  "2026-10-05-04": {
+    "id": "2026-10-05-04",
+    "found": "2026-10-05",
+    "report": "reports/2026-10-05.md",
+    "url": "https://t.me/dronnitsa/649",
+    "channel": "dronnitsa",
+    "post": 649,
+    "also": [],
+    "about": [
+      "@dronnitsa"
+    ],
+    "kind": "lead",
+    "status": "open",
+    "summary": "Дронница post names «руководитель КЦПН Александр Любимов»; КЦПН has no entity (organiser only), and the registry hit Любимов Александр Сергеевич is unconfirmed as the same person."
   },
-  {
-   "id": "2026-10-02-05",
-   "found": "2026-10-02",
-   "report": "reports/2026-10-02_trial.md",
-   "url": "https://t.me/tulaovod/956",
-   "channel": "tulaovod",
-   "post": 956,
-   "also": [
-    "https://t.me/tulaovod/958",
-    "https://t.me/tulaovod/959",
-    "https://t.me/tulaovod/945"
-   ],
-   "about": [
-    "ovod"
-   ],
-   "kind": "new",
-   "status": "recorded",
-   "summary": "«Овод» combat posts naming units (15th special-purpose drone company, 14 ОБрСпН, БАРС 8) and the fibre-optic «Провод» at 40.4 km. Maker's marketing: candidates for marketing claims, not unit records.",
-   "note": "03.10.2026: added to the «Овод» record's battlefield_evidence as the maker's own post (s9074); the unit is named only by the maker, so no unit record."
+  "2026-10-05-05": {
+    "id": "2026-10-05-05",
+    "found": "2026-10-05",
+    "report": "reports/2026-10-05.md",
+    "url": "https://t.me/UAS_development/705",
+    "channel": "UAS_development",
+    "post": 705,
+    "also": [],
+    "about": [
+      "ooo-npts-basirtk"
+    ],
+    "kind": "update",
+    "status": "open",
+    "summary": "НПЦ БАСиРТК says it became a member of the Федерация космонавтики России; entity record lacks this membership."
   },
-  {
-   "id": "2026-10-02-06",
-   "found": "2026-10-02",
-   "report": "reports/2026-10-02_trial.md",
-   "url": "https://t.me/ANO_CBST/2570",
-   "channel": "ANO_CBST",
-   "post": 2570,
-   "about": [
-    "ano-tsbst-centre-for-unmanned-systems-technologies",
-    "ovod"
-   ],
-   "kind": "new",
-   "status": "recorded",
-   "summary": "ЦБСТ digest: «Овод» footage published by Минобороны; an unnamed accelerator stream III participant tested a cargo ground robot. Read in full.",
-   "note": "03.10.2026: ЦБСТ posts 2557 (Defence Ministry video, s9076) added to the «Овод» record; post 2554 (accelerator participant's ground robot, s9075) kept as an open question on the accelerator programme, no company or surname given."
+  "2026-10-05-06": {
+    "id": "2026-10-05-06",
+    "found": "2026-10-05",
+    "report": "reports/2026-10-05.md",
+    "url": "https://t.me/ANO_CBST/2583",
+    "channel": "ANO_CBST",
+    "post": 2583,
+    "also": [],
+    "about": [
+      "ano-tsbst-centre-for-unmanned-systems-technologies"
+    ],
+    "kind": "lead",
+    "status": "open",
+    "summary": "ЦБСТ post announces an «Акселератор экологических технологий» with application deadline 19 October; programme not in the record."
   },
-  {
-   "id": "2026-10-02-07",
-   "found": "2026-10-02",
-   "report": "reports/2026-10-02_trial.md",
-   "url": "https://t.me/chadayevru/5061",
-   "channel": "chadayevru",
-   "post": 5061,
-   "about": [],
-   "kind": "lead",
-   "status": "recorded",
-   "summary": "Lead: director of Tula НПЦ «ТулаДрон» (Евгений Григорьев) arrested; Чадаев links its Минпромторг subsidy to Ушкуйник's. No registry match.",
-   "note": "03.10.2026: kept as a lead only, an open question on the НПЦ БАС network programme (zona.media s9070, Чадаев post 5061 s9073). No court record or registry record; no ЦБСТ tie."
-  },
-  {
-   "id": "2026-10-02-08",
-   "found": "2026-10-02",
-   "report": "reports/2026-10-02_trial.md",
-   "url": "https://t.me/bayraktar1070/7863",
-   "channel": "bayraktar1070",
-   "post": 7863,
-   "about": [
-    "uraldronzavod"
-   ],
-   "kind": "new",
-   "status": "dismissed",
-   "summary": "Director Владимир Ткачук injured and his guard killed in a bombing in Yekaterinburg (forwarded post, date not yet confirmed from press). Ткачук has no person record.",
-   "note": "03.10.2026: attack (05.08.2026) already recorded on uraldronzavod from ЦБСТ post 2383 (s6911); the forward adds nothing. Person record for Ткачук still missing: see notes/scan_wiring_20261003.md."
-  },
-  {
-   "id": "2026-10-02-09",
-   "found": "2026-10-02",
-   "report": "reports/2026-10-02_trial.md",
-   "url": "https://www.aviaport.ru/news/dlya-dronov-smyagchat-lokalizatsiyu-batarey-akkamulyatornye-yacheyki-ostanutsya-importnymi/",
-   "channel": null,
-   "post": null,
-   "about": [],
-   "kind": "lead",
-   "status": "dismissed",
-   "summary": "Context: amendments to Government Resolution №719 relax drone-battery localisation (Russian cells only from 2029); article concedes Chinese cells. Read the resolution before citing against foreign_components findings.",
-   "note": "03.10.2026: article saved as s9072; a draft amendment to Постановление №719, not part of any registry record yet. Reopen when the resolution itself is read."
-  },
-  {
-   "id": "2026-10-02-10",
-   "found": "2026-10-02",
-   "report": "reports/2026-10-02_trial.md",
-   "url": "https://www.aviaport.ru/news/na-proekt-bespilotnye-aviatsionnye-sistemy-vydelyat-svyshe-100-mlrd-rubley/",
-   "channel": null,
-   "post": null,
-   "about": [],
-   "kind": "lead",
-   "status": "recorded",
-   "summary": "Context: national project «Беспилотные авиационные системы» gets ₽103bn for 2027-2029 in the draft budget (TASS). For the БАС program record.",
-   "note": "03.10.2026: ₽28,034.4m / 31,961.3m / 43,296.6m for 2027-2029 added to the national project's claims, source s9071 (TASS via АвиаПорт)."
+  "2026-10-05-07": {
+    "id": "2026-10-05-07",
+    "found": "2026-10-05",
+    "report": "reports/2026-10-05.md",
+    "url": "https://t.me/nvgushkuynik/155",
+    "channel": "nvgushkuynik",
+    "post": 155,
+    "also": [],
+    "about": [
+      "@nvgushkuynik"
+    ],
+    "kind": "lead",
+    "status": "open",
+    "summary": "Post headline «Бизнес получил право участвовать в усилении защиты от БПЛА» points to a rule change on private anti-drone defence; source act not identified."
   }
- ]
 }

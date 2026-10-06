@@ -280,11 +280,12 @@ a registry fact.
 | What a record lacks or has let go stale | `status_board.py` (+ `exhibits/build_status_board.py`, private artifact AU3y9UL5M4i48UJ4BzrXSj) | anywhere, local |
 | The whole daily round in one command | `daily_mac.py --publish` via launchd (`ops/launchd/`; needs Full Disk Access for Python, the repo is in ~/Downloads) | the user's Mac, launchd at 09:15 local (03.10.2026); commits its outputs and `data/watch/daily/<date>.md` |
 | Missing/stale ЕГРЮЛ, ЕГРИП, БФО; missing/stale OpenSanctions, ГУР, Aleph screens | `status_board.py --pull-queue` (8 + 8 a day, top tiers first; re-screens 4 OpenSanctions + 8 ГУР + 8 Aleph a day; ingest steps incl. the graph rebuild printed after) | the user's Mac; the queue is the user's standing go-ahead, run as printed |
-| First reading of what arrived | `first_reading.py export --push` (Mac; `--local-dir data/sources/_inbox` also writes the texts locally so `read` runs the same day), then `read` | worksheet for a human; never merged, never applied |
+| First reading of what arrived | `first_reading.py export --local-dir data/sources/_inbox` (Mac only, since 05.10.2026 — `--push`/pull-inbox and the cloud routine that read it are retired, issue #30), then `read` | worksheet for a human; never merged, never applied |
 | Sanctions lists by ИНН/ОГРН | `sanctions_watch.py` | GitHub Actions, Mondays; an issue opens on change; state on `watch/sanctions` |
 | Public copies of cited pages | `archive_sources.py run` | GitHub Actions `wayback.yml`, nightly (03.10.2026); Telegram via per-channel lookup and preview pages |
 | Timestamped fingerprints of every source file | `timestamp_sources.py build && … stamp` | the Mac, after new sources; first run 03.10.2026 (8,935 files, FreeTSA + DigiCert; 121 files differ from their catalogued hash, listed) |
 | Tests, registry check, tag balance | `.github/workflows/checks.yml` | every push to main and every PR |
+| Status board kept current between rounds | `ops/git-hooks/pre-commit` (`git config core.hooksPath ops/git-hooks`) | the main session's local commits, any that touch a fact file |
 
 Still by hand (no tool selects per record):
 
@@ -313,19 +314,28 @@ Decided 2026-10-02 (rules in CLAUDE.md):
 - Everyone involved (donors, volunteers, carriers, sellers) is a person of
   interest; merely connected people (family with no stake) are not.
 - Donor and volunteer reports default to self-report.
+- Unit numbers collide (user, 05.10.2026): there are two 237th regiments, the
+  237-й танковый полк of the 3-я мотострелковая дивизия (Наша Правда post 532,
+  20.11.2025) and a 237-й гвардейский десантно-штурмовой полк (post 688, a
+  weekly-scan lead, not yet read). A unit is keyed on number plus type plus
+  parent formation, each from a source that states it; a bare number never
+  matches or merges two records. Neither is in `military_units.json` yet.
 - New reader pages go out as private Artifacts for preview; the public cutoff
   comes with the new landing page.
 
 Waiting on the user:
 
-- Unit naming: the English convention and what the card shows (proposal:
+- Unit naming (name normalization built 05.10.2026, `notes/unit_normalization_design_20261005.md`: `unit_lookup.py`, number + type + arm + parent): English label and card rules built the same day (`name_en`, `display_unit`; public card shows stated items only), awaiting the user's confirmation of the convention; no unit page yet (proposal:
   English short form with the Russian abbreviation and в/ч number, full
   official and informal names on a unit page; APP-6 glyph from the unit's
   echelon and branch, hostile frame). Then extend `military_units.json` with
   `vch`, `name_official_ru`, `short_ru`, `informal_ru[]`, `name_en`,
   `short_en`, `echelon`, `branch`, each form with its source.
+- Наша Правда scrape (`tg_scan.py`, a command for the user): our copy stops at post 646, so post 688 («Скорая для бойцов», ambulance for the 237th air-assault regiment) is unread. After the scrape, read it in full and record the handover with unit type and parent formation as the post gives them. Raised in issue #31.
 - archive.org S3 keys for Wayback (faster, less rate-limited); batches started 02.10.2026 on the anonymous endpoint.
 - Graphic-content default; when to share the chain previews.
+- Review the Гагаринг evidence-packet visual (private Artifact, built 04.10.2026 on the РОЙ.МАРКЕТ Reader System tokens, from `notes/packets/ooo-gagaring.md`): https://claude.ai/artifact/J9u4BinqBuzt1tKDrLPQvS — not shared, nothing checked against it yet. If it holds up, the other six sanctions-gap packets (Гаскар, СТИМС, Смарт Текнолоджис, Киловатт, Экспломет, Метаскан) go out the same way.
+- Proposed (05.10.2026, held off per the infrastructure freeze — needs an explicit go-ahead): extend `media_triage.py`'s `process` step to run `id_patterns.py`'s existing role+name regex over each photo's OCR text, flagging a "document"-class image whose OCR contains a capitalized ФИО pattern as priority. Reuses OCR already being captured, no new model. Scoped during the 320-item kb_spektr/gaskargroup/ru3mx/kotlin_novator/bpryarl triage pass, which found two named-person leads (Братеньков's medal, Шингареев's award slide) by manual sheet review that this would have surfaced automatically — but it's new tooling, so it waits for the freeze to lift.
 
 ## Current state (queried 2026-10-02, after the merge of PRs #3–#6)
 
@@ -349,13 +359,18 @@ and `notes/SOURCE_REGISTER.md`; `notes/unverified_people_gap.md`,
 - **Pages (`docs/`, public on push):** the generated landing page and `images/`. The graph
   explorer was retired in its current form on 02.10.2026 (user) and archived; B6 builds its replacement. The seven case pages, profiles and `story.html`
   are archived (track A). Pushing `docs/` needs the user's go-ahead.
-- **Artifacts (private unless shared):** Ecosystem Model (working model),
-  «Булат» and «Капюшон» chain views (previews), landing preview, Investigation
-  Status Board (internal, slugs on purpose), Network Graph, Evidence Ledger and Product Icon Set
-  (their only links were on the archived pages), Multi-Role
-  Individuals (stale; `build_affiliation_matrix.py`), Архангел: Claimed
-  Components (kept until its stills are confirmed archived locally). Deleting
-  one needs the user's confirmation.
+- **Artifacts (private unless shared), reviewed 05.10.2026:** «Булат» and
+  «Капюшон» chain views (previews, frozen until the thesis is chosen), landing
+  preview (retire with the chain previews), Reader System (design tokens),
+  Гагаринг evidence-packet visual (awaiting the user's review), Архангел:
+  Claimed Components (kept until its stills are confirmed archived locally).
+  The Investigation Status Board artifact was deleted too (05.10.2026); its live view is local: `python3 exhibits/serve_status_board.py` in its own terminal, http://127.0.0.1:8765/, rebuilt on every page load.
+  Deleted 05.10.2026 at the user's go-ahead: Ecosystem Model (local copy
+  `data/sources/ARTIFACT_20261002_ecosystem-model-v6.html`), Network Graph,
+  Evidence Ledger, Product Icon Set, Multi-Role Individuals (local sources in
+  `exhibits/`). The ecosystem model itself (`sells_for`, listings,
+  `platform_partners`) stays in the registry, frozen: extend it only if a chain
+  view needs the item. Deleting an artifact needs the user's confirmation.
 - **Internal only:** `notes/dossier_draft.html` (the old brief, never linked)
   and its snapshot `notes/archive/brief_snapshot_2026-08-21.html`.
 

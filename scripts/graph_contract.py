@@ -10,7 +10,7 @@ from __future__ import annotations
 import re
 from collections import Counter
 
-GRAPH_SCHEMA_VERSION = 12
+GRAPH_SCHEMA_VERSION = 13
 NODE_KINDS = {"entity", "person", "product", "unresolved",
               "government_customer", "military_unit", "program", "event", "group", "storefront"}
 EDGE_TYPES = {"owns", "related", "founded", "directs", "role", "produces",
@@ -20,14 +20,14 @@ EDGE_TYPES = {"owns", "related", "founded", "directs", "role", "produces",
               "banks_with", "acquiring_via", "ships_via", "lists", "operated_by"}
 TEMPORAL_STATUSES = {"current", "historical", "unknown"}
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
-UNIT_TYPES = {"army", "brigade", "regiment", "battalion", "detachment",
+UNIT_TYPES = {"army", "division", "brigade", "regiment", "battalion", "detachment",
               "volunteer_detachment", "unit_designator", "grouping",
               "unspecified_role"}
 UNIT_DESIGNATION_CONFIDENCE = {"named", "descriptive", "grouping"}
 
 NODE_FIELDS = {
     "entity": {"id", "kind", "label", "name_latin", "inn", "tier",
-               "sanctioned", "legal_form", "degree", "variant", "product_count"},
+               "sanctioned", "legal_form", "degree", "product_count"},
     "person": {"id", "kind", "label", "name_latin", "sanctioned", "degree"},
     "product": {"id", "kind", "label", "owner_slug", "source_id",
                 "classification", "degree"},
@@ -63,7 +63,7 @@ SOURCE_PREFIX_GRADE = {
     "ZAKUPKI": "doc", "PATENT": "doc", "TRADEMARK": "doc", "ROSPATENT": "doc", "GISP": "doc", "FNS": "doc",
     "PBNALOG": "doc", "FEDRESURS": "doc", "COURT": "doc", "NSPD": "doc", "RKN": "doc", "MCHS": "doc",
     "FSA": "doc", "PP719": "doc", "CERT": "doc", "PROVERKI": "doc", "ROM": "doc", "DATASET": "doc",
-    "AERONEXT": "doc", "OCR": "doc", "EU": "doc", "NSDC": "doc", "GUR": "doc", "FUNDNTI": "doc", "MINPROMTORG": "doc",
+    "AERONEXT": "doc", "OCR": "doc", "EU": "doc", "OFAC": "doc", "UKAZ": "doc", "SECO": "doc", "UKSL": "doc", "NSDC": "doc", "GUR": "doc", "FUNDNTI": "doc", "MINPROMTORG": "doc",
     # the press, aggregators and third-party compilations: reported
     "PRESS": "rep", "TRANSCRIPT": "rep", "DOSSIER": "rep", "RUSPROFILE": "rep", "CHECKO": "rep",
     "ALEPH": "rep", "OPENSANCTIONS": "rep", "RUPEP": "rep", "PEP": "rep",
@@ -86,7 +86,18 @@ def source_grade(src: dict | None) -> str:
     if name[:1] in "AА" and name[1:2].isdigit():
         return "doc"                      # arbitration court filings, A40-…
     g = SOURCE_PREFIX_GRADE.get(name.split("_", 1)[0])
-    return g or SOURCE_TYPE_GRADE.get(src.get("type") or "", "rep")
+    if g:
+        return g
+    g = SOURCE_TYPE_GRADE.get(src.get("type") or "")
+    # A source whose prefix and type both miss the table above is one this
+    # table has no documented grade for -- defaulting that to "rep" would
+    # silently overstate it as a party's own word/the press, one of only
+    # three grades a reader sees. "open" is the honest default: cited but
+    # ungraded, not "we checked and it's reported." (Found 05.10.2026 by an
+    # adversarial code review; 86 of 9064 sources.json records hit this path
+    # at the time, mostly internal ARTIFACT_ captures and a few odd-named
+    # pulls with no recognized prefix/type.)
+    return g or "open"
 # Confidence vocabulary carried over verbatim from entities.json's own
 # cbst_tie.confidence field (t-doc/t-open/press are positive-tie values;
 # "none"/"not_established" mean no tie and are never emitted as edges).

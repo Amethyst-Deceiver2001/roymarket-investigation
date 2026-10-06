@@ -232,7 +232,7 @@
       "aleksandr-sidyakin"
     ],
     "named_deliverer": "Александр Сидякин",
-    "recipient_unit_slug": "76-я-бригада-вдв",
+    "recipient_unit_slug": "76-я-гвардейская-десантно-штурмовая-дивизия",
     "recipient_raw": "76-я бригада ВДВ",
     "location_direction": "Запорожском направлении",
     "items": [
@@ -676,7 +676,7 @@
     ],
     "donor_people": [],
     "named_deliverer": null,
-    "recipient_unit_slug": "76-я-гвардейская-десантно-штурмовая-бригада",
+    "recipient_unit_slug": "76-я-гвардейская-десантно-штурмовая-дивизия",
     "recipient_raw": "76-я гвардейская десантно-штурмовая бригада",
     "location_direction": "Запорожском направлении",
     "items": [
@@ -1171,7 +1171,7 @@
     ],
     "donor_people": [],
     "named_deliverer": null,
-    "recipient_unit_slug": null,
+    "recipient_unit_slug": "91-я-бригада-управления",
     "recipient_raw": "Связисты 91-й бригады управления",
     "location_direction": null,
     "items": [
@@ -1190,5 +1190,61 @@
     "channel": "nashapravdafond",
     "msg_id": 678,
     "source_id": "s9077"
+  },
+  {
+    "id": "h0041",
+    "date": "2025-11-20",
+    "donor_orgs": [
+      "fond-nasha-pravda"
+    ],
+    "recipient_raw": "237-й танковый полк 3-й мотострелковой дивизии",
+    "items": [
+      {
+        "product_name_ru": "T9 Gimny",
+        "product_entity_slug": null,
+        "item_type": "all-terrain vehicle (ATV)",
+        "note": "«вездеход T9 Gimny»; no maker named"
+      }
+    ],
+    "cost_rub_raw": null,
+    "text_ru": "По заявке войсковой части фонд «Наша Правда» вместе с «Единой Россией» приобрел для 237-го танкового полка 3-й мотострелковой дивизии вездеход T9 Gimny.",
+    "context_en": "The donor's own post (20.11.2025, with video): asserted_by self, credibility single. The post date is the report date, not the handover date. Bought with Единая Россия «по заявке войсковой части»; the post says the unit sent the video showing the vehicle in use, and places use «на территории ЛНР и ДНР». Not the 237th guards air-assault regiment of h0042: a bare number does not identify a unit. The post names the parent division, 3-я мотострелковая дивизия, and no в/ч. Leads, none a source for a fact: the user (05.10.2026) adds the 20-я армия; ru.wikipedia.org/wiki/237-й_танковый_полк (read 05.10.2026) says the same, plus в/ч 91726 and Солоти, Белгородская область, with no footnote on the в/ч, and its parent footnote (Interfax, 15.01.2017, interfax.ru/world/545365) was read and does not mention the 237th. Open until a document states the в/ч or the army.",
+    "msg_id": 532,
+    "source_id": "s9203",
+    "donor_people": [],
+    "named_deliverer": null,
+    "recipient_unit_slug": "237-й-танковый-полк",
+    "location_direction": null,
+    "media": [],
+    "channel": "nashapravdafond",
+    "evidence_register": "institutional_announcement"
+  },
+  {
+    "id": "h0042",
+    "date": "2026-10-03",
+    "donor_orgs": [
+      "fond-nasha-pravda"
+    ],
+    "recipient_raw": "237-й гвардейский десантно-штурмовой полк",
+    "items": [
+      {
+        "product_name_ru": null,
+        "product_entity_slug": null,
+        "item_type": "ambulance vehicle",
+        "note": "«полностью оборудованный автомобиль скорой помощи»; no make named"
+      }
+    ],
+    "cost_rub_raw": "5,48 млн рублей",
+    "text_ru": "Фонд «Наша Правда» передал 237-му гвардейскому десантно-штурмовому полку полностью оборудованный автомобиль скорой помощи стоимостью 5,48 млн рублей.",
+    "context_en": "The donor's own post (03.10.2026, with video): asserted_by self, credibility single. The post date is the report date, not the handover date. The post says the vehicle is in use evacuating wounded from the line of contact and from subunits to the regimental aid post and rear hospitals. Not the 237th tank regiment of h0041. The post names no parent formation and no в/ч. The regiment's official name is stated by Указ № 478 of 29.06.2023 (s9205, kremlin.ru page text): «237 гвардейский десантно-штурмовой Торуньский полк»; the decree names no division and no в/ч. Leads: the user (05.10.2026) says it belongs to the 76-я гвардейская десантно-штурмовая дивизия, and en.wikipedia.org/wiki/76th_Guards_Air_Assault_Division lists it there; a web-search summary gave в/ч 12865, which no page it cited supports. Open until a document states the parent or the в/ч.",
+    "msg_id": 688,
+    "source_id": "s9204",
+    "donor_people": [],
+    "named_deliverer": null,
+    "recipient_unit_slug": "237-й-гвардейский-десантно-штурмовой-полк",
+    "location_direction": null,
+    "media": [],
+    "channel": "nashapravdafond",
+    "evidence_register": "institutional_announcement"
   }
 ]

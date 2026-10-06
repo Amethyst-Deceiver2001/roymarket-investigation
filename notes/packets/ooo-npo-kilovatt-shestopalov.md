@@ -1,6 +1,6 @@
 # Evidence packet: ООО «Научно-производственное объединение «Киловатт»»
 
-**DRAFT, generated 02.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
+**DRAFT, generated 06.10.2026 from the project registry. Not checked against the documents.** Before this leaves the project, a person reads every exhibit below and confirms each line that cites it. Grades: Documented (a primary document shows it), Reported (a party's own word or the press), Not documented (no document on file).
 
 ## 1. Identification
 
@@ -8,7 +8,7 @@
 - Latin form (as screening lists write it): OOO «Nauchno-proizvodstvennoe obedinenie «Kilovatt»»
 - ИНН 4800016776, ОГРН 1244800005240
 - Registered: 2024-07-22
-- Registered address: Россия, 398024, Липецкая область, г. Липецк, ул. Папина, д. 2 [no dated source on file]
+- Registered address: 398024, Липецкая область, г.о. город Липецк, г. Липецк, ул. П.А. Папина, д. 2 (as of 22.07.2024) [E1]
 - Website: https://kilowat48.ru/
 
 ## 2. Sanctions status
@@ -26,18 +26,19 @@ Weekly identifier check of the official lists, run of 02.10.2026. "No ID match" 
 | Australia | nothing in the registry; not checked by the weekly run |
 | Japan | nothing in the registry; not checked by the weekly run |
 | New Zealand | nothing in the registry; not checked by the weekly run |
-- Registry entry: OCCRP Aleph 'Global Sanctions Database' aggregation — specific regime/list not yet identified [E1]
+- Registry entry: OCCRP Aleph 'Global Sanctions Database' aggregation — specific regime/list not yet identified [E2]
 
 ## 3. Owners and directors
 
 | As of | Owner | Share | Personal ИНН | Source |
 |---|---|---|---|---|
-| 15.07.2024 | Шестопалов Сергей Анатольевич (sole founder) | — | — | [E2] |
-| 22.04.2026 | Шестопалов Сергей Анатольевич 60% (₽600 000) / Хальзев Сергей Юрьевич 40% (₽400 000) | — | — | [E2] |
+| 15.07.2024 | Шестопалов Сергей Анатольевич (sole founder) | — | — | [E3] |
+| 31.03.2026 | Хальзев Сергей Юрьевич (ИНН 482300070325) enters the register as a participant | — | — | [E1] |
+| 22.04.2026 | Шестопалов Сергей Анатольевич 60% (₽600 000) / Хальзев Сергей Юрьевич 40% (₽400 000) | — | — | [E3] |
 
 | As of | General director | Source |
 |---|---|---|
-| 22.07.2024 | Шестопалов Сергей Анатольевич | [E3] |
+| 22.07.2024 | Шестопалов Сергей Анатольевич | [E4] |
 
 Identifying detail on file for the people above (field-level sources are not recorded for date and place of birth; confirm each against a document before use):
 
@@ -47,22 +48,25 @@ Identifying detail on file for the people above (field-level sources are not rec
 
 | Year | Revenue | Net profit | Source |
 |---|---|---|---|
-| 2024 | ₽1,208.4m | ₽193.2m | [E4] |
-| 2025 | ₽1,158.6m | ₽71.9m | [E5] |
+| 2024 | ₽1,208.4m | ₽193.2m | [E5] |
+| 2025 | ₽1,158.6m | ₽71.9m | [E6] |
+
+- FY2024: БФО filing (thousands RUB in original: 1.20836e+06 / (193245)), converted to whole rubles here.
+- FY2025: БФО filing (thousands RUB in original: 1.15863e+06 / (719391)), converted to whole rubles here.
 
 
 ## 5. Tie to ЦБСТ
 
-- **Documented**: РЭБ «Капюшон» (this entity's product) is repeatedly shown as a ЦБСТ-supported/resident development — delivered to tro... [E6]
+- **Documented**: РЭБ «Капюшон» (this entity's product) is repeatedly shown as a ЦБСТ-supported/resident development — delivered to troops as "техника, созданная при поддержке ЦБСТ" and shown at Дронница 2025. [E7]
 
 Other links in the record:
 
 | Link | Grade | Source |
 |---|---|---|
-| ИП Пинимасова Елена Александровна related to ООО «Научно-производственное объединение «Киловатт»» (Шестопалов) (name-collision-distinct) | Documented | [E3] |
-| ООО «Научно-производственное объединение «Киловатт»» (Шестопалов) related to ИП Пинимасова Елена Александровна (dealer) | Documented | [E3] |
-| ООО «Научно-производственное объединение «Киловатт»» (Шестопалов) related to ООО «Научно-производственное объединение «Киловатт»» (name-collision-distinct) | Documented | [E7] |
-| Хальзев Сергей Юрьевич founded ООО «Научно-производственное объединение «Киловатт»» (Шестопалов) | Documented | [E8] |
+| ИП Пинимасов Александр Вячеславович sells for ООО «Научно-производственное объединение «Киловатт»» (Шестопалов) (official dealer (certificate №2106/2024)) | Documented | [E4] |
+| ИП Пинимасова Елена Александровна and ООО «Научно-производственное объединение «Киловатт»» (Шестопалов) are different parties with similar names; recorded so the collision is not mistaken for a link | Namesake, not a link | [E4] |
+| ООО «Научно-производственное объединение «Киловатт»» (Шестопалов) and ООО «Научно-производственное объединение «Киловатт»» are different parties with similar names; recorded so the collision is not mistaken for a link | Namesake, not a link | [E8] |
+| Хальзев Сергей Юрьевич is a recorded participant of ООО «Научно-производственное объединение «Киловатт»» (Шестопалов) | Documented | [E1] |
 
 ## 6. Products and what is said about their use
 
@@ -116,19 +120,19 @@ Other links in the record:
   - 08.07.2024: to «бойцы на Херсонском и Запорожском направлениях», reported by @nashapravdafond [E16]
   - 08.08.2024: to «423-й Ямпольский полк», reported by @nashapravdafond [E17]
   - 08.08.2024: to «Курская областная клиническая больница и станция скорой помощи», reported by @nashapravdafond [E18]
-  - 13.01.2025: to «военнослужащие группировок «Центр» и «Днепр»», reported by @ANO_CBST [E6]
+  - 13.01.2025: to «военнослужащие группировок «Центр» и «Днепр»», reported by @ANO_CBST [E7]
   - 15.01.2025: to «главы муниципальных округов Херсонской области, для бригад, восстанавливающих электроснабжение», reported by @nashapravdafond [E19]
   - 17.02.2025: to «военнослужащие группировки «ЮГ»», reported by @nashapravdafond [E20]
   - 19.02.2025: to «участники спецоперации (конвой из Егорьевска)», reported by @nashapravdafond [E21]
   - 09.06.2025: to «1-я мотострелковая рота, Запорожская область», reported by @nashapravdafond [E22]
-- Trademark № 1086620 «Капюшон», holder ООО НПО «Киловатт», registered 14.02.2025 [E23]
+- Trademark № 1086620 «Капюшон», holder ООО НПО «Киловатт» (ИНН 4800013729; the sister entity, per the FIPS address), registered 14.02.2025 [E23]
 - industrial design (промышленный образец) № RU145992S «Устройство помехового воздействия на средства связи и управления беспилотных воздушных судов», holder ООО НПО «Киловатт» [E24]
 
 ## 7. Draft statement of reasons
 
 *Facts only, in the order an EU listing puts them. The submitter chooses the legal route (for example the asset-freeze criteria of Council Decision 2014/145/CFSP, or the military end-user list in Annex IV to Council Regulation (EU) No 833/2014) and writes the conclusion.*
 
-OOO «Nauchno-proizvodstvennoe obedinenie «Kilovatt»» (ООО «Научно-производственное объединение «Киловатт»» (Шестопалов); ИНН 4800016776; ОГРН 1244800005240) is a company registered in Russia on 2024-07-22, in Lipetsk. Its general director is Шестопалов Сергей Анатольевич [E3]. Its owners are Шестопалов Сергей Анатольевич 60% (₽600 000) / Хальзев Сергей Юрьевич 40% (₽400 000) [E2]. Its tie to the Centre for Unmanned Systems and Technologies (АНО «ЦБСТ»): РЭБ «Капюшон» (this entity's product) is repeatedly shown as a ЦБСТ-supported/resident development — delivered to tro... [E6]. Its products include К-6, К-8, К-12, К-12 «Багажный бокс», К-14 «Багажный бокс», К-15 «ВИП БОКС» [E9]. Its filed revenue for 2025 was ₽1,158.6m [E5].
+OOO «Nauchno-proizvodstvennoe obedinenie «Kilovatt»» (ООО «Научно-производственное объединение «Киловатт»» (Шестопалов); ИНН 4800016776; ОГРН 1244800005240) is a company registered in Russia on 2024-07-22, in Lipetsk. Its general director is Шестопалов Сергей Анатольевич [E4]. Its owners, as of 22.04.2026, are Шестопалов Сергей Анатольевич 60% (₽600 000) / Хальзев Сергей Юрьевич 40% (₽400 000) [E3]. Its tie to the Centre for Unmanned Systems and Technologies (АНО «ЦБСТ»): РЭБ «Капюшон» (this entity's product) is repeatedly shown as a ЦБСТ-supported/resident development — delivered to troops as "техника, созданная при поддержке ЦБСТ" and shown at Дронница 2025. [E7]. Its products include К-6, К-8, К-12, К-12 «Багажный бокс», К-14 «Багажный бокс», К-15 «ВИП БОКС» [E9]. Its filed revenue for 2025 was ₽1,158.6m [E6].
 
 [Conclusion and criterion: for the submitter.]
 
@@ -138,14 +142,14 @@ Every document cited above. Telegram posts and web pages are archived and hashed
 
 | No. | Document | Public link | SHA-256 (first 16) | Internal id |
 |---|---|---|---|---|
-| E1 | OCCRP Aleph search record, checked 24.08.2026 | none public; copy on file | `628c54ccd3fd127d` | s0592 |
-| E2 | Founding documents filed with the company register (Federal Tax Service), 22.04.2026 | none public; copy on file | `bbcb2f71530b520d` | s8685 |
-| E3 | Certificate or declaration of conformity, 23.08.2026 | none public; copy on file | `11f666b4147a153a` | s0537 |
-| E4 | Annual accounts filed with the Federal Tax Service, ИНН 4800016776, FY 2024 | none public; copy on file | `5b114b450c44d953` | s6503 |
-| E5 | Annual accounts filed with the Federal Tax Service, ИНН 4800016776, FY 2025 | none public; copy on file | `8cc4795748a02434` | s6504 |
-| E6 | Telegram, @ANO_CBST, post 369, 13.01.2025 | https://t.me/ANO_CBST/369 | `d30798918147f2cf` | s8091 |
-| E7 | Company register extract (ЕГРЮЛ, Federal Tax Service) for ОГРН 1244800005240, 23.08.2026 | none public; copy on file | `c9a0f339ba0a42c9` | s0533 |
-| E8 | Company register extract (ЕГРЮЛ, Federal Tax Service) for ИНН 4800016776, 07.09.2026 | none public; copy on file | `3a95ed805d3ae048` | s6790 |
+| E1 | Company register extract (ЕГРЮЛ, Federal Tax Service) for ИНН 4800016776, 07.09.2026 | none public; copy on file | `3a95ed805d3ae048` | s6790 |
+| E2 | OCCRP Aleph search record, checked 24.08.2026 | none public; copy on file | `628c54ccd3fd127d` | s0592 |
+| E3 | Founding documents filed with the company register (Federal Tax Service), 22.04.2026 | none public; copy on file | `bbcb2f71530b520d` | s8685 |
+| E4 | Official dealer certificate issued by the manufacturer, 23.08.2026 | none public; copy on file | `11f666b4147a153a` | s0537 |
+| E5 | Annual accounts filed with the Federal Tax Service, ИНН 4800016776, FY 2024 | none public; copy on file | `5b114b450c44d953` | s6503 |
+| E6 | Annual accounts filed with the Federal Tax Service, ИНН 4800016776, FY 2025 | none public; copy on file | `8cc4795748a02434` | s6504 |
+| E7 | Telegram, @ANO_CBST, post 369, 13.01.2025 | https://t.me/ANO_CBST/369 | `d30798918147f2cf` | s8091 |
+| E8 | Company register extract (ЕГРЮЛ, Federal Tax Service) for ОГРН 1244800005240, 23.08.2026 | none public; copy on file | `c9a0f339ba0a42c9` | s0533 |
 | E9 | Certificate or declaration of conformity, 23.08.2026 | none public; copy on file | `118960d0502abd10` | s0536 |
 | E10 | State industry information system (ГИСП) data, 03.09.2026 | none public; copy on file | `3d14461a13900a39` | s5391 |
 | E11 | Online shop page, archived 15.09.2026 | https://kilowatt48.ru/shop/page/3/ | `40e879c296efd4bc` | s7501 |
@@ -168,5 +172,5 @@ Every document cited above. Telegram posts and web pages are archived and hashed
 Research notes as the registry holds them. Some may weaken a line above; read them before sign-off.
 
 - Former occupant ООО «Регион-Агро Липецк» itself not yet checked against this registry or independently researched -- worth a quick check for any residual connection (shared ownership, lease continuity) versus a clean change of use.
-- RESOLVED: relationship to the sister entity (ИНН 4800013729) is common ownership -- same sole founder Шестопалов С.А. on both, per full EGRUL extracts. He directs this one personally; the other has a hired director (Гаврилов А.Г.). UPDATE 2026-10-01 (s8685, s6790): this holds for the period to 22 April 2026. Since then ООО НПО «Киловатт» (ИНН 4800016776) has a second participant, Хальзев Сергей Юрьевич 40% (Шестопалов 60%), so the two entities are no longer under identical ownership; Шестопалов remains a founder of both. (s0533)
-- 2026-10-01 founding-document read: since 22 April 2026 the company has TWO participants, Шестопалов Сергей Анатольевич 60% and Хальзев Сергей Юрьевич 40% (charter amendment and the ЕГРЮЛ extract s6790 agree). Earlier text on this record calling Шестопалов the sole founder, and the resolved note on common ownership with the sister entity ИНН 4800013729 ("same sole founder"), describe the position before that date. Lookups done 2026-10-01: Хальзев's ИНН 482300070325 appears only in this entity's ЕГРЮЛ extracts in our archive; the sister entity ИНН 4800013729 shows Шестопалов 100% and director Гаврилов Алексей Георгиевич (ИНН 235209926630), no Хальзев; ЦБСТ channel search for «Хальзев» returns 0 hits; a web search found nothing. Not done: a ФНС cross-reference of his ИНН for other holdings. The 2024 charter (§10.4, §12.8) contains state-secret clauses worded identically to the РЛВТ charter, so they read as template text; no допуск to state secrets is evidenced. (s8685)
+- RESOLVED: relationship to the sister entity (ИНН 4800013729) is common ownership -- same sole founder Шестопалов С.А. on both, per full EGRUL extracts. He directs this one personally; the other has a hired director (Гаврилов А.Г.). UPDATE 2026-10-01 (s8685, s6790): this holds for the period to 31 March 2026. Since then ООО НПО «Киловатт» (ИНН 4800016776) has a second participant, Хальзев Сергей Юрьевич 40% (Шестопалов 60%), so the two entities are no longer under identical ownership; Шестопалов remains a founder of both. (s0533)
+- 2026-10-01 founding-document read: since 31.03.2026 (participant entry; the 60/40 split is recorded 13.05.2026 on the meeting of 22.04.2026) the company has TWO participants, Шестопалов Сергей Анатольевич 60% and Хальзев Сергей Юрьевич 40% (charter amendment and the ЕГРЮЛ extract s6790 agree). Earlier text on this record calling Шестопалов the sole founder, and the resolved note on common ownership with the sister entity ИНН 4800013729 ("same sole founder"), describe the position before that date. Lookups done 2026-10-01: Хальзев's ИНН 482300070325 appears only in this entity's ЕГРЮЛ extracts in our archive; the sister entity ИНН 4800013729 shows Шестопалов 100% and director Гаврилов Алексей Георгиевич (ИНН 235209926630), no Хальзев; ЦБСТ channel search for «Хальзев» returns 0 hits; a web search found nothing. Not done: a ФНС cross-reference of his ИНН for other holdings. The 2024 charter (§10.4, §12.8) contains state-secret clauses worded identically to the РЛВТ charter, so they read as template text; no допуск to state secrets is evidenced. (s8685)
