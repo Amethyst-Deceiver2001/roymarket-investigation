@@ -249,7 +249,8 @@ def build(slug: str, external: bool, gap_path: Path, gap_as_of: str) -> str:
         L.append("")
         for f in fin:
             if f.get("note"):
-                L.append(f"- FY{f.get('year')}: {re.sub(r' ?\(s\d{4}\)', '', f['note'])}")
+                note = re.sub(r" ?\(s\d{4}\)", "", f["note"])
+                L.append(f"- FY{f.get('year')}: {note}")
         L.append("")
     for w in e.get("workforce_history") or []:
         L.append(f"- Staff {w.get('count')} as of {iso_or_ru(w.get('as_of'))} {X.ref(w.get('source_id'))}")
