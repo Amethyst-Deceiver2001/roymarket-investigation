@@ -18696,6 +18696,18 @@
           {
             "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 9705196180, 1237700218612; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: sanction; regime: Ukraine (Presidential sanctions decree/list)). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
             "source_id": "s0575"
+          },
+          {
+            "text": "Who are the legal entities and individuals behind the 1,099,813 thousand rubles (89.2% of FY2024 receipts) that the notes call «целевые средства от юридических и физических лиц на ведение уставной деятельности»? The filing names none. Founders Фонд «ДАР» and Фонд «Градислава» gave 59,000 thousand together.",
+            "source_id": "s0389"
+          },
+          {
+            "text": "The FY2024 notes (§16) say the foundation owns 100% of ООО «ИНВЕСТМЕНТС»; the registry's parents entry from the ЕГРЮЛ gives 90.91% (s0223). Find which is current and why they differ.",
+            "source_id": "s0389"
+          },
+          {
+            "text": "The by-source split of FY2025 receipts (984,892 thousand) was not found in the OCR text of the FY2025 notes (s0390), which also list only ООО «ИНВЕСТМЕНТС» under subsidiaries. The pages have not been read as images yet.",
+            "source_id": "s0390"
           }
         ],
         "registered": "21.03.2023",
@@ -18736,7 +18748,37 @@
           "confidence": "t-doc",
           "evidence": "Own channel @nashapravdafond, msg 421 (10.04.2025): \"Фонд «Наша Правда», партия «Единая Россия» и ЦБСТ доставили участникам СВО на Запорожском направлении новые дроны...\" (58-я армия, группировка «Центр», 76-я гв. ДШБр, 9-я отд. гв. МСБр). msg 656 (10.08.2026): \"Помощь от фонда «Наша Правда», Единой России и ЦБСТ передали военнослужащим 24-й бригады спецназа ГРУ и 3-го подразделения 9-й бригады группировки «Центр» в ДНР\" (strike drones, hexacopters, stationary РЭБ complexes, industrial 3D printer). Found during a full 234-post structured handover-pattern scan, 2026-09-14.",
           "source_id": "s7593"
-        }
+        },
+        "marketing_claims": [
+          {
+            "text_ru": "поддержка отдельных юридических лиц, осуществляющих деятельность по производству или разработке продукции, которая может использоваться для укрепления и повышения обороноспособности, территориальной целостности, а также суверенитета Российской Федерации, обеспечения безопасности ее границ",
+            "text_en": "support for separate legal entities engaged in producing or developing products that may be used to strengthen defence capability, territorial integrity and sovereignty of the Russian Federation and the security of its borders",
+            "context": "One of the foundation's stated purposes («Целями деятельности Фонда является»), notes to the FY2024 accounts, §1.3, p.5 of 35. The list also names support for state bodies and the Armed Forces. Read from the page image.",
+            "source_id": "s0389",
+            "as_of": "2024-12-31"
+          },
+          {
+            "text_ru": "Целевые средства от юридических и физических лиц на ведение уставной деятельности – 1 099 813,00",
+            "text_en": "Targeted funds from legal entities and individuals for statutory activity: 1,099,813.00 (thousand rubles)",
+            "context": "FY2024 notes §18, p.35 of 35 (read from the page image). This line is 89.2% of the 1,232,513 thousand received. The filing does not name these legal entities or individuals. Money from the two founders is printed as Фонд «ДАР» 5,000.00 and Фонд «Градислава» 54,000.00 (thousand rubles).",
+            "source_id": "s0389",
+            "as_of": "2024-12-31"
+          },
+          {
+            "text_ru": "Социальная и благотворительная помощь для зоны СВО - 1 302 289,00",
+            "text_en": "Social and charitable aid for the SVO zone: 1,302,289.00 (thousand rubles)",
+            "context": "The largest line of use of funds in the FY2024 notes §18, p.35 of 35 (read from the page image): 95.6% of the printed total of 1,362,206. The four lines listed (1,302,289 + 36,324 + 13,726 + 9,865) add to 1,362,204, so the filing's own total is 2 thousand higher than its lines. Management and upkeep are the other lines.",
+            "source_id": "s0389",
+            "as_of": "2024-12-31"
+          },
+          {
+            "text_ru": "АНО ЦБСТ» (основной государственный регистрационный номер 1247700190430, ИНН 9702064851)- дочернее предприятие Фонда «Наша Правда»",
+            "text_en": "ANO TsBST: a subsidiary of Foundation «Наша Правда»",
+            "context": "FY2024 notes §16 «Взаимозависимые лица», p.33 of 35 (read from the page image). This is the foundation's own wording. ЕГРЮЛ shows ЦБСТ as an АНО with the foundation as co-founder, so no ownership share is recorded from it. Under the line the notes print «Внесение добровольного целевого имущественного взноса учредителя» in five agreements (22.08.2024 10,000,000.00; 07.10.2024 18,000,000.00; 28.11.2024 9,200,000.00; 20.12.2024 20,435,024.00; 23.12.2024 13,500,000.00 rubles), together 71,135,024 rubles. The recipient is not named beside the amounts; their position under the ЦБСТ line is as printed.",
+            "source_id": "s0389",
+            "as_of": "2024-12-31"
+          }
+        ]
       },
       "verified_against": "s0221 — Фонд «Наша Правда»'s own full signed ЕГРЮЛ extract, pulled 15.08.2026",
       "why": [
@@ -18747,7 +18789,8 @@
         "Full signed ЕГРЮЛ extract read end-to-end (s0221, ul-1237700218612-20260815010023.pdf, pulled 15.08.2026). Confirms ОГРН, registration date, address, English legal name, and GD Бровченко А.Р. (personal ИНН 501105677892) in post since registration. TWO findings beyond field-filling: (1) the extract contains NO учредители section — a Фонд's founders are not published in ЕГРЮЛ at all, so the brief's Фонд «ДАР»/«Градислава» attribution is neither confirmed nor refuted here and needs the Устав instead; logged as an open question rather than left implicitly sourced. (2) ОКВЭД mismatch: the codes this 'foundation for supporting patriotic initiatives' DECLARED at founding (21.03.2023) were 64.99 other financial services, 68.10 buying/selling own real estate, 68.20 property rental — finance and property dealing, not social or patriotic work. The 88.99 social-services code is Rosstat-reported (отчетного типа), added only 02.04.2026, three years later.",
         "SHARED-ADDRESS FINDING (primary-source, both sides): Фонд «Градислава» has been registered at 115172, Москва, наб. Котельническая, д. 25, стр. 1, ОФИС 18 since 05.09.2013 (ГРН 2137799137815). Фонд «Наша Правда» was registered on 21.03.2023 at the same building, стр. 1, ОФИС 18 КОМНАТА 5 — a room inside that same suite. Each address is taken from that fund's OWN signed ЕГРЮЛ extract, so the overlap is documented on both sides rather than inferred from a third-party database. This puts the ЦБСТ-side fund physically inside the office of the fund the brief ties to Medvedev's undisclosed assets — a registry fact, distinct from the FBK/press sourcing that currently carries that link.",
         "2026-09-14: cbst_tie wired from own-channel evidence (msg 421, msg 656) -- entity had 'cbst-core' tier assigned already but no cbst_tie field populated. Both posts name ЦБСТ directly as a co-deliverer alongside the Fund and Единая Россия, not a mere brand mention.",
-        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
+        "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions).",
+        "2026-10-07: FY2024 notes read in full and against the page images (pp.5, 33, 35): purposes, funding by source, use of funds, the ЦБСТ line and five contributions recorded as marketing_claims; three open questions added."
       ]
     },
     "fond-podderzhki-natsionalnykh-morskikh-programm": {
