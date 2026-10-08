@@ -92,6 +92,47 @@ class Story:
                 "got_bn": got / 1e6, "events": len(events), "first": dates[0], "last": dates[-1]}
 
 
+# FY2024 notes §18 (p.35 of 35) and FY2025 notes §3.17 (pp.15-16 of 20), as printed, thousand rubles. Read from
+# the page images on 07-08.10.2026; render() asserts that they agree with the accounts record.
+RECEIVED_2024 = [
+    ("Целевые средства от юридических и физических лиц на ведение уставной деятельности", "targeted funds from legal entities and individuals for statutory activity", 1_099_813),
+    ("Целевые средства от учредителей деньгами: Фонд «ДАР» 5 000, Фонд «Градислава» 54 000", "targeted funds from the founders, in money: «ДАР» 5,000 and «Градислава» 54,000", 59_000),
+    ("Добровольные имущественные взносы и пожертвования от учредителей и юридических лиц", "voluntary property contributions and donations from founders and legal entities", 59_000),
+    ("Прибыль от приносящей доход деятельности", "profit from income-generating activity", 14_700),
+]
+USED_2024 = [
+    ("Социальная и благотворительная помощь для зоны СВО", "social and charitable aid for the SVO zone", 1_302_289),
+    ("Расходы на содержание аппарата управления (включая начисления и страховые взносы)", "upkeep of the management apparatus, including contributions and insurance", 36_324),
+    ("Расходы по содержанию организации", "upkeep of the organisation", 13_726),
+    ("Расходы на приобретение основных средств материальных активов", "purchase of fixed assets", 9_865),
+]
+PRINTED_USED_2024 = 1_362_206
+AID_2025 = 592_889.7
+
+
+def k(n):
+    return f"{n:,.0f}"
+
+
+def money_chart(fin) -> str:
+    """Received and used, 2024 and 2025, drawn to one scale (million rubles)."""
+    rows = [(y, lab, fin[y][key] / 1e6) for y in ("2024", "2025") for lab, key in (("received", "funds_received"), ("used", "funds_used"))]
+    mx, x0, w = 1500.0, 70, 560
+    out = ['<svg class="chart" viewBox="0 0 760 232" role="img" aria-label="Funds received and used, 2024 and 2025">']
+    for t in (0, 500, 1000, 1500):
+        x = x0 + w * t / mx
+        out.append(f'<line class="grid" x1="{x:.1f}" y1="8" x2="{x:.1f}" y2="196"/><text class="tick" x="{x:.1f}" y="216" text-anchor="middle">{t / 1000:.1f}bn</text>')
+    y = 14
+    for i, (yr, lab, v) in enumerate(rows):
+        if lab == "received":
+            out.append(f'<text class="yr" x="0" y="{y + 20}">{yr}</text>')
+        out.append(f'<rect class="bar {lab}" x="{x0}" y="{y}" width="{w * v / mx:.1f}" height="26"/>'
+                   f'<text class="lbl" x="{x0 + w * v / mx + 8:.1f}" y="{y + 18}">{v / 1000:.2f}bn {lab}</text>')
+        y += 34 if lab == "received" else 50
+    out.append("</svg>")
+    return "".join(out)
+
+
 def month_year(iso: str) -> str:
     return dt.date.fromisoformat(iso).strftime("%B %Y")
 
@@ -123,6 +164,27 @@ def render(out: Path):
     r_notes2 = S.ref("s0389")
     d = S.ent["director"]
     registered = month_year(dt.datetime.strptime(S.ent["registered"], "%d.%m.%Y").date().isoformat())
+
+    q_aid = S.quote("Фонд не получал государственную помощь")
+    q_hosp = S.quote("Фонд «Наша Правда» при поддержке представителей партии")
+    q_hosp2 = S.quote("«Капюшоны» помогут обезопасить")
+    q_kher = S.quote("Фонд «Наша Правда» привез детекторы дронов")
+    q_kher2 = S.quote("Оборудование передадут бригадам")
+    S.check_posts([q_hosp, q_hosp2], msg=311)
+    S.check_posts([q_kher, q_kher2], msg=382)
+    fin = {f["year"]: f for f in S.ent["financials"]}
+    recv_total, used_sum = sum(r[2] for r in RECEIVED_2024), sum(r[2] for r in USED_2024)
+    assert recv_total * 1000 == fin["2024"]["funds_received"], "received lines do not add to the accounts"
+    assert abs(PRINTED_USED_2024 * 1000 - fin["2024"]["funds_used"]) < 1, "printed total differs from the accounts"
+    assert 0 <= PRINTED_USED_2024 - used_sum <= 2
+    used25 = fin["2025"]["funds_used"] / 1000
+    F["got25_bn"] = fin["2025"]["funds_received"] / 1e9
+    r_notes25 = S.ref("s0390")
+    shade = ["s1", "s2", "s3", "s4"]
+    split_bar = "".join(f'<span class="seg {c}" style="width:{100 * r[2] / recv_total:.2f}%"><b>{100 * r[2] / recv_total:.1f}%</b></span>' for c, r in zip(shade, RECEIVED_2024))
+    recv_rows = "".join(f'<tr><td class="ru">{esc(r[0])}</td><td>{esc(r[1])}</td><td>{k(r[2])}</td><td>{100 * r[2] / recv_total:.1f}%</td></tr>' for r in RECEIVED_2024)
+    used_rows = "".join(f'<tr><td class="ru">{esc(r[0])}</td><td>{esc(r[1])}</td><td>{k(r[2])}</td><td>{100 * r[2] / PRINTED_USED_2024:.1f}%</td></tr>' for r in USED_2024)
+    chart = money_chart(fin)
 
     def passage(q):
         return f'<p class="pass"><span class="ru">{esc(q["text_ru"])}</span><span class="en">{esc(q["translation_en"])}</span></p>'
@@ -193,14 +255,48 @@ def render(out: Path):
   <div class="excerpt"><p class="where">Notes to the 2024 accounts, section 1.3, page 5</p>
     <blockquote class="rm-quote"><span class="rm-label">Original Russian</span>{esc(q_aim['text_ru'])}
       <span class="gloss">{esc(q_aim['translation_en'])}</span></blockquote></div>
-  <p>That is the foundation's own description of its purposes. The figures, and what the accounts say the money did, come next.</p>
+  <p>That is the foundation's own description of its purposes. The figures come next: where the money came from, and where the accounts say it went.</p>
+</section>
+
+<section class="chapter" aria-labelledby="c2">
+  <p class="rm-eyebrow">The money in</p>
+  <h2 class="rm-h2" id="c2">Nearly nine-tenths of the 2024 money came from donors the notes do not name</h2>
+  <p>In 2024 the foundation received {F['got_bn']:.2f} billion rubles in targeted funds. The notes to its accounts print four lines to say from whom.{r_notes2}</p>
+  <div class="split" role="img" aria-label="Shares of the 2024 receipts by printed line">{split_bar}</div>
+  <table class="lines"><thead><tr><th>As printed</th><th>Translation</th><th>Thousand rubles</th><th>Share</th></tr></thead><tbody>{recv_rows}
+    <tr class="tot"><td colspan="2">Received in 2024, as printed</td><td>{k(recv_total)}</td><td>100%</td></tr></tbody></table>
+  <p>Two donors are named: «ДАР», which gave 5 million rubles, and «Градислава», which gave 54 million. The 1.10 billion
+  that make up the rest are credited to <span class="ru-word">юридических и физических лиц</span>, legal entities and
+  individuals. The notes print no names and no amount per donor.</p>
+  <p>The same notes say, in a sentence about something else, that <i>«{esc(q_aid['text_ru'])}»</i>, the foundation did not receive state aid, in 2024. They do not say what they mean by the term.{S.ref("s0389")}</p>
+  <p>For 2025 the notes give the total, {F['got25_bn']:.2f} billion rubles, and no breakdown.{r_notes25}</p>
+  {chart}
+  <p class="chart-note">Targeted funds received and used, million rubles, from the filings. The balance carried forward fell from 434.4 million at the start of 2024 to 304.7 million at its end, and stood at 307.6 million at the end of 2025.</p>
+</section>
+
+<section class="chapter" aria-labelledby="c3">
+  <p class="rm-eyebrow">The money out</p>
+  <h2 class="rm-h2" id="c3">{F['aid_share']:.1f}% of what it spent in 2024 is booked as aid for the zone</h2>
+  <table class="lines"><thead><tr><th>As printed</th><th>Translation</th><th>Thousand rubles</th><th>Share</th></tr></thead><tbody>{used_rows}
+    <tr class="tot"><td colspan="2">Used in 2024, as printed</td><td>{k(PRINTED_USED_2024)}</td><td>100%</td></tr></tbody></table>
+  <p>The four lines add to {k(used_sum)}. The filing's own total is {PRINTED_USED_2024 - used_sum} thousand rubles higher, and the notes do not say why.</p>
+  <p>The first line says nothing of what was bought. For 2025 the notes give one line of use: <span class="ru-word">Целевые пожертвования в рамках уставной деятельности</span>, targeted donations within statutory activity, {AID_2025 / 1000:.1f} million rubles. That is {100 * AID_2025 / used25:.1f}% of the {used25 / 1000:.1f} million used. The other {(used25 - AID_2025) / 1000:.1f} million is not broken down.</p>
+  <p>The foundation's posts say what "aid" covered, for some of it. They show it reaching more than servicemen.</p>
+  <article class="post" aria-label="Excerpts from the post of 8 August 2024">
+    <header><span>Telegram · @nashapravdafond</span><span>{ru_date(q_hosp['date'])}</span><span>The foundation's own post</span></header>
+    {passage(q_hosp)}{passage(q_hosp2)}{S.ref("s8992")}
+  </article>
+  <article class="post" aria-label="Excerpts from the post of 15 January 2025">
+    <header><span>Telegram · @nashapravdafond</span><span>{ru_date(q_kher['date'])}</span><span>The foundation's own post</span></header>
+    {passage(q_kher)}{passage(q_kher2)}{S.ref("s8994")}
+  </article>
+  <p>Most of its reports name soldiers and units. Whether these two deliveries sit under the line for the zone, the notes do not say.</p>
 </section>
 
 <section class="chapter" aria-label="Chapters in draft">
   <aside class="rm-card coming"><header><span class="rm-kind">In draft</span></header>
     <p>The chapters that follow are outlined and not yet written:</p>
-    <ol><li>Where the money comes from</li><li>Where it goes</li><li>The centre it co-founded</li>
-    <li>The handovers</li><li>The marketplace</li><li>What this does not show</li></ol></aside>
+    <ol><li>The centre it co-founded</li><li>The handovers</li><li>The marketplace</li><li>What this does not show</li></ol></aside>
 </section>
 
 <section class="rm-sources"><h2 class="rm-h2">Sources</h2><ol>{S.notes_list()}</ol></section>

@@ -18708,6 +18708,10 @@
           {
             "text": "The FY2025 notes (s0390, read as page images pp.15-16 of 20) give no split of the 984,892 thousand received by source, and no list of donors. The only use-of-funds line is «Целевые пожертвования в рамках уставной деятельности» 592,889.7 thousand of 982,017 used (60.4%); the remaining 389,127 thousand is not broken down in the notes. They also list only ООО «ИНВЕСТМЕНТС» under subsidiaries (no ЦБСТ line). Whether another document states the 2025 donors is open.",
             "source_id": "s0390"
+          },
+          {
+            "text": "The payables table in the FY2024 notes (§10, p.29 of 35, read from the page image and zoomed) lists four suppliers, ООО Хартия, МЕГАФОН ПАО, АО Технодрон and ООО ФЕНИКС-С, and four amounts (13.57, 9.41, 982.60 and 11.0 thousand rubles; total 1,016.7). The amount column sits one row below the names in the scan, so which amount belongs to which supplier cannot be read with certainty: АО «Технодрон» (ИНН 9704241986, a ЦБСТ-tied manufacturer in the registry) is owed either 9.41 or 982.60 thousand rubles. Find a document that states it (the accounting register, the supplier's own filing) before any use.",
+            "source_id": "s0389"
           }
         ],
         "registered": "21.03.2023",
@@ -18784,6 +18788,13 @@
             "context": "The only line under «Затраты по основному виду деятельности» in the FY2025 notes §3.17.1, p.16 of 20 (read from the page image): 60.4% of the 982,017 thousand used. The notes give no split of receipts by source for 2025.",
             "source_id": "s0390",
             "as_of": "2025-12-31"
+          },
+          {
+            "text_ru": "В 2024 г. Фонд не получал государственную помощь в 2024году.",
+            "text_en": "In 2024 the foundation did not receive state aid in 2024 [sic: the year is stated twice].",
+            "context": "FY2024 notes, section 10 «Чистые активы», p.30 of 35 (read from the page image). The foundation's own statement. It says nothing of money from donors that are state bodies or state-owned companies, and «государственная помощь» is not defined in the notes.",
+            "source_id": "s0389",
+            "as_of": "2024-12-31"
           }
         ]
       },
