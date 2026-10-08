@@ -11,9 +11,13 @@ Written for: the editor of the story (the user). Nothing here is public. Decided
 
 ## Status (08.10.2026)
 
-Drafted as a private preview (`exhibits/build_story.py`, preview Artifact): cold open (0), purposes (1), money in (2), money out (3), handovers (5 in the table below). Not yet written: the centre (4), the marketplace (6), limits (7). Right of reply is deferred by the user (08.10.2026).
+Drafted as a private preview (`exhibits/build_story.py`, preview Artifact): cold open (0), purposes (1), money in (2), money out (3), handovers (5 in the table below). The centre (4) drafted 08.10.2026. Not yet written: the marketplace (6), limits (7). Right of reply is deferred by the user (08.10.2026).
 
 Found while drafting: the foundation states it received no state aid in 2024 (p.30); its payables table names АО «Технодрон» but the amount column is offset by a row in the scan, so no amount is used (open question on the foundation's record).
+
+## Found while drafting the centre chapter (08.10.2026)
+
+ЦБСТ's own accounts (FY2024, FY2025) book every receipt as «Прочие поступления» (269.8m, 137.1m); the 2024 line for target events is empty, 2025 has 48.7m of 275.6m used; its 2025 notes apply the small-business exemption from related-party disclosure. The foundation's five contributions (71.1m) cannot be matched to ЦБСТ's receipts. ЦБСТ's own site names «Единая Россия» as a third founder; the register names the foundation and ПСБ only. Сидякин's post of 15.12.2025 gives no source for "more than 2.5 billion dollars".
 
 ## Chapters
 

@@ -48,23 +48,35 @@ class Story:
         self.notes: list[str] = []
         self.uses: dict[str, int] = {}
 
-    # -- citations: the generated title and public link, numbered in page order
+    # -- citations: the generated title and public link. ref() leaves a token; finalize() numbers the
+    # sources by first appearance in the finished page, so the numbers always run in reading order.
     def ref(self, sid: str) -> str:
-        if sid not in self.notes:
-            self.notes.append(sid)
-        n = self.notes.index(sid) + 1
-        self.uses[sid] = self.uses.get(sid, 0) + 1
-        ident = f' id="r{n}"' if self.uses[sid] == 1 else ""
-        return f'<sup class="fn"><a href="#n{n}"{ident}>{n}</a></sup>'
+        assert sid in self.src, f"unknown source {sid}"
+        return f"@@REF:{sid}@@"
 
-    def notes_list(self) -> str:
-        out = []
-        for i, sid in enumerate(self.notes, 1):
-            s = self.src[sid]
-            title, url = s.get("title") or "Archived document", s.get("public_url")
+    def finalize(self, doc: str) -> str:
+        order: list[str] = []
+        for m in re.finditer(r"@@REF:(s\d+)@@", doc):
+            if m.group(1) not in order:
+                order.append(m.group(1))
+        seen: set[str] = set()
+
+        def sub(m):
+            sid = m.group(1)
+            n = order.index(sid) + 1
+            ident = "" if sid in seen else f' id="r{n}"'
+            seen.add(sid)
+            return f'<sup class="fn"><a href="#n{n}"{ident}>{n}</a></sup>'
+
+        doc = re.sub(r"@@REF:(s\d+)@@", sub, doc)
+        items = []
+        for i, sid in enumerate(order, 1):
+            src = self.src[sid]
+            title, url = src.get("title") or "Archived document", src.get("public_url")
             link = f' <a href="{esc(url)}">{esc(url)}</a>' if url else " (no public link on file)"
-            out.append(f'<li id="n{i}">{esc(title)}.{link} <a href="#r{i}" aria-label="Back to text">↩</a></li>')
-        return "".join(out)
+            items.append(f'<li id="n{i}">{esc(title)}.{link} <a href="#r{i}" aria-label="Back to text">↩</a></li>')
+        self.notes = order
+        return doc.replace("@@NOTES@@", "".join(items))
 
     def quote(self, ru_start: str) -> dict:
         q = next((q for k, q in self.quotes.items() if q["text_ru"].startswith(ru_start)), None)
@@ -203,6 +215,23 @@ def handover_timeline(events) -> str:
     return "".join(o)
 
 
+# ЦБСТ's own accounts (form 0710003, report on the use of targeted funds), as printed, thousand rubles: (printed line,
+# translation, 2024, 2025). Read from the filings' spreadsheets; render() asserts the totals against the accounts record.
+CBST_LINES = [
+    ("Остаток средств на начало отчетного года", "balance at the start of the year", 0, 171_788),
+    ("Прочие поступления", "other receipts", 269_835, 137_105),
+    ("На целевые мероприятия", "for target events", 0, 48_679),
+    ("На содержание организации", "upkeep of the organisation", 81_371, 167_858),
+    ("На приобретение основных средств и иного имущества", "purchase of fixed assets and other property", 4_990, 0),
+    ("Прочие", "other", 11_686, 59_050),
+    ("Использовано средств – всего", "used in total", 98_047, 275_587),
+    ("Остаток средств на конец периода", "balance at the end of the period", 171_788, 33_306),
+]
+# The five agreements printed under the ЦБСТ line in the foundation's FY2024 notes (p.33 of 35), rubles.
+CONTRIBUTIONS = [("22.08.2024", "Соглашение", 10_000_000), ("07.10.2024", "Соглашение № 2", 18_000_000), ("28.11.2024", "Соглашение № 3", 9_200_000),
+                 ("20.12.2024", "Соглашение № 4", 20_435_024), ("23.12.2024", "Соглашение № 5", 13_500_000)]
+
+
 def month_year(iso: str) -> str:
     return dt.date.fromisoformat(iso).strftime("%B %Y")
 
@@ -267,6 +296,33 @@ def render(out: Path):
                    f'<figcaption><span class="rm-prov">Published by the foundation</span><span>{esc(mm["shows"])}</span>'
                    f'<span class="when">{month_year(mm["published"])} · {esc(GALLERY_RECIPIENT[mid])}</span></figcaption></figure>')
     gallery = "".join(gal)
+    q_site1 = S.quote("Автономная некоммерческая организация «Центр беспилотных систем")
+    q_site2 = S.quote("Учредители ЦБСТ")
+    q_sid = S.quote("ЦБСТ вместе с Единой Россией и фондом")
+    q_sub = S.quote("дочернее предприятие Фонда")
+    q_contrib = S.quote("Внесение добровольного целевого")
+    norm_ = lambda x: " ".join(x.replace("\u00a0", " ").split())
+    web = norm_(html.unescape(re.sub(r"<[^>]+>", " ", (REPO / "data/sources/WEBCAPTURE_20261001_cbst-ru-masshtabiruet-ploschadku-rojmarket.html").read_text(encoding="utf-8", errors="ignore"))))
+    for qq in (q_site1, q_site2):
+        assert norm_(qq["text_ru"]) in web, "ЦБСТ website quote not in the capture"
+    S.check_posts([q_sid], channel_id=2581147715, msg=618)
+    cbst = {e["slug"]: e for e in load("entities.json")}["ano-tsbst-centre-for-unmanned-systems-technologies"]
+    cf = {f["year"]: f for f in cbst["financials"]}
+    for yr, col in (("2024", 2), ("2025", 3)):
+        assert cf[yr]["funds_received"] == CBST_LINES[1][col] * 1000 and cf[yr]["funds_used"] == CBST_LINES[6][col] * 1000, f"ЦБСТ {yr} totals differ from the accounts record"
+        assert cf[yr]["funds_balance_end"] == CBST_LINES[7][col] * 1000
+        assert sum(r[col] for r in CBST_LINES[2:6]) == CBST_LINES[6][col]
+    contrib_total = sum(c[2] for c in CONTRIBUTIONS)
+    assert contrib_total == 71_135_024
+    dash = lambda n: "—" if n == 0 else k(n)
+    cbst_rows = "".join(
+        f'<tr{" class=tot" if i in (6, 7) else ""}><td class="ru">{esc(r[0])}</td><td>{esc(r[1])}</td><td>{dash(r[2])}</td><td>{dash(r[3])}</td></tr>'
+        for i, r in enumerate(CBST_LINES))
+    contrib_rows = "".join(f'<tr><td>{c[0]}</td><td class="ru">{esc(c[1])}</td><td>{k(c[2])}</td></tr>' for c in CONTRIBUTIONS)
+    ev_share = 100 * CBST_LINES[2][3] / CBST_LINES[6][3]
+    up_share = 100 * CBST_LINES[3][3] / CBST_LINES[6][3]
+    centre_ev25, centre_up25 = CBST_LINES[2][3] / 1000, CBST_LINES[3][3] / 1000
+    centre_used25 = CBST_LINES[6][3] / 1000
     r_641 = S.ref("s9229")
     q_hosp = S.quote("Фонд «Наша Правда» при поддержке представителей партии")
     q_hosp2 = S.quote("«Капюшоны» помогут обезопасить")
@@ -395,6 +451,44 @@ def render(out: Path):
   <p>Most of its reports name soldiers and units. Whether these two deliveries sit under the line for the zone, the notes do not say.</p>
 </section>
 
+<section class="chapter" aria-labelledby="c5">
+  <p class="rm-eyebrow">The centre</p>
+  <h2 class="rm-h2" id="c5">ЦБСТ's accounts book all of its money as «other receipts»</h2>
+  <p>ЦБСТ, the autonomous non-profit «Центр беспилотных систем и технологий» (Centre for Unmanned Systems and
+  Technologies), was registered in Moscow on 27 February 2024. The register names two founders: the foundation from the
+  start, and the bank ПАО «Банк ПСБ» from 1 April 2025.{S.ref("s0228")} Its registered main activity is market research.
+  The register lists publishing, software development, research and conference organising beside it, and nothing coded to defence.</p>
+  <article class="post" aria-label="Excerpts from the ЦБСТ website">
+    <header><span>cbst.ru</span><span>{ru_date(q_site2['date'])}</span><span>ЦБСТ's own website{S.ref("s8867")}</span></header>
+    {passage(q_site1)}{passage(q_site2)}
+  </article>
+  <p>The register names two founders. ЦБСТ's own text names three.</p>
+  <table class="lines"><thead><tr><th>As printed in ЦБСТ's accounts</th><th>Translation</th><th>2024</th><th>2025</th></tr></thead><tbody>{cbst_rows}</tbody></table>
+  <p class="chart-note">Thousand rubles. Report on the use of targeted funds, FY2024{S.ref("s0382")} and FY2025.{S.ref("s0385")}</p>
+  <p>In 2024 the line for target events is empty. In 2025 it holds {centre_ev25:.1f} million rubles, {ev_share:.1f}% of the
+  {centre_used25:.1f} million used; upkeep of the organisation takes {centre_up25:.1f} million, {up_share:.1f}%.</p>
+  <p>The accounts print no source for any of the money. In 2024 the line for contributions and other targeted receipts is
+  empty and all 269.8 million sits under «other receipts»; the 2025 form has only that line. The 2025 notes say that,
+  because ЦБСТ counts as a small business, it does not apply the accounting rule on related-party disclosure.</p>
+  <p>The foundation's notes for 2024 describe ЦБСТ in their own words and list five agreements beneath them:</p>
+  <article class="post" aria-label="Excerpts from the foundation's notes">
+    <header><span>Notes to the foundation's 2024 accounts, section 16, page 33</span><span>The foundation's own filing{S.ref("s0389")}</span></header>
+    {passage(q_sub)}{passage(q_contrib)}
+  </article>
+  <table class="lines plain3"><thead><tr><th>Date</th><th>As printed</th><th>Rubles</th></tr></thead><tbody>{contrib_rows}
+    <tr class="tot"><td colspan="2">Together</td><td>{k(contrib_total)}</td></tr></tbody></table>
+  <p>The notes print no recipient beside the amounts. «Subsidiary» is the foundation's word: the register records two
+  founders and no ownership share. ЦБСТ's own 2024 accounts book every receipt as «other receipts», so the two filings
+  cannot be matched to each other.</p>
+  <p>On 15 December 2025 Александр Сидякин, secretary of ЦБСТ's supervisory board and head of the central executive
+  committee of «Единая Россия»,{S.ref("s8699")} summed up the centre's year on his own channel:</p>
+  <article class="post" aria-label="Excerpt from the post of 15 December 2025">
+    <header><span>Telegram · @asidyakin</span><span>{ru_date(q_sid['date'])}</span><span>His own channel{S.ref("s8847")}</span></header>
+    {passage(q_sid)}
+  </article>
+  <p>The post gives no source for the 2.5 billion dollars.</p>
+</section>
+
 <section class="chapter" aria-labelledby="c4">
   <p class="rm-eyebrow">The handovers</p>
   <h2 class="rm-h2" id="c4">Between July 2024 and May 2026 the foundation reported at least 21 handovers that name «Булат» or «Капюшон»</h2>
@@ -429,13 +523,14 @@ def render(out: Path):
 <section class="chapter" aria-label="Chapters in draft">
   <aside class="rm-card coming"><header><span class="rm-kind">In draft</span></header>
     <p>The chapters that follow are outlined and not yet written:</p>
-    <ol><li>The centre it co-founded</li><li>The marketplace</li><li>What this does not show</li></ol></aside>
+    <ol><li>The marketplace</li><li>What this does not show</li></ol></aside>
 </section>
 
-<section class="rm-sources"><h2 class="rm-h2">Sources</h2><ol>{S.notes_list()}</ol></section>
+<section class="rm-sources"><h2 class="rm-h2">Sources</h2><ol>@@NOTES@@</ol></section>
 </main>
 </body></html>
 """
+    doc = S.finalize(doc)
     out.write_text(doc, encoding="utf-8")
     print(f"wrote {out.relative_to(REPO)}: {len(S.notes)} sources, {len(doc)//1024} KB")
 
