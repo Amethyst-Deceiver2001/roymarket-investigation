@@ -29,7 +29,7 @@ The FY2024 notes of the foundation (s0389) were not in the registry in this deta
 
 ## Open before the text can be final
 
-1. **FY2025 split of receipts.** Not in the OCR text of s0390; read the pages as images.
+1. **FY2025 split of receipts.** Settled 08.10.2026: the FY2025 notes (pp.15-16, read as images) give no split by source and no donor list; the only use line is RUB 592.9m of "targeted donations within statutory activity" of RUB 982.0m used (60.4%). The 2025 chapters can only say that.
 2. **The unnamed RUB 1.10bn.** The only named money is RUB 59m from the two founder foundations. Lead, not fact: Фонд «ДАР» is held by ООО «ЛЕВИТ», whose founders in 2016 included Михельсон (s6697, 2016 data; the current holder is unchecked). It is a lead about RUB 5m, not about the bulk.
 3. **ООО «ИНВЕСТМЕНТС» share:** the notes say 100%, the registry's ЕГРЮЛ entry says 90.91%.
 4. **Sanctions.** The Ukrainian entry for the foundation rests on an OpenSanctions match; the NSDC annex is unread. Not used in the story until read.

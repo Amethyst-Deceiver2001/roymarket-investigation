@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-07",
+ "generated": "2026-10-08",
  "thresholds": {
   "egrul_stale_days": 45,
   "screen_stale_days": 30,
@@ -29,6 +29,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-07",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "8 open question(s)",
@@ -51,6 +61,16 @@
    "sanctioned": true,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-07",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "12 open question(s)",
@@ -72,6 +92,16 @@
    "screened": "2026-09-06",
    "sanctioned": true,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-07",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "sanction_unread",
@@ -98,6 +128,16 @@
    "sanctioned": false,
    "flags": [
     {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-07",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
+    {
      "kind": "review",
      "code": "open_questions",
      "text": "2 open question(s)",
@@ -116,7 +156,18 @@
    "last_register_pull": "2026-09-29",
    "screened": "2026-09-06",
    "sanctioned": false,
-   "flags": []
+   "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-07",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    }
+   ]
   },
   {
    "kind": "entity",
@@ -130,6 +181,16 @@
    "screened": "2026-09-06",
    "sanctioned": true,
    "flags": [
+    {
+     "kind": "stale",
+     "code": "screen_stale",
+     "text": "Screen out of date: ГУР war-sanctions (31 days, limit 30)",
+     "as_of": "2026-09-07",
+     "age_days": 31,
+     "due": [
+      "gur"
+     ]
+    },
     {
      "kind": "review",
      "code": "sanction_unread",
@@ -158,9 +219,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -188,9 +249,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -218,9 +279,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -242,9 +303,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -266,9 +327,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -290,9 +351,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -314,9 +375,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -338,9 +399,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -373,9 +434,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -403,9 +464,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -438,9 +499,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -473,9 +534,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -503,9 +564,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -527,9 +588,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -551,9 +612,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -581,9 +642,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -605,9 +666,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -635,9 +696,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -667,9 +728,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -708,9 +769,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -738,9 +799,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -801,9 +862,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -831,9 +892,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -861,9 +922,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -885,9 +946,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -909,9 +970,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -933,9 +994,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -966,9 +1027,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1010,9 +1071,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1040,9 +1101,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1070,9 +1131,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1094,9 +1155,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1118,9 +1179,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1148,9 +1209,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1172,9 +1233,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1202,9 +1263,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1232,9 +1293,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1267,9 +1328,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1297,9 +1358,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1327,9 +1388,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1357,9 +1418,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1394,9 +1455,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1427,9 +1488,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1464,9 +1525,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1501,9 +1562,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1538,9 +1599,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1568,9 +1629,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1603,9 +1664,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1658,9 +1719,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1688,9 +1749,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1718,9 +1779,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1744,9 +1805,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1781,9 +1842,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1811,9 +1872,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1851,9 +1912,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1891,9 +1952,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1926,9 +1987,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1961,9 +2022,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -1991,9 +2052,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2028,9 +2089,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2077,9 +2138,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2112,9 +2173,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2136,9 +2197,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2171,9 +2232,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2201,9 +2262,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2231,9 +2292,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2261,9 +2322,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2296,9 +2357,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2326,9 +2387,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2356,9 +2417,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2389,9 +2450,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2420,9 +2481,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2450,9 +2511,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2486,9 +2547,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2521,9 +2582,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2545,9 +2606,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2582,9 +2643,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2612,9 +2673,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2642,9 +2703,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2672,9 +2733,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2696,9 +2757,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2726,9 +2787,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2756,9 +2817,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2786,9 +2847,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2816,9 +2877,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2840,9 +2901,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2870,9 +2931,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2900,9 +2961,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2930,9 +2991,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2960,9 +3021,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -2990,9 +3051,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3020,9 +3081,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3044,9 +3105,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3081,9 +3142,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3105,9 +3166,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3140,9 +3201,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3175,9 +3236,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3199,9 +3260,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3223,9 +3284,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3247,9 +3308,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3277,9 +3338,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3307,9 +3368,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3331,9 +3392,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3363,9 +3424,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3395,9 +3456,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3425,9 +3486,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3457,9 +3518,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3499,9 +3560,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3523,9 +3584,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3553,9 +3614,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3583,9 +3644,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3613,9 +3674,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3643,9 +3704,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3676,9 +3737,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3709,9 +3770,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3746,9 +3807,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3901,9 +3962,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3925,9 +3986,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3955,9 +4016,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -3990,9 +4051,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4020,9 +4081,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4052,9 +4113,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4098,9 +4159,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4139,9 +4200,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4163,9 +4224,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4198,9 +4259,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4227,9 +4288,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4251,9 +4312,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4286,9 +4347,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4316,9 +4377,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4346,9 +4407,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4370,9 +4431,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4400,9 +4461,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4430,9 +4491,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4460,9 +4521,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4521,9 +4582,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4545,9 +4606,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4575,9 +4636,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4605,9 +4666,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4635,9 +4696,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4659,9 +4720,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4683,9 +4744,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4732,9 +4793,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4756,9 +4817,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4787,9 +4848,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4817,9 +4878,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4848,9 +4909,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4872,9 +4933,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4896,9 +4957,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4920,9 +4981,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4944,9 +5005,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4968,9 +5029,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -4992,9 +5053,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -5016,9 +5077,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -5046,9 +5107,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -5070,9 +5131,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -5100,9 +5161,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -5132,9 +5193,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -5169,9 +5230,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -5199,9 +5260,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -5229,9 +5290,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -5259,9 +5320,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -5341,9 +5402,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -5371,9 +5432,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -5401,9 +5462,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -5431,9 +5492,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -5461,9 +5522,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -5491,9 +5552,9 @@
     {
      "kind": "stale",
      "code": "screen_stale",
-     "text": "Screen out of date: ГУР war-sanctions (32 days, limit 30)",
+     "text": "Screen out of date: ГУР war-sanctions (33 days, limit 30)",
      "as_of": "2026-09-05",
-     "age_days": 32,
+     "age_days": 33,
      "due": [
       "gur"
      ]
@@ -5758,10 +5819,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     }
    ]
@@ -5826,10 +5886,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     }
    ]
@@ -5893,10 +5952,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     }
    ]
@@ -5939,10 +5997,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     }
    ]
@@ -6132,10 +6189,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     }
    ]
@@ -6692,10 +6748,9 @@
     {
      "kind": "pull",
      "code": "screen_never",
-     "text": "Never screened: OpenSanctions, ГУР war-sanctions",
+     "text": "Never screened: OpenSanctions",
      "due": [
-      "opensanctions",
-      "gur"
+      "opensanctions"
      ]
     },
     {
@@ -7119,14 +7174,6 @@
    "screened": "2026-10-04",
    "sanctioned": false,
    "flags": [
-    {
-     "kind": "pull",
-     "code": "screen_never",
-     "text": "Never screened: ГУР war-sanctions",
-     "due": [
-      "gur"
-     ]
-    },
     {
      "kind": "review",
      "code": "open_questions",
@@ -15112,23 +15159,23 @@
   {
    "id": "tg_db_newest",
    "label": "Newest post in the local Telegram scrape",
-   "value": "2026-10-04 (3 d ago)",
-   "status": "ok",
+   "value": "2026-10-04 (4 d ago)",
+   "status": "watch",
    "detail": "Refresh with scripts/tg_scan.py; every Telegram search and lead check reads this database.",
    "as_of": "2026-10-04"
   },
   {
    "id": "daily_round",
    "label": "Last daily round report",
-   "value": "2026-10-07 (0 d ago)",
+   "value": "2026-10-08 (0 d ago)",
    "status": "ok",
    "detail": "The 09:15 Mac round (pulls, re-screens, ingest, board.json).",
-   "as_of": "2026-10-07"
+   "as_of": "2026-10-08"
   },
   {
    "id": "weekly_scan",
    "label": "Last weekly news and channel scan",
-   "value": "2026-10-05 (2 d ago)",
+   "value": "2026-10-05 (3 d ago)",
    "status": "ok",
    "detail": "On request since 05.10.2026; leads it reports land in developments.json.",
    "as_of": "2026-10-05"
@@ -15136,10 +15183,10 @@
   {
    "id": "registry_commit",
    "label": "Registry last committed",
-   "value": "2026-10-06 (1 d ago)",
+   "value": "2026-10-07 (1 d ago)",
    "status": "ok",
    "detail": "Latest commit touching data/registry/.",
-   "as_of": "2026-10-06"
+   "as_of": "2026-10-07"
   },
   {
    "id": "sanctions_primary_read",
