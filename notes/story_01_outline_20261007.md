@@ -9,6 +9,12 @@ Written for: the editor of the story (the user). Nothing here is public. Decided
 - **Rule for the whole story:** each chapter says only what its documents support. Where the documents stop, the chapter says so on the page (the limits are part of the story, not a footnote). The story is broader than the record; the page is not.
 - **Words:** «благотворительная помощь» is the foundation's own term and is quoted, never adopted as ours. No chapter implies combat use from a delivery.
 
+## Status (08.10.2026)
+
+Drafted as a private preview (`exhibits/build_story.py`, preview Artifact): cold open (0), purposes (1), money in (2), money out (3), handovers (5 in the table below). Not yet written: the centre (4), the marketplace (6), limits (7). Right of reply is deferred by the user (08.10.2026).
+
+Found while drafting: the foundation states it received no state aid in 2024 (p.30); its payables table names АО «Технодрон» but the amount column is offset by a row in the scan, so no amount is used (open question on the foundation's record).
+
 ## Chapters
 
 | # | Chapter | What it says | Documents it rests on | What it must not say |

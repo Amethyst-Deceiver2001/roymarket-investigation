@@ -75,8 +75,9 @@ class Story:
         """Each passage must stand in the stored post text, ellipses and the closing full stop aside."""
         text = sqlite3.connect(REPO / "data" / "roymarket.db").execute(
             "select text from tg_posts where channel_id=? and msg_id=?", (channel_id, msg)).fetchone()[0]
+        norm = lambda x: " ".join(x.replace("\u00a0", " ").split())
         for q in quotes:
-            assert q["text_ru"].rstrip(".;") in text, f"not in post {msg}: {q['text_ru'][:50]}"
+            assert norm(q["text_ru"].rstrip(".;:")) in norm(text), f"not in post {msg}: {q['text_ru'][:50]}"
 
     # -- figures
     def figures(self):
@@ -133,6 +134,75 @@ def money_chart(fin) -> str:
     return "".join(out)
 
 
+# How each of the 21 handover posts names its recipients (registry delivery records, 'as the post names it').
+# Buckets are ours; render() asserts that every event is placed once.
+BUCKETS = [
+    ("A formation by name or number", [422, 310, 448]),
+    ("A grouping or a type of unit only", [397, 487, 454, 369, 444, 493, 494]),
+    ("Servicemen on a direction or in a region, or no unit named", [393, 473, 615, 302, 398, 408, 519, 593, 608]),
+    ("A civilian service", [311, 382]),
+]
+# Values the posts print for the whole batch, million rubles (the batch mixes products). 'more' = «более», 'about' = «около».
+STATED_VALUE = {382: (10.5, ""), 397: (14.0, "more"), 408: (8.6, ""), 422: (18.2, ""), 444: (7.5, "about"), 448: (4.6, ""),
+                473: (1.5, ""), 493: (1.3, "about"), 519: (1.3, "about"), 593: (2.8, "more"), 608: (10.0, "more"), 615: (2.0, "more")}
+GALLERY = ["m0068", "m0070", "m0073", "m0076", "m0077", "m0080", "m0083", "m0087"]
+GALLERY_RECIPIENT = {"m0068": "Krasnoarmeysk direction", "m0070": "“Participants of the operation”", "m0073": "Servicemen from Altai, Kursk direction",
+                     "m0076": "EW and UAV units of group “Center”", "m0077": "1st motor-rifle company, Zaporizhzhia region",
+                     "m0080": "Motor-rifle regiment", "m0083": "Kursk region", "m0087": "Svatove direction"}
+
+
+def handover_events():
+    prods = load("products.json")
+    ev: dict = {}
+    for p in prods:
+        for d in p["deliveries"]:
+            if d["donor"] != SLUG:
+                continue
+            e = ev.setdefault(d["post_id"], {"post": d["post_id"], "date": d["date"], "prods": set(), "recipient": d["recipient"], "cred": set()})
+            e["prods"].add(p["slug"])
+            e["cred"].add(d["credibility"])
+    return sorted(ev.values(), key=lambda e: e["date"])
+
+
+def clean_recipient(r: str) -> str:
+    return re.sub(r"\s*\([^)]*\)", "", r).strip().rstrip(";")
+
+
+def handover_timeline(events) -> str:
+    d0, d1 = dt.date(2024, 6, 15), dt.date(2026, 6, 30)
+    x0, w = 96, 640
+    xs = lambda iso: x0 + w * (dt.date.fromisoformat(iso) - d0).days / (d1 - d0).days
+    rows = {"bulat": 58, "kapyushon": 112}
+    civilian = {311, 382}
+    o = ['<svg class="chart tl" viewBox="0 0 760 190" role="img" aria-label="Twenty-one handovers by date, by product">']
+    m = dt.date(2024, 7, 1)
+    while m <= dt.date(2026, 6, 1):
+        x = xs(m.isoformat())
+        o.append(f'<line class="grid" x1="{x:.1f}" y1="22" x2="{x:.1f}" y2="150"/>')
+        if m.month in (1, 7):
+            o.append(f'<text class="tick" x="{x:.1f}" y="170" text-anchor="middle">{m.strftime("%b %Y")}</text>')
+        m = dt.date(m.year + (m.month // 12), m.month % 12 + 1, 1)
+    o.append(f'<text class="lbl" x="0" y="{rows["bulat"] + 4}">«Булат»</text><text class="lbl" x="0" y="{rows["kapyushon"] + 4}">«Капюшон»</text>')
+    last, stack = {}, {}
+    for e in events:
+        x = xs(e["date"])
+        for pr, y in rows.items():
+            if pr not in e["prods"]:
+                continue
+            if pr in last and x - last[pr] < 11:
+                stack[pr] += 1
+            else:
+                stack[pr] = 0
+            last[pr] = x
+            yy = y - 12 * stack[pr]
+            ring = f'<circle class="ring" cx="{x:.1f}" cy="{yy}" r="10"/>' if e["post"] in civilian else ""
+            shape = (f'<circle class="dot b" cx="{x:.1f}" cy="{yy}" r="5.5"/>' if pr == "bulat"
+                     else f'<rect class="dot k" x="{x - 5:.1f}" y="{yy - 5}" width="10" height="10"/>')
+            o.append(ring + shape)
+    o.append("</svg>")
+    return "".join(o)
+
+
 def month_year(iso: str) -> str:
     return dt.date.fromisoformat(iso).strftime("%B %Y")
 
@@ -166,6 +236,38 @@ def render(out: Path):
     registered = month_year(dt.datetime.strptime(S.ent["registered"], "%d.%m.%Y").date().isoformat())
 
     q_aid = S.quote("Фонд не получал государственную помощь")
+    q_boy = S.quote("Рации для связи, проверенное")
+    q_gru = S.quote("Помощь от фонда «Наша Правда», Единой России и ЦБСТ передали")
+    q_3d = S.quote("Ударные дроны и гексакоптеры")
+    q_vic = S.quote("Шаг за шагом")
+    S.check_posts([q_boy], msg=448)
+    S.check_posts([q_gru, q_3d, q_vic], msg=656)
+    events = handover_events()
+    posts = {e["post"] for e in events}
+    placed = [x for _, ids in BUCKETS for x in ids]
+    assert len(events) == 21 and sorted(placed) == sorted(posts), "buckets must place every handover once"
+    assert all(c == {"single"} for c in (e["cred"] for e in events)), "chapter says all 21 are single-source"
+    db = sqlite3.connect(REPO / "data" / "roymarket.db")
+    norm = lambda x: " ".join(x.replace("\u00a0", " ").split())
+    for mid, (v, qual) in STATED_VALUE.items():
+        t = norm(db.execute("select text from tg_posts where channel_id=1905141464 and msg_id=?", (mid,)).fetchone()[0])
+        assert re.search(rf"(?<!\d){str(v).replace('.', ',').rstrip('0').rstrip(',')}(?:\d)? ?(?:млн|тыс)", t) or re.search(rf"{int(v)} ?млн", t), f"value of post {mid} not in text"
+    value_sum = sum(v for v, _ in STATED_VALUE.values())
+    value_lo, value_hi = min(v for v, _ in STATED_VALUE.values()), max(v for v, _ in STATED_VALUE.values())
+    by_post = {e["post"]: e for e in events}
+    bucket_rows = "".join(
+        f'<tr><td>{esc(lab)}</td><td>{len(ids)}</td><td class="ru">{"; ".join(esc(clean_recipient(by_post[i]["recipient"])) for i in ids[:3])}</td></tr>'
+        for lab, ids in BUCKETS)
+    timeline = handover_timeline(events)
+    gal = []
+    for mid in GALLERY:
+        mm = S.media[mid]
+        assert mm["publish"] == "ok" and mm["redact"] == "none_needed"
+        gal.append(f'<figure class="rm-fig"><div class="frame"><img src="{pic(REPO / mm["file"])}" alt="{esc(mm["shows"])}" loading="lazy"></div>'
+                   f'<figcaption><span class="rm-prov">Published by the foundation</span><span>{esc(mm["shows"])}</span>'
+                   f'<span class="when">{month_year(mm["published"])} · {esc(GALLERY_RECIPIENT[mid])}</span></figcaption></figure>')
+    gallery = "".join(gal)
+    r_641 = S.ref("s9229")
     q_hosp = S.quote("Фонд «Наша Правда» при поддержке представителей партии")
     q_hosp2 = S.quote("«Капюшоны» помогут обезопасить")
     q_kher = S.quote("Фонд «Наша Правда» привез детекторы дронов")
@@ -213,7 +315,7 @@ def render(out: Path):
     <p>of the {F['got_bn']:.2f} billion rubles it received in 2024 came from legal entities and individuals the accounts do not name.</p>
     <span class="rm-grade doc">Documented</span></div>
   <div class="figure"><span class="n">{F['events']}</span>
-    <p>handovers to units that the foundation reports in its own posts, {month_year(F['first'])} to {month_year(F['last'])}.</p>
+    <p>handovers naming «Булат» or «Капюшон» that the foundation reports in its own posts, {month_year(F['first'])} to {month_year(F['last'])}. Not a full count.</p>
     <span class="rm-grade rep">Reported</span></div>
 </section>
 
@@ -283,20 +385,51 @@ def render(out: Path):
   <p>The first line says nothing of what was bought. For 2025 the notes give one line of use: <span class="ru-word">Целевые пожертвования в рамках уставной деятельности</span>, targeted donations within statutory activity, {AID_2025 / 1000:.1f} million rubles. That is {100 * AID_2025 / used25:.1f}% of the {used25 / 1000:.1f} million used. The other {(used25 - AID_2025) / 1000:.1f} million is not broken down.</p>
   <p>The foundation's posts say what "aid" covered, for some of it. They show it reaching more than servicemen.</p>
   <article class="post" aria-label="Excerpts from the post of 8 August 2024">
-    <header><span>Telegram · @nashapravdafond</span><span>{ru_date(q_hosp['date'])}</span><span>The foundation's own post</span></header>
-    {passage(q_hosp)}{passage(q_hosp2)}{S.ref("s8992")}
+    <header><span>Telegram · @nashapravdafond</span><span>{ru_date(q_hosp['date'])}</span><span>The foundation's own post{S.ref("s8992")}</span></header>
+    {passage(q_hosp)}{passage(q_hosp2)}
   </article>
   <article class="post" aria-label="Excerpts from the post of 15 January 2025">
-    <header><span>Telegram · @nashapravdafond</span><span>{ru_date(q_kher['date'])}</span><span>The foundation's own post</span></header>
-    {passage(q_kher)}{passage(q_kher2)}{S.ref("s8994")}
+    <header><span>Telegram · @nashapravdafond</span><span>{ru_date(q_kher['date'])}</span><span>The foundation's own post{S.ref("s8994")}</span></header>
+    {passage(q_kher)}{passage(q_kher2)}
   </article>
   <p>Most of its reports name soldiers and units. Whether these two deliveries sit under the line for the zone, the notes do not say.</p>
+</section>
+
+<section class="chapter" aria-labelledby="c4">
+  <p class="rm-eyebrow">The handovers</p>
+  <h2 class="rm-h2" id="c4">Between July 2024 and May 2026 the foundation reported at least 21 handovers that name «Булат» or «Капюшон»</h2>
+  <p>Two products recur in its posts. It calls «Булат» a drone detector, <i>детектор дронов</i>, and «Капюшон» an
+  electronic-warfare station, <i>станция РЭБ</i>.{S.ref("s8994")} Each mark below is one post that names one or both.</p>
+  {timeline}
+  <p class="chart-note">Circle: a post naming «Булат». Square: a post naming «Капюшон». Ringed: the recipient is a civilian service. Source of every mark: the foundation's own channel.</p>
+  <p>All 21 are the foundation's own reports. None has a second source on file. Where the foundation says a unit sent
+  thanks, the thanks too appear on the foundation's channel.{S.ref("s8904")} The posts name the recipients at whatever
+  level suits them:</p>
+  <table class="lines plain"><thead><tr><th>How the post names the recipient</th><th>Posts</th><th>Examples, as the posts word them</th></tr></thead><tbody>{bucket_rows}</tbody></table>
+  <p>The foundation says what the equipment is for in the same posts. One of them, to a motor-rifle company in the
+  Zaporizhzhia region:</p>
+  <article class="post" aria-label="Excerpt from the post of 9 June 2025">
+    <header><span>Telegram · @nashapravdafond</span><span>{ru_date(q_boy['date'])}</span><span>The foundation's own post{S.ref("s8898")}</span></header>
+    {passage(q_boy)}
+  </article>
+  <p>Twelve of the 21 posts put a value on the batch. The figures run from {value_lo:.1f} to {value_hi:.1f} million rubles
+  and add up to about {value_sum:.0f} million, taking «more than» at the figure given. They are the foundation's values
+  for whole batches, which also hold drones, radios and motorcycles, not prices of the two products.</p>
+  <div class="rm-gallery" aria-label="Photographs published with the posts">{gallery}</div>
+  <p>These 21 are only the handovers that name those two products. The foundation reports others. The most recent in
+  this record, on 10 August 2026, is a different kind of list:{r_641}</p>
+  <article class="post" aria-label="Excerpts from the post of 10 August 2026">
+    <header><span>Telegram · @nashapravdafond</span><span>{ru_date(q_gru['date'])}</span><span>The foundation's own post</span></header>
+    {passage(q_gru)}{passage(q_3d)}{passage(q_vic)}
+  </article>
+  <p>A handover to a unit does not show that the equipment was used in combat. Some recipients are rear units, and two
+  of the 21 are civilian services.</p>
 </section>
 
 <section class="chapter" aria-label="Chapters in draft">
   <aside class="rm-card coming"><header><span class="rm-kind">In draft</span></header>
     <p>The chapters that follow are outlined and not yet written:</p>
-    <ol><li>The centre it co-founded</li><li>The handovers</li><li>The marketplace</li><li>What this does not show</li></ol></aside>
+    <ol><li>The centre it co-founded</li><li>The marketplace</li><li>What this does not show</li></ol></aside>
 </section>
 
 <section class="rm-sources"><h2 class="rm-h2">Sources</h2><ol>{S.notes_list()}</ol></section>
