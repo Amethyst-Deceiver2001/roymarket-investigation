@@ -90,3 +90,12 @@ table.lines.plain3 td:nth-child(3), table.lines.plain3 th:nth-child(3) { text-al
 table.lines.plain3 td:nth-child(1), table.lines.plain3 th:nth-child(1) { white-space: nowrap; }
 table.lines.plain3 td:nth-child(2) { font: 400 14px/1.4 var(--font-serif); color: var(--ink); }
 table.lines tr.tot td { font-variant-numeric: tabular-nums; }
+
+/* Chapter 6: the marketplace. */
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); max-width: 760px; }
+.pair .post { padding: var(--space-4); }
+@media (max-width: 720px) { .pair { grid-template-columns: minmax(0, 1fr); } }
+
+/* Chapter 7: the limits. */
+ul.limits { max-width: var(--measure); margin: 0; padding-left: 20px; display: grid; gap: 10px; font-size: 17px; line-height: 1.55; }
+ul.limits li::marker { color: var(--ink-3); }

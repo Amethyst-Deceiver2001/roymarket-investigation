@@ -323,6 +323,27 @@ def render(out: Path):
     up_share = 100 * CBST_LINES[3][3] / CBST_LINES[6][3]
     centre_ev25, centre_up25 = CBST_LINES[2][3] / 1000, CBST_LINES[3][3] / 1000
     centre_used25 = CBST_LINES[6][3] / 1000
+    sid338 = next(x["id"] for x in S.src.values() if x.get("tg_post") == "ano_cbst/338")
+    q_m1 = S.quote("У военнослужащих появится возможность")
+    q_m2 = S.quote("Мы сделали «военный маркетплейс»")
+    q_m3 = S.quote("Ребята, которые здесь работают")
+    q_618 = S.quote("Вместе с партией и ПСБ запустили")
+    q_row = S.quote("Участие в обществах с ограниченной")
+    q_op = S.quote("Агент / Оператор платформы")
+    q_mask = S.quote("Наименование Агента")
+    q_restr = S.quote("Доступ к сведениям ограничен")
+    q_kb = S.quote("Теперь ТЭЧ могут")
+    q_3mx = S.quote("Всю нашу продукцию")
+    q_pilot = S.quote("Пилотный запуск подтвердил")
+    q_tech = S.quote("К 1 сентября")
+    for qq in (q_m2, q_618, q_row, q_op, q_mask, q_restr, q_kb, q_3mx, q_pilot, q_tech):
+        assert qq["source_id"], f"quote has no source: {qq['text_ru'][:40]}"
+    S.check_posts([q_m1, q_m2, q_m3], channel_id=2159491523, msg=338)
+    S.check_posts([q_618], channel_id=2581147715, msg=618)
+    S.check_posts([q_pilot], channel_id=2581147715, msg=1230)
+    S.check_posts([q_tech], channel_id=2159491523, msg=2392)
+    S.check_posts([q_kb], channel_id=1535506795, msg=321)
+    S.check_posts([q_3mx], channel_id=1651823792, msg=42146)
     r_641 = S.ref("s9229")
     q_hosp = S.quote("Фонд «Наша Правда» при поддержке представителей партии")
     q_hosp2 = S.quote("«Капюшоны» помогут обезопасить")
@@ -520,10 +541,77 @@ def render(out: Path):
   of the 21 are civilian services.</p>
 </section>
 
-<section class="chapter" aria-label="Chapters in draft">
-  <aside class="rm-card coming"><header><span class="rm-kind">In draft</span></header>
-    <p>The chapters that follow are outlined and not yet written:</p>
-    <ol><li>The marketplace</li><li>What this does not show</li></ol></aside>
+<section class="chapter" aria-labelledby="c6">
+  <p class="rm-eyebrow">The marketplace</p>
+  <h2 class="rm-h2" id="c6">ЦБСТ participates in the company that runs РОЙ.МАРКЕТ, and the register now withholds who owns it</h2>
+  <p>On 25 December 2024 ЦБСТ's own channel announced that «Единая Россия», ЦБСТ and the bank ПСБ had launched a «military
+  marketplace». The post gives the party official's words and the chairman of ЦБСТ's board:{S.ref(sid338)}</p>
+  <article class="post" aria-label="Excerpts from the post of 25 December 2024">
+    <header><span>Telegram · @ANO_CBST</span><span>{ru_date(q_m2['date'])}</span><span>ЦБСТ's own channel</span></header>
+    {passage(q_m1)}{passage(q_m2)}{passage(q_m3)}
+  </article>
+  <p>A year later Сидякин repeated the phrase on his own channel.{S.ref("s8847")}</p>
+  <article class="post" aria-label="Excerpt from the post of 15 December 2025">
+    <header><span>Telegram · @asidyakin</span><span>{ru_date(q_618['date'])}</span><span>His own channel</span></header>
+    {passage(q_618)}
+  </article>
+  <p>The company that operates the platform is ООО «МПТМ». ЦБСТ's report to the Ministry of Justice for 2025 lists it among
+  the legal entities in which ЦБСТ participates, from 22 January 2025, the day the company was registered.{S.ref("s0207")}
+  The cell for the form of participation reads:</p>
+  <article class="post" aria-label="Excerpt from the report to the Ministry of Justice">
+    <header><span>Report to the Ministry of Justice, 2025, section 2.2</span><span>Row for ООО «МПТМ»</span></header>
+    {passage(q_row)}
+  </article>
+  <p>The report gives no share. The platform's own supplier offer names МПТМ as its operator, with its tax number and the
+  bank that holds its account, ПСБ.{S.ref("s8817")} By 1 October 2026 the public text no longer did.{S.ref("s8822")}</p>
+  <div class="pair">
+    <article class="post" aria-label="The supplier offer on 22 August 2026">
+      <header><span>Supplier offer</span><span>{ru_date(q_op['date'])}</span><span>Internet Archive</span></header>{passage(q_op)}</article>
+    <article class="post" aria-label="The supplier offer on 1 October 2026">
+      <header><span>Supplier offer</span><span>{ru_date(q_mask['date'])}</span><span>The live site</span></header>{passage(q_mask)}</article>
+  </div>
+  <p>On the live site the operator's name, tax number, address and bank details are shown only after login. Why and when
+  they were hidden is not documented. The company register restricted access to the section that names МПТМ's
+  participants on 15 July 2026, before either version.{S.ref("s0230")}</p>
+  <article class="post" aria-label="Excerpt from the company register extract">
+    <header><span>Company register extract, 14 August 2026</span><span>Section «Сведения об участниках / учредителях юридического лица»</span></header>
+    {passage(q_restr)}
+  </article>
+  <p>The one seller whose own post states a sale on the platform is КБ «СПЕКТР», a maker of drone propellers. On 6 July 2026
+  its channel wrote:{S.ref("s8737")}</p>
+  <article class="post" aria-label="Excerpt from the КБ СПЕКТР post of 6 July 2026">
+    <header><span>Telegram · @kb_spektr</span><span>{ru_date(q_kb['date'])}</span><span>The brand's own channel</span></header>
+    {passage(q_kb)}
+  </article>
+  <p>No document on file puts «Булат», the product that runs through the handovers, on the platform. A representative of its
+  maker, 3mx, wrote in the company's customer chat on 2 September 2026:{S.ref("s8860")}</p>
+  <article class="post" aria-label="Excerpt from the 3mx chat message of 2 September 2026">
+    <header><span>3mx customer chat</span><span>{ru_date(q_3mx['date'])}</span><span>A message from the maker's representative</span></header>
+    {passage(q_3mx)}
+  </article>
+  <p>In August 2026 Сидякин and ЦБСТ described the platform's next stage.{S.ref("s8851")}<sup class="fn">,</sup>{S.ref("s8852")}</p>
+  <article class="post" aria-label="Excerpts from August 2026 posts">
+    <header><span>Telegram · @asidyakin, 5 August 2026</span><span>Telegram · @ANO_CBST, 6 August 2026</span></header>
+    {passage(q_pilot)}{passage(q_tech)}
+  </article>
+  <p>The first is the centre's own count of its users and the second is a plan. ЦБСТ's share in МПТМ is not stated in
+  any document on file.</p>
+</section>
+
+<section class="chapter" aria-labelledby="c7">
+  <p class="rm-eyebrow">The limits</p>
+  <h2 class="rm-h2" id="c7">What this does not show</h2>
+  <ul class="limits">
+    <li>Every handover in this story is the foundation's own report. For none of the 21 is there a second source on file.</li>
+    <li>A handover to a unit does not show that the equipment was used in combat. Some recipients are rear units, and two of the 21 are civilian services.</li>
+    <li>The accounts do not name the donors behind {F['donor_share']:.0f}% of the foundation's 2024 money, and they do not define the state aid the foundation says it did not receive.</li>
+    <li>The five contributions of 71.1 million rubles in the foundation's notes cannot be matched to ЦБСТ's receipts. The register records ЦБСТ's founders and no owner.</li>
+    <li>ЦБСТ's share in МПТМ is not stated in any document on file, and the register withholds who owns the company.</li>
+    <li>No document on file puts «Булат» on РОЙ.МАРКЕТ. Which sellers use the platform beyond the one named here is not established.</li>
+    <li>Сидякин's figure of 2.5 billion dollars was not tested. His post gives no source for it.</li>
+    <li>Photographs show what is visible in them. Nobody is identified from a face, and a person in a photograph is not shown to have taken any part beyond what the post says.</li>
+    <li>This page makes no statement about sanctions listings of any company named here.</li>
+  </ul>
 </section>
 
 <section class="rm-sources"><h2 class="rm-h2">Sources</h2><ol>@@NOTES@@</ol></section>

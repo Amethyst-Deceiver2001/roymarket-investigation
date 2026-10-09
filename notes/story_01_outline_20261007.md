@@ -11,7 +11,7 @@ Written for: the editor of the story (the user). Nothing here is public. Decided
 
 ## Status (08.10.2026)
 
-Drafted as a private preview (`exhibits/build_story.py`, preview Artifact): cold open (0), purposes (1), money in (2), money out (3), handovers (5 in the table below). The centre (4) drafted 08.10.2026. Not yet written: the marketplace (6), limits (7). Right of reply is deferred by the user (08.10.2026).
+Drafted as a private preview (`exhibits/build_story.py`, preview Artifact): cold open (0), purposes (1), money in (2), money out (3), handovers (5 in the table below). The centre (4) drafted 08.10.2026; the marketplace (6) and the limits (7) drafted 09.10.2026. All chapters now drafted; none has had a second-person check or the personal-data review. Right of reply is deferred by the user (08.10.2026).
 
 Found while drafting: the foundation states it received no state aid in 2024 (p.30); its payables table names АО «Технодрон» but the amount column is offset by a row in the scan, so no amount is used (open question on the foundation's record).
 

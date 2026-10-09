@@ -3959,7 +3959,7 @@
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
     "gur_matches": [],
-    "gur_screened_at": "2026-09-05",
+    "gur_screened_at": "2026-10-09",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -60445,7 +60445,9 @@
     "_verified_against": null,
     "name_display": "OOO \"NAUCHNO-ISSLEDOVATELSKIY INSTITUT DOPOLNITELNOGO PROFESSIONALNOGO OBRAZOVANIYA\"",
     "aleph_matches": [],
-    "aleph_screened_at": "2026-10-03"
+    "aleph_screened_at": "2026-10-03",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-09"
   },
   {
     "slug": "fgdr-federatsiya-gonok-dronov-rossii",
@@ -60967,7 +60969,7 @@
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
     "gur_matches": [],
-    "gur_screened_at": "2026-09-05",
+    "gur_screened_at": "2026-10-09",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -77813,6 +77815,27 @@
     },
     "_verified_against": null,
     "name_display": "OOO «AS-KAM»",
+    "opensanctions_matches": [
+      {
+        "match_id": "NK-KCMZQEStT6kQchEwQyDukN",
+        "caption": "Товариство з обмеженою відповідальністю \"АС-КАМ\"",
+        "schema": "Company",
+        "score": 1.0,
+        "topics": [
+          "sanction"
+        ],
+        "source_urls": []
+      },
+      {
+        "match_id": "ru-inn-9715514258",
+        "caption": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КАМ-ХОЛДИНГ\"",
+        "schema": "Company",
+        "score": 0.7083,
+        "topics": [],
+        "source_urls": []
+      }
+    ],
+    "opensanctions_screened_at": "2026-10-09",
     "aleph_matches": [
       {
         "entity_id": "cad7ab99cbbab6472f54f99bdb2a056bf85913eb.316c69c31113252e33ee78f4dad48d13c4a2032f",
@@ -78129,6 +78152,19 @@
     },
     "_verified_against": null,
     "name_display": "OOO «DIAM-AERO»",
+    "opensanctions_matches": [
+      {
+        "match_id": "NK-dVFJVFX84hhWnxDNoFHjbX",
+        "caption": "Товариство з обмеженою відповідальністю \"ДІАМ-Аеро\"",
+        "schema": "Company",
+        "score": 1.0,
+        "topics": [
+          "sanction"
+        ],
+        "source_urls": []
+      }
+    ],
+    "opensanctions_screened_at": "2026-10-09",
     "aleph_matches": [
       {
         "entity_id": "ru-inn-7811687549.5749af0a3d39a48e9a600c93a3eeb8a6c68ccd28",
@@ -79590,6 +79626,8 @@
     "name_display": "OOO \"PROM-TEKH\"",
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-09",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -80355,6 +80393,8 @@
     "name_display": "OOO PROIZVODSTVENNAYA KOMPANIYA \"STALNOY KUPOL\"",
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-09",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -82094,6 +82134,8 @@
       }
     ],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-09",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -82283,6 +82325,8 @@
       }
     ],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-09",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -90405,6 +90449,8 @@
     ],
     "_verified_against": null,
     "name_display": "AO «STRATOLINK»",
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-10-09",
     "aleph_matches": [],
     "aleph_screened_at": "2026-10-03",
     "gur_matches": [],
@@ -90564,6 +90610,41 @@
     },
     "_verified_against": null,
     "name_display": "OOO «INTEK PROMYSHLENNYE SISTEMY»",
+    "opensanctions_matches": [
+      {
+        "match_id": "NK-cxJvVdt3n48ZRUqE5DjENU",
+        "caption": "Товариство з обмеженою відповідальністю \"Промислові системи\"",
+        "schema": "Company",
+        "score": 0.7143,
+        "topics": [
+          "poi",
+          "sanction"
+        ],
+        "source_urls": [
+          "https://war-sanctions.gur.gov.ua/en/components/companies/15980"
+        ]
+      },
+      {
+        "match_id": "ru-inn-3305059808",
+        "caption": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМЫШЛЕННЫЕ СИСТЕМЫ\"",
+        "schema": "Company",
+        "score": 0.7143,
+        "topics": [
+          "sanction.linked",
+          "sanction.control"
+        ],
+        "source_urls": []
+      },
+      {
+        "match_id": "ru-inn-7805722837",
+        "caption": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМЫШЛЕННЫЕ СИСТЕМЫ\"",
+        "schema": "Company",
+        "score": 0.7143,
+        "topics": [],
+        "source_urls": []
+      }
+    ],
+    "opensanctions_screened_at": "2026-10-09",
     "aleph_matches": [
       {
         "entity_id": "ru-inn-7017396681.24d66def9ad767fc05a0804fcc66da60d67cf776",
@@ -92056,7 +92137,9 @@
         "ui_link": "https://aleph.occrp.org/entities/185dd817e768b7ce630e30c62b6cbd8216a25567.94a8d9ec72284ec6cef5aff3f8c90c78499b3eaa"
       }
     ],
-    "aleph_screened_at": "2026-10-04"
+    "aleph_screened_at": "2026-10-04",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-09"
   },
   {
     "slug": "ip-pinimasov-aleksandr-vyacheslavovich",
