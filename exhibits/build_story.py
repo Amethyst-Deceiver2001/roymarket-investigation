@@ -232,6 +232,74 @@ CONTRIBUTIONS = [("22.08.2024", "Соглашение", 10_000_000), ("07.10.202
                  ("20.12.2024", "Соглашение № 4", 20_435_024), ("23.12.2024", "Соглашение № 5", 13_500_000)]
 
 
+RAIL_JS = """<script>try{const links=[...document.querySelectorAll('.rail a')];const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id))}})},{rootMargin:'-20% 0px -70% 0px'});links.forEach(l=>{const t=document.querySelector(l.getAttribute('href'));if(t)io.observe(t)})}catch(e){}</script>"""
+
+
+def stack_bar(items, label) -> str:
+    """One stacked bar; items = (text, value, css class). Text shows inside a segment wide enough to hold it."""
+    tot = sum(v for _, v, _ in items)
+    seg = "".join(
+        f'<span class="seg {c}" style="width:{100 * v / tot:.2f}%">' + (f"<b>{100 * v / tot:.1f}% {esc(t)}</b>" if 100 * v / tot >= 13 else "") + "</span>"
+        for t, v, c in items)
+    return f'<div class="split" role="img" aria-label="{esc(label)}">{seg}</div>'
+
+
+def ln(grade, w=34):
+    return f'<svg class="ln" width="{w}" height="8" aria-hidden="true"><line x1="0" x2="{w}" y1="4" y2="4" class="rm-ln {grade}"/></svg>'
+
+
+def structure_diagram(F, S) -> str:
+    """The structure in one picture. A line is drawn in the style of its grade: solid, a document shows it; dashed,
+    one party's own word; dotted, no document shows it. Documented edges are asserted against the registry."""
+    ents = {e["slug"]: e for e in load("entities.json")}
+    cbst = ents["ano-tsbst-centre-for-unmanned-systems-technologies"]
+    founders = " ".join(str(h.get("value")) for h in cbst.get("founders_history") or [])
+    assert "Наша Правда" in founders and "ПСБ" in founders, "register founders of ЦБСТ changed"
+    assert any(x.get("slug") == "ooo-mptm" for x in cbst.get("subsidiaries") or []), "ЦБСТ participation in МПТМ missing"
+    assert ents["ooo-mptm"].get("ecosystem_roles") == ["platform_operator"]
+    aid, donors = F["aid_share"], F["donor_share"]
+    got = F["got_bn"]
+    st = {"n": "dn", "m": "dm", "r": "dr"}
+
+    def node(x, y, w, h, lines, hub=False):
+        t, yy = [], y + 22
+        for txt, kind in lines:
+            t.append(f'<text class="{st[kind]}" x="{x + 12}" y="{yy}">{esc(txt)}</text>')
+            yy += 18 if kind != "m" else 16
+        return f'<rect class="nd{" hub" if hub else ""}" x="{x}" y="{y}" width="{w}" height="{h}" rx="4"/>' + "".join(t)
+
+    def edge(g, d):
+        return f'<path class="rm-ln {g}" d="{d}"/>'
+
+    def lab(x, y, txt, anchor="middle"):
+        return f'<text class="el" x="{x}" y="{y}" text-anchor="{anchor}">{esc(txt)}</text>'
+
+    svg = ['<svg class="map" viewBox="0 0 1000 412" role="img" aria-label="Who funds, founds and receives from the foundation, drawn by how well each link is documented">']
+    svg += [
+        edge("doc", "M170 72 L230 128"), edge("doc", "M170 192 L230 168"),
+        edge("doc", "M410 128 L540 128"), edge("open", "M410 170 L540 170"),
+        edge("doc", "M640 56 L640 90"), edge("rep", "M640 252 L640 200"),
+        edge("doc", "M740 145 L820 145"), edge("rep", "M320 200 L320 332"),
+        lab(475, 120, "co-founder"), lab(475, 188, "5 contributions,"), lab(475, 202, "RUB 71.1m: no"), lab(475, 216, "recipient printed"),
+        lab(650, 76, "co-founder", "start"), lab(650, 232, "ЦБСТ's own site", "start"),
+        lab(780, 137, "participates"), lab(330, 270, "21 handovers reported", "start"),
+        node(0, 30, 170, 84, [("Legal entities and", "n"), ("individuals", "n"), ("not named in the accounts", "m"), (f"RUB 1.10bn · {donors:.1f}%", "m")]),
+        node(0, 150, 170, 84, [("Фонд «ДАР» and", "r"), ("Фонд «Градислава»", "r"), ("the two founders", "m"), ("RUB 59m · 4.8%", "m")]),
+        node(230, 90, 180, 110, [("Фонд", "r"), ("«Наша Правда»", "r"), (f"received RUB {got:.2f}bn", "m"), (f"booked {aid:.1f}% as aid", "m")]),
+        node(540, 4, 200, 52, [("ПАО «Банк ПСБ»", "r"), ("in the register since 01.04.2025", "m")]),
+        node(540, 90, 200, 110, [("ЦБСТ", "r"), ("registered 27.02.2024", "m"), ("2024: RUB 269.8m received,", "m"), ("all as «other receipts»", "m")], hub=True),
+        node(540, 252, 200, 66, [("«Единая Россия»", "r"), ("a founder by ЦБСТ's own site;", "m"), ("not in the register", "m")]),
+        node(820, 90, 180, 110, [("ООО «МПТМ»", "r"), ("operates РОЙ.МАРКЕТ", "m"), ("share not stated;", "m"), ("owners withheld", "m")]),
+        node(230, 332, 510, 70, [("Army units and civilian services", "n"), ("naming «Булат» or «Капюшон», Jul 2024 – May 2026", "m"), ("the party and ЦБСТ named as co-donors", "m")]),
+    ]
+    svg.append("</svg>")
+    legend = ('<ul class="rm-legend">'
+              f'<li>{ln("doc")} <span class="rm-grade doc">Documented</span> a document shows it</li>'
+              f'<li>{ln("rep")} <span class="rm-grade rep">Reported</span> one party\'s own word</li>'
+              f'<li>{ln("open")} <span class="rm-grade open">Not documented</span> no document shows it</li></ul>')
+    return f'<figure class="mapfig"><div class="mapscroll">{"".join(svg)}</div><figcaption>{legend}</figcaption></figure>'
+
+
 def month_year(iso: str) -> str:
     return dt.date.fromisoformat(iso).strftime("%B %Y")
 
@@ -364,6 +432,9 @@ def render(out: Path):
     recv_rows = "".join(f'<tr><td class="ru">{esc(r[0])}</td><td>{esc(r[1])}</td><td>{k(r[2])}</td><td>{100 * r[2] / recv_total:.1f}%</td></tr>' for r in RECEIVED_2024)
     used_rows = "".join(f'<tr><td class="ru">{esc(r[0])}</td><td>{esc(r[1])}</td><td>{k(r[2])}</td><td>{100 * r[2] / PRINTED_USED_2024:.1f}%</td></tr>' for r in USED_2024)
     chart = money_chart(fin)
+    diagram = structure_diagram(F, S)
+    used_bar = stack_bar([("aid for the SVO zone", USED_2024[0][2], "s1"), ("management", USED_2024[1][2], "s2"), ("upkeep", USED_2024[2][2], "s3"), ("assets", USED_2024[3][2], "s4")], "Shares of the 2024 use of funds by printed line")
+    cbst_bar = stack_bar([("upkeep of the organisation", CBST_LINES[3][3], "s1"), ("other", CBST_LINES[5][3], "s2"), ("target events", CBST_LINES[2][3], "s4")], "Shares of ЦБСТ's 2025 use of funds by printed line")
 
     def passage(q):
         return f'<p class="pass"><span class="ru">{esc(q["text_ru"])}</span><span class="en">{esc(q["translation_en"])}</span></p>'
@@ -375,6 +446,7 @@ def render(out: Path):
 {design_head((REPO / 'exhibits' / 'story.css').read_text())}</head>
 <body>
 <main class="story">
+<nav class="rail" aria-label="Chapters"><ol><li><a href="#c0">The post</a></li><li><a href="#c1">The foundation</a></li><li><a href="#c2">The money in</a></li><li><a href="#c3">The money out</a></li><li><a href="#c5">The centre</a></li><li><a href="#c4">The handovers</a></li><li><a href="#c6">The marketplace</a></li><li><a href="#c7">The limits</a></li></ol></nav>
 <header>
   <p class="rm-eyebrow">Draft · Story 1 · {ru_date(today)}</p>
   <h1 class="rm-h1">In 2024 a Moscow foundation booked {F['aid_bn']:.2f} billion rubles as <em>«social and charitable aid for the SVO zone»</em></h1>
@@ -383,6 +455,8 @@ def render(out: Path):
   electronic-warfare equipment to army units, with the ruling party and a drone-industry non-profit named as co-donors.
   «СВО», the Kremlin's term for its invasion of Ukraine, appears here only inside quotations.</p>
 </header>
+
+{diagram}
 
 <section class="figures" aria-label="Three figures">
   <div class="figure"><span class="n">{F['aid_bn']:.2f}<small>bn rubles</small></span>
@@ -397,7 +471,7 @@ def render(out: Path):
 </section>
 
 <section class="chapter" aria-labelledby="c0">
-  <p class="rm-eyebrow">The post</p>
+  <p class="rm-eyebrow">1 of 8 · The post</p>
   <h2 class="rm-h2" id="c0">Three days, 80 million rubles</h2>
   <div class="lead-in">
     <div class="text">
@@ -420,7 +494,7 @@ def render(out: Path):
 </section>
 
 <section class="chapter" aria-labelledby="c1">
-  <p class="rm-eyebrow">The foundation</p>
+  <p class="rm-eyebrow">2 of 8 · The foundation</p>
   <h2 class="rm-h2" id="c1">Its stated purposes include supporting defence-product makers</h2>
   <p><b>Фонд «Наша Правда»</b> (<i>Our Truth</i>) was registered in Moscow in {registered}. Its general director since
   registration is <b>Alexander Brovchenko</b> ({esc(d)}).{r_reg} Its website describes it as a joint project of two older
@@ -438,7 +512,7 @@ def render(out: Path):
 </section>
 
 <section class="chapter" aria-labelledby="c2">
-  <p class="rm-eyebrow">The money in</p>
+  <p class="rm-eyebrow">3 of 8 · The money in</p>
   <h2 class="rm-h2" id="c2">Nearly nine-tenths of the 2024 money came from donors the notes do not name</h2>
   <p>In 2024 the foundation received {F['got_bn']:.2f} billion rubles in targeted funds. The notes to its accounts print four lines to say from whom.{r_notes2}</p>
   <div class="split" role="img" aria-label="Shares of the 2024 receipts by printed line">{split_bar}</div>
@@ -454,8 +528,9 @@ def render(out: Path):
 </section>
 
 <section class="chapter" aria-labelledby="c3">
-  <p class="rm-eyebrow">The money out</p>
+  <p class="rm-eyebrow">4 of 8 · The money out</p>
   <h2 class="rm-h2" id="c3">{F['aid_share']:.1f}% of what it spent in 2024 is booked as aid for the zone</h2>
+  {used_bar}
   <table class="lines"><thead><tr><th>As printed</th><th>Translation</th><th>Thousand rubles</th><th>Share</th></tr></thead><tbody>{used_rows}
     <tr class="tot"><td colspan="2">Used in 2024, as printed</td><td>{k(PRINTED_USED_2024)}</td><td>100%</td></tr></tbody></table>
   <p>The four lines add to {k(used_sum)}. The filing's own total is {PRINTED_USED_2024 - used_sum} thousand rubles higher, and the notes do not say why.</p>
@@ -473,7 +548,7 @@ def render(out: Path):
 </section>
 
 <section class="chapter" aria-labelledby="c5">
-  <p class="rm-eyebrow">The centre</p>
+  <p class="rm-eyebrow">5 of 8 · The centre</p>
   <h2 class="rm-h2" id="c5">ЦБСТ's accounts book all of its money as «other receipts»</h2>
   <p>ЦБСТ, the autonomous non-profit «Центр беспилотных систем и технологий» (Centre for Unmanned Systems and
   Technologies), was registered in Moscow on 27 February 2024. The register names two founders: the foundation from the
@@ -484,6 +559,8 @@ def render(out: Path):
     {passage(q_site1)}{passage(q_site2)}
   </article>
   <p>The register names two founders. ЦБСТ's own text names three.</p>
+  {cbst_bar}
+  <p class="chart-note">How ЦБСТ's 2025 spending was booked, share of the 275.6 million rubles used.</p>
   <table class="lines"><thead><tr><th>As printed in ЦБСТ's accounts</th><th>Translation</th><th>2024</th><th>2025</th></tr></thead><tbody>{cbst_rows}</tbody></table>
   <p class="chart-note">Thousand rubles. Report on the use of targeted funds, FY2024{S.ref("s0382")} and FY2025.{S.ref("s0385")}</p>
   <p>In 2024 the line for target events is empty. In 2025 it holds {centre_ev25:.1f} million rubles, {ev_share:.1f}% of the
@@ -511,7 +588,7 @@ def render(out: Path):
 </section>
 
 <section class="chapter" aria-labelledby="c4">
-  <p class="rm-eyebrow">The handovers</p>
+  <p class="rm-eyebrow">6 of 8 · The handovers</p>
   <h2 class="rm-h2" id="c4">Between July 2024 and May 2026 the foundation reported at least 21 handovers that name «Булат» or «Капюшон»</h2>
   <p>Two products recur in its posts. It calls «Булат» a drone detector, <i>детектор дронов</i>, and «Капюшон» an
   electronic-warfare station, <i>станция РЭБ</i>.{S.ref("s8994")} Each mark below is one post that names one or both.</p>
@@ -542,7 +619,7 @@ def render(out: Path):
 </section>
 
 <section class="chapter" aria-labelledby="c6">
-  <p class="rm-eyebrow">The marketplace</p>
+  <p class="rm-eyebrow">7 of 8 · The marketplace</p>
   <h2 class="rm-h2" id="c6">ЦБСТ participates in the company that runs РОЙ.МАРКЕТ, and the register now withholds who owns it</h2>
   <p>On 25 December 2024 ЦБСТ's own channel announced that «Единая Россия», ЦБСТ and the bank ПСБ had launched a «military
   marketplace». The post gives the party official's words and the chairman of ЦБСТ's board:{S.ref(sid338)}</p>
@@ -599,7 +676,7 @@ def render(out: Path):
 </section>
 
 <section class="chapter" aria-labelledby="c7">
-  <p class="rm-eyebrow">The limits</p>
+  <p class="rm-eyebrow">8 of 8 · The limits</p>
   <h2 class="rm-h2" id="c7">What this does not show</h2>
   <ul class="limits">
     <li>Every handover in this story is the foundation's own report. For none of the 21 is there a second source on file.</li>
@@ -616,6 +693,7 @@ def render(out: Path):
 
 <section class="rm-sources"><h2 class="rm-h2">Sources</h2><ol>@@NOTES@@</ol></section>
 </main>
+{RAIL_JS}
 </body></html>
 """
     doc = S.finalize(doc)

@@ -99,3 +99,29 @@ table.lines tr.tot td { font-variant-numeric: tabular-nums; }
 /* Chapter 7: the limits. */
 ul.limits { max-width: var(--measure); margin: 0; padding-left: 20px; display: grid; gap: 10px; font-size: 17px; line-height: 1.55; }
 ul.limits li::marker { color: var(--ink-3); }
+
+/* The structure diagram, the used-funds bars, the chapter rail. */
+.mapfig { margin: 0 0 var(--space-6); display: flex; flex-direction: column; gap: var(--space-3); }
+svg.map { width: 100%; height: auto; max-width: 960px; }
+svg.map .nd { fill: var(--panel); stroke: var(--rule); stroke-width: 1; }
+svg.map .nd.hub { stroke: var(--ink); stroke-width: 2; }
+svg.map .dn { fill: var(--ink); font: 600 14px var(--font-sans); }
+svg.map .dr { fill: var(--ink); font: 500 15px var(--font-serif); }
+svg.map .dm { fill: var(--ink-2); font: 400 12.5px var(--font-sans); }
+svg.map .el { fill: var(--ink-3); font: 400 11.5px var(--font-sans); }
+.mapfig figcaption .rm-legend { margin: 0; }
+.mapfig .ln { flex: none; }
+.split .s2 { background: var(--ink-3); color: var(--paper); }
+.split .s3 b { display: none; }
+.split b { padding: 0 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rail { display: none; }
+@media (min-width: 1280px) {
+  .rail { display: block; position: fixed; top: 112px; left: max(16px, calc((100vw - 880px) / 2 - 196px)); width: 170px; font-size: 12.5px; }
+  .rail ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; border-left: 1px solid var(--rule); }
+  .rail a { display: block; padding: 4px 0 4px 12px; margin-left: -1px; border-left: 2px solid transparent; color: var(--ink-3); text-decoration: none; }
+  .rail a:hover { color: var(--ink); }
+  .rail a.on { color: var(--ink); border-left-color: var(--ink); font-weight: 600; }
+}
+
+.mapscroll { overflow-x: auto; }
+@media (max-width: 720px) { svg.map { min-width: 760px; } .mapfig figcaption .rm-legend { flex-direction: column; align-items: flex-start; } }
