@@ -73,7 +73,7 @@ class Story:
         for i, sid in enumerate(order, 1):
             src = self.src[sid]
             title, url = src.get("title") or "Archived document", src.get("public_url")
-            link = f' <a href="{esc(url)}">{esc(url)}</a>' if url else " (no public link on file)"
+            link = f' <a href="{esc(url)}">{esc(readable_url(url))}</a>' if url else " (no public link on file)"
             items.append(f'<li id="n{i}">{esc(title)}.{link} <a href="#r{i}" aria-label="Back to text">↩</a></li>')
         self.notes = order
         return doc.replace("@@NOTES@@", "".join(items))
@@ -300,6 +300,17 @@ def structure_diagram(F, S) -> str:
     return f'<figure class="mapfig"><div class="mapscroll">{"".join(svg)}</div><figcaption>{legend}</figcaption></figure>'
 
 
+def readable_url(url: str) -> str:
+    """Link text only: an internationalised domain shown as people write it; the href keeps the encoded form."""
+    m = re.match(r"(https?://)([^/]+)(.*)", url)
+    if not m or "xn--" not in m.group(2):
+        return url
+    try:
+        return m.group(1) + m.group(2).encode("ascii").decode("idna") + m.group(3)
+    except UnicodeError:
+        return url
+
+
 def month_year(iso: str) -> str:
     return dt.date.fromisoformat(iso).strftime("%B %Y")
 
@@ -452,8 +463,8 @@ def render(out: Path):
   <h1 class="rm-h1">In 2024 a Moscow foundation booked {F['aid_bn']:.2f} billion rubles as <em>«social and charitable aid for the SVO zone»</em></h1>
   <p class="rm-dek">Its accounts do not name the donors behind nearly nine-tenths of its money. Its stated purposes include
   supporting companies that develop and make defence products. Its Telegram channel reports handing drones and
-  electronic-warfare equipment to army units, with the ruling party and a drone-industry non-profit named as co-donors.
-  «СВО», the Kremlin's term for its invasion of Ukraine, appears here only inside quotations.</p>
+  electronic-warfare equipment to army units, with the ruling party, «Единая Россия» (United Russia), and a drone-industry
+  non-profit, ЦБСТ (the Centre for Unmanned Systems and Technologies), named as co-donors. «СВО», the Kremlin's term for its invasion of Ukraine, appears here only inside quotations.</p>
 </header>
 
 {diagram}
@@ -490,7 +501,7 @@ def render(out: Path):
     <header><span>Telegram · @nashapravdafond</span><span>{ru_date(q_head['date'])}</span><span>The foundation's own post</span></header>
     {passage(q_head)}{passage(q_list)}{passage(q_cost)}{passage(q_total)}
   </article>
-  <p>The post's word for the delivery is <span class="ru-word">помощь</span>, <i>aid</i>. It is also the word on the largest line in the foundation's accounts for 2024.</p>
+  <p>The post's word for the equipment is <span class="ru-word">помощь</span>, <i>aid</i>. It is also the word on the largest line in the foundation's accounts for 2024.</p>
 </section>
 
 <section class="chapter" aria-labelledby="c1">
@@ -508,7 +519,7 @@ def render(out: Path):
   <div class="excerpt"><p class="where">Notes to the 2024 accounts, section 1.3, page 5</p>
     <blockquote class="rm-quote"><span class="rm-label">Original Russian</span>{esc(q_aim['text_ru'])}
       <span class="gloss">{esc(q_aim['translation_en'])}</span></blockquote></div>
-  <p>That is the foundation's own description of its purposes. The figures come next: where the money came from, and where the accounts say it went.</p>
+  <p>The figures come next: where the money came from, and where the accounts say it went.</p>
 </section>
 
 <section class="chapter" aria-labelledby="c2">
@@ -518,9 +529,11 @@ def render(out: Path):
   <div class="split" role="img" aria-label="Shares of the 2024 receipts by printed line">{split_bar}</div>
   <table class="lines"><thead><tr><th>As printed</th><th>Translation</th><th>Thousand rubles</th><th>Share</th></tr></thead><tbody>{recv_rows}
     <tr class="tot"><td colspan="2">Received in 2024, as printed</td><td>{k(recv_total)}</td><td>100%</td></tr></tbody></table>
-  <p>Two donors are named: «ДАР», which gave 5 million rubles, and «Градислава», which gave 54 million. The 1.10 billion
-  that make up the rest are credited to <span class="ru-word">юридических и физических лиц</span>, legal entities and
-  individuals. The notes print no names and no amount per donor.</p>
+  <p>Two donors are named: «ДАР», which gave 5 million rubles, and «Градислава», which gave 54 million. The first line,
+  1.10 billion rubles, is credited to <span class="ru-word">юридических и физических лиц</span>, legal entities and
+  individuals. The notes print no names and no amount per donor. The third line repeats the founders' 59 million in
+  amount. The four lines add to the printed total only if both are counted, and the notes do not say whether it is one
+  payment listed twice or two.</p>
   <p>The same notes say, in a sentence about something else, that <i>«{esc(q_aid['text_ru'])}»</i>, the foundation did not receive state aid, in 2024. They do not say what they mean by the term.{S.ref("s0389")}</p>
   <p>For 2025 the notes give the total, {F['got25_bn']:.2f} billion rubles, and no breakdown.{r_notes25}</p>
   {chart}
@@ -627,7 +640,7 @@ def render(out: Path):
     <header><span>Telegram · @ANO_CBST</span><span>{ru_date(q_m2['date'])}</span><span>ЦБСТ's own channel</span></header>
     {passage(q_m1)}{passage(q_m2)}{passage(q_m3)}
   </article>
-  <p>A year later Сидякин repeated the phrase on his own channel.{S.ref("s8847")}</p>
+  <p>The post of 15 December 2025 quoted earlier uses the same phrase.{S.ref("s8847")}</p>
   <article class="post" aria-label="Excerpt from the post of 15 December 2025">
     <header><span>Telegram · @asidyakin</span><span>{ru_date(q_618['date'])}</span><span>His own channel</span></header>
     {passage(q_618)}
@@ -671,7 +684,7 @@ def render(out: Path):
     <header><span>Telegram · @asidyakin, 5 August 2026</span><span>Telegram · @ANO_CBST, 6 August 2026</span></header>
     {passage(q_pilot)}{passage(q_tech)}
   </article>
-  <p>The first is the centre's own count of its users and the second is a plan. ЦБСТ's share in МПТМ is not stated in
+  <p>The first is a count given by the secretary of ЦБСТ's own supervisory board and the second is a plan. ЦБСТ's share in МПТМ is not stated in
   any document on file.</p>
 </section>
 
@@ -686,7 +699,7 @@ def render(out: Path):
     <li>ЦБСТ's share in МПТМ is not stated in any document on file, and the register withholds who owns the company.</li>
     <li>No document on file puts «Булат» on РОЙ.МАРКЕТ. Which sellers use the platform beyond the one named here is not established.</li>
     <li>Сидякин's figure of 2.5 billion dollars was not tested. His post gives no source for it.</li>
-    <li>Photographs show what is visible in them. Nobody is identified from a face, and a person in a photograph is not shown to have taken any part beyond what the post says.</li>
+    <li>Photographs show what is visible in them. Nobody is identified from a face.</li>
     <li>This page makes no statement about sanctions listings of any company named here.</li>
   </ul>
 </section>
