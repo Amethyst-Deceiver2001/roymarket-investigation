@@ -1,0 +1,127 @@
+/* Story page layout. Tokens and shared components come from design/roymarket.css, inlined before this file. */
+.story { max-width: 880px; margin: 0 auto; padding-inline: var(--space-5); padding-block: 40px 72px; }
+.story > header { display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-6); }
+.story h1.rm-h1 { font-size: clamp(30px, 5.4vw, 48px); line-height: 1.1; letter-spacing: -.01em; max-width: 20ch; margin: 0; }
+.story h1 em { font-style: italic; font-weight: 400; }
+.story .rm-dek { max-width: 62ch; margin: 0; }
+
+.figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: var(--space-4); margin: var(--space-5) 0 var(--space-6); }
+.figure { border-top: 2px solid var(--ink); padding-top: var(--space-3); display: flex; flex-direction: column; gap: var(--space-2); min-width: 0; }
+.figure .n { font: 500 clamp(44px, 8vw, 68px)/1 var(--font-serif); letter-spacing: -.02em; font-variant-numeric: tabular-nums; color: var(--ink); }
+.figure .n small { font: 600 12px/1 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); margin-left: 6px; }
+.figure p { margin: 0; font-size: var(--t-note); color: var(--ink-2); }
+.figure .ru { font: 400 13px/1.4 var(--font-serif); color: var(--ink); }
+.figure .rm-grade { align-self: flex-start; }
+
+.chapter { display: flex; flex-direction: column; gap: var(--space-4); padding-top: var(--space-6); border-top: 1px solid var(--rule); margin-top: var(--space-6); }
+.chapter > .rm-eyebrow { margin: 0; }
+.chapter h2.rm-h2 { font-size: clamp(24px, 3.6vw, 32px); line-height: 1.15; margin: 0; max-width: 24ch; }
+.chapter p { max-width: var(--measure); font-size: 17px; line-height: 1.62; margin: 0; }
+.chapter p i { font-style: italic; }
+.chapter .ru-word { font-family: var(--font-serif); }
+
+.lead-in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 340px); gap: var(--space-5) var(--space-6); align-items: start; }
+.lead-in .text { display: flex; flex-direction: column; gap: var(--space-4); min-width: 0; }
+.lead-in .rm-fig .frame { aspect-ratio: 16 / 9; }
+
+.post { background: var(--panel); border: 1px solid var(--rule); border-radius: var(--radius); box-shadow: var(--shadow); padding: var(--space-4) var(--space-5); display: flex; flex-direction: column; gap: var(--space-4); max-width: 760px; }
+.post > header { display: flex; flex-wrap: wrap; gap: 4px var(--space-3); font: 600 11px/1.3 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+.post .pass { margin: 0; display: flex; flex-direction: column; gap: 6px; padding-left: var(--space-3); border-left: 2px solid var(--rule); }
+.post .pass .ru { font: 400 19px/1.45 var(--font-serif); color: var(--ink); }
+.post .pass .en { font: 400 var(--t-note)/1.5 var(--font-sans); color: var(--ink-2); }
+.post .pass .en::before { content: "Translation  "; font: 600 10px/1 var(--font-mono); letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); }
+
+.excerpt { max-width: 760px; }
+.excerpt .rm-quote { max-width: none; }
+.excerpt .where { font: 400 12.5px/1.4 var(--font-mono); color: var(--ink-3); margin: 0 0 6px; }
+
+.coming { border-style: dashed; box-shadow: none; background: transparent; max-width: 760px; }
+.coming ol { margin: 6px 0 0; padding-left: 20px; color: var(--ink-2); font-size: var(--t-body); display: grid; gap: 2px; }
+
+.story .rm-sources { margin-top: var(--space-6); padding-top: var(--space-5); border-top: 1px solid var(--rule); }
+sup.fn a { text-decoration: none; font: 600 11px/1 var(--font-mono); }
+
+@media (max-width: 720px) {
+  .lead-in { grid-template-columns: minmax(0, 1fr); }
+  .story { padding-inline: var(--space-4); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .figure .n { transition: color .2s; }
+}
+
+/* Chapters 2 and 3: the printed lines, the split bar, the chart. */
+.split { display: flex; height: 44px; max-width: 760px; border: 1px solid var(--rule); border-radius: var(--radius); overflow: hidden; }
+.split .seg { display: flex; align-items: center; justify-content: center; min-width: 0; font: 600 12px/1 var(--font-mono); }
+.split .seg b { font-weight: 600; }
+.split .s1 { background: var(--ink); color: var(--paper); }
+.split .s2 { background: var(--ink-3); color: var(--paper); }
+.split .s3 { background: var(--rule); color: var(--ink); }
+.split .s4 { background: var(--panel-2); color: var(--ink); }
+.split .s3 b, .split .s4 b { display: none; }
+table.lines { border-collapse: collapse; width: 100%; max-width: 760px; font-size: var(--t-note); display: block; overflow-x: auto; }
+table.lines th { text-align: left; font: 600 10.5px/1.3 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); padding: 6px 10px 6px 0; border-bottom: 1px solid var(--rule); }
+table.lines td { padding: 8px 10px 8px 0; border-bottom: 1px solid var(--rule-soft); color: var(--ink-2); vertical-align: top; }
+table.lines td.ru { font: 400 14px/1.4 var(--font-serif); color: var(--ink); min-width: 18rem; }
+table.lines td:nth-child(3), table.lines td:nth-child(4), table.lines th:nth-child(3), table.lines th:nth-child(4) { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+table.lines tr.tot td { font-weight: 600; color: var(--ink); border-top: 2px solid var(--ink); border-bottom: 0; }
+.chart { width: 100%; max-width: 760px; height: auto; }
+.chart .grid { stroke: var(--rule-soft); stroke-width: 1; }
+.chart .tick { fill: var(--ink-3); font: 11px var(--font-mono); }
+.chart .yr { fill: var(--ink); font: 600 15px var(--font-sans); }
+.chart .lbl { fill: var(--ink-2); font: 13px var(--font-sans); }
+.chart .bar.received { fill: var(--ink); }
+.chart .bar.used { fill: var(--ink-3); }
+.chart-note { font-size: var(--t-note) !important; color: var(--ink-3); line-height: 1.5 !important; max-width: 760px !important; }
+
+/* Chapter 4: the handovers. */
+.chart.tl .dot.b { fill: var(--ink); }
+.chart.tl .dot.k { fill: var(--ink-3); }
+.chart.tl .ring { fill: none; stroke: var(--ink); stroke-width: 1.5; }
+.chart.tl .lbl { fill: var(--ink); font: 600 13px var(--font-serif); }
+table.lines.plain td:nth-child(2), table.lines.plain th:nth-child(2) { text-align: right; font-variant-numeric: tabular-nums; }
+table.lines.plain td:nth-child(3), table.lines.plain th:nth-child(3) { text-align: left; white-space: normal; font: 400 14px/1.4 var(--font-serif); color: var(--ink); }
+table.lines.plain th:nth-child(3) { font: 600 10.5px/1.3 var(--font-mono); color: var(--ink-3); }
+.story .rm-gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 760px; gap: var(--space-4) var(--space-3); }
+@media (max-width: 720px) { .story .rm-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.story .rm-gallery .rm-fig .frame { aspect-ratio: 4 / 3; }
+
+/* Chapter 5: the centre. */
+table.lines.plain3 td:nth-child(3), table.lines.plain3 th:nth-child(3) { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+table.lines.plain3 td:nth-child(1), table.lines.plain3 th:nth-child(1) { white-space: nowrap; }
+table.lines.plain3 td:nth-child(2) { font: 400 14px/1.4 var(--font-serif); color: var(--ink); }
+table.lines tr.tot td { font-variant-numeric: tabular-nums; }
+
+/* Chapter 6: the marketplace. */
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); max-width: 760px; }
+.pair .post { padding: var(--space-4); }
+@media (max-width: 720px) { .pair { grid-template-columns: minmax(0, 1fr); } }
+
+/* Chapter 7: the limits. */
+ul.limits { max-width: var(--measure); margin: 0; padding-left: 20px; display: grid; gap: 10px; font-size: 17px; line-height: 1.55; }
+ul.limits li::marker { color: var(--ink-3); }
+
+/* The structure diagram, the used-funds bars, the chapter rail. */
+.mapfig { margin: 0 0 var(--space-6); display: flex; flex-direction: column; gap: var(--space-3); }
+svg.map { width: 100%; height: auto; max-width: 960px; }
+svg.map .nd { fill: var(--panel); stroke: var(--rule); stroke-width: 1; }
+svg.map .nd.hub { stroke: var(--ink); stroke-width: 2; }
+svg.map .dn { fill: var(--ink); font: 600 14px var(--font-sans); }
+svg.map .dr { fill: var(--ink); font: 500 15px var(--font-serif); }
+svg.map .dm { fill: var(--ink-2); font: 400 12.5px var(--font-sans); }
+svg.map .el { fill: var(--ink-3); font: 400 11.5px var(--font-sans); }
+.mapfig figcaption .rm-legend { margin: 0; }
+.mapfig .ln { flex: none; }
+.split .s2 { background: var(--ink-3); color: var(--paper); }
+.split .s3 b { display: none; }
+.split b { padding: 0 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rail { display: none; }
+@media (min-width: 1280px) {
+  .rail { display: block; position: fixed; top: 112px; left: max(16px, calc((100vw - 880px) / 2 - 196px)); width: 170px; font-size: 12.5px; }
+  .rail ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; border-left: 1px solid var(--rule); }
+  .rail a { display: block; padding: 4px 0 4px 12px; margin-left: -1px; border-left: 2px solid transparent; color: var(--ink-3); text-decoration: none; }
+  .rail a:hover { color: var(--ink); }
+  .rail a.on { color: var(--ink); border-left-color: var(--ink); font-weight: 600; }
+}
+
+.mapscroll { overflow-x: auto; }
+@media (max-width: 720px) { svg.map { min-width: 760px; } .mapfig figcaption .rm-legend { flex-direction: column; align-items: flex-start; } }

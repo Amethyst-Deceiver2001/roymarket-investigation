@@ -814,7 +814,50 @@
     "government_contracts": [],
     "workforce_history": [],
     "state_programs": [],
-    "marketing_claims": [],
+    "marketing_claims": [
+      {
+        "text_ru": "поддержка отдельных юридических лиц, осуществляющих деятельность по производству или разработке продукции, которая может использоваться для укрепления и повышения обороноспособности, территориальной целостности, а также суверенитета Российской Федерации, обеспечения безопасности ее границ",
+        "text_en": "support for separate legal entities engaged in producing or developing products that may be used to strengthen defence capability, territorial integrity and sovereignty of the Russian Federation and the security of its borders",
+        "context": "One of the foundation's stated purposes («Целями деятельности Фонда является»), notes to the FY2024 accounts, §1.3, p.5 of 35. The list also names support for state bodies and the Armed Forces. Read from the page image.",
+        "source_id": "s0389",
+        "as_of": "2024-12-31"
+      },
+      {
+        "text_ru": "Целевые средства от юридических и физических лиц на ведение уставной деятельности – 1 099 813,00",
+        "text_en": "Targeted funds from legal entities and individuals for statutory activity: 1,099,813.00 (thousand rubles)",
+        "context": "FY2024 notes §18, p.35 of 35 (read from the page image). This line is 89.2% of the 1,232,513 thousand received. The filing does not name these legal entities or individuals. Money from the two founders is printed as Фонд «ДАР» 5,000.00 and Фонд «Градислава» 54,000.00 (thousand rubles).",
+        "source_id": "s0389",
+        "as_of": "2024-12-31"
+      },
+      {
+        "text_ru": "Социальная и благотворительная помощь для зоны СВО - 1 302 289,00",
+        "text_en": "Social and charitable aid for the SVO zone: 1,302,289.00 (thousand rubles)",
+        "context": "The largest line of use of funds in the FY2024 notes §18, p.35 of 35 (read from the page image): 95.6% of the printed total of 1,362,206. The four lines listed (1,302,289 + 36,324 + 13,726 + 9,865) add to 1,362,204, so the filing's own total is 2 thousand higher than its lines. Management and upkeep are the other lines.",
+        "source_id": "s0389",
+        "as_of": "2024-12-31"
+      },
+      {
+        "text_ru": "АНО ЦБСТ» (основной государственный регистрационный номер 1247700190430, ИНН 9702064851)- дочернее предприятие Фонда «Наша Правда»",
+        "text_en": "ANO TsBST: a subsidiary of Foundation «Наша Правда»",
+        "context": "FY2024 notes §16 «Взаимозависимые лица», p.33 of 35 (read from the page image). This is the foundation's own wording. ЕГРЮЛ shows ЦБСТ as an АНО with the foundation as co-founder, so no ownership share is recorded from it. Under the line the notes print «Внесение добровольного целевого имущественного взноса учредителя» in five agreements (22.08.2024 10,000,000.00; 07.10.2024 18,000,000.00; 28.11.2024 9,200,000.00; 20.12.2024 20,435,024.00; 23.12.2024 13,500,000.00 rubles), together 71,135,024 rubles. The recipient is not named beside the amounts; their position under the ЦБСТ line is as printed.",
+        "source_id": "s0389",
+        "as_of": "2024-12-31"
+      },
+      {
+        "text_ru": "Целевые пожертвования в рамках уставной деятельности 592 889,7",
+        "text_en": "Targeted donations within statutory activity: 592,889.7 (thousand rubles)",
+        "context": "The only line under «Затраты по основному виду деятельности» in the FY2025 notes §3.17.1, p.16 of 20 (read from the page image): 60.4% of the 982,017 thousand used. The notes give no split of receipts by source for 2025.",
+        "source_id": "s0390",
+        "as_of": "2025-12-31"
+      },
+      {
+        "text_ru": "В 2024 г. Фонд не получал государственную помощь в 2024году.",
+        "text_en": "In 2024 the foundation did not receive state aid in 2024 [sic: the year is stated twice].",
+        "context": "FY2024 notes, section 10 «Чистые активы», p.30 of 35 (read from the page image). The foundation's own statement. It says nothing of money from donors that are state bodies or state-owned companies, and «государственная помощь» is not defined in the notes.",
+        "source_id": "s0389",
+        "as_of": "2024-12-31"
+      }
+    ],
     "battlefield_evidence": [],
     "domain_history": [],
     "web": {
@@ -850,6 +893,22 @@
       {
         "text": "Official-list check of 05.10.2026: the US OFAC SDN, EU consolidated financial sanctions, Swiss SECO and UK Sanctions List files (SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)) were searched for 9705196180, 1237700218612; no entry on any of the four prints either identifier. The registry's sanctions[] entry for this record is an OpenSanctions match (topics: sanction; regime: Ukraine (Presidential sanctions decree/list)). Whether this entity is itself designated by any authority is therefore not established by a document read; do not present it as sanctioned until an official entry naming it is read. A listing by a regime this check cannot read (Ukraine's NSDC decree, Canada, Australia, Japan, New Zealand) is not excluded.",
         "source_id": "s0575"
+      },
+      {
+        "text": "Who are the legal entities and individuals behind the 1,099,813 thousand rubles (89.2% of FY2024 receipts) that the notes call «целевые средства от юридических и физических лиц на ведение уставной деятельности»? The filing names none. Founders Фонд «ДАР» and Фонд «Градислава» gave 59,000 thousand together.",
+        "source_id": "s0389"
+      },
+      {
+        "text": "The FY2024 notes (§16) say the foundation owns 100% of ООО «ИНВЕСТМЕНТС»; the registry's parents entry from the ЕГРЮЛ gives 90.91% (s0223). Find which is current and why they differ.",
+        "source_id": "s0389"
+      },
+      {
+        "text": "The FY2025 notes (s0390, read as page images pp.15-16 of 20) give no split of the 984,892 thousand received by source, and no list of donors. The only use-of-funds line is «Целевые пожертвования в рамках уставной деятельности» 592,889.7 thousand of 982,017 used (60.4%); the remaining 389,127 thousand is not broken down in the notes. They also list only ООО «ИНВЕСТМЕНТС» under subsidiaries (no ЦБСТ line). Whether another document states the 2025 donors is open.",
+        "source_id": "s0390"
+      },
+      {
+        "text": "The payables table in the FY2024 notes (§10, p.29 of 35, read from the page image and zoomed) lists four suppliers, ООО Хартия, МЕГАФОН ПАО, АО Технодрон and ООО ФЕНИКС-С, and four amounts (13.57, 9.41, 982.60 and 11.0 thousand rubles; total 1,016.7). The amount column sits one row below the names in the scan, so which amount belongs to which supplier cannot be read with certainty: АО «Технодрон» (ИНН 9704241986, a ЦБСТ-tied manufacturer in the registry) is owed either 9.41 or 982.60 thousand rubles. Find a document that states it (the accounting register, the supplier's own filing) before any use.",
+        "source_id": "s0389"
       }
     ],
     "sources": [],
@@ -869,7 +928,8 @@
       "Full signed ЕГРЮЛ extract read end-to-end (s0221, ul-1237700218612-20260815010023.pdf, pulled 15.08.2026). Confirms ОГРН, registration date, address, English legal name, and GD Бровченко А.Р. (personal ИНН 501105677892) in post since registration. TWO findings beyond field-filling: (1) the extract contains NO учредители section — a Фонд's founders are not published in ЕГРЮЛ at all, so the brief's Фонд «ДАР»/«Градислава» attribution is neither confirmed nor refuted here and needs the Устав instead; logged as an open question rather than left implicitly sourced. (2) ОКВЭД mismatch: the codes this 'foundation for supporting patriotic initiatives' DECLARED at founding (21.03.2023) were 64.99 other financial services, 68.10 buying/selling own real estate, 68.20 property rental — finance and property dealing, not social or patriotic work. The 88.99 social-services code is Rosstat-reported (отчетного типа), added only 02.04.2026, three years later.",
       "SHARED-ADDRESS FINDING (primary-source, both sides): Фонд «Градислава» has been registered at 115172, Москва, наб. Котельническая, д. 25, стр. 1, ОФИС 18 since 05.09.2013 (ГРН 2137799137815). Фонд «Наша Правда» was registered on 21.03.2023 at the same building, стр. 1, ОФИС 18 КОМНАТА 5 — a room inside that same suite. Each address is taken from that fund's OWN signed ЕГРЮЛ extract, so the overlap is documented on both sides rather than inferred from a third-party database. This puts the ЦБСТ-side fund physically inside the office of the fund the brief ties to Medvedev's undisclosed assets — a registry fact, distinct from the FBK/press sourcing that currently carries that link.",
       "2026-09-14: cbst_tie wired from own-channel evidence (msg 421, msg 656) -- entity had 'cbst-core' tier assigned already but no cbst_tie field populated. Both posts name ЦБСТ directly as a co-deliverer alongside the Fund and Единая Россия, not a mere brand mention.",
-      "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions)."
+      "05.10.2026: no official US/EU/CH/UK entry carries this ИНН/ОГРН; sanctions[] left as recorded, open question added (see open_questions).",
+      "2026-10-07: FY2024 notes read in full and against the page images (pp.5, 33, 35): purposes, funding by source, use of funds, the ЦБСТ line and five contributions recorded as marketing_claims; three open questions added."
     ],
     "_verified_against": "s0221 — Фонд «Наша Правда»'s own full signed ЕГРЮЛ extract, pulled 15.08.2026",
     "name_display": "Fond «Nasha Pravda»",
@@ -3899,7 +3959,7 @@
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
     "gur_matches": [],
-    "gur_screened_at": "2026-09-05",
+    "gur_screened_at": "2026-10-09",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -60020,7 +60080,60 @@
     "_verified_against": null,
     "name_display": "IP Popov Aleksandr Sergeevich",
     "aleph_matches": [],
-    "aleph_screened_at": "2026-10-03"
+    "aleph_screened_at": "2026-10-03",
+    "gur_matches": [
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/27073",
+        "caption": "POPOV Yegor Sergeyevich",
+        "own_tin": "1811675248",
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/36704",
+        "caption": "POPOV Stanislav Sergeyevich",
+        "own_tin": "292101487323",
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/36131",
+        "caption": "BOLSHAKOV Aleksandr Sergeyevich",
+        "own_tin": "9933108128",
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/29151",
+        "caption": "ERSHOV Aleksandr Sergeyevich",
+        "own_tin": "502603087834",
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/29434",
+        "caption": "USHKO Aleksandr Sergeyevich",
+        "own_tin": null,
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      }
+    ],
+    "gur_screened_at": "2026-10-07"
   },
   {
     "slug": "ano-nii-dpo",
@@ -60332,7 +60445,9 @@
     "_verified_against": null,
     "name_display": "OOO \"NAUCHNO-ISSLEDOVATELSKIY INSTITUT DOPOLNITELNOGO PROFESSIONALNOGO OBRAZOVANIYA\"",
     "aleph_matches": [],
-    "aleph_screened_at": "2026-10-03"
+    "aleph_screened_at": "2026-10-03",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-09"
   },
   {
     "slug": "fgdr-federatsiya-gonok-dronov-rossii",
@@ -60854,7 +60969,7 @@
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
     "gur_matches": [],
-    "gur_screened_at": "2026-09-05",
+    "gur_screened_at": "2026-10-09",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -77700,6 +77815,27 @@
     },
     "_verified_against": null,
     "name_display": "OOO «AS-KAM»",
+    "opensanctions_matches": [
+      {
+        "match_id": "NK-KCMZQEStT6kQchEwQyDukN",
+        "caption": "Товариство з обмеженою відповідальністю \"АС-КАМ\"",
+        "schema": "Company",
+        "score": 1.0,
+        "topics": [
+          "sanction"
+        ],
+        "source_urls": []
+      },
+      {
+        "match_id": "ru-inn-9715514258",
+        "caption": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"КАМ-ХОЛДИНГ\"",
+        "schema": "Company",
+        "score": 0.7083,
+        "topics": [],
+        "source_urls": []
+      }
+    ],
+    "opensanctions_screened_at": "2026-10-09",
     "aleph_matches": [
       {
         "entity_id": "cad7ab99cbbab6472f54f99bdb2a056bf85913eb.316c69c31113252e33ee78f4dad48d13c4a2032f",
@@ -78016,6 +78152,19 @@
     },
     "_verified_against": null,
     "name_display": "OOO «DIAM-AERO»",
+    "opensanctions_matches": [
+      {
+        "match_id": "NK-dVFJVFX84hhWnxDNoFHjbX",
+        "caption": "Товариство з обмеженою відповідальністю \"ДІАМ-Аеро\"",
+        "schema": "Company",
+        "score": 1.0,
+        "topics": [
+          "sanction"
+        ],
+        "source_urls": []
+      }
+    ],
+    "opensanctions_screened_at": "2026-10-09",
     "aleph_matches": [
       {
         "entity_id": "ru-inn-7811687549.5749af0a3d39a48e9a600c93a3eeb8a6c68ccd28",
@@ -79234,6 +79383,8 @@
     "name_display": "OOO \"ATLANT SERVIS\"",
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-08",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -79351,6 +79502,8 @@
     "name_display": "OOO \"ATLANT LOGISTIK\"",
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-07",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -79473,6 +79626,8 @@
     "name_display": "OOO \"PROM-TEKH\"",
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-09",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -79601,6 +79756,8 @@
     "name_display": "OOO \"NAUCHNO-PROIZVODSTVENNAYA KOMPANIYA \"ZEVS\"",
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-08",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -79957,6 +80114,8 @@
     "name_display": "OOO \"AMETIST\"",
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-07",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -80113,6 +80272,8 @@
       }
     ],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-08",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -80232,6 +80393,8 @@
     "name_display": "OOO PROIZVODSTVENNAYA KOMPANIYA \"STALNOY KUPOL\"",
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-09",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -80400,6 +80563,8 @@
       }
     ],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-08",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -81399,6 +81564,8 @@
     },
     "_verified_against": null,
     "name_display": "OOO «Laboratoriya Yangelya»",
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-10-07",
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
     "gur_matches": [
@@ -81606,6 +81773,8 @@
       }
     ],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-07",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -81796,6 +81965,19 @@
       }
     ],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/11824",
+        "caption": "LIMITED LIABILITY COMPANY LAGGAR PRO",
+        "own_tin": "5250070144",
+        "own_reg_number": "1185275034218",
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan Ukraine",
+        "has_confirmed_listing_language": false
+      }
+    ],
+    "gur_screened_at": "2026-10-07",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -81952,6 +82134,8 @@
       }
     ],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-09",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -82141,6 +82325,8 @@
       }
     ],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-09",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -82337,6 +82523,8 @@
       }
     ],
     "aleph_screened_at": "2026-09-19",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-08",
     "wb_matches": [],
     "wb_screened_at": "2026-09-15",
     "rnp_matches": [],
@@ -88015,7 +88203,30 @@
         "ui_link": "https://aleph.occrp.org/entities/76528533.b34783cd13ebd507d0dc4e7f9a139eee790b6749"
       }
     ],
-    "aleph_screened_at": "2026-09-19"
+    "aleph_screened_at": "2026-09-19",
+    "gur_matches": [
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/13126",
+        "caption": "LIMITED LIABILITY COMPANY PROMAVTO GROUP",
+        "own_tin": "5263093100",
+        "own_reg_number": "1125263004162",
+        "inn_match": true,
+        "ogrn_match": true,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan Ukraine",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/uav/companies/14311",
+        "caption": "LIMITED LIABILITY COMPANY &quot;TIKHIYE KRYLIA GROUP OF COMPANIES&quot;",
+        "own_tin": "7802703755",
+        "own_reg_number": "1207800024662",
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan Ukraine",
+        "has_confirmed_listing_language": false
+      }
+    ],
+    "gur_screened_at": "2026-10-08"
   },
   {
     "slug": "ao-kbp-shipunova",
@@ -89866,6 +90077,17 @@
     ],
     "_verified_against": null,
     "name_display": "AO «Neyrorevolyutsiya»",
+    "opensanctions_matches": [
+      {
+        "match_id": "ru-inn-9701255148",
+        "caption": "Акционерное общество \"Нейрореволюция\"",
+        "schema": "Company",
+        "score": 1.0,
+        "topics": [],
+        "source_urls": []
+      }
+    ],
+    "opensanctions_screened_at": "2026-10-07",
     "aleph_matches": [],
     "aleph_screened_at": "2026-10-03",
     "gur_matches": [],
@@ -90227,6 +90449,8 @@
     ],
     "_verified_against": null,
     "name_display": "AO «STRATOLINK»",
+    "opensanctions_matches": [],
+    "opensanctions_screened_at": "2026-10-09",
     "aleph_matches": [],
     "aleph_screened_at": "2026-10-03",
     "gur_matches": [],
@@ -90386,6 +90610,41 @@
     },
     "_verified_against": null,
     "name_display": "OOO «INTEK PROMYSHLENNYE SISTEMY»",
+    "opensanctions_matches": [
+      {
+        "match_id": "NK-cxJvVdt3n48ZRUqE5DjENU",
+        "caption": "Товариство з обмеженою відповідальністю \"Промислові системи\"",
+        "schema": "Company",
+        "score": 0.7143,
+        "topics": [
+          "poi",
+          "sanction"
+        ],
+        "source_urls": [
+          "https://war-sanctions.gur.gov.ua/en/components/companies/15980"
+        ]
+      },
+      {
+        "match_id": "ru-inn-3305059808",
+        "caption": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМЫШЛЕННЫЕ СИСТЕМЫ\"",
+        "schema": "Company",
+        "score": 0.7143,
+        "topics": [
+          "sanction.linked",
+          "sanction.control"
+        ],
+        "source_urls": []
+      },
+      {
+        "match_id": "ru-inn-7805722837",
+        "caption": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ПРОМЫШЛЕННЫЕ СИСТЕМЫ\"",
+        "schema": "Company",
+        "score": 0.7143,
+        "topics": [],
+        "source_urls": []
+      }
+    ],
+    "opensanctions_screened_at": "2026-10-09",
     "aleph_matches": [
       {
         "entity_id": "ru-inn-7017396681.24d66def9ad767fc05a0804fcc66da60d67cf776",
@@ -90843,7 +91102,60 @@
         "ui_link": "https://aleph.occrp.org/entities/ru-75f309db5e5a863b6ef0a7b0b8974e4f6f693a11.43a3334f316f0ca4f7e2477c9e03e2ff3bd303e4"
       }
     ],
-    "aleph_screened_at": "2026-10-03"
+    "aleph_screened_at": "2026-10-03",
+    "gur_matches": [
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/12215",
+        "caption": "MAVRIN Sergei Petrovich",
+        "own_tin": null,
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/36696",
+        "caption": "TAYAKIN Oleg Borisovich / TARASOV  Oleg",
+        "own_tin": null,
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/560",
+        "caption": "GARIN Oleg Vladimirovich",
+        "own_tin": "180900023533",
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/2553",
+        "caption": "MELNICHENKO Oleg Vladimirovich",
+        "own_tin": "583605899270",
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/18176",
+        "caption": "TSARIK Oleg Vladimirovich",
+        "own_tin": "780432838287",
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      }
+    ],
+    "gur_screened_at": "2026-10-07"
   },
   {
     "slug": "ip-karpushin-aleksandr-aleksandrovich",
@@ -90961,7 +91273,60 @@
     "_corrected": null,
     "name_display": "IP Karpushin Aleksandr Aleksandrovich",
     "aleph_matches": [],
-    "aleph_screened_at": "2026-10-03"
+    "aleph_screened_at": "2026-10-03",
+    "gur_matches": [
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/28505",
+        "caption": "OLEG VYACHESLAVOVICH KARPUSHIN",
+        "own_tin": "772783693278",
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/27743",
+        "caption": "VYALOV Aleksandr Aleksandrovich",
+        "own_tin": null,
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/28215",
+        "caption": "RAKHMANOV Aleksandr Aleksandrovich",
+        "own_tin": null,
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/36142",
+        "caption": "VOLOSOVIK Aleksandr Aleksandrovich",
+        "own_tin": "253609232850",
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/335",
+        "caption": "VEDYAKHIN Aleksandr Aleksandrovich",
+        "own_tin": null,
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      }
+    ],
+    "gur_screened_at": "2026-10-07"
   },
   {
     "slug": "ip-bratenkov-andrey-alekseevich",
@@ -91497,7 +91862,9 @@
         "ui_link": "https://aleph.occrp.org/entities/7ea2417929edceb080513ee699f85c3fdb1650b1.313c6f3870b8640565e4868b6262464bc6d900c7"
       }
     ],
-    "aleph_screened_at": "2026-10-03"
+    "aleph_screened_at": "2026-10-03",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-08"
   },
   {
     "slug": "ooo-stims",
@@ -91770,7 +92137,9 @@
         "ui_link": "https://aleph.occrp.org/entities/185dd817e768b7ce630e30c62b6cbd8216a25567.94a8d9ec72284ec6cef5aff3f8c90c78499b3eaa"
       }
     ],
-    "aleph_screened_at": "2026-10-04"
+    "aleph_screened_at": "2026-10-04",
+    "gur_matches": [],
+    "gur_screened_at": "2026-10-09"
   },
   {
     "slug": "ip-pinimasov-aleksandr-vyacheslavovich",
@@ -91876,7 +92245,60 @@
     "_corrected": "Packet check of 03.10.2026 (issue #20): the dealer named on the maker's certificate is ИП Пинимасов Александр Вячеславович; the packet had attached the dealer role to ИП Пинимасова Елена Александровна. ЕГРИП extract pulled 04.10.2026 (single lookup) and the certificate read from the page.",
     "name_display": "IP Pinimasov Aleksandr Vyacheslavovich",
     "aleph_matches": [],
-    "aleph_screened_at": "2026-10-04"
+    "aleph_screened_at": "2026-10-04",
+    "gur_matches": [
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/6289",
+        "caption": "PREOBRAZHENSKY Aleksandr Vyacheslavovich",
+        "own_tin": null,
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/27404",
+        "caption": "MOZHAEV Alexander Vyacheslavovich",
+        "own_tin": null,
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/801",
+        "caption": "DYOMIN Alexander Vyacheslavovich",
+        "own_tin": "434547765716",
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/28810",
+        "caption": "VOYT Aleksandr Viacheslavovich",
+        "own_tin": null,
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      },
+      {
+        "url": "https://war-sanctions.gur.gov.ua/en/sanctions/persons/5337",
+        "caption": "ALEXANDER Vyacheslavovich Zakharov",
+        "own_tin": "183111242406",
+        "own_reg_number": null,
+        "inn_match": false,
+        "ogrn_match": false,
+        "sanction_jurisdictions_listed": "USA Canada Switzerland EU UK Australia New Zealand Japan",
+        "has_confirmed_listing_language": false
+      }
+    ],
+    "gur_screened_at": "2026-10-07"
   },
   {
     "slug": "ip-korovkin-aleksandr-anatolevich",

@@ -14,6 +14,30 @@
 set -e
 cd "$(git rev-parse --show-toplevel)"
 
+# Syntax parity with CI (user, 08.10.2026). The checks workflow runs Python 3.11 and the Mac runs a newer
+# one, so 3.12-only syntax (a backslash or a reused quote inside an f-string expression) passes here and
+# fails there: 14 pushes went red on one such line before anyone looked. Byte-compile every staged .py
+# file with 3.11; install it once with `brew install python@3.11`. Without it the check is skipped loudly.
+PY311=$(command -v python3.11 || ls /opt/homebrew/bin/python3.11 /usr/local/bin/python3.11 2>/dev/null | head -1 || true)
+STAGED_PY=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.py$' || true)
+if [ -n "$STAGED_PY" ]; then
+  if [ -z "$PY311" ]; then
+    echo "pre-commit: WARNING python3.11 not found, so the CI syntax check is skipped (brew install python@3.11)"
+  else
+    for f in $STAGED_PY; do
+      if ! "$PY311" - "$f" <<'PYEOF'
+import sys
+src = open(sys.argv[1], encoding="utf-8").read()
+compile(src, sys.argv[1], "exec")
+PYEOF
+      then
+        echo "pre-commit: $f does not compile on Python 3.11 (the version CI uses) -- commit blocked"
+        exit 1
+      fi
+    done
+  fi
+fi
+
 FACT_FILES='^data/registry/(entities|people|products|programs|military_units|corrections_entities|corrections_people)\.json$'
 if ! git diff --cached --name-only | grep -qE "$FACT_FILES"; then
   exit 0
