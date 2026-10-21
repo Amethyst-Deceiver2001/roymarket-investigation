@@ -15,10 +15,10 @@ This Mac session ("main") orchestrates; the others run on schedules and talk thr
 | Job | Where, when | Writes |
 |---|---|---|
 | Daily round: capped pulls and re-screens, ingest, first reading | Mac, launchd `ops/launchd/com.roymarket.daily-round.plist`, 09:15 local (Python needs Full Disk Access: the repo is in ~/Downloads) | mechanical outputs + `data/watch/daily/<date>.md`, committed and pushed by `daily_mac.py --publish` |
-| Wayback batch | GitHub Actions `wayback.yml`, 01:23 UTC nightly | `data/registry/source_archives.json` on main |
+| Wayback batch | GitHub Actions `wayback.yml`, 01:23 UTC nightly (**no runs since 10.10.2026: Actions failing without a runner; see `notes/repo_review_20261021.md`**) | `data/registry/source_archives.json` on main |
 | Sanctions-list watch | GitHub Actions, Mondays | `watch/sanctions` branch, an issue on change |
-| Status check (board artifact) | cloud routine, 10:05 Berlin; the board itself is built by the Mac round (`daily_mac.py` writes `data/watch/status/board.json`, #27) | cloud step builds the page from `board.json` and publishes it; replies in its thread only if something failed |
-| Weekly news and channel scan | cloud routine, Mondays | `data/watch/developments.json`, `data/watch/reports/` |
+| Status board | built by the Mac round (`daily_mac.py` writes `data/watch/status/board.json`); viewed locally with `exhibits/serve_status_board.py`. The cloud routine and the artifact were deleted 05.10.2026 | `data/watch/status/board.json` |
+| Weekly news and channel scan | on request only since 05.10.2026 (issue #31); no scheduled cloud task exists | `data/watch/developments.json`, `data/watch/reports/` |
 | Reading documents, writing corrections, closing developments | main session, on the user's go-ahead | `corrections_*.json` and hand-held registry files |
 
 **First reading moved onto the Mac round, cloud routine retired (issue #30, 05.10.2026).** The cloud's 11:47 Berlin first-reading routine read each day's pulls and wrote proposed corrections to `notes/first_reading/<date>.md` — but main re-reads every document in full anyway before applying a correction (the hard rule below), so that cloud read was pure duplication of a step `daily_mac.py` already does locally (`first_reading.py export` then `read`, producing the same worksheet beside the registry). The cloud routine and the `pull-inbox` branch it depended on are retired; `daily_mac.py` no longer pushes to `pull-inbox` (`first_reading.py export` runs `--local-dir` only now). A missed Mac day means first reading waits for the next one — accepted, since nothing here is applied without a human reading the document regardless of which session did the first pass.
@@ -523,62 +523,7 @@ are in `STYLE_GUIDE.md` §3.1.
 
 **Withdrawn at user direction, not retrofitted.** The case pages, the company/person/product profiles, the profile index, the old landing page and `story.html` moved from `docs/` to `exhibits/archive/site_2026-10-02/`; their generators (`build_case_pages.py`, `build_company_profile.py`, `build_person_profile.py`, `build_product_profile.py`, `build_profile_index.py`) and `templates/` moved to `scripts/archive/`. Do not run or extend them. New reader pages are built after the design system redo and a new landing page (`notes/rebuild_plan.md`, track A), and carry no internal notation: no source ids, slugs, field names or file names; sources are cited in plain words with a public link. Shared display helpers (`ru_date`, `source_type_label`) are in `scripts/display_helpers.py`. The text below describes the archived generator and is kept for its rules on images and PII fields, which still apply to new pages.
 
-### Archived: how the profile generator worked
-
-`docs/profiles/<slug>.{html,md}` are per-entity profile pages, generated from
-`data/registry/` by `scripts/build_company_profile.py` — not edited by hand
-(a regeneration would silently discard hand edits, the same reason
-`corrections.json` exists for `entities.json`/`people.json`). Run it after
-any registry change that touches a profiled entity:
-
-```
-python3 scripts/build_company_profile.py --slug ooo-skb-piranya
-python3 scripts/build_company_profile.py --inn 7300024069   # equivalent
-python3 scripts/build_company_profile.py --all              # every non-adjacent entity
-```
-
-Local file processing over `data/registry/*.json` — no network calls, safe to
-run directly/repeatedly. Always follow with
-`python3 scripts/check_tag_balance.py docs/profiles/<slug>.html`.
-
-`templates/company_profile.{html,md}.jinja2` are the two Jinja2 templates
-(one script, two outputs — the section order and field coverage are kept in
-sync between them by construction, not by hand). The HTML page links
-`docs/assets/profile.css`, a standalone copy of `docs/index.html`'s design
-tokens/classes (same `--paper`/`--ink`/`.tag`/`.t-doc` etc. — kept in sync by
-hand since profile pages didn't exist when `index.html`'s `<style>` block was
-written) plus profile-specific additions (`.person-card`, `.meta-grid`, …).
-
-Follows `STYLE_GUIDE.md`'s expert-witness/forensic register by construction:
-Latin name primary with the Cyrillic ФИО/name shown alongside (never hidden
-in a tooltip), legal-form abbreviation transliterated not translated, ИНН/
-ОГРН as bare digits, and — the important one — **no internal notation in
-visible prose**. A claim is cited by a short bracketed `[sNNNN]` id resolved
-in the page's own "Sources cited" table (locator + captured/as-of dates, no
-sha256 — the hash belongs on a site-wide provenance page this project
-doesn't have yet, not repeated on every profile), never by printing a raw
-`source_id`/registry-field name. A person's freeform `notes` field is **not**
-dumped into the page — it's an internal working note (often containing
-passport/phone numbers alongside research-process commentary); only the
-structured PII fields already vetted under the PII policy below (`dob`,
-`birthplace`, `address`, `inn_personal`) render on the page.
-
-**Images**: `entities.json`'s `images[]` and `people.json`'s `photo` already
-point at `docs/images/<file>` (the publish-ready copy) — `data/sources/` is
-the gitignored raw archive, not part of the published site. The HTML output
-only embeds an `<img>` when a `docs/images/` copy actually exists (checked at
-build time); otherwise it falls back to a text citation so a photo that's
-only in `data/sources/` doesn't render as a broken image. The Markdown
-output isn't published, so it links `data/sources/` paths directly. This
-means a fresh `battlefield_evidence[]`/`images[]` entry (e.g. from
-`scripts/tg_media_pull.py`) needs its file copied into `docs/images/` before
-it'll actually appear in the HTML profile — pulling the media isn't enough
-on its own.
-
-Ground/satellite views of a facility are just `images[]` entries distinguished
-by caption text (e.g. `_ground.jpg`/`_satellite.jpg` naming, already used at
-`ooo-aeromaks`) — there's no separate schema field for them.
-
+The generator's description (Jinja templates, `[sNNNN]` citation style, image handling) moved to `notes/reference/archived_profile_generator.md`. Rules from it that still apply elsewhere: a person's free-text `notes` field is never put on a page (it holds passport and phone numbers); only the structured PII fields vetted under the PII section render; an image is embedded only if a `docs/images/` copy exists, and `docs/images/` is public (see Media).
 
 ### Product profiles and `relationship_type`
 

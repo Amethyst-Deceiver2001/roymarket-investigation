@@ -337,14 +337,15 @@ Waiting on the user:
 - Review the Гагаринг evidence-packet visual (private Artifact, built 04.10.2026 on the РОЙ.МАРКЕТ Reader System tokens, from `notes/packets/ooo-gagaring.md`): https://claude.ai/artifact/J9u4BinqBuzt1tKDrLPQvS — not shared, nothing checked against it yet. If it holds up, the other six sanctions-gap packets (Гаскар, СТИМС, Смарт Текнолоджис, Киловатт, Экспломет, Метаскан) go out the same way.
 - Proposed (05.10.2026, held off per the infrastructure freeze — needs an explicit go-ahead): extend `media_triage.py`'s `process` step to run `id_patterns.py`'s existing role+name regex over each photo's OCR text, flagging a "document"-class image whose OCR contains a capitalized ФИО pattern as priority. Reuses OCR already being captured, no new model. Scoped during the 320-item kb_spektr/gaskargroup/ru3mx/kotlin_novator/bpryarl triage pass, which found two named-person leads (Братеньков's medal, Шингареев's award slide) by manual sheet review that this would have surfaced automatically — but it's new tooling, so it waits for the freeze to lift.
 
-## Current state (queried 2026-10-02, after the merge of PRs #3–#6)
+## Current state (queried 2026-10-21, from the remote repo, no local sources)
 
-252 entities (73 with a ЦБСТ tie edge), 440 people, 8,912 sources, 23 quotes,
-44 open questions; graph schema v12, 1,261 nodes, 2,182 edges, 115 unresolved.
-`check_registry.py`: 0 errors, 24 warnings; all tests pass. Two product records
-(«Булат»: 6 listings, 17 deliveries; «Капюшон»: 2 listings, 8 deliveries).
-Status board: 188 of 248 entities and 227 of 433 people carry a flag; today's
-pull queue is 2 ЕГРИП extracts and 8 БФО filings (33 БФО missing in all).
+256 entity records (252 live), 442 people (435 live), 9,229 sources, 56 quotes,
+88 media records, 42 deliveries, 44 open questions; graph schema v13, 1,266 nodes
+(75 marked sanctioned: a named regime is required, fixed 21.10), 2,187 edges,
+114 unresolved. `check_registry.py --no-local-files`: 0 errors, 26 warnings; all
+test files pass. Last Mac round report 06.10; Actions has run nothing since 10.10
+(see `repo_review_20261021.md`). Story 1 is drafted in full and waits on its
+second-person check and the personal-data review.
 
 Held, never committed until the user says so: `notes/reference/script_notes.md`
 (modified), `.claude/agents/product-researcher.md`, `scripts/verify_findings.py`

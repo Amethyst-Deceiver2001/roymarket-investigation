@@ -60,6 +60,8 @@ network settings (Allowed domains), or accept a pause.
 
 ## 2. Data quality: things a hostile lawyer would find
 
+(Done 21.10: item 1 is fixed where it leaked, see the end of this file.)
+
 1. **40 `sanctions[]` entries with `regime: null`** (23 entities, 17 people),
    all OpenSanctions matches. Many carry only the topics `sanction.linked` /
    `sanction.control`: tied to a listed party, not listed. Examples:
@@ -89,10 +91,11 @@ network settings (Allowed domains), or accept a pause.
   them out of `docs/` (and repointing `people.json` / `entities.json` image
   paths) takes them off the public site; git history keeps them. Needs the
   user's go-ahead (`docs/`).
-- **CLAUDE.md is 80 KB** (roughly 20k tokens loaded by every session). About a
-  third is history and archived-generator description (profiles, case pages,
-  explorer). Moving that to `notes/reference/` would cut the per-session cost
-  #31 worried about, without dropping a rule.
+- **CLAUDE.md is 80 KB** (roughly 20k tokens loaded by every session). Measured
+  on 21.10: the archived-generator description was only 2.7 KB and is moved to
+  `notes/reference/archived_profile_generator.md`; the rest is live rules written as
+  long paragraphs. A real cut means rewriting rules as short lists (one section at
+  a time, with the user reading each), not moving history.
 - **Branches:** `pull-inbox` (retired 05.10); `claude/project-thread-*` ×5 and
   `claude/status-board-copy-review` (merged or superseded, 61-169 behind);
   `copilot/look-at-repo-and-report-back` (an unreviewed B6 neighbourhood
@@ -129,10 +132,11 @@ network settings (Allowed domains), or accept a pause.
    (oq020)? A "core" packet (ЦБСТ, the two Спецтех, МПТМ, Наша Правда) is the
    most direct ask the investigation can make, and the five-company set skips
    it because non-profits have no revenue.
-3. **Concealment timeline.** 14 registry entities have their ЕГРЮЛ shareholder
-   section closed, each with a dated record: Тримикс 01.11.2024, ЦАСД Демянск
+3. **Concealment timeline** (built: `register_closures_and_packet_outlines_20261021.md`).
+   12 registry entities have their ЕГРЮЛ participants' section closed (3 more the
+   director's), each with a dated record: Тримикс 01.11.2024, ЦАСД Демянск
    04.07.2025, Ушкуйник 15.09.2025, Уралдронзавод 16.06.2026, МПТМ 15.07.2026,
-   both Спецтех and Кайсант, Рустехдрон and others by 07.09.2026. Set against
+   Рустехдрон 12.03.2025; both Спецтех, Кайсант and others first seen closed at the 07.09.2026 pull. Set against
    listing dates, press coverage and ЦБСТ milestones, the dates may show
    companies closing their registers after attention. Each date is already
    read from a document; this is analysis over the registry, possible offline.
@@ -176,3 +180,17 @@ watches.
 
 Story 1 stays where the user left it on 09.10: all chapters drafted, waiting
 on the second-person check, the personal-data review and right of reply.
+
+## 6. Done in this session (21.10.2026)
+
+- **Sanctioned mark fixed** (`graph_contract.has_designation`, used by the graph builder
+  and the status board): a record is `sanctioned` only if a `sanctions[]` entry names a
+  regime. Graph nodes marked sanctioned fell from 103 to 75 (28 aggregator-only
+  records, e.g. both Спецтех, Левит, Безруков); nothing else in the graph changed.
+  The 40 regime-less entries stay in `sanctions[]` (a data move would be a schema
+  change). `data/watch/status/board.json` was not regenerated here (no sources); the
+  next Mac round will. Exports and packets read `regime` directly and already skip
+  null regimes.
+- Closure timeline and two packet outlines: `register_closures_and_packet_outlines_20261021.md`.
+- CLAUDE.md: coordination table corrected; archived-generator text moved.
+- Plan's "Current state" refreshed.

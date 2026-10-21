@@ -21,7 +21,7 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from graph_contract import CONFIDENCE_GRADE, GRAPH_SCHEMA_VERSION, CBST_TIE_CONFIDENCE, source_grade, build_view_projections, sale_detail, PARTNER_KIND_EDGE
+from graph_contract import has_designation, CONFIDENCE_GRADE, GRAPH_SCHEMA_VERSION, CBST_TIE_CONFIDENCE, source_grade, build_view_projections, sale_detail, PARTNER_KIND_EDGE
 
 REPO = Path(__file__).resolve().parent.parent
 REG = REPO / "data" / "registry"
@@ -337,14 +337,14 @@ def build_graph(entities: list[dict], people: list[dict],
             entity["slug"], kind="entity",
             label=entity.get("name_ru") or entity.get("brand_ru") or entity["slug"],
             name_latin=entity.get("name_latin"), inn=entity.get("inn"),
-            tier=entity.get("tier"), sanctioned=bool(entity.get("sanctions")),
+            tier=entity.get("tier"), sanctioned=has_designation(entity),
             legal_form=entity.get("legal_form"),
         )
     for person in people:
         add_node(
             person["slug"], kind="person",
             label=person.get("fio_ru") or person["slug"],
-            name_latin=person.get("name_latin"), sanctioned=bool(person.get("sanctions")),
+            name_latin=person.get("name_latin"), sanctioned=has_designation(person),
         )
     for unit in military_units:
         add_node(

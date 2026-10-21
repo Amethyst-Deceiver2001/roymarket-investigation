@@ -387,6 +387,13 @@ class RelationshipGraphTests(unittest.TestCase):
             if not edge["source_id"] and not edge["confidence"]:
                 self.assertEqual(edge["grade"], "open")
 
+    def test_sanctioned_mark_needs_a_named_regime(self):
+        """An aggregator match with regime null is a lead; only a named regime draws the mark."""
+        from graph_contract import has_designation
+        self.assertFalse(has_designation({"sanctions": []}))
+        self.assertFalse(has_designation({"sanctions": [{"regime": None, "note": "OpenSanctions match"}]}))
+        self.assertTrue(has_designation({"sanctions": [{"regime": None}, {"regime": ["European Union"]}]}))
+
 
 if __name__ == "__main__":
     unittest.main()
