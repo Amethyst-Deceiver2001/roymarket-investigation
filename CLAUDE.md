@@ -12,6 +12,8 @@ ordered work, decisions waiting on the user, standing policy; the old 4,284-line
 
 This Mac session ("main") orchestrates; the others run on schedules and talk through the repo, never by waiting on a cross-session reply (cloud sessions cannot message back, and session ids go stale). Details: `data/watch/README.md`.
 
+**Messages between sessions (user, 22.10.2026)** follow the seven-point protocol in `data/watch/README.md` § "Coordination between sessions": the repo is the record, a message is only a one-line nudge, and nothing enters the registry on a message alone.
+
 | Job | Where, when | Writes |
 |---|---|---|
 | Daily round: capped pulls and re-screens, ingest, first reading | Mac, launchd `ops/launchd/com.roymarket.daily-round.plist`, 09:15 local (Python needs Full Disk Access: the repo is in ~/Downloads) | mechanical outputs + `data/watch/daily/<date>.md`, committed and pushed by `daily_mac.py --publish` |
