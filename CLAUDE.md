@@ -10,9 +10,9 @@ ordered work, decisions waiting on the user, standing policy; the old 4,284-line
 
 ## Coordination: who does what, and where state lives (user, 03.10.2026)
 
-This Mac session ("main") orchestrates; the others run on schedules and talk through the repo, never by waiting on a cross-session reply (cloud sessions cannot message back, and session ids go stale). Details: `data/watch/README.md`.
+This Mac session ("main") orchestrates; the others run on schedules and talk through the repo, never by waiting on a cross-session reply (session ids go stale; messages between sessions are allowed since 22.10.2026, see below). Details: `data/watch/README.md`.
 
-**Messages between sessions (user, 22.10.2026)** follow the seven-point protocol in `data/watch/README.md` § "Coordination between sessions": the repo is the record, a message is only a one-line nudge, and nothing enters the registry on a message alone.
+**Messages between sessions (user, 22.10.2026)** follow the three-rule protocol in `data/watch/README.md` § "Coordination between sessions": the repo is the record, a message is only a one-line nudge, and nothing enters the registry on a message alone.
 
 | Job | Where, when | Writes |
 |---|---|---|
@@ -26,6 +26,8 @@ This Mac session ("main") orchestrates; the others run on schedules and talk thr
 **First reading moved onto the Mac round, cloud routine retired (issue #30, 05.10.2026).** The cloud's 11:47 Berlin first-reading routine read each day's pulls and wrote proposed corrections to `notes/first_reading/<date>.md` — but main re-reads every document in full anyway before applying a correction (the hard rule below), so that cloud read was pure duplication of a step `daily_mac.py` already does locally (`first_reading.py export` then `read`, producing the same worksheet beside the registry). The cloud routine and the `pull-inbox` branch it depended on are retired; `daily_mac.py` no longer pushes to `pull-inbox` (`first_reading.py export` runs `--local-dir` only now). A missed Mac day means first reading waits for the next one — accepted, since nothing here is applied without a human reading the document regardless of which session did the first pass.
 
 **Infrastructure freeze (user, 04.10.2026, on issue #20):** for two to three weeks, only bug fixes and fixes to communication between jobs. No new tooling, schemas or redesigns. Work goes to the checked sanctions-gap report: registry corrections from `notes/packet_verification_20261003.md`, then regenerate the six packets. The media-law and PII review is not started yet (user: "not yet"). **Lifted on 05.10.2026 for two pieces, at the user's direction:** unit name normalization (see Products section, "Unit names") and the status board's extra parameters and local server; the freeze otherwise stands.
+
+**Freeze lifted (user, 22.10.2026): the infrastructure freeze is off.** New tooling, schemas and redesigns are allowed again; the media-law and PII review is still not started unless the user says otherwise.
 
 **Commits (user, 04.10.2026):** the main session commits and pushes without a per-commit go-ahead when the change is confined to `data/registry/`, `notes/`, `exhibits/` generators and their tests, and the timestamp folders, `check_registry.py` shows 0 errors, the tests it touches pass, and only those paths are staged. Still needs an explicit go-ahead: anything under `docs/` (Pages is public), anything sent outside the project, and any change to a job's schedule, cap or workflow. Never stage the untracked files listed in the session notes.
 
