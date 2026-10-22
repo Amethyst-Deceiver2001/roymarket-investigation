@@ -38,3 +38,15 @@ When the user runs a pull command from the status board by hand, nothing else ha
 - `python3 scripts/daily_mac.py --publish` runs the rest (screens, the ingest chain, first-reading export and worksheet) and commits the mechanical outputs. Files a manual pull leaves modified (`_pull_misses.json`, regenerated registry files) do not block it; a corrections file, a hand-held registry file or a script does.
 - If one step of the ingest chain fails, the later ones are skipped and the report names it: the registry is never regenerated from a stale manifest.
 - The filings are then read in the main session (`data/sources/_inbox/<date>/reading.md`); a pulled file stays a `bfo_unread` flag on the board until its figures are in `financials[]`.
+
+## Coordination between sessions (user, 22.10.2026)
+
+The protocol for every session that touches this repo: the Mac ("main"), git-only cloud sessions and Project threads. It extends "Push first, ping second" above.
+
+1. **The repo is the record.** Decisions, hand-offs and open items go in a notes file or a GitHub issue. A message is only a nudge ("look at X"); nothing is applied to the registry on a message alone.
+2. **Addressing.** Take the receiver's current name from `ListAgents` and check it again just before sending. If the other session is not listed, write a repo note instead of waiting.
+3. **Message format, one line:** `[from] → [to]: [topic], [what is needed], [where: branch/path/issue]`. Example: "2b → main: PRESS captures ready, see notes/needs_mac_20261022.md, branch local/needs-mac-20261022".
+4. **Roles.** Only the main session writes registry facts, from original documents read in full. Git-only sessions work on branches and PRs and never run pulls, `daily_mac.py`, the timestamp jobs or `inventory_sources.py`. Anything under `docs/` or sent outside the project needs the user's go-ahead.
+5. **File transfer.** Text and JSON move by branch or PR. Source files stay out of git and move by AirDrop, scp or a private cloud folder; each batch carries a `SHA256SUMS` file and uses `PRESS_<YYYYMMDD>_<outlet>-<id>-<slug>` naming. No `sNNNN` ids are assigned off the main machine.
+6. **Acknowledgement.** The receiver answers in one line: "read, will do" or "can't, because…". With no answer, do not resend for 24 hours; write a note or an issue instead.
+7. **Leads versus facts.** Anything a Project or git-only session produces from summaries is a lead. The main session reads the original before it becomes a fact.
