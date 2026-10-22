@@ -84,7 +84,12 @@
       "sources": [],
       "why": [
         "2026-09-21: added after the user flagged beastfpv.ru directly -- confirms it as a real, checksum-valid legal entity selling GNB/GAONENG batteries (missed by an initial site-search check that only indexed by product page content, not brand name) and additionally makes its own remote FPV-control product, BEASTCONTROL. Same day: user flagged that the adjacent-not-ЦБСТ «Архангел» network's own build-instruction post specifies a BEASTFPV flight-controller stack for its combat drone -- added as battlefield_evidence, and @beastfpvru added to the scraping watchlist."
-      ]
+      ],
+      "sanctions_review": {
+        "as_of": "2026-10-22",
+        "outcome": "closed",
+        "note": "ГУР screen of 06.10.2026: 1 profile returned, not ID-confirmed (inn_match and ogrn_match false). The caption is «GABITOV Marat Khanbalevich» (ИНН 501003306539): same surname only, different first name, patronymic and ИНН. Namesake noise, not promoted to sanctions[]. Reviewed from the screen's stored match record (captions and the identifiers each profile prints), as for ИП Коровкин on 06.10.2026; no profile page was re-opened. OpenSanctions not yet screened for this record; Aleph hits, if any, are a separate review."
+      }
     },
     {
       "slug": "ip-popov-aleksandr-sergeevich",
@@ -137,7 +142,12 @@
       "sources": [],
       "why": [
         "2026-09-21: added while re-checking the GAONENG battery's Russian retail footprint at the user's request -- a real, checksum-valid legal entity (ИНН/ОГРНИП both pass check_registry.py's validators) behind a second documented brand outlet, distinct from ooo-boevye-tekhnologii."
-      ]
+      ],
+      "sanctions_review": {
+        "as_of": "2026-10-22",
+        "outcome": "closed",
+        "note": "ГУР screen of 07.10.2026: 5 profiles returned, none ID-confirmed (inn_match and ogrn_match false on all five). The captions are «POPOV Yegor Sergeyevich» (ИНН 1811675248), «POPOV Stanislav Sergeyevich» (ИНН 292101487323), «BOLSHAKOV Aleksandr Sergeyevich» (ИНН 9933108128), «ERSHOV Aleksandr Sergeyevich» (ИНН 502603087834) and «USHKO Aleksandr Sergeyevich» (no ИНН printed): each shares only the surname or the first name and patronymic with this sole trader and prints a different ИНН or none. Namesake noise, not promoted to sanctions[]. Reviewed from the screen's stored match record (captions and the identifiers each profile prints), as for ИП Коровкин on 06.10.2026; no profile page was re-opened. OpenSanctions not yet screened for this record; Aleph hits, if any, are a separate review."
+      }
     },
     {
       "slug": "ano-nii-dpo",
@@ -5260,7 +5270,12 @@
           "revenue": 3618000.0,
           "profit": 176000.0
         }
-      ]
+      ],
+      "sanctions_review": {
+        "as_of": "2026-10-22",
+        "outcome": "closed",
+        "note": "ГУР screen of 07.10.2026: 1 profile returned, not ID-confirmed: «LIMITED LIABILITY COMPANY LAGGAR PRO» (uav/companies/11824), ИНН 5250070144, ОГРН 1185275034218, a different company; the search matched on «Pro» only. Namesake noise, not promoted to sanctions[]. Reviewed from the screen's stored match record (captions and the identifiers each profile prints), as for ИП Коровкин on 06.10.2026; no profile page was re-opened. OpenSanctions not yet screened for this record; Aleph hits, if any, are a separate review."
+      }
     },
     {
       "slug": "ooo-ntc-arkodim",
@@ -5602,6 +5617,11 @@
         "as_of": "2026-09-15",
         "outcome": "closed",
         "note": "All 4 filings on record (FY2022-2025, s7495-s7498) directly read via pdftotext: FY2022-2024 show dash/blank Выручка+Чистая прибыль on the standard P&L sheet; FY2025 is a simplified balance-only filing with no P&L section at all. Confirmed genuine dormant non-profit association, not a parser gap."
+      },
+      "sanctions_review": {
+        "as_of": "2026-10-22",
+        "outcome": "closed",
+        "note": "ГУР screen of 06.10.2026: 1 profile returned, not ID-confirmed: «ASSOCIATION SOUTH URALS INDUSTRIAL CLUSTER OF UNMANNED AERIAL VEHICLES» (uav/companies/15021), ИНН 7451471189, ОГРН 1247400031746, a different association; the search matched on the word «association» only. Namesake noise, not promoted to sanctions[]. Reviewed from the screen's stored match record (captions and the identifiers each profile prints), as for ИП Коровкин on 06.10.2026; no profile page was re-opened. OpenSanctions not yet screened for this record; Aleph hits, if any, are a separate review."
       }
     },
     {
@@ -8173,6 +8193,11 @@
         "as_of": "2026-09-30",
         "outcome": "closed",
         "note": "Supplier search found contracts (archived as supplier-search pages) but the entity was judged not to be an entity of interest, so the contracts were deliberately not fetched."
+      },
+      "sanctions_review": {
+        "as_of": "2026-10-22",
+        "outcome": "closed",
+        "note": "ГУР screen of 06.10.2026: 1 profile returned, not ID-confirmed: «LIMITED LIABILITY COMPANY DIGITAL DEVELOPMENT AGENCY» (uav/companies/15554), ИНН 5190091997, ОГРН 1225100003831, a different organisation (a Murmansk-region ИНН); the search matched on the word «development» only. Namesake noise, not promoted to sanctions[]. Reviewed from the screen's stored match record (captions and the identifiers each profile prints), as for ИП Коровкин on 06.10.2026; no profile page was re-opened. OpenSanctions not yet screened for this record; Aleph hits, if any, are a separate review."
       }
     },
     {
@@ -10294,6 +10319,11 @@
           }
         ],
         "other": []
+      },
+      "sanctions_review": {
+        "as_of": "2026-10-22",
+        "outcome": "closed",
+        "note": "ГУР screen of 07.10.2026: 5 profiles returned, none ID-confirmed (inn_match and ogrn_match false on all five). The captions are «MAVRIN Sergei Petrovich» (no ИНН printed; same surname, different first name and patronymic), «TAYAKIN Oleg Borisovich / TARASOV Oleg» (no ИНН), «GARIN Oleg Vladimirovich» (ИНН 180900023533), «MELNICHENKO Oleg Vladimirovich» (ИНН 583605899270) and «TSARIK Oleg Vladimirovich» (ИНН 780432838287): each shares only the surname or the first name and patronymic and prints a different ИНН or none. Namesake noise, not promoted to sanctions[]. Reviewed from the screen's stored match record (captions and the identifiers each profile prints), as for ИП Коровкин on 06.10.2026; no profile page was re-opened. OpenSanctions not yet screened for this record; Aleph hits, if any, are a separate review."
       }
     },
     {
@@ -10369,6 +10399,11 @@
       "okved_mismatch": {
         "mismatch": false,
         "note": "Main ОКВЭД 30.30 and 30.30.6 (unmanned aircraft systems) are consistent with drone parts; a broad list proves nothing about actual activity."
+      },
+      "sanctions_review": {
+        "as_of": "2026-10-22",
+        "outcome": "closed",
+        "note": "ГУР screen of 07.10.2026: 5 profiles returned, none ID-confirmed (inn_match and ogrn_match false on all five). The captions are «OLEG VYACHESLAVOVICH KARPUSHIN» (ИНН 772783693278; same surname, different first name, patronymic and ИНН), «VYALOV Aleksandr Aleksandrovich», «RAKHMANOV Aleksandr Aleksandrovich», «VEDYAKHIN Aleksandr Aleksandrovich» (no ИНН printed) and «VOLOSOVIK Aleksandr Aleksandrovich» (ИНН 253609232850): each shares only the surname or the first name and patronymic and prints a different ИНН or none. Namesake noise, not promoted to sanctions[]. Reviewed from the screen's stored match record (captions and the identifiers each profile prints), as for ИП Коровкин on 06.10.2026; no profile page was re-opened. OpenSanctions not yet screened for this record; Aleph hits, if any, are a separate review."
       }
     },
     {
@@ -10747,7 +10782,12 @@
         "other": []
       },
       "why": "Packet check of 03.10.2026 (issue #20): the dealer named on the maker's certificate is ИП Пинимасов Александр Вячеславович; the packet had attached the dealer role to ИП Пинимасова Елена Александровна. ЕГРИП extract pulled 04.10.2026 (single lookup) and the certificate read from the page.",
-      "verified_against": "s9119 (ЕГРИП extract of 04.10.2026), s0537 (dealer certificate №2106/2024)."
+      "verified_against": "s9119 (ЕГРИП extract of 04.10.2026), s0537 (dealer certificate №2106/2024).",
+      "sanctions_review": {
+        "as_of": "2026-10-22",
+        "outcome": "closed",
+        "note": "ГУР screen of 07.10.2026: 5 profiles returned, none ID-confirmed (inn_match and ogrn_match false on all five). The captions are «PREOBRAZHENSKY Aleksandr Vyacheslavovich», «MOZHAEV Alexander Vyacheslavovich», «VOYT Aleksandr Viacheslavovich» (no ИНН printed), «DYOMIN Alexander Vyacheslavovich» (ИНН 434547765716) and «ALEXANDER Vyacheslavovich Zakharov» (ИНН 183111242406): each shares only the first name and patronymic and prints a different ИНН or none. Namesake noise, not promoted to sanctions[]. Reviewed from the screen's stored match record (captions and the identifiers each profile prints), as for ИП Коровкин on 06.10.2026; no profile page was re-opened. OpenSanctions not yet screened for this record; Aleph hits, if any, are a separate review."
+      }
     },
     {
       "slug": "ip-korovkin-aleksandr-anatolevich",
@@ -10955,7 +10995,12 @@
           "as_of": "2026-08-25",
           "note": "Wildberries seller 250074680: the account's legal information reads «Индивидуальный предприниматель Артемьева Виктория Михайловна», ИНН 350102453754, ОГРНИП 325784700034333, and its trademark field reads «madro - официальный дилер 3mx». The brand's website madro.ru prints no legal entity (s9311, s9312)."
         }
-      ]
+      ],
+      "sanctions_review": {
+        "as_of": "2026-10-22",
+        "outcome": "closed",
+        "note": "ГУР screen of 06.10.2026: 5 profiles returned, none ID-confirmed (inn_match and ogrn_match false on all five). The captions are «NIKIFOROVA Victoria Vitalievna», «SERDYUKOVA Viktoria Alexandrovna», «DAINEKO Victoria Petrovna», «SAVRUK Viktoriya Orestovna» and «ABRAMCHENKO Viktoriya Valerievna», none printing an ИНН: each shares only the first name with this sole trader. Namesake noise, not promoted to sanctions[]. Reviewed from the screen's stored match record (captions and the identifiers each profile prints), as for ИП Коровкин on 06.10.2026; no profile page was re-opened. OpenSanctions not yet screened for this record; Aleph hits, if any, are a separate review."
+      }
     }
   ],
   "entities": {
