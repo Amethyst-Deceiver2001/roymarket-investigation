@@ -15,10 +15,10 @@ This Mac session ("main") orchestrates; the others run on schedules and talk thr
 | Job | Where, when | Writes |
 |---|---|---|
 | Daily round: capped pulls and re-screens, ingest, first reading | Mac, launchd `ops/launchd/com.roymarket.daily-round.plist`, 09:15 local (Python needs Full Disk Access: the repo is in ~/Downloads) | mechanical outputs + `data/watch/daily/<date>.md`, committed and pushed by `daily_mac.py --publish` |
-| Wayback batch | GitHub Actions `wayback.yml`, 01:23 UTC nightly | `data/registry/source_archives.json` on main |
+| Wayback batch | GitHub Actions `wayback.yml`, Wednesdays 01:23 UTC, 40 URLs, 60-minute cap (user, 21.10.2026; nightly runs of 5 h had used the free-tier minutes and Actions has been failing without a runner since 10.10, see `notes/repo_review_20261021.md`) | `data/registry/source_archives.json` on main |
 | Sanctions-list watch | GitHub Actions, Mondays | `watch/sanctions` branch, an issue on change |
-| Status check (board artifact) | cloud routine, 10:05 Berlin; the board itself is built by the Mac round (`daily_mac.py` writes `data/watch/status/board.json`, #27) | cloud step builds the page from `board.json` and publishes it; replies in its thread only if something failed |
-| Weekly news and channel scan | cloud routine, Mondays | `data/watch/developments.json`, `data/watch/reports/` |
+| Status board | built by the Mac round (`daily_mac.py` writes `data/watch/status/board.json`); viewed locally with `exhibits/serve_status_board.py`. The cloud routine and the artifact were deleted 05.10.2026 | `data/watch/status/board.json` |
+| Weekly news and channel scan | on request only since 05.10.2026 (issue #31); no scheduled cloud task exists | `data/watch/developments.json`, `data/watch/reports/` |
 | Reading documents, writing corrections, closing developments | main session, on the user's go-ahead | `corrections_*.json` and hand-held registry files |
 
 **First reading moved onto the Mac round, cloud routine retired (issue #30, 05.10.2026).** The cloud's 11:47 Berlin first-reading routine read each day's pulls and wrote proposed corrections to `notes/first_reading/<date>.md` — but main re-reads every document in full anyway before applying a correction (the hard rule below), so that cloud read was pure duplication of a step `daily_mac.py` already does locally (`first_reading.py export` then `read`, producing the same worksheet beside the registry). The cloud routine and the `pull-inbox` branch it depended on are retired; `daily_mac.py` no longer pushes to `pull-inbox` (`first_reading.py export` runs `--local-dir` only now). A missed Mac day means first reading waits for the next one — accepted, since nothing here is applied without a human reading the document regardless of which session did the first pass.
@@ -156,7 +156,7 @@ case this policy exists for, even against an unauthenticated open API.
 - Record a closed zakupki triage in the structured `zakupki_review` field (`{as_of, outcome: wired|partial|closed, note}`), not only in prose; trust `zakupki_coverage.py --gaps-only` over your own file counts.
 - Any local job over ~100 files or ~2 minutes (user, 04.10.2026: background it, no handoff): say so up front, run it in the background with a monitor, and report when it ends. Handing the user a command is for live third-party sweeps only (see the first bullet). Run `tests/test_zakupki_parser.py` / `tests/test_bfo_parser.py` after touching those parsers.
 - An all-null result for one entity or one field across the corpus is a parser bug until proven otherwise. Non-profit `funds_*` figures are never revenue.
-- **Public snapshots of cited pages (added 2026-10-02):** `scripts/archive_sources.py` gives every Telegram post and web page a registry record cites a Wayback Machine capture, recorded with its date and the SHA-256 of the archived bytes in `data/registry/source_archives.json` (keyed by URL, listing its source ids; tier 1 = cited posts and pages, 2 = cited zakupki/fips pages, 3 = uncited). `plan`/`local`/`report` are local; `lookup`/`save`/`run` are network jobs; the nightly batch runs in GitHub Actions (`.github/workflows/wayback.yml`, commits the JSON to main; set repo secrets `WAYBACK_S3_ACCESS`/`WAYBACK_S3_SECRET` for the faster keyed endpoint). The cloud network blocks web.archive.org. A capture is public; it does not record who asked. **Telegram posts are not archived on the Wayback Machine (user, 03.10.2026: "we're not web archiving telegram posts").** `archive_sources.py` skips every Telegram URL unless `--include-telegram` is passed; the nightly job does not pass it. Telegram posts are preserved by our own record (text and raw fields from `data/roymarket.db`), the RFC 3161 stamps below, and a per-cited-post evidence bundle with the media (see `scripts/media_triage.py`). The earlier per-channel index lookup, preview-page saves and embed-view logic stay in the script behind the flag and are not used; the 442 existing captures stay in `source_archives.json` as they were.
+- **Public snapshots of cited pages (added 2026-10-02):** `scripts/archive_sources.py` gives every Telegram post and web page a registry record cites a Wayback Machine capture, recorded with its date and the SHA-256 of the archived bytes in `data/registry/source_archives.json` (keyed by URL, listing its source ids; tier 1 = cited posts and pages, 2 = cited zakupki/fips pages, 3 = uncited). `plan`/`local`/`report` are local; `lookup`/`save`/`run` are network jobs; the batch runs in GitHub Actions (weekly since 21.10.2026) (`.github/workflows/wayback.yml`, commits the JSON to main; set repo secrets `WAYBACK_S3_ACCESS`/`WAYBACK_S3_SECRET` for the faster keyed endpoint). The cloud network blocks web.archive.org. A capture is public; it does not record who asked. **Telegram posts are not archived on the Wayback Machine (user, 03.10.2026: "we're not web archiving telegram posts").** `archive_sources.py` skips every Telegram URL unless `--include-telegram` is passed; the nightly job does not pass it. Telegram posts are preserved by our own record (text and raw fields from `data/roymarket.db`), the RFC 3161 stamps below, and a per-cited-post evidence bundle with the media (see `scripts/media_triage.py`). The earlier per-channel index lookup, preview-page saves and embed-view logic stay in the script behind the flag and are not used; the 442 existing captures stay in `source_archives.json` as they were.
 - **Timestamped source fingerprints (added 2026-10-03 at user direction):** `python3 scripts/timestamp_sources.py build && … stamp` hashes every file in `data/sources/` into `data/registry/timestamps/<date>/manifest.sha256` (`shasum -a 256 -c` format) and has the list signed by two RFC 3161 authorities (FreeTSA, DigiCert); `verify` re-checks files and signatures. It proves we held exactly these bytes by that time; it cannot prove Telegram served them. Commit the folder. A file whose bytes differ from its `sources.json` hash goes in `changed_since_catalogued.tsv`: a work item to explain, never re-hashed silently. Run it after a batch of new sources. **Never overwrite a file in `data/sources/`:** every script writes there through `source_files.write_new()`, which leaves an existing file alone and writes a changed re-fetch as `<name>-r2.<ext>` (fixtures: `tests/test_source_files.py`). The first run found 121 files rewritten in place (trademark JSON re-parsed on 25.08, same-day re-fetches, appended notes); their catalogued hashes were brought in line with the stamped bytes on 03.10.2026, and the old hashes stay in that run's tsv. Hand-made notes and transcripts in `data/sources/` are also fixed once catalogued: add a new dated file rather than editing one.
 - **First reading of daily pulls (added 2026-10-02 at user direction; moved fully onto the Mac 05.10.2026, issue #30).** After the pull queue, the Mac runs `python3 scripts/first_reading.py export --local-dir data/sources/_inbox`: the text of each new ЕГРЮЛ/ЕГРИП/БФО file (not the PDF) is written locally, then `first_reading.py read` sets the registry's values beside the document's own lines in a worksheet. The result is a note for the user; nothing enters the registry until a human has read the document. The export no longer pushes to `pull-inbox` — that branch and the cloud routine that read it are retired, since the cloud's read was a second pass over the same text main re-reads anyway before applying anything.
 
@@ -523,62 +523,7 @@ are in `STYLE_GUIDE.md` §3.1.
 
 **Withdrawn at user direction, not retrofitted.** The case pages, the company/person/product profiles, the profile index, the old landing page and `story.html` moved from `docs/` to `exhibits/archive/site_2026-10-02/`; their generators (`build_case_pages.py`, `build_company_profile.py`, `build_person_profile.py`, `build_product_profile.py`, `build_profile_index.py`) and `templates/` moved to `scripts/archive/`. Do not run or extend them. New reader pages are built after the design system redo and a new landing page (`notes/rebuild_plan.md`, track A), and carry no internal notation: no source ids, slugs, field names or file names; sources are cited in plain words with a public link. Shared display helpers (`ru_date`, `source_type_label`) are in `scripts/display_helpers.py`. The text below describes the archived generator and is kept for its rules on images and PII fields, which still apply to new pages.
 
-### Archived: how the profile generator worked
-
-`docs/profiles/<slug>.{html,md}` are per-entity profile pages, generated from
-`data/registry/` by `scripts/build_company_profile.py` — not edited by hand
-(a regeneration would silently discard hand edits, the same reason
-`corrections.json` exists for `entities.json`/`people.json`). Run it after
-any registry change that touches a profiled entity:
-
-```
-python3 scripts/build_company_profile.py --slug ooo-skb-piranya
-python3 scripts/build_company_profile.py --inn 7300024069   # equivalent
-python3 scripts/build_company_profile.py --all              # every non-adjacent entity
-```
-
-Local file processing over `data/registry/*.json` — no network calls, safe to
-run directly/repeatedly. Always follow with
-`python3 scripts/check_tag_balance.py docs/profiles/<slug>.html`.
-
-`templates/company_profile.{html,md}.jinja2` are the two Jinja2 templates
-(one script, two outputs — the section order and field coverage are kept in
-sync between them by construction, not by hand). The HTML page links
-`docs/assets/profile.css`, a standalone copy of `docs/index.html`'s design
-tokens/classes (same `--paper`/`--ink`/`.tag`/`.t-doc` etc. — kept in sync by
-hand since profile pages didn't exist when `index.html`'s `<style>` block was
-written) plus profile-specific additions (`.person-card`, `.meta-grid`, …).
-
-Follows `STYLE_GUIDE.md`'s expert-witness/forensic register by construction:
-Latin name primary with the Cyrillic ФИО/name shown alongside (never hidden
-in a tooltip), legal-form abbreviation transliterated not translated, ИНН/
-ОГРН as bare digits, and — the important one — **no internal notation in
-visible prose**. A claim is cited by a short bracketed `[sNNNN]` id resolved
-in the page's own "Sources cited" table (locator + captured/as-of dates, no
-sha256 — the hash belongs on a site-wide provenance page this project
-doesn't have yet, not repeated on every profile), never by printing a raw
-`source_id`/registry-field name. A person's freeform `notes` field is **not**
-dumped into the page — it's an internal working note (often containing
-passport/phone numbers alongside research-process commentary); only the
-structured PII fields already vetted under the PII policy below (`dob`,
-`birthplace`, `address`, `inn_personal`) render on the page.
-
-**Images**: `entities.json`'s `images[]` and `people.json`'s `photo` already
-point at `docs/images/<file>` (the publish-ready copy) — `data/sources/` is
-the gitignored raw archive, not part of the published site. The HTML output
-only embeds an `<img>` when a `docs/images/` copy actually exists (checked at
-build time); otherwise it falls back to a text citation so a photo that's
-only in `data/sources/` doesn't render as a broken image. The Markdown
-output isn't published, so it links `data/sources/` paths directly. This
-means a fresh `battlefield_evidence[]`/`images[]` entry (e.g. from
-`scripts/tg_media_pull.py`) needs its file copied into `docs/images/` before
-it'll actually appear in the HTML profile — pulling the media isn't enough
-on its own.
-
-Ground/satellite views of a facility are just `images[]` entries distinguished
-by caption text (e.g. `_ground.jpg`/`_satellite.jpg` naming, already used at
-`ooo-aeromaks`) — there's no separate schema field for them.
-
+The generator's description (Jinja templates, `[sNNNN]` citation style, image handling) moved to `notes/reference/archived_profile_generator.md`. Rules from it that still apply elsewhere: a person's free-text `notes` field is never put on a page (it holds passport and phone numbers); only the structured PII fields vetted under the PII section render; an image is embedded only if a `docs/images/` copy exists, and `docs/images/` is public (see Media).
 
 ### Product profiles and `relationship_type`
 
