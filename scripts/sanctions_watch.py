@@ -28,8 +28,9 @@ are downloaded once per run (one request each), so the weekly schedule stays
 within the live-jobs policy (user go-ahead, 02.10.2026).
 
 Network access is needed for the download step only. The cloud sessions'
-egress policy blocks these hosts, so the scheduled run is a GitHub Actions
-workflow (`.github/workflows/sanctions-watch.yml`).
+egress policy blocks these hosts, so the weekly run was a GitHub Actions
+workflow until 22.10.2026, when it was retired (no Actions minutes); run the
+script by hand from a machine that can reach them.
 
 Usage:
   python3 scripts/sanctions_watch.py --out watch.json [--previous old.json]
