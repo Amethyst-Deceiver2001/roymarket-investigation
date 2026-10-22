@@ -49,6 +49,9 @@ from collections import Counter, defaultdict
 from datetime import date
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from graph_contract import has_designation  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 REG = ROOT / "data" / "registry"
 SHARED_WATCH = Path("/mnt/project-files/watch")
@@ -380,7 +383,7 @@ class Board:
             "latin": e.get("name_display"), "tier": e.get("tier"), "inn": inn,
             "channels": handles, "last_register_pull": last_pull,
             "screened": e.get("opensanctions_screened_at"),
-            "sanctioned": bool(e.get("sanctions")),
+            "sanctioned": has_designation(e),
             "flags": fl,
         }
 
@@ -458,7 +461,7 @@ class Board:
             "latin": p.get("name_latin"), "tier": "reference" if reference else "person",
             "role": (current[0].get("title") if current else None),
             "channels": handles, "screened": p.get("opensanctions_screened_at"),
-            "sanctioned": bool(p.get("sanctions")), "flags": fl,
+            "sanctioned": has_designation(p), "flags": fl,
         }
 
     # --- products -----------------------------------------------------------

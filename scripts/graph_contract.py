@@ -51,6 +51,19 @@ EDGE_FIELDS = {
 # wrong (Telegram posts typed "court"); the type is the fallback. Nobody grades an edge by hand.
 EDGE_GRADES = {"doc", "rep", "open"}
 # Every registry confidence value -> reader grade, in one table (display_helpers.READER_GRADE reads it).
+def has_designation(record: dict) -> bool:
+    """True when a record's sanctions[] names at least one regime.
+
+    An entry with regime null is an aggregator match (OpenSanctions topics such as
+    sanction.linked) with no official listing read; it is a lead, not a designation,
+    so it must not draw the Sanctioned mark.
+    """
+    for s in record.get("sanctions") or []:
+        if isinstance(s, dict) and s.get("regime"):
+            return True
+    return False
+
+
 CONFIDENCE_GRADE = {
     "doc": "doc", "press": "rep", "inferred": "open",          # basis (sells_for, memberships, partners)
     "t-doc": "doc", "t-open": "rep",                            # cbst_tie
