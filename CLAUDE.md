@@ -10,9 +10,7 @@ ordered work, decisions waiting on the user, standing policy; the old 4,284-line
 
 ## Coordination: who does what, and where state lives (user, 03.10.2026)
 
-This Mac session ("main") orchestrates; the others run on schedules and talk through the repo, never by waiting on a cross-session reply (session ids go stale; messages between sessions are allowed since 22.10.2026, see below). Details: `data/watch/README.md`.
-
-**Messages between sessions (user, 22.10.2026)** follow the three-rule protocol in `data/watch/README.md` § "Coordination between sessions": the repo is the record, a message is only a one-line nudge, and nothing enters the registry on a message alone.
+This Mac session ("main") orchestrates; the others run on schedules and talk through the repo, never by waiting on a cross-session reply (cloud sessions cannot message back, and session ids go stale). Details: `data/watch/README.md`.
 
 | Job | Where, when | Writes |
 |---|---|---|
