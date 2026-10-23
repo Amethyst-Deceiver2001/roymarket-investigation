@@ -835,6 +835,12 @@ def main() -> int:
                 errors.append(f"{where}.{key} {m.get(key)!r} must be one of {sorted(vocab)}")
         if not (m.get("shows") or "").strip():
             errors.append(f"{where}.shows is required: what is visible, written by someone who looked")
+        if (m.get("publish") in ("ok", "excerpt")
+                and re.search(r"[А-Яа-яЁё]", m.get("shows") or "")
+                and not (m.get("shows_en") or "").strip()):
+            errors.append(f"{where}.shows_en is required for a publishable caption containing Russian")
+        if re.search(r"[А-Яа-яЁё]", m.get("shows_en") or ""):
+            errors.append(f"{where}.shows_en must be English, not Cyrillic")
         if m.get("source_id") not in source_ids:
             errors.append(f"{where}.source_id {m.get('source_id')!r} must be a known source")
         about = m.get("about") or []

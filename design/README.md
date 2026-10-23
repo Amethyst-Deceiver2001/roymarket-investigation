@@ -58,7 +58,7 @@ A dashed card with no shadow (`.rm-card.absent`) is something the reader would e
 Pictures are evidence records (`data/registry/media.json`), not decoration. Four components show them: EvidenceFigure, VideoCard, FrameStrip and FacilityPair. On a chain, pictures sit on the card or line they support, as a thumbnail strip (`rm-thumbs`) that opens the full EvidenceFigure in a viewer (`rm-lightbox`); a separate gallery would cut them off from the claims they back.
 
 - **Provenance is said in words.** A mono label over each caption reads "Published by …", "Posted by a third party" or "From press coverage". It is never shown by colour or by a grade chip: who published a picture is a different question from how well a link is documented.
-- **The caption is what is visible.** A picture supports only what someone who looked at it wrote down.
+- **The caption is what is visible.** A picture supports only what someone who looked at it wrote down. On English pages, `shows_en` leads when `shows` contains Russian; the original stays behind RU. Publishable captions containing Russian need a translation.
 - **No embedded players.** A video is a poster or a strip of timestamped stills, plus a line saying where the original is and whether we hold a copy.
 - **Faces** of everyone involved (recipients, donors, staff, participants) are shown; only a clearly uninvolved bystander is blurred. Nobody is named from a face. A record still awaiting a blur is never rendered.
 - **Facility views** name their provider, imagery date and how the coordinates were found. A view not yet captured is an empty dashed slot that says so.

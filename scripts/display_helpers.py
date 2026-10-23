@@ -197,23 +197,22 @@ def orig_line(ru: str, key: str, en: str | None = None, what: str = "Russian ori
     the original under RU."""
     tr = translation(ru)
     shown = en or (tr["en"] if tr else latinize_gloss(ru))
+    shown = latinize_gloss(shown)
     return name_html("\u201c" + shown.strip().strip("\u201c\u201d") + "\u201d", ru, key=key, what=what)
 
 
-def caption_html(text: str, key: str = "cap") -> str:
-    """A picture caption (what is visible), with any printed Russian text in guillemets given in English first and
-    the printed original under RU; other Cyrillic is transliterated."""
+def caption_html(text: str, key: str = "cap", en: str | None = None) -> str:
+    """Render a picture caption in English, with its original wording under RU when it contains Cyrillic."""
     import html as _h
-    out, pos, n = [], 0, 0
-    for m in re.finditer(r"«([^«»]*[А-Яа-яЁё][^«»]*)»", text or ""):
-        out.append(_h.escape(latinize_gloss(text[pos:m.start()])))
-        n += 1
-        tr = translation(m.group(1))
-        shown = tr["en"] if tr else latinize_gloss(m.group(1))
-        out.append(name_html("«" + shown + "»", "«" + m.group(1) + "»", key=f"{key}-{n}", what="Printed text, original of"))
-        pos = m.end()
-    out.append(_h.escape(latinize_gloss((text or "")[pos:])))
-    return "".join(out)
+    text = text or ""
+    en = (en or "").strip()
+    if en and re.search(r"[А-Яа-яЁё]", en):
+        raise ValueError(f"{key}: English media caption must not contain Cyrillic")
+    if re.search(r"[А-Яа-яЁё]", text):
+        if not en:
+            raise ValueError(f"{key}: Russian media caption needs an English translation")
+        return name_html(en.strip(), text, key=key, what="Original caption for")
+    return _h.escape(en or text.strip())
 
 
 def popup_originals(doc: str) -> str:
@@ -241,8 +240,10 @@ def figure_html(m: dict, img_src: str, who: str, ref_html: str, video_note: str 
     prov = PROVENANCE.get(m.get("asserted_by"), "Source").format(who=who)
     when = ru_date(m.get("published")) or ""
     cls = "rm-fig rm-video" if video_note else "rm-fig"
-    return (f'<figure class="{cls}"><div class="frame"><img src="{_h.escape(img_src)}" alt="{_h.escape(latinize_gloss(m["shows"]))}"></div>'
-            f'<figcaption><span class="rm-prov">{_h.escape(prov)}</span><span>{caption_html(m["shows"], "cap-" + str(m.get("id")))}{ref_html}</span>'
+    caption = caption_html(m["shows"], "cap-" + str(m.get("id")), m.get("shows_en"))
+    alt = m.get("shows_en") or m["shows"]
+    return (f'<figure class="{cls}"><div class="frame"><img src="{_h.escape(img_src)}" alt="{_h.escape(alt)}"></div>'
+            f'<figcaption><span class="rm-prov">{_h.escape(prov)}</span><span>{caption}{ref_html}</span>'
             + (f'<span class="orig">{_h.escape(video_note)}</span>' if video_note else "")
             + (f'<span class="when">{when}</span>' if when else "") + "</figcaption></figure>")
 
@@ -357,7 +358,7 @@ def name_html(visible: str, cyrillic: str, translit: str | None = None, key: str
 def quote_html(ru: str, en: str, cite: str = "", key: str = "") -> str:
     """A quotation, English first (STYLE_GUIDE §3.1, 23.10.2026): our translation in quotation marks, the verbatim
     Russian original under the RU control, copyable. `cite` is ready-made HTML (who, when, footnote)."""
-    shown = "\u201c" + en.strip().strip("\u201c\u201d\"") + "\u201d"
+    shown = "\u201c" + latinize_gloss(en).strip().strip("\u201c\u201d\"") + "\u201d"
     inner = name_html(shown, ru, key=key, what="Russian original of")
     tail = f"<cite>{cite}</cite>" if cite else ""
     return f'<blockquote class="rm-quote"><span class="rm-label">Translation</span><span class="q">{inner}</span>{tail}</blockquote>'

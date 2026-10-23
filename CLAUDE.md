@@ -462,7 +462,7 @@ One record per product with a stable slug, so a product sold by several dealers 
 
 One record per photo, video, still, satellite or street-level view, screenshot, scan or graphic. It is hand-maintained like `programs.json` and not drawn on the graph. Its fields:
 - `about[]` lists every record the picture shows (entity, person, product, version, delivery, listing, unit, program). One handover photo is one record, not three copies.
-- `shows` says what is visible, written by someone who looked at it.
+- `shows` says what is visible, written by someone who looked at it. On English pages, a caption containing Russian also has a translated `shows_en`; the English caption leads and the original `shows` text sits under RU. `check_registry.py` requires the translation for publishable captions.
 - `asserted_by` says who published it. It is shown on pages as provenance ("the maker's own video"). `third_party` covers customer uploads.
 - `publish` is `ok`, `excerpt` (a maker's marketing, used in part for reporting) or `internal`.
 
