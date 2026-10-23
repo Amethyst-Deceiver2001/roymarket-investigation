@@ -200,6 +200,15 @@ def cmd_fetch(args) -> None:
         print(out_text)
 
 
+def _entity(client, scraper, ref):
+    """A username or invite link resolves as before; a bare number is a private chat's channel id, which Telethon
+    would read as a user id, so it is asked for as a channel (the session knows it if the account is a member)."""
+    if str(ref).isdigit():
+        from telethon.tl.types import PeerChannel
+        return client.get_entity(PeerChannel(int(ref)))
+    return scraper.resolve_channel(client, ref)
+
+
 def cmd_download_queue(args) -> None:
     """Fetch what scripts/media_triage.py queued: a photo in full (Telegram photos are small), a video's
     thumbnail only. Files go to the triage working folder, never to data/sources/ itself; a kept item is
@@ -220,8 +229,12 @@ def cmd_download_queue(args) -> None:
     client = tg_client.make_client()
     with client:
         for channel, its in todo.items():
-            ref = channel if not channel.isdigit() else str(its[0]["channel_id"])
-            entity = scraper.resolve_channel(client, ref)
+            try:
+                entity = _entity(client, scraper, its[0]["channel_id"] if channel.isdigit() else channel)
+            except Exception as exc:  # noqa: BLE001 - one unreachable chat must not stop the other channels
+                print(f"skipped {channel} ({len(its)} files): {exc}")
+                failed += len(its)
+                continue
             by_id = {it["msg_id"]: it for it in its}
             ids = sorted(by_id)
             for i in range(0, len(ids), 100):
@@ -262,7 +275,7 @@ def cmd_download(args) -> None:
     SOURCES_DIR.mkdir(parents=True, exist_ok=True)
     client = tg_client.make_client()
     with client:
-        entity = scraper.resolve_channel(client, args.channel)
+        entity = _entity(client, scraper, args.channel)
         label = re.sub(r"[^A-Za-z0-9_]+", "", args.label or args.channel.lstrip("@").split("/")[-1]) or "chat"
         for msg in client.get_messages(entity, ids=ids):
             if msg is None or not msg.media:
@@ -304,7 +317,7 @@ def cmd_download_all(args) -> None:
         from tg import scraper
         client = tg_client.make_client()
         client.__enter__()
-        entity = scraper.resolve_channel(client, args.channel)
+        entity = _entity(client, scraper, args.channel)
         chan_id = entity.id
     if chan_id is None:
         sys.exit("--channel-id is required with --dry-run (the DB id printed by tg_scan.py)")
