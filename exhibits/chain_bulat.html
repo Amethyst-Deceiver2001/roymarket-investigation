@@ -247,6 +247,8 @@ li .rm-thumb-btn { width: 44px; height: 44px; }
   gap: 0 64px; align-items: start; padding-bottom: 12px; }
 .wires { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; z-index: 0; }
 .col, .rows { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+/* The rows column is long; a left column that fits the window follows the scroll so the maker and product stay beside the row being read (chain_view.js sets .stick). */
+.col.stick { position: sticky; top: 16px; }
 .col h2, .rows h2 { font: 600 var(--t-label)/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3);
   margin: 0 0 4px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
 .crow { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 56px; align-items: start; }
@@ -339,6 +341,7 @@ li .rm-thumb-btn { width: 44px; height: 44px; }
   const svg = document.getElementById('wires');
   const NS = 'http://www.w3.org/2000/svg';
   const paths = [];
+  let focused = null, raf = 0;
 
   function draw() {
     svg.textContent = '';
@@ -415,12 +418,14 @@ li .rm-thumb-btn { width: 44px; height: 44px; }
   }
 
   function focus(id) {
+    focused = id;
     const keep = linked(id);
     chain.classList.add('focus');
     document.querySelectorAll('.rm-card').forEach(c => c.classList.toggle('on', keep.has(c.id)));
     paths.forEach(({ el, e }) => el.classList.toggle('on', keep.has(e.from) && keep.has(e.to)));
   }
   function clear() {
+    focused = null;
     chain.classList.remove('focus');
     document.querySelectorAll('.rm-card.on, .e.on').forEach(n => n.classList.remove('on'));
   }
@@ -432,6 +437,13 @@ li .rm-thumb-btn { width: 44px; height: 44px; }
     c.addEventListener('focus', () => focus(c.id));
     c.addEventListener('blur', clear);
   });
+  // Left columns that fit the window follow the scroll; lines are redrawn as they move, keeping any highlight.
+  const stick = () => document.querySelectorAll('.col').forEach(c =>
+    c.classList.toggle('stick', innerWidth > 1100 && c.offsetHeight <= innerHeight - 32));
+  const redraw = () => { stick(); draw(); if (focused) focus(focused); };
+  addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(() => { raf = 0; draw(); if (focused) focus(focused); }); }, { passive: true });
+  addEventListener('resize', redraw);
+  stick();
   new ResizeObserver(draw).observe(chain);
   document.querySelectorAll('details').forEach(d => d.addEventListener('toggle', draw));
   draw();

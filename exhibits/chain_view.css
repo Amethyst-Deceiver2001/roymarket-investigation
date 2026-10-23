@@ -5,6 +5,8 @@
   gap: 0 64px; align-items: start; padding-bottom: 12px; }
 .wires { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; z-index: 0; }
 .col, .rows { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+/* The rows column is long; a left column that fits the window follows the scroll so the maker and product stay beside the row being read (chain_view.js sets .stick). */
+.col.stick { position: sticky; top: 16px; }
 .col h2, .rows h2 { font: 600 var(--t-label)/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3);
   margin: 0 0 4px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
 .crow { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 56px; align-items: start; }

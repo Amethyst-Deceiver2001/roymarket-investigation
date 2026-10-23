@@ -5,6 +5,7 @@
   const svg = document.getElementById('wires');
   const NS = 'http://www.w3.org/2000/svg';
   const paths = [];
+  let focused = null, raf = 0;
 
   function draw() {
     svg.textContent = '';
@@ -81,12 +82,14 @@
   }
 
   function focus(id) {
+    focused = id;
     const keep = linked(id);
     chain.classList.add('focus');
     document.querySelectorAll('.rm-card').forEach(c => c.classList.toggle('on', keep.has(c.id)));
     paths.forEach(({ el, e }) => el.classList.toggle('on', keep.has(e.from) && keep.has(e.to)));
   }
   function clear() {
+    focused = null;
     chain.classList.remove('focus');
     document.querySelectorAll('.rm-card.on, .e.on').forEach(n => n.classList.remove('on'));
   }
@@ -98,6 +101,13 @@
     c.addEventListener('focus', () => focus(c.id));
     c.addEventListener('blur', clear);
   });
+  // Left columns that fit the window follow the scroll; lines are redrawn as they move, keeping any highlight.
+  const stick = () => document.querySelectorAll('.col').forEach(c =>
+    c.classList.toggle('stick', innerWidth > 1100 && c.offsetHeight <= innerHeight - 32));
+  const redraw = () => { stick(); draw(); if (focused) focus(focused); };
+  addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(() => { raf = 0; draw(); if (focused) focus(focused); }); }, { passive: true });
+  addEventListener('resize', redraw);
+  stick();
   new ResizeObserver(draw).observe(chain);
   document.querySelectorAll('details').forEach(d => d.addEventListener('toggle', draw));
   draw();
