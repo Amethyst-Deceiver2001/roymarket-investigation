@@ -144,6 +144,7 @@ class Chain:
         self.media_files = []    # (published name, local path) for the artifact publish
         self.img_dir = None      # set by render(): where publish copies go
         self.templates = {}      # media id -> full evidence figure, opened from a thumbnail
+        self.figures = []        # "How many": (figure, what it counts, refs html), each from a document
 
     # -- notation ------------------------------------------------------------------------
     def ref(self, *sids):
@@ -294,6 +295,9 @@ class Chain:
             rows.append(f'<p class="row">Linked to TsBST{self.ref(tie.get("source_id"))}</p>')
         if m.get("inn"):   # the identifier tells namesakes apart (two Липецк ООО НПО «Киловатт»)
             rows.append(f'<p class="row"><span class="rm-id">ИНН {esc(m["inn"])}</span></p>')
+        from build_company_page import COMPANY_PAGES   # noqa: E402  (company file preview links)
+        if m["slug"] in COMPANY_PAGES:
+            rows.append(f'<p class="row"><a href="{esc(COMPANY_PAGES[m["slug"]])}" target="_blank" rel="noopener">Company file ↗</a></p>')
         self.top["B"].append(self.card("maker", "maker", "Maker", self.name(m), "".join(rows), slug=m["slug"]))
 
         # C: product
@@ -410,6 +414,18 @@ class Chain:
                 + self.contract_lines(gc)
                 + (f'<p class="note" lang="ru">«{esc(subj)}»</p>' if subj else "")))
             self.edge(self.rows[row_of[e["slug"]]]["id"], cid, "doc", "State contract")
+        lines = [(cp, gc) for _, gc in contracts for cp in gc.get("products") or [] if cp.get("product") == p["slug"]]
+        qty = sum(cp["qty"] for cp, _ in lines if cp.get("qty"))
+        no_qty = {id(gc) for cp, gc in lines if not cp.get("qty")}
+        if qty:
+            self.figures.append((f"{qty}+", f"bought under {len(contracts)} state contracts"
+                                 + (f" ({len(no_qty)} gives no quantity)" if no_qty else ""),
+                                 self.ref(*[cp.get("source_id") for cp, _ in lines if cp.get("qty")])))
+        prices = sorted(cp["unit_price_rub"] for cp, _ in lines if cp.get("unit_price_rub"))
+        if prices:
+            self.figures.append((money(prices[0]) + (f"–{money(prices[-1])[1:]}" if prices[-1] != prices[0] else ""),
+                                 "per unit in those contracts",
+                                 self.ref(*[cp.get("source_id") for cp, _ in lines if cp.get("unit_price_rub")])))
 
         # Rows: donors and the recipients they report
         donors = {}
@@ -431,6 +447,10 @@ class Chain:
                     + (self.sanctions(e) if e else ""))
             # B3: the donor's own accounts may show it bought the product; the seller can still be unknown.
             stock = next((c for c in p.get("claims") or [] if c.get("metric") == "donor_stock" and c.get("entity") == slug), None)
+            sn = re.search(r"Кол\. (\d+)", stock["text_ru"]) if stock else None
+            if sn:
+                self.figures.append((sn.group(1), f"held by {self.en(e)} on {ru_date(stock['as_of'])}, by its audited accounts",
+                                     self.ref(stock["source_id"])))
             if stock:
                 n = re.search(r"Кол\. (\d+)", stock["text_ru"])
                 body = (f'<p class="row">Held {n.group(1) if n else "a stock of"} {esc(self.pq_en)} on {ru_date(stock["as_of"])}, '
@@ -615,6 +635,29 @@ def dek(ch, n_buy):
     return f"{esc(cap(p.get('category')))} made by {who}{sanctioned}.{tail}"
 
 
+def figures(ch):
+    """The "How many" strip: minimum counts, each from a document and footnoted; nothing summed across kinds."""
+    ds = ch.p.get("deliveries") or []
+    figs = list(ch.figures)
+    if ds:
+        dates = sorted(d["date"] for d in ds)
+        figs.append((str(len(ds)), f"handovers reported, {ru_date(dates[0])} – {ru_date(dates[-1])}", ""))
+    if not figs:
+        return ""
+    cells = "".join(f'<div class="fig"><span class="n">{esc(n)}</span><span class="w">{w}{r}</span></div>' for n, w, r in figs)
+    return (f'<div class="figs" aria-label="How many">{cells}</div>'
+            '<p class="figs-note">Minimums from documents. They may overlap, so they are not added up.</p>')
+
+
+def about(ch):
+    """A short note on the maker, from documented fields only (build_company_page.brief), and its company file."""
+    from build_company_page import COMPANY_PAGES, brief   # noqa: E402
+    m = ch.maker
+    link = (f'<p><a href="{esc(COMPANY_PAGES[m["slug"]])}" target="_blank" rel="noopener">Company file for {ch.en(m)} ↗</a></p>'
+            if m["slug"] in COMPANY_PAGES else "")
+    return f'<section class="prose rm-prose"><h2 class="rm-h2">About the maker</h2><p>{brief(m, ch.ref, ch.src)}</p>{link}</section>'
+
+
 def render(ch, out):
     p = ch.p
     n_list = sum(1 for li in p.get("listings") or [] if li.get("source_id"))
@@ -635,6 +678,7 @@ def render(ch, out):
   <p class="rm-eyebrow">Draft · {ru_date(dt.date.today().isoformat())}</p>
   <h1 class="rm-h1">{esc(ch.pq_en)} <span class="rm-muted">{'from TsBST to the front line' if ch.top['A'] else 'from the maker to the front line'}</span></h1>
   <p class="rm-dek">{dek(ch, n_buy)}</p>
+  {figures(ch)}
   <ul class="rm-legend" aria-label="How to read the lines">
     <li><svg width="34" height="8" aria-hidden="true"><line x1="0" x2="34" y1="4" y2="4" class="rm-ln doc"/></svg> A document shows it</li>
     <li><svg width="34" height="8" aria-hidden="true"><line x1="0" x2="34" y1="4" y2="4" class="rm-ln rep"/></svg> Reported: the party's own word or the press</li>
@@ -652,6 +696,7 @@ def render(ch, out):
       {rows}
     </section>
   </div>
+  {about(ch)}
   <section class="prose rm-prose"><h2 class="rm-h2">What this does not show</h2><ul>{limits}</ul>
   <p class="method">Every company, listing, contract and handover here comes from an archived document. Listings
   and handovers are as of the dates shown; {n_list} listings and {n_del} handovers are on file.</p></section>
