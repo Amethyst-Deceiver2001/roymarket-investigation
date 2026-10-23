@@ -290,11 +290,12 @@ transliteration attached, following the "a.k.a." convention OFAC and the EU use.
 
 ### 2.4 Identifiers
 
-- ИНН and ОГРН are always given as bare digits with the label:
-  `ИНН 9704241986`, `ОГРН 1237700218612`. Never reformatted with spaces or
-  separators — they must be copy-pasteable into a registry search.
-- Both labels stay in Cyrillic in EN text; they are the search key, and "TIN"
-  will not find anything.
+- ИНН and ОГРН are always given as bare digits with the label. Never reformatted
+  with spaces or separators — they must be copy-pasteable into a registry search.
+- **EN pages use the Latin labels** (revised 23.10.2026 at user direction):
+  `INN 9704241986`, `OGRN 1237700218612`, as the EU and UK sanctions lists write
+  them. Never "TIN" or "tax number", which find nothing. Register names in source
+  titles follow: EGRUL, EGRIP, GUR. RU pages keep ИНН and ОГРН.
 - On first mention of an entity in the dossier or its profile, give ИНН and ОГРН
   together. In the narrative recap, give neither unless the number is itself the
   point — the recap links to the profile.

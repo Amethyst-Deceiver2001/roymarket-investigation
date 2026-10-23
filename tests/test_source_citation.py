@@ -102,7 +102,7 @@ def test_packet_exhibit_titles():
         t, _ = C.cite(rec(name, captured_date="2026-10-05"), {})
         assert t == want, (name, t)
     t, _ = C.cite(rec("EGRUL_780223272953_20261006_inn-780223272953.pdf", captured_date="2026-10-06"), {})
-    assert t == "Sole-trader register extract (ЕГРИП, Federal Tax Service) for ИНН 780223272953, 06.10.2026", t
+    assert t == "Sole-trader register extract (EGRIP, Federal Tax Service) for INN 780223272953, 06.10.2026", t
     t, u = C.cite(rec("UKAZ_415-2025_20250620_president-decree-nsdc-sanctions.html", captured_date="2026-10-05"), {})
     assert t.startswith("Decree of the President of Ukraine no. 415/2025") and u == "https://zakon.rada.gov.ua/laws/show/415/2025", (t, u)
     t, _ = C.cite(rec("OFAC_20240823_recent-action-russia-related-designations.html", captured_date="2026-10-05"), {})
@@ -120,7 +120,7 @@ def test_packet_exhibit_titles():
 
 def test_registry_prefixes_have_titles():
     cases = {
-        "RNP_6165205064_20260907_debarment.html": "Register of unscrupulous suppliers (РНП) record, 07.09.2026",
+        "RNP_6165205064_20260907_debarment.html": "Register of unscrupulous suppliers (RNP) record, 07.09.2026",
         "WHOIS_proekt-arhangel-ru_20260905.txt": "Domain registration (WHOIS) record, 05.09.2026",
         "SANCTIONSLISTS_20261004_canada-sema/SANCTIONS_CA_20261004.xml": "Canadian (SEMA) sanctions list, full download, 04.10.2026",
         "ATR_20260825_reestr-potentsialnykh-ispolniteley-bas-components.pdf": "ATR register of potential UAV-component executors, 25.08.2026",

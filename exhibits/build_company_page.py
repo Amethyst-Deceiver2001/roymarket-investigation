@@ -19,12 +19,15 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 sys.path.insert(0, str(REPO / "exhibits"))
 from graph_contract import source_grade  # noqa: E402
-from display_helpers import (NAME_JS, design_head, display_name, latin_text, load_media, media_about, name_html,  # noqa: E402
+from display_helpers import (NAME_JS, design_head, display_name, latin_display, latin_text, load_media, media_about, name_html,  # noqa: E402
                              person_names, publish_copy, reader_grade, ru_date, translation)
 from build_chain_view import REGIMES, ROLE_EN, describe_source, esc, load, money  # noqa: E402
 
 # Published company pages (private preview Artifacts until the public cutoff), as CHAINS in build_landing.py.
 COMPANY_PAGES = {"ooo-trimiks": "https://claude.ai/artifact/GVG9YdHZVHPZNtKqBoZqEc"}
+LIST_CHECKS = __import__("json").loads((REPO / "data" / "registry" / "list_checks.json").read_text())
+ROLE_TITLE_EN = {"Директор по развитию": "Development director", "Генеральный директор": "Director general",
+                 "Дилер (Москва, Мариуполь)": "Dealer (Moscow, Mariupol)"}
 CITY_EN = {"St Petersburg": "St Petersburg", "Санкт-Петербург": "St Petersburg", "Москва": "Moscow"}
 
 
@@ -38,6 +41,29 @@ def regimes(e):
             if label:
                 out.setdefault(label, []).append(s.get("source_id"))
     return list(out.items())
+
+
+WESTERN = ["US", "EU", "UK", "Switzerland"]
+
+
+def list_mark(e, ref):
+    """A dated line for a Western list with no entry carrying the entity's INN or OGRN. Only for an identifier the
+    run actually searched (data/registry/list_checks.json); otherwise it says the entity has not been checked."""
+    have = {lab for lab, _ in regimes(e)}
+    missing = [w for w in WESTERN if w not in have]
+    if not missing:
+        return ""
+    ids = {e.get("inn"), e.get("ogrn")} - {None}
+    if not ids:   # a brand with no legal identity on file cannot be checked by identifier
+        return ""
+    runs = [r for r in LIST_CHECKS["runs"] if ids & set(r["identifiers"])]
+    if not runs:
+        return '<p class="row nolist">Not yet checked against the US, EU, UK or Swiss lists.</p>'
+    r = max(runs, key=lambda r: r["date"])
+    adj = [{"Switzerland": "Swiss"}.get(m, m) for m in missing]
+    names = ", ".join(adj[:-1]) + " or " + adj[-1] if len(adj) > 1 else adj[0]
+    return (f'<p class="row nolist">No {esc(names)} list entry carries its INN, as of the lists downloaded '
+            f'{ru_date(r["date"])}{ref(*[r["lists"][m] for m in missing])}</p>')
 
 
 def egrul_source(e, src):
@@ -140,8 +166,8 @@ class Page:
         e = self.e
         rows = []
         reg_src = egrul_source(e, self.src)
-        rows.append(("ИНН", f'<span class="rm-id">{esc(e.get("inn"))}</span>' if e.get("inn") else ""))
-        rows.append(("ОГРН", f'<span class="rm-id">{esc(e.get("ogrn"))}</span>' if e.get("ogrn") else ""))
+        rows.append(("INN", f'<span class="rm-id">{esc(e.get("inn"))}</span>' if e.get("inn") else ""))
+        rows.append(("OGRN", f'<span class="rm-id">{esc(e.get("ogrn"))}</span>' if e.get("ogrn") else ""))
         if e.get("registered"):
             rows.append(("Registered", f'{esc(e["registered"])}{self.ref(reg_src)}'))
         addr = next((h for h in sorted(e.get("address_history") or [], key=lambda h: h.get("as_of") or "", reverse=True)
@@ -149,22 +175,133 @@ class Page:
         if addr:
             rows.append(("Registered address", f'<span lang="ru">{esc(addr["value"])}</span>{self.ref(addr["source_id"])}'))
         if e.get("okved_code"):
-            rows.append(("Main activity code", f'{esc(e["okved_code"])}, in the register\'s words '
-                         f'<span lang="ru">«{esc(e.get("okved_label"))}»</span>{self.ref(reg_src)}'))
+            tr = translation(e.get("okved_label") or "")
+            label = (name_html(tr["en"], e["okved_label"], key="okved") if tr
+                     else f'<span lang="ru">«{esc(e.get("okved_label"))}»</span>')
+            rows.append(("Main activity (OKVED)", f'{esc(e["okved_code"])}: {label}{self.ref(reg_src)}'))
         cap_ = next((h for h in e.get("charter_capital_history") or [] if self.doc(h.get("source_id"))), None)
         if cap_:
             rows.append(("Charter capital", f'{money(cap_["value"])}{self.ref(cap_["source_id"])}'))
         r = restricted(e, self.src)
         if r:
             rows.append(("Owners and director", f'Hidden in the register since {ru_date(r["as_of"])}{self.ref(r["source_id"])}'))
-        hidden = [h for k in ("director_history", "founders_history", "name_history")
-                  for h in e.get(k) or [] if h.get("source_id") and not self.doc(h["source_id"])
-                  and "restricted" not in (h.get("value") or "").lower()]
-        if hidden:
-            self.limits.append(f"{len(hidden)} earlier entries for the company's name, owners or director come from a "
-                               "working file, not from a company register extract. They are left out until an extract "
-                               "from before the register was closed confirms them.")
         return self.dl(rows)
+
+    def before(self):
+        """Owners, directors and names recorded only from a weaker source (an investigator's dossier): shown, graded
+        Reported, each with its period and footnote, and named once in the limits."""
+        e = self.e
+        rows = []
+        for key, label in (("name_history", "Name"), ("director_history", "Director"), ("founders_history", "Owner")):
+            for h in e.get(key) or []:
+                if not h.get("source_id") or self.doc(h["source_id"]) or "restricted" in (h.get("value") or "").lower():
+                    continue
+                val = h.get("value") or ""
+                m = re.match(r"^([\d\-–]+%)\s+(.*)$", val)
+                share, who = (m.group(1).replace("-", "–"), m.group(2)) if m else ("", val)
+                if key == "name_history":
+                    shown = name_html(latin_display(who), who, key=f"nm-{h['source_id']}")
+                else:
+                    pn = person_names(who)
+                    shown = f'{esc(pn["first"])} (<span lang="ru">{esc(who)}</span>)'
+                per = re.search(r"(\d{2}\.\d{2}\.\d{4})\s*[–-]\s*(\d{2}\.\d{2}\.\d{4})", h.get("note") or "")
+                when = f"{per.group(1)} – {per.group(2)}" if per else (f"to {ru_date(h['as_of'])}" if h.get("as_of") else "")
+                rows.append((label, f'{shown}{", " + share + " share" if share else ""}{", " + when if when else ""}'
+                                    f'{self.ref(h["source_id"])}'))
+        if not rows:
+            return ""
+        self.limits.append("The owners, directors and original name before the register was closed come from an "
+                           "investigator's dossier. They are graded Reported until a register extract from before that "
+                           "date confirms them.")
+        return ('<p class="lead-note"><span class="rm-grade rep">Reported</span> From an investigator\'s dossier, not '
+                'yet confirmed by a company register extract.</p>' + self.dl(rows))
+
+    def people_block(self):
+        """People tied to the company by a role other than staff; each Latin first with the full ФИО (§2.2)."""
+        items, staff = [], 0
+        for p in load("people.json"):
+            for r in p.get("roles") or []:
+                if r.get("entity_slug") != self.e["slug"] or r.get("_candidate"):
+                    continue
+                t = r.get("title") or ""
+                if t.startswith("Сотрудник"):
+                    staff += 1
+                    continue
+                m = re.match(r"co-inventor \(patent (\w+)\)", t)
+                role = f"Inventor on patent {m.group(1)}" if m else ROLE_TITLE_EN.get(t)
+                if not role:
+                    continue
+                grade = "doc" if self.doc(r.get("source_id")) else "rep"
+                pn = person_names(p.get("fio_ru") or "", p.get("name_latin"))
+                items.append(f'<li><span class="rm-grade {grade}">{"Documented" if grade == "doc" else "Reported"}</span> '
+                             f'{esc(pn["first"])} (<span lang="ru">{esc(pn["fio"])}</span>): {esc(role)}{self.ref(r.get("source_id"))}</li>')
+        if staff:
+            self.limits.append(f"The dossier names {staff} further staff members. They are not listed here.")
+        return f'<ul class="plain">{"".join(items)}</ul>' if items else "<p>None recorded.</p>"
+
+    def place(self):
+        """Where it is: the register address, and slots for the satellite and street views until they are captured."""
+        addr = next((h for h in sorted(self.e.get("address_history") or [], key=lambda h: h.get("as_of") or "", reverse=True)
+                     if self.doc(h.get("source_id"))), None)
+        if not addr:
+            return ""
+        slot = lambda t: (f'<figure class="rm-fig empty"><div class="frame">{t} not yet captured</div>'
+                          f'<figcaption><span class="rm-prov">{t}</span></figcaption></figure>')
+        return (f'<p>Registered address, as the register gives it: <span lang="ru">{esc(addr["value"])}</span>'
+                f'{self.ref(addr["source_id"])}</p><div class="rm-facility">{slot("Satellite view")}{slot("Street view")}</div>')
+
+    def timeline(self):
+        """Dated events from the record, each footnoted; graded events say so."""
+        e, ev = self.e, []
+        reg_src = egrul_source(e, self.src)
+        if e.get("registered") and reg_src:
+            d, mth, y = e["registered"].split(".")
+            ev.append((f"{y}-{mth}-{d}", "Registered in the company register", reg_src))
+        for t in e.get("trademarks") or []:
+            for k, verb in (("filed", "filed"), ("registered", "registered")):
+                v = t.get(k) or ""
+                iso = f"{v[:4]}-{v[4:6]}-{v[6:]}" if v.isdigit() else (f"{v[6:]}-{v[3:5]}-{v[:2]}" if re.match(r"\d\d\.\d\d\.\d{4}", v) else "")
+                if iso:
+                    ev.append((iso, f'Trademark {esc(t.get("reg_number") or t.get("application_number"))} {verb}', t.get("source_id")))
+        for p in e.get("patents") or []:
+            for k, verb in (("filed", "filed"), ("published", "published")):
+                if p.get(k):
+                    ev.append((p[k].replace(".", "-"), f'Patent {esc(p.get("reg_number"))} {verb}', p.get("source_id")))
+        r = restricted(e, self.src)
+        if r:
+            ev.append((r["as_of"], "Owners and director hidden in the company register", r.get("source_id")))
+        for s in e.get("sanctions") or []:
+            if s.get("date"):
+                lab = next((lab for key, lab in REGIMES if key in " ".join(s.get("regime") or [])), "Sanctions")
+                ev.append((s["date"], f"Listed under {esc(lab)} sanctions", s.get("source_id")))
+        undated = [lab for lab, ss in regimes(e) if not any(x.get("date") for x in e.get("sanctions") or []
+                                                             if x.get("source_id") in ss)]
+        if undated:
+            txt = ", ".join(undated[:-1]) + " and " + undated[-1] if len(undated) > 1 else undated[0]
+            self.limits.append(f"No listing date is recorded for {esc(txt)}; those listings are not on the timeline.")
+        for owner in self.ents.values():
+            for gc in owner.get("government_contracts") or []:
+                prods = [cp for cp in gc.get("products") or [] if any(p["slug"] == cp.get("product") and p.get("maker") == e["slug"]
+                                                                       for p in self.products)]
+                if prods and gc.get("date"):
+                    ev.append((gc["date"], f'State contract for {money(gc.get("value_rub"))}, supplied by {self.en(owner)}', gc.get("source_id")))
+        for part in e.get("participations") or []:
+            ev.append((part["as_of"], f'Showed its products at {esc(latin_text(self.programs.get(part["event"], {}).get("name_ru")))}',
+                       part.get("source_id")))
+        for sp in e.get("state_programs") or []:
+            if re.match(r"\d{4}-\d{2}-\d{2}", sp.get("as_of") or "") and sp.get("name_en"):
+                ev.append((sp["as_of"], esc(sp["name_en"]), sp.get("source_id")))
+        for p in self.products:
+            if p.get("maker") != e["slug"]:
+                continue
+            ds = sorted(p.get("deliveries") or [], key=lambda d: d["date"])
+            if ds:
+                ev.append((ds[0]["date"], f'First reported handover of {esc(latin_text(p["name_ru"]))} to a unit '
+                                          f'({len(ds)} reported to {ru_date(ds[-1]["date"])})', ds[0].get("source_id")))
+        ev.sort(key=lambda x: x[0])
+        rows = "".join(f'<li><time>{ru_date(d)}</time><span>{t}{self.ref(sid)}</span></li>' for d, t, sid in ev)
+        return f'<ol class="tline">{rows}</ol>'
+
 
     def dl(self, rows):
         return '<dl class="facts">' + "".join(f"<dt>{esc(k)}</dt><dd>{v}</dd>" for k, v in rows if v) + "</dl>"
@@ -182,6 +319,7 @@ class Page:
             if unread:
                 self.limits.append(f"The {esc(lab)} listing rests on a sanctions aggregator's match by tax number. "
                                    "The official list entry has not yet been read.")
+        out.append(list_mark(self.e, self.ref).replace('class="row nolist"', 'class="nolist"'))
         return "".join(out)
 
     def accounts(self):
@@ -221,8 +359,11 @@ class Page:
             inv = [person_names(re.sub(r"\s*\(RU\)$", "", i)) for i in p.get("inventors") or []]
             invs = "; ".join(f'{esc(i["first"])} (<span lang="ru">{esc(i["fio"])}</span>)' for i in inv)
             pub = (p.get("published") or "").replace(".", "-")
+            ttl = (p.get("title") or "").capitalize()
+            tr = translation(ttl)
+            ttl_html = name_html("«" + tr["en"] + "»", ttl, key="pat-" + (p.get("reg_number") or "")) if tr else f'<span lang="ru">«{esc(ttl)}»</span>'
             items.append(f'<li>Patent {esc(p.get("reg_number"))}, published {ru_date(pub)}: '
-                         f'<span lang="ru">«{esc((p.get("title") or "").capitalize())}»</span>'
+                         f'{ttl_html}'
                          f'{"; inventor " + invs if invs else ""}{self.ref(p.get("source_id"))}</li>')
         return f'<ul class="plain">{"".join(items)}</ul>' if items else "<p>None recorded.</p>"
 
@@ -257,7 +398,7 @@ class Page:
                     continue
                 how = {"yes": "named as a dealer on the maker's website", "no": "not authorised by the maker"}.get(
                     sf.get("authorised"), "not on the maker's dealer list")
-                items.append(f'<li>{self.en(s)}: {esc(how)}{self.ref(sf.get("source_id"))}</li>')
+                items.append(f'<li>{self.en(s)}: {esc(how)}{self.ref(sf.get("source_id"))}{list_mark(s, self.ref)}</li>')
         return f'<ul class="plain">{"".join(items)}</ul>' if items else "<p>None recorded.</p>"
 
     def gaps(self):
@@ -279,11 +420,13 @@ def render(pg, out, chains):
            if n["legal"] else f'<p class="names"><span lang="ru">{esc(legal)}</span></p>')
     logo = pg.logo(img_dir)
     dek = brief(e, pg.ref, pg.src)
-    sections = [("Company register", pg.register()), ("Sanctions", pg.sanctions_block()), ("Annual accounts", pg.accounts()),
+    sections = [("Company register", pg.register()), ("Before the register was closed", pg.before()),
+                ("People", pg.people_block()), ("Where it is", pg.place()), ("Sanctions", pg.sanctions_block()),
+                ("Timeline", pg.timeline()), ("Annual accounts", pg.accounts()),
                 ("Products", pg.products_block(chains)), ("Trademarks and patents", pg.ip_block()),
                 ("Links to TsBST and the state", pg.network()), ("Sellers of its products", pg.sellers())]
     pg.gaps()
-    body = "".join(f'<section class="sec"><h2 class="rm-h2">{t}</h2>{h}</section>' for t, h in sections)
+    body = "".join(f'<section class="sec"><h2 class="rm-h2">{t}</h2>{h}</section>' for t, h in sections if h)
     limits = "".join(f"<li>{x}</li>" for x in dict.fromkeys(pg.limits))
     notes = "".join(
         f'<li id="n{k}">{esc(t)}.' + (f' <a href="{esc(u)}" target="_blank" rel="noopener">'
@@ -312,6 +455,13 @@ th { font: 600 var(--t-label)/1.4 var(--font-mono); letter-spacing: .06em; text-
 .prose { margin-top: 40px; }
 .prose ul { padding-left: 20px; color: var(--ink-2); font-size: 14px; }
 .rm-sources { margin-bottom: 60px; }
+.lead-note { font-size: 13.5px; color: var(--ink-2); margin: 0 0 12px; }
+.nolist { font-size: 13px; color: var(--ink-2); margin: 4px 0; }
+ul.plain .nolist { margin: 2px 0 0; }
+.rm-facility { margin-top: 12px; max-width: 640px; }
+ol.tline { list-style: none; padding: 0; margin: 0; font-size: 14px; color: var(--ink-2); display: flex; flex-direction: column; gap: 6px; }
+ol.tline li { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 12px; }
+ol.tline time { font: 400 12.5px/1.6 var(--font-mono); color: var(--ink-3); font-variant-numeric: tabular-nums; }
 @media (max-width: 600px) { .facts { grid-template-columns: 1fr; gap: 2px 0; } .facts dd { margin-bottom: 8px; } }
 """
     doc = f"""<!doctype html>
@@ -330,8 +480,8 @@ th { font: 600 var(--t-label)/1.4 var(--font-mono); letter-spacing: .06em; text-
   {body}
   <section class="prose rm-prose"><h2 class="rm-h2">What this page does not show</h2><ul>{limits}</ul>
   <p class="rm-muted" style="font-size:13.5px">Facts here come from documents: the company register, its filed accounts,
-  the patent and trademark registers, sanctions lists and its own posts. Entries resting on anything weaker are left out
-  and counted above.</p></section>
+  the patent and trademark registers, sanctions lists and its own posts. Entries resting on anything weaker are marked
+  Reported and named above.</p></section>
   <section class="prose rm-prose rm-sources"><h2 class="rm-h2">Sources</h2><ol>{notes}</ol></section>
 </div></main>
 <script>{NAME_JS}</script>

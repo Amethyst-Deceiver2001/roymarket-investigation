@@ -17,7 +17,7 @@ import html
 import re
 from pathlib import Path
 
-CITE_VERSION = 9
+CITE_VERSION = 10
 REPO = Path(__file__).resolve().parent.parent
 
 
@@ -207,9 +207,22 @@ SIMPLE = {  # prefix -> title stem; the date is appended
 SANCTION_LIST = {"CH": "Swiss (SECO)", "EU": "EU", "UK": "UK (FCDO)", "US": "US (OFAC SDN)", "CA": "Canadian (SEMA)"}
 
 
+# Register terms in a reader's title, Latin first (STYLE_GUIDE §2.4, user 23.10.2026): the EU and UK lists write INN
+# and OGRN, so the Latin labels still find the entry.
+READER_TERMS = [("ИНН ", "INN "), ("ОГРН ", "OGRN "), ("(ЕГРЮЛ,", "(EGRUL,"), ("(ЕГРИП,", "(EGRIP,"), ("(ГУР)", "(GUR)"),
+                ("(НСПД)", "(NSPD)"), ("(ГИСП)", "(GISP)"), ("(ЕРКНМ)", "(ERKNM)"), ("(РНП)", "(RNP)"), ("(РМСП)", "(RMSP)")]
+
+
+def reader_terms(title: str) -> str:
+    for ru, en in READER_TERMS:
+        title = title.replace(ru, en)
+    return title
+
+
 def cite(s: dict, f: dict | None) -> tuple[str, str | None]:
     """(title, public_url) for one sources.json record."""
     title, url = _cite(s, f)
+    title = reader_terms(title)
     name = Path(s["path"]).name
     if name.startswith("TGPOST_") and "tie-evidence" in name:  # our transcript of the database text, not a page capture
         title += " (transcript of the database text, not a capture of the page)"

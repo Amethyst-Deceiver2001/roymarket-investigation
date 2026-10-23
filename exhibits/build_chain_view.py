@@ -36,6 +36,7 @@ SRC_DIR = REPO / "data" / "sources"
 PAGES = "https://amethyst-deceiver2001.github.io/roymarket-investigation/"
 sys.path.insert(0, str(REPO / "scripts"))
 from graph_contract import source_grade  # noqa: E402
+from source_citation import cite, reader_terms  # noqa: E402
 from display_helpers import (NAME_JS, design_head, display_name, figure_html, kind_icon, latin_display, latin_text,  # noqa: E402
                              load_media, media_about, name_html, person_names, publish_copy, translation,
                              reader_grade, ru_date)
@@ -56,7 +57,7 @@ ROLE_EN = {"exhibitor": "Showed «{p}» at the event", "resident": "Resident", "
 
 
 
-def recipient_html(text: str | None) -> str:
+def recipient_html(text: str | None, en: str | None = None) -> str:
     """The donor's wording in guillemets (STYLE_GUIDE §5.1: never let «спецоперация» and the like
     read as our own words); our English note after it, outside the quote."""
     text = (text or "").strip()
@@ -65,6 +66,8 @@ def recipient_html(text: str | None) -> str:
     if not words:
         return esc(text)
     words = re.sub(r"«([^«»]*)»", "„\\1“", words)  # inner quotes: Russian „…“ inside «…»
+    if en:   # our English gloss first; the donor's own words follow, verbatim (STYLE_GUIDE §2.1)
+        return f'{esc(en)} <span class="cyr" lang="ru">«{esc(words)}»</span>'
     return f'<span lang="ru">«{esc(words)}»</span>' + (f" {esc(note)}" if note else "")
 
 def load(name):
@@ -117,7 +120,10 @@ def split_name(e):
 def describe_source(s):
     """A reader-facing description and public link for one sources.json record. Both are derived once per
     source by scripts/source_citation.py (B4) and stored on the record; a page never builds its own."""
-    return s.get("title") or "Archived document", s.get("public_url")
+    title = s.get("title") or ""
+    if not title or title.startswith("Archived document"):   # a rule added since the Mac last catalogued it
+        title = cite(s, None)[0]
+    return reader_terms(title), s.get("public_url")
 
 
 class Chain:
@@ -207,10 +213,12 @@ class Chain:
                             seen.append(label)
                         sids.append(s.get("source_id"))
                         break
+        from build_company_page import list_mark   # noqa: E402  (dated "no Western listing" line)
+        mark = list_mark(e, self.ref)
         if not seen:
-            return ""
+            return mark
         return (f'<p class="row sanc"><span class="rm-sanction">Sanctioned <b>{esc(", ".join(seen))}</b></span>'
-                f'{self.ref(*sids)}</p>')
+                f'{self.ref(*sids)}</p>' + mark)
 
     def card(self, cid, kind, label, title, body, slug=None):
         icon, extra = KIND_MARK.get(kind, ("", ""))
@@ -294,7 +302,7 @@ class Chain:
         if g:
             rows.append(f'<p class="row">Linked to TsBST{self.ref(tie.get("source_id"))}</p>')
         if m.get("inn"):   # the identifier tells namesakes apart (two Липецк ООО НПО «Киловатт»)
-            rows.append(f'<p class="row"><span class="rm-id">ИНН {esc(m["inn"])}</span></p>')
+            rows.append(f'<p class="row"><span class="rm-id">INN {esc(m["inn"])}</span></p>')
         from build_company_page import COMPANY_PAGES   # noqa: E402  (company file preview links)
         if m["slug"] in COMPANY_PAGES:
             rows.append(f'<p class="row"><a href="{esc(COMPANY_PAGES[m["slug"]])}" target="_blank" rel="noopener">Company file ↗</a></p>')
@@ -465,7 +473,7 @@ class Chain:
                 self.edge("product", cid, "open", "How the donor obtained it is not documented", bus=True)
             rid = f"rec-{len(self.rows)}"
             items = "".join(
-                f'<li><time>{ru_date(d["date"])}</time> {recipient_html(d.get("recipient"))}'
+                f'<li><time>{ru_date(d["date"])}</time> {recipient_html(d.get("recipient"), d.get("recipient_en"))}'
                 + (f' <span class="co">with {", ".join(self.body_name(c) for c in d["co_donors"])}</span>' if d.get("co_donors") else "")
                 + f'{self.ref(d.get("source_id"), *(d.get("other_source_ids") or []))}'
                 + (self.strip(media_about(self.media, {("delivery", d["id"])}), label="") if d.get("id") else "")
@@ -473,7 +481,7 @@ class Chain:
             self.rows[-1]["buyers"].append(self.card(
                 rid, "field", "Recipients",
                 f'{len(ds)} handovers <small>{ru_date(ds[0]["date"])} – {ru_date(ds[-1]["date"])}</small>',
-                f'<p class="note">As reported by the donor on its own Telegram channel; recipients in «» are the donor\'s own words.</p>'
+                f'<p class="note">As reported by the donor on its own Telegram channel. Each recipient is glossed in English, with the donor\'s own words in «».</p>'
                 + self.timeline(ds) + f'<ul class="rec">{items}</ul>'))
             self.edge(cid, rid, "rep", "Reported by the donor")
             dname = self.en(e) if e else esc(slug)
@@ -592,7 +600,7 @@ class Chain:
         for d, dd in zip(ds, dates):
             hub = "ЦБСТ" in (d.get("co_donors") or [])   # the record's own spelling
             out.append(f'<circle cx="{x(dd):.1f}" cy="18" r="{6 if hub else 4.5}" class="dot{" hub" if hub else ""}">'
-                       f'<title>{ru_date(d["date"])}: {re.sub("<[^>]+>", "", recipient_html(d.get("recipient")))}</title></circle>')
+                       f'<title>{ru_date(d["date"])}: {esc(d.get("recipient_en") or d.get("recipient"))}</title></circle>')
         out.append("</svg>")
         if any("ЦБСТ" in (d.get("co_donors") or []) for d in ds):
             out.append('<p class="note"><span class="dot-key"></span>TsBST named as a co-donor</p>')
