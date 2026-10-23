@@ -421,6 +421,13 @@ def render(out: Path):
     S.check_posts([q_618], channel_id=2581147715, msg=618)
     S.check_posts([q_pilot], channel_id=2581147715, msg=1230)
     S.check_posts([q_tech], channel_id=2159491523, msg=2392)
+    # The closing (chapter 8): the foundation's posts after the 21, and its post on Сидякин's Duma appointment.
+    q_91 = S.quote("Связисты 91-й бригады управления")
+    q_amb = S.quote("Фонд «Наша Правда» передал 237-му")
+    q_cong = S.quote("Мы давно сотрудничаем с Александром")
+    S.check_posts([q_91], msg=678)
+    S.check_posts([q_cong], msg=686)
+    S.check_posts([q_amb], msg=688)
     S.check_posts([q_kb], channel_id=1535506795, msg=321)
     S.check_posts([q_3mx], channel_id=1651823792, msg=42146)
     r_641 = S.ref("s9229")
@@ -457,7 +464,7 @@ def render(out: Path):
 {design_head((REPO / 'exhibits' / 'story.css').read_text())}</head>
 <body>
 <main class="story">
-<nav class="rail" aria-label="Chapters"><ol><li><a href="#c0">The post</a></li><li><a href="#c1">The foundation</a></li><li><a href="#c2">The money in</a></li><li><a href="#c3">The money out</a></li><li><a href="#c5">The centre</a></li><li><a href="#c4">The handovers</a></li><li><a href="#c6">The marketplace</a></li><li><a href="#c7">The limits</a></li></ol></nav>
+<nav class="rail" aria-label="Chapters"><ol><li><a href="#c0">The post</a></li><li><a href="#c1">The foundation</a></li><li><a href="#c2">The money in</a></li><li><a href="#c3">The money out</a></li><li><a href="#c5">The centre</a></li><li><a href="#c4">The handovers</a></li><li><a href="#c6">The marketplace</a></li><li><a href="#c8">Since</a></li><li><a href="#c7">The limits</a></li></ol></nav>
 <header>
   <p class="rm-eyebrow">Draft · Story 1 · {ru_date(today)}</p>
   <h1 class="rm-h1">In 2024 a Moscow foundation booked {F['aid_bn']:.2f} billion rubles as <em>«social and charitable aid for the SVO zone»</em></h1>
@@ -482,7 +489,7 @@ def render(out: Path):
 </section>
 
 <section class="chapter" aria-labelledby="c0">
-  <p class="rm-eyebrow">1 of 8 · The post</p>
+  <p class="rm-eyebrow">1 of 9 · The post</p>
   <h2 class="rm-h2" id="c0">Three days, 80 million rubles</h2>
   <div class="lead-in">
     <div class="text">
@@ -505,7 +512,7 @@ def render(out: Path):
 </section>
 
 <section class="chapter" aria-labelledby="c1">
-  <p class="rm-eyebrow">2 of 8 · The foundation</p>
+  <p class="rm-eyebrow">2 of 9 · The foundation</p>
   <h2 class="rm-h2" id="c1">Its stated purposes include supporting defence-product makers</h2>
   <p><b>Фонд «Наша Правда»</b> (<i>Our Truth</i>) was registered in Moscow in {registered}. Its general director since
   registration is <b>Alexander Brovchenko</b> ({esc(d)}).{r_reg} Its website describes it as a joint project of two older
@@ -523,7 +530,7 @@ def render(out: Path):
 </section>
 
 <section class="chapter" aria-labelledby="c2">
-  <p class="rm-eyebrow">3 of 8 · The money in</p>
+  <p class="rm-eyebrow">3 of 9 · The money in</p>
   <h2 class="rm-h2" id="c2">Nearly nine-tenths of the 2024 money came from donors the notes do not name</h2>
   <p>In 2024 the foundation received {F['got_bn']:.2f} billion rubles in targeted funds. The notes to its accounts print four lines to say from whom.{r_notes2}</p>
   <div class="split" role="img" aria-label="Shares of the 2024 receipts by printed line">{split_bar}</div>
@@ -541,7 +548,7 @@ def render(out: Path):
 </section>
 
 <section class="chapter" aria-labelledby="c3">
-  <p class="rm-eyebrow">4 of 8 · The money out</p>
+  <p class="rm-eyebrow">4 of 9 · The money out</p>
   <h2 class="rm-h2" id="c3">{F['aid_share']:.1f}% of what it spent in 2024 is booked as aid for the zone</h2>
   {used_bar}
   <table class="lines"><thead><tr><th>As printed</th><th>Translation</th><th>Thousand rubles</th><th>Share</th></tr></thead><tbody>{used_rows}
@@ -561,7 +568,7 @@ def render(out: Path):
 </section>
 
 <section class="chapter" aria-labelledby="c5">
-  <p class="rm-eyebrow">5 of 8 · The centre</p>
+  <p class="rm-eyebrow">5 of 9 · The centre</p>
   <h2 class="rm-h2" id="c5">ЦБСТ's accounts book all of its money as «other receipts»</h2>
   <p>ЦБСТ, the autonomous non-profit «Центр беспилотных систем и технологий» (Centre for Unmanned Systems and
   Technologies), was registered in Moscow on 27 February 2024. The register names two founders: the foundation from the
@@ -601,7 +608,7 @@ def render(out: Path):
 </section>
 
 <section class="chapter" aria-labelledby="c4">
-  <p class="rm-eyebrow">6 of 8 · The handovers</p>
+  <p class="rm-eyebrow">6 of 9 · The handovers</p>
   <h2 class="rm-h2" id="c4">Between July 2024 and May 2026 the foundation reported at least 21 handovers that name «Булат» or «Капюшон»</h2>
   <p>Two products recur in its posts. It calls «Булат» a drone detector, <i>детектор дронов</i>, and «Капюшон» an
   electronic-warfare station, <i>станция РЭБ</i>.{S.ref("s8994")} Each mark below is one post that names one or both.</p>
@@ -621,8 +628,8 @@ def render(out: Path):
   and add up to about {value_sum:.0f} million, taking «more than» at the figure given. They are the foundation's values
   for whole batches, which also hold drones, radios and motorcycles, not prices of the two products.</p>
   <div class="rm-gallery" aria-label="Photographs published with the posts">{gallery}</div>
-  <p>These 21 are only the handovers that name those two products. The foundation reports others. The most recent in
-  this record, on 10 August 2026, is a different kind of list:{r_641}</p>
+  <p>These 21 are only the handovers that name those two products. The foundation reports others. One of them, on
+  10 August 2026, is a different kind of list:{r_641}</p>
   <article class="post" aria-label="Excerpts from the post of 10 August 2026">
     <header><span>Telegram · @nashapravdafond</span><span>{ru_date(q_gru['date'])}</span><span>The foundation's own post</span></header>
     {passage(q_gru)}{passage(q_3d)}{passage(q_vic)}
@@ -632,7 +639,7 @@ def render(out: Path):
 </section>
 
 <section class="chapter" aria-labelledby="c6">
-  <p class="rm-eyebrow">7 of 8 · The marketplace</p>
+  <p class="rm-eyebrow">7 of 9 · The marketplace</p>
   <h2 class="rm-h2" id="c6">ЦБСТ participates in the company that runs РОЙ.МАРКЕТ, and the register now withholds who owns it</h2>
   <p>On 25 December 2024 ЦБСТ's own channel announced that «Единая Россия», ЦБСТ and the bank ПСБ had launched a «military
   marketplace». The post gives the party official's words and the chairman of ЦБСТ's board:{S.ref(sid338)}</p>
@@ -688,17 +695,46 @@ def render(out: Path):
   any document on file.</p>
 </section>
 
+<section class="chapter" aria-labelledby="c8">
+  <p class="rm-eyebrow">8 of 9 · Since</p>
+  <h2 class="rm-h2" id="c8">In September the foundation congratulated the party official who announced the marketplace on chairing a Duma committee</h2>
+  <p>The foundation's channel has gone on reporting handovers. On 24 September 2026 it wrote:{S.ref("s9077")}</p>
+  <article class="post" aria-label="Excerpt from the post of 24 September 2026">
+    <header><span>Telegram · @nashapravdafond</span><span>{ru_date(q_91['date'])}</span><span>The foundation's own post</span></header>
+    {passage(q_91)}
+  </article>
+  <p>On 3 October:{S.ref("s9204")}</p>
+  <article class="post" aria-label="Excerpt from the post of 3 October 2026">
+    <header><span>Telegram · @nashapravdafond</span><span>{ru_date(q_amb['date'])}</span><span>The foundation's own post</span></header>
+    {passage(q_amb)}
+  </article>
+  <p>Neither post names a product or a maker. Both are the foundation's own reports, like the 21 before them.</p>
+  <p>Between the two, on 30 September, the foundation congratulated Александр Сидякин on his appointment as chair of the
+  State Duma's committee on digital development and artificial intelligence.{S.ref("s9050")} He is the secretary of
+  ЦБСТ's supervisory board and the party official quoted in ЦБСТ's launch post for the «military marketplace». The
+  foundation wrote:</p>
+  <article class="post" aria-label="Excerpt from the post of 30 September 2026">
+    <header><span>Telegram · @nashapravdafond</span><span>{ru_date(q_cong['date'])}</span><span>The foundation's own post</span></header>
+    {passage(q_cong)}
+  </article>
+  <p>Six days earlier ЦБСТ's own channel had reported that Дмитрий Медведев proposed him for the post, and quoted the
+  chairman of its board, Андрей Безруков: the centre <i>«окажет ему всю необходимую экспертную поддержку»</i>, will give
+  him all the expert support he needs.{S.ref("s9049")}</p>
+  <p>The foundation's notes for 2025, the latest accounts on file, name no donor.{r_notes25}</p>
+</section>
+
 <section class="chapter" aria-labelledby="c7">
-  <p class="rm-eyebrow">8 of 8 · The limits</p>
+  <p class="rm-eyebrow">9 of 9 · The limits</p>
   <h2 class="rm-h2" id="c7">What this does not show</h2>
   <ul class="limits">
-    <li>Every handover in this story is the foundation's own report. For none of the 21 is there a second source on file.</li>
+    <li>Every handover in this story is the foundation's own report. For none of them is there a second source on file.</li>
     <li>A handover to a unit does not show that the equipment was used in combat. Some recipients are rear units, and two of the 21 are civilian services.</li>
     <li>The accounts do not name the donors behind {F['donor_share']:.0f}% of the foundation's 2024 money, and they do not define the state aid the foundation says it did not receive.</li>
     <li>The five contributions of 71.1 million rubles in the foundation's notes cannot be matched to ЦБСТ's receipts. The register records ЦБСТ's founders and no owner.</li>
     <li>ЦБСТ's share in МПТМ is not stated in any document on file, and the register withholds who owns the company.</li>
     <li>No document on file puts «Булат» on РОЙ.МАРКЕТ. Which sellers use the platform beyond the one named here is not established.</li>
     <li>Сидякин's figure of 2.5 billion dollars was not tested. His post gives no source for it.</li>
+    <li>No document on file gives the date of the Duma vote on Сидякин's appointment. The foundation's post shows only that it had been made by 30 September 2026.</li>
     <li>Photographs show what is visible in them. Nobody is identified from a face.</li>
     <li>This page makes no statement about sanctions listings of any company named here.</li>
   </ul>
