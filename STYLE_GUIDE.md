@@ -138,6 +138,10 @@ his; the quotations below are verbatim):
   American press, the Babchenko hoax, the World Cup, Helsinki). Read from
   carnegieendowment.org, which serves the carnegie.ru archive. This is the model
   for the forensic and methodology register; see "Dry analytical register" below.
+  With it, openDemocracy Russia, «Жизнь после фактов: как российские
+  государственные СМИ определяют себя через отрицание» (10.06.2016), read from
+  the Wayback capture of 11.09.2019 (the live page is behind a sign-in wall). Its
+  pull quotes and photo captions are the editors', not his.
 - **Self-published investigation:** Лапшеснималочная on Medium, «Кто снимает
   пропагандистские ролики для московской мэрии…» (03.08.2018) and «Культ личности
   Сергея Собянина, кто его обслуживает (и кто за это платит)» (06.09.2017,
@@ -253,6 +257,39 @@ editorial "we".
 most with a dry turn, or a quiet close on a small human detail that the large
 story missed. Never a call to action. This is §1.3's anticlimactic ending,
 in its Russian form.
+
+*What the openDemocracy essay adds.* It works the same way at essay length, and
+shows five more habits:
+
+- *The instrument goes with the figure.* A poll number comes with the
+  pollster, the date, the question in its exact wording and the series over
+  years, so the reader sees the change rather than a single figure. For us, a
+  revenue or headcount figure comes with the filing and the year it reports
+  on, and with the earlier years where we have them.
+- *A figure is made to yield its consequence.* From "no more than one per cent
+  read foreign media" he infers, with a plain "that is", that almost everyone
+  who distrusts foreign media knows it only second-hand. The analysis lies in
+  that step, not in the number.
+- *Two parties compared on the same scale before they are told apart.* Age,
+  reach, state awards and seats on official councils are set side by side,
+  and only then the one difference that matters. The method suits two
+  companies in one ownership chain, or a maker and its seller.
+- *A received view stated, then tested, then answered at the close.* The
+  opening states what people usually believe about the subject (state media
+  as a single monolith). The body tests it, and the last sentence answers the
+  opening directly. The conclusion closes the frame rather than adding a
+  flourish.
+- *The author's own stake is disclosed in the text, in the third person.* His
+  former editorship of the outlet he cites is declared in brackets at the
+  point of use, and personal experience appears as "the author's experience",
+  not as "I". In this project that is the register for saying what we
+  ourselves did: which pull, which request, which archive.
+
+Two smaller points. A coarse insider word is allowed only inside quotation
+marks, as the milieu's own term, and glossed at once. A claim of Russian
+exceptionalism is refused: where the research shows a general human or global
+pattern, he says so and names the studies, keeping each English term with its
+gloss.
 
 **Disclosed method (Лапшеснималочная): how a finding is shown to be checked.**
 
