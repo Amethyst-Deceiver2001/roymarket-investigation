@@ -22,7 +22,8 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
-from display_helpers import NAME_JS, design_head, name_html, person_names, quote_html, ru_date  # noqa: E402
+from display_helpers import (NAME_JS, caption_html, design_head, latinize_gloss, name_html, orig_line,
+                             person_names, quote_html, ru_date)  # noqa: E402
 
 REG = REPO / "data" / "registry"
 SLUG = "fond-nasha-pravda"
@@ -170,14 +171,12 @@ def handover_events():
         for d in p["deliveries"]:
             if d["donor"] != SLUG:
                 continue
-            e = ev.setdefault(d["post_id"], {"post": d["post_id"], "date": d["date"], "prods": set(), "recipient": d["recipient"], "cred": set()})
+            e = ev.setdefault(d["post_id"], {"post": d["post_id"], "date": d["date"], "prods": set(),
+                                             "recipient": d["recipient"], "recipient_en": d.get("recipient_en"),
+                                             "cred": set()})
             e["prods"].add(p["slug"])
             e["cred"].add(d["credibility"])
     return sorted(ev.values(), key=lambda e: e["date"])
-
-
-def clean_recipient(r: str) -> str:
-    return re.sub(r"\s*\([^)]*\)", "", r).strip().rstrip(";")
 
 
 def handover_timeline(events) -> str:
@@ -285,9 +284,9 @@ def structure_diagram(F, S) -> str:
         lab(780, 137, "participates"), lab(330, 270, "21 handovers reported", "start"),
         node(0, 30, 170, 84, [("Legal entities and", "n"), ("individuals", "n"), ("not named in the accounts", "m"), (f"RUB 1.10bn · {donors:.1f}%", "m")]),
         node(0, 150, 170, 84, [("DAR and Gradislava", "r"), ("the two founding foundations", "m"), ("RUB 59m · 4.8%", "m")]),
-        node(230, 90, 180, 110, [("Nasha Pravda", "r"), ("Фонд «Наша Правда»", "m"), (f"received RUB {got:.2f}bn", "m"), (f"booked {aid:.1f}% as aid", "m")]),
+        node(230, 90, 180, 110, [("Nasha Pravda", "r"), ("Nasha Pravda Foundation", "m"), (f"received RUB {got:.2f}bn", "m"), (f"booked {aid:.1f}% as aid", "m")]),
         node(540, 4, 200, 52, [("Bank PSB", "r"), ("in the register since 01.04.2025", "m")]),
-        node(540, 90, 200, 110, [("TsBST", "r"), ("ЦБСТ · registered 27.02.2024", "m"), ("2024: RUB 269.8m received,", "m"), ("all as «other receipts»", "m")], hub=True),
+        node(540, 90, 200, 110, [("TsBST", "r"), ("registered 27.02.2024", "m"), ("2024: RUB 269.8m received,", "m"), ("all as «other receipts»", "m")], hub=True),
         node(540, 252, 200, 66, [("United Russia", "r"), ("a founder by TsBST's own site;", "m"), ("not in the register", "m")]),
         node(820, 90, 180, 110, [("MPTM", "r"), ("operates ROY.MARKET", "m"), ("share not stated;", "m"), ("owners withheld", "m")]),
         node(230, 332, 510, 70, [("Army units and civilian services", "n"), ("naming «Bulat» or «Kapyushon», Jul 2024 – May 2026", "m"), ("the party and TsBST named as co-donors", "m")]),
@@ -378,15 +377,15 @@ def render(out: Path):
     value_lo, value_hi = min(v for v, _ in STATED_VALUE.values()), max(v for v, _ in STATED_VALUE.values())
     by_post = {e["post"]: e for e in events}
     bucket_rows = "".join(
-        f'<tr><td>{esc(lab)}</td><td>{len(ids)}</td><td class="ru">{"; ".join(esc(clean_recipient(by_post[i]["recipient"])) for i in ids[:3])}</td></tr>'
+        f'<tr><td>{esc(lab)}</td><td>{len(ids)}</td><td>{"; ".join(name_html(by_post[i]["recipient_en"], by_post[i]["recipient"], key=f"recipient-{i}", what="Recipient wording from the post:") for i in ids[:3])}</td></tr>'
         for lab, ids in BUCKETS)
     timeline = handover_timeline(events)
     gal = []
     for mid in GALLERY:
         mm = S.media[mid]
         assert mm["publish"] == "ok" and mm["redact"] == "none_needed"
-        gal.append(f'<figure class="rm-fig"><div class="frame"><img src="{pic(REPO / mm["file"])}" alt="{esc(mm["shows"])}" loading="lazy"></div>'
-                   f'<figcaption><span class="rm-prov">Published by the foundation</span><span>{esc(mm["shows"])}</span>'
+        gal.append(f'<figure class="rm-fig"><div class="frame"><img src="{pic(REPO / mm["file"])}" alt="{esc(mm.get("shows_en") or mm["shows"])}" loading="lazy"></div>'
+                   f'<figcaption><span class="rm-prov">Published by the foundation</span><span>{caption_html(mm["shows"], "story-" + mid, mm.get("shows_en"))}</span>'
                    f'<span class="when">{month_year(mm["published"])} · {esc(GALLERY_RECIPIENT[mid])}</span></figcaption></figure>')
     gallery = "".join(gal)
     q_site1 = S.quote("Автономная некоммерческая организация «Центр беспилотных систем")
@@ -409,9 +408,12 @@ def render(out: Path):
     assert contrib_total == 71_135_024
     dash = lambda n: "—" if n == 0 else k(n)
     cbst_rows = "".join(
-        f'<tr{" class=tot" if i in (6, 7) else ""}><td class="ru">{esc(r[0])}</td><td>{esc(r[1])}</td><td>{dash(r[2])}</td><td>{dash(r[3])}</td></tr>'
+        f'<tr{" class=tot" if i in (6, 7) else ""}><td>{name_html(latinize_gloss(r[1]), r[0], key=f"cbst-line-{i}", what="Original account line:")}</td>'
+        f'<td>{dash(r[2])}</td><td>{dash(r[3])}</td></tr>'
         for i, r in enumerate(CBST_LINES))
-    contrib_rows = "".join(f'<tr><td>{c[0]}</td><td class="ru">{esc(c[1])}</td><td>{k(c[2])}</td></tr>' for c in CONTRIBUTIONS)
+    contrib_rows = "".join(
+        f'<tr><td>{c[0]}</td><td>{name_html("Agreement" + (f" no. {i}" if i > 1 else ""), c[1], key=f"contribution-{i}", what="Original agreement line:")}</td>'
+        f'<td>{k(c[2])}</td></tr>' for i, c in enumerate(CONTRIBUTIONS, 1))
     ev_share = 100 * CBST_LINES[2][3] / CBST_LINES[6][3]
     up_share = 100 * CBST_LINES[3][3] / CBST_LINES[6][3]
     centre_ev25, centre_up25 = CBST_LINES[2][3] / 1000, CBST_LINES[3][3] / 1000
@@ -461,8 +463,14 @@ def render(out: Path):
     r_notes25 = S.ref("s0390")
     shade = ["s1", "s2", "s3", "s4"]
     split_bar = "".join(f'<span class="seg {c}" style="width:{100 * r[2] / recv_total:.2f}%"><b>{100 * r[2] / recv_total:.1f}%</b></span>' for c, r in zip(shade, RECEIVED_2024))
-    recv_rows = "".join(f'<tr><td class="ru">{esc(r[0])}</td><td>{esc(r[1])}</td><td>{k(r[2])}</td><td>{100 * r[2] / recv_total:.1f}%</td></tr>' for r in RECEIVED_2024)
-    used_rows = "".join(f'<tr><td class="ru">{esc(r[0])}</td><td>{esc(r[1])}</td><td>{k(r[2])}</td><td>{100 * r[2] / PRINTED_USED_2024:.1f}%</td></tr>' for r in USED_2024)
+    recv_rows = "".join(
+        f'<tr><td>{name_html(latinize_gloss(r[1]), r[0], key=f"received-line-{i}", what="Original account line:")}</td>'
+        f'<td>{k(r[2])}</td><td>{100 * r[2] / recv_total:.1f}%</td></tr>'
+        for i, r in enumerate(RECEIVED_2024))
+    used_rows = "".join(
+        f'<tr><td>{name_html(r[1], r[0], key=f"used-line-{i}", what="Original account line:")}</td>'
+        f'<td>{k(r[2])}</td><td>{100 * r[2] / PRINTED_USED_2024:.1f}%</td></tr>'
+        for i, r in enumerate(USED_2024))
     chart = money_chart(fin)
     diagram = structure_diagram(F, S)
     used_bar = stack_bar([("aid for the SVO zone", USED_2024[0][2], "s1"), ("management", USED_2024[1][2], "s2"), ("upkeep", USED_2024[2][2], "s3"), ("assets", USED_2024[3][2], "s4")], "Shares of the 2024 use of funds by printed line")
@@ -470,7 +478,7 @@ def render(out: Path):
 
     def passage(q):
         _POPS["pass"] = n = _POPS.get("pass", 0) + 1
-        shown = name_html(q["translation_en"], q["text_ru"], key=f"pass-{n}", what="Russian original of")
+        shown = name_html(latinize_gloss(q["translation_en"]), q["text_ru"], key=f"pass-{n}", what="Russian original of")
         return f'<p class="pass"><span class="en">{shown}</span></p>'
 
     doc = f"""<!doctype html>
@@ -483,11 +491,11 @@ def render(out: Path):
 <nav class="rail" aria-label="Chapters"><ol><li><a href="#c0">The post</a></li><li><a href="#c1">The foundation</a></li><li><a href="#c2">The money in</a></li><li><a href="#c3">The money out</a></li><li><a href="#c5">The centre</a></li><li><a href="#c4">The handovers</a></li><li><a href="#c6">The marketplace</a></li><li><a href="#c8">Since</a></li><li><a href="#c7">The limits</a></li></ol></nav>
 <header>
   <p class="rm-eyebrow">Draft · Story 1 · {ru_date(today)}</p>
-  <h1 class="rm-h1">In 2024 a Moscow foundation booked {F['aid_bn']:.2f} billion rubles as <em>«social and charitable aid for the SVO zone»</em></h1>
+  <h1 class="rm-h1">In 2024 a Moscow foundation booked {F['aid_bn']:.2f} billion rubles as <em>{orig_line(USED_2024[0][0], "story-h1-aid", USED_2024[0][1])}</em></h1>
   <p class="rm-dek">Its accounts do not name the donors behind nearly nine-tenths of its money. Its stated purposes include
   supporting companies that develop and make defence products. Its Telegram channel reports handing drones and
   electronic-warfare equipment to army units, with the ruling party, {pop('United Russia', 'Единая Россия')}, and a drone-industry
-  non-profit, {pop('TsBST', 'TsBST')} (the Centre for Unmanned Systems and Technologies), named as co-donors. «SVO», the Kremlin's term for its invasion of Ukraine, appears here only inside quotations.</p>
+  non-profit, {pop('TsBST', 'ЦБСТ')} (the Centre for Unmanned Systems and Technologies), named as co-donors. “SVO”, the Kremlin's term for its invasion of Ukraine, appears here only inside quotations.</p>
 </header>
 
 {diagram}
@@ -495,7 +503,7 @@ def render(out: Path):
 <section class="figures" aria-label="Three figures">
   <div class="figure"><span class="n">{F['aid_bn']:.2f}<small>bn rubles</small></span>
     <p>booked in 2024 as aid for the zone: {F['aid_share']:.1f}% of everything the foundation spent that year.{r_notes}</p>
-    <p class="ru">«Социальная и благотворительная помощь для зоны СВО»</p><span class="rm-grade doc">Documented</span></div>
+    <p>{orig_line(USED_2024[0][0], "story-figure-aid", USED_2024[0][1], what="Original account line:")}</p><span class="rm-grade doc">Documented</span></div>
   <div class="figure"><span class="n">{F['donor_share']:.0f}<small>%</small></span>
     <p>of the {F['got_bn']:.2f} billion rubles it received in 2024 came from legal entities and individuals the accounts do not name.</p>
     <span class="rm-grade doc">Documented</span></div>
@@ -515,16 +523,16 @@ def render(out: Path):
       «Perekhvat» electronic-intelligence equipment and «Bulat». It puts the batch at 18.2 million
       rubles and the whole trip at about 80 million.</p>
     </div>
-    <figure class="rm-fig"><div class="frame"><img src="{pic(REPO / m['file'])}" alt="{esc(m['shows'])}"></div>
+    <figure class="rm-fig"><div class="frame"><img src="{pic(REPO / m['file'])}" alt="{esc(m.get('shows_en') or m['shows'])}"></div>
       <figcaption><span class="rm-prov">Published by the foundation</span>
-      <span>A still posted with the announcement: {esc(m['shows'][0].lower() + m['shows'][1:])}</span>
+      <span>A still posted with the announcement: {caption_html(m['shows'], 'story-lead-still', m.get('shows_en'))}</span>
       <span class="when">{ru_date(m['published'])}</span></figcaption></figure>
   </div>
   <article class="post" aria-label="Excerpts from the post">
     <header><span>Telegram · @nashapravdafond</span><span>{ru_date(q_head['date'])}</span><span>The foundation's own post</span></header>
     {passage(q_head)}{passage(q_list)}{passage(q_cost)}{passage(q_total)}
   </article>
-  <p>The post's word for the equipment is <span class="ru-word">помощь</span>, <i>aid</i>. It is also the word on the largest line in the foundation's accounts for 2024.</p>
+  <p>The post's word for the equipment is {name_html("aid", "помощь", key="story-word-aid", what="Russian word for aid:")}. It is also the word on the largest line in the foundation's accounts for 2024.</p>
 </section>
 
 <section class="chapter" aria-labelledby="c1">
@@ -548,14 +556,13 @@ def render(out: Path):
   <h2 class="rm-h2" id="c2">Nearly nine-tenths of the 2024 money came from donors the notes do not name</h2>
   <p>In 2024 the foundation received {F['got_bn']:.2f} billion rubles in targeted funds. The notes to its accounts print four lines to say from whom.{r_notes2}</p>
   <div class="split" role="img" aria-label="Shares of the 2024 receipts by printed line">{split_bar}</div>
-  <table class="lines"><thead><tr><th>As printed</th><th>Translation</th><th>Thousand rubles</th><th>Share</th></tr></thead><tbody>{recv_rows}
-    <tr class="tot"><td colspan="2">Received in 2024, as printed</td><td>{k(recv_total)}</td><td>100%</td></tr></tbody></table>
+  <table class="lines"><thead><tr><th>Account line</th><th>Thousand rubles</th><th>Share</th></tr></thead><tbody>{recv_rows}
+    <tr class="tot"><td>Received in 2024</td><td>{k(recv_total)}</td><td>100%</td></tr></tbody></table>
   <p>Two donors are named: DAR, which gave 5 million rubles, and Gradislava, which gave 54 million. The first line,
-  1.10 billion rubles, is credited to <span class="ru-word">юридических и физических лиц</span>, legal entities and
-  individuals. The notes print no names and no amount per donor. The third line repeats the founders' 59 million in
+  1.10 billion rubles, is credited to {name_html("legal entities and individuals", "юридических и физических лиц", key="story-anonymous-donors", what="Original account wording:")}. The notes print no names and no amount per donor. The third line repeats the founders' 59 million in
   amount. The four lines add to the printed total only if both are counted, and the notes do not say whether it is one
   payment listed twice or two.</p>
-  <p>The same notes say, in a sentence about something else, that <i>«{esc(q_aid['text_ru'])}»</i>, the foundation did not receive state aid, in 2024. They do not say what they mean by the term.{S.ref("s0389")}</p>
+  <p>The same notes say, in a sentence about something else, that <i>{orig_line(q_aid['text_ru'], "story-q-aid", q_aid['translation_en'])}</i>, in 2024. They do not say what they mean by the term.{S.ref("s0389")}</p>
   <p>For 2025 the notes give the total, {F['got25_bn']:.2f} billion rubles, and no breakdown.{r_notes25}</p>
   {chart}
   <p class="chart-note">Targeted funds received and used, million rubles, from the filings. The balance carried forward fell from 434.4 million at the start of 2024 to 304.7 million at its end, and stood at 307.6 million at the end of 2025.</p>
@@ -565,10 +572,10 @@ def render(out: Path):
   <p class="rm-eyebrow">4 of 9 · The money out</p>
   <h2 class="rm-h2" id="c3">{F['aid_share']:.1f}% of what it spent in 2024 is booked as aid for the zone</h2>
   {used_bar}
-  <table class="lines"><thead><tr><th>As printed</th><th>Translation</th><th>Thousand rubles</th><th>Share</th></tr></thead><tbody>{used_rows}
-    <tr class="tot"><td colspan="2">Used in 2024, as printed</td><td>{k(PRINTED_USED_2024)}</td><td>100%</td></tr></tbody></table>
+  <table class="lines"><thead><tr><th>Account line</th><th>Thousand rubles</th><th>Share</th></tr></thead><tbody>{used_rows}
+    <tr class="tot"><td>Used in 2024</td><td>{k(PRINTED_USED_2024)}</td><td>100%</td></tr></tbody></table>
   <p>The four lines add to {k(used_sum)}. The filing's own total is {PRINTED_USED_2024 - used_sum} thousand rubles higher, and the notes do not say why.</p>
-  <p>The first line says nothing of what was bought. For 2025 the notes give one line of use: <span class="ru-word">Целевые пожертвования в рамках уставной деятельности</span>, targeted donations within statutory activity, {AID_2025 / 1000:.1f} million rubles. That is {100 * AID_2025 / used25:.1f}% of the {used25 / 1000:.1f} million used. The other {(used25 - AID_2025) / 1000:.1f} million is not broken down.</p>
+  <p>The first line says nothing of what was bought. For 2025 the notes give one line of use: {name_html("targeted donations within statutory activity", "Целевые пожертвования в рамках уставной деятельности", key="story-2025-use", what="Original account wording:")}, {AID_2025 / 1000:.1f} million rubles. That is {100 * AID_2025 / used25:.1f}% of the {used25 / 1000:.1f} million used. The other {(used25 - AID_2025) / 1000:.1f} million is not broken down.</p>
   <p>The foundation's posts say what "aid" covered, for some of it. They show it reaching more than servicemen.</p>
   <article class="post" aria-label="Excerpts from the post of 8 August 2024">
     <header><span>Telegram · @nashapravdafond</span><span>{ru_date(q_hosp['date'])}</span><span>The foundation's own post{S.ref("s8992")}</span></header>
@@ -594,22 +601,22 @@ def render(out: Path):
   <p>The register names two founders. TsBST's own text names three.</p>
   {cbst_bar}
   <p class="chart-note">How TsBST's 2025 spending was booked, share of the 275.6 million rubles used.</p>
-  <table class="lines"><thead><tr><th>As printed in ЦБСТ's accounts</th><th>Translation</th><th>2024</th><th>2025</th></tr></thead><tbody>{cbst_rows}</tbody></table>
+  <table class="lines"><thead><tr><th>TsBST account line</th><th>2024</th><th>2025</th></tr></thead><tbody>{cbst_rows}</tbody></table>
   <p class="chart-note">Thousand rubles. Report on the use of targeted funds, FY2024{S.ref("s0382")} and FY2025.{S.ref("s0385")}</p>
   <p>In 2024 the line for target events is empty. In 2025 it holds {centre_ev25:.1f} million rubles, {ev_share:.1f}% of the
   {centre_used25:.1f} million used; upkeep of the organisation takes {centre_up25:.1f} million, {up_share:.1f}%.</p>
   <p>The accounts print no source for any of the money. In 2024 the line for contributions and other targeted receipts is
-  empty and all 269.8 million sits under «other receipts»; the 2025 form has only that line. The 2025 notes say that,
+  empty and all 269.8 million sits under {name_html("other receipts", "Прочие поступления", key="story-cbst-other-1", what="Original account line:")}; the 2025 form has only that line. The 2025 notes say that,
   because TsBST counts as a small business, it does not apply the accounting rule on related-party disclosure.</p>
   <p>The foundation's notes for 2024 describe TsBST in their own words and list five agreements beneath them:</p>
   <article class="post" aria-label="Excerpts from the foundation's notes">
     <header><span>Notes to the foundation's 2024 accounts, section 16, page 33</span><span>The foundation's own filing{S.ref("s0389")}</span></header>
     {passage(q_sub)}{passage(q_contrib)}
   </article>
-  <table class="lines plain3"><thead><tr><th>Date</th><th>As printed</th><th>Rubles</th></tr></thead><tbody>{contrib_rows}
+  <table class="lines plain3"><thead><tr><th>Date</th><th>Agreement line</th><th>Rubles</th></tr></thead><tbody>{contrib_rows}
     <tr class="tot"><td colspan="2">Together</td><td>{k(contrib_total)}</td></tr></tbody></table>
-  <p>The notes print no recipient beside the amounts. «Subsidiary» is the foundation's word: the register records two
-  founders and no ownership share. TsBST's own 2024 accounts book every receipt as «other receipts», so the two filings
+  <p>The notes print no recipient beside the amounts. {name_html("Subsidiary", "дочернее предприятие", key="story-subsidiary", what="Russian term used by the foundation:")} is the foundation's word: the register records two
+  founders and no ownership share. TsBST's own 2024 accounts book every receipt as {name_html("other receipts", "Прочие поступления", key="story-cbst-other-2", what="Original account line:")}, so the two filings
   cannot be matched to each other.</p>
   <p>On 15 December 2025 {sid}, secretary of TsBST's supervisory board and head of the central executive
   committee of United Russia,{S.ref("s8699")} summed up the centre's year on his own channel:</p>
@@ -623,8 +630,8 @@ def render(out: Path):
 <section class="chapter" aria-labelledby="c4">
   <p class="rm-eyebrow">6 of 9 · The handovers</p>
   <h2 class="rm-h2" id="c4">Between July 2024 and May 2026 the foundation reported at least 21 handovers that name «Bulat» or «Kapyushon»</h2>
-  <p>Two products recur in its posts. It calls «Bulat» a drone detector, <i>детектор дронов</i>, and «Kapyushon» an
-  electronic-warfare station, <i>станция РЭБ</i>.{S.ref("s8994")} Each mark below is one post that names one or both.</p>
+  <p>Two products recur in its posts. It calls «Bulat» a {name_html("drone detector", "детектор дронов", key="story-drone-detector", what="Original wording from the post:")}, and «Kapyushon» an
+  {name_html("electronic-warfare station", "станция РЭБ", key="story-ew-station", what="Original wording from the post:")}.{S.ref("s8994")} Each mark below is one post that names one or both.</p>
   {timeline}
   <p class="chart-note">Circle: a post naming «Bulat». Square: a post naming «Kapyushon». Ringed: the recipient is a civilian service. Source of every mark: the foundation's own channel.</p>
   <p>All 21 are the foundation's own reports. None has a second source on file. Where the foundation says a unit sent
@@ -684,7 +691,7 @@ def render(out: Path):
   they were hidden is not documented. The company register restricted access to the section that names MPTM's
   participants on 15 July 2026, before either version.{S.ref("s0230")}</p>
   <article class="post" aria-label="Excerpt from the company register extract">
-    <header><span>Company register extract, 14 August 2026</span><span>Section «Сведения об участниках / учредителях юридического лица»</span></header>
+    <header><span>Company register extract, 14 August 2026</span><span>Section {name_html("Information about participants / founders of the legal entity", "Сведения об участниках / учредителях юридического лица", key="story-register-section", what="Original register heading:")}</span></header>
     {passage(q_restr)}
   </article>
   <p>The one seller whose own post states a sale on the platform is KB «SPEKTR», a maker of drone propellers. On 6 July 2026
