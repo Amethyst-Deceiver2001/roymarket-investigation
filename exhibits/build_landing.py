@@ -20,13 +20,15 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "exhibits"))
 sys.path.insert(0, str(REPO / "scripts"))
 from build_chain_view import CBST, REGIMES, Chain, cap, esc, load, money  # noqa: E402
-from display_helpers import design_head, display_name, reader_grade, ru_date  # noqa: E402
+from display_helpers import NAME_JS, design_head, display_name, latin_text, name_html, person_names, reader_grade, ru_date  # noqa: E402
 from graph_contract import source_grade  # noqa: E402
 
 MPTM, NP, PSB, SIDYAKIN = "ooo-mptm", "fond-nasha-pravda", "pao-bank-psb", "aleksandr-sidyakin"
 # One entry per published chain view: product slug -> private preview Artifact (until the public cutoff).
 CHAINS = {"bulat": "https://claude.ai/artifact/6UaTv2jSwdNdfNUCibCwrf",
           "kapyushon": "https://claude.ai/artifact/5iYx5RsGmTRrAeooi8wdPd"}
+# The foundation story's private preview; the public page links it only once it is published in docs/.
+STORY = "https://claude.ai/artifact/DfLGJYwQY5mENE31J4tf8u"
 
 
 def ln(grade, w=56):
@@ -71,16 +73,16 @@ class Landing(Chain):
         psb_f = self.hist(CBST, "founders_history", "ПСБ")
         reg = min((h["as_of"] for h in c.get("founders_history") or [] if h.get("as_of")), default=None)
         ur = self.claim(CBST, "Учредители ЦБСТ")
-        rows.append(("Партия «Единая Россия»", self.g(ur["source_id"]),
-                     "named by ЦБСТ itself as one of its three founders, with ПСБ and Наша Правда; "
+        rows.append(("United Russia", self.g(ur["source_id"]),
+                     "named by TsBST itself as one of its three founders, with PSB and Nasha Pravda; "
                      "the company register lists only those two", self.ref(ur["source_id"]), None))
         sid = self.board_role(SIDYAKIN)
-        rows.append((self.people[SIDYAKIN]["fio_ru"].split()[0] + " " + self.people[SIDYAKIN]["fio_ru"].split()[2], self.g(sid.get("source_id")),
-                     f"secretary of ЦБСТ's supervisory board since {ru_date(sid['from'])}, while head of United Russia's "
+        rows.append((self.person_pop(SIDYAKIN).replace(f'id="nm-{SIDYAKIN}"', f'id="nm-{SIDYAKIN}-l"').replace(f'popovertarget="nm-{SIDYAKIN}"', f'popovertarget="nm-{SIDYAKIN}-l"'), self.g(sid.get("source_id")),
+                     f"secretary of TsBST's supervisory board since {ru_date(sid['from'])}, while head of United Russia's "
                      "central executive committee", self.ref(sid.get("source_id")), None))
-        rows.append((self.ents[NP], self.g(np_f.get("source_id")), f"co-founder of ЦБСТ since its registration on {ru_date(reg)}",
+        rows.append((self.ents[NP], self.g(np_f.get("source_id")), f"co-founder of TsBST since its registration on {ru_date(reg)}",
                      self.ref(np_f.get("source_id")), self.ents[CBST]))
-        rows.append((self.ents[PSB], self.g(psb_f.get("source_id")), f"co-founder of ЦБСТ since {ru_date(psb_f.get('as_of'))}",
+        rows.append((self.ents[PSB], self.g(psb_f.get("source_id")), f"co-founder of TsBST since {ru_date(psb_f.get('as_of'))}",
                      self.ref(psb_f.get("source_id")), self.ents[CBST]))
         sub = next(s for s in c.get("subsidiaries") or [] if s["slug"] == MPTM)
         tie = self.ents[MPTM].get("cbst_tie") or {}
@@ -88,28 +90,28 @@ class Landing(Chain):
         # МПТМ's bank partner, so it is read from there rather than typed in.
         offer = next(pp["source_id"] for pp in self.ents[MPTM].get("platform_partners") or [] if pp.get("kind") == "bank")
         rows.append((self.ents[CBST], reader_grade(tie.get("confidence")),
-                     f"lists ООО «МПТМ», in its report for 2025, as a company it has taken part in since {ru_date(sub['as_of'])}; "
+                     f"lists MPTM, in its report for 2025, as a company it has taken part in since {ru_date(sub['as_of'])}; "
                      "the size of its share is not stated",
                      self.ref(sub.get("source_id")), self.ents[MPTM]))
-        rows.append((self.ents[MPTM], self.g(offer), "the operator of the РОЙ.МАРКЕТ marketplace, by the platform's own supplier offer",
+        rows.append((self.ents[MPTM], self.g(offer), "the operator of the ROY.MARKET marketplace, by the platform's own supplier offer",
                      self.ref(offer), None))
         stock = next((c for c in self.p.get("claims") or [] if c.get("metric") == "donor_stock" and c.get("entity") == NP), None)
         if stock:
             n = re.search(r"Кол\. (\d+)", stock["text_ru"])
             rows.append((self.ents[NP], self.g(stock["source_id"]),
-                         f"held {n.group(1) if n else 'a stock of'} «Булат» on {ru_date(stock['as_of'])}, bought for transfer "
+                         f"held {n.group(1) if n else 'a stock of'} «Bulat» on {ru_date(stock['as_of'])}, bought for transfer "
                          "to military units, by its audited accounts; the seller is not named",
                          self.ref(stock["source_id"]), None))
         ds = [d for d in self.p.get("deliveries") or [] if d.get("donor") == NP]
         if ds:
             dates = sorted(d["date"] for d in ds if d.get("date"))
             rows.append((self.ents[NP], reader_grade(ds[0].get("credibility")),
-                         f"reports handing «Булат» drone detectors to military units {len(ds)} times, "
+                         f"reports handing «Bulat» drone detectors to military units {len(ds)} times, "
                          f"{ru_date(dates[0])} to {ru_date(dates[-1])}; each handover is cited in the chain view",
                          self.ref(ds[0].get("source_id")), None))
         out = []
         for a, g, text, ref, b in rows:
-            out.append(f'<li><span class="from">{esc(short(a))}</span>{ln(g)}<span class="what">{esc(text)}{ref}</span>'
+            out.append(f'<li><span class="from">{a if isinstance(a, str) else self.en(a, pop=True)}</span>{ln(g)}<span class="what">{esc(text)}{ref}</span>'
                        f'<span class="rm-grade {g}">{esc({"doc": "Documented", "rep": "Reported", "open": "Not documented"}[g])}</span></li>')
         return "".join(out)
 
@@ -145,6 +147,225 @@ class Landing(Chain):
         sanc = sum(1 for s in slugs if listed(self.ents.get(s, {})))
         return len(slugs), by, sanc
 
+    # -- how we got here ------------------------------------------------------------------
+    def pop(self, slug):
+        """An entity in prose, Latin first, its Cyrillic name a click away; each popover id is unique on the page."""
+        self._pops = getattr(self, "_pops", 0) + 1
+        e = self.ents[slug]
+        n = display_name(e)
+        legal = n["legal"] or n["head"]
+        return name_html(latin_text(n["head"]) if n["legal"] else n["latin"], legal, key=f"{slug}-{self._pops}")
+
+    def person_pop(self, slug):
+        """A person's first mention: given name and surname in Latin, the full Russian name in the popover."""
+        x = self.people[slug]
+        pn = person_names(x["fio_ru"], x.get("name_latin"))
+        return name_html(pn["first"], pn["fio"], key=slug)
+
+    def mclaim(self, slug, sid):
+        return next(m for m in self.ents[slug].get("marketing_claims") or [] if m.get("source_id") == sid)
+
+    def timeline(self):
+        """Dated events on one scale (Feb 2024 to Oct 2026), dots stacked where months coincide; keyed list below."""
+        c, mp = self.ents[CBST], self.ents[MPTM]
+        np_f, psb_f = self.hist(CBST, "founders_history", "Наша Правда"), self.hist(CBST, "founders_history", "ПСБ")
+        sub = next(s for s in c.get("subsidiaries") or [] if s["slug"] == MPTM)
+        restr = next((h for h in mp.get("founders_history") or [] if "restricted" in (h.get("value") or "")), {})
+        oq = next(o for o in mp.get("open_questions") or [] if "masked" in o.get("text", ""))
+        ev = [(np_f["as_of"], "TsBST registered in Moscow, with the Nasha Pravda foundation as founder", np_f.get("source_id"), "doc"),
+              (sub["as_of"], "MPTM registered; TsBST has taken part in it from the same day", sub.get("source_id"), "doc"),
+              ("2025-02-15", "The platform starts as a closed pilot, by Kommersant's account", "s8866", "rep"),
+              (psb_f["as_of"], "Bank PSB joins TsBST as co-founder", psb_f.get("source_id"), "doc"),
+              ("2025-12-15", "Sidyakin: the party, PSB and TsBST “launched the military marketplace”", "s8847", "rep"),
+              (restr.get("as_of"), "The company register starts withholding MPTM's owners", restr.get("source_id"), "doc"),
+              ("2026-08-13", "The platform opens to outside sellers, “first of all” those on Wildberries and Ozon", "s8854", "rep"),
+              ("2026-08-22", "An archived copy of the supplier offer names MPTM as the platform's operator", "s8817", "doc"),
+              ("2026-09-02", "3mx tells a customer «Bulat» is sold only by 3mx and its dealers", "s8860", "rep"),
+              ("2026-10-01", "The live offer prints the operator as «ООО «****»»", oq.get("source_id"), "doc")]
+        ev = sorted((e for e in ev if e[0]), key=lambda e: e[0])
+        d0, d1 = dt.date(2024, 1, 1), dt.date(2026, 12, 31)
+        W, X0, X1, AX = 960, 24, 936, 96
+
+        def x(d):
+            return X0 + (X1 - X0) * (dt.date.fromisoformat(d) - d0).days / (d1 - d0).days
+        marks, stack = [], {}
+        for i, (d, _, _, g) in enumerate(ev, 1):
+            px = x(d)
+            # Dots closer than 22 px stack upward so each number stays legible; the stem keeps the true date.
+            lvl = next((k for k in range(6) if all(abs(px - q) >= 22 for q in stack.get(k, []))), 5)
+            stack.setdefault(lvl, []).append(px)
+            cy = AX - 18 - lvl * 22
+            marks.append(f'<line x1="{px:.1f}" x2="{px:.1f}" y1="{AX}" y2="{cy + 9:.1f}" class="stem"/>'
+                         f'<circle cx="{px:.1f}" cy="{cy:.1f}" r="9" class="dot {g}"/>'
+                         f'<text x="{px:.1f}" y="{cy + 3.6:.1f}" class="num">{i}</text>')
+        ticks = []
+        for y in (2024, 2025, 2026):
+            for mth in (1, 4, 7, 10):
+                px = x(f"{y}-{mth:02d}-01")
+                ticks.append(f'<line x1="{px:.1f}" x2="{px:.1f}" y1="{AX}" y2="{AX + (8 if mth == 1 else 4)}" class="tick"/>')
+                if mth == 1:
+                    ticks.append(f'<text x="{px + 4:.1f}" y="{AX + 20}" class="yr">{y}</text>')
+        svg = (f'<svg class="tl-svg" viewBox="0 0 {W} {AX + 28}" role="img" aria-label="Timeline, January 2024 to December 2026">'
+               f'<line x1="{X0}" x2="{X1}" y1="{AX}" y2="{AX}" class="axis"/>{"".join(ticks)}{"".join(marks)}</svg>')
+        items = "".join(f'<li><span class="d">{esc(ru_date(d) if d != "2025-02-15" else "early 2025")}</span>'
+                        f'<span class="t">{esc(t)}{self.ref(s)}</span></li>' for d, t, s, _ in ev)
+        return f'<div class="tl"><div class="tl-scroll">{svg}</div><ol class="tl-list">{items}</ol></div>'
+
+    def test_bar(self):
+        """The first hypothesis tested: every maker on file, by what the Wildberries seller check found."""
+        makers = [e for e in self.ents.values() if e.get("tier") == "manufacturer"]
+        k = {key: sum(1 for e in makers if e.get("wb_overlap") == key)
+             for key in ("confirmed_direct", "confirmed_reseller", "none_found", "not_checked")}
+        direct = [e for e in makers if e.get("wb_overlap") == "confirmed_direct"]
+        segs = [("direct", k["confirmed_direct"], "sell under their own INN",
+                 ", ".join(self.pop(e["slug"]) for e in direct)),
+                ("resell", k["confirmed_reseller"], "records for one brand, «Bulat» (its maker, the brand and a related sole trader): sold through other sellers", ""),
+                ("none", k["none_found"], "no Wildberries seller carries their INN", ""),
+                ("unchecked", k["not_checked"], "not checked: no INN, or added later", "")]
+        total = len(makers)
+        bar = "".join(f'<span class="seg {c}" style="flex-grow:{n}" title="{n}"></span>' for c, n, _, _ in segs if n)
+        keys = "".join(f'<li><span class="sw {c}"></span><b>{n}</b> {esc(t)}{(": " + extra) if extra else ""}</li>'
+                       for c, n, t, extra in segs)
+        return (f'<figure class="test"><div class="bar" role="img" aria-label="{total} makers by Wildberries check result">{bar}</div>'
+                f'<figcaption><ul class="keys">{keys}</ul><p class="note">{total} makers on file, checked against the sellers '
+                f'in the earlier Wildberries dataset by INN. Counted from the registry.</p></figcaption></figure>')
+
+    def blind_spot(self):
+        """What an INN screen of the maker sees, beside the storefronts the record actually holds for «Bulat»."""
+        rows, seen = [], set()
+        for li in self.p.get("listings") or []:
+            s = li.get("seller") or {}
+            ent = self.ents.get(s.get("entity") or "")
+            chan = re.sub(r"\s*\(.*", "", li.get("channel") or "")
+            if ent and ent["slug"] == self.p["maker"]:
+                # The maker's brand page: the seller behind it is not the maker's INN, and has not been captured yet.
+                if chan in seen:
+                    continue
+                seen.add(chan)
+                who, kind = f'{self.en(ent)} brand page', "seller behind it not yet captured"
+            else:
+                n = display_name(ent) if ent else {}
+                ip = ent and (n.get("legal") or n.get("head") or "").startswith("ИП ")
+                who = self.en(ent, pop=True) if ent else esc(latin_text(re.sub(r"\s*\(.*", "", s.get("storefront") or "")))
+                kind = "sole trader" if ip else ("company" if ent else "storefront, seller unidentified")
+            rows.append(f'<li><span class="ch">{esc(latin_text(chan))}</span><span class="who">{who}</span>'
+                        f'<span class="k">{esc(kind)}</span>{self.ref(li.get("source_id"))}</li>')
+        return (f'<div class="blind"><div class="side screen"><span class="rm-label">Screening by the maker\'s INN</span>'
+                f'<p class="zero">0</p><p>Wildberries sellers carrying {self.pop(self.p["maker"])}\'s INN in the earlier dataset</p></div>'
+                f'<div class="side found"><span class="rm-label">Where «Bulat» is actually sold</span><ul>{"".join(rows)}</ul></div></div>')
+
+    def masked(self):
+        """The operator's name as printed before and after it was masked, and the TsBST report row, as text."""
+        oq = next(o for o in self.ents[MPTM].get("open_questions") or [] if "masked" in o.get("text", ""))
+        sub = next(s for s in self.ents[CBST].get("subsidiaries") or [] if s["slug"] == MPTM)
+        cells = [("22.08.2026", "Supplier offer, archived copy", "ООО «МПТМ» · ИНН 9714068459", self.ref("s8817"), "named"),
+                 ("01.10.2026", "Supplier offer, live site", "Наименование Агента: ООО «****»", self.ref(oq.get("source_id"), "s8822"), "hidden"),
+                 (ru_date(sub["as_of"]), "TsBST's report to the Justice Ministry, for 2025",
+                  "ООО \"МПТМ\" · 1257700021468 · 22.01.2025 · в качестве участника", self.ref(sub.get("source_id")), "named")]
+        return '<div class="docs">' + "".join(
+            f'<figure class="doc {c}"><figcaption><span class="rm-label">{esc(d)}</span> {esc(w)}{r}</figcaption>'
+            f'<p class="print" lang="ru">{esc(t)}</p></figure>' for d, w, t, r, c in cells) + \
+            '<p class="note">Lines as printed in each document, transcribed. The masked version shows the requisites only after login.</p></div>'
+
+    def models(self):
+        """Hypothesis 1 beside hypothesis 2, as two small flow diagrams."""
+        def box(x, y, w, t, cls=""):
+            lines = t.split("|")
+            h = 18 + 16 * len(lines)
+            tx = "".join(f'<text x="{x + w / 2}" y="{y + 22 + 16 * i}" class="bt">{esc(s)}</text>' for i, s in enumerate(lines))
+            return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="6" class="bx {cls}"/>{tx}', (x, y, w, h)
+
+        def arrow(a, b, cls="doc"):
+            (ax, ay, aw, ah), (bx, by, bw, bh) = a, b
+            return (f'<path d="M{ax + aw} {ay + ah / 2} C{(ax + aw + bx) / 2} {ay + ah / 2} {(ax + aw + bx) / 2} {by + bh / 2} '
+                    f'{bx} {by + bh / 2}" class="rm-ln {cls}" marker-end="url(#ah)"/>')
+        defs = '<defs><marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" class="ah"/></marker></defs>'
+        p = []
+        a, ra = box(10, 20, 170, "Wildberries and|Ozon sellers")
+        b, rb = box(10, 100, 170, "TsBST residents")
+        c, rc = box(250, 58, 150, "ROY.MARKET", "hub")
+        d, rd = box(470, 58, 150, "Military|units")
+        p += [a, b, c, d, arrow(ra, rc, "open"), arrow(rb, rc, "open"), arrow(rc, rd, "open")]
+        one = f'<svg viewBox="0 0 630 160" class="mdl" role="img" aria-label="First hypothesis">{defs}{"".join(p)}</svg>'
+        p = []
+        h, rh = box(10, 100, 150, "TsBST, United|Russia, Bank PSB,|Nasha Pravda", "hub")
+        m, rm = box(210, 112, 120, "Maker")
+        outs = [("Dealers and|marketplaces", "doc", 10), ("State|contracts", "doc", 80), ("Donor foundation|handovers", "rep", 150),
+                ("ROY.MARKET|(other sellers)", "rep", 220)]
+        u, ru = box(560, 112, 90, "Military|units")
+        p += [h, m, u, arrow(rh, rm, "doc")]
+        for t, g, y in outs:
+            o, ro = box(380, y, 140, t)
+            p += [o, arrow(rm, ro, g), arrow(ro, ru, g)]
+        two = f'<svg viewBox="0 0 660 290" class="mdl" role="img" aria-label="Working model">{defs.replace("ah", "ah2")}{"".join(p).replace("url(#ah)", "url(#ah2)")}</svg>'
+        return (f'<div class="models"><figure><figcaption><span class="rm-label">First guess</span> The platform would be '
+                f'stocked by people already selling on the mass marketplaces and by TsBST\'s own residents.</figcaption>'
+                f'<div class="mdl-wrap">{one}</div></figure>'
+                f'<figure><figcaption><span class="rm-label">Working model</span> The platform is one outlet among several. '
+                f'Makers sell through their own dealers and marketplaces, to the state, and to donors who hand the goods to units.'
+                f'</figcaption><div class="mdl-wrap">{two}</div></figure></div>')
+
+    def origin(self):
+        """How the investigation got here, in six steps; each step carries its own picture."""
+        recruit = self.mclaim(MPTM, "s8854")
+        only = self.claim("ooo-trimiks", "только у нас")
+        steps = [
+            ("We had been watching Wildberries",
+             '<p>The investigation started as <a href="https://amethyst-deceiver2001.github.io/wb-watcher/">WB Watch</a>, a tracker of '
+             'military goods sold on Russia\'s largest consumer marketplace. It found a large, open trade in kit for the war.</p>'
+             '<div class="figs"><div class="fig"><span class="n">7,666</span><span class="w">military-item listings</span></div>'
+             '<div class="fig"><span class="n">89%</span><span class="w">shipped from Wildberries\' own warehouses</span></div>'
+             '<div class="fig"><span class="n">802</span><span class="w">sellers</span></div></div>'),
+            ("Then a military marketplace announced itself",
+             f'<p>In December 2025 Sidyakin wrote that the '
+             f'party, Bank PSB and TsBST had launched a military marketplace. In August 2026 the platform opened to outside sellers '
+             f'and named the ones it wanted first.</p>'
+             f'<blockquote class="rm-quote"><span class="rm-label">Original Russian</span>«{esc(recruit["text_ru"])}»'
+             f'<cite>ROY.MARKET\'s announcement, {ru_date(recruit["as_of"])}{self.ref(recruit["source_id"])}</cite>'
+             f'<span class="gloss">"{esc(recruit["text_en"].replace("РОЙ.МАРКЕТ", "ROY.MARKET"))}"</span></blockquote>'
+             '<p>Its target was the seller base we had already mapped.</p>'),
+            ("The site hid its operator. An older copy did not",
+             f'<p>The platform\'s public terms print the operator as «ООО «****»». A copy archived on 22.08.2026 names it: '
+             f'{self.pop(MPTM)}, INN 9714068459. TsBST\'s own report to the Justice Ministry lists the same company as one it has '
+             f'taken part in since the day it was registered.</p>{self.masked()}'),
+            ("First guess: the usual sellers, plus TsBST's residents",
+             '<p>If the platform recruits Wildberries sellers, and TsBST runs a residency for drone makers, the likely suppliers are '
+             'makers that are both. We checked every maker on file against the Wildberries sellers by INN.</p>' + self.test_bar()),
+            ("The check missed the best case",
+             f'<p>«Bulat», a drone detector shown at TsBST\'s own showcase, returned nothing: no Wildberries seller carries its '
+             f'maker\'s INN. The detector is on sale all the same, through dealers and sole traders. A sanctions screen keyed on the '
+             f'maker\'s identifier would make the same mistake.</p>{self.blind_spot()}'),
+            ("The marketplace is one outlet among several",
+             f'<p>Asked whether the new «Bulat» would go on ROY.MARKET, 3mx answered:</p>'
+             f'<blockquote class="rm-quote"><span class="rm-label">Original Russian</span>«{esc(only["text_ru"])}»'
+             f'<cite>3mx, in its customer chat, {ru_date(only["as_of"])}{self.ref(only["source_id"])}</cite>'
+             f'<span class="gloss">"{esc(only["text_en"])}"</span></blockquote>'
+             '<p>The detector reaches units another way: a foundation that co-founded TsBST buys it and posts the handovers. So we '
+             'stopped following the platform and started following products, from the maker to the people who receive them.</p>'
+             + self.models()),
+        ]
+        return "".join(f'<li class="step"><h3 class="rm-h3">{esc(h)}</h3>{body}</li>' for h, body in steps)
+
+    def more_cards(self, preview):
+        """The company file and the foundation story, linked only in the preview until they are public."""
+        from build_company_page import COMPANY_PAGES   # noqa: E402
+        cards = []
+        for slug, url in COMPANY_PAGES.items():
+            e = self.ents[slug]
+            href = url if preview else None
+            cards.append(f'<article class="rm-card chain-card"><header><span class="rm-kind">Company file</span>{self.logo(slug)}</header>'
+                         f'<h3 class="rm-name">{f"<a href={chr(34)}{esc(href)}{chr(34)}>" if href else ""}{self.name(e, sub=False)}'
+                         f'{"</a>" if href else ""}</h3>{self.sanctions(e)}<p class="row">Register history, people, sanctions, '
+                         f'accounts, products, pictures and the company in its own words.</p>'
+                         + (f'<p class="go"><a href="{esc(href)}">Open the company file →</a></p>' if href
+                            else '<p class="go wait">The company file is in review and not yet public.</p>') + '</article>')
+        if preview and STORY:
+            cards.append(f'<article class="rm-card chain-card"><header><span class="rm-kind">Story</span>{self.logo(NP)}</header>'
+                         f'<h3 class="rm-name"><a href="{esc(STORY)}">Aid for the Zone</a><small>How {self.en(self.ents[NP])} '
+                         f'raises money, co-founded TsBST and hands equipment to units</small></h3>'
+                         f'<p class="go"><a href="{esc(STORY)}">Read the story →</a></p></article>')
+        return "".join(cards)
+
     def chain_card(self, slug, href):
         """href None: the chain view is not public yet, so the card states that instead of linking."""
         ch = Chain(slug)
@@ -162,8 +383,20 @@ class Landing(Chain):
                 f'{regimes}<dl class="counts"><div><dt>Sale channels</dt><dd>{len(ch.rows)}</dd></div>'
                 f'<div><dt>Listings</dt><dd>{n_list}</dd></div><div><dt>State contracts</dt><dd>{n_buy}</dd></div>'
                 f'<div><dt>Handovers to units</dt><dd>{n_del}</dd></div></dl>'
-                + (f'<p class="go"><a href="{esc(href)}">Follow «{esc(ch.pname)}» from ЦБСТ to the front line →</a></p>' if href
+                + (f'<p class="go"><a href="{esc(href)}">Follow «{esc(ch.pname)}» from TsBST to the front line →</a></p>' if href
                    else '<p class="go wait">The chain view is in review and not yet public.</p>') + '</article>')
+
+
+def unique_popovers(doc):
+    """The same name can be mentioned twice; each button and its popover get a numbered id so they stay paired."""
+    count = {}
+
+    def one(m):
+        pid = m.group(1)
+        count[pid] = count.get(pid, 0) + 1
+        new = pid if count[pid] == 1 else f"{pid}-{count[pid]}"
+        return m.group(0).replace(f'popovertarget="{pid}"', f'popovertarget="{new}"').replace(f'id="{pid}"', f'id="{new}"')
+    return re.sub(r'popovertarget="(nm-[^"]+)".*?<span popover id="\1"', one, doc, flags=re.S)
 
 
 def render(preview: bool, out: Path):
@@ -173,12 +406,15 @@ def render(preview: bool, out: Path):
     today = dt.date.today().isoformat()
     # Called in page order, so footnotes number from the top.
     qa, qb, qref = L.quote()
+    sid_name = L.person_pop(SIDYAKIN)
+    origin, timeline = L.origin(), L.timeline()
     cbst_name, cbst_sanc, funds = L.name(c), L.sanctions(c), L.money_line()
     ledger = L.ledger()
     n, by, sanc = L.network()
     chains = "".join(L.chain_card(s, url if preview else (f"chain_{s}.html" if (out.parent / f"chain_{s}.html").exists() else None))
                      for s, url in CHAINS.items())
     restr_date, restr_ref = L.restricted()
+    extra_cards = L.more_cards(preview)
     doc = f"""<!doctype html>
 <!-- Generated by exhibits/build_landing.py from data/registry on {today}. Do not edit by hand. -->
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -187,18 +423,27 @@ def render(preview: bool, out: Path):
 <body>
 <header class="rm-page top">
   <p class="rm-eyebrow">Draft · {ru_date(today)}</p>
-  <h1 class="rm-h1">ЦБСТ and РОЙ.МАРКЕТ <span class="rm-muted">a Moscow non-profit, its military marketplace, and the drone-war supply around it</span></h1>
-  <p class="rm-dek">An open-source investigation of АНО «ЦБСТ», a Moscow non-profit for the drone industry, and of the
+  <h1 class="rm-h1">TsBST and ROY.MARKET <span class="rm-muted">a Moscow non-profit, its military marketplace, and the drone-war supply around it</span></h1>
+  <p class="rm-dek">An open-source investigation of ANO «TsBST», a Moscow non-profit for the drone industry, and of the
   companies, products, sales and handovers to military units that connect to it. Every claim rests on an archived
   document and is graded by how well that document shows it.</p>
 </header>
 <main class="rm-page">
   <blockquote class="rm-quote lead-quote"><span class="rm-label">Original Russian</span>«{esc(qa['text_ru'])} […] {esc(qb['text_ru'])}»
-    <cite>Александр Сидякин, secretary of ЦБСТ's supervisory board and head of United Russia's central executive committee, on ЦБСТ's year, Telegram, {ru_date(qb['as_of'])}{qref}</cite>
+    <cite>{sid_name}, secretary of TsBST's supervisory board and head of United Russia's central executive committee, on TsBST's year, Telegram, {ru_date(qb['as_of'])}{qref}</cite>
     <span class="gloss">"{esc(qa['text_en'])} […] {esc(qb['text_en'].replace('«Roymarket»', 'Roymarket'))}"</span></blockquote>
 
+  <section class="origin" aria-labelledby="h-origin">
+    <h2 class="rm-h2" id="h-origin">How we got here</h2>
+    <p class="lede">We did not set out to investigate TsBST. We were following military goods on a consumer marketplace,
+    and a new marketplace came looking for the same sellers.</p>
+    <ol class="steps">{origin}</ol>
+    <h3 class="rm-h3">The dates</h3>
+    {timeline}
+  </section>
+
   <section class="hub" aria-labelledby="h-hub">
-    <h2 class="rm-h2" id="h-hub">Who stands behind ЦБСТ</h2>
+    <h2 class="rm-h2" id="h-hub">Who stands behind TsBST</h2>
     <div class="hub-grid">
       <article class="rm-card hub"><header><span class="rm-kind">Hub</span>{L.logo(CBST)}</header>
         <h3 class="rm-name">{cbst_name}</h3>{cbst_sanc}
@@ -210,9 +455,9 @@ def render(preview: bool, out: Path):
 
   <section aria-labelledby="h-chains">
     <h2 class="rm-h2" id="h-chains">Follow a product</h2>
-    <p class="lede">A chain view follows one product from ЦБСТ and its events to the maker, the shops and dealers that
+    <p class="lede">A chain view follows one product from TsBST and its events to the maker, the shops and dealers that
     sell it, the state agencies that buy it and the units that receive it. Each line is drawn in the style of its evidence.</p>
-    <div class="chains">{chains}
+    <div class="chains">{chains}{extra_cards}
       <aside class="rm-card absent"><header><span class="rm-kind">Next</span></header>
         <p>More chain views follow one product at a time, each after its record has been read in full.</p></aside>
     </div>
@@ -220,8 +465,8 @@ def render(preview: bool, out: Path):
 
   <section aria-labelledby="h-net">
     <h2 class="rm-h2" id="h-net">The network on file</h2>
-    <p class="lede">The investigation's registry links <b>{n}</b> organisations to ЦБСТ: {by['doc']} through a document
-    (a register entry, a contract, ЦБСТ's own posts), {by['rep']} on their own word or press reports alone.
+    <p class="lede">The investigation's registry links <b>{n}</b> organisations to TsBST: {by['doc']} through a document
+    (a register entry, a contract, TsBST's own posts), {by['rep']} on their own word or press reports alone.
     <b>{sanc}</b> of them are on at least one sanctions list. Counted from the registry on {ru_date(today)}.</p>
   </section>
 
@@ -253,9 +498,9 @@ def render(preview: bool, out: Path):
     <h2 class="rm-h2" id="h-limits">What this does not show</h2>
     <ul>
       <li>A handover to a unit does not show that the equipment was used in combat. Some recipients are rear units.</li>
-      <li>ЦБСТ's share in the company that runs РОЙ.МАРКЕТ is not stated in any document on file, and since
+      <li>TsBST's share in the company that runs ROY.MARKET is not stated in any document on file, and since
       {restr_date} the company register withholds who owns that company{restr_ref}.</li>
-      <li>A US sanctions entry under a similar name belongs to a different company registered in Tula. ЦБСТ itself is
+      <li>A US sanctions entry under a similar name belongs to a different company registered in Tula. TsBST itself is
       not shown here as sanctioned by the US.</li>
       <li>This is a draft. The earlier case studies and company profiles were withdrawn while the site is rebuilt
       around chain views.</li>
@@ -264,9 +509,10 @@ def render(preview: bool, out: Path):
 
   <section class="rm-prose rm-sources"><h2 class="rm-h2">Sources</h2><ol>{L.notes_list()}</ol></section>
 </main>
+<script>{NAME_JS}</script>
 </body></html>
 """
-    out.write_text(doc)
+    out.write_text(unique_popovers(doc))
     print(f"wrote {out.relative_to(REPO)}: {len(L.notes)} sources, {n} tied organisations, {len(L.media_files)} pictures")
     return L
 
