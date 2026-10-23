@@ -29,6 +29,11 @@ CHAINS = {"bulat": "https://claude.ai/artifact/6UaTv2jSwdNdfNUCibCwrf",
           "kapyushon": "https://claude.ai/artifact/5iYx5RsGmTRrAeooi8wdPd"}
 # The foundation story's private preview; the public page links it only once it is published in docs/.
 STORY = "https://claude.ai/artifact/DfLGJYwQY5mENE31J4tf8u"
+# Other preview pages: (kind, title, one line, preview Artifact)
+MORE = [("People", "One person, many companies", "The people who direct or own two or more of the companies on file",
+         "https://claude.ai/artifact/RDUCMFfzWc5G6f62sV9dTT"),
+        ("Project file", "«Arkhangel»", "A drone school that trains operators for the army and publishes an armed interceptor's parts list",
+         "https://claude.ai/artifact/RABnZkrCUwktU5b91cNZTn")]
 
 
 def ln(grade, w=56):
@@ -362,6 +367,11 @@ class Landing(Chain):
                          f'<h3 class="rm-name"><a href="{esc(STORY)}">Aid for the Zone</a><small>How {self.en(self.ents[NP])} '
                          f'raises money, co-founded TsBST and hands equipment to units</small></h3>'
                          f'<p class="go"><a href="{esc(STORY)}">Read the story →</a></p></article>')
+        if preview:
+            for kind, title, line, url in MORE:
+                cards.append(f'<article class="rm-card chain-card"><header><span class="rm-kind">{esc(kind)}</span></header>'
+                             f'<h3 class="rm-name"><a href="{esc(url)}">{esc(title)}</a><small>{esc(line)}</small></h3>'
+                             f'<p class="go"><a href="{esc(url)}">Open →</a></p></article>')
         return "".join(cards)
 
     def chain_card(self, slug, href):

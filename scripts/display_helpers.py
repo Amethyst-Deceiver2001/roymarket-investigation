@@ -179,7 +179,10 @@ def publish_copy(m: dict, dest_dir: Path, max_px: int = 1200) -> str | None:
 _CYR = r"[А-Яа-яЁё][А-Яа-яЁё0-9\-]*"
 _KNOWN_EN = [("«Единая Россия»", "United Russia"), ("Единая Россия", "United Russia"), ("Единой России", "United Russia"),
              ("ЦБСТ", "TsBST"), ("ПСБ", "PSB"), ("МПТМ", "MPTM"), ("«Наша Правда»", "Nasha Pravda"), ("«Наша правда»", "Nasha Pravda"),
-             ("РОЙ.МАРКЕТ", "ROY.MARKET"), ("«Роймаркет»", "Roymarket"), ("Роймаркет", "Roymarket")]
+             ("РОЙ.МАРКЕТ", "ROY.MARKET"), ("«Роймаркет»", "Roymarket"), ("Роймаркет", "Roymarket"),
+             # Ukrainian places in their Ukrainian-based English spelling (STYLE_GUIDE §2.2), also in stored English
+             ("Zaporozhye", "Zaporizhzhia"), ("Zaporozhie", "Zaporizhzhia"), ("Lugansk", "Luhansk"), ("Gorlovka", "Horlivka"),
+             ("Nikolaev", "Mykolaiv"), ("Kharkov", "Kharkiv")]
 
 
 def latinize_gloss(t: str) -> str:
@@ -318,16 +321,39 @@ def latin_text(s: str) -> str:
 _TRANSLATIONS = REPO / "data" / "registry" / "name_translations.json"
 
 
+_PATRONYMIC_LAT = re.compile(r"(vich|vna|ichna|ogly|kyzy)$", re.I)
+_PATRONYMIC = re.compile(r"(вич|вна|ична|инична|ьич|ич|оглы|кызы)$", re.I)
+# Common Russian given names, to tell "Дмитрий Медведев" (given name first) from "Медведев Дмитрий" (register order)
+_GIVEN = set("""Александр Алексей Анатолий Андрей Антон Аркадий Артём Артем Борис Вадим Валентин Валерий Василий Виктор Виталий
+Владимир Владислав Вячеслав Геннадий Георгий Глеб Григорий Даниил Денис Дмитрий Евгений Егор Иван Игорь Илья Кирилл Константин
+Лев Леонид Максим Марк Матвей Михаил Никита Николай Олег Павел Пётр Петр Роман Руслан Семён Семен Сергей Станислав Степан Тимур
+Фёдор Федор Юрий Ярослав Айрат Вахид Анастасия Анна Валентина Валерия Вера Виктория Галина Дарья Евгения Екатерина Елена Ирина
+Ксения Лариса Людмила Мария Марина Наталья Наталия Надежда Нина Ольга Полина Светлана Софья Татьяна Юлия""".split())
+
+
 def person_names(fio_ru: str, name_latin: str | None = None) -> dict:
     """'Цыганов Вадим Борисович' -> {'first': 'Vadim Tsyganov', 'surname': 'Tsyganov', 'fio': the ФИО}.
-    name_latin, when the registry holds it, is in register order (surname first) and wins over generation."""
+    Also reads the given-name-first order some records use ('Александр Геннадьевич Сидякин', 'Дмитрий Медведев'),
+    by the patronymic's position or a known given name. name_latin, when the registry holds it, is in register
+    order (surname first) and wins over generation."""
     fio = re.sub(r"^ИП\s+", "", (fio_ru or "").strip())
-    lat = (name_latin or "").strip() or latin_text(fio)
-    lat = re.sub(r"\s*\([^)]*\)", "", lat)          # a former surname in brackets stays on the card, not in prose
-    parts = lat.split()
-    if len(parts) >= 2:
-        return {"first": f"{parts[1]} {parts[0]}", "surname": parts[0], "fio": fio}
-    return {"first": lat, "surname": lat, "fio": fio}
+    if name_latin and name_latin.strip():
+        lat = re.sub(r"\s*\([^)]*\)", "", name_latin.strip()).split()
+        if len(lat) >= 3 and _PATRONYMIC_LAT.search(lat[1]) and not _PATRONYMIC_LAT.search(lat[2]):
+            return {"first": f"{lat[0]} {lat[2]}", "surname": lat[2], "fio": fio}   # Given Patronymic Surname
+        if len(lat) >= 2:
+            return {"first": f"{lat[1]} {lat[0]}", "surname": lat[0], "fio": fio}
+        return {"first": " ".join(lat), "surname": " ".join(lat), "fio": fio}
+    ru = re.sub(r"\s*\([^)]*\)", "", fio).split()   # a former surname in brackets stays on the card, not in prose
+    if len(ru) >= 3 and _PATRONYMIC.search(ru[1]) and not _PATRONYMIC.search(ru[2]):
+        given, surname = ru[0], ru[2]                    # Имя Отчество Фамилия
+    elif len(ru) == 2 and ru[0] in _GIVEN and ru[1] not in _GIVEN:
+        given, surname = ru[0], ru[1]                    # Имя Фамилия
+    elif len(ru) >= 2:
+        given, surname = ru[1], ru[0]                    # register order: Фамилия Имя Отчество
+    else:
+        return {"first": latin_text(fio), "surname": latin_text(fio), "fio": fio}
+    return {"first": f"{latin_text(given)} {latin_text(surname)}", "surname": latin_text(surname), "fio": fio}
 
 
 def translation(name_ru: str) -> dict | None:

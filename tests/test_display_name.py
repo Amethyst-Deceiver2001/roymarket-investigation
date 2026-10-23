@@ -70,6 +70,16 @@ def test_state_body_translated_with_original_attached():
     assert translation("Нет такого органа") is None
 
 
+def test_person_names_reads_given_name_first_order():
+    assert person_names("Александр Геннадьевич Сидякин")["first"] == "Aleksandr Sidyakin"
+    assert person_names("Дмитрий Медведев")["first"] == "Dmitriy Medvedev"
+    assert person_names("Андрей Анатольевич Безруков")["surname"] == "Bezrukov"
+    assert person_names("Цыганов Вадим Борисович")["first"] == "Vadim Tsyganov"
+    assert person_names("Белоглазова (Мешкова) Людмила Александровна")["first"] == "Lyudmila Beloglazova"
+    assert person_names("Филиппов Михаил Геннадьевич", "Mikhail Gennadevich Filippov")["first"] == "Mikhail Filippov"
+    assert person_names("Агиевич Сергей Николаевич", "Agievich Sergey Nikolaevich")["first"] == "Sergey Agievich"
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):
