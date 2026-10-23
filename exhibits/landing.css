@@ -139,3 +139,36 @@ main section > .rm-h2 { margin-top: 0; }
   .blind li { grid-template-columns: minmax(0, 1fr) auto; }
   .blind .ch { grid-column: 1 / -1; }
 }
+
+/* The network as pictures: tile wall, sanctions grid, revenue bars */
+.netfig { margin: var(--space-5) 0 0; display: flex; flex-direction: column; gap: var(--space-3); min-width: 0; }
+.netfig figcaption { font-size: var(--t-note); color: var(--ink-3); max-width: var(--measure); }
+.rm-h3 { font: 500 17px/1.25 var(--font-serif); margin: 0; }
+.wall-g { display: flex; flex-direction: column; gap: 8px; margin-bottom: var(--space-4); }
+.wall { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: 8px; }
+.tile { background: var(--panel); border: 1px solid var(--rule); border-radius: var(--radius); padding: 8px; display: flex;
+  flex-direction: column; gap: 6px; justify-content: flex-end; min-height: 64px; min-width: 0; }
+.tile .rm-logo { height: 34px; max-width: 100%; object-fit: contain; background: var(--logo-plate); border-radius: 3px; padding: 3px; align-self: flex-start; }
+.tile .rm-logo.on-dark { background: var(--logo-plate-dark); }
+.tile .tn { font: 500 13px/1.25 var(--font-serif); overflow-wrap: anywhere; }
+.tile .rm-sanction { font-size: 8.5px; padding: 2px 4px; align-self: flex-start; }
+.net2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: var(--space-5); }
+.sg-scroll { overflow-x: auto; }
+.sg { width: 100%; min-width: 480px; height: auto; display: block; }
+.sg .yr { fill: var(--ink-3); font: 500 12px var(--font-mono); }
+.sg .rg { fill: var(--ink-2); font: 500 12.5px var(--font-sans); }
+.sg .row { stroke: var(--rule-soft); }
+.sg .sd { fill: var(--sanction-bg); stroke: var(--sanction); stroke-width: 1.2; }
+.sg .sn { fill: var(--sanction); font: 700 11px var(--font-mono); }
+.rv-p { display: flex; flex-direction: column; gap: 6px; margin-bottom: var(--space-3); }
+.rv { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 5px; }
+.rv li { display: grid; grid-template-columns: minmax(0, 9.5rem) minmax(0, 1fr) auto; gap: 8px; align-items: center; font-size: var(--t-note); }
+.rv .bn { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--ink); }
+.rv .bt { position: relative; height: 14px; }
+.rv .bt span { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 2px; }
+.rv .prev { background: var(--rule); top: 3px; bottom: 3px; }
+.rv .cur { background: var(--ink-2); opacity: .85; }
+.rv .bv { font: 500 12px var(--font-mono); font-variant-numeric: tabular-nums; color: var(--ink-2); white-space: nowrap; }
+.rv .bv small { color: var(--ink-3); }
+.rv .cur.rep { background: var(--g-rep-bg); border: 1.5px dashed var(--g-rep); opacity: 1; }
+.rv .rm-grade { font-size: 9px; padding: 2px 4px; }

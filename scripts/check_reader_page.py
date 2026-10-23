@@ -137,12 +137,12 @@ def check(path: Path, reg: Registry) -> tuple[list[str], list[str]]:
     # sanctions
     for flag in soup.select(".rm-sanction"):
         shown = [x.strip() for x in (flag.b.get_text() if flag.b else "").split(",") if x.strip()]
-        names, node = [], flag
-        while node is not None and not names:
-            node = node.parent
-            if node is None:
-                break
-            names = [c.get_text(" ", strip=True) for c in node.select("small.cyr, [popover] .rm-nm-v[lang=ru]")]
+        # the name the flag belongs to sits in the same item: the nearest list item, card, table row or figure
+        item = flag.find_parent(["li", "article", "tr", "figure"]) or flag.parent
+        names = [c.get_text(" ", strip=True) for c in item.select("small.cyr, [popover] .rm-nm-v[lang=ru]")]
+        if not names:   # a flag in a page's own sanctions section is about the page's subject, named in its header
+            head = (soup.find("h1") or soup).find_parent(["header", "section", "main"]) or soup
+            names = [c.get_text(" ", strip=True) for c in head.select(".names [lang=ru], small.cyr")][:2]
         rec = reg.find(names)
         if rec is None:
             warnings.append(f"sanctions: flag {', '.join(shown) or '(no regime)'} sits on no name that resolves "

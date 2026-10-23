@@ -32,6 +32,22 @@ def regimes(sanctions):
     return [lab for lab, _ in sanction_regimes(sanctions)]
 
 
+def thumb(path: Path, px: int = 160) -> str:
+    """A small JPEG data URI of a portrait, so the page carries its pictures with it."""
+    import base64
+    import io
+    from PIL import Image
+    im = Image.open(path).convert("RGB")
+    w, h = im.size
+    side = min(w, h)   # square crop from the top third, where a portrait's face usually is
+    top = max(0, min(h - side, int((h - side) * 0.25)))
+    im = im.crop(((w - side) // 2, top, (w - side) // 2 + side, top + side))
+    im.thumbnail((px, px))
+    buf = io.BytesIO()
+    im.save(buf, "JPEG", quality=82)
+    return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
+
+
 class Matrix:
     def __init__(self):
         self.ents = {e["slug"]: e for e in load("entities.json")}
@@ -40,6 +56,7 @@ class Matrix:
         self.graph = json.loads((REPO / "data" / "registry" / "relationship_graph.json").read_text())
         self.notes = []
         self.pops = 0
+        self.candidates = {}   # preview only: slug -> {file, page_url, note}; never read from the registry
         self.linked = {e["source"] if e["target"].endswith(CBST) or e["target"] == CBST else e["target"]
                        for e in self.graph["edges"] if e["type"] == "cbst_tie"}
 
@@ -118,7 +135,7 @@ class Matrix:
             chips = "".join(self.chip(x, es) for x, es in sorted(
                 multi[p].items(), key=lambda kv: (0 if kv[0] in self.linked or self.ents[kv[0]].get("tier") == "cbst-core" else 1,
                                                   GRADE_RANK.get(self.role(kv[1])[1], 2))))
-            out.append(f'<li class="pr" data-tie="{1 if n_tie else 0}"><div class="who"><span class="rk">{i:02d}</span>'
+            out.append(f'<li class="pr" data-tie="{1 if n_tie else 0}"><div class="who">{self.face(pr, pn)}<span class="rk">{i:02d}</span>'
                        f'<h3 class="rm-name">{self.pop(pn["first"], pn["fio"])}</h3>'
                        + (f'<span class="rm-sanction">Sanctioned <b>{esc(", ".join(regs))}</b></span>' if regs else "")
                        + f'<p class="cnt"><b>{len(multi[p])}</b> companies'
@@ -128,6 +145,19 @@ class Matrix:
         n_ent = len({x for es in multi.values() for x in es})
         n_tied_people = sum(1 for p in multi if any(x in self.linked or self.ents[x].get("tier") == "cbst-core" for x in multi[p]))
         return out, len(multi), n_ties, n_ent, n_tied_people
+
+    def face(self, pr, pn):
+        """The person's portrait: the registry's own photo; on a preview build, a candidate found by search, marked
+        as an unverified match with its source page; otherwise initials."""
+        if pr.get("photo") and (REPO / "docs" / pr["photo"]).exists():
+            return f'<img class="face" src="{thumb(REPO / "docs" / pr["photo"])}" alt="Portrait of {esc(pn["first"])}">'
+        c = self.candidates.get(pr["slug"])
+        if c and Path(c["file"]).exists():
+            return (f'<figure class="face cand"><img src="{thumb(Path(c["file"]))}" alt="Possible portrait of {esc(pn["first"])}">'
+                    f'<figcaption>Unverified match · <a href="{esc(c["page_url"])}" target="_blank" rel="noopener">source</a>'
+                    f'</figcaption></figure>')
+        ini = "".join(w[0] for w in pn["first"].split()[:2])
+        return f'<span class="face none" aria-hidden="true">{esc(ini)}</span>'
 
     def notes_list(self):
         out = []
@@ -155,6 +185,12 @@ main.rm-page { padding-bottom: 64px; }
 .pr[hidden] { display: none; }
 .who { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .who .rk { font: 500 12px/1 var(--font-mono); color: var(--ink-3); }
+.face { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; display: block; background: var(--panel-2);
+  border: 1px solid var(--rule); margin: 0 0 4px; }
+figure.face { border: 0; background: none; width: auto; height: auto; border-radius: 0; display: flex; flex-direction: column; gap: 3px; }
+figure.face img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 1px dashed var(--ink-3); }
+figure.face figcaption { font: 400 10.5px/1.2 var(--font-mono); color: var(--ink-3); }
+.face.none { display: flex; align-items: center; justify-content: center; font: 500 20px/1 var(--font-serif); color: var(--ink-3); }
 .who .rm-name { font-size: 17px; }
 .who .cnt { margin: 0; font-size: var(--t-note); color: var(--ink-2); }
 .who .rm-sanction { align-self: flex-start; }
@@ -183,6 +219,8 @@ main.rm-page { padding-bottom: 64px; }
 def render(out: Path):
     M = Matrix()
     today = dt.date.today().isoformat()
+    if "--candidates" in sys.argv:   # preview only, never the public build
+        M.candidates = json.loads(Path(sys.argv[sys.argv.index("--candidates") + 1]).read_text(encoding="utf-8"))
     rows, n_people, n_ties, n_ent, n_tied = M.rows()
     doc = f"""<!doctype html>
 <!-- Generated by exhibits/build_people_matrix.py from data/registry on {today}. Do not edit by hand. -->
@@ -229,7 +267,7 @@ def render(out: Path):
 </body></html>
 """
     out.write_text(popup_originals(doc))
-    print(f"wrote {out.relative_to(REPO)}: {n_people} people, {n_ties} roles, {n_ent} companies, {len(M.notes)} sources")
+    print(f"wrote {out.relative_to(REPO) if out.is_relative_to(REPO) else out}: {n_people} people, {n_ties} roles, {n_ent} companies, {len(M.notes)} sources")
 
 
 if __name__ == "__main__":

@@ -150,6 +150,101 @@ class Landing(Chain):
         sanc = sum(1 for s in slugs if listed(self.ents.get(s, {})))
         return len(slugs), by, sanc
 
+    # -- the network as pictures ---------------------------------------------------------
+    TIER_ORDER = [("cbst-core", "TsBST and its core"), ("money-layer", "Money"), ("plumbing", "Platform and services"),
+                  ("manufacturer", "Makers"), ("adjacent", "Other")]
+
+    def tied(self):
+        ties = [e for e in self.graph["edges"] if e["type"] == "cbst_tie"]
+        return sorted({(e["source"] if CBST not in e["source"] else e["target"]).split("::")[-1] for e in ties})
+
+    def wall(self):
+        """Every organisation linked to TsBST as a tile: its logo where one is on file, its name, and the Sanctioned
+        flag naming the regimes. Grouped by its place in the network."""
+        groups = []
+        for tier, label in self.TIER_ORDER:
+            slugs = [s for s in self.tied() if self.ents.get(s, {}).get("tier") == tier]
+            if not slugs:
+                continue
+            slugs.sort(key=lambda s: (not self.logo(s), not sanction_regimes(self.ents[s].get("sanctions")), short(self.ents[s])))
+            tiles = []
+            for s in slugs:
+                e = self.ents[s]
+                regs = [lab for lab, _ in sanction_regimes(e.get("sanctions"))]
+                logo = self.logo(s)
+                flag = f'<span class="rm-sanction">Sanctioned <b>{esc(", ".join(regs))}</b></span>' if regs else ""
+                tiles.append(f'<li class="tile{" has-logo" if logo else ""}">{logo}<span class="tn">{self.en(e, pop=True)}</span>{flag}</li>')
+            groups.append(f'<div class="wall-g"><h3 class="rm-label">{esc(label)} · {len(slugs)}</h3><ul class="wall">{"".join(tiles)}</ul></div>')
+        return "".join(groups)
+
+    def sanctions_grid(self):
+        """When the linked organisations were listed, by regime and year: one count per cell, from dated entries."""
+        cells, undated = {}, 0
+        for s in self.tied():
+            e = self.ents.get(s, {})
+            first = {}
+            for x in e.get("sanctions") or []:
+                for lab, _ in sanction_regimes([x]):
+                    d = (x.get("date") or "")[:4]
+                    if d:
+                        first[lab] = min(first.get(lab) or d, d)
+                    elif lab not in first:
+                        first.setdefault(lab, None)
+            for lab, y in first.items():
+                if y:
+                    cells[(lab, y)] = cells.get((lab, y), 0) + 1
+                else:
+                    undated += 1
+        regs = [r for r in ("Ukraine", "US", "UK", "EU", "Switzerland", "Canada", "Australia", "New Zealand", "Japan")
+                if any(k[0] == r for k in cells)]
+        years = [str(y) for y in range(2022, dt.date.today().year + 1)]
+        x0, cw, rh = 110, 92, 34
+        w, h = x0 + cw * len(years) + 10, 30 + rh * len(regs)
+        out = [f'<svg class="sg" viewBox="0 0 {w} {h}" role="img" aria-label="Linked organisations first listed, by regime and year">']
+        for j, y in enumerate(years):
+            out.append(f'<text class="yr" x="{x0 + cw * j + cw / 2}" y="16" text-anchor="middle">{y}</text>')
+        for i, r in enumerate(regs):
+            cy = 30 + rh * i + rh / 2
+            out.append(f'<text class="rg" x="0" y="{cy + 4}">{esc(r)}</text><line class="row" x1="{x0}" x2="{w - 10}" y1="{cy}" y2="{cy}"/>')
+            for j, y in enumerate(years):
+                n = cells.get((r, y))
+                if n:
+                    rad = 6 + 3.2 * n ** 0.5 * 2
+                    out.append(f'<circle class="sd" cx="{x0 + cw * j + cw / 2}" cy="{cy}" r="{min(rad, 15):.1f}"/>'
+                               f'<text class="sn" x="{x0 + cw * j + cw / 2}" y="{cy + 4}" text-anchor="middle">{n}</text>')
+        out.append("</svg>")
+        return "".join(out), undated
+
+    # Years held off the chart until re-read: the record's own note disagrees with the stored figure.
+    HELD_YEARS = {("ooo-tsugam", 2025): "the filing note's original figures differ from the stored ones by a factor of ten"}
+
+    def revenue_bars(self):
+        """The largest revenues as filed, latest year on file, with the year before as a ghost bar. Non-profit funds
+        are not revenue and do not appear (CLAUDE.md, БФО parser lessons)."""
+        rows = []
+        for s in self.tied():
+            fs = {int(f["year"]): f for f in self.ents[s].get("financials") or []
+                  if f.get("revenue") and (s, int(f["year"])) not in self.HELD_YEARS}
+            if fs:
+                y = max(fs)
+                rows.append((fs[y]["revenue"], y, s, fs[y].get("source_id"), fs.get(y - 1, {}).get("revenue")))
+        rows.sort(reverse=True)
+
+        def panel(rs, title):
+            top = max(max(r[0], r[4] or 0) for r in rs)
+            bars = []
+            for v, y, s, sid, prev in rs:
+                filed = (self.src.get(sid, {}).get("title") or "").startswith("Annual accounts filed")
+                pw = f'<span class="prev" style="width:{100 * prev / top:.1f}%" title="{y - 1}: {money(prev)}"></span>' if prev else ""
+                bars.append(f'<li><span class="bn">{self.en(self.ents[s])}</span><span class="bt">{pw}'
+                            f'<span class="cur{"" if filed else " rep"}" style="width:{100 * v / top:.1f}%"></span></span>'
+                            f'<span class="bv">{money(v)} <small>{y}</small>'
+                            + ("" if filed else ' <span class="rm-grade rep">Reported</span>') + f'{self.ref(sid)}</span></li>')
+            return f'<div class="rv-p"><h3 class="rm-label">{esc(title)}</h3><ol class="rv">{"".join(bars)}</ol></div>'
+        big = [r for r in rows if r[0] >= 10e9]
+        rest = [r for r in rows if r[0] < 10e9][:10]
+        return (panel(big, f"Over ₽10bn · {len(big)}") if big else "") + panel(rest, "The next ten"), len(rows)
+
     # -- how we got here ------------------------------------------------------------------
     def pop(self, slug):
         """An entity in prose, Latin first, its Cyrillic name a click away; each popover id is unique on the page."""
@@ -417,6 +512,9 @@ def render(preview: bool, out: Path):
     cbst_name, cbst_sanc, funds = L.name(c), L.sanctions(c), L.money_line()
     ledger = L.ledger()
     n, by, sanc = L.network()
+    wall = L.wall()
+    sgrid, undated = L.sanctions_grid()
+    revenue, n_rev = L.revenue_bars()
     chains = "".join(L.chain_card(s, url if preview else (f"chain_{s}.html" if (out.parent / f"chain_{s}.html").exists() else None))
                      for s, url in CHAINS.items())
     restr_date, restr_ref = L.restricted()
@@ -477,6 +575,18 @@ def render(preview: bool, out: Path):
     <p class="lede">The investigation's registry links <b>{n}</b> organisations to TsBST: {by['doc']} through a document
     (a register entry, a contract, TsBST's own posts), {by['rep']} on their own word or press reports alone.
     <b>{sanc}</b> of them are on at least one sanctions list. Counted from the registry on {ru_date(today)}.</p>
+    <figure class="netfig">{wall}
+      <figcaption>Every organisation the registry links to TsBST, with its logo where one is on file. A red flag names
+      the regimes that list it.</figcaption></figure>
+    <div class="net2">
+      <figure class="netfig"><h3 class="rm-h3">When they were listed</h3><div class="sg-scroll">{sgrid}</div>
+        <figcaption>Linked organisations first listed by each regime, by year of the listing on file. {undated} listings
+        carry no date in the record and are not drawn.</figcaption></figure>
+      <figure class="netfig"><h3 class="rm-h3">How large they are</h3>{revenue}
+        <figcaption>Revenue as filed in each company's annual accounts, latest year on file; the pale bar is the year
+        before. A Reported bar comes from press citing an accounts database, not from the filing itself.
+        {n_rev} of the {n} organisations have accounts on file. Non-profits' funds are not revenue and are left out.</figcaption></figure>
+    </div>
   </section>
 
   <section class="read" aria-labelledby="h-read">
@@ -522,7 +632,7 @@ def render(preview: bool, out: Path):
 </body></html>
 """
     out.write_text(unique_popovers(popup_originals(doc)))
-    print(f"wrote {out.relative_to(REPO)}: {len(L.notes)} sources, {n} tied organisations, {len(L.media_files)} pictures")
+    print(f"wrote {out.relative_to(REPO) if out.is_relative_to(REPO) else out}: {len(L.notes)} sources, {n} tied organisations, {len(L.media_files)} pictures")
     return L
 
 

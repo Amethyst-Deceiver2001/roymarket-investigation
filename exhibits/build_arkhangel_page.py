@@ -317,7 +317,7 @@ def render(out: Path):
 </body></html>
 """
     out.write_text(popup_originals(doc))
-    print(f"wrote {out.relative_to(REPO)}: {len(P.notes)} sources, {len(P.files)} pictures")
+    print(f"wrote {out.relative_to(REPO) if out.is_relative_to(REPO) else out}: {len(P.notes)} sources, {len(P.files)} pictures")
     return P
 
 

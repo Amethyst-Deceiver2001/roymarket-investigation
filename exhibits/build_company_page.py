@@ -292,8 +292,42 @@ class Page:
                 ev.append((ds[0]["date"], f'First reported handover of {esc(latin_text(p["name_ru"]))} to a unit '
                                           f'({len(ds)} reported to {ru_date(ds[-1]["date"])})', ds[0].get("source_id")))
         ev.sort(key=lambda x: x[0])
-        rows = "".join(f'<li><time>{ru_date(d)}</time><span>{t}{self.ref(sid)}</span></li>' for d, t, sid in ev)
-        return f'<ol class="tline">{rows}</ol>'
+        rows = "".join(f'<li id="tl{i}"><time>{ru_date(d)}</time><span>{t}{self.ref(sid)}</span></li>' for i, (d, t, sid) in enumerate(ev, 1))
+        return self.timeline_strip(ev) + f'<ol class="tline">{rows}</ol>'
+
+    LANES = [("Register", ("Registered", "Owners")), ("Trademarks and patents", ("Trademark", "Patent")),
+             ("Sanctions", ("Listed under",)), ("State and programmes", ("State contract", "Showed")),
+             ("Handovers", ("First reported handover",))]
+
+    def timeline_strip(self, ev):
+        """The same events on one date scale, one lane per kind; each mark is numbered like the list beneath."""
+        if len(ev) < 3:
+            return ""
+        lanes = [(n, [(i, d) for i, (d, t, _) in enumerate(ev, 1) if t.startswith(keys)]) for n, keys in self.LANES]
+        placed = {i for _, xs in lanes for i, _ in xs}
+        other = [(i, d) for i, (d, _, _) in enumerate(ev, 1) if i not in placed]
+        if other:
+            lanes.append(("Other", other))
+        lanes = [(n, xs) for n, xs in lanes if xs]
+        to_ord = lambda d: dt.date.fromisoformat(d[:10]).toordinal()
+        lo = dt.date(dt.date.fromisoformat(ev[0][0][:10]).year, 1, 1).toordinal()
+        hi = dt.date.today().toordinal()
+        x0, x1, rh = 150, 900, 30
+        h = 26 + rh * len(lanes)
+        X = lambda d: x0 + (x1 - x0) * (to_ord(d) - lo) / max(1, hi - lo)
+        out = [f'<div class="tls-scroll"><svg class="tls" viewBox="0 0 {x1 + 20} {h}" role="img" aria-label="The dated events on one scale">']
+        for y in range(dt.date.fromordinal(lo).year, dt.date.today().year + 1):
+            x = X(f"{y}-01-01")
+            out.append(f'<line class="yl" x1="{x:.1f}" x2="{x:.1f}" y1="14" y2="{h}"/><text class="yt" x="{x + 3:.1f}" y="11">{y}</text>')
+        for k, (n, xs) in enumerate(lanes):
+            cy = 26 + rh * k + rh / 2
+            cls = "sanc" if n == "Sanctions" else ""
+            out.append(f'<text class="ln" x="0" y="{cy + 4}">{esc(n)}</text><line class="lr" x1="{x0}" x2="{x1}" y1="{cy}" y2="{cy}"/>')
+            for i, d in xs:
+                out.append(f'<a href="#tl{i}"><circle class="ev {cls}" cx="{X(d):.1f}" cy="{cy}" r="8"/>'
+                           f'<text class="en" x="{X(d):.1f}" y="{cy + 3.5}">{i}</text></a>')
+        out.append("</svg></div>")
+        return "".join(out)
 
 
     def dl(self, rows):
@@ -499,6 +533,17 @@ ul.plain .nolist { margin: 2px 0 0; }
 ol.tline { list-style: none; padding: 0; margin: 0; font-size: 14px; color: var(--ink-2); display: flex; flex-direction: column; gap: 6px; }
 ol.tline li { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 12px; }
 ol.tline time { font: 400 12.5px/1.6 var(--font-mono); color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.tls-scroll { overflow-x: auto; margin: 0 0 var(--space-4); }
+.tls { width: 100%; min-width: 640px; height: auto; display: block; }
+.tls .yl { stroke: var(--rule-soft); }
+.tls .yt { fill: var(--ink-3); font: 500 11px var(--font-mono); }
+.tls .ln { fill: var(--ink-2); font: 500 12px var(--font-sans); }
+.tls .lr { stroke: var(--rule); }
+.tls .ev { fill: var(--panel); stroke: var(--ink-2); stroke-width: 1.5; }
+.tls .ev.sanc { fill: var(--sanction-bg); stroke: var(--sanction); }
+.tls .en { fill: var(--ink); font: 600 9px var(--font-mono); text-anchor: middle; pointer-events: none; }
+.tls a:hover .ev { stroke: var(--accent); stroke-width: 2.2; }
+ol.tline li:target { background: var(--accent-soft); }
 @media (max-width: 600px) { .facts { grid-template-columns: 1fr; gap: 2px 0; } .facts dd { margin-bottom: 8px; } }
 """
     doc = f"""<!doctype html>
@@ -525,7 +570,7 @@ ol.tline time { font: 400 12.5px/1.6 var(--font-mono); color: var(--ink-3); font
 </body></html>
 """
     out.write_text(popup_originals(doc))
-    print(f"wrote {out.relative_to(REPO)}: {len(pg.notes)} sources, {len(pg.limits)} limits")
+    print(f"wrote {out.relative_to(REPO) if out.is_relative_to(REPO) else out}: {len(pg.notes)} sources, {len(pg.limits)} limits")
     for rel, _ in pg.media_files:
         print("  picture", rel)
 
