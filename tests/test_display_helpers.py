@@ -18,13 +18,12 @@ def test_caption_translation_keeps_original_under_ru():
     assert "Pervaya partiya" not in out
 
 
-def test_caption_without_translation_fails_instead_of_transliterating():
-    try:
-        caption_html("Первая партия", "cap-missing")
-    except ValueError as exc:
-        assert "needs an English translation" in str(exc)
-    else:
-        raise AssertionError("Russian captions without a translation must not render as transliteration")
+def test_caption_without_translation_translates_printed_passages():
+    """Non-media descriptions have no shows_en: «…» passages are translated, the rest transliterated (publishable
+    media captions are held to shows_en by check_registry.py instead)."""
+    out = caption_html("Устройство «Проверка» в корпусе", "cap-fallback")
+    assert "Проверка" in out and 'popover' in out
+    assert out.startswith("Ustroystvo") or out.lower().startswith(("device", "ustroy")), out
 
 
 def test_english_caption_rejects_cyrillic_fallback():

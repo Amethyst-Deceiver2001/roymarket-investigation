@@ -212,9 +212,20 @@ def caption_html(text: str, key: str = "cap", en: str | None = None) -> str:
     if en and re.search(r"[А-Яа-яЁё]", en):
         raise ValueError(f"{key}: English media caption must not contain Cyrillic")
     if re.search(r"[А-Яа-яЁё]", text):
-        if not en:
-            raise ValueError(f"{key}: Russian media caption needs an English translation")
-        return name_html(en.strip(), text, key=key, what="Original caption for")
+        if en:
+            return name_html(en.strip(), text, key=key, what="Original caption for")
+        # no supplied translation (descriptions that are not media records): translate each printed «…» passage,
+        # transliterate the rest; check_registry.py demands shows_en for publishable media captions
+        out, pos, n = [], 0, 0
+        for m in re.finditer(r"«([^«»]*[А-Яа-яЁё][^«»]*)»", text):
+            out.append(_h.escape(latinize_gloss(text[pos:m.start()])))
+            n += 1
+            tr = translation(m.group(1))
+            shown = tr["en"] if tr else latinize_gloss(m.group(1))
+            out.append(name_html("«" + shown + "»", "«" + m.group(1) + "»", key=f"{key}-{n}", what="Printed text, original of"))
+            pos = m.end()
+        out.append(_h.escape(latinize_gloss(text[pos:])))
+        return "".join(out)
     return _h.escape(en or text.strip())
 
 
