@@ -470,13 +470,22 @@ class Landing(Chain):
         g = self.ents["ooo-gagaring"]
         tie = g.get("cbst_tie") or {}
         listed = bool(g.get("sanctions"))
-        beats = [("8 October", "an FPV drone hits the coat of arms on the regional government building in Zaporizhzhia, "
-                               "by the head of the regional administration"),
-                 ("19 October", "a drone-electronics maker posts footage of “the results” of two of its products"),
-                 ("20 October", "TsBST re-posts it and adds where soldiers can order them")]
-        figs = "".join(f'<div class="fig"><span class="n">{esc(d)}</span><span class="w">{esc(w)}</span></div>' for d, w in beats)
+        nodes = [("8 October", "Zaporizhzhia", "The head of the regional administration reports that an FPV drone hit the coat of arms on its building.", "rep"),
+                 ("19 October", "Gagaring", "The maker posts a video of “the results” of its Kuznechik and Sova 5.8.", "rep"),
+                 ("20 October", "TsBST", "Re-posts it as “a TsBST resident showed footage of the strike” and names both products.", "rep"),
+                 ("Order line", "ROY.MARKET", "“Servicemen can order them” there. We have not yet checked the catalogue.", "rep")]
+        joins = [("open", "neither post dates the strike"), ("rep", "same video"), ("rep", "sales line")]
+        flow = []
+        for i, (d, who, what, g) in enumerate(nodes):
+            flow.append(f'<li class="node{" last" if i == len(nodes) - 1 else ""}"><span class="d">{esc(d)}</span>'
+                        f'<span class="who">{esc(who)}</span><span class="what">{esc(what)}</span>'
+                        f'<span class="rm-grade {g}">Reported</span></li>')
+            if i < len(joins):
+                gj, lab = joins[i]
+                flow.append(f'<li class="join" aria-hidden="true">{ln(gj, 44)}<span>{esc(lab)}</span></li>')
+        figs = "".join(flow)
         return (
-            f'<div class="figs beats">{figs}</div>'
+            f'<ol class="flow" aria-label="From the strike report to the order line">{figs}</ol>'
             f'<p>On 19 October 2026 {self.pop("ooo-gagaring")}, a drone-electronics maker in Krasnodar, posted a short video '
             f'to its Telegram channel:</p>'
             + self.oq("gag", f"Gagaring, Telegram, 19.10.2026{self.tref('gag')}") +
