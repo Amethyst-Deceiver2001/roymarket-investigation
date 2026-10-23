@@ -126,6 +126,216 @@ suppresses it. **Direct address to the reader** is available («Попробуй
 («отчуждение», «учредитель», «уставный капитал», «ОКВЭД 26.11») against visceral
 moral nouns.
 
+### 1.7a How Kovalev actually writes in Russian — read from his texts
+
+Added 2026-10-23 at user direction, from a reading of his own published Russian
+prose in four registers, every text read in full in Russian. The texts read (all
+his; the quotations below are verbatim):
+
+- **Dry analysis:** ten Carnegie.ru media-analysis columns, 2015–2018 (the
+  Su-24 shoot-down, Cologne, the Brexit referendum and its aftermath, the Turkish
+  coup, "Как американские СМИ избирают Путина президентом США", Trump and the
+  American press, the Babchenko hoax, the World Cup, Helsinki). Read from
+  carnegieendowment.org, which serves the carnegie.ru archive. This is the model
+  for the forensic and methodology register; see "Dry analytical register" below.
+- **Self-published investigation:** Лапшеснималочная on Medium, «Кто снимает
+  пропагандистские ролики для московской мэрии…» (03.08.2018) and «Культ личности
+  Сергея Собянина, кто его обслуживает (и кто за это платит)» (06.09.2017,
+  co-written with Соня Соколова, Дмитрий Хомак and Иван Ёжиков; its block
+  quotations are anonymous sources, not his prose).
+- **Edited investigation:** Meduza, «Откуда взялся „компромат“ про связи Трампа с
+  Россией?…» (03.11.2020; Meduza house style, so ё is stripped and the voice is
+  flattened by the desk).
+- **Profiles of named perpetrators:** pogony.org dossiers on commanders, 2026
+  (dossier 194, Рамиль Ульмасбаев; dossier 190, военком Андрей Сурков). The
+  closest analogue to this project's company and person profiles.
+- **Columns and channel posts:** six opinion pieces on echofm.online (2024–2026)
+  and posts on his Telegram channel `noodleremoverplus`; the Mariupol project
+  description (2025), quoted by Медиазона.
+
+**Structural habits (use in investigative and forensic RU).**
+
+- **The subject's own words as the epigraph, then the record against them.**
+  «Одна фраза из этого текста станет эпиграфом ко всей его дальнейшей истории: …
+  В реальности, как вы наверняка догадываетесь, дело обстояло ровно наоборот.» The
+  quote comes first and is left whole; the documents do the contradicting.
+- **«Формально X. А Y»** is how "officially X, actually Y" sounds in his Russian:
+  «Формально Рамиль Ульмасбаев не был даже основателем отряда… А Ульмасбаев
+  принял командование уже готовым…». For this project: «Формально — „обучение
+  специалистов“ по ОКВЭД. А на деле…».
+- **Self-contradiction tracked over time** is a verification step, stated by
+  date: two interviews two years apart with different wars listed; medals for
+  1990 set against the man's age. Give both dates and let the gap stand.
+- **Promises listed, then one flat verdict, then the counterexamples.** A long
+  sentence lists what the official promised; the next is «Это всё оказалось
+  враньём.»; then «Оказалось, например, что…» with concrete cases. The denial,
+  then the reversal days later («Всего через несколько дней Сурков сделал крутой
+  разворот…»), is the same move.
+- **The individual, then the system.** «История „Ватана“ — это типичный продукт
+  региональной системы…», followed at once by numbers with a denominator and a
+  named source: «около 248 на 100 тысяч жителей, почти в 9 раз больше, чем по
+  Москве», «в базе „Медиазоны“». A per-capita or comparative figure, never a bare
+  total.
+- **Dossier shape** (pogony): a list of findings in the past tense, each one
+  verb-led («Организовал…», «Приказал…», «Выстроил…»); then a dated chronology
+  with the exact article and court («ч. 1 ст. 112 УК РФ… прекращено за истечением
+  сроков давности (Кировский районный суд Уфы)»); then the narrative. Our RU
+  profiles can follow the same order.
+- **Named credit, with an appositive:** «репортёр Vice Саймон Островский (автор
+  одного из лучших расследований про ранний, ихтамнетный этап вторжения)»;
+  «Медиазона», «Пруфы», «Ищи своих» named as the outlets they are.
+- **Hedging, Meduza desk style** (the forensic RU register): «похоже»,
+  «по-видимому», «судя по всему», «впрочем», «якобы», and the bracketed caveat
+  «(Коэн это отрицал; последующее расследование… не нашло подтверждений…)». The
+  hedge is placed on the claim it qualifies, not at the head of the paragraph.
+
+**Dry analytical register (Carnegie): an analysis, and the template for forensic RU.**
+
+What makes these columns his is not a formatting convention. It is how they
+reason. Carnegie's house layout (the standfirst, its dash, its compelled legal
+tags) is the publisher's, and none of it carries over.
+
+*The stance: audit the consensus, his own side's included.* Every column takes a
+view held by almost everyone (Trump is Putin's agent; the World Cup will be a
+disaster; lying to beat Russia is justified once) and checks it against the record
+with the same severity he applies to the Kremlin. The strongest pieces turn on
+anti-Kremlin hawks who have dropped their standards of evidence, and on the irony
+that the consensus helps its own target. For this project that is the posture
+toward our own findings: a claim we would like to be true is checked hardest,
+because the hostile lawyer will start there.
+
+*The architecture: claim, its supports, the test, what is left.* He sets out the
+consensus fairly, lists the arguments that hold it up, takes each against what is
+actually documented, and states plainly what survives, often very little ("only
+indirect evidence, and here it is"). Before judging, he separates ideas the
+coverage blurs (interference from collusion), because the verdict differs for
+each. The opposing case is given in its strongest form and from its best
+advocates. A forensic RU profile can follow the same order: what is asserted
+about the company, by whom, what each assertion rests on, what stands.
+
+*Others speak, and he judges in the joints.* Most sentences report what a named
+writer, outlet or official says, each placed by role and record and by whatever
+bears on how far to trust them (a lobbyist's client list, a paper's past
+fabrication). His own judgement sits in short evaluative phrases between the
+reported claims, rarely in a sentence of its own. That is the model for how
+our RU pages cite: the source is characterised as a source before its claim is
+used.
+
+*Measurement over adjectives.* He measures documents and claims rather than
+describing them: how long a report is, which part of it is public, how much of
+it is about something else, how a percentage was arrived at. Qualifiers such as
+"at least" or "about" belong to the number. When he is wrong-footed by his own
+first phrasing he narrows it in mid-sentence instead of hedging the whole
+paragraph. The calibration words are few and used exactly: "allegedly" for an
+unverified claim, "apparently" for an inference, "obviously" only where the
+inference is safe.
+
+*Irony by understatement only.* There is no sarcasm, no insult and no
+intensifier. The one permitted turn is litotes: saying a thing is "not entirely"
+so, or calling a leap of logic a "creative assumption". It works because
+everything around it is level. In forensic mode even this goes.
+
+*Anchoring for the Russian reader.* Foreign events are made legible through
+Russian reference points (a British surveillance bill set beside the Yarovaya
+package, a period of the Duma, a memorable Russian propaganda sheet of 1996) and
+through historical precedents picked for scale, not decoration. Foreign terms
+are kept and explained, with their history when it matters. On our RU pages the
+same move explains a Western sanctions regime or a procurement norm in terms a
+Russian reader already knows.
+
+*Rhythm.* Long hypotactic sentences, with the qualification held inside them,
+carry the facts. A short sentence marks a pivot. A run of questions frames a
+problem before he answers it. "On the one hand / on the other" and "in words /
+in deeds" pairings carry contrast without comment. The only first person is the
+editorial "we".
+
+*Endings.* One measured sentence that settles what the evidence supports, at
+most with a dry turn, or a quiet close on a small human detail that the large
+story missed. Never a call to action. This is §1.3's anticlimactic ending,
+in its Russian form.
+
+**Disclosed method (Лапшеснималочная): how a finding is shown to be checked.**
+
+- **The reader is told how the fact was confirmed, and how many sources stand
+  behind it:** «Я попросил его предоставить доказательства… но даже это меня не
+  удовлетворило, поэтому я нашёл ещё один источник, независимый от первого,
+  который информацию подтвердил, а потом и третий.» In our pages that is one
+  sentence saying which document a fact rests on and what corroborates it.
+- **The denial, then the register record that answers it:** «Сам Фадеев в
+  разговоре со мной наотрез отрицает… Верится в это с трудом, потому что… А одним
+  из совладельцев одноимённого ООО был кто? Правильно, Данила Поперечный». The
+  company record does the arguing (the rhetorical question is for campaigning
+  mode; the order denial → record is for every mode).
+- **The non-answer is recorded as a fact:** «Все наши письма… и звонки остались
+  без ответа.»
+- **What was not established is said outright:** «…сколько себе оставляет
+  Поперечный — это нам, к сожалению, выяснить так и не удалось, как и конечного
+  заказчика.» A conclusion that depends on sources is stated conditionally: «Если
+  всё обстоит так, как нам сообщают наши многочисленные источники, то…».
+- **The scale of money, given a denominator the reader knows:** 200 visitors a
+  day against 150 000 residents is «чуть больше 0,1% жителей района»; 19 billion
+  roubles a year «столько же, сколько вся международная корреспондентская сеть…
+  Russia Today»; «В России есть субъекты федерации, у которых бюджет меньше.» The
+  same goes for a contract sum or a company's revenue on our pages.
+- **The ownership chain through named people and their former posts:** «Александр
+  Латышев, директор ООО „Единая Редакция“… — бывший пресс-секретарь префекта
+  СВАО»; «Куда ни ткнись — везде одна и та же картина.» «Система устроена таким
+  образом, чтобы единственным выгодополучателем в ней была сама мэрия» is the
+  thesis sentence of a procurement finding.
+
+**Sentence and word level.**
+
+- Long sentences carry the facts; the **short sentence is the verdict** and comes
+  right after one: «Это всё оказалось враньём.» «Всё равно за это ничего не
+  будет.» One per paragraph at most.
+- **Scare quotes do the editorialising**, word by word: «добровольческом»
+  отряде, «провинившегося» бойца, «рейды», «подвигах», «региональная
+  особенность». This is the RU form of the euphemism autopsy (§1.2, §5.1); it
+  replaces an adjective.
+- **Register collision is lexical, not only bureaucratic-vs-moral.** An article
+  number sits in the same paragraph as plain speech: «на гражданке», «грести всех
+  подряд», «тереть через пару часов», «закатывали в асфальт». The colloquial word
+  is precise and Russian, never English slang transliterated.
+- **Reader address is light and conversational**: «как вы наверняка
+  догадываетесь», «Представляете…», «Подумайте», «посмотрите». Not the
+  pathos-heavy «Попробуйте представить» every time.
+- **Metaphor is concrete or from a shared culture** (the guide's EN rule holds):
+  «как демоны Варпа», «лавкрафтианской жути», «хтоническим мраком». Use in
+  columns only; never in a profile.
+- **ё is written** in his own texts («подчинённых», «всё», «посёлка»); §2.5 holds.
+- **Тире, not hyphen.** His fast texts slip into « - » as a dash («перевалило за 5
+  тысяч - больше половины всех боевых потерь»). Our pages always use «—» with spaces.
+
+**What stays in his columns and never reaches this project's pages.**
+
+The Echo and Telegram register — мат («Н А Е Б А Л А»), CAPS for mocked
+officialese («СПЕЦИАЛЬНАЯ ВОЕННАЯ ОПЕРАЦИЯ», «ГОСУДАРСТВЕННЫЕ ДЕНЬГИ»), mock
+phonetic spellings («эсвэо», «Россиюшка», lower-case «гирькина»), «ХОБА», emoji,
+the ironic inner monologue given to the subject («Главное — верить в себя!») and
+insults as characterisation («лузер лузером», «садистов», «z-гниды») — is his
+campaigning voice at full strength. On our RU pages:
+
+- **Forensic mode (profiles, methodology):** none of it. The pogony profiles name
+  individual killers on court records; our profiles name companies and their
+  owners on register records, and must read to a court as findings, not
+  contempt. Write it in the Carnegie register above, with the structural habits,
+  the disclosed-method sentences and the Meduza hedges, with no characterising
+  adjective and no understatement jokes.
+- **Investigative mode:** the structural habits, the scare quotes, the one short
+  verdict sentence, light reader address. No insults, no CAPS, no мат.
+- **Campaigning mode:** one ironic turn is allowed (an official's promise set
+  against the outcome, a quoted boast left to hang), still beside a document
+  citation (§1.6). Never мат, CAPS or mock spellings.
+
+A sample of the target investigative RU register, from the Mariupol project
+description: «Преступления России в Мариуполе не прекратились вместе с ковровыми
+обстрелами густонаселённых жилых кварталов. Просто теперь это другие военные
+преступления — куда менее заметные и сильно растянутые во времени. Урбицид,
+убийство города, можно совершать и без бомбардировщиков и батарей залпового
+огня.» Note the shape: a negated expectation, «Просто теперь…» with the тире
+beat, a term glossed in apposition («Урбицид, убийство города»), and a concrete
+close.
+
 ### 1.8 Avoid, in every mode
 
 Cheap intensifiers — *horrific*, *shocking*, *brutal*, *chilling*. Unsourced
