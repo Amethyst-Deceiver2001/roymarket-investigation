@@ -19,7 +19,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 sys.path.insert(0, str(REPO / "exhibits"))
 from graph_contract import source_grade  # noqa: E402
-from display_helpers import (NAME_JS, design_head, display_name, latin_display, latin_text, load_media, media_about, name_html,  # noqa: E402
+from display_helpers import (NAME_JS, design_head, display_name, figure_html, latin_display, latin_text, load_media, media_about, name_html,  # noqa: E402
                              person_names, publish_copy, reader_grade, ru_date, translation)
 from build_chain_view import REGIMES, ROLE_EN, describe_source, esc, load, money  # noqa: E402
 
@@ -390,6 +390,50 @@ class Page:
                                "TsBST rests on the posts and statements cited here.")
         return f'<ul class="plain">{"".join(items)}</ul>' if items else "<p>None recorded.</p>"
 
+    def own_words(self):
+        """Verbatim claims (marketing_claims[]) in the original Russian, each with our gloss and its source. Contact
+        lines (phone numbers) are cut and marked, as in the exports."""
+        out = []
+        for c in sorted(self.e.get("marketing_claims") or [], key=lambda c: c.get("as_of") or ""):
+            ru = c.get("text_ru") or ""
+            if not ru or not c.get("source_id"):
+                continue
+            lines = [ln for ln in ru.split("\n")]
+            cut = [("[…]" if re.search(r"📞|\+7\d{6,}|\+79\d", ln) else ln) for ln in lines]
+            ru = re.sub(r"(\[…\]\n?)+", "[…]\n", "\n".join(cut)).strip()
+            m = re.match(r"^\[([^\]]+)\]\s*(.*)$", c.get("text_en") or "", re.S)
+            who, gloss = (m.group(1), m.group(2)) if m else ("", c.get("text_en") or "")
+            if not who:
+                title = describe_source(self.src.get(c["source_id"], {}))[0] if c["source_id"] in self.src else ""
+                who = ("Posted on 3mx's own channel" if title.startswith("Telegram, @ru3mx") else
+                       "In 3mx's customer chat" if "closed chat" in title else "")
+            gloss = re.sub(r"\+7\d[\d ()-]{8,}", "[…]", gloss)
+            # a capitalised Cyrillic name inside our English is transliterated (§2.2); quoted Russian stays as it is
+            caps = lambda t: re.sub(r"(?<![«\"])\b[А-ЯЁ][а-яё]+(?: \d+)?", lambda x: latin_text(x.group(0)), t)
+            gloss, who = caps(gloss), caps(who)
+            when = ru_date(c["as_of"]) if re.match(r"\d{4}-\d{2}-\d{2}", c.get("as_of") or "") else ""
+            out.append(f'<blockquote class="rm-quote"><span class="rm-label">Original Russian</span>'
+                       f'<span lang="ru" class="q">«{esc(ru)}»</span>'
+                       f'<cite>{esc(who[:1].upper() + who[1:])}{", " + when if when else ""}{self.ref(c["source_id"])}</cite>'
+                       f'<span class="gloss">{esc(gloss)}</span></blockquote>')
+        return "".join(out)
+
+    def pictures(self, img_dir):
+        """Pictures of the company and its products (not handovers: those sit on the chain view)."""
+        keys = {("entity", self.e["slug"])} | {("product", p["slug"]) for p in self.products if p.get("maker") == self.e["slug"]}
+        figs = []
+        for m in media_about(self.media, keys):
+            if m.get("genre") in ("logo", "handover", "facility") or m.get("publish") == "internal":
+                continue
+            name = publish_copy(m, img_dir)
+            if not name:
+                continue
+            self.media_files.append((f"images/media/{name}", img_dir / name))
+            pub = next((a["id"] for a in m.get("about") or [] if a.get("type") == "entity" and a["id"] in self.ents), self.e["slug"])
+            prov = self.en(self.ents[pub])   # who published it: the entity the record is about, else this company
+            figs.append(figure_html(m, f"images/media/{name}", prov, self.ref(m.get("source_id"))))
+        return f'<div class="rm-gallery">{"".join(figs)}</div>' if figs else ""
+
     def sellers(self):
         items = []
         for s in self.ents.values():
@@ -423,7 +467,8 @@ def render(pg, out, chains):
     sections = [("Company register", pg.register()), ("Before the register was closed", pg.before()),
                 ("People", pg.people_block()), ("Where it is", pg.place()), ("Sanctions", pg.sanctions_block()),
                 ("Timeline", pg.timeline()), ("Annual accounts", pg.accounts()),
-                ("Products", pg.products_block(chains)), ("Trademarks and patents", pg.ip_block()),
+                ("Products", pg.products_block(chains)), ("Pictures", pg.pictures(img_dir)),
+                ("In its own words", pg.own_words()), ("Trademarks and patents", pg.ip_block()),
                 ("Links to TsBST and the state", pg.network()), ("Sellers of its products", pg.sellers())]
     pg.gaps()
     body = "".join(f'<section class="sec"><h2 class="rm-h2">{t}</h2>{h}</section>' for t, h in sections if h)
@@ -455,6 +500,9 @@ th { font: 600 var(--t-label)/1.4 var(--font-mono); letter-spacing: .06em; text-
 .prose { margin-top: 40px; }
 .prose ul { padding-left: 20px; color: var(--ink-2); font-size: 14px; }
 .rm-sources { margin-bottom: 60px; }
+.rm-quote { margin: 0 0 14px; max-width: 760px; }
+.rm-quote .q { white-space: pre-line; display: block; }
+.rm-gallery { max-width: 900px; }
 .lead-note { font-size: 13.5px; color: var(--ink-2); margin: 0 0 12px; }
 .nolist { font-size: 13px; color: var(--ink-2); margin: 4px 0; }
 ul.plain .nolist { margin: 2px 0 0; }
