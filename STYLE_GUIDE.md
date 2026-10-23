@@ -145,14 +145,18 @@ line beneath, because it is the string a screener pastes into ЕГРЮЛ or a sa
 
 - **English**: headings, narrative, argument, table column headers, `alt` text,
   captions, glosses, and the visible form of every name (§2.2–2.3a).
-- **Russian, untranslated**: every quotation (§3.1), the wording a post uses for a
-  recipient, page and document titles as published, and registry terminology inside
-  quotes («сведения недостоверны», «Ограничение доступа к сведениям»).
-- **Cyrillic beside the Latin**: the registered name of a company, the full ФИО of a
-  person on first mention, the official name of a state body. It is shown, never
-  replaced: visible on cards, in a popover in running text.
-- **The hybrid sentence is the norm** for quotations: Russian phrase in guillemets,
-  then a parenthetical English gloss.
+- **Russian, under RU** (revised 2026-10-23 at user direction: "all in English first, Russian in a pop-up"):
+  every quotation (§3.1), the wording a post uses for a recipient, a line printed on a document or a picture, a
+  register address, registry terminology. The page shows our English; the verbatim Russian sits behind a small
+  **RU** control, copyable, in the same place every time. A quotation is marked **Translation** and set in
+  quotation marks; the popover holds the original, which stays the record. Two things stay visible in Russian
+  because the reader looks them up: the **registered name of a company or person beside its Latin form on a
+  card**, and **bibliography titles** (cited documents and pages, as published).
+- **The quotation block**: `quote_html()` in `display_helpers.py`: label, English in quotation marks, RU control,
+  then the speaker and date line with its footnote. One helper, so every page does it the same way. Printed text in
+  a picture caption uses `caption_html()`, a line quoted from a document `orig_line()`, and an inline Russian
+  original beside a Latin form is turned into an RU control by `popup_originals()` as the page is written.
+  Prose that still carries Cyrillic names goes through `latinize_gloss()`.
 
 **In the RU pages this split collapses.** The parenthetical English glosses
 disappear, the transliteration layer (§2.2) disappears entirely, and quotations
@@ -318,6 +322,9 @@ used.
 
 - Draft quotes **from the original Russian**, never back-translated from the EN
   page's own prose. A single added or dropped word turns evidence into a misquote.
+- **English first, original under RU** (2026-10-23): the page leads with our translation, labelled
+  *Translation*; the verbatim Russian is the popover and the string a lawyer checks. The translation is ours and is
+  never presented as the speaker's words in English. The original is never edited to suit the translation.
 - Preserve a grammatical quirk or apparent typo and mark it `[так в оригинале]`
   rather than silently fixing it. The exception: an obvious ASR mistranscription
   in a transcript may be corrected silently — fidelity is owed to the speaker,
@@ -476,6 +483,8 @@ Every colour, shape, icon and line weight on a published page must name the `dat
 - [ ] No cheap intensifiers. No unsourced number. No explained irony.
 - [ ] Every person name: Latin primary, full Cyrillic ФИО shown, consistent
       across all pages.
+- [ ] English first: every quotation, printed line, address and recipient wording leads in English with the
+  Russian under the RU control (§2.1, §3.1). Only registered names on cards and bibliography titles stay in Russian.
 - [ ] Every entity: legal form glossed on first mention, transliterated after.
 - [ ] Every quote verified character-for-character against the original.
 - [ ] Every claim carries a confidence level and a resolvable source.

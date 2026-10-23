@@ -19,7 +19,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 sys.path.insert(0, str(REPO / "exhibits"))
 from graph_contract import source_grade  # noqa: E402
-from display_helpers import (NAME_JS, design_head, display_name, figure_html, latin_display, latin_text, load_media, media_about, name_html,  # noqa: E402
+from display_helpers import (NAME_JS, design_head, display_name, figure_html, latin_display, latin_text, load_media, media_about, latinize_gloss, name_html, popup_originals, quote_html,  # noqa: E402
                              person_names, publish_copy, reader_grade, ru_date, translation)
 from build_chain_view import REGIMES, ROLE_EN, describe_source, esc, load, money  # noqa: E402
 
@@ -173,7 +173,7 @@ class Page:
         addr = next((h for h in sorted(e.get("address_history") or [], key=lambda h: h.get("as_of") or "", reverse=True)
                      if self.doc(h.get("source_id"))), None)
         if addr:
-            rows.append(("Registered address", f'<span lang="ru">{esc(addr["value"])}</span>{self.ref(addr["source_id"])}'))
+            rows.append(("Registered address", f'{name_html(latin_text(addr["value"]), addr["value"], key="addr-1", what="Register address in Russian:")}{self.ref(addr["source_id"])}'))
         if e.get("okved_code"):
             tr = translation(e.get("okved_label") or "")
             label = (name_html(tr["en"], e["okved_label"], key="okved") if tr
@@ -247,7 +247,7 @@ class Page:
             return ""
         slot = lambda t: (f'<figure class="rm-fig empty"><div class="frame">{t} not yet captured</div>'
                           f'<figcaption><span class="rm-prov">{t}</span></figcaption></figure>')
-        return (f'<p>Registered address, as the register gives it: <span lang="ru">{esc(addr["value"])}</span>'
+        return (f'<p>Registered address, as the register gives it: {name_html(latin_text(addr["value"]), addr["value"], key="addr-2", what="Register address in Russian:")}'
                 f'{self.ref(addr["source_id"])}</p><div class="rm-facility">{slot("Satellite view")}{slot("Street view")}</div>')
 
     def timeline(self):
@@ -290,7 +290,7 @@ class Page:
                        part.get("source_id")))
         for sp in e.get("state_programs") or []:
             if re.match(r"\d{4}-\d{2}-\d{2}", sp.get("as_of") or "") and sp.get("name_en"):
-                ev.append((sp["as_of"], esc(sp["name_en"]), sp.get("source_id")))
+                ev.append((sp["as_of"], esc(latinize_gloss(sp["name_en"])), sp.get("source_id")))
         for p in self.products:
             if p.get("maker") != e["slug"]:
                 continue
@@ -352,12 +352,12 @@ class Page:
             when = f"{when[6:8]}.{when[4:6]}.{when[:4]}" if when and when.isdigit() and len(when) == 8 else (when or "")
             classes = sorted({c.split()[0] for c in t.get("goods_classes") or []} |
                              set(re.findall(r"(?:^|; )(\d{2}) \(", t.get("goods_classes_summary") or "")))
-            items.append(f'<li>{kind} {esc(num)}{" «" + esc(t["title"]) + "»" if t.get("title") else ""}, '
+            items.append(f'<li>{kind} {esc(num)}{" " + (name_html("«" + latin_text(t["title"]) + "»", "«" + t["title"] + "»", key="tm-" + str(num), what="Trademark as registered, in Russian:") if re.search("[А-Яа-я]", t["title"]) else "«" + esc(t["title"]) + "»") if t.get("title") else ""}, '
                          f'{"registered" if t.get("registered") else "filed"} {when}'
                          f'{", classes " + ", ".join(classes) if classes else ""}{self.ref(t.get("source_id"))}</li>')
         for p in self.e.get("patents") or []:
             inv = [person_names(re.sub(r"\s*\(RU\)$", "", i)) for i in p.get("inventors") or []]
-            invs = "; ".join(f'{esc(i["first"])} (<span lang="ru">{esc(i["fio"])}</span>)' for i in inv)
+            invs = "; ".join(f'{esc(i["first"])} (<span lang="ru">{esc(i["fio"])}</span>)' for i in inv)  # popup_originals() turns the bracket into RU
             pub = (p.get("published") or "").replace(".", "-")
             ttl = (p.get("title") or "").capitalize()
             tr = translation(ttl)
@@ -384,7 +384,7 @@ class Page:
         for sp in e.get("state_programs") or []:
             if sp.get("name_en"):
                 when = ru_date(sp["as_of"]) if re.match(r"\d{4}-\d{2}-\d{2}", sp.get("as_of") or "") else esc(sp.get("as_of") or "")
-                items.append(f'<li>{esc(sp["name_en"])}, {when}{self.ref(sp.get("source_id"))}</li>')
+                items.append(f'<li>{esc(latinize_gloss(sp["name_en"]))}, {when}{self.ref(sp.get("source_id"))}</li>')
         if not e.get("memberships"):
             self.limits.append("No document records the company as a formal member of a TsBST programme. Its link to "
                                "TsBST rests on the posts and statements cited here.")
@@ -408,14 +408,10 @@ class Page:
                 who = ("Posted on 3mx's own channel" if title.startswith("Telegram, @ru3mx") else
                        "In 3mx's customer chat" if "closed chat" in title else "")
             gloss = re.sub(r"\+7\d[\d ()-]{8,}", "[…]", gloss)
-            # a capitalised Cyrillic name inside our English is transliterated (§2.2); quoted Russian stays as it is
-            caps = lambda t: re.sub(r"(?<![«\"])\b[А-ЯЁ][а-яё]+(?: \d+)?", lambda x: latin_text(x.group(0)), t)
-            gloss, who = caps(gloss), caps(who)
+            gloss, who = latinize_gloss(gloss), latinize_gloss(who)
             when = ru_date(c["as_of"]) if re.match(r"\d{4}-\d{2}-\d{2}", c.get("as_of") or "") else ""
-            out.append(f'<blockquote class="rm-quote"><span class="rm-label">Original Russian</span>'
-                       f'<span lang="ru" class="q">«{esc(ru)}»</span>'
-                       f'<cite>{esc(who[:1].upper() + who[1:])}{", " + when if when else ""}{self.ref(c["source_id"])}</cite>'
-                       f'<span class="gloss">{esc(gloss)}</span></blockquote>')
+            cite = f'{esc(who[:1].upper() + who[1:])}{", " + when if when else ""}{self.ref(c["source_id"])}'
+            out.append(quote_html(ru, gloss, cite, key=f"claim-{len(out) + 1}"))
         return "".join(out)
 
     def pictures(self, img_dir):
@@ -535,7 +531,7 @@ ol.tline time { font: 400 12.5px/1.6 var(--font-mono); color: var(--ink-3); font
 <script>{NAME_JS}</script>
 </body></html>
 """
-    out.write_text(doc)
+    out.write_text(popup_originals(doc))
     print(f"wrote {out.relative_to(REPO)}: {len(pg.notes)} sources, {len(pg.limits)} limits")
     for rel, _ in pg.media_files:
         print("  picture", rel)

@@ -22,7 +22,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
-from display_helpers import design_head, ru_date  # noqa: E402
+from display_helpers import NAME_JS, design_head, name_html, person_names, quote_html, ru_date  # noqa: E402
 
 REG = REPO / "data" / "registry"
 SLUG = "fond-nasha-pravda"
@@ -194,7 +194,7 @@ def handover_timeline(events) -> str:
         if m.month in (1, 7):
             o.append(f'<text class="tick" x="{x:.1f}" y="170" text-anchor="middle">{m.strftime("%b %Y")}</text>')
         m = dt.date(m.year + (m.month // 12), m.month % 12 + 1, 1)
-    o.append(f'<text class="lbl" x="0" y="{rows["bulat"] + 4}">«Булат»</text><text class="lbl" x="0" y="{rows["kapyushon"] + 4}">«Капюшон»</text>')
+    o.append(f'<text class="lbl" x="0" y="{rows["bulat"] + 4}">«Bulat»</text><text class="lbl" x="0" y="{rows["kapyushon"] + 4}">«Kapyushon»</text>')
     last, stack = {}, {}
     for e in events:
         x = xs(e["date"])
@@ -281,16 +281,16 @@ def structure_diagram(F, S) -> str:
         edge("doc", "M640 56 L640 90"), edge("rep", "M640 252 L640 200"),
         edge("doc", "M740 145 L820 145"), edge("rep", "M320 200 L320 332"),
         lab(475, 120, "co-founder"), lab(475, 188, "5 contributions,"), lab(475, 202, "RUB 71.1m: no"), lab(475, 216, "recipient printed"),
-        lab(650, 76, "co-founder", "start"), lab(650, 232, "ЦБСТ's own site", "start"),
+        lab(650, 76, "co-founder", "start"), lab(650, 232, "TsBST's own site", "start"),
         lab(780, 137, "participates"), lab(330, 270, "21 handovers reported", "start"),
         node(0, 30, 170, 84, [("Legal entities and", "n"), ("individuals", "n"), ("not named in the accounts", "m"), (f"RUB 1.10bn · {donors:.1f}%", "m")]),
-        node(0, 150, 170, 84, [("Фонд «ДАР» and", "r"), ("Фонд «Градислава»", "r"), ("the two founders", "m"), ("RUB 59m · 4.8%", "m")]),
-        node(230, 90, 180, 110, [("Фонд", "r"), ("«Наша Правда»", "r"), (f"received RUB {got:.2f}bn", "m"), (f"booked {aid:.1f}% as aid", "m")]),
-        node(540, 4, 200, 52, [("ПАО «Банк ПСБ»", "r"), ("in the register since 01.04.2025", "m")]),
-        node(540, 90, 200, 110, [("ЦБСТ", "r"), ("registered 27.02.2024", "m"), ("2024: RUB 269.8m received,", "m"), ("all as «other receipts»", "m")], hub=True),
-        node(540, 252, 200, 66, [("«Единая Россия»", "r"), ("a founder by ЦБСТ's own site;", "m"), ("not in the register", "m")]),
-        node(820, 90, 180, 110, [("ООО «МПТМ»", "r"), ("operates РОЙ.МАРКЕТ", "m"), ("share not stated;", "m"), ("owners withheld", "m")]),
-        node(230, 332, 510, 70, [("Army units and civilian services", "n"), ("naming «Булат» or «Капюшон», Jul 2024 – May 2026", "m"), ("the party and ЦБСТ named as co-donors", "m")]),
+        node(0, 150, 170, 84, [("DAR and Gradislava", "r"), ("the two founding foundations", "m"), ("RUB 59m · 4.8%", "m")]),
+        node(230, 90, 180, 110, [("Nasha Pravda", "r"), ("Фонд «Наша Правда»", "m"), (f"received RUB {got:.2f}bn", "m"), (f"booked {aid:.1f}% as aid", "m")]),
+        node(540, 4, 200, 52, [("Bank PSB", "r"), ("in the register since 01.04.2025", "m")]),
+        node(540, 90, 200, 110, [("TsBST", "r"), ("ЦБСТ · registered 27.02.2024", "m"), ("2024: RUB 269.8m received,", "m"), ("all as «other receipts»", "m")], hub=True),
+        node(540, 252, 200, 66, [("United Russia", "r"), ("a founder by TsBST's own site;", "m"), ("not in the register", "m")]),
+        node(820, 90, 180, 110, [("MPTM", "r"), ("operates ROY.MARKET", "m"), ("share not stated;", "m"), ("owners withheld", "m")]),
+        node(230, 332, 510, 70, [("Army units and civilian services", "n"), ("naming «Bulat» or «Kapyushon», Jul 2024 – May 2026", "m"), ("the party and TsBST named as co-donors", "m")]),
     ]
     svg.append("</svg>")
     legend = ('<ul class="rm-legend">'
@@ -319,10 +319,24 @@ def pic(path: Path) -> str:
     return "data:image/jpeg;base64," + base64.b64encode(path.read_bytes()).decode()
 
 
+_POPS = {}
+
+
+def pop(visible, cyrillic):
+    """A Latin name on its first mention, with the registered Cyrillic form in a popover (STYLE_GUIDE §2.2)."""
+    key = re.sub(r"\W+", "-", visible).strip("-").lower()
+    _POPS[key] = _POPS.get(key, 0) + 1
+    return name_html(visible, cyrillic, key=f"{key}-{_POPS[key]}")
+
+
 def render(out: Path):
     S = Story()
     F = S.figures()
     today = dt.date.today().isoformat()
+    people = load("people.json")
+    sp = next(x for x in (people if isinstance(people, list) else people.get("people", [])) if x["slug"] == "aleksandr-sidyakin")
+    pn = person_names(sp["fio_ru"], sp.get("name_latin"))
+    sid = name_html(pn["first"], pn["fio"], key="sidyakin")
 
     q_head = S.quote("Фонд «Наша Правда», «Единая Россия» и ЦБСТ доставили очередную")
     q_list = S.quote("средства радиоэлектронной разведки")
@@ -452,10 +466,12 @@ def render(out: Path):
     chart = money_chart(fin)
     diagram = structure_diagram(F, S)
     used_bar = stack_bar([("aid for the SVO zone", USED_2024[0][2], "s1"), ("management", USED_2024[1][2], "s2"), ("upkeep", USED_2024[2][2], "s3"), ("assets", USED_2024[3][2], "s4")], "Shares of the 2024 use of funds by printed line")
-    cbst_bar = stack_bar([("upkeep of the organisation", CBST_LINES[3][3], "s1"), ("other", CBST_LINES[5][3], "s2"), ("target events", CBST_LINES[2][3], "s4")], "Shares of ЦБСТ's 2025 use of funds by printed line")
+    cbst_bar = stack_bar([("upkeep of the organisation", CBST_LINES[3][3], "s1"), ("other", CBST_LINES[5][3], "s2"), ("target events", CBST_LINES[2][3], "s4")], "Shares of TsBST's 2025 use of funds by printed line")
 
     def passage(q):
-        return f'<p class="pass"><span class="ru">{esc(q["text_ru"])}</span><span class="en">{esc(q["translation_en"])}</span></p>'
+        _POPS["pass"] = n = _POPS.get("pass", 0) + 1
+        shown = name_html(q["translation_en"], q["text_ru"], key=f"pass-{n}", what="Russian original of")
+        return f'<p class="pass"><span class="en">{shown}</span></p>'
 
     doc = f"""<!doctype html>
 <!-- Generated by exhibits/build_story.py from data/registry on {today}. Do not edit by hand. -->
@@ -470,8 +486,8 @@ def render(out: Path):
   <h1 class="rm-h1">In 2024 a Moscow foundation booked {F['aid_bn']:.2f} billion rubles as <em>«social and charitable aid for the SVO zone»</em></h1>
   <p class="rm-dek">Its accounts do not name the donors behind nearly nine-tenths of its money. Its stated purposes include
   supporting companies that develop and make defence products. Its Telegram channel reports handing drones and
-  electronic-warfare equipment to army units, with the ruling party, «Единая Россия» (United Russia), and a drone-industry
-  non-profit, ЦБСТ (the Centre for Unmanned Systems and Technologies), named as co-donors. «СВО», the Kremlin's term for its invasion of Ukraine, appears here only inside quotations.</p>
+  electronic-warfare equipment to army units, with the ruling party, {pop('United Russia', 'Единая Россия')}, and a drone-industry
+  non-profit, {pop('TsBST', 'TsBST')} (the Centre for Unmanned Systems and Technologies), named as co-donors. «SVO», the Kremlin's term for its invasion of Ukraine, appears here only inside quotations.</p>
 </header>
 
 {diagram}
@@ -484,7 +500,7 @@ def render(out: Path):
     <p>of the {F['got_bn']:.2f} billion rubles it received in 2024 came from legal entities and individuals the accounts do not name.</p>
     <span class="rm-grade doc">Documented</span></div>
   <div class="figure"><span class="n">{F['events']}</span>
-    <p>handovers naming «Булат» or «Капюшон» that the foundation reports in its own posts, {month_year(F['first'])} to {month_year(F['last'])}. Not a full count.</p>
+    <p>handovers naming «Bulat» or «Kapyushon» that the foundation reports in its own posts, {month_year(F['first'])} to {month_year(F['last'])}. Not a full count.</p>
     <span class="rm-grade rep">Reported</span></div>
 </section>
 
@@ -493,10 +509,10 @@ def render(out: Path):
   <h2 class="rm-h2" id="c0">Three days, 80 million rubles</h2>
   <div class="lead-in">
     <div class="text">
-      <p>On 10 April 2025 the foundation's Telegram channel announced that it, the party «Единая Россия» and ЦБСТ had
+      <p>On 10 April 2025 the foundation's Telegram channel announced that it, the party United Russia and TsBST had
       delivered another batch of equipment to servicemen of the 132nd Gorlovka Brigade on the Donetsk direction.{r_posts}
       The post lists FPV drones, Mavic quadcopters, motorcycles, quad bikes, remotely operated evacuation platforms,
-      «Перехват» electronic-intelligence equipment and «Булат». It puts the batch at 18.2 million
+      «Perekhvat» electronic-intelligence equipment and «Bulat». It puts the batch at 18.2 million
       rubles and the whole trip at about 80 million.</p>
     </div>
     <figure class="rm-fig"><div class="frame"><img src="{pic(REPO / m['file'])}" alt="{esc(m['shows'])}"></div>
@@ -514,18 +530,16 @@ def render(out: Path):
 <section class="chapter" aria-labelledby="c1">
   <p class="rm-eyebrow">2 of 9 · The foundation</p>
   <h2 class="rm-h2" id="c1">Its stated purposes include supporting defence-product makers</h2>
-  <p><b>Фонд «Наша Правда»</b> (<i>Our Truth</i>) was registered in Moscow in {registered}. Its general director since
+  <p><b>{pop('Nasha Pravda', 'Фонд «Наша Правда»')}</b> foundation (<i>Our Truth</i>) was registered in Moscow in {registered}. Its general director since
   registration is <b>Alexander Brovchenko</b> ({esc(d)}).{r_reg} Its website describes it as a joint project of two older
-  foundations, «ДАР» and «Градислава», for servicemen and citizens in the «СВО» territory.{r_site}</p>
+  foundations, DAR and Gradislava, for servicemen and citizens in the «SVO» territory.{r_site}</p>
   <div class="excerpt"><p class="where">Foundation's website, «О фонде»</p>
-    <blockquote class="rm-quote"><span class="rm-label">Original Russian</span>{esc(q_site['text_ru'])}
-      <span class="gloss">{esc(q_site['translation_en'])}</span></blockquote></div>
+    {quote_html(q_site['text_ru'], q_site['translation_en'], key="q-site")}</div>
   <p>The notes to the foundation's 2024 annual accounts, filed with the tax service, list what it is for.{r_notes2}
   The list begins with strengthening Russia's defence capability and takes in support for state bodies and the armed
   forces, and for «patriotic, volunteer and other public movements». One entry reads:</p>
   <div class="excerpt"><p class="where">Notes to the 2024 accounts, section 1.3, page 5</p>
-    <blockquote class="rm-quote"><span class="rm-label">Original Russian</span>{esc(q_aim['text_ru'])}
-      <span class="gloss">{esc(q_aim['translation_en'])}</span></blockquote></div>
+    {quote_html(q_aim['text_ru'], q_aim['translation_en'], key="q-aim")}</div>
   <p>The figures come next: where the money came from, and where the accounts say it went.</p>
 </section>
 
@@ -536,7 +550,7 @@ def render(out: Path):
   <div class="split" role="img" aria-label="Shares of the 2024 receipts by printed line">{split_bar}</div>
   <table class="lines"><thead><tr><th>As printed</th><th>Translation</th><th>Thousand rubles</th><th>Share</th></tr></thead><tbody>{recv_rows}
     <tr class="tot"><td colspan="2">Received in 2024, as printed</td><td>{k(recv_total)}</td><td>100%</td></tr></tbody></table>
-  <p>Two donors are named: «ДАР», which gave 5 million rubles, and «Градислава», which gave 54 million. The first line,
+  <p>Two donors are named: DAR, which gave 5 million rubles, and Gradislava, which gave 54 million. The first line,
   1.10 billion rubles, is credited to <span class="ru-word">юридических и физических лиц</span>, legal entities and
   individuals. The notes print no names and no amount per donor. The third line repeats the founders' 59 million in
   amount. The four lines add to the printed total only if both are counted, and the notes do not say whether it is one
@@ -569,26 +583,25 @@ def render(out: Path):
 
 <section class="chapter" aria-labelledby="c5">
   <p class="rm-eyebrow">5 of 9 · The centre</p>
-  <h2 class="rm-h2" id="c5">ЦБСТ's accounts book all of its money as «other receipts»</h2>
-  <p>ЦБСТ, the autonomous non-profit «Центр беспилотных систем и технологий» (Centre for Unmanned Systems and
-  Technologies), was registered in Moscow on 27 February 2024. The register names two founders: the foundation from the
-  start, and the bank ПАО «Банк ПСБ» from 1 April 2025.{S.ref("s0228")} Its registered main activity is market research.
+  <h2 class="rm-h2" id="c5">TsBST's accounts book all of its money as «other receipts»</h2>
+  <p>TsBST, the autonomous non-profit (ANO) {pop('Centre for Unmanned Systems and Technologies', 'Центр беспилотных систем и технологий')}, was registered in Moscow on 27 February 2024. The register names two founders: the foundation from the
+  start, and Bank PSB from 1 April 2025.{S.ref("s0228")} Its registered main activity is market research.
   The register lists publishing, software development, research and conference organising beside it, and nothing coded to defence.</p>
-  <article class="post" aria-label="Excerpts from the ЦБСТ website">
-    <header><span>cbst.ru</span><span>{ru_date(q_site2['date'])}</span><span>ЦБСТ's own website{S.ref("s8867")}</span></header>
+  <article class="post" aria-label="Excerpts from the TsBST website">
+    <header><span>cbst.ru</span><span>{ru_date(q_site2['date'])}</span><span>TsBST's own website{S.ref("s8867")}</span></header>
     {passage(q_site1)}{passage(q_site2)}
   </article>
-  <p>The register names two founders. ЦБСТ's own text names three.</p>
+  <p>The register names two founders. TsBST's own text names three.</p>
   {cbst_bar}
-  <p class="chart-note">How ЦБСТ's 2025 spending was booked, share of the 275.6 million rubles used.</p>
+  <p class="chart-note">How TsBST's 2025 spending was booked, share of the 275.6 million rubles used.</p>
   <table class="lines"><thead><tr><th>As printed in ЦБСТ's accounts</th><th>Translation</th><th>2024</th><th>2025</th></tr></thead><tbody>{cbst_rows}</tbody></table>
   <p class="chart-note">Thousand rubles. Report on the use of targeted funds, FY2024{S.ref("s0382")} and FY2025.{S.ref("s0385")}</p>
   <p>In 2024 the line for target events is empty. In 2025 it holds {centre_ev25:.1f} million rubles, {ev_share:.1f}% of the
   {centre_used25:.1f} million used; upkeep of the organisation takes {centre_up25:.1f} million, {up_share:.1f}%.</p>
   <p>The accounts print no source for any of the money. In 2024 the line for contributions and other targeted receipts is
   empty and all 269.8 million sits under «other receipts»; the 2025 form has only that line. The 2025 notes say that,
-  because ЦБСТ counts as a small business, it does not apply the accounting rule on related-party disclosure.</p>
-  <p>The foundation's notes for 2024 describe ЦБСТ in their own words and list five agreements beneath them:</p>
+  because TsBST counts as a small business, it does not apply the accounting rule on related-party disclosure.</p>
+  <p>The foundation's notes for 2024 describe TsBST in their own words and list five agreements beneath them:</p>
   <article class="post" aria-label="Excerpts from the foundation's notes">
     <header><span>Notes to the foundation's 2024 accounts, section 16, page 33</span><span>The foundation's own filing{S.ref("s0389")}</span></header>
     {passage(q_sub)}{passage(q_contrib)}
@@ -596,10 +609,10 @@ def render(out: Path):
   <table class="lines plain3"><thead><tr><th>Date</th><th>As printed</th><th>Rubles</th></tr></thead><tbody>{contrib_rows}
     <tr class="tot"><td colspan="2">Together</td><td>{k(contrib_total)}</td></tr></tbody></table>
   <p>The notes print no recipient beside the amounts. «Subsidiary» is the foundation's word: the register records two
-  founders and no ownership share. ЦБСТ's own 2024 accounts book every receipt as «other receipts», so the two filings
+  founders and no ownership share. TsBST's own 2024 accounts book every receipt as «other receipts», so the two filings
   cannot be matched to each other.</p>
-  <p>On 15 December 2025 Александр Сидякин, secretary of ЦБСТ's supervisory board and head of the central executive
-  committee of «Единая Россия»,{S.ref("s8699")} summed up the centre's year on his own channel:</p>
+  <p>On 15 December 2025 {sid}, secretary of TsBST's supervisory board and head of the central executive
+  committee of United Russia,{S.ref("s8699")} summed up the centre's year on his own channel:</p>
   <article class="post" aria-label="Excerpt from the post of 15 December 2025">
     <header><span>Telegram · @asidyakin</span><span>{ru_date(q_sid['date'])}</span><span>His own channel{S.ref("s8847")}</span></header>
     {passage(q_sid)}
@@ -609,11 +622,11 @@ def render(out: Path):
 
 <section class="chapter" aria-labelledby="c4">
   <p class="rm-eyebrow">6 of 9 · The handovers</p>
-  <h2 class="rm-h2" id="c4">Between July 2024 and May 2026 the foundation reported at least 21 handovers that name «Булат» or «Капюшон»</h2>
-  <p>Two products recur in its posts. It calls «Булат» a drone detector, <i>детектор дронов</i>, and «Капюшон» an
+  <h2 class="rm-h2" id="c4">Between July 2024 and May 2026 the foundation reported at least 21 handovers that name «Bulat» or «Kapyushon»</h2>
+  <p>Two products recur in its posts. It calls «Bulat» a drone detector, <i>детектор дронов</i>, and «Kapyushon» an
   electronic-warfare station, <i>станция РЭБ</i>.{S.ref("s8994")} Each mark below is one post that names one or both.</p>
   {timeline}
-  <p class="chart-note">Circle: a post naming «Булат». Square: a post naming «Капюшон». Ringed: the recipient is a civilian service. Source of every mark: the foundation's own channel.</p>
+  <p class="chart-note">Circle: a post naming «Bulat». Square: a post naming «Kapyushon». Ringed: the recipient is a civilian service. Source of every mark: the foundation's own channel.</p>
   <p>All 21 are the foundation's own reports. None has a second source on file. Where the foundation says a unit sent
   thanks, the thanks too appear on the foundation's channel.{S.ref("s8904")} The posts name the recipients at whatever
   level suits them:</p>
@@ -640,11 +653,11 @@ def render(out: Path):
 
 <section class="chapter" aria-labelledby="c6">
   <p class="rm-eyebrow">7 of 9 · The marketplace</p>
-  <h2 class="rm-h2" id="c6">ЦБСТ participates in the company that runs РОЙ.МАРКЕТ, and the register now withholds who owns it</h2>
-  <p>On 25 December 2024 ЦБСТ's own channel announced that «Единая Россия», ЦБСТ and the bank ПСБ had launched a «military
-  marketplace». The post gives the party official's words and the chairman of ЦБСТ's board:{S.ref(sid338)}</p>
+  <h2 class="rm-h2" id="c6">TsBST participates in the company that runs ROY.MARKET, and the register now withholds who owns it</h2>
+  <p>On 25 December 2024 TsBST's own channel announced that United Russia, TsBST and Bank PSB had launched a «military
+  marketplace». The post gives the party official's words and the chairman of TsBST's board:{S.ref(sid338)}</p>
   <article class="post" aria-label="Excerpts from the post of 25 December 2024">
-    <header><span>Telegram · @ANO_CBST</span><span>{ru_date(q_m2['date'])}</span><span>ЦБСТ's own channel</span></header>
+    <header><span>Telegram · @ANO_CBST</span><span>{ru_date(q_m2['date'])}</span><span>TsBST's own channel</span></header>
     {passage(q_m1)}{passage(q_m2)}{passage(q_m3)}
   </article>
   <p>The post of 15 December 2025 quoted earlier uses the same phrase.{S.ref("s8847")}</p>
@@ -652,15 +665,15 @@ def render(out: Path):
     <header><span>Telegram · @asidyakin</span><span>{ru_date(q_618['date'])}</span><span>His own channel</span></header>
     {passage(q_618)}
   </article>
-  <p>The company that operates the platform is ООО «МПТМ». ЦБСТ's report to the Ministry of Justice for 2025 lists it among
-  the legal entities in which ЦБСТ participates, from 22 January 2025, the day the company was registered.{S.ref("s0207")}
+  <p>The company that operates the platform is {pop('OOO «MPTM»', 'OOO «MPTM»')}. TsBST's report to the Ministry of Justice for 2025 lists it among
+  the legal entities in which TsBST participates, from 22 January 2025, the day the company was registered.{S.ref("s0207")}
   The cell for the form of participation reads:</p>
   <article class="post" aria-label="Excerpt from the report to the Ministry of Justice">
-    <header><span>Report to the Ministry of Justice, 2025, section 2.2</span><span>Row for ООО «МПТМ»</span></header>
+    <header><span>Report to the Ministry of Justice, 2025, section 2.2</span><span>Row for OOO «MPTM»</span></header>
     {passage(q_row)}
   </article>
-  <p>The report gives no share. The platform's own supplier offer names МПТМ as its operator, with its tax number and the
-  bank that holds its account, ПСБ.{S.ref("s8817")} By 1 October 2026 the public text no longer did.{S.ref("s8822")}</p>
+  <p>The report gives no share. The platform's own supplier offer names MPTM as its operator, with its tax number and the
+  bank that holds its account, PSB.{S.ref("s8817")} By 1 October 2026 the public text no longer did.{S.ref("s8822")}</p>
   <div class="pair">
     <article class="post" aria-label="The supplier offer on 22 August 2026">
       <header><span>Supplier offer</span><span>{ru_date(q_op['date'])}</span><span>Internet Archive</span></header>{passage(q_op)}</article>
@@ -668,30 +681,30 @@ def render(out: Path):
       <header><span>Supplier offer</span><span>{ru_date(q_mask['date'])}</span><span>The live site</span></header>{passage(q_mask)}</article>
   </div>
   <p>On the live site the operator's name, tax number, address and bank details are shown only after login. Why and when
-  they were hidden is not documented. The company register restricted access to the section that names МПТМ's
+  they were hidden is not documented. The company register restricted access to the section that names MPTM's
   participants on 15 July 2026, before either version.{S.ref("s0230")}</p>
   <article class="post" aria-label="Excerpt from the company register extract">
     <header><span>Company register extract, 14 August 2026</span><span>Section «Сведения об участниках / учредителях юридического лица»</span></header>
     {passage(q_restr)}
   </article>
-  <p>The one seller whose own post states a sale on the platform is КБ «СПЕКТР», a maker of drone propellers. On 6 July 2026
+  <p>The one seller whose own post states a sale on the platform is KB «SPEKTR», a maker of drone propellers. On 6 July 2026
   its channel wrote:{S.ref("s8737")}</p>
-  <article class="post" aria-label="Excerpt from the КБ СПЕКТР post of 6 July 2026">
+  <article class="post" aria-label="Excerpt from the KB SPEKTR post of 6 July 2026">
     <header><span>Telegram · @kb_spektr</span><span>{ru_date(q_kb['date'])}</span><span>The brand's own channel</span></header>
     {passage(q_kb)}
   </article>
-  <p>No document on file puts «Булат», the product that runs through the handovers, on the platform. A representative of its
+  <p>No document on file puts «Bulat», the product that runs through the handovers, on the platform. A representative of its
   maker, 3mx, wrote in the company's customer chat on 2 September 2026:{S.ref("s8860")}</p>
   <article class="post" aria-label="Excerpt from the 3mx chat message of 2 September 2026">
     <header><span>3mx customer chat</span><span>{ru_date(q_3mx['date'])}</span><span>A message from the maker's representative</span></header>
     {passage(q_3mx)}
   </article>
-  <p>In August 2026 Сидякин and ЦБСТ described the platform's next stage.{S.ref("s8851")}<sup class="fn">,</sup>{S.ref("s8852")}</p>
+  <p>In August 2026 Sidyakin and TsBST described the platform's next stage.{S.ref("s8851")}<sup class="fn">,</sup>{S.ref("s8852")}</p>
   <article class="post" aria-label="Excerpts from August 2026 posts">
     <header><span>Telegram · @asidyakin, 5 August 2026</span><span>Telegram · @ANO_CBST, 6 August 2026</span></header>
     {passage(q_pilot)}{passage(q_tech)}
   </article>
-  <p>The first is a count given by the secretary of ЦБСТ's own supervisory board and the second is a plan. ЦБСТ's share in МПТМ is not stated in
+  <p>The first is a count given by the secretary of TsBST's own supervisory board and the second is a plan. TsBST's share in MPTM is not stated in
   any document on file.</p>
 </section>
 
@@ -709,17 +722,16 @@ def render(out: Path):
     {passage(q_amb)}
   </article>
   <p>Neither post names a product or a maker. Both are the foundation's own reports, like the 21 before them.</p>
-  <p>Between the two, on 30 September, the foundation congratulated Александр Сидякин on his appointment as chair of the
+  <p>Between the two, on 30 September, the foundation congratulated Sidyakin on his appointment as chair of the
   State Duma's committee on digital development and artificial intelligence.{S.ref("s9050")} He is the secretary of
-  ЦБСТ's supervisory board and the party official quoted in ЦБСТ's launch post for the «military marketplace». The
+  TsBST's supervisory board and the party official quoted in TsBST's launch post for the «military marketplace». The
   foundation wrote:</p>
   <article class="post" aria-label="Excerpt from the post of 30 September 2026">
     <header><span>Telegram · @nashapravdafond</span><span>{ru_date(q_cong['date'])}</span><span>The foundation's own post</span></header>
     {passage(q_cong)}
   </article>
-  <p>Six days earlier ЦБСТ's own channel had reported that Дмитрий Медведев proposed him for the post, and quoted the
-  chairman of its board, Андрей Безруков: the centre <i>«окажет ему всю необходимую экспертную поддержку»</i>, will give
-  him all the expert support he needs.{S.ref("s9049")}</p>
+  <p>Six days earlier TsBST's own channel had reported that {pop('Dmitriy Medvedev', 'Дмитрий Медведев')} proposed him for the post, and quoted the
+  chairman of its board, {pop('Andrey Bezrukov', 'Андрей Анатольевич Безруков')}: the centre {pop('“will give him all the expert support he needs”', '«окажет ему всю необходимую экспертную поддержку»')}.{S.ref("s9049")}</p>
   <p>The foundation's notes for 2025, the latest accounts on file, name no donor.{r_notes25}</p>
 </section>
 
@@ -730,11 +742,11 @@ def render(out: Path):
     <li>Every handover in this story is the foundation's own report. For none of them is there a second source on file.</li>
     <li>A handover to a unit does not show that the equipment was used in combat. Some recipients are rear units, and two of the 21 are civilian services.</li>
     <li>The accounts do not name the donors behind {F['donor_share']:.0f}% of the foundation's 2024 money, and they do not define the state aid the foundation says it did not receive.</li>
-    <li>The five contributions of 71.1 million rubles in the foundation's notes cannot be matched to ЦБСТ's receipts. The register records ЦБСТ's founders and no owner.</li>
-    <li>ЦБСТ's share in МПТМ is not stated in any document on file, and the register withholds who owns the company.</li>
-    <li>No document on file puts «Булат» on РОЙ.МАРКЕТ. Which sellers use the platform beyond the one named here is not established.</li>
-    <li>Сидякин's figure of 2.5 billion dollars was not tested. His post gives no source for it.</li>
-    <li>No document on file gives the date of the Duma vote on Сидякин's appointment. The foundation's post shows only that it had been made by 30 September 2026.</li>
+    <li>The five contributions of 71.1 million rubles in the foundation's notes cannot be matched to TsBST's receipts. The register records TsBST's founders and no owner.</li>
+    <li>TsBST's share in MPTM is not stated in any document on file, and the register withholds who owns the company.</li>
+    <li>No document on file puts «Bulat» on ROY.MARKET. Which sellers use the platform beyond the one named here is not established.</li>
+    <li>Sidyakin's figure of 2.5 billion dollars was not tested. His post gives no source for it.</li>
+    <li>No document on file gives the date of the Duma vote on Sidyakin's appointment. The foundation's post shows only that it had been made by 30 September 2026.</li>
     <li>Photographs show what is visible in them. Nobody is identified from a face.</li>
     <li>This page makes no statement about sanctions listings of any company named here.</li>
   </ul>
@@ -743,6 +755,7 @@ def render(out: Path):
 <section class="rm-sources"><h2 class="rm-h2">Sources</h2><ol>@@NOTES@@</ol></section>
 </main>
 {RAIL_JS}
+<script>{NAME_JS}</script>
 </body></html>
 """
     doc = S.finalize(doc)

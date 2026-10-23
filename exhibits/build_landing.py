@@ -20,7 +20,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "exhibits"))
 sys.path.insert(0, str(REPO / "scripts"))
 from build_chain_view import CBST, REGIMES, Chain, cap, esc, load, money  # noqa: E402
-from display_helpers import NAME_JS, design_head, display_name, latin_text, name_html, person_names, reader_grade, ru_date  # noqa: E402
+from display_helpers import NAME_JS, design_head, display_name, latin_text, latinize_gloss, name_html, person_names, popup_originals, quote_html, reader_grade, ru_date  # noqa: E402
 from graph_contract import source_grade  # noqa: E402
 
 MPTM, NP, PSB, SIDYAKIN = "ooo-mptm", "fond-nasha-pravda", "pao-bank-psb", "aleksandr-sidyakin"
@@ -181,7 +181,7 @@ class Landing(Chain):
               ("2026-08-13", "The platform opens to outside sellers, “first of all” those on Wildberries and Ozon", "s8854", "rep"),
               ("2026-08-22", "An archived copy of the supplier offer names MPTM as the platform's operator", "s8817", "doc"),
               ("2026-09-02", "3mx tells a customer «Bulat» is sold only by 3mx and its dealers", "s8860", "rep"),
-              ("2026-10-01", "The live offer prints the operator as «ООО «****»»", oq.get("source_id"), "doc")]
+              ("2026-10-01", "The live offer prints the operator as “OOO «****»”", oq.get("source_id"), "doc")]
         ev = sorted((e for e in ev if e[0]), key=lambda e: e[0])
         d0, d1 = dt.date(2024, 1, 1), dt.date(2026, 12, 31)
         W, X0, X1, AX = 960, 24, 936, 96
@@ -258,14 +258,14 @@ class Landing(Chain):
         """The operator's name as printed before and after it was masked, and the TsBST report row, as text."""
         oq = next(o for o in self.ents[MPTM].get("open_questions") or [] if "masked" in o.get("text", ""))
         sub = next(s for s in self.ents[CBST].get("subsidiaries") or [] if s["slug"] == MPTM)
-        cells = [("22.08.2026", "Supplier offer, archived copy", "ООО «МПТМ» · ИНН 9714068459", self.ref("s8817"), "named"),
-                 ("01.10.2026", "Supplier offer, live site", "Наименование Агента: ООО «****»", self.ref(oq.get("source_id"), "s8822"), "hidden"),
+        cells = [("22.08.2026", "Supplier offer, archived copy", ("OOO «MPTM» · INN 9714068459", "ООО «МПТМ» · ИНН 9714068459"), self.ref("s8817"), "named"),
+                 ("01.10.2026", "Supplier offer, live site", ("Name of the Agent: OOO «****»", "Наименование Агента: ООО «****»"), self.ref(oq.get("source_id"), "s8822"), "hidden"),
                  (ru_date(sub["as_of"]), "TsBST's report to the Justice Ministry, for 2025",
-                  "ООО \"МПТМ\" · 1257700021468 · 22.01.2025 · в качестве участника", self.ref(sub.get("source_id")), "named")]
+                  ("OOO \"MPTM\" · OGRN 1257700021468 · 22.01.2025 · as a participant", "ООО \"МПТМ\" · 1257700021468 · 22.01.2025 · в качестве участника"), self.ref(sub.get("source_id")), "named")]
         return '<div class="docs">' + "".join(
             f'<figure class="doc {c}"><figcaption><span class="rm-label">{esc(d)}</span> {esc(w)}{r}</figcaption>'
-            f'<p class="print" lang="ru">{esc(t)}</p></figure>' for d, w, t, r, c in cells) + \
-            '<p class="note">Lines as printed in each document, transcribed. The masked version shows the requisites only after login.</p></div>'
+            f'<p class="print">{name_html(t[0], t[1], key=f"doc-{i}", what="Line as printed, in Russian:")}</p></figure>' for i, (d, w, t, r, c) in enumerate(cells)) + \
+            '<p class="note">Lines as printed in each document, rendered in English; the Russian original is under RU. The masked version shows the requisites only after login.</p></div>'
 
     def models(self):
         """Hypothesis 1 beside hypothesis 2, as two small flow diagrams."""
@@ -320,12 +320,11 @@ class Landing(Chain):
              f'<p>In December 2025 Sidyakin wrote that the '
              f'party, Bank PSB and TsBST had launched a military marketplace. In August 2026 the platform opened to outside sellers '
              f'and named the ones it wanted first.</p>'
-             f'<blockquote class="rm-quote"><span class="rm-label">Original Russian</span>«{esc(recruit["text_ru"])}»'
-             f'<cite>ROY.MARKET\'s announcement, {ru_date(recruit["as_of"])}{self.ref(recruit["source_id"])}</cite>'
-             f'<span class="gloss">"{esc(recruit["text_en"].replace("РОЙ.МАРКЕТ", "ROY.MARKET"))}"</span></blockquote>'
+             + quote_html(recruit["text_ru"], latinize_gloss(recruit["text_en"]),
+                          f"ROY.MARKET's announcement, {ru_date(recruit['as_of'])}{self.ref(recruit['source_id'])}", "q-recruit") +
              '<p>Its target was the seller base we had already mapped.</p>'),
             ("The site hid its operator. An older copy did not",
-             f'<p>The platform\'s public terms print the operator as «ООО «****»». A copy archived on 22.08.2026 names it: '
+             f'<p>The platform\'s public terms print the operator as “OOO «****»”. A copy archived on 22.08.2026 names it: '
              f'{self.pop(MPTM)}, INN 9714068459. TsBST\'s own report to the Justice Ministry lists the same company as one it has '
              f'taken part in since the day it was registered.</p>{self.masked()}'),
             ("First guess: the usual sellers, plus TsBST's residents",
@@ -337,9 +336,8 @@ class Landing(Chain):
              f'maker\'s identifier would make the same mistake.</p>{self.blind_spot()}'),
             ("The marketplace is one outlet among several",
              f'<p>Asked whether the new «Bulat» would go on ROY.MARKET, 3mx answered:</p>'
-             f'<blockquote class="rm-quote"><span class="rm-label">Original Russian</span>«{esc(only["text_ru"])}»'
-             f'<cite>3mx, in its customer chat, {ru_date(only["as_of"])}{self.ref(only["source_id"])}</cite>'
-             f'<span class="gloss">"{esc(only["text_en"])}"</span></blockquote>'
+             + quote_html(only["text_ru"], latinize_gloss(only["text_en"]),
+                          f"3mx, in its customer chat, {ru_date(only['as_of'])}{self.ref(only['source_id'])}", "q-3mx") +
              '<p>The detector reaches units another way: a foundation that co-founded TsBST buys it and posts the handovers. So we '
              'stopped following the platform and started following products, from the maker to the people who receive them.</p>'
              + self.models()),
@@ -378,12 +376,12 @@ class Landing(Chain):
         logo = self.logo(p["maker"])   # only the logo is published with this page
         regimes = self.sanctions(m)
         return (f'<article class="rm-card chain-card"><header><span class="rm-kind">Chain view</span>{logo}</header>'
-                f'<h3 class="rm-name">{f"<a href={chr(34)}{esc(href)}{chr(34)}>{esc(ch.pq)}</a>" if href else esc(ch.pq)}<small>{esc(cap(p.get("category")))} made by '
-                f'{esc(short(m))}{(" (" + esc(display_name(m)["legal"]) + ")") if display_name(m)["legal"] else ""}</small></h3>'
+                f'<h3 class="rm-name">{f"<a href={chr(34)}{esc(href)}{chr(34)}>{esc(ch.pq_en)}</a>" if href else esc(ch.pq_en)}<small>{esc(cap(p.get("category")))} made by '
+                f'{ch.en(m)}{(" (" + esc(display_name(m)["latin"]) + ")") if display_name(m)["legal"] else ""}</small><small class="cyr" lang="ru">{esc(ch.pq)}</small></h3>'
                 f'{regimes}<dl class="counts"><div><dt>Sale channels</dt><dd>{len(ch.rows)}</dd></div>'
                 f'<div><dt>Listings</dt><dd>{n_list}</dd></div><div><dt>State contracts</dt><dd>{n_buy}</dd></div>'
                 f'<div><dt>Handovers to units</dt><dd>{n_del}</dd></div></dl>'
-                + (f'<p class="go"><a href="{esc(href)}">Follow «{esc(ch.pname)}» from TsBST to the front line →</a></p>' if href
+                + (f'<p class="go"><a href="{esc(href)}">Follow {esc(ch.pq_en)} from TsBST to the front line →</a></p>' if href
                    else '<p class="go wait">The chain view is in review and not yet public.</p>') + '</article>')
 
 
@@ -415,10 +413,15 @@ def render(preview: bool, out: Path):
                      for s, url in CHAINS.items())
     restr_date, restr_ref = L.restricted()
     extra_cards = L.more_cards(preview)
+    lead_quote = quote_html(f"{qa['text_ru']} […] {qb['text_ru']}",
+                            latinize_gloss(f"{qa['text_en']} […] {qb['text_en']}"),
+                            f"{sid_name}, secretary of TsBST's supervisory board and head of United Russia's central executive committee, "
+                            f"on TsBST's year, Telegram, {ru_date(qb['as_of'])}{qref}", "q-lead").replace(
+                                '<blockquote class="rm-quote">', '<blockquote class="rm-quote lead-quote">', 1)
     doc = f"""<!doctype html>
 <!-- Generated by exhibits/build_landing.py from data/registry on {today}. Do not edit by hand. -->
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>РОЙ.МАРКЕТ Investigation</title>
+<title>ROY.MARKET Investigation</title>
 {design_head((REPO / 'exhibits' / 'landing.css').read_text(), None if preview else 'fonts/fonts.css')}</head>
 <body>
 <header class="rm-page top">
@@ -429,9 +432,7 @@ def render(preview: bool, out: Path):
   document and is graded by how well that document shows it.</p>
 </header>
 <main class="rm-page">
-  <blockquote class="rm-quote lead-quote"><span class="rm-label">Original Russian</span>«{esc(qa['text_ru'])} […] {esc(qb['text_ru'])}»
-    <cite>{sid_name}, secretary of TsBST's supervisory board and head of United Russia's central executive committee, on TsBST's year, Telegram, {ru_date(qb['as_of'])}{qref}</cite>
-    <span class="gloss">"{esc(qa['text_en'])} […] {esc(qb['text_en'].replace('«Roymarket»', 'Roymarket'))}"</span></blockquote>
+  {lead_quote}
 
   <section class="origin" aria-labelledby="h-origin">
     <h2 class="rm-h2" id="h-origin">How we got here</h2>
@@ -448,7 +449,7 @@ def render(preview: bool, out: Path):
       <article class="rm-card hub"><header><span class="rm-kind">Hub</span>{L.logo(CBST)}</header>
         <h3 class="rm-name">{cbst_name}</h3>{cbst_sanc}
         <p class="row">Targeted funding received: {funds}. These are a non-profit's funds, not revenue.</p>
-        <p class="row"><span class="rm-id">ИНН {esc(c['inn'])}</span> <span class="rm-id">ОГРН {esc(c['ogrn'])}</span></p></article>
+        <p class="row"><span class="rm-id">INN {esc(c['inn'])}</span> <span class="rm-id">OGRN {esc(c['ogrn'])}</span></p></article>
       <ul class="ledger" aria-label="Relations">{ledger}</ul>
     </div>
   </section>
@@ -512,7 +513,7 @@ def render(preview: bool, out: Path):
 <script>{NAME_JS}</script>
 </body></html>
 """
-    out.write_text(unique_popovers(doc))
+    out.write_text(unique_popovers(popup_originals(doc)))
     print(f"wrote {out.relative_to(REPO)}: {len(L.notes)} sources, {n} tied organisations, {len(L.media_files)} pictures")
     return L
 

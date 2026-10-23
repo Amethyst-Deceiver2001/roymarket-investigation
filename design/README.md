@@ -80,7 +80,7 @@ All are in `roymarket.css`, prefixed `rm-`:
 - `rm-legend`, `rm-sanction` flag, `rm-id` identifier.
 - `rm-card`, with `.hub` and `.absent`; `rm-kind` and `rm-name` inside it.
   The header carries the company logo (`rm-logo`, `.on-dark` for a mark drawn for a dark ground) when a logo media record exists. `rm-name` leads with the documented primary brand from `display_name()`, the legal name beneath it in `<small>` with the brand's footnote. The transliterated legal name follows in mono (`small.lat`, OOO «Trimiks», STYLE_GUIDE §2.3), the string a screening analyst searches.
-- `rm-quote` (original Russian, labelled; the gloss sits apart).
+- `rm-quote` (English first, labelled *Translation*, with the verbatim Russian under the RU control; `quote_html()`).
 - `rm-callout` (one per section at most).
 - `rm-ref` footnote numbers and the `rm-sources` list.
 

@@ -513,6 +513,8 @@ the published site, and this is an internal drafting tool.
 A draft written in generic register is not a draft that needs editing; it
 needs rewriting. Read the guide first, not after.
 
+**English first (user, 23.10.2026):** on English reader pages every quotation, printed line, address and recipient wording leads in English and the verbatim Russian sits under a small RU control. Use `quote_html()`, `caption_html()`, `orig_line()`, `popup_originals()` and `latinize_gloss()` in `scripts/display_helpers.py` (STYLE_GUIDE §2.1, §3.1). Registered names stay visible in Russian beside the Latin on cards; bibliography titles stay as published.
+
 ## Quotes: never paraphrase or invent
 
 Any review, post, testimonial, or other quoted material must be the original

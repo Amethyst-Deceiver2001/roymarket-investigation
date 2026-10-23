@@ -164,14 +164,13 @@ A military unit's mark: a monochrome APP-6 hostile frame (diamond) with an echel
 - It is monochrome so red stays reserved for sanctions.
 - A recipient that is a town or a direction gets no unit mark."""),
 
-    "Quote": ("Text", 190, """<blockquote class="rm-quote" style="max-width:560px"><span class="rm-label">Original Russian</span>«Всю нашу продукцию можно приобрести только у нас на сайте 3mx.ru или у наших дилеров.»
-<cite>3mx customer chat, 02.09.2026<sup class="rm-ref"><a href="#">9</a></sup></cite>
-<span class="gloss">"All our products can be bought only from us on our site 3mx.ru or from our dealers."</span></blockquote>""", """# Quote
+    "Quote": ("Text", 190, """<blockquote class="rm-quote" style="max-width:560px"><span class="rm-label">Translation</span><span class="q"><span class="rm-nm">“All our products can be bought only from us on our site 3mx.ru or from our dealers.”<button type="button" class="rm-nm-k" popovertarget="ds-q1" aria-label="Russian original">RU</button></span><span popover id="ds-q1" class="rm-nm-pop"><span class="rm-nm-row"><span class="rm-label">Russian</span><span lang="ru" class="rm-nm-v">Всю нашу продукцию можно приобрести только у нас на сайте 3mx.ru или у наших дилеров.</span><button type="button" class="rm-nm-copy" data-copy="Всю нашу продукцию можно приобрести только у нас на сайте 3mx.ru или у наших дилеров.">Copy</button></span></span></span>
+<cite>3mx customer chat, 02.09.2026<sup class="rm-ref"><a href="#">9</a></sup></cite></blockquote>""", """# Quote
 
-A verbatim quote in the original Russian, with its source and a separate English gloss.
+A quotation, English first (revised 23.10.2026): our translation, labelled, with the verbatim Russian original under the RU control and the source beneath.
 
-- The quote text is never paraphrased or corrected. Typos are kept and marked «[так в оригинале]».
-- The gloss is our translation and is styled as plain text, not as part of the quote.
+- The original in the popover is never paraphrased or corrected. Typos are kept and marked «[так в оригинале]».
+- The English is our translation and is labelled as one; it is never presented as the speaker's English.
 - An unverifiable quote is not used.
 - The example is the maker's distribution claim from the «Булат» record."""),
 
