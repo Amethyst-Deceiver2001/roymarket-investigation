@@ -489,8 +489,12 @@ class Landing(Chain):
             f'of arms on its façade: smoke, no fire, nobody hurt{self.tref("ukrinform")}. ROY.MARKET is TsBST\'s own '
             f'marketplace for military units. '
             + ("" if listed else "No sanctions listing for the maker is on file. ") +
-            '</p><p class="note"><span class="rm-grade rep">Reported</span> Both posts are the parties\' own word. We have not '
-            'yet matched the video, frame by frame, to the strike Ukraine reported.</p>')
+            '</p><p class="note"><span class="rm-grade rep">Reported</span> Both posts are the parties\' own word. We watched '
+            'the 25-second video. It follows a drone in over a large government building, labelled “Kuznechik/Sova 5.8”, '
+            'down to a trident coat of arms on its façade; the last eight seconds are a separate vertical clip, with its own '
+            'watermark, of the coat of arms hanging damaged from its frame. That is consistent with the report of 8 October, '
+            'but neither post dates the strike, we have not placed the building on a map, and the impact itself is not in the '
+            'frames we checked.</p>')
 
     def beyond_shop(self):
         """Two of TsBST's own lines on what it does besides the shop."""
