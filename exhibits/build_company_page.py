@@ -24,7 +24,11 @@ from display_helpers import (NAME_JS, design_head, display_name, figure_html, la
 from build_chain_view import ROLE_EN, describe_source, esc, load, money  # noqa: E402
 
 # Published company pages (private preview Artifacts until the public cutoff), as CHAINS in build_landing.py.
-COMPANY_PAGES = {"ooo-trimiks": "https://claude.ai/artifact/GVG9YdHZVHPZNtKqBoZqEc"}
+COMPANY_PAGES = {"ooo-trimiks": "https://claude.ai/artifact/GVG9YdHZVHPZNtKqBoZqEc",
+                 "ovod": "https://claude.ai/artifact/37aScZhS6wfCYedygwrjbk",
+                 "ooo-goudron": "https://claude.ai/artifact/3rMXcnJ8DZ66WmvcTFk9Yi",
+                 "ooo-skb-piranya": "https://claude.ai/artifact/XNDYQXZjVQ2cr77D8nkadw",
+                 "csn-bars-sarmat": "https://claude.ai/artifact/WxuirHyRS5bMTcZwLHryoV"}
 LIST_CHECKS = __import__("json").loads((REPO / "data" / "registry" / "list_checks.json").read_text())
 ROLE_TITLE_EN = {"Директор по развитию": "Development director", "Генеральный директор": "Director general",
                  "Дилер (Москва, Мариуполь)": "Dealer (Moscow, Mariupol)"}
@@ -170,7 +174,7 @@ class Page:
         if e.get("okved_code"):
             tr = translation(e.get("okved_label") or "")
             label = (name_html(tr["en"], e["okved_label"], key="okved") if tr
-                     else f'<span lang="ru">«{esc(e.get("okved_label"))}»</span>')
+                     else name_html("description as registered", e["okved_label"], key="okved", what="Registered activity, in Russian:"))
             rows.append(("Main activity (OKVED)", f'{esc(e["okved_code"])}: {label}{self.ref(reg_src)}'))
         cap_ = next((h for h in e.get("charter_capital_history") or [] if self.doc(h.get("source_id"))), None)
         if cap_:
@@ -236,12 +240,27 @@ class Page:
         """Where it is: the register address, and slots for the satellite and street views until they are captured."""
         addr = next((h for h in sorted(self.e.get("address_history") or [], key=lambda h: h.get("as_of") or "", reverse=True)
                      if self.doc(h.get("source_id"))), None)
-        if not addr:
+        figs = self.premises()
+        if not addr and not figs:
             return ""
         slot = lambda t: (f'<figure class="rm-fig empty"><div class="frame">{t} not yet captured</div>'
                           f'<figcaption><span class="rm-prov">{t}</span></figcaption></figure>')
-        return (f'<p>Registered address, as the register gives it: {name_html(latin_text(addr["value"]), addr["value"], key="addr-2", what="Register address in Russian:")}'
-                f'{self.ref(addr["source_id"])}</p><div class="rm-facility">{slot("Satellite view")}{slot("Street view")}</div>')
+        line = (f'<p>Registered address, as the register gives it: {name_html(latin_text(addr["value"]), addr["value"], key="addr-2", what="Register address in Russian:")}'
+                f'{self.ref(addr["source_id"])}</p>') if addr else ""
+        views = f'<div class="rm-facility">{slot("Satellite view")}{slot("Street view")}</div>' if addr else ""
+        return line + (f'<div class="rm-gallery">{figs}</div>' if figs else "") + views
+
+    def premises(self):
+        """Pictures of the company's own premises (media genre facility), with their captions and sources."""
+        figs = []
+        for m in media_about(self.media, {("entity", self.e["slug"])}):
+            if m.get("genre") != "facility" or m.get("publish") == "internal":
+                continue
+            name = publish_copy(m, self.img_dir)
+            if name:
+                self.media_files.append((f"images/media/{name}", self.img_dir / name))
+                figs.append(figure_html(m, f"images/media/{name}", self.en(self.e), self.ref(m.get("source_id"))))
+        return "".join(figs)
 
     def timeline(self):
         """Dated events from the record, each footnoted; graded events say so."""
@@ -309,8 +328,9 @@ class Page:
         if other:
             lanes.append(("Other", other))
         lanes = [(n, xs) for n, xs in lanes if xs]
-        to_ord = lambda d: dt.date.fromisoformat(d[:10]).toordinal()
-        lo = dt.date(dt.date.fromisoformat(ev[0][0][:10]).year, 1, 1).toordinal()
+        to_ord = lambda d: dt.date.fromisoformat((d[:10] + "-07-01")[:10] if len(d) == 4 else
+                                                 (d[:7] + "-15" if len(d) == 7 else d[:10])).toordinal()
+        lo = dt.date(int(ev[0][0][:4]), 1, 1).toordinal()
         hi = dt.date.today().toordinal()
         x0, x1, rh = 150, 900, 30
         h = 26 + rh * len(lanes)
@@ -481,7 +501,7 @@ def render(pg, out, chains):
     e = pg.e
     n = display_name(e)
     legal = n["legal"] or n["head"]
-    img_dir = out.parent / "images" / "media"
+    img_dir = pg.img_dir = out.parent / "images" / "media"
     head = esc(latin_text(n["head"]) if n["legal"] else n["latin"])
     sub = (f'<p class="names"><span lang="ru-Latn">{esc(n["latin"])}</span> · <span lang="ru">{esc(legal)}</span></p>'
            if n["legal"] else f'<p class="names"><span lang="ru">{esc(legal)}</span></p>')
