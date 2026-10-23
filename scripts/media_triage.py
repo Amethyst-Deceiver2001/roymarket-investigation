@@ -113,7 +113,8 @@ def dhash(path: Path) -> int:
     from PIL import Image
     with Image.open(path) as im:
         g = im.convert("L").resize((9, 8))
-        px = list(g.getdata())
+        # Pillow 12+ deprecates getdata(); get_flattened_data() returns the same pixels
+        px = list(g.get_flattened_data() if hasattr(g, "get_flattened_data") else g.getdata())
     bits = 0
     for row in range(8):
         for col in range(8):
