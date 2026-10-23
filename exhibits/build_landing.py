@@ -35,6 +35,46 @@ MORE = [("People", "One person, many companies", "The people who direct or own t
         ("Project file", "«Arkhangel»", "A drone school that trains operators for the army and publishes an armed interceptor's parts list",
          "https://claude.ai/artifact/RABnZkrCUwktU5b91cNZTn")]
 
+# The opening (24.10.2026). These posts were read in full and saved as TGPOST files on a machine without the source
+# archive, so they have no catalogued source record yet: their notes are written here in plain words with the public
+# link, and each quotation is checked word for word against the scrape at build time. Once the files are catalogued
+# where the archive lives, the quotations move to the records' marketing_claims and the notes to self.ref().
+OPENING_SOURCES = {
+    "gag": ("Telegram, @my_el_lab (Gagaring), post 5142, 19.10.2026", "https://t.me/my_el_lab/5142"),
+    "cbst": ("Telegram, @ANO_CBST, post 2677, 20.10.2026", "https://t.me/ANO_CBST/2677"),
+    "ukrinform": ("Ukrinform, «Ворог вдарив дроном по будівлі Запорізької ОВА», 08.10.2026, citing the head of the "
+                  "Zaporizhzhia regional military administration",
+                  "https://www.ukrinform.ua/rubric-regions/4172418-vorog-vdariv-dronom-po-budivli-zaporizkoi-ova.html"),
+    "tsentr": ("Telegram, @ANO_CBST, post 2610, 04.10.2026", "https://t.me/ANO_CBST/2610"),
+    "yakim": ("Telegram, @asidyakin (Alexander Sidyakin), post 1405, 15.10.2026", "https://t.me/asidyakin/1405"),
+}
+OPENING_QUOTES = {   # key: (channel, post, verbatim Russian, our translation)
+    "gag": ("my_el_lab", 5142,
+            "А вот кадры результатов работы дуэта Кузнечика и Совы 5.8. […] У Запорожской администрации тризуб отклеился.",
+            "And here is footage of the results of the Kuznechik and Sova 5.8 duo at work. […] The Zaporizhzhia "
+            "administration's trident has come unstuck."),
+    "cbst": ("ANO_CBST", 2677,
+             "«Тризуб отклеился»: резидент ЦБСТ показал кадры удара по украинской администрации Запорожья […] "
+             "Удар осуществлялся дроном-камикадзе с применением системы связи «Кузнечик» и выносного видеоприёмника «Сова 5.8». […] "
+             "Военнослужащие могут заказать их на специализированной платформе товаров двойного назначения РОЙ.МАРКЕТ.",
+             "“The trident came unstuck”: a TsBST resident showed footage of the strike on the Ukrainian administration of "
+             "Zaporizhzhia […] The strike was carried out by a kamikaze drone using the «Kuznechik» communication system and "
+             "the «Sova 5.8» remote video receiver. […] Servicemen can order them on ROY.MARKET, the specialised platform "
+             "for dual-use goods."),
+    "tsentr": ("ANO_CBST", 2610,
+               "Учения посетил Президент России Владимир Путин. […] В ходе выставки представители ЦБСТ договорились более "
+               "чем с 10 участниками о размещении их ассортимента на платформе РОЙ.МАРКЕТ.",
+               "The exercise was visited by the President of Russia, Vladimir Putin. […] During the exhibition, TsBST "
+               "representatives agreed with more than 10 participants to place their range on the ROY.MARKET platform."),
+    "yakim": ("asidyakin", 1405,
+              "Это часть системы «Яким», которая разработана ЦБСТ и уже год помогает контролировать воздушное пространство "
+              "региона. […] В будущем планируем связать «Яким» с военной системой «Свод» для лучшего анализа ситуации. "
+              "Также хотим подключить автоматические пулемётные турели",
+              "This is part of the «Yakim» system, which was developed by TsBST and has been helping to control the region's "
+              "airspace for a year now. […] In future we plan to link «Yakim» with the military system «Svod» for better "
+              "analysis of the situation. We also want to connect automatic machine-gun turrets"),
+}
+
 
 def ln(grade, w=56):
     return (f'<svg class="ln" width="{w}" height="8" aria-hidden="true">'
@@ -403,6 +443,68 @@ class Landing(Chain):
                 f'Makers sell through their own dealers and marketplaces, to the state, and to donors who hand the goods to units.'
                 f'</figcaption><div class="mdl-wrap">{two}</div></figure></div>')
 
+    def tref(self, key):
+        """A note for a document from OPENING_SOURCES: plain words and its public link (see the table's comment)."""
+        note = OPENING_SOURCES[key]
+        if note not in self.notes:
+            self.notes.append(note)
+        n = self.notes.index(note) + 1
+        return f'<sup class="rm-ref"><a href="#n{n}">{n}</a></sup>'
+
+    def oq(self, key, cite):
+        """A quotation from OPENING_QUOTES, checked word for word against the scraped post where the scrape exists."""
+        chan, msg, ru, en = OPENING_QUOTES[key]
+        db = REPO / "data" / "roymarket.db"
+        if db.exists():
+            import sqlite3
+            row = sqlite3.connect(f"file:{db}?mode=ro", uri=True).execute(
+                "select p.text from tg_posts p join tg_channels c on c.id = p.channel_id where c.username = ? and p.msg_id = ?",
+                (chan, msg)).fetchone()
+            for part in ru.split(" […] "):
+                if not row or part not in row[0]:
+                    raise SystemExit(f"opening quote {key}: not verbatim in {chan}/{msg}")
+        return quote_html(ru, en, cite, f"q-{key}")
+
+    def opening(self):
+        """The cold open: a maker's strike footage, re-posted by ЦБСТ with an order line for its marketplace."""
+        g = self.ents["ooo-gagaring"]
+        tie = g.get("cbst_tie") or {}
+        listed = bool(g.get("sanctions"))
+        beats = [("8 October", "an FPV drone hits the coat of arms on the regional government building in Zaporizhzhia, "
+                               "by the head of the regional administration"),
+                 ("19 October", "a drone-electronics maker posts footage of “the results” of two of its products"),
+                 ("20 October", "TsBST re-posts it and adds where soldiers can order them")]
+        figs = "".join(f'<div class="fig"><span class="n">{esc(d)}</span><span class="w">{esc(w)}</span></div>' for d, w in beats)
+        return (
+            f'<div class="figs beats">{figs}</div>'
+            f'<p>On 19 October 2026 {self.pop("ooo-gagaring")}, a drone-electronics maker in Krasnodar, posted a short video '
+            f'to its Telegram channel:</p>'
+            + self.oq("gag", f"Gagaring, Telegram, 19.10.2026{self.tref('gag')}") +
+            f'<p>The next morning TsBST, the Moscow non-profit for the drone industry that counts the company among its '
+            f'residents{self.ref(tie.get("source_id"))}, posted the same video under its own headline, named the two '
+            f'products used, and closed with a sales line:</p>'
+            + self.oq("cbst", f"TsBST, Telegram, 20.10.2026{self.tref('cbst')}") +
+            f'<p>TsBST calls the city “occupied”. Zaporizhzhia is held by Ukraine; the building is the seat of its regional '
+            f'government. On 8 October the head of the regional administration reported that an FPV drone had hit the coat '
+            f'of arms on its façade: smoke, no fire, nobody hurt{self.tref("ukrinform")}. ROY.MARKET is TsBST\'s own '
+            f'marketplace for military units. '
+            + ("" if listed else "No sanctions listing for the maker is on file. ") +
+            '</p><p class="note"><span class="rm-grade rep">Reported</span> Both posts are the parties\' own word. We have not '
+            'yet matched the video, frame by frame, to the strike Ukraine reported.</p>')
+
+    def beyond_shop(self):
+        """Two of TsBST's own lines on what it does besides the shop."""
+        return (
+            f'<p>TsBST presents itself as a support body for drone makers, and ROY.MARKET as a catalogue. Its own posts and its '
+            'board secretary\'s describe more than that. It says it showed the marketplace at «Tsentr-2026», a strategic '
+            'military exercise with delegations from 41 countries, and signed up sellers there:</p>'
+            + self.oq("tsentr", f"TsBST, Telegram, 04.10.2026{self.tref('tsentr')}") +
+            f'<p>On 15 October its board secretary, the United Russia official {self.person_pop(SIDYAKIN)}, announced an app '
+            f'that assigns incoming Ukrainian drones to mobile fire teams in Kursk region, and placed it inside a TsBST system:</p>'
+            + self.oq("yakim", f"Sidyakin, Telegram, 15.10.2026{self.tref('yakim')}") +
+            '<p class="note"><span class="rm-grade rep">Reported</span> Both are the parties\' own claims; no document on file '
+            'shows the system in service.</p>')
+
     def origin(self):
         """How the investigation got here, in six steps; each step carries its own picture."""
         recruit = self.mclaim(MPTM, "s8854")
@@ -495,7 +597,7 @@ def unique_popovers(doc):
     def one(m):
         pid = m.group(1)
         count[pid] = count.get(pid, 0) + 1
-        new = pid if count[pid] == 1 else f"{pid}-{count[pid]}"
+        new = pid if count[pid] == 1 else f"{pid}-r{count[pid]}"   # "-r": pop() already numbers its own ids "-N"
         return m.group(0).replace(f'popovertarget="{pid}"', f'popovertarget="{new}"').replace(f'id="{pid}"', f'id="{new}"')
     return re.sub(r'popovertarget="(nm-[^"]+)".*?<span popover id="\1"', one, doc, flags=re.S)
 
@@ -506,22 +608,26 @@ def render(preview: bool, out: Path):
     c = L.ents[CBST]
     today = dt.date.today().isoformat()
     # Called in page order, so footnotes number from the top.
+    opening = L.opening()
     qa, qb, qref = L.quote()
-    sid_name = L.person_pop(SIDYAKIN)
-    origin, timeline = L.origin(), L.timeline()
     cbst_name, cbst_sanc, funds = L.name(c), L.sanctions(c), L.money_line()
+    sid_name = L.person_pop(SIDYAKIN)
+    sid_name_l = sid_name.replace(f'id="nm-{SIDYAKIN}"', f'id="nm-{SIDYAKIN}-q"').replace(
+        f'popovertarget="nm-{SIDYAKIN}"', f'popovertarget="nm-{SIDYAKIN}-q"')
     ledger = L.ledger()
+    beyond = L.beyond_shop()
+    chains = "".join(L.chain_card(s, url if preview else (f"chain_{s}.html" if (out.parent / f"chain_{s}.html").exists() else None))
+                     for s, url in CHAINS.items())
+    extra_cards = L.more_cards(preview)
     n, by, sanc = L.network()
     wall = L.wall()
     sgrid, undated = L.sanctions_grid()
     revenue, n_rev = L.revenue_bars()
-    chains = "".join(L.chain_card(s, url if preview else (f"chain_{s}.html" if (out.parent / f"chain_{s}.html").exists() else None))
-                     for s, url in CHAINS.items())
+    origin, timeline = L.origin(), L.timeline()
     restr_date, restr_ref = L.restricted()
-    extra_cards = L.more_cards(preview)
     lead_quote = quote_html(f"{qa['text_ru']} […] {qb['text_ru']}",
                             latinize_gloss(f"{qa['text_en']} […] {qb['text_en']}"),
-                            f"{sid_name}, secretary of TsBST's supervisory board and head of United Russia's central executive committee, "
+                            f"{sid_name_l}, secretary of TsBST's supervisory board and head of United Russia's central executive committee, "
                             f"on TsBST's year, Telegram, {ru_date(qb['as_of'])}{qref}", "q-lead").replace(
                                 '<blockquote class="rm-quote">', '<blockquote class="rm-quote lead-quote">', 1)
     doc = f"""<!doctype html>
@@ -538,19 +644,15 @@ def render(preview: bool, out: Path):
   document and is graded by how well that document shows it.</p>
 </header>
 <main class="rm-page">
-  {lead_quote}
-
-  <section class="origin" aria-labelledby="h-origin">
-    <h2 class="rm-h2" id="h-origin">How we got here</h2>
-    <p class="lede">We did not set out to investigate TsBST. We were following military goods on a consumer marketplace,
-    and a new marketplace came looking for the same sellers.</p>
-    <ol class="steps">{origin}</ol>
-    <h3 class="rm-h3">The dates</h3>
-    {timeline}
+  <section class="open" aria-labelledby="h-open">
+    <h2 class="rm-h2" id="h-open">A strike, then a sales line</h2>
+    {opening}
   </section>
 
   <section class="hub" aria-labelledby="h-hub">
     <h2 class="rm-h2" id="h-hub">Who stands behind TsBST</h2>
+    <p class="lede">The seller in that post is not an ordinary shop. TsBST's co-founders on the company register are a donor foundation and a state-owned bank; TsBST names the ruling party as a third, and the head of the party's central executive committee is secretary of its supervisory board.</p>
+    {lead_quote}
     <div class="hub-grid">
       <article class="rm-card hub"><header><span class="rm-kind">Hub</span>{L.logo(CBST)}</header>
         <h3 class="rm-name">{cbst_name}</h3>{cbst_sanc}
@@ -558,6 +660,11 @@ def render(preview: bool, out: Path):
         <p class="row"><span class="rm-id">INN {esc(c['inn'])}</span> <span class="rm-id">OGRN {esc(c['ogrn'])}</span></p></article>
       <ul class="ledger" aria-label="Relations">{ledger}</ul>
     </div>
+  </section>
+
+  <section class="beyond" aria-labelledby="h-beyond">
+    <h2 class="rm-h2" id="h-beyond">More than a marketplace</h2>
+    {beyond}
   </section>
 
   <section aria-labelledby="h-chains">
@@ -587,6 +694,15 @@ def render(preview: bool, out: Path):
         before. A Reported bar comes from press citing an accounts database, not from the filing itself.
         {n_rev} of the {n} organisations have accounts on file. Non-profits' funds are not revenue and are left out.</figcaption></figure>
     </div>
+  </section>
+
+  <section class="origin" aria-labelledby="h-origin">
+    <h2 class="rm-h2" id="h-origin">How we found it</h2>
+    <p class="lede">We did not set out to investigate TsBST. We were following military goods on a consumer marketplace,
+    and a new marketplace came looking for the same sellers.</p>
+    <ol class="steps">{origin}</ol>
+    <h3 class="rm-h3">The dates</h3>
+    {timeline}
   </section>
 
   <section class="read" aria-labelledby="h-read">

@@ -172,3 +172,13 @@ main section > .rm-h2 { margin-top: 0; }
 .rv .bv small { color: var(--ink-3); }
 .rv .cur.rep { background: var(--g-rep-bg); border: 1.5px dashed var(--g-rep); opacity: 1; }
 .rv .rm-grade { font-size: 9px; padding: 2px 4px; }
+
+/* The opening: three dated beats, then the two posts and the report they answer to */
+.open p, .beyond p { max-width: var(--measure); color: var(--ink-2); margin: 0 0 var(--space-3); }
+.open .rm-quote, .beyond .rm-quote { max-width: 720px; margin: 0 0 var(--space-3); }
+.open .note .rm-grade, .beyond .note .rm-grade { margin-right: 6px; }
+.beats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-3) var(--space-5);
+  margin: 0 0 var(--space-4); max-width: 960px; }
+.beats .fig { display: flex; flex-direction: column; gap: 4px; border-top: 1px solid var(--rule); padding-top: 8px; min-width: 0; }
+.beats .fig .n { font: 500 24px/1.1 var(--font-serif); font-variant-numeric: tabular-nums; color: var(--ink); }
+.beats .fig .w { font-size: var(--t-note); color: var(--ink-2); }
