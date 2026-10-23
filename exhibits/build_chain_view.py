@@ -36,7 +36,8 @@ SRC_DIR = REPO / "data" / "sources"
 PAGES = "https://amethyst-deceiver2001.github.io/roymarket-investigation/"
 sys.path.insert(0, str(REPO / "scripts"))
 from graph_contract import source_grade  # noqa: E402
-from display_helpers import (design_head, display_name, figure_html, kind_icon, load_media, media_about, publish_copy,  # noqa: E402
+from display_helpers import (NAME_JS, design_head, display_name, figure_html, kind_icon, latin_display, latin_text,  # noqa: E402
+                             load_media, media_about, name_html, person_names, publish_copy, translation,
                              reader_grade, ru_date)
 
 CBST = "ano-tsbst-centre-for-unmanned-systems-technologies"
@@ -98,6 +99,15 @@ def cap(s):
     return (s[:1].upper() + s[1:]) if s else ""
 
 
+def en_text(s):
+    """English for a mixed line from the record ("dealer shop, Горбушка (Москва)"): a Cyrillic phrase with an entry in
+    name_translations.json (a place, a state body) takes its English name; any other is transliterated."""
+    def one(m):
+        tr = translation(m.group(0))
+        return tr["en"] if tr else latin_text(m.group(0))
+    return re.sub(r"[А-Яа-яЁё][А-Яа-яЁё\- ]*[А-Яа-яЁё]|[А-Яа-яЁё]", one, s or "")
+
+
 def split_name(e):
     """'АНО «ЦБСТ» | Centre for …' -> ('АНО «ЦБСТ»', 'Centre for …'). Our own bracketed notes are dropped."""
     n = display_name(e)
@@ -113,6 +123,8 @@ def describe_source(s):
 class Chain:
     def __init__(self, product_slug):
         self.ents = {e["slug"]: e for e in load("entities.json")}
+        self.people = {x["slug"]: x for x in load("people.json")}
+        self.untranslated = []   # state bodies with no English name yet (name_translations.json)
         self.programs = {p["slug"]: p for p in load("programs.json")}
         self.src = {s["id"]: s for s in load("sources.json")}
         prods = {p["slug"]: p for p in load("products.json")}
@@ -120,6 +132,7 @@ class Chain:
             sys.exit(f"no product {product_slug!r} in products.json")
         self.p = prods[product_slug]
         self.pq = self.p["name_ru"]                       # «Булат»
+        self.pq_en = latin_text(self.pq)                  # «Bulat»
         self.pname = re.sub(r"[«»]", "", self.pq).strip()  # Булат
         self.maker = self.ents[self.p["maker"]]
         self.notes = []          # source ids in order of first citation
@@ -148,18 +161,39 @@ class Chain:
         return "<sup class=\"rm-ref\">" + ",".join(f'<a href="#n{n}">{n}</a>' for n in sorted(set(nums))) + "</sup>"
 
     def name(self, e, sub=True):
-        """Brand first when documented, legal name directly beneath it (B5); else legal name and English gloss."""
+        """A card's name block, Latin first (STYLE_GUIDE §2.2-2.3): the documented brand or the transliterated
+        legal name, then the registered Cyrillic name beneath it. A sole trader leads with the person's name."""
         n = display_name(e)
+        legal = n["legal"] or n["head"]
+        if legal.startswith("ИП "):
+            pn = person_names(legal, (self.people.get(e.get("person") or "") or {}).get("name_latin"))
+            return (f'{esc(pn["first"])}<small>Sole trader (IP)</small>'
+                    f'<small class="cyr" lang="ru">{esc(legal)}</small>')
         brand = next((b for b in e.get("brands") or [] if b.get("primary")), None)
-        cite = self.ref(brand.get("source_id")) if brand and n["legal"] else ""
-        out = esc(n["head"])
-        if n["legal"]:
-            out += f"<small>{esc(n['legal'])}{cite}</small>"
-        if n["latin"] and n["latin"] != (n["legal"] or n["head"]):
-            out += f'<small class="lat" lang="ru-Latn">{esc(n["latin"])}</small>'   # the string sanctions lists use
+        out = esc(latin_text(n["head"]) if brand else n["latin"])
+        if brand:
+            out += f'<small class="lat" lang="ru-Latn">{esc(n["latin"])}{self.ref(brand.get("source_id"))}</small>'
+        out += f'<small class="cyr" lang="ru">{esc(legal)}</small>'
         if sub and n["gloss"] and not n["legal"]:
             out += f"<small>{esc(n['gloss'])}</small>"
         return out
+
+    def en(self, e, pop=False):
+        """The name in English prose: brand or transliterated legal name; pop=True attaches the Cyrillic original."""
+        n = display_name(e)
+        legal = n["legal"] or n["head"]
+        if legal.startswith("ИП "):
+            pn = person_names(legal)
+            return name_html(pn["first"], pn["fio"], key=e["slug"]) if pop else esc(pn["first"])
+        vis = latin_text(n["head"]) if n["legal"] else n["latin"]
+        return name_html(vis, legal, key=e["slug"]) if pop else esc(vis)
+
+    def body_name(self, s):
+        """A co-donor or other named body as the record writes it: an entity slug, a party, or an acronym."""
+        if s in self.ents:
+            return self.en(self.ents[s])
+        tr = translation(s)
+        return esc(tr["en"] if tr else latin_text(s))
 
     def sanctions(self, e):
         seen, sids = [], []
@@ -189,7 +223,7 @@ class Chain:
         m = next((x for x in media_about(self.media, {("entity", slug)}) if x.get("genre") == "logo"), None)
         src = self.img(m) if m else None
         dark = " on-dark" if m and m.get("logo_ground") == "dark" else ""
-        return f'<img class="rm-logo{dark}" src="{esc(src)}" alt="Logo of {esc(split_name(self.ents[slug])[0])}">' if src else ""
+        return f'<img class="rm-logo{dark}" src="{esc(src)}" alt="Logo of {self.en(self.ents[slug])}">' if src else ""
 
     def contract_lines(self, gc):
         """The contract's lines for this product (B2): quantity × version at the unit price, as the contract prints them."""
@@ -198,7 +232,7 @@ class Chain:
         for cp in gc.get("products") or []:
             if cp.get("product") != self.p["slug"]:
                 continue
-            what = esc(vname.get(cp.get("version")) or self.pq)
+            what = esc(latin_text(vname.get(cp.get("version")) or self.pq))
             if cp.get("item_ru") and "антенн" in cp["item_ru"]:
                 what += " with remote antennas"
             qty = f'{cp["qty"]} × ' if cp.get("qty") else ""
@@ -214,7 +248,7 @@ class Chain:
     # -- build ---------------------------------------------------------------------------
     def build(self):
         p, m = self.p, self.maker
-        maker_left = split_name(m)[0]
+        maker_left = self.en(m)
 
         # A: ЦБСТ, programmes, events
         c = self.ents[CBST]
@@ -222,27 +256,27 @@ class Chain:
         tie = m.get("cbst_tie") or {}
         g = reader_grade(tie.get("confidence")) if tie.get("confidence") in ("t-doc", "t-open", "press") else None
         if g:
-            self.edge("hub", "maker", g, "Link to ЦБСТ")
+            self.edge("hub", "maker", g, "Link to TsBST")
         for mem in m.get("memberships") or []:
             prog = self.programs.get(mem["program"], {})
             cid = "prog-" + mem["program"]
-            self.top["A"].append(self.card(cid, "programme", "Programme", esc(prog.get("name_ru")),
+            self.top["A"].append(self.card(cid, "programme", "Programme", esc(latin_text(prog.get("name_ru"))),
                                            f'<p class="row">{esc(ROLE_EN.get(mem.get("role"), mem.get("role")))}, '
                                            f'{ru_date(mem.get("as_of"))}{self.ref(mem.get("source_id"))}</p>'))
             self.edge(cid, "maker", reader_grade(mem.get("basis")), "Member")
         if not m.get("memberships"):
-            self.limits.append(f"No document records {esc(maker_left)} as a formal member of a ЦБСТ programme. "
-                               "Its link to ЦБСТ rests on the posts and statements cited on its card.")
+            self.limits.append(f"No document records {maker_left} as a formal member of a TsBST programme. "
+                               "Its link to TsBST rests on the posts and statements cited on its card.")
         for part in m.get("participations") or []:
             ev = self.programs.get(part["event"], {})
             cid = "ev-" + part["event"]
             orgs = "".join(
                 f'<p class="note">{esc(ROLE_EN.get(o.get("role"), "Organised by"))} '
-                f'{esc(split_name(self.ents[o["slug"]])[0]) if o.get("slug") in self.ents else ""}'
+                f'{self.en(self.ents[o["slug"]]) if o.get("slug") in self.ents else ""}'
                 f'{self.ref(o.get("source_id"))}</p>'
                 for o in ev.get("organisers") or [] if isinstance(o, dict))
-            role = ROLE_EN.get(part.get("role"), part.get("role") or "").replace("{p}", self.pname)
-            self.top["A"].append(self.card(cid, "event", "Event", esc(ev.get("name_ru")),
+            role = ROLE_EN.get(part.get("role"), part.get("role") or "").replace("{p}", latin_text(self.pname))
+            self.top["A"].append(self.card(cid, "event", "Event", esc(latin_text(ev.get("name_ru"))),
                                            f'<p class="row">{esc(role)}, {ru_date(part.get("as_of"))}'
                                            f'{self.ref(part.get("source_id"))}</p>{orgs}'))
             self.edge(cid, "maker", reader_grade(part.get("basis")), "Exhibitor")
@@ -257,7 +291,7 @@ class Chain:
             rows.append(f'<p class="row warn">Owners and director closed to public view in the company register '
                         f'since {ru_date(restricted[0]["as_of"])}{self.ref(restricted[0].get("source_id"))}</p>')
         if g:
-            rows.append(f'<p class="row">Linked to ЦБСТ{self.ref(tie.get("source_id"))}</p>')
+            rows.append(f'<p class="row">Linked to TsBST{self.ref(tie.get("source_id"))}</p>')
         if m.get("inn"):   # the identifier tells namesakes apart (two Липецк ООО НПО «Киловатт»)
             rows.append(f'<p class="row"><span class="rm-id">ИНН {esc(m["inn"])}</span></p>')
         self.top["B"].append(self.card("maker", "maker", "Maker", self.name(m), "".join(rows), slug=m["slug"]))
@@ -265,11 +299,11 @@ class Chain:
         # C: product
         # model names without the repeated product name: «Капюшон» К-8М -> К-8М
         vlist = [re.sub(r"^" + re.escape(self.pq) + r"\s*", "", v["name_ru"]) or v["name_ru"] for v in p.get("versions") or []]
-        vers = (f"{len(vlist)} models: " if len(vlist) > 5 else "Versions: ") + ", ".join(esc(v) for v in vlist)
+        vers = (f"{len(vlist)} models: " if len(vlist) > 5 else "Versions: ") + ", ".join(esc(latin_text(v)) for v in vlist)
         acc = len(p.get("accessories") or [])
         vsrc = [v.get("source_id") for v in p.get("versions") or []]
         self.top["C"].append(self.card(
-            "product", "product", "Product", esc(self.pq),
+            "product", "product", "Product", f'{esc(self.pq_en)}<small class="cyr" lang="ru">{esc(self.pq)}</small>',
             self.thumb() + f'<p class="row">{esc(cap(p.get("category")))}</p>'
             f'<p class="row">{vers}{self.ref(*vsrc)}'
             + (f'; {acc} add-on module{"s" if acc > 1 else ""}' if acc else "") + "</p>"))
@@ -301,9 +335,10 @@ class Chain:
         for i, (front, lis) in enumerate(fronts.items()):
             ent = lis[0]["seller"].get("entity")
             e = self.ents.get(ent) if ent else None
-            title = self.name(e) if e else esc(re.sub(r"\s*\(.*\)$", "", front))
+            shop = re.sub(r"\s*\(.*\)$", "", front)
+            title = self.name(e) if e else f'{esc(en_text(shop))}<small class="cyr" lang="ru">{esc(shop)}</small>'
             when = ", ".join(sorted({ru_date(li["as_of"]) for li in lis}))
-            body = (f'<p class="row">{esc(lis[0]["channel"])}</p>'
+            body = (f'<p class="row">{esc(en_text(lis[0]["channel"]))}</p>'
                     f'<p class="row">Listed {when}{self.ref(*[li["source_id"] for li in lis])}</p>'
                     + (self.sanctions(e) if e and ent != m["slug"] else "")
                     + self.strip(media_about(self.media, {("listing", li["id"]) for li in lis}), label="Pictures of this listing"))
@@ -344,7 +379,7 @@ class Chain:
             if e["slug"] not in row_of:
                 cid = f"gc-{len(self.rows)}"
                 add_row(cid, e["slug"], self.card(cid, "channel", "Supplies the state", self.name(e),
-                                                  f'<p class="row">State supplier of {esc(self.pq)}</p>' + self.sanctions(e), slug=e["slug"]),
+                                                  f'<p class="row">State supplier of {esc(self.pq_en)}</p>' + self.sanctions(e), slug=e["slug"]),
                         "doc", "Supplies")
         for slug, i in list(row_of.items()):
             e = self.ents[slug]
@@ -355,15 +390,21 @@ class Chain:
                     continue
                 person = o["name_ru"][3:]
                 hit = next((h for h in hist if fold(person) in fold(h.get("value"))), None)
-                if hit:
-                    extra(slug, f'<p class="row person">Owned and run by {esc(person)}, who also trades as a sole '
-                                f'trader (<a href="#{self.rows[j]["id"]}">ИП</a>){self.ref(hit.get("source_id"))}</p>')
+                if hit:   # first mention of a person: Latin name with the full ФИО beside it (STYLE_GUIDE §2.2)
+                    pn = person_names(person)
+                    extra(slug, f'<p class="row person">Owned and run by {esc(pn["first"])} (<span lang="ru">{esc(pn["fio"])}</span>), '
+                                f'who also trades as a sole trader (<a href="#{self.rows[j]["id"]}">IP</a>){self.ref(hit.get("source_id"))}</p>')
         for k, (e, gc) in enumerate(sorted(contracts, key=lambda x: str(x[1].get("date")))):
             cid = f"buy-{k}"
-            customer = re.sub(r"\s*\(ИНН \d+\)", "", gc.get("customer") or "")
+            customer = re.sub(r"\s*\((?:ИНН \d+|[^)]*[a-z][^)]*)\)", "", gc.get("customer") or "").strip()  # drop the ИНН and our notes
+            tr = translation(customer)
+            if not tr:
+                self.untranslated.append(customer)
             subj = gc.get("subject_ru")
             self.rows[row_of[e["slug"]]]["buyers"].append(self.card(
-                cid, "buyer", "State buyer", esc(customer),
+                cid, "buyer", "State buyer",   # a state body is translated; its official name and transliteration beneath (§2.3a)
+                f'{esc(tr["en"] if tr else latin_text(customer))}<small class="cyr" lang="ru">{esc(customer)}</small>'
+                f'<small class="lat" lang="ru-Latn">{esc(latin_text(customer))}</small>',
                 f'<p class="row"><b>{money(gc.get("value_rub"))}</b>, '
                 f'{esc(ru_date(gc.get("date")) if gc.get("date") else "")}{self.ref(gc.get("source_id"))}</p>'
                 + self.contract_lines(gc)
@@ -382,9 +423,9 @@ class Chain:
             co = sorted({c for d in ds for c in d.get("co_donors") or []})
             ffin = next((f for f in sorted((e or {}).get("financials") or [], key=lambda f: str(f.get("year")), reverse=True)
                          if f.get("funds_received")), None)
-            body = (f'<p class="row">Reports handing over {esc(self.pq)}</p>'
-                    + (f'<p class="row">Named alongside it: {esc(", ".join(co))}</p>' if co else "")
-                    + (f'<p class="row">Linked to ЦБСТ{self.ref(dtie.get("source_id"))}</p>' if dtie.get("confidence") in ("t-doc", "t-open", "press") else "")
+            body = (f'<p class="row">Reports handing over {esc(self.pq_en)}</p>'
+                    + (f'<p class="row">Named alongside it: {", ".join(self.body_name(c) for c in co)}</p>' if co else "")
+                    + (f'<p class="row">Linked to TsBST{self.ref(dtie.get("source_id"))}</p>' if dtie.get("confidence") in ("t-doc", "t-open", "press") else "")
                     + (f'<p class="row">Donations received in {ffin["year"]}: {money(ffin["funds_received"])}'
                        f'{self.ref(ffin.get("source_id"))}</p>' if ffin else "")
                     + (self.sanctions(e) if e else ""))
@@ -392,7 +433,7 @@ class Chain:
             stock = next((c for c in p.get("claims") or [] if c.get("metric") == "donor_stock" and c.get("entity") == slug), None)
             if stock:
                 n = re.search(r"Кол\. (\d+)", stock["text_ru"])
-                body = (f'<p class="row">Held {n.group(1) if n else "a stock of"} {esc(self.pq)} on {ru_date(stock["as_of"])}, '
+                body = (f'<p class="row">Held {n.group(1) if n else "a stock of"} {esc(self.pq_en)} on {ru_date(stock["as_of"])}, '
                         f'bought for transfer to units, by its audited accounts{self.ref(stock["source_id"])}</p>') + body
             self.rows.append({"id": cid, "card": self.card(cid, "donor", "Donates", self.name(e) if e else esc(slug), body,
                                                            slug=slug if e else None),
@@ -405,7 +446,7 @@ class Chain:
             rid = f"rec-{len(self.rows)}"
             items = "".join(
                 f'<li><time>{ru_date(d["date"])}</time> {recipient_html(d.get("recipient"))}'
-                + (f' <span class="co">with {esc(", ".join(d["co_donors"]))}</span>' if d.get("co_donors") else "")
+                + (f' <span class="co">with {", ".join(self.body_name(c) for c in d["co_donors"])}</span>' if d.get("co_donors") else "")
                 + f'{self.ref(d.get("source_id"), *(d.get("other_source_ids") or []))}'
                 + (self.strip(media_about(self.media, {("delivery", d["id"])}), label="") if d.get("id") else "")
                 + '</li>' for d in ds)
@@ -415,14 +456,14 @@ class Chain:
                 f'<p class="note">As reported by the donor on its own Telegram channel; recipients in «» are the donor\'s own words.</p>'
                 + self.timeline(ds) + f'<ul class="rec">{items}</ul>'))
             self.edge(cid, rid, "rep", "Reported by the donor")
-            dname = split_name(e)[0] if e else slug
+            dname = self.en(e) if e else esc(slug)
             if stock:
-                self.limits.append(f"{esc(dname)}'s accounts show it bought {esc(self.pq)} for transfer to units, "
+                self.limits.append(f"{dname}'s accounts show it bought {esc(self.pq_en)} for transfer to units, "
                                    "but name no seller. Who sold them to it is not documented.")
             else:
-                self.limits.append(f"No document shows where {esc(dname)} obtained {esc(self.pq)}. "
+                self.limits.append(f"No document shows where {dname} obtained {esc(self.pq_en)}. "
                                    "The line from the product to the donor is dotted for that reason.")
-            self.limits.append(f"The {len(ds)} handovers are {esc(dname)}'s own reports. None is confirmed by the "
+            self.limits.append(f"The {len(ds)} handovers are {dname}'s own reports. None is confirmed by the "
                                "receiving unit or an independent source, and the post date is not always the handover date.")
 
         # РОЙ.МАРКЕТ: shown as absent only when a document speaks to it (the maker's own distribution statement).
@@ -431,9 +472,9 @@ class Chain:
         if claim and not any("рой" in fold(li["channel"]) or "roimarket" in fold(li.get("url")) for li in p.get("listings") or []):
             body = ('<p class="row">No listing found.</p>'
                     f'<blockquote lang="ru">«{esc(claim["text_ru"])}»</blockquote>'
-                    f'<p class="note">{esc(cap(claim.get("asserted_by") or maker_left))}, {ru_date(claim.get("as_of"))}'
+                    f'<p class="note">{esc(cap(claim.get("asserted_by"))) if claim.get("asserted_by") else maker_left}, {ru_date(claim.get("as_of"))}'
                     f'{self.ref(claim.get("source_id"))}</p>')
-            self.rows.append({"id": "roymarket", "card": self.card("roymarket", "absent", "Not sold here", "РОЙ.МАРКЕТ", body),
+            self.rows.append({"id": "roymarket", "card": self.card("roymarket", "absent", "Not sold here", f'{esc(latin_display("РОЙ.МАРКЕТ"))}<small class="cyr" lang="ru">РОЙ.МАРКЕТ</small>', body),
                               "buyers": []})
 
     # -- media (track V) -------------------------------------------------------------------
@@ -457,8 +498,8 @@ class Chain:
     def who(self, m):
         for a_ in m.get("about") or []:
             if a_["type"] == "entity" and a_["id"] in self.ents:
-                return display_name(self.ents[a_["id"]])["head"]
-        return display_name(self.maker)["head"]
+                return self.en(self.ents[a_["id"]])
+        return self.en(self.maker)
 
     def thumb(self):
         """The product card's picture (a self-published photo or screenshot of the product) and the
@@ -529,12 +570,12 @@ class Chain:
                            f'<text x="{x(cur):.1f}" y="{H - 6}" text-anchor="middle">{cur.strftime("%m.%Y")}</text>')
             cur = dt.date(cur.year + (cur.month == 12), cur.month % 12 + 1, 1)
         for d, dd in zip(ds, dates):
-            hub = "ЦБСТ" in (d.get("co_donors") or [])
+            hub = "ЦБСТ" in (d.get("co_donors") or [])   # the record's own spelling
             out.append(f'<circle cx="{x(dd):.1f}" cy="18" r="{6 if hub else 4.5}" class="dot{" hub" if hub else ""}">'
                        f'<title>{ru_date(d["date"])}: {re.sub("<[^>]+>", "", recipient_html(d.get("recipient")))}</title></circle>')
         out.append("</svg>")
         if any("ЦБСТ" in (d.get("co_donors") or []) for d in ds):
-            out.append('<p class="note"><span class="dot-key"></span>ЦБСТ named as a co-donor</p>')
+            out.append('<p class="note"><span class="dot-key"></span>TsBST named as a co-donor</p>')
         return "".join(out)
 
     def notes_list(self):
@@ -551,7 +592,7 @@ def dek(ch, n_buy):
     """The page's one-sentence summary, built only from what the record holds (no product-specific text)."""
     p, m = ch.p, ch.maker
     n = display_name(m)
-    who = esc(n["head"]) + (f" ({esc(n['legal'])})" if n["legal"] else "")
+    who = ch.en(m) + (f" ({name_html(n['latin'], n['legal'], key='dek-maker')})" if n["legal"] else "")
     sanctioned = ", a company under sanctions" if ch.sanctions(m) else ""
     ways = []
     if any(li.get("source_id") for li in p.get("listings") or []):
@@ -562,8 +603,8 @@ def dek(ch, n_buy):
     if donors:
         tied = {x for x in donors if x in ch.ents and (ch.ents[x].get("cbst_tie") or {}).get("confidence") in ("t-doc", "t-open", "press")}
         maker = ch.maker.get("slug")
-        who_gave = (["a foundation that works with ЦБСТ"] if len(tied - {maker}) == 1 else
-                    ["donors tied to ЦБСТ"] if tied - {maker} else [])
+        who_gave = (["a foundation that works with TsBST"] if len(tied - {maker}) == 1 else
+                    ["donors tied to TsBST"] if tied - {maker} else [])
         if maker in donors:
             who_gave.append("the maker itself")
         rest = donors - tied - {maker}
@@ -580,7 +621,7 @@ def render(ch, out):
     n_del = len(p.get("deliveries") or [])
     n_buy = sum(len([b for b in r["buyers"] if "k-buyer" in b]) for r in ch.rows)
     top = "".join(f'<section class="col col-{c}" aria-label="{t}"><h2>{t}</h2>{"".join(ch.top[c])}</section>'
-                  for c, t in (("A", "ЦБСТ and its events"), ("B", "Maker"), ("C", "Product")))
+                  for c, t in (("A", "TsBST and its events"), ("B", "Maker"), ("C", "Product")))
     rows = "".join(f'<div class="crow"><div class="cell">{r["card"]}</div><div class="cell buyers">{"".join(r["buyers"])}</div></div>'
                    for r in ch.rows)
     limits = "".join(f"<li>{x}</li>" for x in dict.fromkeys(ch.limits))
@@ -592,7 +633,7 @@ def render(ch, out):
 <body>
 <header class="rm-page top">
   <p class="rm-eyebrow">Draft · {ru_date(dt.date.today().isoformat())}</p>
-  <h1 class="rm-h1">{esc(ch.pq)} <span class="rm-muted">{'from ЦБСТ to the front line' if ch.top['A'] else 'from the maker to the front line'}</span></h1>
+  <h1 class="rm-h1">{esc(ch.pq_en)} <span class="rm-muted">{'from TsBST to the front line' if ch.top['A'] else 'from the maker to the front line'}</span></h1>
   <p class="rm-dek">{dek(ch, n_buy)}</p>
   <ul class="rm-legend" aria-label="How to read the lines">
     <li><svg width="34" height="8" aria-hidden="true"><line x1="0" x2="34" y1="4" y2="4" class="rm-ln doc"/></svg> A document shows it</li>
@@ -619,7 +660,8 @@ def render(ch, out):
 {''.join(f'<template id="fig-{k}">{v}</template>' for k, v in ch.templates.items())}
 <dialog class="rm-lightbox" id="lightbox" aria-label="Picture"><div class="bar"><button type="button" data-close>Close</button></div><div class="body"></div></dialog>
 <script>const EDGES={json.dumps(ch.edges, ensure_ascii=False)};
-{(REPO / 'exhibits' / 'chain_view.js').read_text()}</script>
+{(REPO / 'exhibits' / 'chain_view.js').read_text()}
+{NAME_JS}</script>
 </body></html>
 """
     out.write_text(doc)
@@ -627,6 +669,8 @@ def render(ch, out):
           f"{len(ch.media_files)} pictures")
     for rel, _ in ch.media_files:
         print("  picture", rel)
+    for c in dict.fromkeys(ch.untranslated):
+        print("  no English name yet (data/registry/name_translations.json):", c)
 
 
 def main():

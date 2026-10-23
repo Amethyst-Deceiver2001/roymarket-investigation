@@ -138,17 +138,21 @@ Explaining the irony. Hedging that reads as padding rather than as calibration.
 
 ### 2.1 The core rule: English is the language of analysis, Russian is the language of evidence
 
-The existing brief already follows this almost mechanically, and it is correct.
-Codified:
+Revised 2026-10-23 at user direction: the earlier rule kept every proper name in
+Cyrillic on EN pages, which only readers of Russian could use. EN pages now lead
+with Latin script for every name; the Cyrillic original stays one tap away or on the
+line beneath, because it is the string a screener pastes into ЕГРЮЛ or a sanctions list.
 
 - **English**: headings, narrative, argument, table column headers, `alt` text,
-  captions, glosses.
-- **Russian, untranslated**: legal-entity names, ФИО, product names, addresses,
-  official titles, registry terminology (ЕГРЮЛ, ГИР БО, Устав, Наблюдательный
-  совет, «сведения недостоверны», «Ограничение доступа к сведениям»), and every
-  block quotation.
-- **The hybrid sentence is the norm**: Russian phrase in guillemets, then a
-  parenthetical English gloss.
+  captions, glosses, and the visible form of every name (§2.2–2.3a).
+- **Russian, untranslated**: every quotation (§3.1), the wording a post uses for a
+  recipient, page and document titles as published, and registry terminology inside
+  quotes («сведения недостоверны», «Ограничение доступа к сведениям»).
+- **Cyrillic beside the Latin**: the registered name of a company, the full ФИО of a
+  person on first mention, the official name of a state body. It is shown, never
+  replaced: visible on cards, in a popover in running text.
+- **The hybrid sentence is the norm** for quotations: Russian phrase in guillemets,
+  then a parenthetical English gloss.
 
 **In the RU pages this split collapses.** The parenthetical English glosses
 disappear, the transliteration layer (§2.2) disappears entirely, and quotations
@@ -156,22 +160,37 @@ simply sit in the prose.
 
 ### 2.2 Transliteration — EN pages only
 
-Latin script is the primary visible text for personal names and toponyms; the
-Cyrillic original stays available.
+Latin script is the visible text for every proper name; the Cyrillic original is
+attached, never dropped. One helper renders it (`display_helpers.name_html()`,
+`person_names()`, `latin_text()`), so no page decides on its own.
 
 - **Personal names**: conventional English order, given name first —
-  "Vladimir Yakushev", not "Yakushev V.V." and not a mechanical letter-by-letter
-  rendering of initials. Pair with the **full Cyrillic ФИО**.
-  - **Profile cards, list items, captions**: show the Cyrillic ФИО as visible
-    text directly below the Latin name, smaller and muted (`.person-fio`). The
-    point of a profile is to show both at once — do not hide it in a tooltip.
-  - **Link contexts**: put the full ФИО in `title=`; a click-popup nested in a
-    link conflicts with the link.
+  "Vadim Tsyganov", not "Tsyganov V.B.".
+  - **First mention**: the Latin name with the **full Cyrillic ФИО**, patronymic
+    included, in brackets: "Vadim Tsyganov (Цыганов Вадим Борисович)". The patronymic
+    adds nothing for a reader except telling near-namesakes apart, so it appears here
+    and on cards only.
+  - **After that**: surname only — "Tsyganov".
+  - **Cards and evidence packets**: the full ФИО stays visible on the line beneath the
+    Latin name, because they are where namesakes are told apart.
+  - **Spelling**: a Latin form a sanctions list or the person's own documents use
+    (`name_latin`, with its source) wins; otherwise the house transliteration
+    (BGN/PCGN without diacritics, §2.5 for ё).
+- **Ukrainian places**: Ukrainian-based English spelling (Zaporizhzhia, Luhansk,
+  Kharkiv, Donetsk), with no popover. A Russian form appears only inside a quote.
+- **Russian places**: the conventional English name where one exists (Moscow,
+  Kursk Oblast, Belgorod), otherwise transliterated. Places with a conventional form
+  are listed in `data/registry/name_translations.json`.
+- **Brands, products, events**: transliterated, with the Cyrillic beneath on a card
+  or in a popover in prose: «Bulat» («Булат»), Dronnitsa 2025, ROY.MARKET. Acronyms
+  of organisations are transliterated too (TsBST, not ЦБСТ, in English prose).
 - **The same person must not appear in Cyrillic in one section and Latin in
-  another.** The current brief does this and it has to be fixed in extraction —
-  the registry holds both forms and the template picks.
+  another.** The registry holds both forms and the helper picks.
 - **Never fabricate** a given name or patronymic to complete a form. "Surname
   I.O." is an honest fallback where the source gives no more.
+- **Running text uses a popover, not `title=`**: `title=` does not work on touch
+  screens, is unreliable in screen readers, and cannot be copied. The popover shows
+  the Cyrillic form (and, for a state body, its transliteration) with a copy button.
 
 ### 2.5 ё and е — one policy for spelling, one for matching
 
@@ -216,10 +235,13 @@ same liability regime, and a hostile lawyer can use that gap.
 
 **Which form each page tier takes:**
 
-- **Dossier and company-profile pages**: transliterated form only, everywhere —
-  `OOO «Tekhnodron»`, `AO «Stratim»` — with the functional English meaning
-  available as a `title=` hover tooltip ("limited liability company"), never as
-  inline prose translation.
+- **Cards (chain views, profiles, packets)**: the documented brand or the
+  transliterated legal name on top (`3mx`, then `OOO «Trimiks»`), the registered
+  Cyrillic name on the line beneath (`ООО «Тримикс»`). A sole trader leads with the
+  person's name: "Ruslan Kuznetsov", then "Sole trader (IP)", then the ЕГРИП name
+  (`ИП Кузнецов Руслан Николаевич`).
+- **Running text**: the brand or transliterated legal name, with the Cyrillic in a
+  popover on first mention (§2.2), never as an inline prose translation.
 - **Narrative recap page** (general audience): a single functional gloss in
   parentheses on the *very first* mention of the pattern in the whole document —
   "a Russian LLC (OOO)" — is permitted once, to orient a lay reader, then never
@@ -243,6 +265,28 @@ same liability regime, and a hostile lawyer can use that gap.
 
 The proper name inside «» is transliterated the same way — never translated,
 never left in bare Cyrillic in EN prose.
+
+### 2.3a State bodies — translate the name, attach the official form
+
+Added 2026-10-23 at user direction. A ministry, directorate, administration, court
+or agency has a descriptive name, so transliterating it helps no reader. It is
+**translated**, with the official Cyrillic name and its sanctions-style
+transliteration attached, following the "a.k.a." convention OFAC and the EU use.
+
+- **Reader pages**: the English name is visible — "Main Directorate of the
+  Emergencies Ministry (MChS) for Kursk Oblast". On a card the official name and its
+  transliteration sit on the two lines beneath; in running text a popover holds both,
+  each copyable, on first mention only.
+- **Evidence packets and exports**: all three inline, the way list compilers write
+  them — "Main Directorate of the Emergencies Ministry (MChS) for Kursk Oblast (a.k.a.
+  *Glavnoe upravlenie MChS Rossii po Kurskoy oblasti*; ГЛАВНОЕ УПРАВЛЕНИЕ МЧС РОССИИ
+  ПО КУРСКОЙ ОБЛАСТИ)".
+- **Where the English comes from**: `data/registry/name_translations.json`, keyed by
+  the official name, hand-maintained. It is presentation, not a fact. A body with no
+  entry falls back to transliteration, and the page builder lists it so the gap is
+  visible. Parties are translated the same way (United Russia).
+- **Companies are not state bodies**, even when the state owns them: an AO or FGUP
+  keeps its transliterated legal form under §2.3.
 
 ### 2.4 Identifiers
 

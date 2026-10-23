@@ -55,6 +55,7 @@ h1, h2, h3 { text-wrap: balance; }
 .rm-name a:hover { border-bottom-color: var(--accent); color: var(--accent); }
 .rm-name small { display: block; font: 400 12.5px/1.35 var(--font-sans); color: var(--ink-3); margin-top: 2px; }
 .rm-name small.lat { font: 400 11.5px/1.35 var(--font-mono); letter-spacing: .01em; }   /* the transliterated legal name (STYLE_GUIDE §2.3) */
+.rm-name small.cyr { font-size: 12px; }   /* the registered Cyrillic name, beneath the Latin one (STYLE_GUIDE §2.2) */
 .rm-card p { margin: 4px 0; font-size: var(--t-note); color: var(--ink-2); }
 .rm-card > header .rm-logo { margin-left: auto; height: 26px; max-width: 110px; object-fit: contain; background: var(--logo-plate);
   border: 1px solid var(--rule-soft); border-radius: 3px; padding: 2px 4px; }
@@ -144,6 +145,19 @@ li .rm-thumb-btn { width: 44px; height: 44px; }
 .rm-lightbox .body { padding: 0 16px 16px; }
 .rm-lightbox .rm-fig .frame { aspect-ratio: auto; max-height: calc(100vh - 220px); }
 .rm-lightbox .rm-fig .frame img { max-height: calc(100vh - 220px); }
+
+/* Original name in running text (STYLE_GUIDE §2.2-2.3a): the Latin or English name, a small RU control,
+   and a popover with the Cyrillic form (and a state body's transliteration), each copyable. */
+.rm-nm { white-space: normal; }
+.rm-nm-k { font: 600 9px/1 var(--font-mono); letter-spacing: .04em; color: var(--accent); background: var(--accent-soft);
+  border: 0; border-radius: 3px; padding: 2px 3px; margin-left: 3px; vertical-align: 2px; cursor: pointer; }
+.rm-nm-pop { border: 1px solid var(--rule); border-radius: var(--radius); background: var(--panel); color: var(--ink);
+  box-shadow: var(--shadow); padding: 10px 12px; max-width: min(460px, calc(100vw - 32px)); font-size: var(--t-note); }
+.rm-nm-pop::backdrop { background: transparent; }
+.rm-nm-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 4px 10px; align-items: baseline; padding: 3px 0; }
+.rm-nm-v { overflow-wrap: anywhere; user-select: all; }
+.rm-nm-copy { font: 600 10px/1 var(--font-mono); color: var(--ink-2); background: transparent; border: 1px solid var(--rule);
+  border-radius: 3px; padding: 4px 6px; cursor: pointer; }
 
 @media (max-width: 700px) {
   .rm-page { padding-inline: var(--space-4); }

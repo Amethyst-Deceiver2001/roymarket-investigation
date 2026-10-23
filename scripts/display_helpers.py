@@ -4,6 +4,7 @@ Moved out of build_company_profile.py on 2026-10-02 when the old case and profil
 generators were archived (scripts/archive/); the chain view and any new builder import
 them from here.
 """
+import json
 import re
 import sys
 from pathlib import Path
@@ -245,6 +246,65 @@ def latin_display(legal: str) -> str:
     for pat, abbr in _LONG_FORMS:
         s = re.sub(pat, abbr, s, flags=re.I)
     return re.sub(r"[А-Яа-яЁё]+", lambda m: _lat_word(m.group(0)), s)
+
+
+def latin_text(s: str) -> str:
+    """Transliterate the Cyrillic words of any proper name (brand, product, event): «Булат» -> «Bulat»."""
+    return re.sub(r"[А-Яа-яЁё]+", lambda m: _lat_word(m.group(0)), s or "")
+
+
+# EN names (STYLE_GUIDE §2.2-2.3a): Latin first, Cyrillic always within reach. People are "Given Surname" on
+# first mention with the full ФИО beside it, surname after; state bodies are translated, with the official name
+# and its sanctions-style transliteration attached. Translations are hand-held in data/registry/name_translations.json.
+_TRANSLATIONS = REPO / "data" / "registry" / "name_translations.json"
+
+
+def person_names(fio_ru: str, name_latin: str | None = None) -> dict:
+    """'Цыганов Вадим Борисович' -> {'first': 'Vadim Tsyganov', 'surname': 'Tsyganov', 'fio': the ФИО}.
+    name_latin, when the registry holds it, is in register order (surname first) and wins over generation."""
+    fio = re.sub(r"^ИП\s+", "", (fio_ru or "").strip())
+    lat = (name_latin or "").strip() or latin_text(fio)
+    lat = re.sub(r"\s*\([^)]*\)", "", lat)          # a former surname in brackets stays on the card, not in prose
+    parts = lat.split()
+    if len(parts) >= 2:
+        return {"first": f"{parts[1]} {parts[0]}", "surname": parts[0], "fio": fio}
+    return {"first": lat, "surname": lat, "fio": fio}
+
+
+def translation(name_ru: str) -> dict | None:
+    """{'en': ..., 'kind': ...} for a state body's official name, or None when no one has translated it yet."""
+    try:
+        table = json.loads(_TRANSLATIONS.read_text()).get("names", {})
+    except (OSError, ValueError):
+        return None
+    key = re.sub(r"\s+", " ", name_ru or "").strip()
+    return table.get(key) or next((v for k, v in table.items() if k.casefold() == key.casefold()), None)
+
+
+def name_html(visible: str, cyrillic: str, translit: str | None = None, key: str = "") -> str:
+    """Latin or English name in running text, with a small control that opens the original: the Cyrillic form and,
+    for a translated state body, its transliteration, each copyable (screeners paste these into registers)."""
+    import html as _h
+    pid = "nm-" + (key or re.sub(r"\W+", "-", latin_text(cyrillic)).strip("-").lower()[:40])
+    rows = [("Russian", cyrillic, "ru")] + ([("Transliterated", translit, "ru-Latn")] if translit else [])
+    body = "".join(f'<span class="rm-nm-row"><span class="rm-label">{lbl}</span><span lang="{lang}" class="rm-nm-v">'
+                   f'{_h.escape(v)}</span><button type="button" class="rm-nm-copy" data-copy="{_h.escape(v)}">Copy</button></span>'
+                   for lbl, v, lang in rows)
+    return (f'<span class="rm-nm">{_h.escape(visible)}<button type="button" class="rm-nm-k" popovertarget="{pid}" '
+            f'aria-label="Original name of {_h.escape(visible)}">RU</button></span>'
+            f'<span popover id="{pid}" class="rm-nm-pop">{body}</span>')
+
+
+NAME_JS = """// Original-name popovers: copy the Cyrillic or transliterated form; select it where the clipboard is refused.
+document.addEventListener('click', ev => {
+  const b = ev.target.closest('.rm-nm-copy');
+  if (!b) return;
+  const done = () => { b.textContent = 'Copied'; setTimeout(() => { b.textContent = 'Copy'; }, 1500); };
+  const pick = () => { const r = document.createRange(); r.selectNodeContents(b.previousElementSibling);
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+  try { navigator.clipboard.writeText(b.dataset.copy).then(done, pick); } catch (e) { pick(); }
+});
+"""
 
 
 def source_type_label(path: str) -> str:
