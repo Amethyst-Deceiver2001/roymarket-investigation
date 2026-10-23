@@ -332,7 +332,7 @@ class Landing(Chain):
              '<p>If the platform recruits Wildberries sellers, and TsBST runs a residency for drone makers, the likely suppliers are '
              'makers that are both. We checked every maker on file against the Wildberries sellers by INN.</p>' + self.test_bar()),
             ("The check missed the best case",
-             f'<p>«Bulat», a drone detector shown at TsBST\'s own showcase, returned nothing: no Wildberries seller carries its '
+             f'<p>«Bulat», a drone detector shown at Dronnitsa 2025, a showcase TsBST takes part in, returned nothing: no Wildberries seller carries its '
              f'maker\'s INN. The detector is on sale all the same, through dealers and sole traders. A sanctions screen keyed on the '
              f'maker\'s identifier would make the same mistake.</p>{self.blind_spot()}'),
             ("The marketplace is one outlet among several",
