@@ -118,6 +118,23 @@ def test_packet_exhibit_titles():
     assert t.endswith("(transcript of the database text, not a capture of the page)") and u == "https://t.me/ano_cbst/706", (t, u)
 
 
+def test_registry_prefixes_have_titles():
+    cases = {
+        "RNP_6165205064_20260907_debarment.html": "Register of unscrupulous suppliers (РНП) record, 07.09.2026",
+        "WHOIS_proekt-arhangel-ru_20260905.txt": "Domain registration (WHOIS) record, 05.09.2026",
+        "SANCTIONSLISTS_20261004_canada-sema/SANCTIONS_CA_20261004.xml": "Canadian (SEMA) sanctions list, full download, 04.10.2026",
+        "ATR_20260825_reestr-potentsialnykh-ispolniteley-bas-components.pdf": "ATR register of potential UAV-component executors, 25.08.2026",
+    }
+    for name, want in cases.items():
+        iso = None
+        for part in name.replace("/", "_").split("_"):
+            if len(part) >= 8 and part[:8].isdigit() and part.startswith("2026"):
+                iso = f"{part[:4]}-{part[4:6]}-{part[6:8]}"
+        t, _ = C.cite(rec(name, captured_date=iso), {})
+        assert t == want, (t, want)
+        assert not t.startswith("Archived document"), t
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

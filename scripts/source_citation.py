@@ -17,7 +17,7 @@ import html
 import re
 from pathlib import Path
 
-CITE_VERSION = 8
+CITE_VERSION = 9
 REPO = Path(__file__).resolve().parent.parent
 
 
@@ -172,7 +172,39 @@ SIMPLE = {  # prefix -> title stem; the date is appended
     "IMG": "Photograph",
     "TGFILE": "File posted on Telegram",
     "TG": "Telegram channel page, archived",
+    "CHECKO": "Checko company profile",
+    "CHZ": "Честный знак (Chestny Znak) participant-registry record",
+    "GOSUSLUGI": "Госуслуги registry check",
+    "MINJUST": "Ministry of Justice non-profit register check",
+    "WHOIS": "Domain registration (WHOIS) record",
+    "KAD": "Arbitration court case search (kad.arbitr.ru), screenshot",
+    "RNP": "Register of unscrupulous suppliers (РНП) record",
+    "RMSP": "Register of small and medium businesses (РМСП) extract",
+    "FSTEC": "FSTEC register data",
+    "ISLOD": "Rosobrnadzor education-licence register record",
+    "WIKI": "Wikipedia page, archived",
+    "HAR": "Browser session recording of the Rospatent search platform",
+    "SCREENSHOT": "Still from a video",
+    "VIDEO": "Video or audio recording",
+    "STREETVIEW": "Street-level imagery screenshot",
+    "DOSSIER": "Investigator's working spreadsheet",
+    "RESEARCH": "Investigator's working spreadsheet",
+    "NOTE": "Investigator's note",
+    "LEAKAGG": "Search result from a leaked-data aggregator",
+    "TGPREVIEW": "Telegram channel preview page, archived",
+    "TGUSERS": "Telegram channel member cross-reference",
+    "VKPOST": "VK post",
+    "MARKETPLACE": "Marketplace listing scan, archived",
+    "NESIDITSA": "Job vacancy posting",
+    "NAZK": "Ukraine NAZK sanctioned-person page, archived",
+    "GOVREPORT": "Government programme report",
+    "REESTRZALOGOV": "Pledge register search (Federal Notary Chamber)",
+    "PBNALOG": "Federal Tax Service «Прозрачный бизнес» search",
+    "RK2035": "rk.2035 programme record",
+    "LICENSE": "Education licence extract",
+    "QUALIFICATION": "Professional qualification standard",
 }
+SANCTION_LIST = {"CH": "Swiss (SECO)", "EU": "EU", "UK": "UK (FCDO)", "US": "US (OFAC SDN)", "CA": "Canadian (SEMA)"}
 
 
 def cite(s: dict, f: dict | None) -> tuple[str, str | None]:
@@ -298,6 +330,14 @@ def _cite(s: dict, f: dict | None) -> tuple[str, str | None]:
         site = _site(url)
         title = f"«{f['page_title']}», " if f.get("page_title") else ""
         return f"{title}web page{' on ' + site if site else ''}, archived {date}".rstrip(", "), url
+    if prefix in ("SANCTIONS", "SANCTIONSLISTS") or "SANCTIONSLISTS_" in s["path"]:
+        m = re.search(r"SANCTIONS_([A-Z]{2})_", name)
+        if m and m.group(1) in SANCTION_LIST:
+            return f"{SANCTION_LIST[m.group(1)]} sanctions list, full download{dated}", None
+        return f"Sanctions-list watch output{dated}", None
+    if prefix == "ATR":
+        who = "executors" if "ispolniteley" in name else "producers" if "proizvoditeley" in name else "participants"
+        return f"ATR register of potential UAV-component {who}{dated}", None
     if prefix in SIMPLE:
         stem = SIMPLE[prefix]
         return f"{stem}{(' ' if stem.endswith(('archived', 'checked')) else ', ') + date if date else ''}", url

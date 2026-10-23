@@ -148,7 +148,9 @@ def publish_copy(m: dict, dest_dir: Path, max_px: int = 1200) -> str | None:
     """Copy a media file into dest_dir as <id>.<ext>, downscaled to max_px; returns the file name."""
     src = REPO / (m.get("file") or "")
     if not m.get("file") or not src.exists():
-        return None
+        # a clone without data/sources/ keeps the committed copy rather than dropping the picture
+        made = sorted(dest_dir.glob(f"{m['id']}.*")) if m.get("id") else []
+        return made[0].name if made else None
     dest_dir.mkdir(parents=True, exist_ok=True)
     if src.suffix.lower() == ".svg":
         out = dest_dir / f"{m['id']}.svg"

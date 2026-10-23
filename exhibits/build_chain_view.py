@@ -560,10 +560,16 @@ def dek(ch, n_buy):
         ways.append(f"bought by state agencies under {n_buy} contract{'s' if n_buy != 1 else ''}")
     donors = {d.get("donor") for d in p.get("deliveries") or []}
     if donors:
-        tied = any((ch.ents.get(x) or {}).get("cbst_tie", {}) and (ch.ents[x]["cbst_tie"].get("confidence") in ("t-doc", "t-open", "press"))
-                   for x in donors if x in ch.ents)
-        ways.append("handed to military units by " + ("a foundation that works with ЦБСТ" if tied and len(donors) == 1 else
-                                                      "donors" if len(donors) > 1 else "a donor"))
+        tied = {x for x in donors if x in ch.ents and (ch.ents[x].get("cbst_tie") or {}).get("confidence") in ("t-doc", "t-open", "press")}
+        maker = ch.maker.get("slug")
+        who_gave = (["a foundation that works with ЦБСТ"] if len(tied - {maker}) == 1 else
+                    ["donors tied to ЦБСТ"] if tied - {maker} else [])
+        if maker in donors:
+            who_gave.append("the maker itself")
+        rest = donors - tied - {maker}
+        if rest:
+            who_gave.append("other donors" if who_gave else ("donors" if len(rest) > 1 else "a donor"))
+        ways.append("handed to military units by " + " and by ".join(who_gave))
     tail = (" It is " + ", ".join(ways[:-1]) + (" and " if len(ways) > 1 else "") + ways[-1] + ".") if ways else ""
     return f"{esc(cap(p.get('category')))} made by {who}{sanctioned}.{tail}"
 
