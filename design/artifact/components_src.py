@@ -5,22 +5,40 @@
 
 Icons and unit marks come from scripts/display_helpers.py, the same code the page builders
 call, so a card cannot drift from what pages draw. Example content is from the «Булат» chain.
+
+    python3 design/artifact/components_src.py ChainCard Masthead   # only those cards
+
+A picture comes from its original in data/sources/, else from the committed publish copy in
+exhibits/images/media/. A card whose picture is in neither is not written (a clone without the
+archive keeps the published card as it is) and the run says so.
 """
 import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent.parent / "scripts"))
-from display_helpers import FONT_LINK, KIND_ICONS, figure_html, kind_icon, load_media, unit_mark  # noqa: E402
+from display_helpers import FONT_LINK, KIND_ICONS, NAME_JS, figure_html, kind_icon, load_media, name_html, unit_mark  # noqa: E402
 import base64, io  # noqa: E402
 from PIL import Image  # noqa: E402
 
 MEDIA = {m["id"]: m for m in load_media()}
+MISSING = "data:,missing"   # marks a card whose picture is not on this machine
+
+
+def media_file(mid):
+    src = HERE.parent.parent / MEDIA[mid]["file"]
+    if src.exists():
+        return src
+    copy = sorted((HERE.parent.parent / "exhibits" / "images" / "media").glob(f"{mid}.*"))
+    return copy[0] if copy else None
 
 
 def data_uri(mid, px=360):
     """A small inline copy of a media record's file, so a card needs no upload."""
-    im = Image.open(HERE.parent.parent / MEDIA[mid]["file"]).convert("RGB")
+    src = media_file(mid)
+    if not src:
+        return MISSING
+    im = Image.open(src).convert("RGB")
     im.thumbnail((px, px))
     buf = io.BytesIO()
     im.save(buf, "JPEG", quality=72)
@@ -33,7 +51,8 @@ def fig(mid, who, ref="1", note=""):
 
 def svg_uri(mid):
     """An SVG media file inline, for a logo card."""
-    return "data:image/svg+xml;base64," + base64.b64encode((HERE.parent.parent / MEDIA[mid]["file"]).read_bytes()).decode()
+    src = media_file(mid)
+    return "data:image/svg+xml;base64," + base64.b64encode(src.read_bytes()).decode() if src else MISSING
 
 
 def frame(mid, ref):
@@ -53,8 +72,8 @@ def line(grade, w=44):
 CARDS = {
     "Masthead": ("Page head", 190, """<header style="max-width:760px">
 <p class="rm-eyebrow">Draft · 02.10.2026</p>
-<h1 class="rm-h1">«Булат» <span class="rm-muted">from ЦБСТ to the front line</span></h1>
-<p class="rm-dek">Portable UAV detector made by 3mx (ООО «Тримикс»), a company under sanctions. It is sold on marketplaces and through dealers, and bought by state agencies under 3 contracts.</p>
+<h1 class="rm-h1">«Bulat» <span class="rm-muted">from TsBST to the front line</span></h1>
+<p class="rm-dek">Portable UAV detector made by 3mx (""" + name_html("OOO «Trimiks»", "ООО «Тримикс»", key="mast") + """), a company under sanctions. It is sold on marketplaces and through dealers, and bought by state agencies under 3 contracts.</p>
 </header>""", """# Masthead
 
 The page head: an eyebrow, the finding as a flat headline, and a dek. Use one per page.
@@ -62,7 +81,8 @@ The page head: an eyebrow, the finding as a flat headline, and a dek. Use one pe
 - `rm-eyebrow` holds status and date: mono, uppercase, `ink-3`.
 - `rm-h1` states the finding in Spectral. A `rm-muted` span may carry the second half of the headline in `ink-2`.
 - `rm-dek` is one or two sentences in the lead size, at most 68ch.
-- The headline carries no hedge. Qualifications go in the dek or below."""),
+- The headline carries no hedge. Qualifications go in the dek or below.
+- Names are Latin first (STYLE_GUIDE §2.2): «Bulat», TsBST. A company named in the dek carries its Cyrillic in a NameOriginal popover."""),
 
     "Grade": ("Evidence", 96, """<span class="rm-grade doc">Documented</span>
 <span class="rm-grade rep">Reported</span>
@@ -97,20 +117,25 @@ The only red on a page. It marks an entity under sanctions and always names the 
 - It wraps inside a narrow card rather than overflowing."""),
 
     "ChainCard": ("Chain", 260, f"""<article class="rm-card hub" style="width:240px"><header><span class="rm-kind">{kind_icon("company")}Hub</span></header>
-<h3 class="rm-name">АНО «ЦБСТ»<small class="lat">ANO «TsBST»</small><small>Centre for Unmanned Systems &amp; Technologies</small></h3>
+<h3 class="rm-name">ANO «TsBST»<small class="cyr" lang="ru">АНО «ЦБСТ»</small><small>Centre for Unmanned Systems &amp; Technologies</small></h3>
 <p><span class="rm-sanction">Sanctioned <b>Ukraine</b></span><sup class="rm-ref"><a href="#">1</a></sup></p></article>
 <article class="rm-card" style="width:240px"><header><span class="rm-kind">{kind_icon("company")}Maker</span><img class="rm-logo on-dark" src="{svg_uri("m0019")}" alt="Logo of ООО «Тримикс»"></header>
-<h3 class="rm-name">3mx<small>ООО «Тримикс»<sup class="rm-ref"><a href="#">4</a></sup></small><small class="lat">OOO «Trimiks»</small></h3><p>Revenue 2023: ₽45.6m<sup class="rm-ref"><a href="#">5</a></sup></p>
+<h3 class="rm-name">3mx<small class="lat" lang="ru-Latn">OOO «Trimiks»<sup class="rm-ref"><a href="#">4</a></sup></small><small class="cyr" lang="ru">ООО «Тримикс»</small></h3><p>Revenue 2023: ₽45.6m<sup class="rm-ref"><a href="#">5</a></sup></p>
 <p><span class="rm-id">ИНН 7802942873</span></p></article>
 <article class="rm-card absent" style="width:240px"><header><span class="rm-kind">{kind_icon("storefront")}Not sold here</span></header>
-<h3 class="rm-name">РОЙ.МАРКЕТ</h3><p>No listing found.</p></article>""", """# ChainCard
+<h3 class="rm-name">ROY.MARKET<small class="cyr" lang="ru">РОЙ.МАРКЕТ</small></h3><p>No listing found.</p></article>
+<article class="rm-card" style="width:240px"><header><span class="rm-kind">{kind_icon("storefront")}Sells</span></header>
+<h3 class="rm-name">Ruslan Kuznetsov<small>Sole trader (IP)</small><small class="cyr" lang="ru">ИП Кузнецов Руслан Николаевич</small></h3><p>own site 921921.ru</p></article>
+<article class="rm-card" style="width:240px"><header><span class="rm-kind">{kind_icon("buyer")}State buyer</span></header>
+<h3 class="rm-name">Main Directorate of the Emergencies Ministry (MChS) for Kursk Oblast<small class="cyr" lang="ru">ГЛАВНОЕ УПРАВЛЕНИЕ МЧС РОССИИ ПО КУРСКОЙ ОБЛАСТИ</small><small class="lat" lang="ru-Latn">GLAVNOE UPRAVLENIE MChS ROSSII PO KURSKOY OBLASTI</small></h3><p><b>₽16.2m</b>, 29.10.2024<sup class="rm-ref"><a href="#">6</a></sup></p></article>""", """# ChainCard
 
 One object in a chain: a company, product, storefront, buyer or recipient list.
 
 - The header holds the kind mark and kind label ("Maker", "Sells", "State buyer"), and the company's logo at the right when a media record of genre `logo` exists. A logo drawn for a dark ground (`logo_ground: dark`) sits on the dark plate. Never a product photo in its place.
-- The name in Spectral follows. With a documented primary brand (`display_name()`), the brand leads and the registered legal name sits directly beneath it in `<small>`, footnoted to the brand's source (here trademark RU1125967). Without one, the legal name leads with its English gloss. The legal name is never hidden: sanctions lists name the company, not the brand.
-- Under the registered name sits its Latin form in mono (`small.lat`, `display_name()['latin']`): the legal form transliterated, never translated (OOO, AO, ANO, NPTs), per STYLE_GUIDE §2.3. It is the string a screening analyst searches in a sanctions list. A hand correction (`name_display`) overrides the generated form.
-- `.hub` is for ЦБСТ only: a 2px ink border. There is no hub colour.
+- The name in Spectral follows, Latin first (STYLE_GUIDE §2.2-2.3a, revised 23.10.2026). A company leads with its documented primary brand, else its transliterated legal name (`small.lat`, `display_name()['latin']`: the legal form transliterated, never translated, OOO, AO, ANO, NPTs), footnoted to the brand's source. The registered Cyrillic name sits beneath it (`small.cyr`): it is never hidden, because sanctions lists and ЕГРЮЛ name the company in that form.
+- A sole trader leads with the person's name in Latin, then "Sole trader (IP)", then the ЕГРИП name in Cyrillic.
+- A state body is translated (`data/registry/name_translations.json`); its official Cyrillic name and the transliteration a sanctions list would use sit beneath.
+- `.hub` is for TsBST only: a 2px ink border. There is no hub colour.
 - `.absent` is a dashed card with no shadow, for something a reader would expect that is not there.
 - Rows are `p` elements at the note size; each claim ends in a `rm-ref` footnote.
 - The consumer supplies the `id` that the chain's lines attach to."""),
@@ -164,7 +189,7 @@ Numbered references (`rm-ref`) that resolve to the page's source list (`rm-sourc
 - A targeted entry is highlighted with `accent-soft`."""),
 
     "Callout": ("Text", 140, """<aside class="rm-callout"><span class="rm-label">What is missing</span>
-<p>No document shows where Фонд «Наша Правда» obtained «Булат». The line from the product to the donor is dotted for that reason.</p></aside>""", """# Callout
+<p>No document shows where Fond «Nasha Pravda» obtained «Bulat». The line from the product to the donor is dotted for that reason.</p></aside>""", """# Callout
 
 One finding lifted out of the running text. Use at most one per section.
 
@@ -172,6 +197,18 @@ One finding lifted out of the running text. Use at most one per section.
 - It has no accent rail and no shadow; it is set off by its surface and border.
 - The example is a limit stated on the «Булат» chain."""),
 }
+
+CARDS["NameOriginal"] = ("Text", 230, f"""<div style="max-width:620px"><p style="margin:0 0 10px">Bought by the {name_html("Main Directorate of the Emergencies Ministry (MChS) for Kursk Oblast", "ГЛАВНОЕ УПРАВЛЕНИЕ МЧС РОССИИ ПО КУРСКОЙ ОБЛАСТИ", "GLAVNOE UPRAVLENIE MChS ROSSII PO KURSKOY OBLASTI", key="no-1")} from a sole trader run by Vadim Tsyganov (<span lang="ru">Цыганов Вадим Борисович</span>). Tsyganov also owns {name_html("OOO «POKROV»", "ООО «ПОКРОВ»", key="no-2")}.</p>
+<p class="rm-muted" style="margin:0;font-size:var(--t-note)">Select RU to see the original name and copy it.</p></div>
+<script>{NAME_JS}</script>""", """# NameOriginal
+
+A name in running text, Latin or English first, with its original one tap away (STYLE_GUIDE §2.2-2.3a).
+
+- `display_helpers.name_html()` renders it: the visible name, a small RU control, and a native `popover` holding the Cyrillic form and, for a translated state body, its sanctions-style transliteration. Each line has a Copy button (`NAME_JS`); where the clipboard is refused the text is selected instead.
+- Not `title=`: a tooltip does not work on touch screens, is unreliable in screen readers and cannot be copied.
+- People get no popover: the first mention carries the full ФИО in brackets, later mentions the surname only.
+- Ukrainian places are written in Ukrainian-based spelling with no popover.
+- Use it on first mention only; cards show the Cyrillic on the line beneath instead.""")
 
 CARDS.update({
     "EvidenceFigure": ("Media", 420, f'<div style="width:260px">{fig("m0043", "ООО «ПОКРОВ»", "7")}</div>', """# EvidenceFigure
@@ -217,7 +254,13 @@ The satellite view and a ground view of one place, side by side.
 
 
 def main():
+    only = set(sys.argv[1:])
     for name, (group, height, body, readme) in CARDS.items():
+        if only and name not in only:
+            continue
+        if MISSING in body:
+            print(f"skipped {name}: a picture it shows is not on this machine (published card left as it is)")
+            continue
         d = OUT / name
         d.mkdir(parents=True, exist_ok=True)
         (d / "preview.html").write_text(f'<!-- @dsCard group="{group}" height={height} -->\n{FONT_LINK}\n{WRAP}\n{body}\n</div>\n')

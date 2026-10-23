@@ -37,7 +37,7 @@ USAGE = {
     "g-open-bg": "Ground of the Not documented chip.",
     "sanction": "The Sanctioned flag only. The only red on a page; the flag always names the regimes.",
     "sanction-bg": "Ground of the Sanctioned flag.",
-    "hub-edge": "ЦБСТ hub card border: marked by weight, not hue.",
+    "hub-edge": "TsBST (ЦБСТ) hub card border: marked by weight, not hue.",
 }
 
 
@@ -72,12 +72,12 @@ def main():
                          "mono": '"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace'},
             "groups": [
                 {"name": "Findings", "family": "serif", "styles": [
-                    {"name": "h1", "fontSize": "34px", "lineHeight": 1.12, "fontWeight": 500, "sample": "«Булат» from ЦБСТ to the front line", "usage": "The page's finding, stated flat."},
+                    {"name": "h1", "fontSize": "34px", "lineHeight": 1.12, "fontWeight": 500, "sample": "«Bulat» from TsBST to the front line", "usage": "The page's finding, stated flat."},
                     {"name": "h2", "fontSize": "22px", "lineHeight": 1.2, "fontWeight": 500, "sample": "What this does not show", "usage": "Section heads."},
-                    {"name": "card-name", "fontSize": "16px", "lineHeight": 1.25, "fontWeight": 500, "sample": "ООО «Тримикс»", "usage": "A name on a chain card; the Cyrillic legal name as registered."},
+                    {"name": "card-name", "fontSize": "16px", "lineHeight": 1.25, "fontWeight": 500, "sample": "OOO «Trimiks»", "usage": "A name on a chain card, Latin first (STYLE_GUIDE §2.2-2.3); the registered Cyrillic name sits beneath it."},
                     {"name": "quote", "fontSize": "15px", "lineHeight": 1.55, "fontWeight": 400, "sample": "«Всю нашу продукцию можно приобрести только у нас на сайте 3mx.ru»", "usage": "Verbatim Russian quotes."}]},
                 {"name": "Text", "family": "sans", "styles": [
-                    {"name": "lead", "fontSize": "17px", "lineHeight": 1.5, "fontWeight": 400, "sample": "Portable UAV detector made by ООО «Тримикс», a company under sanctions.", "usage": "The dek under a headline."},
+                    {"name": "lead", "fontSize": "17px", "lineHeight": 1.5, "fontWeight": 400, "sample": "Portable UAV detector made by 3mx (OOO «Trimiks»), a company under sanctions.", "usage": "The dek under a headline."},
                     {"name": "body", "fontSize": "15px", "lineHeight": 1.5, "fontWeight": 400, "sample": "Bought by state agencies under 3 contracts.", "usage": "Running text."},
                     {"name": "note", "fontSize": "13px", "lineHeight": 1.45, "fontWeight": 400, "sample": "As reported by the donor on its own Telegram channel.", "usage": "Card rows, legends, source notes."}]},
                 {"name": "Evidence", "family": "mono", "styles": [

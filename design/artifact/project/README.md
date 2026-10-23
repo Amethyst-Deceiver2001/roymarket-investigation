@@ -6,8 +6,8 @@ Source of truth: `design/roymarket.css` in the investigation repository. This ar
 
 ## Content fundamentals
 
-- **The headline is the finding, stated flat.** "«Булат» from ЦБСТ to the front line". No hedge in the head; the evidence earns it below.
-- **English is analysis, Russian is evidence.** Names appear as registered, in Cyrillic: ООО «Тримикс», АНО «ЦБСТ». An English gloss sits beneath in smaller sans. Verbatim quotes stay in the original Russian, punctuation and typos kept, with a gloss apart.
+- **The headline is the finding, stated flat.** "«Bulat» from TsBST to the front line". No hedge in the head; the evidence earns it below.
+- **English is analysis, Russian is evidence; names are Latin first** (STYLE_GUIDE §2.1–2.3a, revised 23.10.2026). Every name a reader meets is in Latin script, with the Cyrillic original attached, never dropped: a company is its brand or transliterated legal name (3mx, OOO «Trimiks») with the registered name ООО «Тримикс» beneath it on a card; a person is "Vadim Tsyganov (Цыганов Вадим Борисович)" on first mention, then "Tsyganov"; a state body is translated ("Main Directorate of the Emergencies Ministry (MChS) for Kursk Oblast") with its official name and transliteration attached; Ukrainian places use Ukrainian-based spelling. In running text the original sits in a NameOriginal popover with a Copy button, because a screener pastes the Cyrillic into ЕГРЮЛ or a sanctions list. Verbatim quotes stay in the original Russian, punctuation and typos kept, with a gloss apart.
 - **Brand first, legal name beneath.** A reader knows 3mx before ООО «Тримикс». A card leads with a company's documented primary brand and sets the registered name directly under it, footnoted to the brand's source (a trademark record, the company's own site). The legal name is never dropped: sanctions lists name the company. A product name («Булат») is never a company brand, and a company without a documented brand leads with its legal name.
 - **No internal notation.** Never print source ids, slugs, field names or file names. A footnote resolves to plain words ("State procurement record no. 1463204748024000101, zakupki.gov.ru") and a public link where one exists.
 - **Identifiers are bare digits in mono**: ИНН 7802942873, ОГРН, в/ч numbers.
@@ -25,7 +25,7 @@ Source of truth: `design/roymarket.css` in the investigation repository. This ar
 | Structure | `accent` navy | Links, focus rings, footnote numbers. Never a finding. |
 | Ground and ink | `paper`, `panel`, `ink*`, `rule*` | Chrome. |
 
-There is no hub colour. ЦБСТ, the centre of the network, is marked by weight: a 2px ink border (`hub-edge`) and the label "Hub". An orange hub was tried and dropped, because for deuteranope readers it could not be told from the Reported amber (ΔE 0.6).
+There is no hub colour. TsBST (АНО «ЦБСТ»), the centre of the network, is marked by weight: a 2px ink border (`hub-edge`) and the label "Hub". An orange hub was tried and dropped, because for deuteranope readers it could not be told from the Reported amber (ΔE 0.6).
 
 The grade and sanction hues were checked with a colour-vision validator in both themes, against every pair. Light red against light amber is the closest pair for deuteranopes (ΔE 6.2). That gap is allowed only because neither colour is ever the sole signal: a sanction is a labelled flag, and Reported is a dashed line.
 
