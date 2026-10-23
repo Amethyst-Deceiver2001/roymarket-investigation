@@ -17,8 +17,8 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "exhibits"))
 sys.path.insert(0, str(REPO / "scripts"))
-from build_chain_view import CBST, REGIMES, describe_source, esc, load  # noqa: E402
-from display_helpers import (NAME_JS, design_head, display_name, latin_text, name_html, person_names,  # noqa: E402
+from build_chain_view import CBST, describe_source, esc, load  # noqa: E402
+from display_helpers import (NAME_JS, design_head, display_name, latin_text, name_html, person_names, sanction_regimes,  # noqa: E402
                              popup_originals, reader_grade, ru_date)
 
 DIRECTOR = re.compile(r"директор|director|ceo|руковод|head|председат|chair|президент|president", re.I)
@@ -27,18 +27,9 @@ GRADE_RANK = {"doc": 0, "rep": 1, "open": 2}
 
 
 def regimes(sanctions):
-    """Official regimes named by a record's sanctions[] entries. An aggregator match or an unproven identity
-    (the note says PLAUSIBLE / not ИНН-confirmed) is not a listing here."""
-    out = []
-    for s in sanctions or []:
-        if not isinstance(s, dict) or re.search(r"PLAUSIBLE|NOT personal", s.get("note") or ""):
-            continue
-        regs = s.get("regime") or []
-        for r in regs if isinstance(regs, list) else [regs]:
-            for key, label in REGIMES:
-                if key in str(r) and label not in out:
-                    out.append(label)
-    return out
+    """Official regimes named by a record's sanctions[] entries (display_helpers.sanction_regimes: an aggregator
+    match or an unproven identity is not a listing)."""
+    return [lab for lab, _ in sanction_regimes(sanctions)]
 
 
 class Matrix:
@@ -242,4 +233,5 @@ def render(out: Path):
 
 
 if __name__ == "__main__":
-    render(REPO / "exhibits" / "people_matrix.html")
+    out = sys.argv[sys.argv.index("--out") + 1] if "--out" in sys.argv else None
+    render(Path(out).resolve() if out else REPO / "exhibits" / "people_matrix.html")

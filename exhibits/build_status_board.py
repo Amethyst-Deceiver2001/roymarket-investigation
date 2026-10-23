@@ -69,6 +69,7 @@ PAGE_CSS = r"""
   padding: 10px 0; border-bottom: 1px solid var(--rule-soft); align-items: start; }
 .row .nm { font: 500 16px/1.3 var(--font-serif); overflow-wrap: anywhere; }
 .row .sub { font: 400 11.5px/1.4 var(--font-mono); color: var(--ink-3); overflow-wrap: anywhere; }
+.row .sub.why { color: var(--ink-2); }
 .row .facts { font: 400 12px/1.5 var(--font-mono); color: var(--ink-2); font-variant-numeric: tabular-nums; }
 .row .fl { display: flex; flex-wrap: wrap; gap: 5px; min-width: 0; }
 .row .ok { font-size: var(--t-note); color: var(--ink-3); }
@@ -163,7 +164,9 @@ function rowHTML(r) {
     .map(x => `<button class="id" type="button" data-t="${esc(x[1])}" title="Copy ${x[0]} ${esc(x[1])}">${x[0]} ${esc(x[1])}</button>`).join("");
   const oqs = (r.oq||[]).length ? `<details class="oq"><summary>Open questions (${r.oq.length})</summary>` + r.oq.map(q =>
     `<div class="q"><p>${esc(q.t)}</p>${q.s ? `<span class="k">${esc(q.s)}</span>` : ""}</div>`).join("") + `</details>` : "";
-  return `<div class="row"><div><div class="nm">${esc(r.name || r.slug)}${sanc}</div>${lat}${role}<div class="sub">${esc(sub)}</div>${idc ? `<div class="ids">${idc}</div>` : ""}</div><div class="facts">${facts(r)}</div><div class="fl">${fl}${oqs}</div></div>`;
+  const p = r.priority || {};
+  const why = r.flags.length && (p.why || p.hops != null) ? `<div class="sub why">Priority: ${esc([p.why, p.hops != null ? `${p.hops} hop${p.hops===1?"":"s"} from ЦБСТ, ${p.degree} edges` : null].filter(Boolean).join("; "))}</div>` : "";
+  return `<div class="row"><div><div class="nm">${esc(r.name || r.slug)}${sanc}</div>${lat}${role}<div class="sub">${esc(sub)}</div>${why}${idc ? `<div class="ids">${idc}</div>` : ""}</div><div class="facts">${facts(r)}</div><div class="fl">${fl}${oqs}</div></div>`;
 }
 function match(r) {
   if (st.kind !== "all" && r.kind !== st.kind) return false;
@@ -177,10 +180,11 @@ function match(r) {
   }
   return true;
 }
-const W = {behind:5, stale:3, pull:3, review:2, gap:1};
-const score = r => r.flags.reduce((s,f) => s + W[f.kind], 0);
+// Priority order is computed by scripts/status_board.py (priority_key): sanctions relevance, hops from ЦБСТ,
+// connections, then the work the flags hold.
+const rank = r => (r.priority && r.priority.rank != null) ? r.priority.rank : 1e9;
 function render() {
-  const rows = B.rows.filter(match).sort((a,b) => score(b)-score(a) || TIERS.indexOf(a.tier)-TIERS.indexOf(b.tier) || String(a.name).localeCompare(String(b.name),"ru"));
+  const rows = B.rows.filter(match).sort((a,b) => rank(a)-rank(b) || String(a.name).localeCompare(String(b.name),"ru"));
   const shown = rows.slice(0, st.shown);
   CMDS.length = QN;
   document.getElementById('rows').innerHTML = `<div class="row hdr"><div>Record</div><div>Last pulls</div><div>Flags</div></div>` + shown.map(rowHTML).join("");

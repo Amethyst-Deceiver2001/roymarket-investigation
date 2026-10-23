@@ -52,7 +52,7 @@ SILHOUETTE = """<svg viewBox="0 0 400 460" role="img" aria-label="Silhouette red
 <g class="mot"><circle cx="66" cy="405" r="15"/><circle cx="334" cy="405" r="15"/><circle cx="76" cy="330" r="12"/><circle cx="324" cy="330" r="12"/></g>
 <g class="prop"><circle cx="66" cy="405" r="28"/><circle cx="334" cy="405" r="28"/><circle cx="76" cy="330" r="22"/><circle cx="324" cy="330" r="22"/></g>
 <path d="M172 100 Q170 90 200 60 Q230 90 228 100 L232 270 Q200 285 168 270 Z" fill="url(#tube)" stroke="#15171a" stroke-width="2"/>
-<text x="200" y="230" class="emb" transform="rotate(-90 200 230)">АРХАНГЕЛ</text>
+<text x="200" y="230" class="emb" lang="ru" transform="rotate(-90 200 230)">АРХАНГЕЛ</text>
 <circle cx="200" cy="80" r="10" class="part"/><circle cx="200" cy="80" r="4" class="dot"/>
 <line x1="200" y1="62" x2="200" y2="30" class="ant"/><circle cx="200" cy="27" r="4" class="dot"/>
 <rect x="181" y="150" width="38" height="26" rx="3" class="part"/><rect x="177" y="185" width="46" height="42" rx="4" class="part"/>
@@ -322,4 +322,5 @@ def render(out: Path):
 
 
 if __name__ == "__main__":
-    render(REPO / "exhibits" / "arkhangel.html")
+    out = sys.argv[sys.argv.index("--out") + 1] if "--out" in sys.argv else None
+    render(Path(out).resolve() if out else REPO / "exhibits" / "arkhangel.html")

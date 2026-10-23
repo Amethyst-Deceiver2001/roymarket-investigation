@@ -368,6 +368,43 @@ def person_names(fio_ru: str, name_latin: str | None = None) -> dict:
     return {"first": f"{latin_text(given)} {latin_text(surname)}", "surname": latin_text(surname), "fio": fio}
 
 
+# Sanctions regimes as reader labels. A regime string is matched by how it starts (its jurisdiction, or an
+# OpenSanctions dataset code), never by a substring anywhere in it: "UK (… (EU Exit) Regulations 2019)" is UK, not EU.
+REGIME_PREFIXES = [("Switzerland", "Switzerland"), ("CH-", "Switzerland"), ("European Union", "EU"), ("EU", "EU"),
+                   ("United States", "US"), ("US", "US"), ("United Kingdom", "UK"), ("UK", "UK"), ("GB-", "UK"),
+                   ("Ukraine", "Ukraine"), ("UA-", "Ukraine"), ("GUR-UA", "Ukraine"), ("Canada", "Canada"),
+                   ("Australia", "Australia"), ("AU-", "Australia"), ("New Zealand", "New Zealand"),
+                   ("NZ-", "New Zealand"), ("Japan", "Japan")]
+REGIMES = sorted({lab for _, lab in REGIME_PREFIXES})
+UNPROVEN_SANCTION = re.compile(r"PLAUSIBLE|NOT personal")
+
+
+def regime_labels(regime: str) -> list[str]:
+    """Reader labels for one regime string; "Canada (SEMA) / Australia / Ukraine (…)" names three."""
+    out = []
+    for part in re.split(r"\s+/\s+|\s+\+\s+", str(regime).strip()):
+        lab = next((lab for key, lab in REGIME_PREFIXES
+                    if part.startswith(key) and (key.endswith("-") or part[len(key):len(key) + 1] in ("", " ", "-"))), None)
+        if lab and lab not in out:
+            out.append(lab)
+    return out
+
+
+def sanction_regimes(sanctions) -> list[tuple[str, list]]:
+    """[(label, [source ids])] in first-seen order: the official regimes a record's sanctions[] entries name. An entry
+    whose note says the identity is unproven (PLAUSIBLE, NOT personal) is not a listing and shows no flag. Every
+    reader page and scripts/check_reader_page.py use this one rule."""
+    out = {}
+    for s in sanctions or []:
+        if not isinstance(s, dict) or UNPROVEN_SANCTION.search(s.get("note") or ""):
+            continue
+        regs = s.get("regime") or []
+        for r in regs if isinstance(regs, list) else [regs]:
+            for label in regime_labels(r):
+                out.setdefault(label, []).append(s.get("source_id"))
+    return list(out.items())
+
+
 def translation(name_ru: str) -> dict | None:
     """{'en': ..., 'kind': ...} for a state body's official name, or None when no one has translated it yet."""
     try:

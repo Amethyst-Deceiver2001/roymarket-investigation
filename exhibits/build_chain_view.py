@@ -37,14 +37,11 @@ PAGES = "https://amethyst-deceiver2001.github.io/roymarket-investigation/"
 sys.path.insert(0, str(REPO / "scripts"))
 from graph_contract import source_grade  # noqa: E402
 from source_citation import cite, reader_terms  # noqa: E402
-from display_helpers import (NAME_JS, design_head, display_name, figure_html, kind_icon, latin_display, latin_text,  # noqa: E402
+from display_helpers import (NAME_JS, design_head, sanction_regimes, display_name, figure_html, kind_icon, latin_display, latin_text,  # noqa: E402
                              latinize_gloss, load_media, media_about, name_html, orig_line, person_names, popup_originals, publish_copy, quote_html, translation,
                              reader_grade, ru_date)
 
 CBST = "ano-tsbst-centre-for-unmanned-systems-technologies"
-REGIMES = [("Switzerland", "Switzerland"), ("EU", "EU"), ("OFAC", "US"), ("US ", "US"),
-           ("United Kingdom", "UK"), ("UK ", "UK"), ("Japan", "Japan"), ("Canada", "Canada"),
-           ("Australia", "Australia"), ("New Zealand", "New Zealand"), ("Ukraine", "Ukraine")]
 # card kind -> (icon, extra class)
 KIND_MARK = {"hub": ("company", " hub"), "programme": ("program", ""), "event": ("event", ""),
              "maker": ("company", ""), "product": ("product", ""), "channel": ("company", ""),
@@ -207,16 +204,8 @@ class Chain:
         return esc(tr["en"] if tr else latin_text(s))
 
     def sanctions(self, e):
-        seen, sids = [], []
-        for s in e.get("sanctions") or []:
-            regs = s.get("regime") or []
-            for r in regs if isinstance(regs, list) else [regs]:
-                for key, label in REGIMES:
-                    if key in r:
-                        if label not in seen:
-                            seen.append(label)
-                        sids.append(s.get("source_id"))
-                        break
+        regs = sanction_regimes(e.get("sanctions"))
+        seen, sids = [lab for lab, _ in regs], [x for _, ss in regs for x in ss]
         from build_company_page import list_mark   # noqa: E402  (dated "no Western listing" line)
         mark = list_mark(e, self.ref)
         if not seen:
@@ -554,7 +543,7 @@ class Chain:
         out = ""
         if main:
             self.template(main)
-            out += (f'<button class="rm-thumb-main" type="button" data-fig="fig-{main["id"]}" aria-label="{esc(main["shows"])}">'
+            out += (f'<button class="rm-thumb-main" type="button" data-fig="fig-{main["id"]}" aria-label="{esc(main.get("shows_en") or latinize_gloss(main["shows"]))}">'
                     f'<img class="rm-thumb" src="{esc(self.img(main))}" alt=""></button>'
                     f'<p class="note">Picture: {esc(self.who(main))}{self.ref(main.get("source_id"))}</p>')
         return out + self.strip([m for m in ms if m is not main], by_provenance=True)
@@ -585,7 +574,7 @@ class Chain:
             for m in grp:
                 self.template(m)
                 btns.append(f'<button class="rm-thumb-btn" type="button" data-fig="fig-{m["id"]}" '
-                            f'aria-label="{esc(m["shows"])}"><img src="{esc(self.img(m))}" alt=""></button>')
+                            f'aria-label="{esc(m.get("shows_en") or latinize_gloss(m["shows"]))}"><img src="{esc(self.img(m))}" alt=""></button>')
             lbl = f'<span class="lbl">{esc(key)} ({len(grp)})</span>' if key else ""
             out.append(f'<div class="rm-thumbs">{lbl}{"".join(btns)}</div>')
         return "".join(out)

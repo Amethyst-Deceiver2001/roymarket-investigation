@@ -19,8 +19,8 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "exhibits"))
 sys.path.insert(0, str(REPO / "scripts"))
-from build_chain_view import CBST, REGIMES, Chain, cap, esc, load, money  # noqa: E402
-from display_helpers import NAME_JS, design_head, display_name, latin_text, latinize_gloss, name_html, person_names, popup_originals, quote_html, reader_grade, ru_date  # noqa: E402
+from build_chain_view import CBST, Chain, cap, esc, load, money  # noqa: E402
+from display_helpers import NAME_JS, design_head, display_name, latin_text, latinize_gloss, name_html, person_names, popup_originals, quote_html, reader_grade, ru_date, sanction_regimes  # noqa: E402
 from graph_contract import source_grade  # noqa: E402
 
 MPTM, NP, PSB, SIDYAKIN = "ooo-mptm", "fond-nasha-pravda", "pao-bank-psb", "aleksandr-sidyakin"
@@ -146,9 +146,7 @@ class Landing(Chain):
         # Listed means a sanctions[] entry that names a regime, the same test the cards use to print "Sanctioned".
         # An entry with no regime (an aggregator's "linked" topic) is not a listing.
         def listed(e):
-            return any(key in str(r) for s in e.get("sanctions") or [] if isinstance(s, dict)
-                       for r in ((s.get("regime") if isinstance(s.get("regime"), list) else [s.get("regime")]) if s.get("regime") else [])
-                       for key, _ in REGIMES)
+            return bool(sanction_regimes(e.get("sanctions")))
         sanc = sum(1 for s in slugs if listed(self.ents.get(s, {})))
         return len(slugs), by, sanc
 

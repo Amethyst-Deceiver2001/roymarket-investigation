@@ -51,6 +51,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from graph_contract import has_designation  # noqa: E402
+from display_helpers import sanction_regimes  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 REG = ROOT / "data" / "registry"
@@ -625,6 +626,13 @@ class Board:
         rows += [self.person_row(p) for p in self.people]
         rows += [self.product_row(p) for p in self.products]
         rows += self.channel_rows(rows)
+        graph = REG / "relationship_graph.json"
+        hops, degree = graph_reach(json.loads(graph.read_text(encoding="utf-8")) if graph.exists() else {})
+        recs = {r["slug"]: r for r in self.entities + self.people}
+        for r in rows:
+            r["priority"] = priority(r, recs.get(r["slug"]), hops, degree)
+        for i, r in enumerate(sorted(rows, key=priority_key)):
+            r["priority"]["rank"] = i
         known = {r["slug"] for r in rows}
         orphans = [it for it in (self.developments or {}).get("items", [])
                    if it.get("status", "open") == "open" and not (set(it.get("about") or []) & known)]
@@ -635,6 +643,67 @@ class Board:
             "kinds": KINDS, "notes": self.notes, "rows": rows, "unattached_developments": orphans,
             "system": self.system_checks(),
         }
+
+
+# Priority (user, 23.10.2026): the order the page lists records in and `--next` prints. Sanctions relevance first,
+# then distance from ЦБСТ in the graph, then how connected the record is, then how much work its flags hold.
+SANCTION_READS = {"sanction_unread", "identity_unproven", "screen_hits_unreviewed"}
+WESTERN = {"US", "EU", "UK", "Switzerland"}
+CBST = "ano-tsbst-centre-for-unmanned-systems-technologies"
+FLAG_WEIGHT = {"behind": 5, "stale": 3, "pull": 3, "review": 2, "gap": 1}
+SANCTION_LEVEL = {3: "sanctions evidence to read", 2: "tied to ЦБСТ, no Western listing", 1: "listed", 0: ""}
+
+
+def graph_reach(graph: dict) -> tuple[dict, dict]:
+    """slug -> hops to ЦБСТ over every edge treated as undirected (reachability is multi-hop, CLAUDE.md), and
+    slug -> degree."""
+    adj, degree = defaultdict(set), Counter()
+    for e in graph.get("edges") or []:
+        a, b = e["source"].split("::")[-1], e["target"].split("::")[-1]
+        adj[a].add(b), adj[b].add(a)
+        degree[a] += 1
+        degree[b] += 1
+    hops, frontier = {CBST: 0}, [CBST]
+    while frontier:
+        nxt = []
+        for n in frontier:
+            for m in adj[n]:
+                if m not in hops:
+                    hops[m] = hops[n] + 1
+                    nxt.append(m)
+        frontier = nxt
+    return hops, degree
+
+
+def priority(row: dict, rec: dict | None, hops: dict, degree: dict) -> dict:
+    """{level, why, hops, degree, work}: level 3 sanctions evidence waiting for a read (an unread list claim, an
+    unproven identity, unreviewed screening hits); 2 an organisation tied to ЦБСТ that no Western list names (the
+    sanctions-gap target); 1 already listed; 0 the rest. A record with no flags has no work and sorts last."""
+    codes = {f["code"] for f in row["flags"]}
+    regs = {lab for lab, _ in sanction_regimes((rec or {}).get("sanctions"))}
+    tie = ((rec or {}).get("cbst_tie") or {}).get("confidence") if row["kind"] == "entity" else None
+    level = (3 if codes & SANCTION_READS else 2 if tie in ("t-doc", "t-open", "press") and not regs & WESTERN
+             else 1 if regs else 0)
+    return {"level": level, "why": SANCTION_LEVEL[level], "hops": hops.get(row["slug"]),
+            "degree": degree.get(row["slug"], 0), "work": sum(FLAG_WEIGHT.get(f["kind"], 0) for f in row["flags"])}
+
+
+def priority_key(row: dict):
+    p = row.get("priority") or {}
+    hop = p.get("hops")
+    return (not row["flags"], -p.get("level", 0), 99 if hop is None else hop, -p.get("degree", 0), -p.get("work", 0),
+            row["slug"])
+
+
+def next_actions(board: dict, n: int) -> str:
+    """The first n records in priority order, each with why it is first and its flags."""
+    out = [f"Next {n} records by priority (sanctions relevance, hops from ЦБСТ, connections, work):"]
+    for i, r in enumerate(sorted(board["rows"], key=priority_key)[:n], 1):
+        p = r["priority"]
+        where = "not on the graph" if p["hops"] is None else f"{p['hops']} hop(s) from ЦБСТ, {p['degree']} edges"
+        out.append(f"{i:>3}. {r.get('latin') or r.get('name')} [{r['slug']}] {p['why'] or 'no sanctions signal'}; {where}")
+        out += [f"       - {f['text']}" for f in r["flags"]]
+    return "\n".join(out)
 
 
 PRESORT_LABEL = {"likely_match": "likely match", "needs_checking": "needs checking",
@@ -847,6 +916,7 @@ def main():
     ap.add_argument("--today", help="YYYY-MM-DD (default: today)")
     ap.add_argument("--pull-queue", nargs="?", const=PULL_CAP, type=int, metavar="CAP",
                     help="print shell commands pulling flagged registry gaps (default cap %d per registry)" % PULL_CAP)
+    ap.add_argument("--next", type=int, metavar="N", help="print the first N records in priority order, with why")
     ap.add_argument("--diff", help="a previous --json board: print flags new or cleared since it")
     ap.add_argument("--scan-state", help="weekly_scan_state.json (default: shared watch folder)")
     ap.add_argument("--developments", help="developments.json (default: shared watch folder)")
@@ -866,6 +936,9 @@ def main():
                 return 0
         print(f"no record {a.slug}", file=sys.stderr)
         return 1
+    if a.next:
+        print(next_actions(board, a.next))
+        return 0
     if a.pull_queue is not None:
         print(pull_queue(board, a.pull_queue, done_today(today)))
         return 0

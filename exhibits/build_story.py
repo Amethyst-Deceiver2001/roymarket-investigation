@@ -34,6 +34,56 @@ def load(name):
     return json.loads((REG / name).read_text(encoding="utf-8"))
 
 
+FIXTURE = REPO / "tests" / "fixtures" / "story_sources.json"
+WEBCAPTURE = "WEBCAPTURE_20261001_cbst-ru-masshtabiruet-ploschadku-rojmarket.html"
+BLANK = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+
+
+class LocalTexts:
+    """The texts the builder checks its quotations and figures against: Telegram posts in data/roymarket.db and one
+    web capture in data/sources/, both only on the Mac. `local` reads them there (and remembers which it read, for
+    --export-fixture). `fixture` reads tests/fixtures/story_sources.json, written on the Mac by --export-fixture, so
+    CI can build the page; a text the fixture lacks, and every picture, is skipped there and counted, never faked
+    as checked."""
+
+    def __init__(self, mode: str = "local"):
+        self.mode, self.used_posts, self.used_web, self.skipped, self.blank = mode, {}, {}, 0, 0
+        self.fx = json.loads(FIXTURE.read_text(encoding="utf-8")) if mode == "fixture" and FIXTURE.exists() else {}
+
+    def post(self, channel_id: int, msg: int) -> str | None:
+        key = f"{channel_id}/{msg}"
+        if self.mode == "local":
+            row = sqlite3.connect(REPO / "data" / "roymarket.db").execute(
+                "select text from tg_posts where channel_id=? and msg_id=?", (channel_id, msg)).fetchone()
+            self.used_posts[key] = row[0]
+            return row[0]
+        return self.fx.get("posts", {}).get(key)
+
+    def web(self, name: str) -> str | None:
+        if self.mode == "local":
+            raw = (REPO / "data" / "sources" / name).read_text(encoding="utf-8", errors="ignore")
+            self.used_web[name] = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", raw)).split())
+            return self.used_web[name]
+        return self.fx.get("web", {}).get(name)
+
+    def image(self, path: Path) -> str:
+        if self.mode != "local" and not path.exists():
+            self.blank += 1
+            return BLANK
+        return "data:image/jpeg;base64," + base64.b64encode(path.read_bytes()).decode()
+
+    def export(self):
+        FIXTURE.parent.mkdir(parents=True, exist_ok=True)
+        FIXTURE.write_text(json.dumps({"note": "Written by exhibits/build_story.py --export-fixture from data/roymarket.db "
+                                               "and data/sources/: the public post and page texts the story checks its "
+                                               "quotations against. Regenerate, never hand-edit.",
+                                       "posts": dict(sorted(self.used_posts.items())),
+                                       "web": self.used_web}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+
+LOCAL = LocalTexts()
+
+
 def num(text: str) -> float:
     """The first amount in a printed line such as '… – 1 099 813,00' (thousand rubles)."""
     m = re.search(r"(\d[\d\s ]*\d),(\d\d)", text)
@@ -86,8 +136,10 @@ class Story:
 
     def check_posts(self, quotes: list[dict], channel_id=1905141464, msg=422):
         """Each passage must stand in the stored post text, ellipses and the closing full stop aside."""
-        text = sqlite3.connect(REPO / "data" / "roymarket.db").execute(
-            "select text from tg_posts where channel_id=? and msg_id=?", (channel_id, msg)).fetchone()[0]
+        text = LOCAL.post(channel_id, msg)
+        if text is None:
+            LOCAL.skipped += len(quotes)
+            return
         norm = lambda x: " ".join(x.replace("\u00a0", " ").split())
         for q in quotes:
             assert norm(q["text_ru"].rstrip(".;:")) in norm(text), f"not in post {msg}: {q['text_ru'][:50]}"
@@ -315,7 +367,7 @@ def month_year(iso: str) -> str:
 
 
 def pic(path: Path) -> str:
-    return "data:image/jpeg;base64," + base64.b64encode(path.read_bytes()).decode()
+    return LOCAL.image(path)
 
 
 _POPS = {}
@@ -368,10 +420,13 @@ def render(out: Path):
     placed = [x for _, ids in BUCKETS for x in ids]
     assert len(events) == 21 and sorted(placed) == sorted(posts), "buckets must place every handover once"
     assert all(c == {"single"} for c in (e["cred"] for e in events)), "chapter says all 21 are single-source"
-    db = sqlite3.connect(REPO / "data" / "roymarket.db")
     norm = lambda x: " ".join(x.replace("\u00a0", " ").split())
     for mid, (v, qual) in STATED_VALUE.items():
-        t = norm(db.execute("select text from tg_posts where channel_id=1905141464 and msg_id=?", (mid,)).fetchone()[0])
+        t = LOCAL.post(1905141464, mid)
+        if t is None:
+            LOCAL.skipped += 1
+            continue
+        t = norm(t)
         assert re.search(rf"(?<!\d){str(v).replace('.', ',').rstrip('0').rstrip(',')}(?:\d)? ?(?:млн|тыс)", t) or re.search(rf"{int(v)} ?млн", t), f"value of post {mid} not in text"
     value_sum = sum(v for v, _ in STATED_VALUE.values())
     value_lo, value_hi = min(v for v, _ in STATED_VALUE.values()), max(v for v, _ in STATED_VALUE.values())
@@ -394,9 +449,12 @@ def render(out: Path):
     q_sub = S.quote("дочернее предприятие Фонда")
     q_contrib = S.quote("Внесение добровольного целевого")
     norm_ = lambda x: " ".join(x.replace("\u00a0", " ").split())
-    web = norm_(html.unescape(re.sub(r"<[^>]+>", " ", (REPO / "data/sources/WEBCAPTURE_20261001_cbst-ru-masshtabiruet-ploschadku-rojmarket.html").read_text(encoding="utf-8", errors="ignore"))))
+    web = LOCAL.web(WEBCAPTURE)
     for qq in (q_site1, q_site2):
-        assert norm_(qq["text_ru"]) in web, "ЦБСТ website quote not in the capture"
+        if web is None:
+            LOCAL.skipped += 1
+            continue
+        assert norm_(qq["text_ru"]) in norm_(web), "ЦБСТ website quote not in the capture"
     S.check_posts([q_sid], channel_id=2581147715, msg=618)
     cbst = {e["slug"]: e for e in load("entities.json")}["ano-tsbst-centre-for-unmanned-systems-technologies"]
     cf = {f["year"]: f for f in cbst["financials"]}
@@ -539,9 +597,9 @@ def render(out: Path):
   <p class="rm-eyebrow">2 of 9 · The foundation</p>
   <h2 class="rm-h2" id="c1">Its stated purposes include supporting defence-product makers</h2>
   <p><b>{pop('Nasha Pravda', 'Фонд «Наша Правда»')}</b> foundation (<i>Our Truth</i>) was registered in Moscow in {registered}. Its general director since
-  registration is <b>Alexander Brovchenko</b> ({esc(d)}).{r_reg} Its website describes it as a joint project of two older
+  registration is <b>{name_html(person_names(d)['first'], person_names(d)['fio'], key='brovchenko')}</b>.{r_reg} Its website describes it as a joint project of two older
   foundations, DAR and Gradislava, for servicemen and citizens in the «SVO» territory.{r_site}</p>
-  <div class="excerpt"><p class="where">Foundation's website, «О фонде»</p>
+  <div class="excerpt"><p class="where">Foundation's website, page {name_html("About the foundation", "О фонде", key="site-about", what="Original page title:")}</p>
     {quote_html(q_site['text_ru'], q_site['translation_en'], key="q-site")}</div>
   <p>The notes to the foundation's 2024 annual accounts, filed with the tax service, list what it is for.{r_notes2}
   The list begins with strengthening Russia's defence capability and takes in support for state bodies and the armed
@@ -767,7 +825,7 @@ def render(out: Path):
 """
     doc = S.finalize(doc)
     out.write_text(doc, encoding="utf-8")
-    print(f"wrote {out.relative_to(REPO)}: {len(S.notes)} sources, {len(doc)//1024} KB")
+    print(f"wrote {out.relative_to(REPO) if out.is_relative_to(REPO) else out}: {len(S.notes)} sources, {len(doc)//1024} KB")
 
 
 def artifact_fragment(doc: str) -> str:
@@ -779,9 +837,25 @@ def artifact_fragment(doc: str) -> str:
 
 
 if __name__ == "__main__":
-    out = REPO / "exhibits" / "story_01.html"
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--out", help="default exhibits/story_01.html")
+    ap.add_argument("--artifact", action="store_true", help="also write the Artifact fragment")
+    ap.add_argument("--fixture", action="store_true",
+                    help="check against tests/fixtures/story_sources.json instead of the Mac's database (CI)")
+    ap.add_argument("--export-fixture", action="store_true",
+                    help="on the Mac: write the texts this build checked to tests/fixtures/story_sources.json")
+    a = ap.parse_args()
+    LOCAL.__init__("fixture" if a.fixture else "local")
+    out = Path(a.out).resolve() if a.out else REPO / "exhibits" / "story_01.html"
     render(out)
-    if "--artifact" in sys.argv:
+    if a.fixture:
+        print(f"fixture mode: {LOCAL.skipped} check(s) skipped for want of a text, {LOCAL.blank} picture(s) left blank"
+              + ("" if FIXTURE.exists() else f"; {FIXTURE.relative_to(REPO)} not found, run --export-fixture on the Mac"))
+    if a.export_fixture:
+        LOCAL.export()
+        print(f"wrote {FIXTURE.relative_to(REPO)}: {len(LOCAL.used_posts)} posts, {len(LOCAL.used_web)} page(s)")
+    if a.artifact:
         frag = out.with_name("story_01_artifact.html")
         frag.write_text(artifact_fragment(out.read_text(encoding="utf-8")), encoding="utf-8")
         print(f"wrote {frag.relative_to(REPO)}")

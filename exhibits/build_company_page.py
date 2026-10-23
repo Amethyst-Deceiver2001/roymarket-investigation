@@ -19,9 +19,9 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 sys.path.insert(0, str(REPO / "exhibits"))
 from graph_contract import source_grade  # noqa: E402
-from display_helpers import (NAME_JS, design_head, display_name, figure_html, latin_display, latin_text, load_media, media_about, latinize_gloss, name_html, popup_originals, quote_html,  # noqa: E402
+from display_helpers import (NAME_JS, design_head, display_name, figure_html, latin_display, latin_text, load_media, media_about, latinize_gloss, name_html, popup_originals, quote_html, sanction_regimes,  # noqa: E402
                              person_names, publish_copy, reader_grade, ru_date, translation)
-from build_chain_view import REGIMES, ROLE_EN, describe_source, esc, load, money  # noqa: E402
+from build_chain_view import ROLE_EN, describe_source, esc, load, money  # noqa: E402
 
 # Published company pages (private preview Artifacts until the public cutoff), as CHAINS in build_landing.py.
 COMPANY_PAGES = {"ooo-trimiks": "https://claude.ai/artifact/GVG9YdHZVHPZNtKqBoZqEc"}
@@ -32,15 +32,8 @@ CITY_EN = {"St Petersburg": "St Petersburg", "Санкт-Петербург": "S
 
 
 def regimes(e):
-    """[(label, [source ids])] in first-seen order, from the entity's sanctions[] entries."""
-    out = {}
-    for s in e.get("sanctions") or []:
-        regs = s.get("regime") or []
-        for r in regs if isinstance(regs, list) else [regs]:
-            label = next((lab for key, lab in REGIMES if key in r), None)
-            if label:
-                out.setdefault(label, []).append(s.get("source_id"))
-    return list(out.items())
+    """[(label, [source ids])] in first-seen order, from the entity's sanctions[] entries (display_helpers rule)."""
+    return sanction_regimes(e.get("sanctions"))
 
 
 WESTERN = ["US", "EU", "UK", "Switzerland"]
@@ -272,7 +265,7 @@ class Page:
             ev.append((r["as_of"], "Owners and director hidden in the company register", r.get("source_id")))
         for s in e.get("sanctions") or []:
             if s.get("date"):
-                lab = next((lab for key, lab in REGIMES if key in " ".join(s.get("regime") or [])), "Sanctions")
+                lab = ", ".join(lab for lab, _ in sanction_regimes([s])) or "Sanctions"
                 ev.append((s["date"], f"Listed under {esc(lab)} sanctions", s.get("source_id")))
         undated = [lab for lab, ss in regimes(e) if not any(x.get("date") for x in e.get("sanctions") or []
                                                              if x.get("source_id") in ss)]

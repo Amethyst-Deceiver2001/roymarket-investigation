@@ -158,6 +158,28 @@ def main():
 
     # Every flag kind is a declared one.
     assert {f["kind"] for row in board["rows"] for f in row["flags"]} <= set(sb.KINDS)
+
+    # Priority: sanctions evidence to read, then a ЦБСТ-tied organisation no Western list names, then listed, then the
+    # rest; within a level nearer ЦБСТ first; a record with no flags last.
+    flag = lambda code, kind="review": {"code": code, "kind": kind, "text": code}
+    hops, degree = {"a": 1, "b": 1, "c": 3, "d": 1}, {"a": 2, "b": 9, "c": 50, "d": 1}
+    tied = {"cbst_tie": {"confidence": "t-doc"}}
+    listed = {"cbst_tie": {"confidence": "t-doc"}, "sanctions": [{"regime": ["EU (Ukraine-related)"]}]}
+    unproven = {"sanctions": [{"regime": ["EU"], "note": "PLAUSIBLE namesake"}], **tied}
+    cases = [({"slug": "a", "kind": "entity", "flags": [flag("sanction_unread")]}, {}),
+             ({"slug": "b", "kind": "entity", "flags": [flag("egrul_stale", "stale")]}, tied),
+             ({"slug": "c", "kind": "entity", "flags": [flag("egrul_stale", "stale")]}, tied),
+             ({"slug": "d", "kind": "entity", "flags": [flag("egrul_stale", "stale")]}, listed),
+             ({"slug": "e", "kind": "entity", "flags": [flag("egrul_stale", "stale")]}, unproven),
+             ({"slug": "f", "kind": "entity", "flags": []}, tied)]
+    for row, rec in cases:
+        row["priority"] = sb.priority(row, rec, hops, degree)
+    levels = {r["slug"]: r["priority"]["level"] for r, _ in cases}
+    assert levels == {"a": 3, "b": 2, "c": 2, "d": 1, "e": 2, "f": 2}, levels   # an unproven listing is no listing
+    order = [r["slug"] for r in sorted((r for r, _ in cases), key=sb.priority_key)]
+    assert order == ["a", "b", "c", "e", "d", "f"], order   # e is off the graph: after c, which is 3 hops out
+    assert all("rank" in r["priority"] for r in board["rows"])
+    assert "Next 3 records" in sb.next_actions(board, 3)
     print("ok: status_board fixtures pass")
 
 
