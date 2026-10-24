@@ -828,6 +828,10 @@ def main() -> int:
             errors.append(f"{w}.items must be a list with one entry (product null when the post names none)")
             items = []
         for it in items:
+            if it.get("id") is not None:
+                if not re.fullmatch(r"[a-z0-9-]+-d\d{2,3}", str(it["id"])) or it["id"] in delivery_ids:
+                    errors.append(f"{w}.items id {it['id']!r} must be unique, like 'kapyushon-d05'")
+                delivery_ids.add(it["id"])
             slug_ = it.get("product")
             if slug_ is not None and slug_ not in prod_versions:
                 errors.append(f"{w}.items product {slug_!r} is not in products.json")

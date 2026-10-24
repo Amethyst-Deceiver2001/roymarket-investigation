@@ -10,8 +10,11 @@ Event fields (all in the file; none is optional except where marked):
     date, donor, co_donors[], donor_people[], carrier, named_deliverer
     recipient              the wording of the post, Russian; recipient_en its gloss; recipient_unit_slug a unit record or null;
                            direction (a front direction the post names) or null
-    items[]                {product: product slug|null, version: version slug|null, item: text|null, note|null}
-                           a product slug here is what makes the event show on that product's chain view
+    items[]                {product: product slug|null, version: version slug|null, item: text|null, note|null, id?}
+                           a product slug here is what makes the event show on that product's chain view; an item `id`
+                           is the name its product's view and its media records use for this handover (a post that
+                           reports two products to one recipient is one event with two items, and the second item
+                           keeps the id its own row had before they were combined)
     asserted_by, credibility, register ('institutional_announcement' | 'field_video')
     source_channel ('@name'), post_id, source_id (null until the post is catalogued), other_source_ids[]
     text_ru, context_en, cost_rub_raw, media[], note
@@ -41,6 +44,8 @@ def for_product(events: list[dict], slug: str) -> list[dict]:
         for it in e.get("items") or []:
             if it.get("product") == slug:
                 d = {k: e[k] for k in SHARED if k in e}
+                if it.get("id"):
+                    d["id"] = it["id"]
                 d["version"] = it.get("version")
                 d["item"] = it.get("item")
                 out.append(d)
