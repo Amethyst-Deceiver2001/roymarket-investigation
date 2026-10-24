@@ -1,5 +1,7 @@
 # Овод: two Tula companies with one owner, a ₽1.3bn FPV-drone maker that ЦБСТ calls its «флагманский резидент», and a founder shot in July 2026
 
+> **Status 24.10.2026:** Superseded as a reader document by the generated company file (`exhibits/company_ovod.html`); kept as the working notes behind it. Figures and source ids are as of the date below and follow the registry of that day. Headline checked 24.10.2026: ₽1.3bn matches the 2025 revenue on file (₽1,310,635,000).
+
 2026-09-20. Every claim carries a `[sNNNN]` source id, resolved in the table at the end. Russian is quoted verbatim from archived posts and documents; English is analysis. **Registry position: tier manufacturer; ЦБСТ tie {doc} from ЦБСТ's own channel [s7957, s7958]. The EU listing of the operating company is a primary document [s7977, s7978]; the 2024 US listing rests on press reporting {press}.**
 
 ## The finding

@@ -1,5 +1,7 @@
 # Source register — every registry/database an entity should be checked against
 
+> **Status 24.10.2026:** Live checklist of the registries and databases an entity should be checked against; the pull and screening scripts in `scripts/` implement it.
+
 **Created 2026-09-05.** Companion to `scripts/coverage_report.py`. That script
 answers *"which entities have we checked?"*; this file answers *"checked against
 **what**, and can we do it ourselves?"*

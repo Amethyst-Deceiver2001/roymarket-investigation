@@ -1,5 +1,7 @@
 # «Булат»: a Petersburg detector maker with hidden owners, a sole trader in Khimki, and ₽28.2m of МЧС contracts awarded without a tender
 
+> **Status 24.10.2026:** Superseded as a reader document by the generated company file (`exhibits/company_ooo-trimiks.html`); kept as the working notes behind it. Figures and source ids are as of the date below and follow the registry of that day. Headline checked 24.10.2026: ₽28.176m is the sole trader's two МЧС contracts, ₽16.192m (№ 130, «Булат» v.4) plus ₽11.984m (ЕП 3-25, the «Покров» jammer complex), as the first paragraph says; it is not a «Булат»-only figure.
+
 2026-09-20. Every claim carries a `[sNNNN]` source id, resolved in the table at the end. Russian is quoted verbatim from archived documents and posts; English is analysis. **Registry position: tier manufacturer for all three companies. The ЦБСТ tie is on the maker ООО «Тримикс» only, from ЦБСТ's own channel [s7596] {doc}. The dealer and the sole trader have no ЦБСТ tie of their own; the path to ЦБСТ runs through the maker.**
 
 ## The finding

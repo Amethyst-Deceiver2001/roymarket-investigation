@@ -1477,9 +1477,10 @@
             "s9109",
             "s9117"
           ]
-        }
+        },
+        "fio_ru": "Дмитрий Николаевич Песков"
       },
-      "verified_against": "s6817 -- АНО «Платформа НТИ»'s own primary-source founding/EGRUL document, naming Дмитрий Песков as director (cross-referenced from the entity's own director_history entry).",
+      "verified_against": "s6817 -- АНО «Платформа НТИ»'s own primary-source founding/EGRUL document, naming Дмитрий Песков as director (cross-referenced from the entity's own director_history entry). | 24.10.2026: fio_ru gains the patronymic so he is not read as the Kremlin press secretary: the RUPEP profile (s2606, archived RUPEP_20260826_peskov-dmitriy-nikolaevich.pdf) gives father_name «Николаевич».",
       "why": [
         "2026-08-24: OpenSanctions match explicitly checked and rejected — name collision with Kremlin press secretary Dmitry Peskov.",
         "2026-08-26: rupep.org profile (s2606) for this registry's Дмитрий Песков (Presidential special representative for digital/technological development, CEO АНО «Платформа НТИ») -- role text matches this RuPEP profile exactly, and RuPEP's own career table lists both roles verbatim. This is a DIFFERENT person from the Kremlin press secretary Dmitry Sergeevich Peskov already correctly rejected in this record's open_questions[] (b.1967, Moscow) -- RuPEP gives dob 26.12.1975, birthplace Voronezh, ИНН 772919018611, none of which match the press secretary. Confirms the earlier rejection was correct rather than resolving it away.",

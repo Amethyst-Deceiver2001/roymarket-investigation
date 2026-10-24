@@ -1,5 +1,7 @@
 # Source-expansion methodology (started 2026-09-02)
 
+> **Status 24.10.2026:** Historical log of how the source list grew (02.09 to 30.09.2026). The current checklist is `SOURCE_REGISTER.md`; this file stays because `scripts/screen_proverki.py` cites it.
+
 Origin: the smolin.info retrace showed that checking a document's *actual
 originating platform* (zakupki.gov.ru's own ЕИС, a district's own official
 site) instead of trusting a re-hosted copy both confirms authenticity and

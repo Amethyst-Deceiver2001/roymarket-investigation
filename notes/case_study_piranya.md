@@ -1,5 +1,7 @@
 # Пиранья: a company registered as software development sells combat FPV drones from one unit on its website, and the EU says it makes up to 10,000 a month
 
+> **Status 24.10.2026:** Superseded as a reader document by the generated company file (`exhibits/company_ooo-skb-piranya.html`); kept as the working notes behind it. Figures and source ids are as of the date below and follow the registry of that day. The headline's «up to 10,000 a month» is the EU's own wording, not ours; not re-checked against the registry.
+
 2026-09-20. Every claim carries a `[sNNNN]` source id, resolved in the table at the end. Russian is quoted verbatim from archived posts and documents; English is analysis. **Registry position: tier manufacturer; ЦБСТ tie {doc} from ЦБСТ's own channel [s7588]. The EU listing is a primary document [s7941]. Sales claims, unit claims and every combat claim come from the company's own site and channel and are graded Open.**
 
 ## The finding

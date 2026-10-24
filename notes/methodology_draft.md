@@ -1,5 +1,7 @@
 # Methodology and provenance — DRAFT
 
+> **Status 24.10.2026:** The live draft of the reader-facing methodology page; its open gaps are listed at the end. Not published.
+
 **Status: draft for the author to rewrite, 02.10.2026.** Written in the expert-witness register (STYLE_GUIDE §1.4, flattest). Numbers are as of the date above and come from the registry; regenerate them before publishing. The reader-facing text runs to the "Drafting notes" section, which is internal and goes before publication.
 
 Structure follows the six phases of the *Berkeley Protocol on Digital Open Source Investigations* (OHCHR and the Human Rights Center, UC Berkeley, 2022): online inquiry, preliminary assessment, collection, preservation, verification, investigative analysis. Each section says what is done, and where it applies, what is not done.

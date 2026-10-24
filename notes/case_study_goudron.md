@@ -1,5 +1,7 @@
 # ГОУДРОН: a household-electrical wholesaler registered at an apartment sells «Набат» drone detectors with a price tier for soldiers
 
+> **Status 24.10.2026:** Superseded as a reader document by the generated company file (`exhibits/company_ooo-goudron.html`); kept as the working notes behind it. Figures and source ids are as of the date below and follow the registry of that day. The headline states no figure; not re-checked against the registry.
+
 2026-09-20. Every claim carries a `[sNNNN]` source id, resolved in the table at the end. Russian is quoted verbatim from archived posts and pages; English is analysis. **Registry position: tier manufacturer; ЦБСТ tie {doc} from the company's own channel, not from ЦБСТ [s7598]. Ukraine's State Register of Sanctions lists the company, shown by a signed extract [s7972] {doc}; no other regime is on file.**
 
 ## The finding
