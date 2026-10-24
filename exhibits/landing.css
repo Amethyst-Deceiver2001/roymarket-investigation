@@ -231,3 +231,10 @@ main section > .rm-h2 { margin-top: 0; }
   .hero .top { padding-top: 48px; min-height: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .band .pic img { transition: none; } }
+
+/* A playable clip (preview only), framed like an evidence figure. */
+.clip { margin: 0 0 var(--space-5); max-width: 760px; }
+.clip video { display: block; width: 100%; aspect-ratio: 16 / 9; background: var(--panel-2); border: 1px solid var(--rule);
+  border-radius: var(--radius); }
+.clip figcaption { margin-top: 8px; font-size: var(--t-note); color: var(--ink-2); }
+.clip figcaption .rm-label { margin-right: 6px; }

@@ -700,7 +700,7 @@ class Landing(Chain):
             f'<ol class="flow" aria-label="From the strike report to the order line">{figs}</ol>'
             f'<p>On 19 October 2026 {self.pop("ooo-gagaring")}, a drone-electronics maker in Krasnodar, posted a short video '
             f'to its Telegram channel:</p>'
-            + self.oq("gag", f"Gagaring, Telegram, 19.10.2026{self.tref('gag')}") +
+            + self.oq("gag", f"Gagaring, Telegram, 19.10.2026{self.tref('gag')}") + self.gag_video() +
             f'<p>The next morning TsBST, the Moscow non-profit for the drone industry that counts the company among its '
             f'residents{self.ref(tie.get("source_id"))}, posted the same video under its own headline, named the two '
             f'products used, and closed with a sales line:</p>'
@@ -719,6 +719,28 @@ class Landing(Chain):
             + self.band(self.pics(["ooo-gagaring", "ano-dpo-obrazovatelny-tsentr-gagaring"]),
                         "Gagaring's own: its director at one of its field courses, and graduates of its training centre.", big=2)
             + self.dual_use())
+
+    def gag_video(self):
+        """The 25-second clip from Gagaring's post, playable. Preview only: the file is not catalogued, and a public
+        page shows key frames plus a link to the archived original."""
+        src = REPO / "exhibits" / "images" / "video"
+        if not self.preview or not (src / "gagaring-5142.mp4").exists():
+            return ""
+        dest = self.img_dir.parent / "video"
+        for name in ("gagaring-5142.mp4", "gagaring-5142.jpg"):
+            if dest != src:
+                dest.mkdir(parents=True, exist_ok=True)
+                (dest / name).write_bytes((src / name).read_bytes())
+            if (f"images/video/{name}", dest / name) not in self.media_files:
+                self.media_files.append((f"images/video/{name}", dest / name))
+        return ('<figure class="clip"><video controls preload="none" playsinline poster="images/video/gagaring-5142.jpg" '
+                'aria-label="Gagaring\'s video: a drone flies in over a large government building to a trident coat of arms on '
+                'its façade, then a separate clip of the coat of arms hanging damaged">'
+                '<source src="images/video/gagaring-5142.mp4" type="video/mp4"></video>'
+                '<figcaption><span class="rm-label">Video · 0:25</span> As posted by Gagaring, labelled “Kuznechik/Sova 5.8”. '
+                'The drone flies in over the building to the coat of arms on its façade; the last eight seconds are a separate '
+                f'vertical clip, with its own watermark, of the coat of arms hanging damaged. Re-encoded smaller for this page; '
+                f'the original is kept in our own record of the channel{self.tref("gag")}.</figcaption></figure>')
 
     def dual_use(self):
         """The label on the order line: the supplier page's own sentence before and after it changed."""
