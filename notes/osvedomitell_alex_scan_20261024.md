@@ -31,3 +31,18 @@ No ЦБСТ, РОЙ.МАРКЕТ, «Наша Правда», Архангел-pr
 2. Pull the media of 27702, 24195, 38581 only if the user wants them (user-run download).
 3. Registry: record the 205th brigade as a unit only after `scripts/unit_lookup.py` and a unit-name source; add the 49 ОА pairing from 27702 as the cited basis. Add Sudoplatov-VT-40 ↔ 205th as an open-question update on `proekt-kb-arkhangel`.
 4. The VK post the user cited was not in the scrape; still needs its text.
+
+## 5. Ambulances and funeral vehicles as «транспорт двойного назначения» (added 24.10.2026, user pointed to post 38703)
+«двойного назначения» occurs in **664 posts** (08.11.2024 to 24.10.2026), the label of a recurring "Херсон. Красная зона" series. The medical/funeral ones, read in the channel's own words (videos not viewed; claims, not findings):
+- **38703, 24.10.2026** (links t.me/rodnaya98vdd, 157 posts in the scrape link that channel; the post names only «Расчет Родной»): «Транспорт двойного назначения. Расчет Родной выявил технику, которая перемещается по Красной зоне под видом ритуальных услуг. ВСУ должно гнить в земле и удобрять русскую землю. Им такой транспорт не нужен.»
+- **23051, 17.12.2024:** «Дурачок думал, что если он налепит на бусик триколор и скорая, то это прокати. … На этот раз ему повезло» followed by «Любое передвижение автотранспорта будет считаться законной целью» (the same standing text as 27702).
+- **24299, 13.02.2025:** «противник снова использовал "кареты скорой помощи" при ротации личного состава … Результат всегда будет один».
+- **26795, 09.06.2025:** «прикрываясь то гражданскими, то красным крестом, то медицинской службой … вся техника будет уничтожаться. … могут быть сопутствующие потери».
+- **30686, 22.11.2025:** «если на машину повесить крест и написать "скорая" … транспорт "двойного назначения" будет уничтожен, ну и рядом дома сожгем.»
+- **34576, 20.05.2026:** «сожгли около шести мест стоянок техники двойного назначения. … только на двух приехали петухи ДСНС» (rescue service); «Херсон стал местом, где враг преднамеренно не проводит эвакуационных действий».
+- **36192, 24.07.2026; 37672, 07.09.2026:** ambulances said to carry ammunition, wounded and EW sets; «Естественно, техника будет уничтожаться».
+- **37563, 04.09.2026:** «Особое внимание к объектам хранения медицинских и продовольственных товаров двойного назначения. Все данные объекты будут уничтожены.»
+- **34459, 15.05.2026:** answers a Ukrainian report of six hurt (named by Ukraine as emergency-service staff and a volunteer) with "objective control" footage from 18 ОА «Днепр» drones, arguing the people were armed soldiers.
+
+**What this shows:** a published, repeated policy statement, in the channel's voice, that ambulances and funeral vehicles are targets whenever the crew judges them military. **What it does not show:** that any specific strike hit a protected vehicle, or who flew it; the unit is named in some posts (18 ОА, Родной, 205th elsewhere) and not others. The 17.10.2026 Honcharov death (Ukrainska Pravda, "airstrike", no unit) is not tied to any of these. Characterisation as unlawful is for tribunals and the UN Commission; we attribute, we do not conclude.
+Also note: 38703's unit is inferred from a channel handle only; do not name a division until the channel's own page or post says so.
