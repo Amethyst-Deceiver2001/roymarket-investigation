@@ -68,6 +68,8 @@ RE_CONTEXT = re.compile(r"бойцам|подразделени|группиро
 RE_NOT_HANDOVER = re.compile(r"награ|медал|орден|грамот|благодарност", re.I)                                        # ceremonies
 FONT_PATHS = ("/System/Library/Fonts/Supplemental/Arial.ttf", "/Library/Fonts/Arial.ttf",
               "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
+IGNORE_CHANNELS = {"rostecru"}
+IGNORE_REGISTRY_ONLY = {"ростех"}   # a post whose only registry hit is Rostec
 IMAGE_EXT = {".jpg", ".jpeg", ".png", ".webp"}
 VIDEO_EXT = {".mp4", ".mov", ".webm", ".mkv"}
 NEAR_DUP_BITS = 6          # Hamming distance at or under which two pictures count as the same picture
@@ -510,15 +512,24 @@ def cmd_rank(args) -> None:
 
 # --- sheets --------------------------------------------------------------------------------------------------
 
+def ignored(it) -> bool:
+    """State-supply posts the user ruled out of this triage (24.10.2026): Rostec's own channel, and posts whose only
+    registry hit is Rostec (arms supplied to the army, not a resident's or product's handover)."""
+    if (it.get("channel") or "").lower() in IGNORE_CHANNELS:
+        return True
+    hits = {h.strip() for h in ((it.get("reasons") or {}).get("registry") or "").split(",") if h.strip()}
+    return bool(hits) and hits <= IGNORE_REGISTRY_ONLY
+
+
 def sheet_candidates(items, processed, ledger):
-    """Queue items with a local picture, not labelled, not a near-duplicate of one already on a sheet."""
+    """Queue items with a local picture, not labelled, not ignored, not a near-duplicate of one already on a sheet."""
     out, rep_seen = [], set()
     for it in items:   # a labelled picture takes its near-duplicates off the sheets with it
         rec = processed.get(it["file"])
         if it["key"] in ledger and rec is not None:
             rep_seen.add(rec.get("near_dup_of") or it["file"])
     for it in items:
-        if it["key"] in ledger:
+        if it["key"] in ledger or ignored(it):
             continue
         name = it["file"]
         rec = processed.get(name)

@@ -77,6 +77,9 @@ def main():
     assert mt.text_score("Выставка дронов", {"registry": "Булат"}) == 0, "a bare registry hit is not a handover"
     assert mt.text_score("Передали бойцам", {"registry": "Булат"}) > mt.text_score("Передали бойцам", {})
     assert mt.text_score("Добровольцы награждены медалью", {}) < mt.text_score("Передали бойцам партию", {}), "ceremonies are not handovers"
+    base = {"file": "a.jpg", "key": "k", "channel": "x", "reasons": {}}
+    assert mt.ignored({**base, "channel": "rostecru"}) and mt.ignored({**base, "reasons": {"registry": "ростех"}})
+    assert not mt.ignored({**base, "reasons": {"registry": "ростех, булат"}}) and not mt.ignored(base)
     assert mt.post_url("nashapravdafond", 615) == "https://t.me/nashapravdafond/615" and mt.post_url("123", 5) == ""
     assert mt.origin_of([("2026-10-02", "b/2"), ("2026-10-01", "a/1")]) == ("2026-10-01", "a/1")
 
