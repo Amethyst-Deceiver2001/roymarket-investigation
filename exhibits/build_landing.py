@@ -67,6 +67,11 @@ OPENING_SOURCES = {
     "osv_19953": ("Telegram, @osvedomitell_alex, post 19953, 19.08.2024", "https://t.me/osvedomitell_alex/19953"),
     "osv_36192": ("Telegram, @osvedomitell_alex, post 36192, 24.07.2026", "https://t.me/osvedomitell_alex/36192"),
     "osv_38703": ("Telegram, @osvedomitell_alex, post 38703, 24.10.2026", "https://t.me/osvedomitell_alex/38703"),
+    "osv_20344": ("Telegram, @osvedomitell_alex, post 20344, 28.08.2024", "https://t.me/osvedomitell_alex/20344"),
+    "osv_20801": ("Telegram, @osvedomitell_alex, post 20801, 15.09.2024", "https://t.me/osvedomitell_alex/20801"),
+    "osv_20993": ("Telegram, @osvedomitell_alex, post 20993, 22.09.2024", "https://t.me/osvedomitell_alex/20993"),
+    "osv_21384": ("Telegram, @osvedomitell_alex, post 21384, 06.10.2024, signed @habr_bpla", "https://t.me/osvedomitell_alex/21384"),
+    "osv_34459": ("Telegram, @osvedomitell_alex, post 34459, 15.05.2026", "https://t.me/osvedomitell_alex/34459"),
     "rog_8057": ("Telegram, @rogozin_do (Dmitry Rogozin), post 8057, 19.01.2026", "https://t.me/rogozin_do/8057"),
     "rog_7780": ("Telegram, @rogozin_do (Dmitry Rogozin), post 7780, 12.11.2025", "https://t.me/rogozin_do/7780"),
     "np_280": ("Telegram, @nashapravdafond, post 280, 07.05.2024", "https://t.me/nashapravdafond/280"),
@@ -167,6 +172,46 @@ OPENING_QUOTES = {   # key: (channel, post, verbatim Russian, our translation)
                  "much harder"),
 }
 
+# Stills from the Kherson channel's own videos (and one map it posted), each looked at full size (notes/
+# osvedomitell_alex_media_looked_20261024.md). The files are not catalogued on this Mac, so they have no media.json
+# record: they appear on the private preview only, never in a docs/ build, and move to media.json once catalogued.
+# key: (post, file in exhibits/images/kherson, what the frame shows, verbatim Russian from the post, our translation)
+KHERSON_STILLS = {
+    "osv_27702": (27702, "k27702.jpg", "A drone's view down into a ruined house. On the left, the bear emblem with “205 brigade”; "
+                  "bottom right, the caption “settlement of Kazatskoe” and grid coordinates. Still at 0:40.",
+                  "205 бригада 49 ОА ГВ \"Днепр\"", "205th brigade, 49th Combined Arms Army, «Dnepr» Group of Forces"),
+    "osv_21384": (21384, "k21384.jpg", "The map posted with the warning: a red zone over the Kherson riverside, both banks of "
+                  "the Dnipro and the bridge.",
+                  "в этих районах наши расчёты будут вести уничтожение любого транспорта",
+                  "in these districts our crews will destroy any vehicle"),
+    "osv_19953": (19953, "k19953.jpg", "From above: a blue van in a yard, under a crosshair, with people standing at its side. "
+                  "No one can be identified. Still at 2:40, before the strike.",
+                  "Операторы работали точечно, так как наблюдали поблизости гражданских.",
+                  "The operators worked precisely, as they observed civilians nearby."),
+    "osv_20344": (20344, "k20344.jpg", "From above: a white van stopped in a street. Probably the video the UN Commission "
+                  "reproduces as a figure; that is not shown. Still at 0:03.",
+                  "Горе \"медиков\" оставили в живых только потому, что на авто был номер \"101\" пожарная охрана",
+                  "The would-be “medics” were left alive only because the vehicle carried the number “101”, the fire service"),
+    "osv_20801": (20801, "k20801.jpg", "From above: one person walking along a wall, with a crosshair beside them. No one "
+                  "can be identified. Still at 0:15.",
+                  "Задача выполнена. Цель поражена.", "Task completed. Target hit."),
+    "osv_20993": (20993, "k20993.jpg", "From above: a person walking a dog along a road, under a crosshair. The post's text "
+                  "is about a taxi driver; this part of the video is not what it describes. Still at 0:03.",
+                  "Уничтожать нужно весь транспорт. Весь.", "All transport must be destroyed. All of it."),
+    "osv_36192": (36192, "k36192.jpg", "From above: a white van under trees in a courtyard between apartment blocks. Lettering "
+                  "on its side is partly hidden by the trees. Still at 0:10.",
+                  "Противник в очередной раз использует кареты скорой помощи для подвоза БК",
+                  "Once again the enemy is using ambulances to bring up ammunition"),
+    "osv_38703": (38703, "k38703.jpg", "A drone's approach into a courtyard: a dark van lettered “RITUAL” (funeral services), "
+                  "a yellow minibus beyond it. Watermark “Rodnaya 98 vdd”, the 98th Airborne Division. Still at 0:04.",
+                  "Расчет Родной выявил технику, которая перемещается по Красной зоне под видом ритуальных услуг.",
+                  "The «Rodnoy» crew spotted a vehicle moving through the Red Zone in the guise of funeral services."),
+    "osv_34459": (34459, "k34459.jpg", "Title card of the video: “SVO”, the emblem of the «Dnepr» Group of Forces, then "
+                  "“presents”. The post says the people struck were soldiers.",
+                  "кадры объективного контроля с камер дронов БпС 18 ОА ГВ \"Днепр\"",
+                  "footage from the cameras of the drone forces of the 18th Combined Arms Army, «Dnepr» Group of Forces"),
+}
+
 
 def ln(grade, w=56):
     return (f'<svg class="ln" width="{w}" height="8" aria-hidden="true">'
@@ -184,6 +229,7 @@ class Landing(Chain):
         super().__init__("bulat")
         self.graph = json.loads((REPO / "data" / "registry" / "relationship_graph.json").read_text())
         self.img_dir = REPO / "exhibits" / "images" / "media"
+        self.preview = False
         people = json.loads((REPO / "data" / "registry" / "people.json").read_text())
         self.people = {x["slug"]: x for x in (people if isinstance(people, list) else people.get("people", []))}
 
@@ -579,9 +625,9 @@ class Landing(Chain):
         n = self.notes.index(note) + 1
         return f'<sup class="rm-ref"><a href="#n{n}">{n}</a></sup>'
 
-    def oq(self, key, cite):
-        """A quotation from OPENING_QUOTES, checked word for word against the scraped post where the scrape exists."""
-        chan, msg, ru, en = OPENING_QUOTES[key]
+    @staticmethod
+    def verbatim(key, chan, msg, ru):
+        """Stop the build if a quoted line is not word for word in the scraped post (where the scrape exists)."""
         db = REPO / "data" / "roymarket.db"
         if db.exists():
             import sqlite3
@@ -590,8 +636,46 @@ class Landing(Chain):
                 (chan, msg)).fetchone()
             for part in ru.split(" […] "):
                 if not row or part not in row[0]:
-                    raise SystemExit(f"opening quote {key}: not verbatim in {chan}/{msg}")
+                    raise SystemExit(f"quote {key}: not verbatim in {chan}/{msg}")
+
+    def oq(self, key, cite):
+        """A quotation from OPENING_QUOTES, checked word for word against the scraped post where the scrape exists."""
+        chan, msg, ru, en = OPENING_QUOTES[key]
+        self.verbatim(key, chan, msg, ru)
         return quote_html(ru, en, cite, f"q-{key}")
+
+    def kherson_band(self):
+        """Stills from the Kherson channel (KHERSON_STILLS), as a picture band. Preview only: they have no media record."""
+        if not self.preview:
+            return ""
+        src_dir, dest = REPO / "exhibits" / "images" / "kherson", self.img_dir.parent / "kherson"
+        tiles = []
+        for key, (msg, name, shows, ru, en) in KHERSON_STILLS.items():
+            if not (src_dir / name).exists():
+                continue
+            self.verbatim(key, "osvedomitell_alex", msg, ru)
+            if dest != src_dir:
+                dest.mkdir(parents=True, exist_ok=True)
+                (dest / name).write_bytes((src_dir / name).read_bytes())
+            rel = f"images/kherson/{name}"
+            if (rel, dest / name) not in self.media_files:
+                self.media_files.append((rel, dest / name))
+            when = OPENING_SOURCES[key][0].rsplit(", ", 1)[-1] if key != "osv_21384" else "06.10.2024"
+            video = "" if name == "k21384.jpg" else ('<span class="orig">Still from a video. Original on Telegram, kept in '
+                                                     'our own record of the channel.</span>')
+            self.templates[f"k{msg}"] = (
+                f'<figure class="rm-fig"><div class="frame"><img src="{esc(rel)}" alt="{esc(shows)}"></div><figcaption>'
+                f'<span class="rm-prov">Posted by «From Mariupol to the Carpathians»</span><span>{esc(shows)} The post: '
+                f'{orig_line(ru, f"ks-{msg}", en)}{self.tref(key)}</span>{video}<span class="when">{esc(when)}</span>'
+                f'</figcaption></figure>')
+            tiles.append(f'<button class="pic{" big" if len(tiles) < 2 else ""}" type="button" data-fig="fig-k{msg}" '
+                         f'aria-label="{esc(shows)}"><img src="{esc(rel)}" alt="" loading="lazy"></button>')
+        if not tiles:
+            return ""
+        return (f'<figure class="band"><div class="band-grid">{"".join(tiles)}</div><figcaption><span class="rm-label">'
+                f'Pictures · {len(tiles)}</span> Stills from the channel\'s own videos, 2024–2026, and the map it posted with '
+                f'one of its warnings. Nobody in them can be identified, and no frame we looked at shows a dead or wounded '
+                f'person. Each opens with its caption, date and the post\'s own words.</figcaption></figure>')
 
     def opening(self):
         """The cold open: a maker's strike footage, re-posted by ЦБСТ with an order line for its marketplace."""
@@ -708,7 +792,8 @@ class Landing(Chain):
             + self.oq("osv_19953", f'the same channel, 19.08.2024{self.tref("osv_19953")}') +
             '<p>And under the heading the platform used for its sellers:</p>'
             + self.oq("osv_36192", f'the same channel, 24.07.2026{self.tref("osv_36192")}')
-            + self.oq("osv_38703", f'the same channel, 24.10.2026, over a clip watermarked by the 98th Airborne Division{self.tref("osv_38703")}') +
+            + self.oq("osv_38703", f'the same channel, 24.10.2026, over a clip watermarked by the 98th Airborne Division{self.tref("osv_38703")}')
+            + self.kherson_band() +
             '<p class="note"><span class="rm-grade rep">Reported</span> The ties above are the parties\' own posts. They show '
             'TsBST\'s circle supplying and recruiting for the formations the UN names; they do not show that any item from it '
             'was used against civilians, and the UN names no unit below the army.</p>')
@@ -830,6 +915,7 @@ VIEWER_JS = "// Picture viewer" + (REPO / "exhibits" / "chain_view.js").read_tex
 def render(preview: bool, out: Path):
     L = Landing()
     L.img_dir = out.parent / "images" / "media"
+    L.preview = preview
     c = L.ents[CBST]
     today = dt.date.today().isoformat()
     # Called in page order, so footnotes number from the top.
