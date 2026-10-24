@@ -23136,23 +23136,10 @@
         {
           "source": "ivan-igorevich-karabinskiy",
           "target": "fond-gradislava-historic-cultural-heritage-preservation",
-          "type": "directs",
-          "label": null,
-          "source_id": "s0216",
-          "as_of": "2021-12-17",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null,
-          "detail": null,
-          "grade": "doc"
-        },
-        {
-          "source": "ivan-igorevich-karabinskiy",
-          "target": "fond-gradislava-historic-cultural-heritage-preservation",
           "type": "role",
           "label": "General Director, Фонд «Градислава»",
           "source_id": "s0216",
-          "as_of": "2021-12-17",
+          "as_of": "2013-04-12",
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
@@ -41889,14 +41876,6 @@
           "degree": 5
         },
         {
-          "id": "ivan-igorevich-karabinskiy",
-          "kind": "person",
-          "label": "Иван Игоревич Карабинский",
-          "name_latin": null,
-          "sanctioned": false,
-          "degree": 3
-        },
-        {
           "id": "ivlev-artem-yurevich",
           "kind": "person",
           "label": "Ивлев Артём Юрьевич",
@@ -45439,19 +45418,6 @@
           "label": null,
           "source_id": "s7621",
           "as_of": "2026-04-15",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null,
-          "detail": null,
-          "grade": "doc"
-        },
-        {
-          "source": "ivan-igorevich-karabinskiy",
-          "target": "fond-gradislava-historic-cultural-heritage-preservation",
-          "type": "directs",
-          "label": null,
-          "source_id": "s0216",
-          "as_of": "2021-12-17",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null,
@@ -51714,10 +51680,30 @@
           "degree": 6
         },
         {
+          "id": "fond-gradislava-historic-cultural-heritage-preservation",
+          "kind": "entity",
+          "label": "Фонд «Градислава» | historic & cultural heritage preservation",
+          "name_latin": null,
+          "inn": "7704278421",
+          "tier": "money-layer",
+          "sanctioned": false,
+          "legal_form": "Фонд",
+          "product_count": 0,
+          "degree": 7
+        },
+        {
           "id": "group::ushkuynik-group",
           "kind": "group",
           "label": "Группа «Ушкуйник»",
           "subtype": "brand_cluster",
+          "degree": 3
+        },
+        {
+          "id": "ivan-igorevich-karabinskiy",
+          "kind": "person",
+          "label": "Иван Игоревич Карабинский",
+          "name_latin": null,
+          "sanctioned": false,
           "degree": 3
         },
         {
@@ -52277,6 +52263,19 @@
           "label": "генеральный конструктор (per leader-id.ru self-report)",
           "source_id": null,
           "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "open"
+        },
+        {
+          "source": "ivan-igorevich-karabinskiy",
+          "target": "fond-gradislava-historic-cultural-heritage-preservation",
+          "type": "directs",
+          "label": null,
+          "source_id": null,
+          "as_of": "2013-04-12",
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
