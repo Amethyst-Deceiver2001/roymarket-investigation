@@ -1,0 +1,79 @@
+{
+ "_note": "Hand-kept items for scripts/morning_brief.py: what is ready, what is stuck for a reason no file shows, and decisions only the user can make. kind: ready|stuck|decision; since: YYYY-MM-DD; close with \"status\": \"closed\" and a \"note\", never delete.",
+ "items": [
+  {
+   "id": "b001",
+   "kind": "ready",
+   "since": "2026-10-24",
+   "status": "open",
+   "text": "Landing opening (strike post, order line, sequence graphic) built and checked: 0 page-check errors, private preview v16",
+   "link": "https://claude.ai/artifact/W5m6W6w663RjwfqqTEjQ6z"
+  },
+  {
+   "id": "b002",
+   "kind": "ready",
+   "since": "2026-10-23",
+   "status": "open",
+   "text": "Month read of all channels, 23.09-23.10: ten ranked angles with post numbers",
+   "link": "notes/month_read_20261023.md"
+  },
+  {
+   "id": "b003",
+   "kind": "stuck",
+   "since": "2026-10-24",
+   "status": "open",
+   "text": "Strike video not placed on a map",
+   "why": "needs a dated photo of the Zaporizhzhia regional administration building to compare; the opening card says unconfirmed until then"
+  },
+  {
+   "id": "b004",
+   "kind": "stuck",
+   "since": "2026-10-24",
+   "status": "open",
+   "text": "Kuznechik and Sova not checked in the ROY.MARKET catalogue",
+   "why": "the order-line card says 'not yet checked'; one page lookup settles it"
+  },
+  {
+   "id": "b005",
+   "kind": "stuck",
+   "since": "2026-10-22",
+   "status": "open",
+   "text": "New posts cannot get source ids on this machine",
+   "why": "the data/sources archive is on the other Mac; the opening cites the posts by public link until then"
+  },
+  {
+   "id": "b006",
+   "kind": "decision",
+   "since": "2026-10-24",
+   "status": "open",
+   "text": "Publish the new landing to docs/, and switch GitHub Pages back on",
+   "why": "Pages is not enabled on the private repo; the public copy is the 05.10 build"
+  },
+  {
+   "id": "b007",
+   "kind": "decision",
+   "since": "2026-10-24",
+   "status": "closed",
+   "text": "handovers.json or products deliveries[]: which is the delivery record",
+   "why": "two lists with no overlap; pages built from one miss the other (cleanup catalogue §3)",
+   "note": "24.10.2026: merged into deliveries.json (user decision: one file); see cleanup catalogue step 3a"
+  },
+  {
+   "id": "b008",
+   "kind": "decision",
+   "since": "2026-10-24",
+   "status": "closed",
+   "text": "Cleanup step 2: archive the retired exhibits, scripts and notes in one commit",
+   "why": "list in notes/cleanup_catalogue_20261024.md §4",
+   "note": "24.10.2026: step 2 done, 38 files archived (commit c7561d6)"
+  },
+  {
+   "id": "b009",
+   "kind": "decision",
+   "since": "2026-10-23",
+   "status": "open",
+   "text": "Log the month read's top angles as open developments",
+   "why": "they show on the board and in this brief only once logged in data/watch/developments.json"
+  }
+ ]
+}
