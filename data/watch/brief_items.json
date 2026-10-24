@@ -147,6 +147,22 @@
    "status": "open",
    "text": "ER video frame showing «СКВОРЕЦ» has no media record yet",
    "why": "media.json needs the source id of t.me/er_molnia/19136, which is not catalogued on this machine; the draft record is in notes/media_draft_er_molnia_19136_20261024.md and h0032/h0033 already carry the item"
+  },
+  {
+   "id": "b019",
+   "kind": "waiting",
+   "since": "2026-10-24",
+   "status": "open",
+   "text": "«Квадросим» (ООО «НИНСАР», ИНН 9719061351) needs a registry entity",
+   "why": "Identified 24.10.2026 from the ЕГРЮЛ extract (sole founder and director Сечинский Е.В.) and ЦБСТ's own post 1562 («резидент ЦБСТ»); no source ids are assigned on this Mac. Archive Mac: catalogue data/sources/EGRUL_9719061351_20261024_inn-9719061351.pdf, create the entity with cbst_tie t-open, add namesake ИНН 7734366192 as a candidate identity, screen company and director, read Archangel_Forum/175293 and projectArchangel/10550 in full. Details: notes/kvadrosim_and_archangel_diplomas_20261024.md"
+  },
+  {
+   "id": "b020",
+   "kind": "waiting",
+   "since": "2026-10-24",
+   "status": "open",
+   "text": "Archangel_Forum/153124 and the ten specimen documents (projectArchangel 9507-9516) are unread",
+   "why": "The public view of 153124 shows only «Service message», 05.02.2025; the documents are not in the public preview. Needs an authenticated download: scripts/run scripts/tg_media_pull.py download --channel Archangel_Forum --msg-ids 153124 --label Archangel_Forum, and the same for --channel projectArchangel --msg-ids 9507,9508,9509,9510,9511,9512,9513,9514,9515,9516 (user runs it)"
   }
  ]
 }
