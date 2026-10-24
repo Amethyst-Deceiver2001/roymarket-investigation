@@ -35,6 +35,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
 import sqlite3
 import subprocess
@@ -441,7 +442,8 @@ def cmd_rank(args) -> None:
     print(f"{len(todo)} pictures to rank ({sum(1 for r in done.values() if 'clip' in r)} already ranked)")
     if not todo:
         return
-    dev = "mps" if torch.backends.mps.is_available() else "cpu"
+    # mps returns identical logits for every picture on the Intel Mac (24.10.2026: all 12,565 ranked 1/9), so cpu by default
+    dev = "mps" if os.environ.get("MEDIA_TRIAGE_DEVICE") == "mps" and torch.backends.mps.is_available() else "cpu"
     model, _, pre = open_clip.create_model_and_transforms("ViT-B-32", pretrained="openai")
     model = model.to(dev).eval()
     tok = open_clip.get_tokenizer("ViT-B-32")
@@ -463,6 +465,8 @@ def cmd_rank(args) -> None:
             probs = (100 * f @ t.T).softmax(dim=-1).cpu()
             for n, row in zip(batch, probs):
                 p = {k: round(float(v), 3) for k, v in zip(labels, row)}
+                if max(p.values()) - min(p.values()) < 0.01:
+                    sys.exit(f"{n}: CLIP scores are uniform ({dev}); the device is broken, nothing saved")
                 done[n]["clip"] = {"top": max(p, key=p.get), "p": p}
             print(f"  {min(i + 32, len(todo))}/{len(todo)}", flush=True)
     dump_json(PROCESSED, done)
