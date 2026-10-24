@@ -591,19 +591,37 @@ class Landing(Chain):
                        and (genres is None or m.get("genre") in genres) and self.img(m)),
                       key=lambda m: (m.get("published") or "", m["id"]))
 
-    def band(self, ms, label, big=3):
-        """A band of pictures: the first `big` drawn large, the rest smaller; each opens its full figure."""
+    @staticmethod
+    def tile_label(text, when=None):
+        """A short visible label for a lead tile: the first clause of what the picture shows, and its date."""
+        first = re.split(r"(?<=[a-z0-9\)”»])[.;:] ", text.strip(), 1)[0].rstrip(".")
+        first = first if len(first) <= 60 else first[:58].rsplit(" ", 1)[0].rstrip(" ,;:-") + "…"
+        return f"{first}, {when}" if when else first
+
+    @staticmethod
+    def tile(fig, img, aria, cap=None, big=False, contain=False):
+        c = " ".join(x for x, on in (("pic", True), ("big", big), ("contain", contain)) if on)
+        label = f'<span class="cap">{esc(cap)}</span>' if cap and big else ""
+        return (f'<button class="{c}" type="button" data-fig="{fig}" aria-label="{esc(aria)}">'
+                f'<img src="{esc(img)}" alt="" loading="lazy">{label}</button>')
+
+    def band(self, ms, label, big=3, lead=(), limit=9):
+        """A band of pictures. Pictures named in `lead` come first; the first `big` are drawn large with a visible label;
+        any past `limit` sit behind "Show all". Each opens its full figure."""
         if not ms:
             return ""
+        ms = sorted(ms, key=lambda m: (m["id"] not in lead, lead.index(m["id"]) if m["id"] in lead else 0))
         tiles, sids = [], []
         for i, m in enumerate(ms):
             self.template(m)
             if m.get("source_id") not in sids:
                 sids.append(m.get("source_id"))
-            tiles.append(f'<button class="pic{" big" if i < big else ""}" type="button" data-fig="fig-{m["id"]}" '
-                         f'aria-label="{esc(m.get("shows_en") or latinize_gloss(m["shows"]))}">'
-                         f'<img src="{esc(self.img(m))}" alt="" loading="lazy"></button>')
-        return (f'<figure class="band"><div class="band-grid">{"".join(tiles)}</div>'
+            en = m.get("shows_en") or latinize_gloss(m["shows"])
+            tiles.append(self.tile(f"fig-{m['id']}", self.img(m), en, self.tile_label(en, ru_date(m.get("published"))), big=i < big))
+        shown, rest = tiles[:limit], tiles[limit:]
+        more = (f'<details class="more"><summary>Show all {len(tiles)} pictures</summary>'
+                f'<div class="band-grid">{"".join(rest)}</div></details>') if rest else ""
+        return (f'<figure class="band"><div class="band-grid">{"".join(shown)}</div>{more}'
                 f'<figcaption><span class="rm-label">Pictures · {len(ms)}</span> {label} Each opens with its caption, '
                 f'date and source.{self.ref(*sids)}</figcaption></figure>')
 
@@ -668,8 +686,8 @@ class Landing(Chain):
                 f'<span class="rm-prov">Posted by «From Mariupol to the Carpathians»</span><span>{esc(shows)} The post: '
                 f'{orig_line(ru, f"ks-{msg}", en)}{self.tref(key)}</span>{video}<span class="when">{esc(when)}</span>'
                 f'</figcaption></figure>')
-            tiles.append(f'<button class="pic{" big" if len(tiles) < 2 else ""}" type="button" data-fig="fig-k{msg}" '
-                         f'aria-label="{esc(shows)}"><img src="{esc(rel)}" alt="" loading="lazy"></button>')
+            cap = self.tile_label(shows.split(" Still at")[0], when)
+            tiles.append(self.tile(f"fig-k{msg}", rel, shows, cap, big=len(tiles) < 2, contain=name in ("k27702.jpg", "k34459.jpg")))
         if not tiles:
             return ""
         return (f'<figure class="band"><div class="band-grid">{"".join(tiles)}</div><figcaption><span class="rm-label">'
@@ -739,7 +757,7 @@ class Landing(Chain):
                 '<source src="images/video/gagaring-5142.mp4" type="video/mp4"></video>'
                 '<figcaption><span class="rm-label">Video · 0:25</span> As posted by Gagaring, labelled “Kuznechik/Sova 5.8”. '
                 'The drone flies in over the building to the coat of arms on its façade; the last eight seconds are a separate '
-                f'vertical clip, with its own watermark, of the coat of arms hanging damaged. Re-encoded smaller for this page; '
+                f'vertical clip, with its own watermark, of the coat of arms hanging damaged. It has a soundtrack, which we have not transcribed. Re-encoded smaller for this page; '
                 f'the original is kept in our own record of the channel{self.tref("gag")}.</figcaption></figure>')
 
     def dual_use(self):
@@ -952,7 +970,7 @@ def render(preview: bool, out: Path):
     handed = L.pics([NP], {"handover"})
     handovers = L.band(handed, f"Published by «Nasha Pravda» with its handover posts, {ru_date(handed[0]['published'])} – "
                        f"{ru_date(handed[-1]['published'])}: deliveries of «Bulat» detectors and other kit to units. A handover "
-                       "does not show use in combat.", big=4) if handed else ""
+                       "does not show use in combat.", big=3, lead=("m0085", "m0070", "m0083")) if handed else ""
     front = L.front()
     beyond = L.beyond_shop()
     chains = "".join(L.chain_card(s, url if preview else (f"chain_{s}.html" if (out.parent / f"chain_{s}.html").exists() else None))
