@@ -747,24 +747,16 @@ class Landing(Chain):
                  ("20 October", "TsBST", "Re-posts it as “a TsBST resident showed footage of the strike” and names both products.", "rep"),
                  ("Order line", "ROY.MARKET", "“Servicemen can order them” there. The catalogue is behind a login, so TsBST's post is the only evidence.", "rep")]
         joins = [("open", "neither post dates the strike"), ("rep", "same video"), ("rep", "sales line")]
-        flow = []
-        for i, (d, who, what, g) in enumerate(nodes):
-            flow.append(f'<li class="node{" last" if i == len(nodes) - 1 else ""}"><span class="d">{esc(d)}</span>'
-                        f'<span class="who">{esc(who)}</span><span class="what">{esc(what)}</span>'
-                        f'<span class="rm-grade {g}">Reported</span></li>')
-            if i < len(joins):
-                gj, lab = joins[i]
-                flow.append(f'<li class="join" aria-hidden="true">{ln(gj, 44)}<span>{esc(lab)}</span></li>')
-        figs = "".join(flow)
         return (
-            f'<ol class="flow" aria-label="From the strike report to the order line">{figs}</ol>'
-            f'<p>On 19 October 2026 {self.pop("ooo-gagaring")}, a drone-electronics maker in Krasnodar, posted a short video '
+            self.gag_video()
+            + f'<p>On 19 October 2026 {self.pop("ooo-gagaring")}, a drone-electronics maker in Krasnodar, posted this short video '
             f'to its Telegram channel:</p>'
-            + self.oq("gag", f"Gagaring, Telegram, 19.10.2026{self.tref('gag')}") + self.gag_video() +
+            + self.oq("gag", f"Gagaring, Telegram, 19.10.2026{self.tref('gag')}") +
             f'<p>The next morning TsBST, the Moscow non-profit for the drone industry that counts the company among its '
             f'residents{self.ref(tie.get("source_id"))}, posted the same video under its own headline, named the two '
             f'products used, and closed with a sales line:</p>'
-            + self.oq("cbst", f"TsBST, Telegram, 20.10.2026{self.tref('cbst')}") +
+            + self.oq("cbst", f"TsBST, Telegram, 20.10.2026{self.tref('cbst')}")
+            + f'<ol class="flow" aria-label="From the strike report to the order line">{self.flow_html(nodes, joins)}</ol>' +
             f'<p>TsBST calls the city “occupied”. Zaporizhzhia is held by Ukraine; the building is the seat of its regional '
             f'government. On 8 October the head of the regional administration reported that an FPV drone had hit the coat '
             f'of arms on its façade: smoke, no fire, nobody hurt{self.tref("ukrinform")}. ROY.MARKET is TsBST\'s own '
@@ -779,6 +771,50 @@ class Landing(Chain):
             + self.band(self.pics(["ooo-gagaring", "ano-dpo-obrazovatelny-tsentr-gagaring"]),
                         "Gagaring's own: its director at one of its field courses, and graduates of its training centre.", big=2)
             + self.dual_use())
+
+    def flow_html(self, nodes, joins):
+        flow = []
+        for i, (d, who, what, g) in enumerate(nodes):
+            flow.append(f'<li class="node{" last" if i == len(nodes) - 1 else ""}">{self.shot(i)}<span class="d">{esc(d)}</span>'
+                        f'<span class="who">{esc(who)}</span><span class="what">{esc(what)}</span>'
+                        f'<span class="rm-grade {g}">Reported</span></li>')
+            if i < len(joins):
+                gj, lab = joins[i]
+                flow.append(f'<li class="join" aria-hidden="true">{ln(gj, 44)}<span>{esc(lab)}</span></li>')
+        return "".join(flow)
+
+    SHOTS = [
+        ("opening/ukrinform-zaporizhzhia-ova.jpg", "Ukrinform, 08.10.2026",
+         "Screenshot of the Ukrinform article «The enemy hit the Zaporizhzhia regional administration building with a drone» "
+         "(8 October 2026), with its photograph of the building's façade.", "ukrinform"),
+        ("video/gagaring-5142.jpg", "Gagaring's video, 19.10.2026",
+         "A frame from Gagaring's video: the government building seen from above, before the drone flies in.", "gag"),
+        ("opening/tsbst-post-2677.jpg", "TsBST's post, 20.10.2026",
+         "Screenshot of TsBST's Telegram post of 20 October 2026: the same video, the headline «The trident came unstuck» "
+         "(Russian original) and the sales line.", "cbst"),
+        ("opening/roymarket-supplier-page.jpg", "ROY.MARKET's public page, 24.10.2026",
+         "Screenshot of ROY.MARKET's public page for prospective sellers as it read on 24 October 2026. The catalogue itself "
+         "is behind a login.", "rm_now"),
+    ]
+
+    def shot(self, i):
+        """A screenshot for box i of the opening strip, openable like any picture. Preview only: third-party captures
+        have no media record."""
+        if not self.preview:
+            return ""
+        name, label, shows, key = self.SHOTS[i]
+        src_dir, dest = REPO / "exhibits" / "images", self.img_dir.parent
+        rel = f"images/{name}"
+        if dest != src_dir:
+            (dest / name).parent.mkdir(parents=True, exist_ok=True)
+            (dest / name).write_bytes((src_dir / name).read_bytes())
+        if (rel, dest / name) not in self.media_files:
+            self.media_files.append((rel, dest / name))
+        self.templates[f"o{i}"] = (
+            f'<figure class="rm-fig"><div class="frame"><img src="{esc(rel)}" alt="{esc(shows)}"></div><figcaption>'
+            f'<span class="rm-prov">Screenshot taken 24.10.2026</span><span>{esc(shows)}{self.tref(key)}</span></figcaption></figure>')
+        return (f'<button class="shot" type="button" data-fig="fig-o{i}" aria-label="{esc(shows)}">'
+                f'<img src="{esc(rel)}" alt=""><span class="cap">{esc(label)}</span></button>')
 
     def gag_video(self):
         """The 25-second clip from Gagaring's post, playable. Preview only: the file is not catalogued, and a public
