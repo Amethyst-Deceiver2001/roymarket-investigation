@@ -22,6 +22,9 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+import deliveries as dl  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 REG = ROOT / "data" / "registry"
 OUT = ROOT / "exhibits" / "video"
@@ -106,7 +109,7 @@ def canvas() -> tuple[Image.Image, ImageDraw.ImageDraw]:
 def load() -> dict:
     ents = {e["slug"]: e for e in json.loads((REG / "entities.json").read_text(encoding="utf-8"))}
     f = ents[DONOR]
-    prods = json.loads((REG / "products.json").read_text(encoding="utf-8"))
+    prods = dl.load_products(REG / "products.json")
     media = {m["id"]: m for m in json.loads((REG / "media.json").read_text(encoding="utf-8"))}
     ev: dict = {}
     for p in prods:

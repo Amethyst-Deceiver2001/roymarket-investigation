@@ -98,7 +98,7 @@ def tracked_changes():
 
 # Files the round itself regenerates or appends to. A manual pull or ingest leaves these modified, and the
 # round commits them with its own outputs, so they must not block it; a hand-held file (corrections_*,
-# products.json, handovers.json, programs.json, ...) or any code file still does.
+# products.json, deliveries.json, programs.json, ...) or any code file still does.
 GENERATED = {"data/registry/" + n for n in (
     "_pull_misses.json", "source_archives.json", "_source_ids.json", "_source_content_cache.json",
     "_bfo_financials.json", "_scaffold_leads.json", "entities.json", "people.json", "sources.json",

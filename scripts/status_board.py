@@ -52,6 +52,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from graph_contract import has_designation  # noqa: E402
 from display_helpers import sanction_regimes  # noqa: E402
+import deliveries as dl  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 REG = ROOT / "data" / "registry"
@@ -198,7 +199,7 @@ class Board:
         self.today = today
         self.entities = [e for e in load("entities.json") if not e.get("_merged_into")]
         self.people = [p for p in load("people.json") if not p.get("_merged_into")]
-        self.products = load("products.json") if (REG / "products.json").exists() else []
+        self.products = dl.load_products() if (REG / "products.json").exists() else []
         self.sources = load("sources.json")
         self.src = {s["id"]: s for s in self.sources}
         self.global_oq = load("open_questions.json")
@@ -595,12 +596,14 @@ class Board:
         try:
             import unit_lookup
             units = unit_lookup.load_units()
-            hand = load("handovers.json") if (REG / "handovers.json").exists() else []
+            hand = dl.load()
             tally = unit_lookup.recipient_tally(units, hand)
             dups = unit_lookup.find_duplicates(units)
             bad = tally["ambiguous"] + len(dups)
             add("units", "Handover recipients resolved to a unit record",
-                f"{tally['resolved']} of {sum(tally.values())}; {tally['ambiguous']} ambiguous, {tally['unrecorded']} unrecorded; {len(dups)} possible duplicate record(s)",
+                f"{tally['resolved']} of {tally['resolved'] + tally['ambiguous'] + tally['unrecorded']} naming a unit; "
+                f"{tally['ambiguous']} ambiguous, {tally['unrecorded']} unrecorded; {tally['no_unit']} name no unit "
+                f"(a direction or a group); {len(dups)} possible duplicate record(s)",
                 "act" if bad else "watch" if tally["unrecorded"] else "ok",
                 "scripts/unit_lookup.py --check lists them; a bare number never resolves to a unit.")
         except (OSError, ValueError, KeyError):

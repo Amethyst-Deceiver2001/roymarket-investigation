@@ -9,6 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
+import deliveries as dl  # noqa: E402
 import product_chain as P  # noqa: E402
 
 pr = {"slug": "x", "name_ru": "«Х»", "category": "detector", "maker": "m",
@@ -28,7 +29,7 @@ nver = dict(dpr, deliveries=[dict(dpr["deliveries"][0], version=None, co_donors=
 assert "version not stated x3 A+E" in "\n".join(P.chain_lines(nver, {})) and "[s2,s3]" in "\n".join(P.chain_lines(nver, {}))
 
 # the real record: every listing without a source is one of the two WB brand-store listings
-real = json.loads((ROOT / "data/registry/products.json").read_text(encoding="utf-8"))
+real = dl.load_products()   # products.json with deliveries built from deliveries.json
 bulat = next(p for p in real if p["slug"] == "bulat")
 assert [l["id"] for l in bulat["listings"] if l["source_id"] is None] == ["bulat-wb-brand-v3", "bulat-wb-brand-v4"]
 nasha = [d for d in bulat["deliveries"] if d["donor"] == "fond-nasha-pravda"]

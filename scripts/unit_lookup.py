@@ -80,12 +80,17 @@ def find_duplicates(units: list[dict]) -> list[tuple[str, str]]:
 
 
 def recipient_tally(units: list[dict], handovers: list[dict]) -> dict:
-    """How the handovers' free-text recipients resolve: resolved, ambiguous, unrecorded counts."""
-    tally = {"resolved": 0, "ambiguous": 0, "unrecorded": 0}
+    """How the handover events' free-text recipients resolve: resolved, ambiguous, unrecorded counts."""
+    tally = {"resolved": 0, "ambiguous": 0, "unrecorded": 0, "no_unit": 0}
     for h in handovers:
-        if h.get("recipient_raw"):
-            tally[lookup(h["recipient_raw"], units)["state"]] += 1
+        if h.get("recipient"):
+            tally[_bucket(lookup(h["recipient"], units))] += 1
     return tally
+
+
+def _bucket(r: dict) -> str:
+    """A recipient that names no unit at all (a direction, a group of soldiers) is not an unrecorded unit."""
+    return "no_unit" if r["state"] == "unrecorded" and r.get("why") == "no unit number in the text" else r["state"]
 
 
 def check(units: list[dict], strict: bool = False) -> int:
@@ -114,16 +119,16 @@ def check(units: list[dict], strict: bool = False) -> int:
                 problems += 1
     if not groups:
         print("  none")
-    h_path = REG / "handovers.json"
+    h_path = REG / "deliveries.json"
     if h_path.exists():
-        tally = {"resolved": 0, "ambiguous": 0, "unrecorded": 0}
+        tally = {"resolved": 0, "ambiguous": 0, "unrecorded": 0, "no_unit": 0}
         print("Handover recipients:")
         for h in json.loads(h_path.read_text(encoding="utf-8")):
-            raw = h.get("recipient_raw")
+            raw = h.get("recipient")
             if not raw:
                 continue
             r = lookup(raw, units)
-            tally[r["state"]] += 1
+            tally[_bucket(r)] += 1
             slug = h.get("recipient_unit_slug")
             if slug and slug not in by_slug:
                 print(f"  {h['id']}: recipient_unit_slug {slug!r} is not a unit")

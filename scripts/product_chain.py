@@ -9,6 +9,9 @@ import json
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import deliveries as dl  # noqa: E402
+
 REG = Path(__file__).resolve().parent.parent / "data" / "registry"
 
 
@@ -38,7 +41,7 @@ def chain_lines(pr: dict, names: dict) -> list:
 
 
 def main(argv):
-    products = json.loads((REG / "products.json").read_text(encoding="utf-8"))
+    products = dl.load_products(REG / "products.json")
     if not argv:
         print("\n".join(f"{p['slug']}  {p['name_ru']}  (maker {p['maker']})" for p in products))
         return 0

@@ -725,23 +725,6 @@ def main() -> int:
                 warnings.append(f"{w} has no source_id: a placeholder awaiting an archived capture, not evidence")
             elif sid not in source_ids:
                 errors.append(f"{w}.source_id {sid!r} is not a known source")
-        for j, d in enumerate(pr.get("deliveries") or []):
-            w = f"{where}.deliveries[{j}]"
-            missing = [k for k in DELIVERY_KEYS if not d.get(k)]
-            if missing:
-                errors.append(f"{w} is missing {missing}")
-                continue
-            if not date_re.fullmatch(str(d["date"])) or "version" not in d or (d["version"] is not None and d["version"] not in versions):
-                errors.append(f"{w}: date must be YYYY-MM-DD and version present (null, or one of the versions)")
-            if d["donor"] not in live_slugs:
-                errors.append(f"{w}.donor {d['donor']!r} is not a live entity (volunteers and individuals are not recorded as donors)")
-            for sid2 in d.get("other_source_ids") or []:
-                if sid2 not in source_ids:
-                    errors.append(f"{w}.other_source_ids has unknown source {sid2!r}")
-            if d["asserted_by"] not in ASSERTED_BY or d["credibility"] not in CREDIBILITY:
-                errors.append(f"{w}: asserted_by / credibility outside the vocabulary")
-            if d["source_id"] not in source_ids:
-                errors.append(f"{w}.source_id must be a known source")
         for j, c_ in enumerate(pr.get("claims") or []):
             if not c_.get("text_ru") or c_.get("source_id") not in source_ids or not date_re.fullmatch(str(c_.get("as_of") or "")):
                 errors.append(f"{where}.claims[{j}] needs text_ru, a known source_id and an as_of date")
@@ -804,11 +787,6 @@ def main() -> int:
     for pr in products:
         version_slugs |= {v.get("slug") for v in pr.get("versions") or []}
         all_listing_ids |= {l_.get("id") for l_ in pr.get("listings") or []}
-        for j, d in enumerate(pr.get("deliveries") or []):
-            did = d.get("id")
-            if did is not None and (did in delivery_ids or not re.fullmatch(r"[a-z0-9-]+-d\d{2,3}", str(did))):
-                errors.append(f"products[{pr.get('slug')}].deliveries[{j}].id {did!r} must be unique, like 'bulat-d01'")
-            delivery_ids.add(did)
     media_path = REG / "media.json"
     media = json.loads(media_path.read_text(encoding="utf-8")) if media_path.exists() else []
     units_path = REG / "military_units.json"
@@ -819,6 +797,61 @@ def main() -> int:
         for old_slug in u.get("legacy_slugs") or []:
             if old_slug in unit_slugs:
                 errors.append(f"military_units[{u.get('slug')}].legacy_slugs {old_slug!r} is also a live unit slug")
+    # --- deliveries (data/registry/deliveries.json, merged from handovers.json and products deliveries[] 24.10.2026) ---
+    # One event per post per recipient. `items[].product` names a product record (null for "equipment", the post
+    # says no more); a product event needs a version key and a catalogued source. A handover post that is not
+    # catalogued yet has source_id null: counted in one warning, not a defect.
+    deliveries_path = REG / "deliveries.json"
+    events = json.loads(deliveries_path.read_text(encoding="utf-8")) if deliveries_path.exists() else []
+    prod_versions = {pr.get("slug"): {v.get("slug") for v in pr.get("versions") or []} for pr in products}
+    EVENT_KEYS = ("date", "donor", "carrier", "recipient", "source_channel", "post_id", "asserted_by", "credibility")
+    seen_posts, uncatalogued = set(), 0
+    for j, d in enumerate(events):
+        did = d.get("id")
+        w = f"deliveries[{did or j}]"
+        if not re.fullmatch(r"(?:[a-z0-9-]+-d\d{2,3}|h\d{4})", str(did)) or did in delivery_ids:
+            errors.append(f"{w}: id must be unique, like 'bulat-d01' or 'h0001'")
+        delivery_ids.add(did)
+        missing = [k for k in EVENT_KEYS if not d.get(k)]
+        if missing:
+            errors.append(f"{w} is missing {missing}")
+            continue
+        if not date_re.fullmatch(str(d["date"])):
+            errors.append(f"{w}.date must be YYYY-MM-DD")
+        if d["donor"] not in live_slugs:
+            errors.append(f"{w}.donor {d['donor']!r} is not a live entity (volunteers and individuals are not recorded as donors)")
+        for pp in d.get("donor_people") or []:
+            if pp not in people_slugs:
+                warnings.append(f"{w}.donor_people {pp!r} is not a person record")
+        items = d.get("items")
+        if not isinstance(items, list) or not items:
+            errors.append(f"{w}.items must be a list with one entry (product null when the post names none)")
+            items = []
+        for it in items:
+            slug_ = it.get("product")
+            if slug_ is not None and slug_ not in prod_versions:
+                errors.append(f"{w}.items product {slug_!r} is not in products.json")
+            elif slug_ is not None and ("version" not in it or (it["version"] is not None and it["version"] not in prod_versions[slug_])):
+                errors.append(f"{w}.items version must be present (null, or one of {slug_}'s versions)")
+        if d["asserted_by"] not in ASSERTED_BY or d["credibility"] not in CREDIBILITY:
+            errors.append(f"{w}: asserted_by / credibility outside the vocabulary")
+        if d.get("recipient_unit_slug") is not None and d["recipient_unit_slug"] not in unit_slugs:
+            errors.append(f"{w}.recipient_unit_slug {d['recipient_unit_slug']!r} is not a unit record")
+        for sid2 in [d.get("source_id")] + list(d.get("other_source_ids") or []):
+            if sid2 is not None and sid2 not in source_ids:
+                errors.append(f"{w} cites unknown source {sid2!r}")
+        if d.get("source_id") is None:
+            if any(it.get("product") for it in items):
+                errors.append(f"{w} names a product and needs a catalogued source_id")
+            uncatalogued += 1
+        # one post can report two products to one recipient (posts 382, 397, 448): two rows, told apart by their items
+        key = (str(d["source_channel"]).lstrip("@").lower(), d["post_id"], d["recipient"],
+               json.dumps(items, sort_keys=True, ensure_ascii=False))
+        if key in seen_posts:
+            errors.append(f"{w}: the same post and recipient is recorded twice")
+        seen_posts.add(key)
+    if uncatalogued:
+        warnings.append(f"deliveries: {uncatalogued} event(s) rest on a post with no source record yet (source_id null)")
     about_ids = {"entity": live_slugs, "person": people_slugs, "product": seen_products, "version": version_slugs,
                  "delivery": delivery_ids - {None}, "listing": all_listing_ids - {None}, "unit": unit_slugs,
                  "program": {r.get("slug") for r in programs}}

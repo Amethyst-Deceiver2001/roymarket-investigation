@@ -19,6 +19,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 sys.path.insert(0, str(REPO / "exhibits"))
 from graph_contract import source_grade  # noqa: E402
+import deliveries as dl  # noqa: E402
 from display_helpers import (NAME_JS, design_head, display_name, figure_html, latin_display, latin_text, load_media, media_about, latinize_gloss, name_html, popup_originals, quote_html, sanction_regimes,  # noqa: E402
                              person_names, publish_copy, reader_grade, ru_date, translation)
 from build_chain_view import ROLE_EN, describe_source, esc, load, money  # noqa: E402
@@ -118,7 +119,7 @@ class Page:
             sys.exit(f"no entity {slug!r} in entities.json")
         self.e = self.ents[slug]
         self.src = {s["id"]: s for s in load("sources.json")}
-        self.products = load("products.json")
+        self.products = dl.load_products()
         self.programs = {p["slug"]: p for p in load("programs.json")}
         self.notes = []
         self.limits = []

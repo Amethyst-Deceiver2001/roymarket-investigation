@@ -36,6 +36,7 @@ SRC_DIR = REPO / "data" / "sources"
 PAGES = "https://amethyst-deceiver2001.github.io/roymarket-investigation/"
 sys.path.insert(0, str(REPO / "scripts"))
 from graph_contract import source_grade  # noqa: E402
+import deliveries as dl  # noqa: E402
 from source_citation import cite, reader_terms  # noqa: E402
 from display_helpers import (NAME_JS, design_head, sanction_regimes, display_name, figure_html, kind_icon, latin_display, latin_text,  # noqa: E402
                              latinize_gloss, load_media, media_about, name_html, orig_line, person_names, popup_originals, publish_copy, quote_html, translation,
@@ -134,7 +135,7 @@ class Chain:
         self.untranslated = []   # state bodies with no English name yet (name_translations.json)
         self.programs = {p["slug"]: p for p in load("programs.json")}
         self.src = {s["id"]: s for s in load("sources.json")}
-        prods = {p["slug"]: p for p in load("products.json")}
+        prods = {p["slug"]: p for p in dl.load_products()}
         if product_slug not in prods:
             sys.exit(f"no product {product_slug!r} in products.json")
         self.p = prods[product_slug]

@@ -37,6 +37,7 @@ ROOT = Path(__file__).resolve().parent.parent
 REG = ROOT / "data" / "registry"
 sys.path.insert(0, str(ROOT / "scripts"))
 from display_helpers import display_name, reader_grade, ru_date  # noqa: E402
+import deliveries as dl  # noqa: E402
 
 OUT = ROOT / "notes" / "packets"
 GAP_CSV = ROOT / "exhibits" / "sanctions_gap.csv"
@@ -144,7 +145,7 @@ DRAFT_BANNER = ("Before this leaves the project, a person reads every exhibit be
 
 def load_ctx() -> dict:
     graph = load("relationship_graph.json")
-    products = load("products.json")
+    products = dl.load_products()
     return {"entities": {e["slug"]: e for e in load("entities.json")},
             "people": {p["slug"]: p for p in load("people.json")},
             "sources": {s["id"]: s for s in load("sources.json")},

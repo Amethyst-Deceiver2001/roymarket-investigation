@@ -24,6 +24,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 from display_helpers import (NAME_JS, caption_html, design_head, latinize_gloss, name_html, orig_line,
                              person_names, quote_html, ru_date)  # noqa: E402
+import deliveries as dl  # noqa: E402
 
 REG = REPO / "data" / "registry"
 SLUG = "fond-nasha-pravda"
@@ -151,7 +152,7 @@ class Story:
         donors = num(next(c for k, c in claims.items() if k.startswith("Целевые средства от юр"))["text_ru"])
         fy = {f["year"]: f for f in self.ent["financials"]}["2024"]
         used, got = fy["funds_used"] / 1000, fy["funds_received"] / 1000
-        prods = load("products.json")
+        prods = dl.load_products()
         events = {d["post_id"]: d["date"] for p in prods for d in p["deliveries"] if d["donor"] == SLUG}
         dates = sorted(events.values())
         return {"aid_bn": aid / 1e6, "aid_share": 100 * aid / used, "donor_share": 100 * donors / got,
@@ -217,7 +218,7 @@ GALLERY_RECIPIENT = {"m0068": "Krasnoarmeysk direction", "m0070": "“Participan
 
 
 def handover_events():
-    prods = load("products.json")
+    prods = dl.load_products()
     ev: dict = {}
     for p in prods:
         for d in p["deliveries"]:
