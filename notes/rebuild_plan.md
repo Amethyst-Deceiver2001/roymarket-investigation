@@ -269,7 +269,7 @@ Decisions (user, 2026-10-02):
 - **Dossier draft:** unregistered facts in `notes/dossier_draft.html` are a
   migration backlog, never a page.
 
-### D. Screening and live jobs: who runs what (rewritten 2026-10-02; scheduling 03.10.2026, see CLAUDE.md "Coordination")
+### D. Screening and live jobs: who runs what (rewritten 2026-10-02; scheduling 03.10.2026, retired 24.10.2026; history in `notes/reference/jobs_and_screening.md`)
 
 Mechanical upkeep now goes through the tools merged on 02.10.2026 (PRs #3–#6);
 rules in CLAUDE.md. A tool's output is a work item or a document to read, never
@@ -278,8 +278,8 @@ a registry fact.
 | Job | Tool | Where and who |
 |---|---|---|
 | What a record lacks or has let go stale | `status_board.py` (+ `exhibits/build_status_board.py`, private artifact AU3y9UL5M4i48UJ4BzrXSj) | anywhere, local |
-| The whole daily round in one command | `daily_mac.py --publish` via launchd (`ops/launchd/`; needs Full Disk Access for Python, the repo is in ~/Downloads) | the user's Mac, launchd at 09:15 local (03.10.2026); commits its outputs and `data/watch/daily/<date>.md` |
-| Missing/stale ЕГРЮЛ, ЕГРИП, БФО; missing/stale OpenSanctions, ГУР, Aleph screens | `status_board.py --pull-queue` (8 + 8 a day, top tiers first; re-screens 4 OpenSanctions + 8 ГУР + 8 Aleph a day; ingest steps incl. the graph rebuild printed after) | the user's Mac; the queue is the user's standing go-ahead, run as printed |
+| The whole daily round in one command | `daily_mac.py --publish` | retired as a scheduled job 24.10.2026 (user): no launch agent is installed and the last report is 06.10; run by hand on request (the plist stays in `ops/launchd/`) |
+| Missing/stale ЕГРЮЛ, ЕГРИП, БФО; missing/stale OpenSanctions, ГУР, Aleph screens | `status_board.py --pull-queue` (8 + 8 a day, top tiers first; re-screens 4 OpenSanctions + 8 ГУР + 8 Aleph a day; ingest steps incl. the graph rebuild printed after) | by hand on request since 24.10.2026; the capped queue is still the user's standing go-ahead, run as printed |
 | First reading of what arrived | `first_reading.py export --local-dir data/sources/_inbox` (Mac only, since 05.10.2026 — `--push`/pull-inbox and the cloud routine that read it are retired, issue #30), then `read` | worksheet for a human; never merged, never applied |
 | Sanctions lists by ИНН/ОГРН | `sanctions_watch.py` | retired as a scheduled job 22.10.2026 (Actions minutes unavailable; user); run by hand where the hosts are reachable; `watch/sanctions` holds the 05.10.2026 snapshot |
 | Public copies of cited pages | `archive_sources.py run` | abandoned 24.10.2026 (user): it ran on GitHub Actions, which is no longer used; run by hand when a capture is wanted |
@@ -343,7 +343,7 @@ Waiting on the user:
 88 media records, 42 deliveries, 44 open questions; graph schema v13, 1,266 nodes
 (75 marked sanctioned: a named regime is required, fixed 21.10), 2,187 edges,
 114 unresolved. `check_registry.py --no-local-files`: 0 errors, 26 warnings; all
-test files pass. Last Mac round report 06.10; Actions has run nothing since 10.10
+test files pass. Last Mac round report 06.10 (the daily round was retired as a scheduled job on 24.10.2026, user); Actions has run nothing since 10.10
 (see `repo_review_20261021.md`). Story 1 is drafted in full and waits on its
 second-person check and the personal-data review.
 

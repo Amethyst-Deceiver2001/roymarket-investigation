@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!-- Daily round at 09:15 local time (CLAUDE.md "Coordination"). A run missed while the Mac sleeps starts on wake.
+<!-- Retired 24.10.2026 (user): not installed; the round runs by hand. Kept for reference. Daily round at 09:15 local time. A run missed while the Mac sleeps starts on wake.
      The repo is in ~/Downloads, which macOS protects: grant Full Disk Access to the Python binary below
      (System Settings > Privacy & Security > Full Disk Access > + > Cmd-Shift-G, paste the path).
      Install: cp to ~/Library/LaunchAgents/ && launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.roymarket.daily-round.plist
