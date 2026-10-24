@@ -1,0 +1,61 @@
+# UN Commission of Inquiry on Ukraine: the two drone reports, read in full, against our scrape (24.10.2026)
+
+Read in full (English, UN original; the user supplied the PDFs, now in `data/sources/` as `WEBCAPTURE_20250528_un-coi-ukraine-a-hrc-59-crp2-they-are-hunting-us.pdf` and `WEBCAPTURE_20251021_un-coi-ukraine-a-80-497-report-to-general-assembly.pdf`, not yet catalogued):
+- **A/HRC/59/CRP.2**, 28.05.2025, «"They are hunting us": systematic drone attacks targeting civilians in Kherson» (16 pp.). Cited below as CRP.2.
+- **A/80/497**, 21.10.2025, report to the General Assembly (19 pp.; its Part III.A is the drone section, Part III.B is deportations from Zaporizhzhia, not our subject). Cited as A/80/497.
+Both are the Commission's own findings, in the official UN voice. Closes to-close item 2 of `notes/kherson_human_safari_20261024.md`. Companion to `notes/osvedomitell_alex_scan_20261024.md`.
+
+## 1. What the Commission concludes
+- **CRP.2:** Russian armed forces committed the **crime against humanity of murder** and the **war crimes** of intentionally attacking civilians and of outrages upon personal dignity (posting videos of civilians killed and injured); acts or threats of violence whose primary purpose was spreading terror; and possibly forcible transfer of population (CRP.2 paras 54–57). Since July 2024, along 100+ km of the right bank; Kherson city plus 16 localities; almost 150 killed (Prosecutor General's Office, to 10.03.2025: 146 killed, 1,405 injured, Kherson and Beryslav districts, n.12). 91 interviews; 300+ videos examined, 124 geolocated; 600+ Telegram text posts.
+- **A/80/497:** extends it to 300+ km and three oblasts; adds forcible transfer as a crime against humanity (paras 51–54, 81). 226 interviews; 500+ videos, 247 geolocated. Ambulances and fire brigades «even hit … regardless of their special protection» (summary, para 29); «The head of one ambulance service in Kherson Oblast explained that most of its ambulances had been hit by drones» (para 31).
+- **Russia:** does not recognise the Commission; 35 written requests unanswered (A/80/497 para 4). Russian allegations of Ukrainian drone attacks on civilians could not be corroborated either way (CRP.2 para 4; A/80/497 para 13, 46).
+
+## 2. Units named: fewer than the press said
+- **CRP.2 para 49, 50:** the Telegram channels «have mentioned drone units of the **18th Combined Arms Army** and the "Dnepr" Group of Forces»; the Commission «confirmed that these military entities have been operating in Kherson Province and … identified some of their commanders, as well as some drone units involved» (none named in the paper).
+- **A/80/497 para 40:** operators and units «affiliated with various army units, all of which are part of the "Dnepr" Group of Forces commanded by Colonel-General Mikhail Teplinsky, who reports directly to the Chief of the General Staff … Gerasimov»; para 42: Volodymyr Saldo's support to drone units; para 53/82: «various units acting under a unified command».
+- **No paper names the 205th brigade, the 404th regiment, BARS-33, or the 10th brigade.** The Commission found no number-level attribution in public text. **So the 205th remains CIR/DW's pointer plus our channel evidence; the UN's named formations are the 18th Army and the «Днепр» group.** Our scan shows the channel itself ties its strike posts to «18 ОА ГВ "Днепр"» repeatedly (34459, 35564, 36761, 27045) and to the 205th, 49 ОА under the same group (27702).
+
+## 3. The channel in the reports is @osvedomitell_alex, in the UN's own screenshots
+- **CRP.2 Figure 6 and para 42:** a screenshot shows channel «От Мариуполя до Карпат», post **t.me/osvedomitell_alex/20986**, 22.09.2024, 20.3K views: «Херсон. Красная зона. Доброе утро друзья! Наши охотники работают с самого утра.» (UN translation: «Our hunters are working since early morning»), video of a bus attack.
+- **Figure 7 and para 47:** t.me/osvedomitell_alex/21308, 03.10.2024: «Пока листва не опала валите с города смертники. Спасайтесь. Ну или в крайнем случае переселяйтесь за жд в северный район.»
+- **Figure 5 (para 40):** a video still of an ambulance attack of 28.08.2024, watermark partly visible («…MITELL_ALEX»).
+- **Para 17 and 50:** the channel posting «virtually every day since the end of August 2024», «over 50,000 followers» (para 17) / «50,000 subscribers» (para 50), «officially registered» with Roskomnadzor. Our capture of the channel page shows the RKN personal-page listing and in-scrape posts at 5–25K views. **The UN does not name the channel in the text; the screenshots do.** Treat "the most active channel in the UN report" as our inference from the screenshots plus the RKN and posting-since-August-2024 match, not as a UN statement.
+- **None of these posts is in our DB** (scrape starts 24.10.2024, msg_id 21808; 20986 and 21308 are earlier).
+
+## 4. UN-cited texts that we can match in the scrape (same channel, Russian original)
+| UN quotes (translated) | Our post (original) |
+|---|---|
+| CRP.2 para 16 and A/80/497 para 16: «Kherson. Red zone. Friends, great news! … The city will be dismantled – brick by brick – thanks to the successful 404 command leadership» (May 2025). Footnote: "404" is a derogatory name for Ukraine. | **25962, 03.05.2025:** «Город разберут по кирпичикам, а все благодаря успешному руководству 404. Ждите прямых включений.» |
+| A/80/497 para 32: «We warn all special services involved in erasing the consequences [of attacks]. You will become a priority target. Guaranteed.» | **21857 (27.10.2024), 21880, 21899, 21914, 21972, 22197 (11.11.2024):** «Мы предупреждаем спец. службы, которые будут задействованы в ликвидации последствий. Вы гарантированно будете являться приоритетной целью. Гарантированно» (repeated; 187 posts use «приоритетная цель»). |
+| CRP.2 para 27, 31 and A/80/497 para 34: «Any transport in the red zone is a legitimate target»; «All objects of critical infrastructure are a legitimate target». | The standing text «Любое передвижение автотранспорта будет считаться законной целью. Все объекты критической инфраструктуры являются законной целью. Гражданским быть предельно внимательными и осторожными. Ограничьте своё передвижение, покиньте по возможности данную зону.» (23051, 27045, 27702, many more; CRP.2 para 47 quotes its last sentence). |
+| CRP.2 para 20: «Everything that moves will be destroyed.» (01.12.2024) | **22762, 01.12.2024:** «Ещё раз. Все что движется будет уничтожаться.» |
+| CRP.2 para 39: Nov 2024, two ambulances at the Oncology Hospital destroyed; channels titled posts «Kherson. Red Zone. Oncology.» | **22700, 29.11.2024 (text only):** «Херсон. Красная зона. Онкология. … Вместо использования карет красного креста для снабжения ВСУ …». Earlier posts call for striking the oncology building: **21835 (26.10.2024):** «использует верхние этажи онкологической больницы. Решение по огневому подавлению или уничтожению нужно принимать ещё вчера»; **21863 (27.10.2024):** «Очень тяжелая цель, но данный квадрат нам нужен и решение нужно принимать ещё вчера.» Whether 22700 is the post the Commission saw is not established; the burnt-ambulance video is not in our DB. |
+| CRP.2 para 42, "hunting": «The hunt is in full swing», «Our hunters are working since early morning». | «охотники/охотников» in 36 posts from 28.10.2024 (21881, 21910, 21931, 22519, 22541, 22696 «операторы ведут охоту за террористами ВСУ»). |
+| A/80/497 para 36: «Minus one more wind turbine. The guys worked well. Work, brothers.» (June 2025) | Not found with a wind-turbine search (0 hits, ветряк and ветрогенер); the post may be in another channel. **Not matched.** |
+| A/80/497 para 24: «We burned another house» (Dec 2024) | Not found («сожгли ещё» 0 hits). **Not matched.** |
+
+New in our scrape, same line, **not quoted by the UN** (channel's own words):
+- **22412, 19.11.2024:** «Нет в зоне гражданских специалистов, нет. Все являются целью в зависимости от рода деятельности, одни первоочередными, другие вторичными.»
+- **26322, 18.05.2025:** «В прибрежной и центральной красной зоне принято решение уничтожать все транспортные средства вне зависимости от цели, как и дома, что подпадают под огневые задачи при разведке.»
+- **28640, 29.08.2025:** «Все что движется в Херсоне, от машины до велосипеда все валите. Нет там гражданских, нет.»
+- **34179, 02.05.2026:** «Уничтожим всё, что движется на правом берегу. … Никакой пощады.» (context partly unread; speaker may be quoted).
+- **35907, 12.07.2026:** «Могут быть одеты по гражданке. Валите все, что движется.»
+
+## 5. «Safari» is in the UN paper, from a hospital doctor
+CRP.2 para 42: «A senior practitioner of a Kherson city hospital stated, "Russian Federation soldiers behave like this is a safari […]; they are simply chasing and hunting civilians who are on their way to work or walking their dogs. They drop explosives from drones like it is a video game. […]"» Also: the channel «in its general channel description, even states "We instil fear in the Kherson direction" («Наводим страх на Херсонском направлении»)». **The word is therefore Ukrainian civilian testimony in an official UN text; the Russian side's use of «сафари» for hunting enemy drones is separate (see the scan note).** Our DB has 0 hits for «наводим страх», because the channel description is not in the post text.
+
+## 6. VT-40 and the manufacturers
+- **CRP.2 para 53:** «some of the same Telegram channels reported that drone operators have been using **VT-40** drones produced by the Russian Federation». **A/80/497 para 45:** «Suicide drones … more commonly reported throughout 2025 … notably the **VT-40** quadcopter drone and the fixed-wing **Molniya** drone, both of which are Russian-produced.» Both papers name **DJI** (Mavic 3 series) as the most visible; the Commission «addressed questions … to the company».
+- The Commission does not name Sudoplatov or any VT-40 maker. Our link stands as before: HRW names Sudoplatov for one VT-40; our channel scan shows «ВТ-40 проекта "Судный День"» used by 205th crews (24195, 24206, 22582); Архангел's variant list includes «судоплатовских комплектующих (ВТ 40)». The 205th itself is not named by the UN.
+
+## 7. What changes in our position
+- **Stronger:** the "any movement is a target" text is not the single-sentence of one repost: the UN quotes the same standing text (CRP.2 para 20, 27, 31, 47; A/80/497 para 34), **the Commission treats such text as evidence of intent** (CRP.2 para 20, 54–56), and **recommends that «all those who broadcasted videos of attacks, photographs, and threatening text» be held accountable** (CRP.2 para 59(e)). The channel's posts of 2024–2026 are the same series.
+- **Unchanged:** neither paper links Архангел, ЦБСТ, «Наша Правда» or РОЙ.МАРКЕТ to any attack, nor names the 205th. The chain "Архангел recruits for the 205th; the 205th is under the 49th Army in the «Днепр» group; the group is the one the UN names" is ours, from different sources. **The group-level overlap is now UN-grounded: A/80/497 para 40 puts all units named as part of «Днепр» under Teplinsky, and our fund's delivery post (h0018) and ЦБСТ's Jan 2025 posts (369, 382) address «Днепр» recipients.** That is a formation-level link and nothing more.
+- **Wording rule for the story:** attribute to «the UN Independent International Commission of Inquiry on Ukraine (A/HRC/59/CRP.2, A/80/497)». Say what it found; do not extend "units under centralised command" to any unit it does not name.
+
+## 8. To do
+1. **Scan back to the UN's posts** (user-run): `cd ~/Projects/roymarket-investigation && scripts/run scripts/tg_scan.py --full --days 900 --only osvedomitell_alex` (re-run is safe: `tg/db.py` upserts on conflict). Brings in 20986, 21308, the 28.08.2024 ambulance post and the August to October 2024 "hunters" series; then match the UN's dated quotes (30.07.2024 «any movement is a target», 06.10.2024 map post, 15.09.2024 «Target hit») to the channel.
+2. **DW documentary** still unread (who the 205th is).
+3. Catalogue the two UN PDFs on the archive Mac and timestamp.
+4. Registry: a `sources` record for each paper; an open question on the military-units side only once the 18th Army is a record (unit-naming rules; `scripts/unit_lookup.py`).
+5. The SBU's regiment (404th) and CIR's three units are still the only unit-number attributions; the UN adds none.
