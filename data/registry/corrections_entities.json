@@ -11001,6 +11001,54 @@
         "outcome": "closed",
         "note": "ГУР screen of 06.10.2026: 5 profiles returned, none ID-confirmed (inn_match and ogrn_match false on all five). The captions are «NIKIFOROVA Victoria Vitalievna», «SERDYUKOVA Viktoria Alexandrovna», «DAINEKO Victoria Petrovna», «SAVRUK Viktoriya Orestovna» and «ABRAMCHENKO Viktoriya Valerievna», none printing an ИНН: each shares only the first name with this sole trader. Namesake noise, not promoted to sanctions[]. Reviewed from the screen's stored match record (captions and the identifiers each profile prints), as for ИП Коровкин on 06.10.2026; no profile page was re-opened. OpenSanctions not yet screened for this record; Aleph hits, if any, are a separate review."
       }
+    },
+    {
+      "slug": "tekhnofront-rusvesny",
+      "name_ru": "Технофронт «РусВесны» (юридическое лицо не установлено)",
+      "name_latin": "Tekhnofront RusVesny (legal entity not established)",
+      "legal_form": null,
+      "brand_ru": "Технофронт «РусВесны»",
+      "brand_latin": "Tekhnofront RusVesny",
+      "inn": null,
+      "ogrn": null,
+      "tier": "adjacent",
+      "legal_entity_status": "unresolved",
+      "ecosystem_roles": [
+        "brand"
+      ],
+      "tier_basis": "A volunteer group that describes itself (channel bio, @tehnofrontrv, read from the local scrape 24.10.2026) as «волонтерское объединение… изготавливающее бойцам расходники для боеприпасов, системы сброса, ДТК и иные изделия». Its «Отчёты с фронта» posts report handing equipment to units, among it a «Булат» detector (post 5211, 15.05.2026) and 3D-printed drone mounts «от Цеха 63» (post 5753). Recorded as a BRAND, not a legal entity: no document names the entity behind it, and none is guessed. Added at the user's direction (24.10.2026) so the Булат handover can name its donor. No ЦБСТ or Наша Правда tie found: 0 hits for «Технофронт» in 1 238 @ANO_CBST posts and 0 in 168 @nashapravdafond posts, and 0 for «tehnofrontrv» in @ANO_CBST (matcher control passing, 24.10.2026). Absence of a found tie is not a document that none exists.",
+      "cbst_tie": {
+        "claim": "None found in the searched material.",
+        "confidence": "none",
+        "evidence": "tg_post_coverage.py, terms «Технофронт» and «tehnofrontrv» over @ANO_CBST (1 238 posts) and «Технофронт» over @nashapravdafond (168 posts): 0 hits each, 24.10.2026. Absence of a tie is not shown.",
+        "source_id": null
+      },
+      "wb_overlap": "not_checked",
+      "products": [],
+      "web": {
+        "sites": [],
+        "telegram": [
+          {
+            "handle": "@tehnofrontrv",
+            "source_id": null,
+            "note": "«Технофронт «РусВесны»», channel id 1812421650; 1 782 posts in the local scrape (24.10.2025 to 23.10.2026, msg 4129 onward); the bio is quoted in tier_basis. Not catalogued, so no source id."
+          }
+        ],
+        "vk": [],
+        "youtube": [],
+        "marketplace_listings": [],
+        "other": []
+      },
+      "open_questions": [
+        {
+          "source_id": null,
+          "text": "Which legal entity or person stands behind the group is not established; the channel bio names a founder by a first name only, and none is recorded here. The «Булат» in post 5211 is reported as bought or sent with money from the channel's readers and an unnamed Far East construction company; where the detector was bought is not stated."
+        }
+      ],
+      "_verified": false,
+      "_origin": "corrections:add_entities",
+      "confidence": null,
+      "sources": []
     }
   ],
   "entities": {
