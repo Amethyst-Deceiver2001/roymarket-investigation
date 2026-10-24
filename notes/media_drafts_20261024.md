@@ -24,3 +24,36 @@ Full-size looks at the delivery pictures of 24.10.2026. Records for posts 656/65
 ```
 
 Also looked at and not recorded: `ANO_CBST/2428` (a news item on a drone with a microphone, not a delivery: event h0039 removed 24.10.2026); `nashapravdafond/580` (roof-mounted equipment on a van under a camouflage net; the post is a thank-you for an earlier car and has no event); the video posts (only thumbnails held locally, so no frame can be recorded without the archived video).
+
+## Added after the second sheet set (24.10.2026)
+
+Two full-size looks at the fund's pictures of the LNR anti-aircraft delivery (h0038); the post is not catalogued on this machine, so no source id.
+
+```json
+[
+ {
+  "post": "nashapravdafond/653 (07.08.2026)",
+  "file": "data/sources/TGMEDIA_20260807_nashapravdafond-post653-media.jpg",
+  "event": "h0038",
+  "kind": "still",
+  "shows_en": "Frame from an ER.RU video: a black octocopter airframe lying on white packing foam, a flat central plate with the letters «СТЕАС» engraved along its edge, a black printed box and a metal-cased module marked AMPF1200 on top, one motor and an antenna lead visible; subtitle fragment «…громят врага»; ER.RU logo and a “Luhansk People's Republic” tag in the corners. No brand of a registry company is legible; «СТЕАС» is not shown to be a maker.",
+  "redact": "none_needed",
+  "note": "Album picture 1 of the fund's post on the LNR anti-aircraft delivery (the same delivery as ANO_CBST/2395 and asidyakin/1233). A video frame: time not recorded."
+ },
+ {
+  "post": "nashapravdafond/654 (07.08.2026)",
+  "file": "data/sources/TGMEDIA_20260807_nashapravdafond-post654-media.jpg",
+  "event": "h0038",
+  "kind": "still",
+  "shows_en": "Frame from an ER.RU video: the lid of a wooden crate stencilled with the text «ГРУППА КОМПАНИЙ ЛОГОС», the group's lightning-and-arrow logo, the name «ДИКОБРАЗ» in guillemets and a web address; more crates and packing paper beside it; ER.RU logo and a “Luhansk People's Republic” tag in the corners. The contents are not shown.",
+  "redact": "none_needed",
+  "about_extra": [
+   {
+    "type": "entity",
+    "id": "gk-logos"
+   }
+  ],
+  "note": "Album picture 2 of the same post. A video frame: time not recorded. Shows the crate marking only; it does not show the jammers or their number."
+ }
+]
+```
