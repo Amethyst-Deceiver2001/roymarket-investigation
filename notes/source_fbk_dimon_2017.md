@@ -25,6 +25,17 @@ Read in full 24.10.2026, in Russian, from the capture of https://dimon.navalny.c
 | The funds' money: Газпромбанк credit to ДАР's management company (₽11bn, 2007), Башнефть subsidiary loans, an Усманов gift (ch.13). | Nothing in our records. | **Outside our scope; lead only.** |
 | The offshore chain (Furcina, Solarest, two yachts, a Tuscan estate; ch.11–12). | Nothing. | **Outside our scope.** Not recorded. |
 
+## What the images add (24.10.2026)
+
+The 174 pictures were pulled and read by the session `roymarket-investigation-a2`; main re-read the six exhibits below at full size and found the readings exact. Full item-by-item record: `notes/fbk_images_analysis_20261024.md`. **The exhibits are 2017 screenshots, not extracts.** What they change:
+
+- **2014 Миловка transfer (gallery n=4):** a one-row crop of a property-register extract: Градислава (ИНН 7704278421, ОГРН 1117799007050, both matching our record) entered as right-holder on 19.09.2014, basis «Договор пожертвования недвижимого имущества». It shows **no object, no transferor and no value**, so it supports «подарил» only in part; ДАР is not visible in it. The full extract is not captured.
+- **₽33bn (n=162):** «Уставный капитал» 33 639 050 thousand roubles at end-2007, from 0 at the start of the year, in a balance sheet captioned as ДАР's. **The line exists; who contributed it does not appear**, so the Михельсон and Симановский contribution is not in the exhibit. Our ДАР `charter_capital` is empty: neither contradicted nor confirmed.
+- **Supervisory board and Рубцов:** **no image shows ДАР's supervisory board, Градислава's founder or Головачёв's roles.** These claims rest on FBK's text and, for the board, on our own reading of ДАР's filings.
+- **New, matching our identifiers:** ДАР held the Псехако property from 10.12.2013 and the winter-sports fund (ИНН 7706470191) from 25.09.2014 (n=63); ДАР's director Полянский from 01.01.2008 (n=126); Градислава's director Жменя on 16.04.2013 (n=37).
+- **Our own record, partly contradicted:** a SPARK screen (n=2) lists Карабинский as Градислава's general director with «Дата последнего изменения в ЕГРЮЛ … 05.09.2013». Our `director_history` starts him on 17.12.2021 (extract s0216), so that is a later register entry, not his start. The open question on the Градислава record now says so.
+- **Not used:** the mailbox screenshots (n=41, 42, 101 and parts of 43–46).
+
 ## The one claim that matters most for us
 
 FBK is, to our knowledge, **the only source we hold for the allegation that ДАР and Градислава hold Медведев's assets**, which is how Вот Так (24.09.2026) and our own frozen brief tie «Наша Правда» to him. Our own documents establish a narrower chain: ДАР and Градислава are the founders of «Наша Правда» (the transcript of 08.09.2026 and Ведомости 2023), ДАР is founded by ЛЕВИТ (Михельсон, Симановский), and two of FBK's named managers (Елисеев, Карабинский) sit on «Наша Правда»'s supervisory board. Медведев's own role in ЦБСТ and «Наша Правда» rests on other material (ЦБСТ's statements, the delivery posts). **Any page that connects Медведев to ДАР and Градислава must say it is FBK's 2017 allegation, record the denial, and not present it as a finding.**
