@@ -34,7 +34,7 @@ Looked at: 4 frames per clip (6 for clips over a minute) at 640 px wide each, pl
 - **No casualties are shown in any sampled frame.** The clips show vehicles hit, smoke, and (20801, 20993) a lone pedestrian being followed from above. 20993 has a person and a dog tracked by crosshair under a post about a «таксист».
 - **Two items that matter for the story:** 38703 (funeral-service vans, 98th Airborne mark) and 27702 (205th emblem). Both carry the actor's own mark, no one is visible.
 - **Two clips are Ukrainian-origin aftermath video** (23051, 30686): usable only as «the channel posted this with a post announcing the strike».
-- **A pending lead:** the «Народный фронт» logo on 34459's FPV segments; the registry has no entity of that name. Check at a full frame before saying so.
+- **A pending lead:** the «Народный фронт» logo on 34459's FPV segments; no registry entity is named «Народный фронт» (entities.json mentions it only in other records' text). Check at a full frame before saying so.
 
 ## Not done
 - `media.json` records (blocked on source ids); the `_media_looked.json` ledger entries; key frames saved as archive stills with `frame.t`.
