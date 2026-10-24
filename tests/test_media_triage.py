@@ -62,12 +62,21 @@ def main():
             "a labelled picture's near-duplicate is skipped with it"
 
         out = d / "sheet.jpg"
-        mt.draw_sheet([(a, "ANO_CBST/2601"), (d / "nope.jpg", "x/1")], out)
+        mt.draw_sheet([(a, "ANO_CBST/2601", "Передали «Булат»", True), (d / "nope.jpg", "x/1", "", False)], out)
         with Image.open(out) as s:
-            assert s.size == (mt.GRID * mt.CELL, mt.GRID * (mt.CELL + 18))
+            assert s.size == (mt.GRID * mt.CELL, mt.GRID * (mt.CELL + 34))
 
     # labels: vocabulary checked; a first pass never overwrites a full-size look
     assert mt.validate_labels({"1": {"label": "handover", "keep": True}}) == []
+    assert mt.validate_labels({"1": {"label": "handover", "keep": True, "mission": "ties"}}) == []
+    assert len(mt.validate_labels({"1": {"label": "handover", "keep": True, "mission": "maybe"}})) == 1
+
+    # the caption outranks the picture: a handover caption with a registry hit beats a bare one
+    assert mt.text_score("Передали бойцам груз", {"registry": "Булат", "delivery": "B/strong"}) > \
+        mt.text_score("Выставка дронов", {"registry": "Булат"}) > mt.text_score("", {})
+    assert mt.post_url("nashapravdafond", 615) == "https://t.me/nashapravdafond/615" and mt.post_url("123", 5) == ""
+    assert mt.origin_of([("2026-10-02", "b/2"), ("2026-10-01", "a/1")]) == ("2026-10-01", "a/1")
+
     assert len(mt.validate_labels({"1": {"label": "tank", "keep": "yes"}})) == 2
     sheet = {"sheet": "20261003-001", "cells": {"1": {"key": "p1", "channel": "ANO_CBST", "msg_id": 5},
                                                    "2": {"key": "p2", "channel": "ANO_CBST", "msg_id": 6}}}
@@ -76,6 +85,11 @@ def main():
                                         "2": {"label": "equipment", "keep": True, "note": "two drones"}},
                         "haiku", "2026-10-03")
     assert n == 1 and ledger["p1"]["label"] == "logo", "main's label stands"
+    mt.apply_labels(ledger, sheet, {"2": {"label": "handover", "keep": True, "mission": "none"}}, "main", "2026-10-04")
+    assert ledger["p2"]["mission"] == "none"
+    mt.apply_labels(ledger, sheet, {"2": {"label": "equipment", "keep": True, "note": "two drones"}}, "haiku", "2026-10-03")
+    ledger["p2"] = {"label": "equipment", "keep": True, "note": "two drones", "by": "haiku",
+                    "as_of": "2026-10-03", "sheet": "20261003-001", "post": "ANO_CBST/6"}
     assert ledger["p2"] == {"label": "equipment", "keep": True, "note": "two drones", "by": "haiku",
                             "as_of": "2026-10-03", "sheet": "20261003-001", "post": "ANO_CBST/6"}
 

@@ -62,6 +62,10 @@ CORE_CHANNELS = {"ano_cbst", "nashapravdafond"}
 REASONS = ("cited", "delivery", "registry", "uncaptioned")  # priority order on the sheets
 LABELS = ("handover", "equipment", "people", "document", "logo", "combat", "screenshot", "facility",
           "nothing")
+MISSION = ("ties", "none", "unclear")   # does the picture tie to ЦБСТ / Наша Правда / РОЙ.МАРКЕТ? (a separate call from `label`)
+RE_HANDOVER = re.compile(r"передал|передач|вручил|доставил|отправил|груз|гуманитар|бойцам|подразделени|группировк", re.I)
+FONT_PATHS = ("/System/Library/Fonts/Supplemental/Arial.ttf", "/Library/Fonts/Arial.ttf",
+              "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
 IMAGE_EXT = {".jpg", ".jpeg", ".png", ".webp"}
 VIDEO_EXT = {".mp4", ".mov", ".webm", ".mkv"}
 NEAR_DUP_BITS = 6          # Hamming distance at or under which two pictures count as the same picture
@@ -204,6 +208,24 @@ def id_hits(text: str) -> list[str]:
     return sorted(set(out))
 
 
+def text_score(caption: str, reasons: dict, hits: list | None = None) -> int:
+    """How strongly the post's own text points at a handover: the caption decides before the picture does."""
+    score = len(set(m.lower() for m in RE_HANDOVER.findall(caption or "")))
+    d = (reasons.get("delivery") or "").split("/")[-1]
+    score += (3 if d == "strong" else 1) if d else 0
+    score += 2 * bool(reasons.get("registry")) + bool(hits)
+    return score
+
+
+def post_url(channel: str, msg_id: int) -> str:
+    return f"https://t.me/{channel}/{msg_id}" if channel and not channel.isdigit() else ""
+
+
+def origin_of(rows: list[tuple]) -> tuple | None:
+    """Earliest (date, channel, msg_id) among posts carrying one file, when it is not the kept post."""
+    return min(rows) if rows else None
+
+
 # --- queue ---------------------------------------------------------------------------------------------------
 
 def cited_posts() -> set[tuple[str, int]]:
@@ -225,7 +247,7 @@ def cmd_queue(args) -> None:
     chans = {r[0]: r[1] or "" for r in con.execute("select id, username from tg_channels")}
     want = {c.lower().lstrip("@") for c in args.channels.split(",")} if args.channels else None
     ids = [cid for cid, u in chans.items() if want is None or u.lower() in want or str(cid) in want]
-    q = ("select channel_id, msg_id, date, text, media_type, media_json from tg_posts "
+    q = ("select channel_id, msg_id, date, text, media_type, media_json, fwd_channel_username, fwd_msg_id from tg_posts "
          f"where channel_id in ({','.join('?' * len(ids))}) order by channel_id, msg_id")
     rows = con.execute(q, ids).fetchall()
     if args.since:
@@ -250,7 +272,7 @@ def cmd_queue(args) -> None:
             rs["uncaptioned"] = "no text in the album"
         reasons_by_album[k] = rs
     items, seen, dup_count, ledgered, skipped_kind = [], {}, 0, 0, Counter()
-    for cid, mid, dt, text, mtype, mjson in rows:
+    for cid, mid, dt, text, mtype, mjson, fwd_u, fwd_m in rows:
         kind = kind_of(mtype, mjson)
         if not kind:
             if mtype:
@@ -265,6 +287,7 @@ def cmd_queue(args) -> None:
         key = media_key(mjson) or f"m{cid}-{mid}"
         if key in seen:
             seen[key]["copies"].append(f"{uname or cid}/{mid}")
+            seen[key]["copy_dates"].append((dt, f"{uname or cid}/{mid}"))
             for r, v in rs.items():
                 seen[key]["reasons"].setdefault(r, v)
             dup_count += 1
@@ -275,12 +298,18 @@ def cmd_queue(args) -> None:
         info = json.loads(mjson or "{}")
         it = {"key": key, "channel": uname or str(cid), "channel_id": cid, "msg_id": mid, "date": dt,
               "kind": kind, "size": info.get("size") or 0, "reasons": rs, "copies": [],
+              "copy_dates": [(dt, f"{uname or cid}/{mid}")], "url": post_url(uname, mid),
+              "fwd": f"{fwd_u}/{fwd_m}" if fwd_u and fwd_m else "",
               "caption": (caption.get((cid, dt)) or "").replace("\n", " ")[:200],
               "file": file_stem(uname or str(cid), mid) + (".jpg" if kind != "video" else "-thumb.jpg")}
         seen[key] = it
         items.append(it)
     prio = {r: i for i, r in enumerate(REASONS)}
-    items.sort(key=lambda it: (min(prio[r] for r in it["reasons"]), it["date"]), reverse=False)
+    for it in items:   # the earliest copy, which is the origin unless the kept post is it
+        first = origin_of(it.pop("copy_dates"))
+        it["earliest"] = first[1] if first and first[1] != f"{it['channel']}/{it['msg_id']}" else ""
+        it["text_score"] = text_score(it["caption"], it["reasons"])
+    items.sort(key=lambda it: (min(prio[r] for r in it["reasons"]), -it["text_score"], it["date"]), reverse=False)
     if args.max:
         dropped = len(items) - args.max
         items = items[:args.max]
@@ -498,12 +527,21 @@ def sheet_candidates(items, processed, ledger):
     return out
 
 
+def _font(size: int):
+    from PIL import ImageFont
+    for fp in FONT_PATHS:
+        if Path(fp).exists():
+            return ImageFont.truetype(fp, size)
+    return ImageFont.load_default()   # no Cyrillic: captions print as boxes, the labels still work
+
+
 def draw_sheet(cells, path: Path) -> None:
+    """cells: (image path, label, caption, is_video). Two label lines: post id (with [v] for video), caption."""
     from PIL import Image, ImageDraw
-    label_h = 18
+    label_h, font = 34, _font(11)
     sheet = Image.new("RGB", (GRID * CELL, GRID * (CELL + label_h)), "white")
     d = ImageDraw.Draw(sheet)
-    for n, (img_path, label) in enumerate(cells):
+    for n, (img_path, label, caption, is_video) in enumerate(cells):
         x, y = (n % GRID) * CELL, (n // GRID) * (CELL + label_h)
         try:
             with Image.open(img_path) as im:
@@ -513,7 +551,8 @@ def draw_sheet(cells, path: Path) -> None:
         except Exception:  # noqa: BLE001 - an unreadable file leaves a blank cell with its label
             pass
         d.rectangle([x, y + CELL, x + CELL - 1, y + CELL + label_h - 1], fill="black")
-        d.text((x + 4, y + CELL + 3), f"{n + 1}  {label}"[:40], fill="white")
+        d.text((x + 4, y + CELL + 2), f"{n + 1}  {'[v] ' if is_video else ''}{label}"[:40], fill="white", font=font)
+        d.text((x + 4, y + CELL + 18), (caption or "")[:44], fill=(200, 200, 200), font=font)
     path.parent.mkdir(parents=True, exist_ok=True)
     sheet.save(path, quality=80)
 
@@ -524,6 +563,7 @@ def cmd_sheets(args) -> None:
     cands = sheet_candidates(q, processed, load_json(LEDGER, {}))
     prio = {r: i for i, r in enumerate(REASONS)}   # reason group first, then likeliest evidence (CLIP) first
     cands.sort(key=lambda it: (min(prio[r] for r in it["reasons"]),
+                               -(it.get("text_score") or 0) - len(processed.get(it["file"], {}).get("text_hits") or []),
                                -evidence_score(processed.get(it["file"], {}).get("clip"))))
     per = GRID * GRID
     n_sheets = min(args.max, (len(cands) + per - 1) // per)
@@ -535,9 +575,12 @@ def cmd_sheets(args) -> None:
         for n, it in enumerate(chunk, 1):
             stills = processed.get(it["file"], {}).get("stills") or []
             img = WORK / "stills" / stills[0] if stills else FILES / it["file"]
-            cells.append((img, f"{it['channel']}/{it['msg_id']}"))
+            cells.append((img, f"{it['channel']}/{it['msg_id']}", it["caption"], it["kind"] == "video"))
             index[str(n)] = {"key": it["key"], "channel": it["channel"], "msg_id": it["msg_id"],
-                             "kind": it["kind"], "reasons": sorted(it["reasons"]), "caption": it["caption"][:120]}
+                             "kind": it["kind"], "reasons": sorted(it["reasons"]), "caption": it["caption"][:120],
+                             "url": it.get("url") or post_url(it["channel"], it["msg_id"]),
+                             "fwd": it.get("fwd") or "", "earliest": it.get("earliest") or "",
+                             "copies": it.get("copies") or []}
         name = f"{day}-{existing + s + 1:03d}"
         draw_sheet(cells, SHEETS / f"{name}.jpg")
         dump_json(SHEETS / f"{name}.json", {"sheet": name, "cells": index})
@@ -556,6 +599,8 @@ def validate_labels(labels: dict) -> list[str]:
             errs.append(f"cell {cell}: label {v.get('label')!r} not in {LABELS}")
         if not isinstance(v.get("keep"), bool):
             errs.append(f"cell {cell}: keep must be true or false")
+        if v.get("mission") is not None and v["mission"] not in MISSION:
+            errs.append(f"cell {cell}: mission {v['mission']!r} not in {MISSION}")
     return errs
 
 
@@ -571,6 +616,8 @@ def apply_labels(ledger: dict, sheet: dict, labels: dict, by: str, today: str) -
         ledger[c["key"]] = {"label": v["label"], "keep": v["keep"], "note": (v.get("note") or "")[:300],
                             "by": by, "as_of": today, "sheet": sheet["sheet"],
                             "post": f"{c['channel']}/{c['msg_id']}"}
+        if v.get("mission"):
+            ledger[c["key"]]["mission"] = v["mission"]
         n += 1
     return n
 
