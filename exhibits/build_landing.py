@@ -48,6 +48,8 @@ OPENING_SOURCES = {
     "tsentr": ("Telegram, @ANO_CBST, post 2610, 04.10.2026", "https://t.me/ANO_CBST/2610"),
     "tsentr_pics": ("Telegram, @ANO_CBST, posts 2605–2610 (one album of six pictures, captioned on 2610), 04.10.2026",
                     "https://t.me/ANO_CBST/2605"),
+    "dw_film": ("DW, documentary «Targeting Civilians: How Russian Drones Terrorize a Ukrainian City», 2024, shown on YouTube "
+                "(footage credit at 8:46, unit map at 16:53)", "https://www.youtube.com/watch?v=kuTo94TnMPo"),
     "yakim": ("Telegram, @asidyakin (Alexander Sidyakin), post 1405, 15.10.2026", "https://t.me/asidyakin/1405"),
     # The supplier page and the Kherson section (24.10.2026): saved as WEBCAPTURE/PDF files on this machine, not catalogued.
     "rm_aug": ("ROY.MARKET, «Начать продавать на РОЙ.МАРКЕТ» (page for prospective sellers), Internet Archive copy of 22.08.2026",
@@ -865,7 +867,7 @@ class Landing(Chain):
             + self.un_quote("dnepr", f'UN report A/80/497, para. 40, 21.10.2025{self.tref("un_ga")}') +
             f'<p>The Commission names the 18th Combined Arms Army; it names no brigade. The Centre for Information Resilience '
             f'and DW named the 205th among three units whose drones were at work over Beryslav during the attacks there, and '
-            f'said they could not prove who carried them out{self.tref("cir")}. The 205th is a motor-rifle brigade; the channel '
+            f'said they could not prove who carried them out{self.tref("cir")}. The 205th is a motor-rifle brigade, as DW\'s film labels it on a map{self.tref("dw_film")}; the channel '
             f'that posts its footage, under the brigade\'s emblem, places it in the 49th Army{self.tref("osv_27702")}. A senior '
             f'doctor at a Kherson hospital told the Commission:</p>'
             + self.un_quote("safari", f'UN paper A/HRC/59/CRP.2, para. 42, 28.05.2025{self.tref("un_crp")}'))
@@ -897,6 +899,14 @@ class Landing(Chain):
             '<h3 class="rm-h3">What TsBST\'s circle says about that front</h3>'
             f'<ul class="ledger front" aria-label="Ties to the formations the UN names">{"".join(lis)}</ul>'
             + self.oq("arch_9067", f'«Arkhangel», Telegram, 01.12.2025{self.tref("arch_9067")}')
+            + (f'<p>DW\'s film on the Beryslav attacks shows the school too. In a passage on Russia\'s volunteer drone groups, '
+               f'over footage of men soldering a drone at a workbench, watermarked with the school\'s channel address, its '
+               f'narration says: “This Russian volunteer group proudly posts on Telegram” how it makes drones and trains '
+               f'operators{self.tref("dw_film")}. The film does not say the school supplied the 205th, and the footage of the '
+               f'attacks it shows is credited to another channel.</p>'
+               '<p class="note"><span class="rm-grade rep">Reported</span> DW\'s own film, as press: it shows the school\'s '
+               'footage as an example of such groups. It does not show the school\'s tie to TsBST, which is still not '
+               'documented.</p>')
             + self.band(self.pics(["proekt-kb-arkhangel"]), "The «Arkhangel» school's own channel: its lab bench, a device it "
                         "builds, its flight-instruction video and its recruitment video. Its tie to TsBST is not documented.", big=2)
             + self.band(self.pics(["csn-bars-sarmat"]), "Bars-Sarmat's own, from its stand at «Dronnitsa 2025», a gathering "
