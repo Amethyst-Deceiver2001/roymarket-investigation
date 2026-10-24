@@ -20,7 +20,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "exhibits"))
 sys.path.insert(0, str(REPO / "scripts"))
 from build_chain_view import CBST, Chain, cap, esc, load, money  # noqa: E402
-from display_helpers import NAME_JS, design_head, display_name, latin_text, latinize_gloss, name_html, orig_line, person_names, popup_originals, quote_html, reader_grade, ru_date, sanction_regimes  # noqa: E402
+from display_helpers import NAME_JS, design_head, display_name, latin_text, latinize_gloss, media_about, name_html, orig_line, person_names, popup_originals, quote_html, reader_grade, ru_date, sanction_regimes  # noqa: E402
 from graph_contract import source_grade  # noqa: E402
 
 MPTM, NP, PSB, SIDYAKIN = "ooo-mptm", "fond-nasha-pravda", "pao-bank-psb", "aleksandr-sidyakin"
@@ -535,6 +535,42 @@ class Landing(Chain):
                 f'Makers sell through their own dealers and marketplaces, to the state, and to donors who hand the goods to units.'
                 f'</figcaption><div class="mdl-wrap">{two}</div></figure></div>')
 
+    # -- pictures: registered media only (media.json), each opening its full figure with caption, date and source ----
+    HERO = "m0085"   # Nasha Pravda's crates and cases by a truck, 24.04.2026: no faces, the supply itself
+
+    def pics(self, slugs, genres=None, skip=()):
+        """Publishable pictures about any of these entities, oldest first, optionally of some genres only."""
+        ms = media_about(self.media, {("entity", s) for s in slugs})
+        return sorted((m for m in ms if m["id"] not in skip and m.get("genre") != "logo"
+                       and (genres is None or m.get("genre") in genres) and self.img(m)),
+                      key=lambda m: (m.get("published") or "", m["id"]))
+
+    def band(self, ms, label, big=3):
+        """A band of pictures: the first `big` drawn large, the rest smaller; each opens its full figure."""
+        if not ms:
+            return ""
+        tiles, sids = [], []
+        for i, m in enumerate(ms):
+            self.template(m)
+            if m.get("source_id") not in sids:
+                sids.append(m.get("source_id"))
+            tiles.append(f'<button class="pic{" big" if i < big else ""}" type="button" data-fig="fig-{m["id"]}" '
+                         f'aria-label="{esc(m.get("shows_en") or latinize_gloss(m["shows"]))}">'
+                         f'<img src="{esc(self.img(m))}" alt="" loading="lazy"></button>')
+        return (f'<figure class="band"><div class="band-grid">{"".join(tiles)}</div>'
+                f'<figcaption><span class="rm-label">Pictures · {len(ms)}</span> {label} Each opens with its caption, '
+                f'date and source.{self.ref(*sids)}</figcaption></figure>')
+
+    def hero(self):
+        """The header's background: one handover picture, credited and openable like any other."""
+        m = next((m for m in self.media if m["id"] == self.HERO), None)
+        if not m or not self.img(m):
+            return "", ""
+        self.template(m)
+        credit = (f'<button class="hero-credit" type="button" data-fig="fig-{m["id"]}">Background: crates and cases by a '
+                  f'truck, from a handover post of «Nasha Pravda», {ru_date(m.get("published"))}</button>')
+        return f' style="--hero: url({esc(self.img(m))})"', credit
+
     def tref(self, key):
         """A note for a document from OPENING_SOURCES: plain words and its public link (see the table's comment)."""
         note = OPENING_SOURCES[key]
@@ -596,6 +632,8 @@ class Landing(Chain):
             'watermark, of the coat of arms hanging damaged from its frame. That is consistent with the report of 8 October, '
             'but neither post dates the strike, we have not placed the building on a map, and the impact itself is not in the '
             'frames we checked.</p>'
+            + self.band(self.pics(["ooo-gagaring", "ano-dpo-obrazovatelny-tsentr-gagaring"]),
+                        "Gagaring's own: its director at one of its field courses, and graduates of its training centre.", big=2)
             + self.dual_use())
 
     def dual_use(self):
@@ -656,7 +694,11 @@ class Landing(Chain):
             intro +
             '<h3 class="rm-h3">What TsBST\'s circle says about that front</h3>'
             f'<ul class="ledger front" aria-label="Ties to the formations the UN names">{"".join(lis)}</ul>'
-            + self.oq("arch_9067", f'«Arkhangel», Telegram, 01.12.2025{self.tref("arch_9067")}') +
+            + self.oq("arch_9067", f'«Arkhangel», Telegram, 01.12.2025{self.tref("arch_9067")}')
+            + self.band(self.pics(["proekt-kb-arkhangel"]), "The «Arkhangel» school's own channel: its lab bench, a device it "
+                        "builds, its flight-instruction video and its recruitment video. Its tie to TsBST is not documented.", big=2)
+            + self.band(self.pics(["csn-bars-sarmat"]), "Bars-Sarmat's own, from its stand at «Dronnitsa 2025», a gathering "
+                        "of combat drone operators in Novgorod region, 6–7 September 2025.", big=2) +
             '<h3 class="rm-h3">What the units say about their targets</h3>'
             f'<p>The Commission reproduces posts of a Kherson-front channel, «From Mariupol to the Carpathians», as figures in '
             f'its paper{self.tref("un_crp")}. The channel signs its strike videos with the units\' names. Under footage of the '
@@ -781,12 +823,17 @@ def unique_popovers(doc):
     return re.sub(r'popovertarget="(nm-[^"]+)".*?<span popover id="\1"', one, doc, flags=re.S)
 
 
+# The chain view's picture viewer, shared rather than copied: everything in chain_view.js from its comment on.
+VIEWER_JS = "// Picture viewer" + (REPO / "exhibits" / "chain_view.js").read_text().split("// Picture viewer", 1)[1]
+
+
 def render(preview: bool, out: Path):
     L = Landing()
     L.img_dir = out.parent / "images" / "media"
     c = L.ents[CBST]
     today = dt.date.today().isoformat()
     # Called in page order, so footnotes number from the top.
+    hero_style, hero_credit = L.hero()
     opening = L.opening()
     qa, qb, qref = L.quote()
     cbst_name, cbst_sanc, funds = L.name(c), L.sanctions(c), L.money_line()
@@ -794,12 +841,21 @@ def render(preview: bool, out: Path):
     sid_name_l = sid_name.replace(f'id="nm-{SIDYAKIN}"', f'id="nm-{SIDYAKIN}-q"').replace(
         f'popovertarget="nm-{SIDYAKIN}"', f'popovertarget="nm-{SIDYAKIN}-q"')
     ledger = L.ledger()
+    handed = L.pics([NP], {"handover"})
+    handovers = L.band(handed, f"Published by «Nasha Pravda» with its handover posts, {ru_date(handed[0]['published'])} – "
+                       f"{ru_date(handed[-1]['published'])}: deliveries of «Bulat» detectors and other kit to units. A handover "
+                       "does not show use in combat.", big=4) if handed else ""
     front = L.front()
     beyond = L.beyond_shop()
     chains = "".join(L.chain_card(s, url if preview else (f"chain_{s}.html" if (out.parent / f"chain_{s}.html").exists() else None))
                      for s, url in CHAINS.items())
     extra_cards = L.more_cards(preview)
     n, by, sanc = L.network()
+    shown = {m["id"] for m in L.pics(["ooo-gagaring", "ano-dpo-obrazovatelny-tsentr-gagaring", NP, "csn-bars-sarmat", "proekt-kb-arkhangel"])}
+    own = L.band(L.pics([s for s in L.tied() if s != CBST], skip=shown | {L.HERO}),
+                 "What the linked organisations publish of themselves: products, shops, exhibition stands, workshops and "
+                 "handovers. "
+                 "Product pictures are evidence of what a company offers, not of sales.", big=4)
     wall = L.wall()
     sgrid, undated = L.sanctions_grid()
     revenue, n_rev = L.revenue_bars()
@@ -816,13 +872,14 @@ def render(preview: bool, out: Path):
 <title>ROY.MARKET Investigation</title>
 {design_head((REPO / 'exhibits' / 'landing.css').read_text(), None if preview else 'fonts/fonts.css')}</head>
 <body>
-<header class="rm-page top">
+<div class="hero"{hero_style}><header class="rm-page top">
   <p class="rm-eyebrow">Draft · {ru_date(today)}</p>
   <h1 class="rm-h1">TsBST and ROY.MARKET <span class="rm-muted">a Moscow non-profit, its military marketplace, and the drone-war supply around it</span></h1>
   <p class="rm-dek">An open-source investigation of ANO «TsBST», a Moscow non-profit for the drone industry, and of the
   companies, products, sales and handovers to military units that connect to it. Every claim rests on an archived
   document and is graded by how well that document shows it.</p>
-</header>
+  {hero_credit}
+</header></div>
 <main class="rm-page">
   <section class="open" aria-labelledby="h-open">
     <h2 class="rm-h2" id="h-open">A strike, then a sales line</h2>
@@ -840,6 +897,7 @@ def render(preview: bool, out: Path):
         <p class="row"><span class="rm-id">INN {esc(c['inn'])}</span> <span class="rm-id">OGRN {esc(c['ogrn'])}</span></p></article>
       <ul class="ledger" aria-label="Relations">{ledger}</ul>
     </div>
+    {handovers}
   </section>
 
   <section class="front-sec" aria-labelledby="h-front">
@@ -867,6 +925,7 @@ def render(preview: bool, out: Path):
     <p class="lede">The investigation's registry links <b>{n}</b> organisations to TsBST: {by['doc']} through a document
     (a register entry, a contract, TsBST's own posts), {by['rep']} on their own word or press reports alone.
     <b>{sanc}</b> of them are on at least one sanctions list. Counted from the registry on {ru_date(today)}.</p>
+    {own}
     <figure class="netfig">{wall}
       <figcaption>Every organisation the registry links to TsBST, with its logo where one is on file. A red flag names
       the regimes that list it.</figcaption></figure>
@@ -929,7 +988,10 @@ def render(preview: bool, out: Path):
 
   <section class="rm-prose rm-sources"><h2 class="rm-h2">Sources</h2><ol>{L.notes_list()}</ol></section>
 </main>
-<script>{NAME_JS}</script>
+{''.join(f'<template id="fig-{k}">{v}</template>' for k, v in L.templates.items())}
+<dialog class="rm-lightbox" id="lightbox" aria-label="Picture"><div class="bar"><button type="button" data-close>Close</button></div><div class="body"></div></dialog>
+<script>{VIEWER_JS}
+{NAME_JS}</script>
 </body></html>
 """
     out.write_text(unique_popovers(popup_originals(doc)))
