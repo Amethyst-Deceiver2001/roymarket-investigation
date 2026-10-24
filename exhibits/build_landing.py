@@ -50,6 +50,8 @@ OPENING_SOURCES = {
                     "https://t.me/ANO_CBST/2605"),
     "dw_film": ("DW, documentary «Targeting Civilians: How Russian Drones Terrorize a Ukrainian City», 2024, shown on YouTube "
                 "(footage credit at 8:46, unit map at 16:53)", "https://www.youtube.com/watch?v=kuTo94TnMPo"),
+    "arch_175293": ("Telegram, @Archangel_Forum, post 175293, 08.03.2026", "https://t.me/Archangel_Forum/175293"),
+    "cbst_1976": ("Telegram, @ANO_CBST, post 1976, 17.03.2026", "https://t.me/ANO_CBST/1976"),
     "yakim": ("Telegram, @asidyakin (Alexander Sidyakin), post 1405, 15.10.2026", "https://t.me/asidyakin/1405"),
     # The supplier page and the Kherson section (24.10.2026): saved as WEBCAPTURE/PDF files on this machine, not catalogued.
     "rm_aug": ("ROY.MARKET, «Начать продавать на РОЙ.МАРКЕТ» (page for prospective sellers), Internet Archive copy of 22.08.2026",
@@ -912,6 +914,16 @@ class Landing(Chain):
                '<p class="note"><span class="rm-grade rep">Reported</span> DW\'s own film, as press: it shows the school\'s '
                'footage as an example of such groups. It does not show the school\'s tie to TsBST, which is still not '
                'documented.</p>')
+            + (f'<p>The school\'s own channel draws it closer to TsBST\'s circle than any document does. Its forum channel calls '
+               f'Kvadrosim, the simulator maker TsBST names as a resident, “our partners”, and says the heads of its Moscow branch, '
+               f'among them {self.person_pop("shatrakova-anastasiya-artemovna")}, presented an interceptor called «Arkhangel» to a '
+               f'security agency together with that company{self.tref("arch_175293")}. TsBST\'s own post names an Anastasia '
+               f'Shatrakova as general director of the interceptor maker «Arkhangel», a finalist of its accelerator'
+               f'{self.tref("cbst_1976")}, and the company register lists a person of that name as director of '
+               f'{self.pop("ooo-arkhangel")} since it was registered{self.ref("s5507")}. Same name, same product: we take them to '
+               f'be one person. No document links that company to the school.</p>'
+               '<p class="note"><span class="rm-grade rep">Reported</span> This is the school\'s, TsBST\'s and the register\'s '
+               'own text, joined by a name. The school\'s tie to TsBST is still not documented.</p>')
             + self.band(self.pics(["proekt-kb-arkhangel"]), "The «Arkhangel» school's own channel: its lab bench, a device it "
                         "builds, its flight-instruction video and its recruitment video. Its tie to TsBST is not documented.", big=2)
             + self.band(self.pics(["csn-bars-sarmat"]), "Bars-Sarmat's own, from its stand at «Dronnitsa 2025», a gathering "
@@ -992,9 +1004,15 @@ class Landing(Chain):
         for slug, url in COMPANY_PAGES.items():
             e = self.ents[slug]
             href = url if preview else None
+            nm = self.name(e, sub=False)
+            ref = ""
+            if href:   # a footnote link inside the name link would nest two <a>: park it after the name instead
+                m = re.search(r'<sup class="rm-ref">.*?</sup>', nm)
+                if m:
+                    ref, nm = m.group(0), nm.replace(m.group(0), "", 1)
             cards.append(f'<article class="rm-card chain-card"><header><span class="rm-kind">Company file</span>{self.logo(slug)}</header>'
-                         f'<h3 class="rm-name">{f"<a href={chr(34)}{esc(href)}{chr(34)}>" if href else ""}{self.name(e, sub=False)}'
-                         f'{"</a>" if href else ""}</h3>{self.sanctions(e)}<p class="row">Register history, people, sanctions, '
+                         f'<h3 class="rm-name">{f"<a href={chr(34)}{esc(href)}{chr(34)}>" if href else ""}{nm}'
+                         f'{"</a>" if href else ""}{ref}</h3>{self.sanctions(e)}<p class="row">Register history, people, sanctions, '
                          f'accounts, products, pictures and the company in its own words.</p>'
                          + (f'<p class="go"><a href="{esc(href)}">Open the company file →</a></p>' if href
                             else '<p class="go wait">The company file is in review and not yet public.</p>') + '</article>')
