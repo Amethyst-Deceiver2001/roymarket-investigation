@@ -81,6 +81,9 @@ def main():
     assert mt.ignored({**base, "channel": "rostecru"}) and mt.ignored({**base, "reasons": {"registry": "ростех"}})
     assert not mt.ignored({**base, "reasons": {"registry": "ростех, булат"}}) and not mt.ignored(base)
     assert mt.ignored({**base, "caption": "Главное за неделю: лента новостей от АНО «ЦБСТ»"}) and not mt.ignored({**base, "caption": "Передали бойцам"})
+    assert mt.ignored({**base, "channel": "ANO_CBST", "caption": "Израиль передал армии лазерный перехватчик"})
+    assert not mt.ignored({**base, "channel": "ANO_CBST", "caption": "ЦБСТ совместно с фондом «Наша Правда» передали бригаде"})
+    assert not mt.ignored({**base, "channel": "ANO_CBST", "caption": ""}), "an uncaptioned album stays"
     h = mt.registry_matcher()
     assert h("в секторе") == [] and h("площадью 5 га") == [] and h("Новый дрон-перехватчик") == [], "ordinary words are not hits"
     assert h("«Набат» отгружен") == ["набат"] and h("детектор Булат") == ["булат"]

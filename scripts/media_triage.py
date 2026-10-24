@@ -70,6 +70,8 @@ FONT_PATHS = ("/System/Library/Fonts/Supplemental/Arial.ttf", "/Library/Fonts/Ar
               "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
 IGNORE_CHANNELS = {"rostecru"}
 IGNORE_REGISTRY_ONLY = {"ростех"}   # a post whose only registry hit is Rostec
+NEWS_CHANNELS = {"ano_cbst"}   # ЦБСТ's own channel is mostly analysis and news; it counts only when it names a donor or a recipient
+RE_DONOR_OR_RECIPIENT = re.compile(r"наша правда|нашей правд|единая россия|единой россии|фонд|бойцам|бойцов|бригад|полк|подразделени|военнослужащ|зенитчик|добровольческ", re.I)
 RE_IGNORE_CAPTION = re.compile(r"^\s*главное за неделю", re.I)   # ЦБСТ's weekly digest: a list of news, not a handover
 IMAGE_EXT = {".jpg", ".jpeg", ".png", ".webp"}
 VIDEO_EXT = {".mp4", ".mov", ".webm", ".mkv"}
@@ -537,6 +539,9 @@ def ignored(it) -> bool:
     """State-supply posts the user ruled out of this triage (24.10.2026): Rostec's own channel, and posts whose only
     registry hit is Rostec (arms supplied to the army, not a resident's or product's handover)."""
     if (it.get("channel") or "").lower() in IGNORE_CHANNELS or RE_IGNORE_CAPTION.search(it.get("caption") or ""):
+        return True
+    cap = it.get("caption") or ""
+    if (it.get("channel") or "").lower() in NEWS_CHANNELS and cap.strip() and not RE_DONOR_OR_RECIPIENT.search(cap):
         return True
     hits = {h.strip() for h in ((it.get("reasons") or {}).get("registry") or "").split(",") if h.strip()}
     return bool(hits) and hits <= IGNORE_REGISTRY_ONLY
