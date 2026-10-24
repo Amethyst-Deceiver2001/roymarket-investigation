@@ -18779,6 +18779,10 @@
           {
             "text": "The payables table in the FY2024 notes (§10, p.29 of 35, read from the page image and zoomed) lists four suppliers, ООО Хартия, МЕГАФОН ПАО, АО Технодрон and ООО ФЕНИКС-С, and four amounts (13.57, 9.41, 982.60 and 11.0 thousand rubles; total 1,016.7). The amount column sits one row below the names in the scan, so which amount belongs to which supplier cannot be read with certainty: АО «Технодрон» (ИНН 9704241986, a ЦБСТ-tied manufacturer in the registry) is owed either 9.41 or 982.60 thousand rubles. Find a document that states it (the accounting register, the supplier's own filing) before any use.",
             "source_id": "s0389"
+          },
+          {
+            "text": "The fund's own channel (nashapravdafond 580, 05.03.2026) says a car it gave to servicemen was fitted with EW by «бойцы 18 армии» and is used «для доставки грузов на ЛБС и переброски личного состава». The UN Commission (A/80/497 para 40; CRP.2 para 49) names the 18th Combined Arms Army and the «Днепр» Group of Forces among the formations whose drone units attacked civilians in Kherson. With the delivery of 100 strike drones to the 49th Army on the Kherson direction (h0018, 07.05.2024) the fund has two recorded deliveries to formations that the UN names or that contain a brigade CIR/DW named. A vehicle is not a drone and neither post names a unit-level recipient or any use against civilians. To establish: the exact recipients of the 07.05.2024 drones and of the car. See notes/safari_units_in_our_archive_20261024.md.",
+            "source_id": null
           }
         ],
         "registered": "21.03.2023",
@@ -26589,6 +26593,10 @@
           {
             "text": "Patent RU2792246C1 (plasma welding with a consumable electrode, published 21.03.2023, patentee «Барашков Александр Сергеевич (RU)») was recorded under this company from a name-only match in the Rospatent bulk search (s1170): the entry prints no ИНН, address or date of birth, and a welding method is not a company product. Removed from patents[] on 05.10.2026 after the packet check; not shown to be this person's or this company's.",
             "source_id": "s1170"
+          },
+          {
+            "text": "Gagaring's channel my_el_lab 2811 (23.12.2025) thanks «Воины 49-й Армии на страже неба Днепра … Без Совы перехватывать видео было бы на много тяжелее» (signed @PD_BpLA_KRAB): the receiver «Сова» is used by 49th Army air-defence crews in counter-drone work. ЦБСТ's own post 2677 (20.10.2026) says «Кузнечик» and «Сова 5.8» were used in a kamikaze-drone strike on the Zaporizhzhia administration building and that the products can be ordered on «специализированной платформе товаров двойного назначения РОЙ.МАРКЕТ»; my_el_lab 3386, 3403, 3518 (Apr-May 2026) carry the press line that «Кузнечик» raised the combat capability of strike drones. The Kherson channel states the 205th brigade is part of the 49th Army (osvedomitell_alex 27702, 23.07.2025). To establish: any statement that a Gagaring product reached a 49th Army or 205th brigade strike drone; nothing links Gagaring to an attack on civilians. See notes/safari_units_in_our_archive_20261024.md.",
+            "source_id": null
           }
         ],
         "patents": [],
@@ -45051,7 +45059,29 @@
             2538
           ],
           "note": "Post 2342 (21.07.2026) reports the volunteer crew «БАРС-Сармат» using a Yak-52 as an interceptor-drone carrier, citing a Telegram channel and Коммерсантъ; it states no ЦБСТ relationship. Post 2037, linked from it, was read on 2026-10-01: it is an Airbus Bird of Prey article and does not name the crew. Post 2538 (17.09.2026) says the «Антелекон» project, described as a ЦБСТ resident, tested an antenna complex «на полигоне ЦСН «БАРС-Сармат»»: ЦБСТ names the range as a test site of a resident; it states no relationship between ЦБСТ and the centre. The resident is not in the registry (see the open question on the ЦБСТ record)."
-        }
+        },
+        "open_questions": [
+          {
+            "source_id": "s7682",
+            "text": "Фонд «Сармат» (ИНН 6154168283, ОГРН 1246100025951): pull the full ЕГРЮЛ выписка to find its founders and director and to see whether they overlap with the unit's leadership or with Рогозин-linked entities (АО «Эколибри», АНО ЦРТТ)."
+          },
+          {
+            "source_id": "s7703",
+            "text": "@russian_shock_volunteer_brigade is scraped (2,453 posts) but only mined for components so far; a fuller read of the sub-units it names (отряды «Сталинград», «Устинов», «Днепр»; роты 10 и 11) and of products fielded 'с поддержкой специалистов ЦСН' (САУ РОН opto-radar, «Горыныч 2.0», «ЩИТ-И») is pending, including who makes them."
+          },
+          {
+            "source_id": "s7686",
+            "text": "The site's gallery, «Наши бойцы» and encyclopedia pages returned no media in a plain fetch; a browser pass is needed to see and archive the photos/videos."
+          },
+          {
+            "source_id": "s7688",
+            "text": "Recruitment pages target Минтранс staff specifically (s7688, 'Для кандидатов транспортного комплекса'); check for a link to АНО «Центр развития транспортных технологий» (Рогозин А.Д., already on file) and АО «Эколибри»."
+          },
+          {
+            "text": "Own-channel statements read 24.10.2026 (Рогозин's channel rogozin_do, which names himself the centre's commander): 8057 (19.01.2026) «Центр специального назначения беспилотных систем \"Барс-Сармат\", командиром которого я являюсь, выполняет боевые задачи командующего ВДВ и Генерального штаба» over footage of «ВДВ и Группировки войск \"Днепр\"»; 7780 (12.11.2025) units of the «Днепр» group «предпочитают использовать в качестве боевой части штурмовых дронов боеприпасы, разработанные инженерами ЦСН \"Барс-Сармат\"»; 7901 (18.12.2025) «Херсонский фронт» crews of the centre; 8017 (12.01.2026) claims strikes on Nikopol (buildings, trucks, «объекты газо- и электроэнергетики»); 8257 (25.03.2026) claims closing a Privatbank branch in Nikopol and says more bank branches in Nikopol, Marhanets, Zaporizhzhia and Kherson will follow, asking civilians to stop visiting them. The UN Commission (A/80/497 para 40) names the «Днепр» Group of Forces under Teplinsky as the formation whose drone units attacked civilians. The centre is the host of the Архангел military-training centre (case study: Рогозин 22.04.2025 [s6915], joint agreement 17.10.2024 [s7693, s7694]). A channel (russian_shock_volunteer_brigade 4237, 02.10.2026) says the centre is part of the «Днепр» group, at least 3,000 people, within ВДВ; that is a relay of «sources». To establish: a non-channel source for the centre's place in the group; what, if anything, the centre did in Kherson and Beryslav; nothing is known of any attack on civilians by the centre or by Архангел. Own statements only. See notes/safari_units_in_our_archive_20261024.md.",
+            "source_id": null
+          }
+        ]
       }
     },
     "fond-sarmat": {
