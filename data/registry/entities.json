@@ -198,6 +198,10 @@
       {
         "source_id": "s8817",
         "text": "Acquirer and logistics partner are not named in the operator's own texts read (the supplier offer s8817, the platform rules s8821, the buyer offer s8818): they speak of «платёжные системы и эквайеры» and «Логистический партнёр» in general. An older note (the held notes/dossier_draft.html and a registry open question) names «MetaShip» as the logistics integrator and a 3DS payment gateway; no archived primary document for either is on file, so no acquiring_via or ships_via edge is recorded. Capture and read the source before recording one. 2026-10-02: the live site's HTTP headers (s8949; page s8950, «Вход в РОЙ.МАРКЕТ … Закрытая платформа инженерного снабжения») carry a Content-Security-Policy that permits form posts and frames to 3ds.payment.ru and test.3ds.payment.ru (a 3-D Secure card-payment gateway) and scripts and frames from widget.metaship.ru (a delivery widget). A CSP allow-list shows what the page may load, not who contracts with the operator: neither host is named as a partner in a document, so this narrows the search for the acquirer and logistics partner without naming either."
+      },
+      {
+        "text": "Press lead, not verified here: Вот Так (24.09.2026, https://vot-tak.tv/95546179/wildberries-ozon-kreml) writes that until May 2026 the operator was headed by Иван Коптенко, 'son of an influential Soviet functionary, a classmate and close friend of Илья Медведев', whom it found in a leaked list of ФБК donors; it names Колударов as the last director and says the director data have been hidden in ЕГРЮЛ since late August. Our director_history starts with Колударов on 04.08.2026 and has no earlier director, and no Коптенко record. To check: an ЕГРЮЛ extract or history for ИНН 9714068459 dated before 05.2026 naming the former director, and an archived copy of the article. The donor-leak and friendship claims are the outlet's and are not repeated as fact.",
+        "source_id": null
       }
     ],
     "sources": [],
