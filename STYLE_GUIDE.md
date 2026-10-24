@@ -679,6 +679,7 @@ initials-only entry beats a guessed one.
 | «безвозмездная передача войсковым частям» | Free transfer of matériel to units at the front, stated in a foundation's own accounts |
 | «народный ОПК» | Nominally grassroots weapons manufacturing, convened and funded by the state |
 | «закрытая платформа инженерного снабжения» | A military procurement marketplace, described so as to avoid saying so |
+| «демонтажные работы» / «вахта по спецконтракту» | A one-year military contract with a brigade, advertised as construction work. The post that uses it (projectArchangel, 8–12.03.2026) names the 205th brigade and «Херсонское направление» in the same breath. Quote it, never adopt it |
 | «спецоперация» / «СВО» | The invasion of Ukraine — retain in quotation when quoting, never adopt in our own prose |
 
 Add to this table whenever a new sanitising term turns up.

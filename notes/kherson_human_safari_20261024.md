@@ -73,6 +73,7 @@ Cannot say: that Архангел, ЦБСТ, «Наша Правда» or their 
 ## 5. To close (need a read, mostly off this machine)
 
 1. **DW documentary** «Targeting Civilians: How Russian Drones Terrorize a Ukrainian City»: which unit does it say "205th" is, and on what evidence? (CIR's article links it; watch or transcribe.)
+   **24.10.2026, not closed.** Its public listing (artdoc.media, 28 min, DW 2024, Beryslav) names no unit and carries no transcript. The film itself is a 28-minute video that cannot be watched from this session, so what it says about the 205th stays unread. Needs the user to watch it (or the archive Mac to pull a transcript); until then CIR's wording is the only source for the 205th.
 2. **UN Commission papers** (A/HRC/59/CRP.2 of May 2025, A/80/497 of Oct 2025): units named, the «Днепр» group finding. OHCHR returns 403 here; fetch on the archive Mac.
 3. **A source stating the 205th's parent formation** (49th Army or other) and its sector in 2025–26; only then a unit record under the unit-naming rules.
 4. **The Kherson-oblast ООО «Архангел»**: ЕГРЮЛ search by name, and what ГУБП ВС РФ means in the project's post.
