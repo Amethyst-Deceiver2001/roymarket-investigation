@@ -25,7 +25,7 @@ Not used: a Ukrainian channel's 2025 naming of individual operators (Wikipedia r
 
 ### 3.1 The ЦБСТ-tied Архангел network recruits for the 205th brigade (the strongest link)
 
-Our records tie Архангел to ЦБСТ by ЦБСТ's own channel: «Архангел» as an accelerator finalist (post 1976, 17.03.2026), and «Архангел» named among resident companies in the EU's 20th sanctions package (post 2095, 24.04.2026, with the EU act). The channel `projectArchangel` states, in its own words:
+**Correction (24.10.2026):** the ЦБСТ posts 1976 (accelerator finalist) and 2095 (EU 20th package) name «Архангел» the interceptor-drone maker, which the registry resolves to ООО «Архангел» (ИНН 9714079108, director Шатракова) by its director's name; **no document on file links that company to the training project that runs `projectArchangel`.** A brand never merges entities. The project's own tie to ЦБСТ is `t-open`: ЦБСТ's post 1562 (25.11.2025) says a resident's anti-drone simulator mode runs at the project's Туапсе training centre. The project's place in Барс-Сармат rests on Рогозин's post of 22.04.2025 [s6915]. Earlier text in this note that called the project «ЦБСТ-tied» through 1976 and 2095 is wrong on that point. The channel `projectArchangel` states, in its own words:
 
 - **01.12.2025 (9067):** «Заключай контракт с Министерством обороны и неси дальнейшую службу в подразделении БПЛА 205-ой Гв ОМСБр.» The course ends: «Выпускной экзамен — это Твое первое боевое задание, на котором Ты … поразишь свою первую цель.» Signed «205-я Бригада».
 - **08.03.2026 (9685):** greetings «от лица службы БпС 205 омсбр».

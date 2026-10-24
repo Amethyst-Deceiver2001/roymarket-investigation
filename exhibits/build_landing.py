@@ -20,7 +20,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "exhibits"))
 sys.path.insert(0, str(REPO / "scripts"))
 from build_chain_view import CBST, Chain, cap, esc, load, money  # noqa: E402
-from display_helpers import NAME_JS, design_head, display_name, latin_text, latinize_gloss, name_html, person_names, popup_originals, quote_html, reader_grade, ru_date, sanction_regimes  # noqa: E402
+from display_helpers import NAME_JS, design_head, display_name, latin_text, latinize_gloss, name_html, orig_line, person_names, popup_originals, quote_html, reader_grade, ru_date, sanction_regimes  # noqa: E402
 from graph_contract import source_grade  # noqa: E402
 
 MPTM, NP, PSB, SIDYAKIN = "ooo-mptm", "fond-nasha-pravda", "pao-bank-psb", "aleksandr-sidyakin"
@@ -47,6 +47,44 @@ OPENING_SOURCES = {
                   "https://www.ukrinform.ua/rubric-regions/4172418-vorog-vdariv-dronom-po-budivli-zaporizkoi-ova.html"),
     "tsentr": ("Telegram, @ANO_CBST, post 2610, 04.10.2026", "https://t.me/ANO_CBST/2610"),
     "yakim": ("Telegram, @asidyakin (Alexander Sidyakin), post 1405, 15.10.2026", "https://t.me/asidyakin/1405"),
+    # The supplier page and the Kherson section (24.10.2026): saved as WEBCAPTURE/PDF files on this machine, not catalogued.
+    "rm_aug": ("ROY.MARKET, «Начать продавать на РОЙ.МАРКЕТ» (page for prospective sellers), Internet Archive copy of 22.08.2026",
+               "https://web.archive.org/web/20260822091346/https://xn--80akkfikneu.xn--p1ai/"),
+    "rm_oct": ("The same page, Internet Archive copy of 12.10.2026",
+               "https://web.archive.org/web/20261012125816/https://xn--80akkfikneu.xn--p1ai/"),
+    "rm_now": ("The same page as published on 24.10.2026", "https://xn--80akkfikneu.xn--p1ai/"),
+    "un_crp": ("Independent International Commission of Inquiry on Ukraine, «“They are hunting us”: systematic drone "
+               "attacks targeting civilians in Kherson», UN document A/HRC/59/CRP.2, 28.05.2025",
+               "https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/coiukraine/a-hrc-59-crp2-en.pdf"),
+    "un_ga": ("Independent International Commission of Inquiry on Ukraine, report to the UN General Assembly, A/80/497, 21.10.2025",
+              "https://docs.un.org/en/A/80/497"),
+    "cir": ("Centre for Information Resilience, «Tracing the Russian units responsible for drone attacks in Kherson», with DW, 2024",
+            "https://www.info-res.org/eyes-on-russia/articles/tracing-the-russian-units-responsible-for-drone-attack-in-kherson/"),
+    "arch_9067": ("Telegram, @projectArchangel, post 9067, 01.12.2025", "https://t.me/projectArchangel/9067"),
+    "arch_10667": ("Telegram, @projectArchangel, post 10667, 17.08.2026", "https://t.me/projectArchangel/10667"),
+    "cbst_1562": ("Telegram, @ANO_CBST, post 1562, 25.11.2025", "https://t.me/ANO_CBST/1562"),
+    "osv_27702": ("Telegram, @osvedomitell_alex («От Мариуполя до Карпат»), post 27702, 23.07.2025", "https://t.me/osvedomitell_alex/27702"),
+    "osv_19953": ("Telegram, @osvedomitell_alex, post 19953, 19.08.2024", "https://t.me/osvedomitell_alex/19953"),
+    "osv_36192": ("Telegram, @osvedomitell_alex, post 36192, 24.07.2026", "https://t.me/osvedomitell_alex/36192"),
+    "osv_38703": ("Telegram, @osvedomitell_alex, post 38703, 24.10.2026", "https://t.me/osvedomitell_alex/38703"),
+    "rog_8057": ("Telegram, @rogozin_do (Dmitry Rogozin), post 8057, 19.01.2026", "https://t.me/rogozin_do/8057"),
+    "rog_7780": ("Telegram, @rogozin_do (Dmitry Rogozin), post 7780, 12.11.2025", "https://t.me/rogozin_do/7780"),
+    "np_280": ("Telegram, @nashapravdafond, post 280, 07.05.2024", "https://t.me/nashapravdafond/280"),
+    "np_580": ("Telegram, @nashapravdafond, post 580, 05.03.2026", "https://t.me/nashapravdafond/580"),
+    "gag_2811": ("Telegram, @my_el_lab (Gagaring), post 2811, 23.12.2025", "https://t.me/my_el_lab/2811"),
+}
+# Two lines of the supplier page, read from the saved copies; not in the Telegram scrape, so not checked by oq().
+SUPPLIER_LINES = {
+    "dual": ("РОЙ.МАРКЕТ - защищённый канал продаж товаров двойного назначения.",
+             "ROY.MARKET is a secure sales channel for dual-use goods."),
+    "special": ("РОЙ.МАРКЕТ - защищённый канал продаж товаров специального назначения.",
+                "ROY.MARKET is a secure sales channel for special-purpose goods."),
+}
+# English-original passages of the UN papers, copied from the PDFs (A/HRC/59/CRP.2 para 42; A/80/497 para 40).
+UN_QUOTES = {
+    "safari": ("Russian Federation soldiers behave like this is a safari […]; they are simply chasing and hunting civilians who "
+               "are on their way to work or walking their dogs."),
+    "dnepr": ("They are affiliated with various army units, all of which are part of the “Dnepr” Group of Forces"),
 }
 OPENING_QUOTES = {   # key: (channel, post, verbatim Russian, our translation)
     "gag": ("my_el_lab", 5142,
@@ -73,6 +111,60 @@ OPENING_QUOTES = {   # key: (channel, post, verbatim Russian, our translation)
               "This is part of the «Yakim» system, which was developed by TsBST and has been helping to control the region's "
               "airspace for a year now. […] In future we plan to link «Yakim» with the military system «Svod» for better "
               "analysis of the situation. We also want to connect automatic machine-gun turrets"),
+    "cbst_1562": ("ANO_CBST", 1562,
+                  "режим внедрён в Михайловской военной артиллерийской академии и в новом учебном центре БПЛА «Архангел» в Туапсе",
+                  "the mode has been introduced at the Mikhailovsky Military Artillery Academy and at the new «Arkhangel» drone "
+                  "training centre in Tuapse"),
+    "arch_9067": ("projectArchangel", 9067,
+                  "Заключай контракт с Министерством обороны и неси дальнейшую службу  в подразделении БПЛА 205-ой Гв ОМСБр. […] "
+                  "Выпускной экзамен - это Твое первое боевое задание, на котором Ты под присмотром строгих инструкторов поразишь свою первую цель.",
+                  "Sign a contract with the Ministry of Defence and go on to serve in the drone unit of the 205th Guards Separate "
+                  "Motor Rifle Brigade. […] The final exam is your first combat mission, in which, under the eye of strict "
+                  "instructors, you will hit your first target."),
+    "arch_10667": ("projectArchangel", 10667,
+                   "205-ая бригада - гроза Херсонской области. Парни работают и на перехвате и на ударниках, частенько передают приветы.",
+                   "The 205th brigade is the terror of Kherson region. The guys work both on interception and on strike drones, "
+                   "and often send their regards."),
+    "osv_27702": ("osvedomitell_alex", 27702,
+                  "Бериславский отрезок фронта. Работают мужчины из стали 205 бригада 49 ОА ГВ \"Днепр\" […] "
+                  "Любое передвижение автотранспорта будет считаться законной целью. Все объекты критической инфраструктуры являются законной целью.",
+                  "Beryslav sector of the front. The men of steel of the 205th brigade, 49th Combined Arms Army, «Dnepr» Group of "
+                  "Forces, at work […] Any movement of vehicles will be considered a legitimate target. All objects of critical "
+                  "infrastructure are a legitimate target."),
+    "osv_19953": ("osvedomitell_alex", 19953,
+                  "Операторы работали точечно, так как наблюдали поблизости гражданских. Не находитесь рядом с автотранспортом, "
+                  "не передвигайтесь в красной зоне. Вся техника будет уничтожена.",
+                  "The operators worked precisely, as they observed civilians nearby. Do not stay near vehicles, do not move "
+                  "about in the red zone. All vehicles will be destroyed."),
+    "osv_36192": ("osvedomitell_alex", 36192,
+                  "Транспорт двойного назначения. Противник в очередной раз использует кареты скорой помощи для подвоза БК […] "
+                  "Естественно, техника будет уничтожаться и уничтожается.",
+                  "Dual-use transport. Once again the enemy is using ambulances to bring up ammunition […] Naturally, the "
+                  "vehicles will be destroyed and are being destroyed."),
+    "osv_38703": ("osvedomitell_alex", 38703,
+                  "Транспорт двойного назначения. Расчет Родной выявил технику, которая перемещается по Красной зоне под видом ритуальных услуг.",
+                  "Dual-use transport. The «Rodnoy» crew spotted a vehicle moving through the Red Zone in the guise of funeral "
+                  "services."),
+    "rog_8057": ("rogozin_do", 8057,
+                 "Центр специального назначения беспилотных систем \"Барс-Сармат\", командиром которого я являюсь, выполняет "
+                 "боевые задачи командующего ВДВ и Генерального штаба.",
+                 "The «Bars-Sarmat» special-purpose centre for unmanned systems, which I command, carries out combat tasks of "
+                 "the commander of the Airborne Forces and of the General Staff."),
+    "rog_7780": ("rogozin_do", 7780,
+                 "многие наши союзники — армейские подразделения Группировки войск \"Днепр\" и части ВДВ предпочитают использовать "
+                 "в качестве боевой части штурмовых дронов боеприпасы, разработанные инженерами ЦСН \"Барс-Сармат\"",
+                 "many of our allies, army units of the «Dnepr» Group of Forces and Airborne units, prefer to use munitions "
+                 "developed by the engineers of the «Bars-Sarmat» centre as the warheads of assault drones"),
+    "np_580": ("nashapravdafond", 580,
+               "Автомобиль, который ранее Фонд «Наша Правда» передал участникам спецоперации, бойцы 18 армии дооборудовали РЭБ "
+               "и успешно используют для доставки грузов на ЛБС и переброски личного состава.",
+               "A vehicle that the Nasha Pravda Foundation earlier handed to participants in the «special operation» has been "
+               "fitted with electronic warfare by fighters of the 18th Army, who use it successfully to deliver cargo to the "
+               "line of contact and to move personnel."),
+    "gag_2811": ("my_el_lab", 2811,
+                 "Воины 49-й Армии на страже неба Днепра... […] Без Совы перехватывать видео  было бы на много тяжелее",
+                 "Warriors of the 49th Army guarding the sky over the Dnipro… […] Without the Sova, intercepting video would be "
+                 "much harder"),
 }
 
 
@@ -503,7 +595,81 @@ class Landing(Chain):
             'down to a trident coat of arms on its façade; the last eight seconds are a separate vertical clip, with its own '
             'watermark, of the coat of arms hanging damaged from its frame. That is consistent with the report of 8 October, '
             'but neither post dates the strike, we have not placed the building on a map, and the impact itself is not in the '
-            'frames we checked.</p>')
+            'frames we checked.</p>'
+            + self.dual_use())
+
+    def dual_use(self):
+        """The label on the order line: the supplier page's own sentence before and after it changed."""
+        (d_ru, d_en), (s_ru, s_en) = SUPPLIER_LINES["dual"], SUPPLIER_LINES["special"]
+        return (
+            f'<p>TsBST\'s “dual-use” is the platform\'s own label. From August 2026 its page for prospective sellers opened with '
+            f'{orig_line(d_ru, "rm-dual", d_en)}{self.tref("rm_aug")} The copy archived on 12 October still did'
+            f'{self.tref("rm_oct")}. By 24 October the same sentence read {orig_line(s_ru, "rm-special", s_en)}'
+            f'{self.tref("rm_now")} The kamikaze drone in TsBST\'s post used the two products it advertises; the platform\'s '
+            f'public terms and buyer offer use neither phrase.</p>')
+
+    @staticmethod
+    def un_quote(key, cite):
+        """A passage of a UN paper, quoted in its original English: no translation, no RU control."""
+        return (f'<blockquote class="rm-quote"><span class="rm-label">Quotation</span>'
+                f'<span class="q">“{esc(UN_QUOTES[key])}”</span><cite>{cite}</cite></blockquote>')
+
+    def front(self):
+        """The Kherson drone campaign: the UN's finding, the circle's own ties to the formations it names, and how the
+        units' channels describe their targets. Three layers, each at the level its documents support."""
+        intro = (
+            f'<p class="lede">In May 2025 the UN\'s Independent International Commission of Inquiry on Ukraine concluded that '
+            f'Russian drone operators on the left bank of the Dnipro had spent ten months attacking civilians in Kherson, and '
+            f'that the attacks amount to the crime against humanity of murder{self.tref("un_crp")}. In October it extended the '
+            f'finding to 300 km of the river and three regions, and named the formation the operators serve in:</p>'
+            + self.un_quote("dnepr", f'UN report A/80/497, para. 40, 21.10.2025{self.tref("un_ga")}') +
+            f'<p>The Commission names the 18th Combined Arms Army; it names no brigade. The Centre for Information Resilience '
+            f'and DW named the 205th among three units whose drones were at work over Beryslav during the attacks there, and '
+            f'said they could not prove who carried them out{self.tref("cir")}. The 205th is a motor-rifle brigade; the channel '
+            f'that posts its footage, under the brigade\'s emblem, places it in the 49th Army{self.tref("osv_27702")}. A senior '
+            f'doctor at a Kherson hospital told the Commission:</p>'
+            + self.un_quote("safari", f'UN paper A/HRC/59/CRP.2, para. 42, 28.05.2025{self.tref("un_crp")}'))
+        np_ = self.ents[NP]
+        rows = [
+            ("«Arkhangel» drone school", "open",
+             "TsBST's own channel says a resident's anti-drone simulator runs at the school's training centre in Tuapse"
+             + self.tref("cbst_1562") + ". The school's channel recruits operators for the 205th brigade" + self.tref("arch_9067")
+             + ", which it calls “the terror of Kherson region”" + self.tref("arch_10667")
+             + ". The school says it trains within Bars-Sarmat, Dmitry Rogozin's drone centre" + self.ref("s6915") + "."),
+            ("Bars-Sarmat", "rep",
+             "Its commander, Dmitry Rogozin, says the centre fights for the commander of the Airborne Forces and that units of "
+             "the «Dnepr» Group of Forces fit its munitions to their assault drones" + self.tref("rog_8057") + self.tref("rog_7780") + "."),
+            (np_, "rep",
+             "reports delivering 100 strike drones to fighters of the 49th Army on the Kherson direction in May 2024"
+             + self.tref("np_280") + ", and a vehicle now used by the 18th Army to move cargo and troops to the front line"
+             + self.tref("np_580") + "."),
+            (self.ents["ooo-gagaring"], "rep",
+             "the maker of the Kuznechik and Sova posts thanks from 49th Army air-defence crews who use the Sova to intercept "
+             "drone video over the Dnipro" + self.tref("gag_2811") + "."),
+        ]
+        lis = []
+        for who, g, text in rows:
+            name = who if isinstance(who, str) else self.en(who, pop=True)
+            lis.append(f'<li><span class="from">{name}</span>{ln(g)}<span class="what">{text}</span>'
+                       f'<span class="rm-grade {g}">{esc({"doc": "Documented", "rep": "Reported", "open": "Not documented"}[g])}</span></li>')
+        return (
+            intro +
+            '<h3 class="rm-h3">What TsBST\'s circle says about that front</h3>'
+            f'<ul class="ledger front" aria-label="Ties to the formations the UN names">{"".join(lis)}</ul>'
+            + self.oq("arch_9067", f'«Arkhangel», Telegram, 01.12.2025{self.tref("arch_9067")}') +
+            '<h3 class="rm-h3">What the units say about their targets</h3>'
+            f'<p>The Commission reproduces posts of a Kherson-front channel, «From Mariupol to the Carpathians», as figures in '
+            f'its paper{self.tref("un_crp")}. The channel signs its strike videos with the units\' names. Under footage of the '
+            f'205th brigade:</p>'
+            + self.oq("osv_27702", f'«From Mariupol to the Carpathians», Telegram, 23.07.2025{self.tref("osv_27702")}') +
+            '<p>Under a video of a van being struck in a residential yard:</p>'
+            + self.oq("osv_19953", f'the same channel, 19.08.2024{self.tref("osv_19953")}') +
+            '<p>And under the heading the platform used for its sellers:</p>'
+            + self.oq("osv_36192", f'the same channel, 24.07.2026{self.tref("osv_36192")}')
+            + self.oq("osv_38703", f'the same channel, 24.10.2026, over a clip watermarked by the 98th Airborne Division{self.tref("osv_38703")}') +
+            '<p class="note"><span class="rm-grade rep">Reported</span> The ties above are the parties\' own posts. They show '
+            'TsBST\'s circle supplying and recruiting for the formations the UN names; they do not show that any item from it '
+            'was used against civilians, and the UN names no unit below the army.</p>')
 
     def beyond_shop(self):
         """Two of TsBST's own lines on what it does besides the shop."""
@@ -628,6 +794,7 @@ def render(preview: bool, out: Path):
     sid_name_l = sid_name.replace(f'id="nm-{SIDYAKIN}"', f'id="nm-{SIDYAKIN}-q"').replace(
         f'popovertarget="nm-{SIDYAKIN}"', f'popovertarget="nm-{SIDYAKIN}-q"')
     ledger = L.ledger()
+    front = L.front()
     beyond = L.beyond_shop()
     chains = "".join(L.chain_card(s, url if preview else (f"chain_{s}.html" if (out.parent / f"chain_{s}.html").exists() else None))
                      for s, url in CHAINS.items())
@@ -673,6 +840,11 @@ def render(preview: bool, out: Path):
         <p class="row"><span class="rm-id">INN {esc(c['inn'])}</span> <span class="rm-id">OGRN {esc(c['ogrn'])}</span></p></article>
       <ul class="ledger" aria-label="Relations">{ledger}</ul>
     </div>
+  </section>
+
+  <section class="front-sec" aria-labelledby="h-front">
+    <h2 class="rm-h2" id="h-front">The front it supplies</h2>
+    {front}
   </section>
 
   <section class="beyond" aria-labelledby="h-beyond">

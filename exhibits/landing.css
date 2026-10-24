@@ -195,3 +195,10 @@ main section > .rm-h2 { margin-top: 0; }
   .flow .join .ln { transform: rotate(90deg); width: 28px; flex: none; }
   .flow .join span { text-align: left; }
 }
+/* The front it supplies (24.10.2026): layout only */
+.front-sec p, .front-sec .rm-h3 { max-width: var(--measure); }
+.front-sec p { color: var(--ink-2); margin: 0 0 var(--space-3); }
+.front-sec .rm-quote { max-width: 720px; margin: 0 0 var(--space-3); }
+.front-sec .rm-h3 { margin: var(--space-5) 0 var(--space-3); }
+.front-sec .ledger.front { margin: 0 0 var(--space-4); }
+.front-sec .note .rm-grade { margin-right: 6px; }
