@@ -18542,6 +18542,12 @@
             "text": "2026-09-05: 5 filing-year(s) of targeted-funding figures recovered from БФО filings already on disk. They had parsed as empty because scripts/parse_bfo_financials.py read only the P&L sheet, which is blank on every non-profit filing — a parser gap, not a missing document.",
             "source_id": "s0296"
           }
+        ],
+        "open_questions": [
+          {
+            "text": "The working note carried over from the old brief (_raw, not shown on any page) says ДАР is 'reflected in Western sanctions reasoning as a holder of Medvedev's undisclosed assets'. ДАР has no sanctions entry and the note names no list. Read the official listing reasons that name ДАР, or drop the phrase. Source of the underlying allegation: ФБК, «Он вам не Димон» (2017, https://dimon.navalny.com/, read in full 24.10.2026; see notes/source_fbk_dimon_2017.md). It is ФБК's allegation, which the piece records Медведев denying through his press secretary; our own documents establish only that ДАР is founded by ООО «ЛЕВИТ» and, with Градислава, founded Наша Правда.",
+            "source_id": null
+          }
         ]
       },
       "verified_against": "s0214 — Фонд «ДАР»'s own full signed ЕГРЮЛ extract, pulled 15.08.2026",
@@ -18658,6 +18664,12 @@
           {
             "text": "2026-09-05: read A40-106643/2023 (2 files, s5264/s5265) as part of a Tier-2 uncited-source sweep. Confirmed routine/trivial per the litigation[] note; no further action.",
             "source_id": "s5265"
+          }
+        ],
+        "open_questions": [
+          {
+            "text": "Earlier directors are not on file: director_history starts with Карабинский on 17.12.2021 (s0216). ФБК (2017) says Андрей Викторович Жменя, earlier director of «Скалистый берег», later became Градислава's director, and calls Карабинский a ДАР employee (lead, not read in an extract). Needs an earlier ЕГРЮЛ extract or the register's history for ИНН 7704278421. Source: notes/source_fbk_dimon_2017.md.",
+            "source_id": null
           }
         ]
       },
