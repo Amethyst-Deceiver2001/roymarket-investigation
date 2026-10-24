@@ -63,7 +63,9 @@ REASONS = ("cited", "delivery", "registry", "uncaptioned")  # priority order on 
 LABELS = ("handover", "equipment", "people", "document", "logo", "combat", "screenshot", "facility",
           "nothing")
 MISSION = ("ties", "none", "unclear")   # does the picture tie to ЦБСТ / Наша Правда / РОЙ.МАРКЕТ? (a separate call from `label`)
-RE_HANDOVER = re.compile(r"передал|передач|вручил|доставил|отправил|груз|гуманитар|бойцам|подразделени|группировк", re.I)
+RE_HANDOVER = re.compile(r"передал|передач|вручил|доставил|привез|привёз|отправил|гуманитар|помощь|поставил", re.I)   # the act
+RE_CONTEXT = re.compile(r"бойцам|подразделени|группировк|груз|фронт|партию|партия", re.I)                            # where it goes
+RE_NOT_HANDOVER = re.compile(r"награ|медал|орден|грамот|благодарност", re.I)                                        # ceremonies
 FONT_PATHS = ("/System/Library/Fonts/Supplemental/Arial.ttf", "/Library/Fonts/Arial.ttf",
               "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
 IMAGE_EXT = {".jpg", ".jpeg", ".png", ".webp"}
@@ -210,10 +212,13 @@ def id_hits(text: str) -> list[str]:
 
 def text_score(caption: str, reasons: dict, hits: list | None = None) -> int:
     """How strongly the post's own text points at a handover: the caption decides before the picture does."""
-    score = len(set(m.lower() for m in RE_HANDOVER.findall(caption or "")))
+    words = len(set(m.lower() for m in RE_HANDOVER.findall(caption or "")))
+    score = 3 * words + min(2, len(set(m.lower() for m in RE_CONTEXT.findall(caption or ""))))
+    score -= 3 * bool(RE_NOT_HANDOVER.search(caption or ""))
     d = (reasons.get("delivery") or "").split("/")[-1]
     score += (3 if d == "strong" else 1) if d else 0
-    score += 2 * bool(reasons.get("registry")) + bool(hits)
+    if words or d:   # a resident or product named counts, but only in a post that also reads as a handover
+        score += 2 * bool(reasons.get("registry")) + bool(hits)
     return score
 
 
@@ -561,9 +566,9 @@ def cmd_sheets(args) -> None:
     q = load_json(QUEUE, {}).get("items", [])
     processed = load_json(PROCESSED, {})
     cands = sheet_candidates(q, processed, load_json(LEDGER, {}))
-    prio = {r: i for i, r in enumerate(REASONS)}   # reason group first, then likeliest evidence (CLIP) first
-    cands.sort(key=lambda it: (min(prio[r] for r in it["reasons"]),
-                               -(it.get("text_score") or 0) - len(processed.get(it["file"], {}).get("text_hits") or []),
+    prio = {r: i for i, r in enumerate(REASONS)}
+    cands.sort(key=lambda it: (-text_score(it["caption"], it["reasons"]),   # the caption first, then the reason group, then CLIP
+                               min(prio[r] for r in it["reasons"]),
                                -evidence_score(processed.get(it["file"], {}).get("clip"))))
     per = GRID * GRID
     n_sheets = min(args.max, (len(cands) + per - 1) // per)
