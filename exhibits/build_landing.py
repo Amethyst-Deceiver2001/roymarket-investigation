@@ -818,6 +818,11 @@ class Landing(Chain):
         return (f'<button class="shot" type="button" data-fig="fig-o{i}" aria-label="{esc(shows)}">'
                 f'<img src="{esc(rel)}" alt=""><span class="cap">{esc(label)}</span></button>')
 
+    def step_shot(self, i, caption):
+        """A screenshot from SHOTS under a step of the origin story, with its own plain caption. Preview only."""
+        btn = self.shot(i)
+        return f'<figure class="step-shot">{btn}<figcaption>{esc(caption)}</figcaption></figure>' if btn else ""
+
     def gag_video(self):
         """The 25-second clip from Gagaring's post, playable. Preview only: the file is not catalogued, and a public
         page shows key frames plus a link to the archived original."""
@@ -955,8 +960,10 @@ class Landing(Chain):
              f'party, Bank PSB and TsBST had launched a military marketplace. In August 2026 the platform opened to outside sellers '
              f'and named the ones it wanted first.</p>'
              + quote_html(recruit["text_ru"], latinize_gloss(recruit["text_en"]),
-                          f"ROY.MARKET's announcement, {ru_date(recruit['as_of'])}{self.ref(recruit['source_id'])}", "q-recruit") +
-             '<p>Its target was the seller base we had already mapped.</p>'),
+                          f"ROY.MARKET's announcement, {ru_date(recruit['as_of'])}{self.ref(recruit['source_id'])}", "q-recruit")
+             + self.step_shot(3, "ROY.MARKET's page for prospective sellers as it reads now, captured 24.10.2026. The August version "
+                                 "is archived as text only. The catalogue itself is behind a login.")
+             + '<p>Its target was the seller base we had already mapped.</p>'),
             ("The site hid its operator. An older copy did not",
              f'<p>The platform\'s public terms print the operator as “OOO «****»”. A copy archived on 22.08.2026 names it: '
              f'{self.pop(MPTM)}, INN 9714068459. TsBST\'s own report to the Justice Ministry lists the same company as one it has '
