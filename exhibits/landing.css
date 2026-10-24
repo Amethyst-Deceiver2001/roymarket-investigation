@@ -219,3 +219,17 @@ main section > .rm-h2 { margin-top: 0; }
 .hero-credit { align-self: flex-start; margin-top: var(--space-4); padding: 0; border: 0; background: none; cursor: zoom-in;
   font: 400 12px/1.3 var(--font-mono); color: var(--ink-2); text-decoration: underline dotted; text-underline-offset: 3px; }
 .hero-credit:hover, .hero-credit:focus-visible { color: var(--accent); }
+
+.limits details { border: 1px solid var(--rule); border-radius: var(--radius); background: var(--panel); padding: 0 var(--space-3); max-width: 720px; }
+.limits summary { cursor: pointer; list-style: none; padding: 12px 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.limits summary::-webkit-details-marker { display: none; }
+.limits summary::after, .fold summary::before { content: "+"; font: 600 18px/1 var(--font-mono); color: var(--ink-3); flex: none; }
+.limits details[open] summary::after { content: "\2212"; }
+.limits summary h2 { margin: 0; }
+.limits ul { margin: 0 0 var(--space-3); }
+.fold > summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 10px; padding: 10px 14px; border: 1px solid var(--rule);
+  border-radius: var(--radius); background: var(--panel); font: 600 12px/1.2 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); }
+.fold > summary::-webkit-details-marker { display: none; }
+.fold[open] > summary::before { content: "\2212"; }
+.fold[open] > summary { margin-bottom: var(--space-3); }
+.fold > summary:hover, .fold > summary:focus-visible, .limits summary:focus-visible { color: var(--ink); }
