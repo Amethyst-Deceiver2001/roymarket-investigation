@@ -196,6 +196,19 @@ sup.rm-ref a:hover { text-decoration: underline; }
 .rm-card .rm-thumb { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: var(--panel-2);
   border-radius: 3px; margin: 6px 0 4px; }
 
+/* Contents bar: sticky row of in-page links under a page header; the link for the section in view is marked. Scrolls sideways
+   when it does not fit. Chrome only: it carries no finding. */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+.toc { position: sticky; top: 0; z-index: 20; background: var(--paper); border-bottom: 1px solid var(--rule); }
+.toc ol { list-style: none; margin: 0 auto; padding: 0 var(--space-5); max-width: 1680px; display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+.toc ol::-webkit-scrollbar { display: none; }
+.toc a { display: block; padding: 15px 10px 13px; border-bottom: 2px solid transparent; white-space: nowrap; text-decoration: none;
+  font: 600 11px/1 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); }
+.toc a:hover, .toc a:focus-visible { color: var(--ink); }
+.toc a[aria-current="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+@media (max-width: 520px) { .toc ol { padding-inline: var(--space-4); } }
+
 /* Thumbnail strip: the pictures that support one card or one line on it. Each opens full size with its caption. */
 .rm-thumbs { display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0 2px; align-items: center; }
 .rm-thumbs .lbl { font: 600 10px/1.2 var(--font-mono); letter-spacing: .05em; text-transform: uppercase; color: var(--ink-3);

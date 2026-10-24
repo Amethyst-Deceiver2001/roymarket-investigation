@@ -1037,6 +1037,39 @@ def unique_popovers(doc):
 
 
 # The chain view's picture viewer, shared rather than copied: everything in chain_view.js from its comment on.
+# The contents bar: (section heading id, short label), in page order.
+TOC_ITEMS = [("h-open", "The strike"), ("h-limits", "Limits"), ("h-hub", "Who stands behind"), ("h-front", "The front"),
+             ("h-beyond", "Beyond the shop"), ("h-chains", "Products"), ("h-net", "Network"), ("h-origin", "How we found it"),
+             ("h-read", "How to read"), ("h-method", "Method"), ("h-sources", "Sources")]
+TOC = ('<nav class="toc" aria-label="Contents"><ol>' + "".join(f'<li><a href="#{i}">{esc(t)}</a></li>' for i, t in TOC_ITEMS)
+       + '</ol></nav>')
+TOC_JS = """// Contents bar: mark the section in view
+(function () {
+  var links = document.querySelectorAll('.toc a');
+  if (!links.length || !('IntersectionObserver' in window)) return;
+  var byId = {};
+  links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+  var seen = {};
+  function mark() {
+    var cur = null;
+    Object.keys(byId).forEach(function (id) { if (seen[id]) cur = id; });
+    links.forEach(function (a) { a.removeAttribute('aria-current'); });
+    if (cur) {
+      byId[cur].setAttribute('aria-current', 'true');
+      var bar = byId[cur].closest('ol');
+      var a = byId[cur];
+      if (bar && (a.offsetLeft < bar.scrollLeft || a.offsetLeft + a.offsetWidth > bar.scrollLeft + bar.clientWidth)) {
+        bar.scrollTo({left: a.offsetLeft - 16, behavior: 'smooth'});
+      }
+    }
+  }
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { seen[e.target.id] = e.isIntersecting; });
+    mark();
+  }, {rootMargin: '-52px 0px -60% 0px'});
+  Object.keys(byId).forEach(function (id) { var h = document.getElementById(id); if (h) io.observe(h); });
+})();
+"""
 VIEWER_JS = "// Picture viewer" + (REPO / "exhibits" / "chain_view.js").read_text().split("// Picture viewer", 1)[1]
 
 
@@ -1099,6 +1132,7 @@ def render(preview: bool, out: Path):
   document and is graded by how well that document shows it.</p>
   {hero_credit}
 </header></div>
+{TOC}
 <main class="rm-page">
   <section class="open" aria-labelledby="h-open">
     <h2 class="rm-h2" id="h-open">A strike, then a sales line</h2>
@@ -1208,12 +1242,13 @@ def render(preview: bool, out: Path):
     </ul>
   </section>
 
-  <section class="rm-prose rm-sources"><h2 class="rm-h2">Sources</h2><ol>{L.notes_list()}</ol></section>
+  <section class="rm-prose rm-sources" aria-labelledby="h-sources"><h2 class="rm-h2" id="h-sources">Sources</h2><ol>{L.notes_list()}</ol></section>
 </main>
 {''.join(f'<template id="fig-{k}">{v}</template>' for k, v in L.templates.items())}
 <dialog class="rm-lightbox" id="lightbox" aria-label="Picture"><div class="bar"><button type="button" data-close>Close</button></div><div class="body"></div></dialog>
 <script>{VIEWER_JS}
-{NAME_JS}</script>
+{NAME_JS}
+{TOC_JS}</script>
 </body></html>
 """
     out.write_text(unique_popovers(popup_originals(doc)))

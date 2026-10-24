@@ -233,3 +233,6 @@ main section > .rm-h2 { margin-top: 0; }
 .fold[open] > summary::before { content: "\2212"; }
 .fold[open] > summary { margin-bottom: var(--space-3); }
 .fold > summary:hover, .fold > summary:focus-visible, .limits summary:focus-visible { color: var(--ink); }
+
+/* Headings clear the sticky contents bar when jumped to. */
+.rm-h2 { scroll-margin-top: 56px; }
