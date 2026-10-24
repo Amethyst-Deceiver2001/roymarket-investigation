@@ -282,9 +282,9 @@ a registry fact.
 | Missing/stale ЕГРЮЛ, ЕГРИП, БФО; missing/stale OpenSanctions, ГУР, Aleph screens | `status_board.py --pull-queue` (8 + 8 a day, top tiers first; re-screens 4 OpenSanctions + 8 ГУР + 8 Aleph a day; ingest steps incl. the graph rebuild printed after) | the user's Mac; the queue is the user's standing go-ahead, run as printed |
 | First reading of what arrived | `first_reading.py export --local-dir data/sources/_inbox` (Mac only, since 05.10.2026 — `--push`/pull-inbox and the cloud routine that read it are retired, issue #30), then `read` | worksheet for a human; never merged, never applied |
 | Sanctions lists by ИНН/ОГРН | `sanctions_watch.py` | retired as a scheduled job 22.10.2026 (Actions minutes unavailable; user); run by hand where the hosts are reachable; `watch/sanctions` holds the 05.10.2026 snapshot |
-| Public copies of cited pages | `archive_sources.py run` | GitHub Actions `wayback.yml`, weekly, Wednesdays, 40 URLs, 60 min (capped 21.10.2026); Telegram via per-channel lookup and preview pages |
+| Public copies of cited pages | `archive_sources.py run` | abandoned 24.10.2026 (user): it ran on GitHub Actions, which is no longer used; run by hand when a capture is wanted |
 | Timestamped fingerprints of every source file | `timestamp_sources.py build && … stamp` | the Mac, after new sources; first run 03.10.2026 (8,935 files, FreeTSA + DigiCert; 121 files differ from their catalogued hash, listed) |
-| Tests, registry check, tag balance | `.github/workflows/checks.yml` | every push to main and every PR |
+| Tests, registry check, tag balance | run locally before each commit (`.github/workflows/checks.yml` is abandoned with GitHub Actions, 24.10.2026) | the main session |
 | Status board kept current between rounds | `ops/git-hooks/pre-commit` (`git config core.hooksPath ops/git-hooks`) | the main session's local commits, any that touch a fact file |
 
 Still by hand (no tool selects per record):

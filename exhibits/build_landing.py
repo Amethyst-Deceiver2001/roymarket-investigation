@@ -473,7 +473,7 @@ class Landing(Chain):
         nodes = [("8 October", "Zaporizhzhia", "The head of the regional administration reports that an FPV drone hit the coat of arms on its building.", "rep"),
                  ("19 October", "Gagaring", "The maker posts a video of “the results” of its Kuznechik and Sova 5.8.", "rep"),
                  ("20 October", "TsBST", "Re-posts it as “a TsBST resident showed footage of the strike” and names both products.", "rep"),
-                 ("Order line", "ROY.MARKET", "“Servicemen can order them” there. We have not yet checked the catalogue.", "rep")]
+                 ("Order line", "ROY.MARKET", "“Servicemen can order them” there. The catalogue is behind a login, so TsBST's post is the only evidence.", "rep")]
         joins = [("open", "neither post dates the strike"), ("rep", "same video"), ("rep", "sales line")]
         flow = []
         for i, (d, who, what, g) in enumerate(nodes):

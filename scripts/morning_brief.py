@@ -11,8 +11,7 @@ and the next records by priority. It is written for one reader, the user, and fo
 Everything is computed except the hand-kept list in data/watch/brief_items.json (what is ready, what is stuck for
 a reason no file shows, decisions only the user can make). Close an item there with "status": "closed" and a note;
 nothing is deleted. The board's own checks (scripts/status_board.py) supply the system signals and the priority
-order, so the brief never disagrees with the board. Local only; `gh` is asked for the last CI run if it is
-installed and answers within a few seconds.
+order, so the brief never disagrees with the board. Local only. It never reports GitHub Actions: abandoned (CLAUDE.md).
 """
 import argparse
 import json
@@ -100,17 +99,6 @@ def machine(today):
     for name in ("roymarket311", "roymarket-media"):
         ok = (Path.home() / ".venvs" / name / "bin" / "python").exists()
         out.append(("ok" if ok else "watch", f"venv {name}: {'present' if ok else 'missing'}"))
-    if shutil.which("gh"):
-        try:
-            r = subprocess.run(["gh", "run", "list", "-L", "1", "--json", "conclusion,createdAt,name"], cwd=REPO,
-                               capture_output=True, text=True, timeout=8)
-            run = (json.loads(r.stdout or "[]") or [None])[0]
-            if run:
-                ok = run.get("conclusion") == "success"
-                out.append(("ok" if ok else "watch", f"last CI run ({run['name']}, {run['createdAt'][:10]}): "
-                                                      f"{run.get('conclusion') or 'running'}"))
-        except (subprocess.TimeoutExpired, json.JSONDecodeError, OSError):
-            pass
     return out
 
 
