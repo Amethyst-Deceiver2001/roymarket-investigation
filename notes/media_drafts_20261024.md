@@ -36,7 +36,7 @@ Two full-size looks at the fund's pictures of the LNR anti-aircraft delivery (h0
   "file": "data/sources/TGMEDIA_20260807_nashapravdafond-post653-media.jpg",
   "event": "h0038",
   "kind": "still",
-  "shows_en": "Frame from an ER.RU video: a black octocopter airframe lying on white packing foam, a flat central plate with the letters «СТЕАС» engraved along its edge, a black printed box and a metal-cased module marked AMPF1200 on top, one motor and an antenna lead visible; subtitle fragment «…громят врага»; ER.RU logo and a “Luhansk People's Republic” tag in the corners. No brand of a registry company is legible; «СТЕАС» is not shown to be a maker.",
+  "shows_en": "Frame from an ER.RU video: a black octocopter airframe lying on white packing foam, a flat central plate with the letters «СТЕЛС» engraved along its edge, a black printed box and a metal-cased module marked AMPF1200 on top, one motor and an antenna lead visible; subtitle fragment «…громят врага»; ER.RU logo and a “Luhansk People's Republic” tag in the corners. No brand of a registry company is legible; «СТЕЛС» is not shown to be a maker.",
   "redact": "none_needed",
   "note": "Album picture 1 of the fund's post on the LNR anti-aircraft delivery (the same delivery as ANO_CBST/2395 and asidyakin/1233). A video frame: time not recorded."
  },
