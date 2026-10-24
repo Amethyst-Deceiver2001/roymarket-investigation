@@ -70,6 +70,7 @@ FONT_PATHS = ("/System/Library/Fonts/Supplemental/Arial.ttf", "/Library/Fonts/Ar
               "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
 IGNORE_CHANNELS = {"rostecru"}
 IGNORE_REGISTRY_ONLY = {"ростех"}   # a post whose only registry hit is Rostec
+RE_IGNORE_CAPTION = re.compile(r"^\s*главное за неделю", re.I)   # ЦБСТ's weekly digest: a list of news, not a handover
 IMAGE_EXT = {".jpg", ".jpeg", ".png", ".webp"}
 VIDEO_EXT = {".mp4", ".mov", ".webm", ".mkv"}
 NEAR_DUP_BITS = 6          # Hamming distance at or under which two pictures count as the same picture
@@ -170,27 +171,43 @@ def dump_json(path: Path, data, indent=1):
 
 # --- matching text (captions, OCR, transcripts) ------------------------------------------------------------
 
+QUOTE_OPEN = "«\"“„'"
+ALWAYS_DISTINCT = {"булат", "капюшон"}          # the two modelled products: a bare mention counts
+GENERIC_NAMES = {"площадь"}                      # a registry entity named like a common word
+RE_GENERIC_PHRASE = re.compile(r"^дрон\w*[\s\-]+перехватчик")   # «дрон-перехватчик» is a class of drone, not a product
+
+
+def distinct_term(term: str) -> bool:
+    """A product name that cannot be an ordinary word: it carries a digit, a Latin letter or a hyphen/space, or is long."""
+    return bool(re.search(r"[0-9a-z\-\s]", term)) or len(term) >= 10 or term in ALWAYS_DISTINCT
+
+
 def registry_matcher():
-    """One folded alternation over registry company names (5+ letters) and product names."""
+    """Registry company names (5+ letters) and product names. A product name made of one ordinary word («Сектор»,
+    «Арена», «Набат») counts only inside quotes; a generic name or phrase never counts (24.10.2026: «в секторе»,
+    «площадью», «дрон-перехватчик» were all false hits)."""
     from tg_post_coverage import entity_terms, fold, term_regex
     from delivery_signal_scan import product_matchers
     raw = json.loads((REG / "entities.json").read_text(encoding="utf-8"))
     ents = raw if isinstance(raw, list) else raw.get("entities", raw)
-    terms = set()
+    terms, quoted_only = set(), set()
     for e in ents:
         if e.get("_merged_into") or e.get("tier") == "cbst-core":
             continue
-        terms |= entity_terms(e)
+        terms |= {t for t in entity_terms(e) if t not in GENERIC_NAMES and not RE_GENERIC_PHRASE.match(t)}
     for name, _slug, _rx in product_matchers():
-        if len(name) >= 4:
-            terms.add(fold(name))
+        t = fold(name)
+        if len(name) >= 4 and not RE_GENERIC_PHRASE.match(t):
+            terms.add(t)
+            if not distinct_term(t):
+                quoted_only.add(t)
     # one big alternation costs ~30 ms a caption; index each term by the first 4 letters of its first word
     # and run only the terms whose prefix occurs in the text
-    index: dict[str, list[re.Pattern]] = defaultdict(list)
+    index: dict[str, list[tuple[re.Pattern, bool]]] = defaultdict(list)
     for t in terms:
         first = re.split(r"[\s\-–—]+", t.strip())[0]
         if len(first) >= 3:
-            index[first[:4]].append(term_regex(t))
+            index[first[:4]].append((term_regex(t), t in quoted_only))
 
     def hits(text: str) -> list[str]:
         if not text:
@@ -198,8 +215,11 @@ def registry_matcher():
         f = fold(text)
         out = set()
         for pre in {w[:4] for w in re.findall(r"[0-9a-zа-я]{3,}", f)} & index.keys():
-            for rx in index[pre]:
-                out.update(m.group(0) for m in rx.finditer(f))
+            for rx, needs_quote in index[pre]:
+                for m in rx.finditer(f):
+                    if needs_quote and not (len(f) == len(text) and m.start() > 0 and text[m.start() - 1] in QUOTE_OPEN):
+                        continue
+                    out.add(m.group(0))
         return sorted(out)[:8]
     return hits
 
@@ -305,7 +325,7 @@ def cmd_queue(args) -> None:
         info = json.loads(mjson or "{}")
         it = {"key": key, "channel": uname or str(cid), "channel_id": cid, "msg_id": mid, "date": dt,
               "kind": kind, "size": info.get("size") or 0, "reasons": rs, "copies": [],
-              "copy_dates": [(dt, f"{uname or cid}/{mid}")], "url": post_url(uname, mid),
+              "copy_dates": [(dt, f"{uname or cid}/{mid}")], "url": post_url(uname, mid), "album": f"{cid}:{dt}",
               "fwd": f"{fwd_u}/{fwd_m}" if fwd_u and fwd_m else "",
               "caption": (caption.get((cid, dt)) or "").replace("\n", " ")[:200],
               "file": file_stem(uname or str(cid), mid) + (".jpg" if kind != "video" else "-thumb.jpg")}
@@ -322,7 +342,8 @@ def cmd_queue(args) -> None:
         items = items[:args.max]
         if dropped > 0:
             print(f"--max {args.max}: {dropped} lower-priority items left out of this queue")
-    dump_json(QUEUE, {"built": date.today().isoformat(), "channels": args.channels or "all", "items": items})
+    out_path = QUEUE if not args.channels else WORK / ("queue-" + re.sub(r"[^0-9A-Za-z_]+", "-", args.channels).strip("-") + ".json")
+    dump_json(out_path, {"built": date.today().isoformat(), "channels": args.channels or "all", "items": items})
     by_reason = Counter(min(it["reasons"], key=prio.get) for it in items)
     by_kind = Counter(it["kind"] for it in items)
     photo_mb = sum(it["size"] for it in items if it["kind"] != "video") / 1048576
@@ -337,9 +358,9 @@ def cmd_queue(args) -> None:
     if skipped_kind:
         print("  not triaged here: " + ", ".join(f"{k} {n}" for k, n in skipped_kind.most_common()))
     print(f"  {len(items) // (GRID * GRID) + 1} contact sheets at most")
-    print(f"\nwrote {QUEUE.relative_to(ROOT)}")
+    print(f"\nwrote {out_path.relative_to(ROOT)}" + ("" if out_path == QUEUE else "  (a channel-limited run: queue.json is untouched; pass --queue to sheets)"))
     print("download (live Telegram job, run it yourself):\n"
-          f"  python3 scripts/tg_media_pull.py download --queue {QUEUE.relative_to(ROOT)}")
+          f"  python3 scripts/tg_media_pull.py download --queue {out_path.relative_to(ROOT)}")
     print("then: python3 scripts/media_triage.py process && python3 scripts/media_triage.py sheets")
 
 
@@ -515,21 +536,36 @@ def cmd_rank(args) -> None:
 def ignored(it) -> bool:
     """State-supply posts the user ruled out of this triage (24.10.2026): Rostec's own channel, and posts whose only
     registry hit is Rostec (arms supplied to the army, not a resident's or product's handover)."""
-    if (it.get("channel") or "").lower() in IGNORE_CHANNELS:
+    if (it.get("channel") or "").lower() in IGNORE_CHANNELS or RE_IGNORE_CAPTION.search(it.get("caption") or ""):
         return True
     hits = {h.strip() for h in ((it.get("reasons") or {}).get("registry") or "").split(",") if h.strip()}
     return bool(hits) and hits <= IGNORE_REGISTRY_ONLY
 
 
-def sheet_candidates(items, processed, ledger):
-    """Queue items with a local picture, not labelled, not ignored, not a near-duplicate of one already on a sheet."""
+def recorded_posts() -> set[tuple[str, int]]:
+    """(channel, post id) of every handover already in deliveries.json: their pictures wait behind the new ones."""
+    path = REG / "deliveries.json"
+    raw = load_json(path, [])
+    events = raw if isinstance(raw, list) else raw.get("events", [])
+    return {((e.get("source_channel") or "").lstrip("@").lower(), e.get("post_id")) for e in events}
+
+
+MAX_PER_ALBUM = 2   # one post's pictures take at most this many cells of a run
+
+
+def sheet_candidates(items, processed, ledger, recorded=frozenset()):
+    """Queue items with a local picture, not labelled, not ignored, not a near-duplicate of one already on a sheet,
+    from an album none of whose pictures is labelled; posts already recorded as deliveries come last."""
     out, rep_seen = [], set()
-    for it in items:   # a labelled picture takes its near-duplicates off the sheets with it
+    album_of = {f"{it.get('channel')}/{it.get('msg_id')}": it.get("album") for it in items}
+    done_albums = {album_of.get(v.get("post")) for v in ledger.values()} - {None}
+    for it in items:   # a labelled picture takes its near-duplicates and its album off the sheets with it
         rec = processed.get(it["file"])
         if it["key"] in ledger and rec is not None:
             rep_seen.add(rec.get("near_dup_of") or it["file"])
+    per_album = Counter()
     for it in items:
-        if it["key"] in ledger or ignored(it):
+        if it["key"] in ledger or ignored(it) or it.get("album") in done_albums:
             continue
         name = it["file"]
         rec = processed.get(name)
@@ -538,9 +574,12 @@ def sheet_candidates(items, processed, ledger):
         rep = rec.get("near_dup_of") or name
         if rep in rep_seen:
             continue
+        if it.get("album") and per_album[it["album"]] >= MAX_PER_ALBUM:
+            continue
+        per_album[it.get("album")] += 1
         rep_seen.add(rep)
         out.append(it)
-    return out
+    return sorted(out, key=lambda it: ((it.get("channel") or "").lower(), it.get("msg_id")) in recorded)   # stable: False first
 
 
 def _font(size: int):
@@ -574,11 +613,13 @@ def draw_sheet(cells, path: Path) -> None:
 
 
 def cmd_sheets(args) -> None:
-    q = load_json(QUEUE, {}).get("items", [])
+    q = load_json(Path(args.queue) if args.queue else QUEUE, {}).get("items", [])
     processed = load_json(PROCESSED, {})
-    cands = sheet_candidates(q, processed, load_json(LEDGER, {}))
+    recorded = recorded_posts()
+    cands = sheet_candidates(q, processed, load_json(LEDGER, {}), recorded)
     prio = {r: i for i, r in enumerate(REASONS)}
-    cands.sort(key=lambda it: (-text_score(it["caption"], it["reasons"]),   # the caption first, then the reason group, then CLIP
+    cands.sort(key=lambda it: (((it["channel"] or "").lower(), it["msg_id"]) in recorded,   # recorded posts last
+                               -text_score(it["caption"], it["reasons"]),   # the caption first, then the reason group, then CLIP
                                min(prio[r] for r in it["reasons"]),
                                -evidence_score(processed.get(it["file"], {}).get("clip"))))
     per = GRID * GRID
@@ -591,7 +632,8 @@ def cmd_sheets(args) -> None:
         for n, it in enumerate(chunk, 1):
             stills = processed.get(it["file"], {}).get("stills") or []
             img = WORK / "stills" / stills[0] if stills else FILES / it["file"]
-            cells.append((img, f"{it['channel']}/{it['msg_id']}", it["caption"], it["kind"] == "video"))
+            star = "*" if ((it["channel"] or "").lower(), it["msg_id"]) in recorded else ""
+            cells.append((img, f"{star}{it['channel']}/{it['msg_id']}", it["caption"], it["kind"] == "video"))
             index[str(n)] = {"key": it["key"], "channel": it["channel"], "msg_id": it["msg_id"],
                              "kind": it["kind"], "reasons": sorted(it["reasons"]), "caption": it["caption"][:120],
                              "url": it.get("url") or post_url(it["channel"], it["msg_id"]),
@@ -702,6 +744,7 @@ def main() -> None:
     sub.add_parser("rank", help="local CLIP: score each picture's chance of being evidence (media venv)")
     a = sub.add_parser("sheets", help="local: 4x4 contact sheets for one look each")
     a.add_argument("--max", type=int, default=10, help="sheets per run (default 10)")
+    a.add_argument("--queue", default=None, help="a queue file other than queue.json (a channel-limited run writes its own)")
     a = sub.add_parser("record", help="write a sheet's labels to the ledger")
     a.add_argument("--sheet", required=True)
     a.add_argument("--labels", required=True, help="JSON file {cell: {label, keep, note}}")

@@ -80,6 +80,16 @@ def main():
     base = {"file": "a.jpg", "key": "k", "channel": "x", "reasons": {}}
     assert mt.ignored({**base, "channel": "rostecru"}) and mt.ignored({**base, "reasons": {"registry": "ростех"}})
     assert not mt.ignored({**base, "reasons": {"registry": "ростех, булат"}}) and not mt.ignored(base)
+    assert mt.ignored({**base, "caption": "Главное за неделю: лента новостей от АНО «ЦБСТ»"}) and not mt.ignored({**base, "caption": "Передали бойцам"})
+    h = mt.registry_matcher()
+    assert h("в секторе") == [] and h("площадью 5 га") == [] and h("Новый дрон-перехватчик") == [], "ordinary words are not hits"
+    assert h("«Набат» отгружен") == ["набат"] and h("детектор Булат") == ["булат"]
+    # an album: two cells at most, none once one of its pictures is labelled; recorded posts go last
+    its = [{"key": f"p{i}", "file": f"f{i}.jpg", "channel": "c", "msg_id": 10 + i, "album": "1:t", "reasons": {}} for i in range(4)]
+    pr = {f"f{i}.jpg": {"dhash": "x"} for i in range(4)}
+    assert [i["key"] for i in mt.sheet_candidates(its, pr, {})] == ["p0", "p1"]
+    assert mt.sheet_candidates(its, pr, {"p0": {"post": "c/10"}}) == [], "a labelled picture takes its album with it"
+    assert [i["key"] for i in mt.sheet_candidates(its, pr, {}, {("c", 10)})] == ["p1", "p0"], "a recorded post goes last"
     assert mt.post_url("nashapravdafond", 615) == "https://t.me/nashapravdafond/615" and mt.post_url("123", 5) == ""
     assert mt.origin_of([("2026-10-02", "b/2"), ("2026-10-01", "a/1")]) == ("2026-10-01", "a/1")
 
