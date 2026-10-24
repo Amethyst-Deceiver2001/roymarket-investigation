@@ -1050,6 +1050,19 @@ TOC_ITEMS = [("h-open", "The strike"), ("h-limits", "Limits"), ("h-hub", "Who st
              ("h-read", "How to read"), ("h-method", "Method"), ("h-sources", "Sources")]
 TOC = ('<nav class="toc" aria-label="Contents"><ol>' + "".join(f'<li><a href="#{i}">{esc(t)}</a></li>' for i, t in TOC_ITEMS)
        + '</ol></nav>')
+FOLD_JS = """// Open the sources fold when a footnote link or an address points into it
+(function () {
+  var f = document.getElementById('sources-fold');
+  if (!f) return;
+  function open(h) { if (/^#n\\d+$/.test(h) && !f.open) f.open = true; }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#n"]');
+    if (a) open(a.getAttribute('href'));
+  });
+  window.addEventListener('hashchange', function () { open(location.hash); });
+  open(location.hash);
+})();
+"""
 TOC_JS = """// Contents bar: mark the section in view
 (function () {
   var links = document.querySelectorAll('.toc a');
@@ -1249,13 +1262,15 @@ def render(preview: bool, out: Path):
     </ul>
   </section>
 
-  <section class="rm-prose rm-sources" aria-labelledby="h-sources"><h2 class="rm-h2" id="h-sources">Sources</h2><ol>{L.notes_list()}</ol></section>
+  <section class="rm-prose rm-sources" aria-labelledby="h-sources"><h2 class="rm-h2" id="h-sources">Sources</h2>
+    <details class="fold" id="sources-fold"><summary>Full list of sources <span class="count">{len(L.notes)}</span></summary><ol>{L.notes_list()}</ol></details></section>
 </main>
 {''.join(f'<template id="fig-{k}">{v}</template>' for k, v in L.templates.items())}
 <dialog class="rm-lightbox" id="lightbox" aria-label="Picture"><div class="bar"><button type="button" data-close>Close</button></div><div class="body"></div></dialog>
 <script>{VIEWER_JS}
 {NAME_JS}
-{TOC_JS}</script>
+{TOC_JS}
+{FOLD_JS}</script>
 </body></html>
 """
     out.write_text(unique_popovers(popup_originals(doc)))
