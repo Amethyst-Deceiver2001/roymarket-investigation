@@ -11049,6 +11049,150 @@
       "_origin": "corrections:add_entities",
       "confidence": null,
       "sources": []
+    },
+    {
+      "slug": "vpp-edinaya-rossiya",
+      "name_ru": "ВСЕРОССИЙСКАЯ ПОЛИТИЧЕСКАЯ ПАРТИЯ «ЕДИНАЯ РОССИЯ»",
+      "name_latin": "All-Russian political party “United Russia”",
+      "legal_form": "Политическая партия",
+      "brand_ru": "«Единая Россия»",
+      "brand_latin": "United Russia",
+      "inn": "7702330228",
+      "ogrn": "1037739350934",
+      "registered": "31.01.2003",
+      "address": "129110, г. Москва, пер. Банный, д. 3",
+      "director": "Якушев Владимир Владимирович (секретарь Генерального совета)",
+      "director_history": [
+        {
+          "value": "Якушев Владимир Владимирович (СЕКРЕТАРЬ ГЕНЕРАЛЬНОГО СОВЕТА)",
+          "as_of": "2025-01-09",
+          "source_id": null,
+          "note": "ЕГРЮЛ выписка от 24.10.2026, ГРН 2257700092054 от 09.01.2025 (the person's entry ГРН 2247706835660 is dated 12.07.2024). Listed with the right to act without a power of attorney. Personal ИНН is on the extract and is not copied here. File data/sources/EGRUL_7702330228_20261024_inn-7702330228.pdf, not yet catalogued."
+        }
+      ],
+      "okved_code": null,
+      "okved_label": null,
+      "tier": "plumbing",
+      "tier_basis": "A political party, recorded because it appears beside the fund «Наша Правда» and ЦБСТ in the delivery posts («от Единой России и фонда «Наша Правда»», ЦБСТ post 1761 of 19.01.2026) and because two of its officers sit on ЦБСТ's board: Якушев (Secretary of the General Council, chairs the Supervisory Board) and Сидякин (head of its Central Election Commission, Secretary of the Supervisory Board). ЕГРЮЛ выписка read in full 24.10.2026 (ИНН 7702330228, ОГРН 1037739350934, КПП 770201001; registered with the Ministry of Justice 18.12.2001 under no. 5007, ОГРН assigned 31.01.2003; registering authority УФНС по г. Москве). Identity is by ИНН/ОГРН and by the matching named officer (Якушев is the person on our ЦБСТ record). Tier is a judgment: a partner institution, not a company in the supply chain.",
+      "cbst_tie": {
+        "claim": "Joint donor with ЦБСТ and the fund «Наша Правда» in recorded deliveries; its General Council secretary chairs ЦБСТ's Supervisory Board and the head of its Central Election Commission is the board's secretary.",
+        "confidence": "t-doc",
+        "evidence": "ЦБСТ's own post ANO_CBST/1761 (19.01.2026): «Центр беспилотных систем и технологий совместно с Единая Россия и фондом Наша правда передали добровольческой бригаде «БАРС-Курск» партию специальной техники»; fund post nashapravdafond/421 (10.04.2025): «Фонд «Наша Правда», партия «Единая Россия» и ЦБСТ доставили участникам СВО на Запорожском направлении новые дроны…»; board roles on the person records of Якушев (s7519) and Сидякин (s8699).",
+        "source_id": "s7519"
+      },
+      "wb_overlap": "not_checked",
+      "products": [],
+      "web": {
+        "sites": [
+          {
+            "url": "https://er.ru/",
+            "source_id": null,
+            "note": "The party's own site (single page load 24.10.2026; no requisites page found there)."
+          }
+        ],
+        "telegram": [
+          {
+            "handle": "@er_molnia",
+            "source_id": null,
+            "note": "The party's news channel named in the delivery posts; not scraped here."
+          }
+        ],
+        "vk": [],
+        "youtube": [],
+        "marketplace_listings": [],
+        "other": []
+      },
+      "open_questions": [],
+      "sources": [],
+      "confidence": null,
+      "_verified": true,
+      "_verified_against": "EGRUL_7702330228_20261024_inn-7702330228.pdf (ЕГРЮЛ выписка of 24.10.2026, read in full)",
+      "_origin": "corrections:add_entities"
+    },
+    {
+      "slug": "bf-veterany-svo-i-kto",
+      "name_ru": "БЛАГОТВОРИТЕЛЬНЫЙ ФОНД «ВЕТЕРАНЫ СПЕЦИАЛЬНОЙ ВОЕННОЙ И КОНТРТЕРРОРИСТИЧЕСКИХ ОПЕРАЦИЙ» («ВЕТЕРАНЫ СВО И КТО»)",
+      "name_latin": "Charitable fund “Veterans of the special military and counter-terrorist operations” (“Veterans SVO and KTO”)",
+      "legal_form": "Благотворительный фонд",
+      "brand_ru": "«Ветераны СВО и КТО»",
+      "brand_latin": "Veterans SVO and KTO",
+      "inn": "6685221143",
+      "ogrn": "1246600039311",
+      "registered": "20.08.2024",
+      "address": "620075, Свердловская область, г. Екатеринбург, пр-кт Ленина, стр. 50Б, офис 808",
+      "director": "Павленко Сергей Александрович",
+      "director_history": [
+        {
+          "value": "Павленко Сергей Александрович (ДИРЕКТОР ФОНДА)",
+          "as_of": "2024-08-20",
+          "source_id": null,
+          "note": "ЕГРЮЛ выписка от 24.10.2026, ГРН 1246600039311 от 20.08.2024 (the creating record). File data/sources/EGRUL_6685221143_20261024_inn-6685221143.pdf, not yet catalogued."
+        }
+      ],
+      "founders": [
+        {
+          "name": "Павленко Сергей Александрович",
+          "inn_personal": "667405713335",
+          "share_percent": null,
+          "source_id": null
+        },
+        {
+          "name": "Гагарин Иван Сергеевич",
+          "inn_personal": "661306102461",
+          "share_percent": null,
+          "source_id": null
+        },
+        {
+          "name": "Лесников Александр Дмитриевич",
+          "inn_personal": "668602853020",
+          "share_percent": null,
+          "source_id": null
+        },
+        {
+          "name": "Кинаш Сергей Юрьевич",
+          "inn_personal": "615009424408",
+          "share_percent": null,
+          "source_id": null
+        },
+        {
+          "name": "Исмаилов Жолой Урузбаевич",
+          "inn_personal": "665812419303",
+          "share_percent": null,
+          "source_id": null
+        }
+      ],
+      "okved_code": "64.99",
+      "okved_label": "Предоставление прочих финансовых услуг, кроме услуг по страхованию и пенсионному обеспечению, не включенных в другие группировки",
+      "tier": "adjacent",
+      "tier_basis": "A Yekaterinburg charity named as a co-donor in two posts on Сидякин's channel: «Единая Россия и фонд «Ветераны специальной военной и контртеррористических операций» передали антидроновые ружья бойцам СВО» (asidyakin/595, 08.12.2025, linking its channel t.me/veterany_SvoKto) and «От Единой России и фондов «Наша Правда» и «Ветераны СВО и КТО»…» (asidyakin/743, 16.02.2026). Identity: ЕГРЮЛ выписка read in full 24.10.2026 gives the short name БЛАГОТВОРИТЕЛЬНЫЙ ФОНД «ВЕТЕРАНЫ СВО И КТО» and the director ПАВЛЕНКО СЕРГЕЙ АЛЕКСАНДРОВИЧ, and the channel's own bio reads «Благотворительный Фонд «Ветераны специальной военной и контртеррористических операций». Директор Фонда Сергей Александрович Павленко»: exact name and director match, no identifier printed in the posts. NOT the same as «Благотворительный фонд Участников и Ветеранов СВО» (ИНН 6670521867, fondsvo.ru, also Yekaterinburg, president Старков): a different name, ИНН and officers, and that site names neither Единая Россия nor Сидякин.",
+      "cbst_tie": {
+        "claim": "None found with ЦБСТ itself; named beside Единая Россия and the fund «Наша Правда» in Сидякин's delivery posts.",
+        "confidence": "none",
+        "evidence": "0 hits for the fund's name or channel in @ANO_CBST and @nashapravdafond text; two @asidyakin posts (595, 743) name it as co-donor. Absence of a tie is not shown.",
+        "source_id": null
+      },
+      "wb_overlap": "not_checked",
+      "products": [],
+      "web": {
+        "sites": [],
+        "telegram": [
+          {
+            "handle": "@veterany_SvoKto",
+            "source_id": null,
+            "note": "«Никто, кроме нас!», 194 subscribers on 24.10.2026; bio quoted in tier_basis."
+          }
+        ],
+        "vk": [],
+        "youtube": [],
+        "marketplace_listings": [],
+        "other": []
+      },
+      "open_questions": [],
+      "sources": [],
+      "confidence": null,
+      "_verified": true,
+      "_verified_against": "EGRUL_6685221143_20261024_inn-6685221143.pdf (ЕГРЮЛ выписка of 24.10.2026, read in full)",
+      "_origin": "corrections:add_entities"
     }
   ],
   "entities": {

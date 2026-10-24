@@ -1,8 +1,8 @@
 {
   "schema_version": 13,
   "generated_from": "data/registry/entities.json + people.json + programs.json + products.json",
-  "node_count": 1266,
-  "edge_count": 2187,
+  "node_count": 1267,
+  "edge_count": 2190,
   "unresolved_count": 114,
   "nodes": [
     {
@@ -243,7 +243,7 @@
       "sanctioned": true,
       "legal_form": "АНО",
       "product_count": 0,
-      "degree": 96
+      "degree": 97
     },
     {
       "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -12857,7 +12857,7 @@
       "label": "Владимир Владимирович Якушев",
       "name_latin": null,
       "sanctioned": true,
-      "degree": 1
+      "degree": 3
     },
     {
       "id": "vladimirskiy-mikhail-yurevich",
@@ -12914,6 +12914,18 @@
       "name_latin": "Voskresenskiy Dmitriy Mikhaylovich",
       "sanctioned": false,
       "degree": 1
+    },
+    {
+      "id": "vpp-edinaya-rossiya",
+      "kind": "entity",
+      "label": "ВСЕРОССИЙСКАЯ ПОЛИТИЧЕСКАЯ ПАРТИЯ «ЕДИНАЯ РОССИЯ»",
+      "name_latin": "All-Russian political party “United Russia”",
+      "inn": "7702330228",
+      "tier": "plumbing",
+      "sanctioned": false,
+      "legal_form": "Политическая партия",
+      "product_count": 0,
+      "degree": 3
     },
     {
       "id": "yablokov-evgeniy-nikolaevich",
@@ -40701,6 +40713,32 @@
       "grade": "rep"
     },
     {
+      "source": "vladimir-vadimovich-yakushev",
+      "target": "vpp-edinaya-rossiya",
+      "type": "directs",
+      "label": null,
+      "source_id": null,
+      "as_of": "2025-01-09",
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "open"
+    },
+    {
+      "source": "vladimir-vadimovich-yakushev",
+      "target": "vpp-edinaya-rossiya",
+      "type": "role",
+      "label": "director",
+      "source_id": "s8076",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
       "source": "vladimirskiy-mikhail-yurevich",
       "target": "ano-npts-ushkuynik",
       "type": "role",
@@ -40996,6 +41034,19 @@
       "weight": 1.0,
       "temporal_status": "unknown",
       "confidence": null,
+      "detail": null,
+      "grade": "doc"
+    },
+    {
+      "source": "vpp-edinaya-rossiya",
+      "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+      "type": "cbst_tie",
+      "label": "Joint donor with ЦБСТ and the fund «Наша Правда» in recorded deliveries; its General Council secretary chairs ЦБСТ's ...",
+      "source_id": "s7519",
+      "as_of": null,
+      "weight": 1.0,
+      "temporal_status": "unknown",
+      "confidence": "t-doc",
       "detail": null,
       "grade": "doc"
     },
@@ -42410,6 +42461,7 @@
     "atlivanchik-sergey-nikolaevich",
     "barilo-denis-aleksandrovich",
     "bf-ktspn-barnaul",
+    "bf-veterany-svo-i-kto",
     "borisov-aleksandr-sergeevich-tsbs-tula",
     "chetvertkov-aleksey-vladimirovich",
     "chichkov-aleksandr-yurevich",
@@ -42572,6 +42624,7 @@
     "stub::inn-9704154772",
     "stub::inn-9713015990",
     "stub::аквамарин-4523",
+    "stub::гагарин иван сергеевич",
     "stub::голоунин олег борисович",
     "stub::григорьев григорий валерьевич",
     "stub::груданова нина олеговна",
@@ -42580,13 +42633,17 @@
     "stub::ермолов сергей юрьевич",
     "stub::замковой дмитрий сергеевич",
     "stub::иванов андрей георгиевич",
+    "stub::исмаилов жолой урузбаевич",
     "stub::карцев максим владимирович",
+    "stub::кинаш сергей юрьевич",
     "stub::колосов артем иванович",
     "stub::костылин дмитрий евгеньевич",
+    "stub::лесников александр дмитриевич",
     "stub::мануковский игорь владимирович",
     "stub::мту сатурн",
     "stub::мушкевич павел",
     "stub::нахтигаль никита витальевич",
+    "stub::павленко сергей александрович",
     "stub::паутов андрей павлович",
     "stub::руднев артем николаевич",
     "stub::рябико ольга александровна",

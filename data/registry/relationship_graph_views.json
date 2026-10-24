@@ -242,7 +242,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "product_count": 0,
-          "degree": 96
+          "degree": 97
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -12594,7 +12594,7 @@
           "label": "Владимир Владимирович Якушев",
           "name_latin": null,
           "sanctioned": true,
-          "degree": 1
+          "degree": 3
         },
         {
           "id": "vladimirskiy-mikhail-yurevich",
@@ -12651,6 +12651,18 @@
           "name_latin": "Voskresenskiy Dmitriy Mikhaylovich",
           "sanctioned": false,
           "degree": 1
+        },
+        {
+          "id": "vpp-edinaya-rossiya",
+          "kind": "entity",
+          "label": "ВСЕРОССИЙСКАЯ ПОЛИТИЧЕСКАЯ ПАРТИЯ «ЕДИНАЯ РОССИЯ»",
+          "name_latin": "All-Russian political party “United Russia”",
+          "inn": "7702330228",
+          "tier": "plumbing",
+          "sanctioned": false,
+          "legal_form": "Политическая партия",
+          "product_count": 0,
+          "degree": 3
         },
         {
           "id": "yablokov-evgeniy-nikolaevich",
@@ -40061,6 +40073,19 @@
           "grade": "rep"
         },
         {
+          "source": "vladimir-vadimovich-yakushev",
+          "target": "vpp-edinaya-rossiya",
+          "type": "role",
+          "label": "director",
+          "source_id": "s8076",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
           "source": "vladimirskiy-mikhail-yurevich",
           "target": "ano-npts-ushkuynik",
           "type": "role",
@@ -40356,6 +40381,19 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "vpp-edinaya-rossiya",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Joint donor with ЦБСТ and the fund «Наша Правда» in recorded deliveries; its General Council secretary chairs ЦБСТ's ...",
+          "source_id": "s7519",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc",
           "detail": null,
           "grade": "doc"
         },
@@ -41032,7 +41070,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "product_count": 0,
-          "degree": 96
+          "degree": 97
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -48686,7 +48724,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "product_count": 0,
-          "degree": 96
+          "degree": 97
         },
         {
           "id": "antonova-tatyana-sergeevna",
@@ -49734,7 +49772,19 @@
           "label": "Владимир Владимирович Якушев",
           "name_latin": null,
           "sanctioned": true,
-          "degree": 1
+          "degree": 3
+        },
+        {
+          "id": "vpp-edinaya-rossiya",
+          "kind": "entity",
+          "label": "ВСЕРОССИЙСКАЯ ПОЛИТИЧЕСКАЯ ПАРТИЯ «ЕДИНАЯ РОССИЯ»",
+          "name_latin": "All-Russian political party “United Russia”",
+          "inn": "7702330228",
+          "tier": "plumbing",
+          "sanctioned": false,
+          "legal_form": "Политическая партия",
+          "product_count": 0,
+          "degree": 3
         },
         {
           "id": "yarl",
@@ -51557,6 +51607,19 @@
           "grade": "rep"
         },
         {
+          "source": "vpp-edinaya-rossiya",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Joint donor with ЦБСТ and the fund «Наша Правда» in recorded deliveries; its General Council secretary chairs ЦБСТ's ...",
+          "source_id": "s7519",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc",
+          "detail": null,
+          "grade": "doc"
+        },
+        {
           "source": "yarl",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -52109,6 +52172,26 @@
           "degree": 2
         },
         {
+          "id": "vladimir-vadimovich-yakushev",
+          "kind": "person",
+          "label": "Владимир Владимирович Якушев",
+          "name_latin": null,
+          "sanctioned": true,
+          "degree": 3
+        },
+        {
+          "id": "vpp-edinaya-rossiya",
+          "kind": "entity",
+          "label": "ВСЕРОССИЙСКАЯ ПОЛИТИЧЕСКАЯ ПАРТИЯ «ЕДИНАЯ РОССИЯ»",
+          "name_latin": "All-Russian political party “United Russia”",
+          "inn": "7702330228",
+          "tier": "plumbing",
+          "sanctioned": false,
+          "legal_form": "Политическая партия",
+          "product_count": 0,
+          "degree": 3
+        },
+        {
           "id": "yarl",
           "kind": "entity",
           "label": "ООО «БПР ЯРЛ»",
@@ -52498,6 +52581,19 @@
           "confidence": "doc",
           "detail": null,
           "grade": "doc"
+        },
+        {
+          "source": "vladimir-vadimovich-yakushev",
+          "target": "vpp-edinaya-rossiya",
+          "type": "directs",
+          "label": null,
+          "source_id": null,
+          "as_of": "2025-01-09",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "open"
         },
         {
           "source": "yarl",
