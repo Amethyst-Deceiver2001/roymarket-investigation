@@ -1108,10 +1108,10 @@ def render(preview: bool, out: Path):
     sid_name_l = sid_name.replace(f'id="nm-{SIDYAKIN}"', f'id="nm-{SIDYAKIN}-q"').replace(
         f'popovertarget="nm-{SIDYAKIN}"', f'popovertarget="nm-{SIDYAKIN}-q"')
     ledger = L.ledger()
-    handed = L.pics([NP], {"handover"})
+    handed = L.pics([NP], {"handover"}, skip={"m0070"})   # m0070: boxes and a crate beside a van, no equipment visible (user, 24.10.2026)
     handovers = L.band(handed, f"Published by «Nasha Pravda» with its handover posts, {ru_date(handed[0]['published'])} – "
                        f"{ru_date(handed[-1]['published'])}: deliveries of «Bulat» detectors and other kit to units. A handover "
-                       "does not show use in combat.", big=3, lead=("m0085", "m0070", "m0083")) if handed else ""
+                       "does not show use in combat.", big=3, lead=("m0085", "m0083", "m0087")) if handed else ""
     front = L.front()
     beyond = L.beyond_shop()
     chains = "".join(L.chain_card(s, url if preview else (f"chain_{s}.html" if (out.parent / f"chain_{s}.html").exists() else None))
