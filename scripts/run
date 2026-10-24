@@ -1,0 +1,5 @@
+#!/bin/sh
+# Run a project script with the venv that has Telethon, bs4 and the page builders.
+#   scripts/run scripts/tg_scan.py --full --only osvedomitell_alex
+# Plain `python3` is the system interpreter and has no Telethon.
+exec "$HOME/.venvs/roymarket311/bin/python" "$@"

@@ -39,7 +39,8 @@ Current work (24.10.2026):
 - **The working Mac** (`~/Projects/roymarket-investigation`, Intel, macOS 12, disk nearly full):
   - `data/roymarket.db` holds 23.10.2025–23.10.2026 only;
   - **no sNNNN source ids are assigned here**, so a new post is cited by its public link until it is catalogued;
-  - venvs: `~/.venvs/roymarket311` (page builders, bs4) and `~/.venvs/roymarket-media` (CLIP, torch with numpy<2);
+  - venvs: `~/.venvs/roymarket311` (page builders, bs4, **Telethon**) and `~/.venvs/roymarket-media` (CLIP, torch with numpy<2);
+  - **system `python3` has no Telethon.** Any command handed to the user that touches Telegram (`tg_scan.py`, `tg_scan_users.py`, `tg_media_pull.py`) is written `scripts/run scripts/<name>.py …` (wrapper for the roymarket311 python; the user's shell alias is `rm-py`), never bare `python3`;
   - Chrome headless does not run; Firefox headless screenshots work.
 - **The archive Mac** holds the older posts, the `TGPOST_`/`TGMEDIA_` originals and the source catalogue run (`inventory_sources.py` → `extract_registry.py`). Work that needs them waits there (brief items b005, b010, b011).
 - **Python 3.11 parity.** Never put a backslash or a reused quote inside an f-string expression; build the string first. Byte-compile staged `.py` files with `python3.11` before committing.
