@@ -64,7 +64,7 @@ Action: archive into `scripts/archive/` after one check per script that no doc t
 - The two unread lead files still hold open leads (ООО «КИНГПРО» as a resident without a tie; `kb-germes` as a possible duplicate of `npo-kaysant`, from the 21.10 review). Move those into `open_questions` before archiving.
 
 **Stalled pipelines.** These are not abandoned on purpose:
-- The daily round wrote its last report on 06.10 (`data/watch/daily/`).
+- The daily round wrote its last report on 06.10 (`data/watch/daily/`). Retired as a scheduled job 24.10.2026 (user); it runs by hand, and so do first reading and the exports.
 - First reading stopped on 04.10 (`notes/first_reading/`).
 - `exports/` is from 02.10.
 - The status board's `board.json` updates only on commits that touch the registry.
@@ -83,6 +83,8 @@ These are the 21.10 review's §1.2, still open. They restart when the archive ma
 
 
 **Posts 382, 397 and 448 combined 24.10.2026 (user: "3 combine").** The three pairs of «Булат» and «Капюшон» rows are now one event each with two items (65 events), and the «Капюшон» item keeps its old id so its view and media are unchanged (`scripts/archive/combine_double_product_events_20261024.py`). Rebuilt every output before and after: the «Булат» chain, the company page, both landing pages and the story are byte-identical; the «Капюшон» page changes only in two English recipient glosses (now the «Булат» page's wording) and the board counts three recipients once, not twice. Where the two rows differed the fuller value was kept: the named carrier of the 17.02.2025 handover (fund representatives with Сидякин and a party project lead) instead of "not stated".
+
+**CLAUDE.md rewritten 24.10.2026 (user: "lean rulebook", commit 9325263):** 84 KB down to 18 KB; the detail moved word for word into six `notes/reference/` files. The §3 machine facts are fixed: ~/Downloads and launchd are now history, 171 channels, `data/sources` size per machine.
 
 **Step 3a done 24.10.2026 (user: "merge deliveries into a single file"):** `handovers.json` (42 rows) and the `deliveries[]` on «Булат» and «Капюшон» (26 rows) are now `data/registry/deliveries.json`, 68 events, none duplicated (the two lists shared no post). `scripts/deliveries.py` holds the schema and `load_products()`, which gives every reader a product's deliveries in the shape it already used. Checked by rebuilding every page and printout before and after: both chain views, the company page, the story, both landing pages and the product printouts are byte-identical; evidence packets differ only by their generation date. Findings on the way: three ЦБСТ events pointed at a donor slug (`ano-cbst`) that no entity has (fixed to the real slug); posts 382, 397 and 448 each report both products to one recipient and are two rows (to combine later, which changes ids media point at); `bulat-d05` and `kapyushon-d02` name units that resolve to unit records but have no `recipient_unit_slug` yet (a decision for the reader of the posts, not set here); 33 of the 42 handover posts have no source record yet. The board's unit line now counts recipients that name a unit separately from those that name only a direction or a group (36 of 38 resolve; 30 name no unit). Migration script: `scripts/archive/migrate_deliveries_20261024.py`. Not combined, not renumbered, and no `asserted_by` upgraded: the 42 handover rows got the standing default (`self`, `single`) because the old file carried none.
 
