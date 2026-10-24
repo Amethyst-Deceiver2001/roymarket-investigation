@@ -72,6 +72,8 @@ IGNORE_CHANNELS = {"rostecru"}
 IGNORE_REGISTRY_ONLY = {"ростех"}   # a post whose only registry hit is Rostec
 NEWS_CHANNELS = {"ano_cbst"}   # ЦБСТ's own channel is mostly analysis and news; it counts only when it names a donor or a recipient
 RE_DONOR_OR_RECIPIENT = re.compile(r"наша правда|нашей правд|единая россия|единой россии|фонд|бойцам|бойцов|бригад|полк|подразделени|военнослужащ|зенитчик|добровольческ", re.I)
+RE_IGNORE_TEXT_HIT = re.compile(r"^(архангел|ростех|сармат|барс|beastfpv)", re.I)   # OCR hits that do not make a picture worth a look
+RE_IGNORE_TEXT_HIT = re.compile(r"^(архангел|ростех|сармат|барс|beastfpv)", re.I)   # OCR hits that do not make a picture worth a look
 RE_IGNORE_CAPTION = re.compile(r"^\s*главное за неделю", re.I)   # ЦБСТ's weekly digest: a list of news, not a handover
 IMAGE_EXT = {".jpg", ".jpeg", ".png", ".webp"}
 VIDEO_EXT = {".mp4", ".mov", ".webm", ".mkv"}
@@ -627,6 +629,13 @@ def cmd_sheets(args) -> None:
                                -text_score(it["caption"], it["reasons"]),   # the caption first, then the reason group, then CLIP
                                min(prio[r] for r in it["reasons"]),
                                -evidence_score(processed.get(it["file"], {}).get("clip"))))
+    if args.text_hits:
+        # only pictures whose own text (OCR) names a registry entity, product or identifier, the ignored networks aside
+        def useful(it):
+            return [h for h in (processed.get(it["file"], {}).get("text_hits") or []) if not RE_IGNORE_TEXT_HIT.match(h.strip())]
+        cands = [it for it in cands if useful(it)]
+        cands.sort(key=lambda it: (-len(useful(it)), -evidence_score(processed.get(it["file"], {}).get("clip"))))
+        print(f"{len(cands)} pictures with a registry name or identifier in their text")
     per = GRID * GRID
     n_sheets = min(args.max, (len(cands) + per - 1) // per)
     day = date.today().strftime("%Y%m%d")
@@ -750,6 +759,7 @@ def main() -> None:
     a = sub.add_parser("sheets", help="local: 4x4 contact sheets for one look each")
     a.add_argument("--max", type=int, default=10, help="sheets per run (default 10)")
     a.add_argument("--queue", default=None, help="a queue file other than queue.json (a channel-limited run writes its own)")
+    a.add_argument("--text-hits", action="store_true", help="only pictures whose OCR text names a registry entity, product or identifier")
     a = sub.add_parser("record", help="write a sheet's labels to the ledger")
     a.add_argument("--sheet", required=True)
     a.add_argument("--labels", required=True, help="JSON file {cell: {label, keep, note}}")
