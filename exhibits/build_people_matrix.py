@@ -149,8 +149,11 @@ class Matrix:
     def face(self, pr, pn):
         """The person's portrait: the registry's own photo; on a preview build, a candidate found by search, marked
         as an unverified match with its source page; otherwise initials."""
-        if pr.get("photo") and (REPO / "docs" / pr["photo"]).exists():
-            return f'<img class="face" src="{thumb(REPO / "docs" / pr["photo"])}" alt="Portrait of {esc(pn["first"])}">'
+        # A photo path is repo-relative (exhibits/images/profiles/, moved off the public docs/ on 24.10.2026) or, in
+        # older records, relative to docs/.
+        photo = pr.get("photo") and (REPO / pr["photo"] if pr["photo"].startswith("exhibits/") else REPO / "docs" / pr["photo"])
+        if photo and photo.exists():
+            return f'<img class="face" src="{thumb(photo)}" alt="Portrait of {esc(pn["first"])}">'
         c = self.candidates.get(pr["slug"])
         if c and Path(c["file"]).exists():
             return (f'<figure class="face cand"><img src="{thumb(Path(c["file"]))}" alt="Possible portrait of {esc(pn["first"])}">'
