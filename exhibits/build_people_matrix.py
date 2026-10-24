@@ -3,7 +3,7 @@
 
     python3 exhibits/build_people_matrix.py      # -> exhibits/people_matrix.html
 
-Replaces scripts/build_affiliation_matrix.py (15.09.2026) on the reader design system: names Latin first with the
+Replaces scripts/archive/build_affiliation_matrix.py (15.09.2026) on the reader design system: names Latin first with the
 Russian under RU, every tie graded and footnoted in plain words, sanctions shown only where a list names the
 regime, counts computed here. A tie is a director, founder or ownership role (graph edges directs/founded/owns, and
 role edges whose label says so); co-inventors and chat participants are not counted. Local file processing only.

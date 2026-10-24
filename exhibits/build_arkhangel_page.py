@@ -4,7 +4,7 @@ its own bill of materials names, and its own pictures.
 
     python3 exhibits/build_arkhangel_page.py      # -> exhibits/arkhangel.html, pictures in exhibits/images/media/
 
-Replaces the hand-made exhibits/arkhangel_exhibit.html (21.09.2026) on the reader design system and the
+Replaces the hand-made exhibits/archive/retired_2026-10-24/arkhangel_exhibit.html (21.09.2026) on the reader design system and the
 English-first rule: every fact from data/registry, footnoted in plain words; quotations in English with the
 Russian under RU. The silhouette is redrawn from the project's own CAD and bench stills; it states no dimension,
 wiring, print setting or assembly order. Local file processing only.

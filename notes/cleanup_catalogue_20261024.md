@@ -71,6 +71,16 @@ Action: archive into `scripts/archive/` after one check per script that no doc t
 
 These are the 21.10 review's §1.2, still open. They restart when the archive machine runs again.
 
+
+**Step 2 done 24.10.2026 (user go-ahead): 38 files archived with `git mv`, so history follows them.**
+- `exhibits/archive/retired_2026-10-24/` (15): the orbit picture and its builder, the five case-page pieces (`case_study_*`, excerpts page), `cbst_chain`, `evidence_ledger`, `coverage_audit`, `data_to_ink_system`, `roymarket-supply-demand-cycle`, `demand_side_icon_set`, `Main.dc.html`, `arkhangel_exhibit`, `affiliation_matrix`.
+- `scripts/archive/` (15): `build_case_studies`, `build_evidence_ledger`, `build_affiliation_matrix`, `profile_text`, `wire_role_edges_from_entity_history`, `mine_components`, `scan_source_video_links`, `promo_video_sources`, `extract_products`, `find_patent_mentions`, `parse_kontur_focus`, `cbst_roster_derive`, `screen_leader_id`, `run_pipeline`, `entity_presence_inventory`.
+- `notes/archive/` (8): `public_subproject_plan`, `ddosecrets_catalog_survey`, `deep_research_registries_20260906`, `sanctions_name_check_20261004`, `okved_mismatches`, `entities_without_telegram`, `entity_presence_inventory`, `full_pipeline_catalogue`.
+- Archived scripts keep their old `REPO = parent.parent` paths and will not run from the archive without an edit; the existing `scripts/archive/` files are the same.
+- Docstrings in `build_people_matrix.py` and `build_arkhangel_page.py` now point at the archived paths. Registry checker: 0 errors, same 26 warnings; all tests pass.
+
+**Left in place on purpose, because live code or rules still cite them:** `wire_upr_uchr_sources.py` (named in `screen_upr_uchr.py`'s instructions), `zakupki_customer_clusters.py` (in the housekeeping bundle in `commands.md`), `aleph_followup.py` (README and two registry notes), `enrich_egrip_hits.py` (`script_notes.md`), `har_tools.py` (README), `presentation_review.md` (three scripts cite its sections as their origin), `source_expansion_methodology.md` (cited by `screen_proverki.py`), `hub_insignia_design_notes.md` (cited by `design/README.md`), and the notes CLAUDE.md, the plan or the registry point to (`brief_leftovers`, `media_backfill`, `cbst_resident_triage`, `cbst_roster_derived`, `scan_wiring`, `artifact_review_…second_pass`, `unverified_people_gap`, `founding_docs_gap`). The Rospatent scripts were not touched: they need a check against the live site first.
+
 ## 5. Branches (all fully merged into main, 0 commits ahead)
 
 **Done 24.10.2026 (user go-ahead):** all seven deleted locally and on origin; `main` and `watch/sanctions` remain.
