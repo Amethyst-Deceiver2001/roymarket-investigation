@@ -6,6 +6,8 @@ Proposed action tags: **archive** = `git mv` into an `archive/` folder (history 
 
 ## 1. Public exposure (do first)
 
+**Done 24.10.2026 (user go-ahead):** the 109 files moved to `exhibits/images/profiles/` (commit 53e30f3), with registry paths repointed and the people matrix reading either place. Checked afterwards: the GitHub Pages API returns 404 for this repo (it is private, and Pages is not enabled), so `docs/` was not being served at the time. The move matters for when Pages is switched back on.
+
 | What | Detail | Action |
 |---|---|---|
 | `docs/images/`: 109 of 111 files are used by no page | 18 MB. Pages serves them at guessable URLs: 31 portraits (RuPEP, Leader-ID, Wikimedia, press), Barashkov's portrait, a Gagaring graduation crop, an Arkhangel recruitment poster, Arkhangel course material. The pages that showed them were withdrawn on 02.10. *Still open from 21.10.* | go-ahead: move out of `docs/` into `exhibits/images/` (or a gitignored folder), repoint the `photo`/`image` paths in `people.json` and `entities.json` |
@@ -70,6 +72,8 @@ Action: archive into `scripts/archive/` after one check per script that no doc t
 These are the 21.10 review's §1.2, still open. They restart when the archive machine runs again.
 
 ## 5. Branches (all fully merged into main, 0 commits ahead)
+
+**Done 24.10.2026 (user go-ahead):** all seven deleted locally and on origin; `main` and `watch/sanctions` remain.
 
 `local/needs-mac-20261022`, `retire-sanctions-watch` (local and remote), `origin/claude/project-thread-{1w20sw,27kwn6,55iyhs,qtsqtj}`, `origin/fix/english-first-media-captions`. Keep `origin/watch/sanctions`: it holds the frozen 05.10 snapshot. *Partly open from 21.10*: the earlier `pull-inbox`, `copilot/…` and `laughing-brahmagupta` branches are already gone. Action: go-ahead, then delete; nothing is lost.
 
