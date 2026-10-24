@@ -16,3 +16,7 @@ data/watch/status/status_board.html
 
 # reader pages built by tests/test_reader_pages.py
 exhibits/_check/
+
+# preview pages for the private artifacts, rebuilt by build_landing.py --preview and build_story.py (the story fragment embeds the handover photos)
+exhibits/landing_preview.html
+exhibits/story_01_artifact.html
