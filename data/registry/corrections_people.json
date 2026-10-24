@@ -15734,6 +15734,38 @@
       "_verified": false,
       "_origin": "corrections:people_add_entities",
       "_raw": {}
+    },
+    {
+      "slug": "sechinskiy-egor-valerevich",
+      "fio_ru": "Сечинский Егор Валерьевич",
+      "name_latin": "Sechinskiy Egor Valerevich",
+      "dob": null,
+      "birthplace": null,
+      "address": null,
+      "inn_personal": "780529350045",
+      "roles": [
+        {
+          "entity_name": "ООО «НИНСАР»",
+          "entity_slug": "ooo-ninsar",
+          "from": "2023-12-28",
+          "source_id": "L0001",
+          "title": "Генеральный директор / sole participant (100%)",
+          "to": null
+        }
+      ],
+      "sanctions": [],
+      "other_entities": [],
+      "social": [],
+      "photo": null,
+      "notes": "2026-10-24: new record from the ЕГРЮЛ extract of ООО «НИНСАР» (L0001): general director and 100% participant since registration (28.12.2023), personal ИНН 780529350045 as printed there. Named by ЦБСТ's post 1562 as «Руководитель проекта Егор Сечинский» (the «Квадросим» project) and by riamo.ru, 14.07.2026, as the company's general director presenting «Квадросим» to V. Putin. No date of birth, address or other company roles looked up; no screening run. Same personal ИНН (780529350045) as printed for him on the extract only.",
+      "sources": [],
+      "mentions": 0,
+      "_verified": true,
+      "_origin": "local-mac:2026-10-25",
+      "why": [
+        "L0001 -- ЕГРЮЛ extract of ООО «НИНСАР», 24.10.2026.",
+        "s8651 -- ЦБСТ post 1562 names him as the «Квадросим» project head."
+      ]
     }
   ]
 }

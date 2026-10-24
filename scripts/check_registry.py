@@ -1263,6 +1263,9 @@ def main() -> int:
         print(f"  typed               {sum(1 for s in (sources or []) if s.get('type'))}")
         print(f"  with captured_date  {sum(1 for s in (sources or []) if s.get('captured_date'))}")
         print(f"  with as_of          {sum(1 for s in (sources or []) if s.get('as_of'))}")
+        n_local = sum(1 for s in (sources or []) if s.get("_local"))
+        if n_local:   # ids L0001..: made where the archive Mac could not assign sNNNN (scripts/local_sources.py)
+            print(f"  local, pending merge  {n_local}  (python3 scripts/local_sources.py list; notes/local_registry_protocol.md)")
         entity_sources, person_sources, source_refs = build_index(
             entities, people or [], sources or [])
         print(f"  reverse-indexed     {len(source_refs)} sources cite a known "

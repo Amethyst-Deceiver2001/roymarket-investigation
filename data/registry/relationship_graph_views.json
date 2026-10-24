@@ -242,7 +242,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "product_count": 0,
-          "degree": 97
+          "degree": 98
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -3935,6 +3935,18 @@
           "sanctioned": false,
           "legal_form": "ООО",
           "product_count": 0,
+          "degree": 7
+        },
+        {
+          "id": "ooo-ninsar",
+          "kind": "entity",
+          "label": "ООО «НИНСАР»",
+          "name_latin": "OOO «NINSAR»",
+          "inn": "9719061351",
+          "tier": "network",
+          "sanctioned": false,
+          "legal_form": "ООО",
+          "product_count": 1,
           "degree": 7
         },
         {
@@ -9187,6 +9199,19 @@
           "degree": 1
         },
         {
+          "id": "product::ooo-ninsar::симулятор-квадросим",
+          "kind": "product",
+          "label": "Симулятор «Квадросим» (подготовка операторов БПЛА; режимы «АНТИ БПЛА», «ПРО», «Спорт»)",
+          "owner_slug": "ooo-ninsar",
+          "source_id": "s8651",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
           "id": "product::ooo-npo-kilovatt-shestopalov::kapyushon",
           "kind": "product",
           "label": "«Капюшон»",
@@ -11107,7 +11132,7 @@
           "sanctioned": false,
           "legal_form": null,
           "product_count": 4,
-          "degree": 25
+          "degree": 26
         },
         {
           "id": "program::cbst-accelerator",
@@ -11128,7 +11153,7 @@
           "kind": "program",
           "label": "Резидентство ЦБСТ",
           "subtype": "residency",
-          "degree": 29
+          "degree": 30
         },
         {
           "id": "program::natsproekt-bas",
@@ -11326,6 +11351,14 @@
           "name_latin": "Sazanova Alisa Alekseevna",
           "sanctioned": false,
           "degree": 2
+        },
+        {
+          "id": "sechinskiy-egor-valerevich",
+          "kind": "person",
+          "label": "Сечинский Егор Валерьевич",
+          "name_latin": "Sechinskiy Egor Valerevich",
+          "sanctioned": false,
+          "degree": 3
         },
         {
           "id": "semenov-igor-georgievich",
@@ -30697,6 +30730,58 @@
           "grade": "doc"
         },
         {
+          "source": "ooo-ninsar",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Named by ЦБСТ's own channel as «Компания «Квадросим», являющаяся резидентом ЦБСТ»; the same post names «Руководитель ...",
+          "source_id": "s8651",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc",
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "ooo-ninsar",
+          "target": "product::ooo-ninsar::симулятор-квадросим",
+          "type": "produces",
+          "label": null,
+          "source_id": "s8651",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "rep"
+        },
+        {
+          "source": "ooo-ninsar",
+          "target": "proekt-kb-arkhangel",
+          "type": "related",
+          "label": "training-partnership",
+          "source_id": "L0007",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "rep"
+        },
+        {
+          "source": "ooo-ninsar",
+          "target": "program::cbst-residency",
+          "type": "resident_of",
+          "label": "resident",
+          "source_id": "s8651",
+          "as_of": "2025-11-25",
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "doc",
+          "detail": null,
+          "grade": "doc"
+        },
+        {
           "source": "ooo-npo-kilovatt",
           "target": "npo-kilobatt",
           "type": "related",
@@ -35490,6 +35575,45 @@
           "label": "Генеральный директор",
           "source_id": "s4572",
           "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "sechinskiy-egor-valerevich",
+          "target": "ooo-ninsar",
+          "type": "directs",
+          "label": null,
+          "source_id": "L0001",
+          "as_of": "2023-12-28",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "sechinskiy-egor-valerevich",
+          "target": "ooo-ninsar",
+          "type": "founded",
+          "label": null,
+          "source_id": "L0001",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "sechinskiy-egor-valerevich",
+          "target": "ooo-ninsar",
+          "type": "role",
+          "label": "Генеральный директор / sole participant (100%)",
+          "source_id": "L0001",
+          "as_of": "2023-12-28",
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
@@ -41057,7 +41181,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "product_count": 0,
-          "degree": 97
+          "degree": 98
         },
         {
           "id": "ano-tsentr-razvitiya-transportnykh-tekhnologiy",
@@ -42916,6 +43040,18 @@
           "degree": 7
         },
         {
+          "id": "ooo-ninsar",
+          "kind": "entity",
+          "label": "ООО «НИНСАР»",
+          "name_latin": "OOO «NINSAR»",
+          "inn": "9719061351",
+          "tier": "network",
+          "sanctioned": false,
+          "legal_form": "ООО",
+          "product_count": 1,
+          "degree": 7
+        },
+        {
           "id": "ooo-nova",
           "kind": "entity",
           "label": "ООО «НОВА»",
@@ -43578,6 +43714,14 @@
           "name_latin": null,
           "sanctioned": true,
           "degree": 7
+        },
+        {
+          "id": "sechinskiy-egor-valerevich",
+          "kind": "person",
+          "label": "Сечинский Егор Валерьевич",
+          "name_latin": "Sechinskiy Egor Valerevich",
+          "sanctioned": false,
+          "degree": 3
         },
         {
           "id": "semenov-igor-georgievich",
@@ -46673,6 +46817,19 @@
           "grade": "doc"
         },
         {
+          "source": "sechinskiy-egor-valerevich",
+          "target": "ooo-ninsar",
+          "type": "directs",
+          "label": null,
+          "source_id": "L0001",
+          "as_of": "2023-12-28",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
           "source": "semenov-igor-georgievich",
           "target": "ao-npp-real",
           "type": "directs",
@@ -48690,7 +48847,7 @@
           "sanctioned": true,
           "legal_form": "АНО",
           "product_count": 0,
-          "degree": 97
+          "degree": 98
         },
         {
           "id": "antonova-tatyana-sergeevna",
@@ -49371,6 +49528,18 @@
           "degree": 9
         },
         {
+          "id": "ooo-ninsar",
+          "kind": "entity",
+          "label": "ООО «НИНСАР»",
+          "name_latin": "OOO «NINSAR»",
+          "inn": "9719061351",
+          "tier": "network",
+          "sanctioned": false,
+          "legal_form": "ООО",
+          "product_count": 1,
+          "degree": 7
+        },
+        {
           "id": "ooo-npo-kilovatt-shestopalov",
           "kind": "entity",
           "label": "ООО «Научно-производственное объединение «Киловатт»» (Шестопалов)",
@@ -49654,7 +49823,7 @@
           "sanctioned": false,
           "legal_form": null,
           "product_count": 4,
-          "degree": 25
+          "degree": 26
         },
         {
           "id": "program::cbst-accelerator",
@@ -49675,7 +49844,7 @@
           "kind": "program",
           "label": "Резидентство ЦБСТ",
           "subtype": "residency",
-          "degree": 29
+          "degree": 30
         },
         {
           "id": "program::ushkuynik-residency",
@@ -51081,6 +51250,19 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": "doc",
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "ooo-ninsar",
+          "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
+          "type": "cbst_tie",
+          "label": "Named by ЦБСТ's own channel as «Компания «Квадросим», являющаяся резидентом ЦБСТ»; the same post names «Руководитель ...",
+          "source_id": "s8651",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": "t-doc",
           "detail": null,
           "grade": "doc"
         },

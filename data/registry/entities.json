@@ -92977,5 +92977,142 @@
     "_verified": true,
     "_verified_against": "EGRUL_6685221143_20261024_inn-6685221143.pdf (ЕГРЮЛ выписка of 24.10.2026, read in full)",
     "_origin": "corrections:add_entities"
+  },
+  {
+    "slug": "ooo-ninsar",
+    "name_ru": "ООО «НИНСАР»",
+    "name_en": "NINSAR LIMITED LIABILITY COMPANY",
+    "name_latin": "OOO «NINSAR»",
+    "legal_form": "ООО",
+    "brand_ru": "Квадросим",
+    "inn": "9719061351",
+    "ogrn": "1237700951740",
+    "registered": "28.12.2023",
+    "address": "143960, Московская область, г.о. Реутов, г. Реутов, ул. Победы, д. 7, офис 408/9",
+    "okved_code": "62.01",
+    "okved_label": "Разработка компьютерного программного обеспечения",
+    "director": "Сечинский Егор Валерьевич",
+    "director_history": [
+      {
+        "value": "Сечинский Егор Валерьевич",
+        "as_of": "2023-12-28",
+        "source_id": "L0001",
+        "note": "Генеральный директор since registration; personal ИНН 780529350045; unchanged on the extract of 24.10.2026."
+      }
+    ],
+    "founders": [
+      {
+        "name": "Сечинский Егор Валерьевич",
+        "inn_personal": "780529350045",
+        "nominal_value": 50000,
+        "share_percent": 100,
+        "source_id": "L0001"
+      }
+    ],
+    "charter_capital": 50000,
+    "charter_capital_history": [
+      {
+        "value": 50000,
+        "as_of": "2023-12-28",
+        "source_id": "L0001",
+        "note": "Уставный капитал ₽50,000, sole participant 100% (ЕГРЮЛ extract of 24.10.2026)."
+      }
+    ],
+    "address_history": [
+      {
+        "value": "143960, Московская область, г.о. Реутов, г. Реутов, ул. Победы, д. 7, офис 408/9",
+        "as_of": "2024-12-20",
+        "source_id": "L0001",
+        "note": "Address and place of registration entered 20.12.2024 (GRN 2245002896257); the registering office is МИФНС №23 по Московской области. E-mail on the extract: EGOR-SECHINSKI@YA.RU."
+      }
+    ],
+    "tier": "network",
+    "tier_basis": "ЦБСТ's own channel calls the simulator maker «Квадросим» a resident of ЦБСТ (post 1562). The company sells training software, not a good the platform lists, so it is not a «manufacturer» in the sense of this registry.",
+    "cbst_tie": {
+      "claim": "Named by ЦБСТ's own channel as «Компания «Квадросим», являющаяся резидентом ЦБСТ»; the same post names «Руководитель проекта Егор Сечинский», the general director and sole participant of this company in the ЕГРЮЛ.",
+      "confidence": "t-doc",
+      "evidence": "ЦБСТ's own channel, post 2159491523:1562 (t.me/ANO_CBST/1562), 25.11.2025: «Компания «Квадросим», являющаяся резидентом ЦБСТ, представила новый режим «АНТИ БПЛА» в одноимённом симуляторе подготовки операторов беспилотных систем» and «Руководитель проекта Егор Сечинский подчеркнул…»; repeated in ЦБСТ's digest of 30.11.2025 (post 1584, L0004). Same grade as «Лаборатория Гагаринг» («Резидент ЦБСТ», post 2109). Identity of the brand with this company: (a) the simulator's posts carry the link max.ru/id9719061351_biz, and a max.ru business page is named by its owner's ИНН (ЦБСТ's own is id9702064851_biz, its ИНН 9702064851) (L0005); (b) riamo.ru, 14.07.2026, names the company «ООО «НИНСАР»» and its general director «Егор Сечинский» as presenting «Квадросим» to V. Putin (L0002); (c) the ЕГРЮЛ director. Limits: ЦБСТ's post names no legal entity; no register document or contract links ЦБСТ to this company; the company's own site Квадросим.рф was not reachable here, so no ИНН printed by the company itself has been read.",
+      "source_id": "s8651"
+    },
+    "memberships": [
+      {
+        "program": "cbst-residency",
+        "role": "resident",
+        "basis": "doc",
+        "source_id": "s8651",
+        "as_of": "2025-11-25",
+        "note": "ЦБСТ's own channel, post 1562: «Компания «Квадросим», являющаяся резидентом ЦБСТ»; repeated in post 1584 (30.11.2025, L0004). Post 1524 (17.11.2025, L0003) puts the simulator at ЦБСТ's stand at TECH WEEK."
+      }
+    ],
+    "wb_overlap": "not_checked",
+    "brands": [
+      {
+        "name": "Квадросим",
+        "kind": "trade_name",
+        "primary": true,
+        "source_id": "s8651",
+        "as_of": "2025-11-25",
+        "note": "The name ЦБСТ's posts and the company's own Telegram channel (t.me/kvadrosim) use for both the company and its simulator. No trademark record was looked up."
+      }
+    ],
+    "products": [
+      {
+        "name_ru": "Симулятор «Квадросим» (подготовка операторов БПЛА; режимы «АНТИ БПЛА», «ПРО», «Спорт»)",
+        "note": "A training simulator, not a drone. ЦБСТ (post 1562) says the «АНТИ БПЛА» mode runs at the Михайловская военная артиллерийская академия and at the «Архангел» centre in Туапсе. A free one-month «Квадросим ПРО» licence «для участников СВО» is advertised (L0005).",
+        "source_id": "s8651"
+      }
+    ],
+    "marketing_claims": [
+      {
+        "text_ru": "Она внедрена более чем в 500 образовательных учреждений и используется в школах, колледжах, вузах, технопарках и федеральных программах. На базе платформы обучено свыше 160 тысяч пользователей.",
+        "text_en": "It has been introduced in more than 500 educational institutions and is used in schools, colleges, universities, technology parks and federal programmes. More than 160,000 users have been trained on the platform.",
+        "context": "ЦБСТ's own post 1562, 25.11.2025, about «Квадросим». A count of users and institutions is a claim, not a tie.",
+        "source_id": "s8651",
+        "as_of": "2025-11-25"
+      },
+      {
+        "text_ru": "используется более чем в 700 образовательных учреждениях по всей стране",
+        "text_en": "is used in more than 700 educational institutions across the country",
+        "context": "РИАМО, 14.07.2026, on the presentation of «Квадросим» to V. Putin at the forum «Все для Победы!». The same page names «генеральный директор ООО «НИНСАР» Егор Сечинский».",
+        "source_id": "L0002",
+        "as_of": "2026-07-14"
+      }
+    ],
+    "related_entities": [
+      {
+        "slug": "proekt-kb-arkhangel",
+        "name": "Проект КБ «Архангел»",
+        "relationship_type": "training-partnership",
+        "relationship": "The Архангел school's forum channel calls Квадросим «нашими партнерами» (post 175293, 08.03.2026, L0007) and says the simulator will get the school's interceptor; its main channel greets a Квадросим employee and says it awaits that simulator (post 10550, 24.07.2026, L0006). ЦБСТ says the simulator's mode runs at the school's Tuapse centre (post 1562, s8651). Claims by the parties; no document.",
+        "source_id": "L0007"
+      }
+    ],
+    "candidate_identities": [
+      {
+        "name_ru": "ООО «НИНСАР» (Москва)",
+        "inn": "7734366192",
+        "status": "rejected",
+        "as_of": "2026-10-24",
+        "source_id": "L0008",
+        "note": "ЕГРЮЛ name search of 24.10.2026 (20 results): a second «НИНСАР», ОГРН 1157746938172, registered 13.10.2015, ceased 29.04.2020, director Васильев Е.В. Rejected: it ceased before the simulator's company was registered, and the identification above rests on the ИНН in the simulator's own link and on the named director."
+      }
+    ],
+    "open_questions": [
+      {
+        "text": "Not screened: no sanctions, GUR, OpenSanctions or ФНС screening has been run on ООО «НИНСАР» or its director. Run the usual screens on the archive Mac.",
+        "source_id": "L0001"
+      },
+      {
+        "text": "The company's own channel t.me/kvadrosim and site Квадросим.рф are not in the scraped data (the site did not resolve here). Read them for a printed ИНН/ОГРН, the legal name, the clients named and any tie to ЦБСТ, Архангел or a state buyer; the identification so far rests on the max.ru link, the named director and ЦБСТ's own wording.",
+        "source_id": "L0005"
+      },
+      {
+        "text": "What «резидент ЦБСТ» means for this company (a contract, a programme entry, an accelerator stream) is not stated in any document on file; ЦБСТ's posts use the word and nothing more.",
+        "source_id": "s8651"
+      }
+    ],
+    "sources": [],
+    "_verified": true,
+    "_origin": "local-mac:2026-10-25"
   }
 ]

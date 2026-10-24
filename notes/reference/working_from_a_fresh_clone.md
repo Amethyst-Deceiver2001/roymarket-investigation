@@ -18,7 +18,7 @@ Internal. For a session on a machine that has the repo but not `data/sources/` o
 
 ## What is safe and what is not
 
-Safe: reading, registry and notes work from sources already cited, tests, `check_registry.py`, `status_board.py`, generating packets and exports, commits confined to the paths CLAUDE.md lists.
+Safe: **recording a new fact with a source of its own, through local ids (`L0001`, …; `scripts/local_sources.py`, protocol in `notes/local_registry_protocol.md`, added 25.10.2026)**, reading, registry and notes work from sources already cited, tests, `check_registry.py`, `status_board.py`, generating packets and exports, commits confined to the paths CLAUDE.md lists.
 
 Not from this setup: `daily_mac.py`, `timestamp_sources.py`, any pull or screening job, `inventory_sources.py`, `scan_sources.py`, `tg_*` jobs. They assume the full local archive; run against an empty `data/sources/` they would write partial files and could look like changes to the real archive. Nothing under `docs/` is pushed without the user's go-ahead.
 
