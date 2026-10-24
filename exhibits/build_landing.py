@@ -178,8 +178,8 @@ OPENING_QUOTES = {   # key: (channel, post, verbatim Russian, our translation)
 # osvedomitell_alex_media_looked_20261024.md). The files are not catalogued on this Mac, so they have no media.json
 # record: they appear on the private preview only, never in a docs/ build, and move to media.json once catalogued.
 # key: (post, file in exhibits/images/kherson, what the frame shows, verbatim Russian from the post, our translation)
-# The six pictures of ЦБСТ's own album from the «Tsentr-2026» exercise (post 2605–2610, 04.10.2026), each looked at full
-# size 24.10.2026. Fetched from the public preview; not catalogued on this Mac (no source ids here), so like the Kherson
+# Two of the six pictures of ЦБСТ's own album from the «Tsentr-2026» exercise (post 2605–2610, 04.10.2026): its stall and
+# the ROY.MARKET booklet. The other four (the range) are not used. Each looked at full size 24.10.2026. Fetched from the public preview; not catalogued on this Mac (no source ids here), so like the Kherson
 # stills they appear on the private preview only. key: (file in exhibits/images/center2026, what the frame shows,
 # (verbatim Russian, English) of a line printed in it or None)
 CENTER_STILLS = [
@@ -188,12 +188,6 @@ CENTER_STILLS = [
      "we leave it so.", ("Технологии превосходства", "Technologies of superiority")),
     ("c2605-2.jpg", "Folded ROY.MARKET leaflets and a red round patch. Each leaflet shows a gimbal camera and is printed "
      "“3000+” product items.", None),
-    ("c2605-3.jpg", "Under the same netting, a row of long tubular objects on stands. The post does not say what they are.", None),
-    ("c2605-4.jpg", "The range from a vantage point: smoke over a training village, concrete anti-tank pyramids, a vehicle "
-     "among mounds.", None),
-    ("c2605-5.jpg", "A smoke column over open ground beside a rock-edged road.", None),
-    ("c2605-6.jpg", "A black blast plume over the range, a second further back, and in the foreground two tracked vehicles "
-     "that appear to be uncrewed.", None),
 ]
 
 KHERSON_STILLS = {
@@ -733,16 +727,15 @@ class Landing(Chain):
             printed = f' Printed on the banner: {orig_line(line[0], f"cs-{n}", line[1])}.' if line else ""
             self.templates[f"c{n}"] = (
                 f'<figure class="rm-fig"><div class="frame"><img src="{esc(rel)}" alt="{esc(shows)}"></div><figcaption>'
-                f'<span class="rm-prov">Posted by TsBST itself, picture {n} of 6</span><span>{esc(shows)}{printed} '
+                f'<span class="rm-prov">Posted by TsBST itself, picture {n} of 6 in the album</span><span>{esc(shows)}{printed} '
                 f'The post\'s caption says TsBST presented ROY.MARKET at the main stage of the exercise; it does not '
                 f'describe the pictures.{self.tref("tsentr_pics")}</span><span class="when">04.10.2026</span></figcaption></figure>')
             tiles.append(self.tile(f"fig-c{n}", rel, shows, self.tile_label(shows, "04.10.2026"), big=len(tiles) < 2))
         if not tiles:
             return ""
         return (f'<figure class="band"><div class="band-grid">{"".join(tiles)}</div><figcaption><span class="rm-label">'
-                f'Pictures · {len(tiles)}</span> TsBST\'s own album from the exercise: the first two show its stand and '
-                f'ROY.MARKET\'s printed material; the rest show the range. None of them shows a listing on the platform. '
-                f'Each opens with its caption, date and source.</figcaption></figure>')
+                f'Pictures · {len(tiles)}</span> TsBST\'s own stall at the exercise, and ROY.MARKET\'s printed booklet and patch. '
+                f'Neither shows a listing on the platform. Each opens with its caption, date and source.</figcaption></figure>')
 
     def opening(self):
         """The cold open: a maker's strike footage, re-posted by ЦБСТ with an order line for its marketplace."""
