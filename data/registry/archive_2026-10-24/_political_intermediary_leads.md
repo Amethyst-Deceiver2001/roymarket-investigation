@@ -1,5 +1,7 @@
 # Political-intermediary / bridge-figure triage — 2026-09-15
 
+> **Archived 24.10.2026.** The leads that were still open were moved into the records' `open_questions` (the two officials known only by initials). The registry has since backfilled the role sources for Якушев, Безруков and Песков. **One error here:** item 4 calls Дмитрий Песков the Kremlin press secretary; the record is Дмитрий Николаевич Песков, the presidential special representative and head of Платформа НТИ, a different person. Not a source.
+
 Local-data triage only (people.json, entities.json, roymarket.db — no live network
 calls made). Not a source in itself; every candidate below still needs the usual
 primary-source verification before being wired into `sanctions[]`/`roles[]`/a new

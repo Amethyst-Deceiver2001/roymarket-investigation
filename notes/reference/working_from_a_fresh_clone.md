@@ -14,6 +14,8 @@ Internal. For a session on a machine that has the repo but not `data/sources/` o
 2. Python 3.11 matches CI. On an old macOS where Homebrew builds from source, use the python.org 3.11 installer, then `pip install -r requirements.txt`.
 3. Check: `python3 scripts/check_registry.py --no-local-files` (expects 0 errors; skips only the `data/sources/` existence checks).
 
+**A partial database is not a full one (24.10.2026).** The Mac that ran the October scan holds `data/roymarket.db` for 23.10.2025 to 23.10.2026 only (97,726 posts); the older posts, the 98,700-post migration database and every `TGPOST_`/`TGMEDIA_` source file are on the archive machine. A post older than the scrape cannot be read here: log it as an open question and read it where the archive is. Check a channel's range before searching it: `select min(date), min(msg_id) from tg_posts` joined to `tg_channels`.
+
 ## What is safe and what is not
 
 Safe: reading, registry and notes work from sources already cited, tests, `check_registry.py`, `status_board.py`, generating packets and exports, commits confined to the paths CLAUDE.md lists.

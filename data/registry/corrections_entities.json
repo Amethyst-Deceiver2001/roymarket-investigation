@@ -13386,7 +13386,7 @@
         "2026-09-07: merged dormant duplicate correction key '7714473012' into this slug-keyed entry (registry-hardening pass, no field conflict).",
         "2026-09-07: founding-document bundle (s6908, five Изменения filings 2024-2026) OCR'd and read in full -- recovered the intermediate ₽50,000 capital step (existing history jumped straight to the current ₽76,336 with no earlier data point) and a formal ИНТЦ «Аэрокосмическая инновационная долина» residency declaration written directly into the charter's purpose clause -- new beyond the existing gisp.gov.ru/rk.2035.university state_programs entries, which only showed a product-catalogue listing, not this charter-level status change.",
         "2026-09-14: enriched/added products[] with structured type_bvs/production_status/specs from rk.2035.university's own technical_specifications sub-catalog (s1169) -- 10 products total after this pass.",
-        "[2026-09-16] Backfilled full founders/founders_history from the entity's own already-archived FY2025 БФО filing (s0324), closing a gap flagged in data/registry/_docs_registry_gap_list_2026-09-16.md item 13. The filing's 'Перечень связанных сторон' table (p.45) also lists the 5-member Совет директоров as of 31.12.2025 (Рогозин, Павлова, Жук, Басов, Исаенко) -- Павлова's GD role already recorded separately; the other 4 board seats are wired on the person side via corrections_people.json (this same pass)."
+        "[2026-09-16] Backfilled full founders/founders_history from the entity's own already-archived FY2025 БФО filing (s0324), closing a gap flagged in data/registry/archive_2026-10-24/_docs_registry_gap_list_2026-09-16.md item 13. The filing's 'Перечень связанных сторон' table (p.45) also lists the 5-member Совет директоров as of 31.12.2025 (Рогозин, Павлова, Жук, Басов, Исаенко) -- Павлова's GD role already recorded separately; the other 4 board seats are wired on the person side via corrections_people.json (this same pass)."
       ]
     },
     "ao-fabrika-im-sovetskoy-armii": {
@@ -16098,7 +16098,12 @@
         "ogrn": "1237700463032",
         "okved_code": "62.01",
         "okved_label": "Разработка компьютерного программного обеспечения",
-        "open_questions": [],
+        "open_questions": [
+          {
+            "text": "Lead from the 15.09.2026 connectivity triage, not verified here: projectArchangel msg 4504 (05.06.2024; cross-posted to Archangel_Forum msg 95633, 11.06.2024) announces the forum «Народный ВПК», 14–16.06.2024 in Нижний Новгород, and lists АО «Площадь» and ООО «Гагаринг» among the exhibitors. No event record for it exists in programs.json and neither company has a participation recorded. Unverified: who organised it, and whether the post lists confirmed exhibitors or only invitations. The announcement runs through the «Архангел» project's channels, not ЦБСТ's, so it is not a ЦБСТ tie. Read the post in Russian before adding an event. Older than this machine's Telegram scrape.",
+            "source_id": null
+          }
+        ],
         "sanctions": [
           {
             "date": null,
@@ -16259,7 +16264,8 @@
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
         "2026-09-16 (coverage-gap agent pass, verified independently before wiring): source_id left null, same precedent as ooo-aviron above.",
         "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (war-sanctions.gur.gov.ua, UAV-industry listing), Ukraine (Presidential sanctions decree/list).",
-        "05.10.2026: US listing date and Ukraine act/date added from the saved GUR portal page, the OFAC recent-actions notice and the Presidential decree page (read on zakon.rada.gov.ua); decision annex unread, see sanctions[] notes."
+        "05.10.2026: US listing date and Ukraine act/date added from the saved GUR portal page, the OFAC recent-actions notice and the Presidential decree page (read on zakon.rada.gov.ua); decision annex unread, see sanctions[] notes.",
+        "24.10.2026: open question added from the 15.09 triage leads (moved out of data/registry/archive_2026-10-24/_political_intermediary_leads.md and _informal_ties_leads.md before they were archived)."
       ]
     },
     "ao-pmts-avangard": {
@@ -20333,6 +20339,12 @@
             "as_of": "2025-11-14",
             "note": "ЦБСТ's own channel, post 1509: «КБ «Гермес», резидент ЦБСТ, представило новый высокоскоростной перехватчик для борьбы с тяжёлыми украинскими БПЛА типа «Баба-яга»». «Гермес» is the brand НПО «КАЙСАНТ» trades under (kaysant.ru / germesfpv.ru, per this record's web entries)."
           }
+        ],
+        "open_questions": [
+          {
+            "text": "Lead from the 15.09.2026 connectivity triage, not verified here: tsg_group71 msg 168 and nponebo msg 95 (both 09.09.2025) carry one digest, «Что показывали на Дроннице», that describes products of НПО «КАЙСАНТ» and АНО «НПЦ «Ушкуйник»» in the same round-up. The registry records Кайсант only at Дронница 2023 (`dronnitsa-2023`). Unverified: whether Кайсант exhibited at Дронница 2025 (`dronnitsa-2025` exists as an event). Read the digest in Russian; if it says so, record the participation with the post as its source. Older than this machine's Telegram scrape.",
+            "source_id": null
+          }
         ]
       },
       "verified_against": " Also: germesfpv.ru read directly 23.08.2026. | 04.10.2026: s9109 (official list file of 02.10.2026)",
@@ -20345,7 +20357,8 @@
         "2026-09-15: informal-cooperation triage (LEAD 3) -- confirmed the tsg_group71/nponebo shared-Дронница-digest text verbatim against data/roymarket.db. Recorded as related_entities; both entities already independently carry cbst_tie so this is not a new ЦБСТ-link finding, just a documented co-appearance.",
         "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section.",
         "[2026-10-02 membership backfill] cbst-residency membership added from the post named in its note, read in full in s7597; the earlier cbst_tie record is unchanged.",
-        "04.10.2026 (issue #9, listed but missing from sanctions[]): the official list entry read and recorded; identifiers match this record."
+        "04.10.2026 (issue #9, listed but missing from sanctions[]): the official list entry read and recorded; identifiers match this record.",
+        "24.10.2026: open question added from the 15.09 triage leads (moved out of data/registry/archive_2026-10-24/_political_intermediary_leads.md and _informal_ties_leads.md before they were archived)."
       ]
     },
     "npo-kilobatt": {
@@ -37375,6 +37388,10 @@
             "source_id": "s8860",
             "status": "open",
             "text": "As of 02.09.2026 3mx's rep tells a customer its products are sold only on 3mx.ru or through its dealers (chat msg 42146, reply to 42145 asking about РОЙ.МАРКЕТ; s8859, s8860). A customer says in msg 42151 that РОЙ.МАРКЕТ is not yet a dealer (s8862). So «Булат» is not documented as sold on РОЙ.МАРКЕТ although ЦБСТ lists «детекторы «Булат»» among its residents' exhibits (s8842). Open: whether the statement means no РОЙ.МАРКЕТ listing at all; how it fits the WB listings recorded on this entity (the maker's own brand store, 25.08.2026); any later change."
+          },
+          {
+            "text": "Lead from the 15.09.2026 connectivity triage, not verified here: chadayevru msg 3627 (06.03.2025) reports the second meeting of anti-drone developers on 4–5 March 2025 at НПЦ «Ушкуйник» in Великий Новгород (organisers: АНО «НПЦ «Ушкуйник»», «RuDrones. Беспилотные технологии», ExpoUAV). The triage tied ООО «Тримикс» (3mx, «Булат») to the same conference series through chadayevru msg 2722 (04.2024), but neither post names Тримикс as attending the March 2025 meeting. Unverified: whether Тримикс took part in any of them. Read both posts in Russian before recording a participation; they are older than this machine's Telegram scrape (it starts 23.10.2025), so read them from the archive machine's database.",
+            "source_id": null
           }
         ],
         "patents": [
@@ -37725,7 +37742,8 @@
         "[2026-09-30 cross-reference] related_entities: dealer -> ip-kuznetsov-ruslan-nikolaevich",
         "05.10.2026: sanctions[] re-read against the official lists. Downloaded once each on 05.10.2026 (whole-file SHA-256 US 0367408834e4af4d… (02.10.2026), EU cd59eccb0278d331… (22.09.2026), Swiss SECO 5f1315863aedf05c… (28.09.2026), UK 8e23b2d050ea2cc0… (02.10.2026)); each entry carrying this record's ИНН/ОГРН is saved as its own source and recorded in sanctions[] with its entry id: . Other regimes in the OpenSanctions entry (non-US/EU/CH/UK, or regimes the XML cannot show) remain unread against their own lists: Ukraine (Presidential sanctions decree/list).",
         "06.10.2026: dealer «Макс 911» now has its own record; post 415 recorded as a marketing claim.",
-        "06.10.2026: dealer «Мэдро» now has a record (ИП Артемьева, Wildberries seller of record); post 416 recorded as a marketing claim with the occupied-territory outlets."
+        "06.10.2026: dealer «Мэдро» now has a record (ИП Артемьева, Wildberries seller of record); post 416 recorded as a marketing claim with the occupied-territory outlets.",
+        "24.10.2026: open question added from the 15.09 triage leads (moved out of data/registry/archive_2026-10-24/_political_intermediary_leads.md and _informal_ties_leads.md before they were archived)."
       ]
     },
     "ooo-tsentr-bespilotnykh-sistem-tula": {

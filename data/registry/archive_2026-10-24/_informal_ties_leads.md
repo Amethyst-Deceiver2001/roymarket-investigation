@@ -1,5 +1,7 @@
 # Informal-cooperation / co-mention leads (Part 2 of 2026-09-15 connectivity audit)
 
+> **Archived 24.10.2026.** Its open leads were moved into the records' `open_questions` (ООО «Тримикс», НПО «КАЙСАНТ», АО «Площадь»); the rest were already closed in the registry: КИНГПРО carries a documented ЦБСТ tie, `kb-germes` is merged into `npo-kaysant`. Not a source.
+
 **Status: triage list, not a source.** Every candidate below still needs the
 same primary-source verification discipline as `mine_leads.py`'s output
 before anything here goes into `corrections_entities.json`/

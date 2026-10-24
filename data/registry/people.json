@@ -72,7 +72,7 @@
       "2026-08-25: patronymic correction + DOB fill via OSINT research pass -- resolves the biggest identifying-detail gap on the network's most senior figure.",
       "2026-08-25: photo/social-media OSINT research pass.",
       "2026-08-26: user-supplied RuPEP.org profile (rupep.org/ru/person/63, PDF export, last profile update per RuPEP 19.05.2026) — filled birthplace and personal ИНН directly from RuPEP's own PEP-category record (s2452). DOB (14.06.1968) and career history match what was already on file, corroborating both. Full career/family/business-connections detail also captured in the archived PDF for future reference (family members not wired here per the PII-scope rule -- they aren't network principals in their own right).",
-      "2026-09-15: backfilled the ЦБСТ Supervisory Board role's entity_slug/source_id (both were null despite the notes field already citing er.ru independently). Fetched and archived er.ru/activity/news/vladimir-yakushev-predstavil-iniciativy-po-razvitiyu-voennyh-i-dvojnyh-tehnologij-na-baze-centra-bespilotnyh-sistem (14.02.2025, s7519) directly: \"Секретарь Генсовета «Единой России» возглавил наблюдательный совет организации\" -- confirms he chaired/led a ЦБСТ Набсовет session on this date; from set to the article's own date since this is the earliest independently dated confirmation on file, not a formal appointment date. Found via a political-intermediary/bridge-figure triage pass (data/registry/_political_intermediary_leads.md)."
+      "2026-09-15: backfilled the ЦБСТ Supervisory Board role's entity_slug/source_id (both were null despite the notes field already citing er.ru independently). Fetched and archived er.ru/activity/news/vladimir-yakushev-predstavil-iniciativy-po-razvitiyu-voennyh-i-dvojnyh-tehnologij-na-baze-centra-bespilotnyh-sistem (14.02.2025, s7519) directly: \"Секретарь Генсовета «Единой России» возглавил наблюдательный совет организации\" -- confirms he chaired/led a ЦБСТ Набсовет session on this date; from set to the article's own date since this is the earliest independently dated confirmation on file, not a formal appointment date. Found via a political-intermediary/bridge-figure triage pass (data/registry/archive_2026-10-24/_political_intermediary_leads.md)."
     ],
     "_verified_against": null,
     "opensanctions_matches": [
@@ -175,7 +175,7 @@
       "2026-08-26 aleph_followup.py fetch pass: \"ИП Безруков Андрей Анатольевич\" (Russian companies OGRN-2016 dataset, exact full-ФИО match INCLUDING the patronymic Анатольевич) gives a personal ИНН directly (s2064). Worth noting for the identity-mismatch flag above: this record's patronymic matches the correct 1986-born ЦБСТ chairman, not the Олегович-patronymic 1960-born SVR-illegal namesake — corroborates (does not by itself prove DOB, since an ИП/OGRN record carries no birth date) that this is the right Андрей Безруков. A second customs-declarations hit for the same name (\"через Кащеева Александра Леонидовича\", Ульяновская обл. address) was NOT wired in — the address plausibly belongs to the customs broker/intermediary named in that record, not to Безруков himself, and does not cleanly attach to a specific field.",
       "2026-08-26: user checked rupep.org directly for this person (the correct, 1986-born ЦБСТ chairman) -- NOT listed. Negative-verification result, worth recording so this isn't re-checked as if untried: RuPEP does not carry a profile for him as of this date, unlike Якушев (rupep.org/ru/person/63, see vladimir-vadimovich-yakushev).",
       "2026-09-05: backfilled the structured `zakupki_review` field (closed, as of 2026-08-31) from this record's existing prose note, so zakupki_coverage.py stops treating an already-triaged record as an unread candidate.",
-      "2026-09-15: backfilled the existing ЦБСТ chairman role's source_id (was null despite being independently sourceable). Fetched and archived er.ru/activity/news/vladimir-yakushev-predstavil-iniciativy-po-razvitiyu-voennyh-i-dvojnyh-tehnologij-na-baze-centra-bespilotnyh-sistem (14.02.2025, s7519) — the same article quotes \"Председатель правления ЦБСТ Андрей Безруков\" directly, confirming this exact title. Found via a political-intermediary/bridge-figure triage pass (data/registry/_political_intermediary_leads.md)."
+      "2026-09-15: backfilled the existing ЦБСТ chairman role's source_id (was null despite being independently sourceable). Fetched and archived er.ru/activity/news/vladimir-yakushev-predstavil-iniciativy-po-razvitiyu-voennyh-i-dvojnyh-tehnologij-na-baze-centra-bespilotnyh-sistem (14.02.2025, s7519) — the same article quotes \"Председатель правления ЦБСТ Андрей Безруков\" directly, confirming this exact title. Found via a political-intermediary/bridge-figure triage pass (data/registry/archive_2026-10-24/_political_intermediary_leads.md)."
     ],
     "_verified_against": null,
     "opensanctions_matches": [],
@@ -2182,7 +2182,7 @@
       "2026-09-07: wired personal ИНН from a user-supplied primary ЕГРИП выписка (s6918) plus investigator.org.ua corroboration (s6919, user-supplied URL) -- personal ИНН exactly matches the OpenSanctions Ukraine-NSDC match's own innCode, upgrading that match to ID-confirmed; added his two Спецтех subsidiary directorships (already on file for those entities but missing from his own roles[]), his prior Rudnevo technopark role, and the «Беркут» co-founder lead (entity not yet identified).",
       "2026-09-14: reciprocal director-role backfill -- full ЕГРЮЛ-выписка (s7453) confirms current director.",
       "2026-09-14: reciprocal founder-role backfill -- full ЕГРЮЛ-выписка (s7452) confirms 50/50 founder split.",
-      "2026-09-15: the «Беркут» role's note called its ИНН/ОГРН \"not yet identified\" -- stale text; the 2026-09-07 ФНС founder cross-check (other_entities[]) had already resolved it (ИНН 9709100837, ОГРН 1237700726636, matching the already-registered ooo-berkut-dmv entity_slug this role already pointed at). Found during a political-intermediary/bridge-figure triage pass (data/registry/_political_intermediary_leads.md, Part 2).",
+      "2026-09-15: the «Беркут» role's note called its ИНН/ОГРН \"not yet identified\" -- stale text; the 2026-09-07 ФНС founder cross-check (other_entities[]) had already resolved it (ИНН 9709100837, ОГРН 1237700726636, matching the already-registered ooo-berkut-dmv entity_slug this role already pointed at). Found during a political-intermediary/bridge-figure triage pass (data/registry/archive_2026-10-24/_political_intermediary_leads.md, Part 2).",
       "[2026-09-30] ЕГРЮЛ выписка of ООО «Беркут» (s8541, 30.09.2026): Рубинштейн is a 49% founder (share entered 19.12.2024); the генеральный директор is Майоров Константин Юрьевич since 25.12.2024. The earlier role text «manages Беркут simultaneously with ЦБСТ» (investigator.org.ua, s6919) is not supported by the register and is replaced with the documented founder role."
     ],
     "_verified_against": null,
@@ -6829,7 +6829,7 @@
       "2026-08-24: resolved this person's `_candidate` role at ООО «ЦЮС» via bulk EGRUL-snapshot cross-check -- the entity's own already-sourced `director` field (ooo-tsyus, source s0052) names this exact person. Dropped `_candidate`, attached the same source_id. Part of a Phase 1b bulk-resolution pass matching all `_candidate` role links against already-verified entity director/founder fields.",
       "2026-09-07: verification backlog closure — identity already confirmed by ООО «Метаскан»'s (ooo-metaskan) own director_history entry (s6712), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
       "2026-09-14: inn_personal filled and role source_id upgraded to a fresh full EGRUL выписка (s7410, part of the connectivity-audit 12-entity batch, notes/rebuild_plan.md) -- confirms this entity's own already-recorded director field exactly.",
-      "2026-09-15: closed the ООО «Системы Безопасности» (ИНН 5001160158) lead flagged in data/registry/_political_intermediary_leads.md Part 5 -- pulled its full signed EGRUL выписка (s7520). Findings: 100% sole owner AND director is Поспехов himself (no third-party co-owner), charter capital at the statutory minimum (10,000 руб), registered 15.05.2024, address a residential-looking unit in Балашиха. Primary ОКВЭД 26.11 matches other registry manufacturer-tier entities, but the entity has 38 additional registered ОКВЭД codes spanning wholesale/retail trade, IT services, accounting/audit, advertising, market research, freight transport, and construction -- the same broad catch-all registration pattern already discounted for this person's other other_entities[] hits (Альянс, Стратум, ЦЮС) and for every other Part-2 bridge-figure candidate checked the same day. No product, patent, or UAV/defense-specific content found (WebSearch on the company name/ИНН, spark-interfax aggregator page). Assessment: personal shell/holding vehicle, not a genuine new manufacturer-tier network entity -- NOT wired as a new entities.json record. Not promoted."
+      "2026-09-15: closed the ООО «Системы Безопасности» (ИНН 5001160158) lead flagged in data/registry/archive_2026-10-24/_political_intermediary_leads.md Part 5 -- pulled its full signed EGRUL выписка (s7520). Findings: 100% sole owner AND director is Поспехов himself (no third-party co-owner), charter capital at the statutory minimum (10,000 руб), registered 15.05.2024, address a residential-looking unit in Балашиха. Primary ОКВЭД 26.11 matches other registry manufacturer-tier entities, but the entity has 38 additional registered ОКВЭД codes spanning wholesale/retail trade, IT services, accounting/audit, advertising, market research, freight transport, and construction -- the same broad catch-all registration pattern already discounted for this person's other other_entities[] hits (Альянс, Стратум, ЦЮС) and for every other Part-2 bridge-figure candidate checked the same day. No product, patent, or UAV/defense-specific content found (WebSearch on the company name/ИНН, spark-interfax aggregator page). Assessment: personal shell/holding vehicle, not a genuine new manufacturer-tier network entity -- NOT wired as a new entities.json record. Not promoted."
     ],
     "_verified_against": "s6712 -- ООО «Метаскан»'s own primary-source founding/EGRUL document, naming Поспехов Иван Александрович as director (cross-referenced from the entity's own director_history entry).",
     "opensanctions_matches": [],
@@ -42573,7 +42573,13 @@
     "graph_tier": "reference",
     "_verified_against": null,
     "opensanctions_matches": [],
-    "opensanctions_screened_at": "2026-09-06"
+    "opensanctions_screened_at": "2026-09-06",
+    "open_questions": [
+      {
+        "text": "Known only by initials and office: начальник управления информационных технологий и связи, ГУ МЧС России по Курской области, who co-signed the sole-supplier justification for contract № 130 of 28.10.2024 [s1460]. No full name is on file, so no register or sanctions search is possible. Find the full name in a primary document (an order, the contract's signature block, the unit's own post) before any screening; do not infer it from a namesake.",
+        "source_id": null
+      }
+    ]
   },
   {
     "slug": "savvin-a-a",
@@ -42620,7 +42626,13 @@
     "graph_tier": "reference",
     "_verified_against": null,
     "opensanctions_matches": [],
-    "opensanctions_screened_at": "2026-09-06"
+    "opensanctions_screened_at": "2026-09-06",
+    "open_questions": [
+      {
+        "text": "Known only by initials and office: начальник, генерал-майор, ФГКУ «ЦСООР «Лидер»», who approved acceptance act № 1 of 25.12.2025 [s1464]. No full name is on file, so no register or sanctions search is possible. Find the full name in a primary document (an order, the contract's signature block, the unit's own post) before any screening; do not infer it from a namesake.",
+        "source_id": null
+      }
+    ]
   },
   {
     "slug": "kulagin-s-a",

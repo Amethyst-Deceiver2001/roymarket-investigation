@@ -75,6 +75,22 @@
    "status": "open",
    "text": "Log the month read's top angles as open developments",
    "why": "they show on the board and in this brief only once logged in data/watch/developments.json"
+  },
+  {
+   "id": "b010",
+   "kind": "stuck",
+   "since": "2026-10-24",
+   "status": "open",
+   "text": "Two delivery events have no unit link: bulat-d05 (132nd Gorlovka brigade, post 422) and kapyushon-d02 (423rd Yampol regiment, post 310)",
+   "why": "both posts are older than this machine's Telegram scrape; read them from the archive machine, then set recipient_unit_slug only if the post's wording names the unit"
+  },
+  {
+   "id": "b011",
+   "kind": "stuck",
+   "since": "2026-10-24",
+   "status": "open",
+   "text": "Four 2024-2025 leads are logged as open questions and wait for a read (Тримикс at the Ushkuynik anti-drone meeting, Кайсант at Дронница 2025, the «Народный ВПК» forum listing, the two unnamed MChS officials)",
+   "why": "their posts predate this machine's scrape (it starts 23.10.2025) and live on the archive machine"
   }
  ]
 }

@@ -16961,7 +16961,12 @@
         "source_id": "s7557"
       }
     ],
-    "open_questions": [],
+    "open_questions": [
+      {
+        "text": "Lead from the 15.09.2026 connectivity triage, not verified here: projectArchangel msg 4504 (05.06.2024; cross-posted to Archangel_Forum msg 95633, 11.06.2024) announces the forum «Народный ВПК», 14–16.06.2024 in Нижний Новгород, and lists АО «Площадь» and ООО «Гагаринг» among the exhibitors. No event record for it exists in programs.json and neither company has a participation recorded. Unverified: who organised it, and whether the post lists confirmed exhibitors or only invitations. The announcement runs through the «Архангел» project's channels, not ЦБСТ's, so it is not a ЦБСТ tie. Read the post in Russian before adding an event. Older than this machine's Telegram scrape.",
+        "source_id": null
+      }
+    ],
     "sources": [],
     "confidence": null,
     "_verified": true,
@@ -21701,6 +21706,10 @@
         "source_id": "s8860",
         "status": "open",
         "text": "As of 02.09.2026 3mx's rep tells a customer its products are sold only on 3mx.ru or through its dealers (chat msg 42146, reply to 42145 asking about РОЙ.МАРКЕТ; s8859, s8860). A customer says in msg 42151 that РОЙ.МАРКЕТ is not yet a dealer (s8862). So «Булат» is not documented as sold on РОЙ.МАРКЕТ although ЦБСТ lists «детекторы «Булат»» among its residents' exhibits (s8842). Open: whether the statement means no РОЙ.МАРКЕТ listing at all; how it fits the WB listings recorded on this entity (the maker's own brand store, 25.08.2026); any later change."
+      },
+      {
+        "text": "Lead from the 15.09.2026 connectivity triage, not verified here: chadayevru msg 3627 (06.03.2025) reports the second meeting of anti-drone developers on 4–5 March 2025 at НПЦ «Ушкуйник» in Великий Новгород (organisers: АНО «НПЦ «Ушкуйник»», «RuDrones. Беспилотные технологии», ExpoUAV). The triage tied ООО «Тримикс» (3mx, «Булат») to the same conference series through chadayevru msg 2722 (04.2024), but neither post names Тримикс as attending the March 2025 meeting. Unverified: whether Тримикс took part in any of them. Read both posts in Russian before recording a participation; they are older than this machine's Telegram scrape (it starts 23.10.2025), so read them from the archive machine's database.",
+        "source_id": null
       }
     ],
     "sources": [],
@@ -34325,7 +34334,12 @@
       "other": []
     },
     "images": [],
-    "open_questions": [],
+    "open_questions": [
+      {
+        "text": "Lead from the 15.09.2026 connectivity triage, not verified here: tsg_group71 msg 168 and nponebo msg 95 (both 09.09.2025) carry one digest, «Что показывали на Дроннице», that describes products of НПО «КАЙСАНТ» and АНО «НПЦ «Ушкуйник»» in the same round-up. The registry records Кайсант only at Дронница 2023 (`dronnitsa-2023`). Unverified: whether Кайсант exhibited at Дронница 2025 (`dronnitsa-2025` exists as an event). Read the digest in Russian; if it says so, record the participation with the post as its source. Older than this machine's Telegram scrape.",
+        "source_id": null
+      }
+    ],
     "sources": [],
     "confidence": null,
     "_verified": false,
@@ -46708,7 +46722,7 @@
       "2026-09-07: merged dormant duplicate correction key '7714473012' into this slug-keyed entry (registry-hardening pass, no field conflict).",
       "2026-09-07: founding-document bundle (s6908, five Изменения filings 2024-2026) OCR'd and read in full -- recovered the intermediate ₽50,000 capital step (existing history jumped straight to the current ₽76,336 with no earlier data point) and a formal ИНТЦ «Аэрокосмическая инновационная долина» residency declaration written directly into the charter's purpose clause -- new beyond the existing gisp.gov.ru/rk.2035.university state_programs entries, which only showed a product-catalogue listing, not this charter-level status change.",
       "2026-09-14: enriched/added products[] with structured type_bvs/production_status/specs from rk.2035.university's own technical_specifications sub-catalog (s1169) -- 10 products total after this pass.",
-      "[2026-09-16] Backfilled full founders/founders_history from the entity's own already-archived FY2025 БФО filing (s0324), closing a gap flagged in data/registry/_docs_registry_gap_list_2026-09-16.md item 13. The filing's 'Перечень связанных сторон' table (p.45) also lists the 5-member Совет директоров as of 31.12.2025 (Рогозин, Павлова, Жук, Басов, Исаенко) -- Павлова's GD role already recorded separately; the other 4 board seats are wired on the person side via corrections_people.json (this same pass)."
+      "[2026-09-16] Backfilled full founders/founders_history from the entity's own already-archived FY2025 БФО filing (s0324), closing a gap flagged in data/registry/archive_2026-10-24/_docs_registry_gap_list_2026-09-16.md item 13. The filing's 'Перечень связанных сторон' table (p.45) also lists the 5-member Совет директоров as of 31.12.2025 (Рогозин, Павлова, Жук, Басов, Исаенко) -- Павлова's GD role already recorded separately; the other 4 board seats are wired on the person side via corrections_people.json (this same pass)."
     ],
     "_verified_against": "full EGRUL extract pulled directly 23.08.2026",
     "name_display": "AO «Ekolibri»",
