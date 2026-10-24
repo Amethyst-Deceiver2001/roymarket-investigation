@@ -46,6 +46,8 @@ OPENING_SOURCES = {
                   "Zaporizhzhia regional military administration",
                   "https://www.ukrinform.ua/rubric-regions/4172418-vorog-vdariv-dronom-po-budivli-zaporizkoi-ova.html"),
     "tsentr": ("Telegram, @ANO_CBST, post 2610, 04.10.2026", "https://t.me/ANO_CBST/2610"),
+    "tsentr_pics": ("Telegram, @ANO_CBST, posts 2605–2610 (one album of six pictures, captioned on 2610), 04.10.2026",
+                    "https://t.me/ANO_CBST/2605"),
     "yakim": ("Telegram, @asidyakin (Alexander Sidyakin), post 1405, 15.10.2026", "https://t.me/asidyakin/1405"),
     # The supplier page and the Kherson section (24.10.2026): saved as WEBCAPTURE/PDF files on this machine, not catalogued.
     "rm_aug": ("ROY.MARKET, «Начать продавать на РОЙ.МАРКЕТ» (page for prospective sellers), Internet Archive copy of 22.08.2026",
@@ -176,6 +178,24 @@ OPENING_QUOTES = {   # key: (channel, post, verbatim Russian, our translation)
 # osvedomitell_alex_media_looked_20261024.md). The files are not catalogued on this Mac, so they have no media.json
 # record: they appear on the private preview only, never in a docs/ build, and move to media.json once catalogued.
 # key: (post, file in exhibits/images/kherson, what the frame shows, verbatim Russian from the post, our translation)
+# The six pictures of ЦБСТ's own album from the «Tsentr-2026» exercise (post 2605–2610, 04.10.2026), each looked at full
+# size 24.10.2026. Fetched from the public preview; not catalogued on this Mac (no source ids here), so like the Kherson
+# stills they appear on the private preview only. key: (file in exhibits/images/center2026, what the frame shows,
+# (verbatim Russian, English) of a line printed in it or None)
+CENTER_STILLS = [
+    ("c2605-1.jpg", "The stand under camouflage netting: a roll-up banner with the TsBST and ROY.MARKET logos and a QR code, a "
+     "monitor, a laptop and papers on the table. The face of the man standing at the stand is blurred in the post itself; "
+     "we leave it so.", ("Технологии превосходства", "Technologies of superiority")),
+    ("c2605-2.jpg", "Folded ROY.MARKET leaflets and a red round patch. Each leaflet shows a gimbal camera and is printed "
+     "“3000+” product items.", None),
+    ("c2605-3.jpg", "Under the same netting, a row of long tubular objects on stands. The post does not say what they are.", None),
+    ("c2605-4.jpg", "The range from a vantage point: smoke over a training village, concrete anti-tank pyramids, a vehicle "
+     "among mounds.", None),
+    ("c2605-5.jpg", "A smoke column over open ground beside a rock-edged road.", None),
+    ("c2605-6.jpg", "A black blast plume over the range, a second further back, and in the foreground two tracked vehicles "
+     "that appear to be uncrewed.", None),
+]
+
 KHERSON_STILLS = {
     "osv_27702": (27702, "k27702.jpg", "A drone's view down into a ruined house. On the left, the bear emblem with “205 brigade”; "
                   "bottom right, the caption “settlement of Kazatskoe” and grid coordinates. Still at 0:40.",
@@ -695,6 +715,35 @@ class Landing(Chain):
                 f'one of its warnings. Nobody in them can be identified, and no frame we looked at shows a dead or wounded '
                 f'person. Each opens with its caption, date and the post\'s own words.</figcaption></figure>')
 
+    def center_band(self):
+        """ЦБСТ's own album from the «Tsentr-2026» exercise (CENTER_STILLS) as a picture band. Preview only: no media record."""
+        if not self.preview:
+            return ""
+        src_dir, dest = REPO / "exhibits" / "images" / "center2026", self.img_dir.parent / "center2026"
+        tiles = []
+        for n, (name, shows, line) in enumerate(CENTER_STILLS, 1):
+            if not (src_dir / name).exists():
+                continue
+            if dest != src_dir:
+                dest.mkdir(parents=True, exist_ok=True)
+                (dest / name).write_bytes((src_dir / name).read_bytes())
+            rel = f"images/center2026/{name}"
+            if (rel, dest / name) not in self.media_files:
+                self.media_files.append((rel, dest / name))
+            printed = f' Printed on the banner: {orig_line(line[0], f"cs-{n}", line[1])}.' if line else ""
+            self.templates[f"c{n}"] = (
+                f'<figure class="rm-fig"><div class="frame"><img src="{esc(rel)}" alt="{esc(shows)}"></div><figcaption>'
+                f'<span class="rm-prov">Posted by TsBST itself, picture {n} of 6</span><span>{esc(shows)}{printed} '
+                f'The post\'s caption says TsBST presented ROY.MARKET at the main stage of the exercise; it does not '
+                f'describe the pictures.{self.tref("tsentr_pics")}</span><span class="when">04.10.2026</span></figcaption></figure>')
+            tiles.append(self.tile(f"fig-c{n}", rel, shows, self.tile_label(shows, "04.10.2026"), big=len(tiles) < 2))
+        if not tiles:
+            return ""
+        return (f'<figure class="band"><div class="band-grid">{"".join(tiles)}</div><figcaption><span class="rm-label">'
+                f'Pictures · {len(tiles)}</span> TsBST\'s own album from the exercise: the first two show its stand and '
+                f'ROY.MARKET\'s printed material; the rest show the range. None of them shows a listing on the platform. '
+                f'Each opens with its caption, date and source.</figcaption></figure>')
+
     def opening(self):
         """The cold open: a maker's strike footage, re-posted by ЦБСТ with an order line for its marketplace."""
         g = self.ents["ooo-gagaring"]
@@ -844,7 +893,7 @@ class Landing(Chain):
             f'<p>TsBST presents itself as a support body for drone makers, and ROY.MARKET as a catalogue. Its own posts and its '
             'board secretary\'s describe more than that. It says it showed the marketplace at «Tsentr-2026», a strategic '
             'military exercise with delegations from 41 countries, and signed up sellers there:</p>'
-            + self.oq("tsentr", f"TsBST, Telegram, 04.10.2026{self.tref('tsentr')}") +
+            + self.oq("tsentr", f"TsBST, Telegram, 04.10.2026{self.tref('tsentr')}") + self.center_band() +
             f'<p>On 15 October its board secretary, the United Russia official {self.person_pop(SIDYAKIN)}, announced an app '
             f'that assigns incoming Ukrainian drones to mobile fire teams in Kursk region, and placed it inside a TsBST system:</p>'
             + self.oq("yakim", f"Sidyakin, Telegram, 15.10.2026{self.tref('yakim')}") +
