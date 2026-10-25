@@ -31,9 +31,9 @@ CHAINS = {"bulat": "https://claude.ai/artifact/6UaTv2jSwdNdfNUCibCwrf",
 STORY = "https://claude.ai/artifact/DfLGJYwQY5mENE31J4tf8u"
 # Other preview pages: (kind, title, one line, preview Artifact)
 MORE = [("People", "One person, many companies", "The people who direct or own two or more of the companies on file",
-         "https://claude.ai/artifact/RDUCMFfzWc5G6f62sV9dTT"),
+         "https://claude.ai/artifact/RDUCMFfzWc5G6f62sV9dTT", None),
         ("Project file", "«Arkhangel»", "A drone school that trains operators for the army and publishes an armed interceptor's parts list",
-         "https://claude.ai/artifact/RABnZkrCUwktU5b91cNZTn")]
+         "https://claude.ai/artifact/RABnZkrCUwktU5b91cNZTn", "proekt-kb-arkhangel")]
 
 # The opening (24.10.2026). These posts were read in full and saved as TGPOST files on a machine without the source
 # archive, so they have no catalogued source record yet: their notes are written here in plain words with the public
@@ -1229,8 +1229,9 @@ class Landing(Chain):
                          + (f'<p class="go"><a href="{esc(href)}">Open the company file →</a></p>' if href
                             else '<p class="go wait">The company file is in review and not yet public.</p>') + '</article>')
         if preview:
-            for kind, title, line, url in MORE:
-                cards.append(f'<article class="rm-card chain-card"><header><span class="rm-kind">{esc(kind)}</span></header>'
+            for kind, title, line, url, slug in MORE:
+                mark = self.logo(slug) if slug else ""
+                cards.append(f'<article class="rm-card chain-card"><header><span class="rm-kind">{esc(kind)}</span>{mark}</header>'
                              f'<h3 class="rm-name"><a href="{esc(url)}">{esc(title)}</a><small>{esc(line)}</small></h3>'
                              f'<p class="go"><a href="{esc(url)}">Open →</a></p></article>')
         stories = []
