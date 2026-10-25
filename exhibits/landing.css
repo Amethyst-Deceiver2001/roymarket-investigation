@@ -274,3 +274,13 @@ main section > .rm-h2 { margin-top: 0; }
 .ties .arm .fr { fill: var(--panel); stroke: var(--rule); stroke-width: 1; }
 .ties .plate { fill: var(--logo-plate); stroke: var(--rule); stroke-width: 1; }
 .ties .plate.dark { fill: var(--logo-plate-dark); }
+
+/* Front map: the SVG's own text, with a halo so a label stays readable over the front line */
+.front-map-fig { margin: var(--space-5) 0; max-width: 1150px; }
+.front-map-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: var(--radius); }
+.front-map { display: block; width: 100%; min-width: 720px; height: auto; }
+.front-map .fm-t { font: 600 15px var(--font-sans); fill: var(--ink); paint-order: stroke; stroke: var(--panel-2); stroke-width: 4px; }
+.front-map .fm-h { font: 600 15px var(--font-sans); fill: var(--ink); }
+.front-map .fm-n, .front-map .fm-s { font: 12.5px var(--font-sans); fill: var(--ink-2); }
+.front-map-fig figcaption { margin-top: 8px; max-width: var(--measure); font-size: var(--t-note); color: var(--ink-2); }
+.front-map-fig figcaption .rm-label { margin-right: 6px; }

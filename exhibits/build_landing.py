@@ -86,6 +86,8 @@ OPENING_SOURCES = {
     "gag_2811": ("Telegram, @my_el_lab (Gagaring), post 2811, 23.12.2025", "https://t.me/my_el_lab/2811"),
     # Pictures in the ties diagram (25.10.2026): the credit and licence the photograph needs travel with it.
     "sid_photo": ("Photograph of Aleksandr Sidyakin by Karmaks, 28.09.2016, Wikimedia Commons, licence CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:SidyakinA.G..jpg"),
+    "deepstate": ("DeepState, the map of the front line, latest state of 23.10.2026 (its own data download); the Russian-held area is drawn from it",
+                  "https://deepstatemap.live/en"),
     "emb_sv": ("Small emblem of the Russian Ground Forces (collar insignia), public domain, Wikimedia Commons",
                "https://commons.wikimedia.org/wiki/File:Small_emblem_of_the_Russian_Ground_Forces.svg"),
     "emb_vdv": ("Small emblem of the Russian Airborne Forces, public domain, Wikimedia Commons",
@@ -1053,6 +1055,18 @@ class Landing(Chain):
         return (f'<blockquote class="rm-quote"><span class="rm-label">Quotation</span>'
                 f'<span class="q">“{esc(UN_QUOTES[key])}”</span><cite>{cite}</cite></blockquote>')
 
+    def front_map(self):
+        """The Kherson / Dnipro left-bank map (exhibits/make_front_map.py): the Russian-held area as DeepState drew it, the
+        towns, and the units the section names, pinned where a source names a place and listed where it names a sector."""
+        svg_path = REPO / "exhibits" / "images" / "maps" / "kherson-front.svg"
+        if not svg_path.exists():
+            return ""
+        return ('<figure class="front-map-fig"><div class="front-map-wrap">' + svg_path.read_text() + '</div><figcaption>'
+                '<span class="rm-label">Map</span> The Russian-held area, and where the sources put the units this section names. '
+                'No source gives a unit\'s position: the brigade is pinned to the town the film and the Centre for Information '
+                f'Resilience name{self.tref("dw_film")}{self.tref("cir")}, the armies are named for a sector{self.tref("un_ga")}'
+                f'{self.tref("osv_27702")}. Front line: DeepState{self.tref("deepstate")}.</figcaption></figure>')
+
     def front(self):
         """The Kherson drone campaign: the UN's finding, the circle's own ties to the formations it names, and how the
         units' channels describe their targets. Three layers, each at the level its documents support."""
@@ -1090,8 +1104,7 @@ class Landing(Chain):
             intro +
             '<h3 class="rm-h3">What TsBST\'s circle says about that front</h3>'
             f'<ul class="ledger front" aria-label="Ties to the formations the UN names">{"".join(lis)}</ul>'
-            + self.band(self.pics(["csn-bars-sarmat"]), "Bars-Sarmat's own, from its stand at «Dronnitsa 2025», a gathering "
-                        "of combat drone operators in Novgorod region, 6–7 September 2025.", big=2)
+            + self.front_map()
             + '<h3 class="rm-h3">A school that recruits for the 205th brigade</h3>'
             + ('<p>TsBST\'s own channel says a resident\'s anti-drone simulator runs at the «Arkhangel» drone school\'s training '
                f'centre in Tuapse{self.tref("cbst_1562")}. The school\'s own channel recruits operators for the 205th brigade and '
