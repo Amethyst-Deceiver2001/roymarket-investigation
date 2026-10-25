@@ -218,13 +218,16 @@ GALLERY_RECIPIENT = {"m0068": "Krasnoarmeysk direction", "m0070": "“Participan
                      "m0080": "Motor-rifle regiment", "m0083": "Kursk region", "m0087": "Svatove direction"}
 
 
+PARTY_CHANNELS = {"@er_molnia", "@ZurabMakiev", "@veterany_SvoKto"}
+
+
 def handover_events():
     prods = dl.load_products()
     ev: dict = {}
     for p in prods:
         for d in p["deliveries"]:
-            if d["donor"] != SLUG:
-                continue
+            if d["donor"] != SLUG or d["source_channel"] in PARTY_CHANNELS:
+                continue   # the chapter's 21 are the fund's and ЦБСТ's own posts; the party-channel events added 25.10.2026 are not in it
             e = ev.setdefault(d["post_id"], {"post": d["post_id"], "date": d["date"], "prods": set(),
                                              "recipient": d["recipient"], "recipient_en": d.get("recipient_en"),
                                              "cred": set()})
