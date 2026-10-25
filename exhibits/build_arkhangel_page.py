@@ -112,7 +112,11 @@ class Page:
             oe = self.ents.get(own["entity_slug"])
             out += (f' {pn["surname"]} holds 80% of {self.ent(oe) if oe else esc(latin_text(own["entity_name"]))}'
                     f', registered {ru_date(own.get("from"))}.{self.ref(own.get("source_id"))}')
-        return out + "</p>"
+        out += "</p>"
+        href, m = self.mark("m0095")
+        return (f'<div class="head-card"><figure class="head-pic"><img src="{href}" alt="{esc(m["shows_en"])}" width="205" height="320">'
+                f'<figcaption>Preview frame of the video in the project\'s post of 23.10.2026, which is signed with his name as head of the project.'
+                f'{self.ref(m.get("source_id"))}</figcaption></figure><div>{out}</div></div>')
 
     def tie(self):
         t = self.e.get("cbst_tie") or {}
@@ -222,9 +226,22 @@ class Page:
                 out.append(f'<h3 class="rm-h3">{esc(title)}</h3>' + "".join(qs))
         return "".join(out)
 
+    def mark(self, mid):
+        """The path of a mark or portrait shown beside the text (logo, headshot), copied into the page's image folder."""
+        m = next(m for m in self.media if m["id"] == mid)
+        src = REPO / m["file"]
+        name = f'{mid}{src.suffix}'
+        if self.img_dir:
+            self.img_dir.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(src, self.img_dir / name)
+        self.files.append(name)
+        return f"images/media/{name}", m
+
     def pictures(self):
         figs = []
         for m in self.media:
+            if m.get("genre") in ("logo", "portrait"):
+                continue
             if not any(a.get("type") == "entity" and a.get("id") == SLUG for a in m.get("about") or []):
                 continue
             if m.get("publish") not in ("ok", "excerpt"):
@@ -289,6 +306,12 @@ table.bom td.no { font: 600 12px var(--font-mono); color: var(--accent); width: 
 .rm-quote { max-width: 760px; margin: 0 0 var(--space-3); }
 ul.plain { padding-left: 20px; color: var(--ink-2); max-width: var(--measure); }
 ul.plain li { margin: 4px 0; }
+.proj-logo { display: block; width: 72px; height: 72px; border-radius: 50%; margin: 0 0 var(--space-3); border: 1px solid var(--rule); }
+.head-card { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: var(--space-4); align-items: start; margin-bottom: var(--space-3); }
+.head-pic { margin: 0; }
+.head-pic img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--rule); }
+.head-pic figcaption { font-size: var(--t-note); color: var(--ink-3); margin-top: 6px; }
+@media (max-width: 560px) { .head-card { grid-template-columns: minmax(0, 1fr); } .head-pic { max-width: 150px; } }
 .rm-gallery { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
 .prose ul { padding-left: 20px; color: var(--ink-2); max-width: var(--measure); }
 @media (max-width: 760px) { .build { grid-template-columns: minmax(0, 1fr); } }
@@ -300,6 +323,7 @@ def render(out: Path):
     today = dt.date.today().isoformat()
     e = P.e
     # called in page order so the footnotes number from the top
+    logo_href, logo_m = P.mark("m0096")
     who, tie = P.who(), P.tie()
     circle = P.circle()
     pics = P.pictures()
@@ -314,6 +338,7 @@ def render(out: Path):
 <body>
 <header class="rm-page top">
   <p class="rm-eyebrow">Draft · Project file · {ru_date(today)}</p>
+  <img class="proj-logo" src="{logo_href}" alt="{esc(logo_m["shows_en"])}" width="72" height="72">
   <h1 class="rm-h1">«Arkhangel» <span class="rm-muted">a drone school and design bureau that trains operators for the army and gives away an armed interceptor's build files</span></h1>
   <p class="rm-dek">{P.pop("Proekt KB «Arkhangel»", e["name_ru"])} works through Telegram. Its own posts say it trains drone and
   air-defence operators for named army units, builds an interceptor drone with a declared combat version, and publishes the
