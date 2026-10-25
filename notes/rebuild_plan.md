@@ -39,6 +39,38 @@ Ecosystem Model artifact (LBvgQ2vmVfDxKjTwesLuEe, v6).
 
 ## Ordered work
 
+### Next (user, 25.10.2026): the national БАС programme layer
+
+Why: the investigation's pool is wider than ЦБСТ. The registry already holds 71 untied makers (15 sanctioned), and
+the national project «Беспилотные авиационные системы» runs a network of НПЦ with 400+ resident companies by
+ЦБСТ's own post 2629 (07.10.2026, a lead) and 149 supported projects from 120 companies by Коммерсантъ (s8890).
+ЦБСТ is already inside it: Песков sits on ЦБСТ's board and co-chairs the Фонд НТИ grant commission (s7600, s8824),
+and Платформа НТИ founded the НПЦ bodies, Ушкуйник among them. For sanctions lobbying the useful candidates are
+the **unsanctioned makers with documented supply to units or state money**, wherever they sit.
+
+Scope (recommended 25.10.2026; the user's confirmation is still to come): programme residents and grantees only, not
+every Russian drone or electronic-warfare maker (that has no natural edge). It is a **second layer and its own
+page**, linked from the landing's "Follow a product" section. The landing stays the ЦБСТ story. Detail and sources:
+`notes/bas_program_leads.md` §4–§6 (the named lists, 2026-10-01/02).
+
+Order:
+1. Pull the named lists: the НПЦ sites' resident rosters (about 15, linked from the Фонд НТИ support page
+   `WEBCAPTURE_20261001_nti-fund-support-bas.html`), the Минпромторг subsidy-round recipients, the Росавиация
+   accredited-НПЦ list. Capped batches, one service at a time (CLAUDE.md, jobs).
+2. Resolve each company by an identifier printed on its own site or in the list (never by a name search alone).
+   The Фонд НТИ protocols name applicants by registration number only, so they identify no one.
+3. Screen every resolved ИНН against the EU, US, UK and Swiss lists (`sanctions_watch.py`; a hit is a work item
+   until the entry is read) and against the registry (`registry_lookup.py`).
+4. For the unsanctioned: look for documented supply (handover posts, `deliveries.json`, state contracts), then record
+   `state_programs[]` as dated, graded attributes. The programme is a **programme record**, not a graph hub.
+5. A page for it, on the same design system, English first, every line graded.
+
+Not decided: whether the page also carries the lists' sanctioned names (the lobbying use is the unsanctioned); the
+PII call on programme officials (Commission members stay unrecorded until the user decides, `bas_program_leads.md` §3).
+
+Also open in this review: `tests/test_product_chain.py` line 36 hardcodes 17 donor deliveries and 18 «Булат»
+deliveries; the record now holds more. A fixture update, not a model change.
+
 ### A. Reader layer (first: it blocks every new page)
 
 The old case pages, profiles and their generators are **not retrofitted**
@@ -337,15 +369,16 @@ Waiting on the user:
 - Review the Гагаринг evidence-packet visual (private Artifact, built 04.10.2026 on the РОЙ.МАРКЕТ Reader System tokens, from `notes/packets/ooo-gagaring.md`): https://claude.ai/artifact/J9u4BinqBuzt1tKDrLPQvS — not shared, nothing checked against it yet. If it holds up, the other six sanctions-gap packets (Гаскар, СТИМС, Смарт Текнолоджис, Киловатт, Экспломет, Метаскан) go out the same way.
 - Proposed (05.10.2026, held off per the infrastructure freeze — needs an explicit go-ahead): extend `media_triage.py`'s `process` step to run `id_patterns.py`'s existing role+name regex over each photo's OCR text, flagging a "document"-class image whose OCR contains a capitalized ФИО pattern as priority. Reuses OCR already being captured, no new model. Scoped during the 320-item kb_spektr/gaskargroup/ru3mx/kotlin_novator/bpryarl triage pass, which found two named-person leads (Братеньков's medal, Шингареев's award slide) by manual sheet review that this would have surfaced automatically — but it's new tooling, so it waits for the freeze to lift.
 
-## Current state (queried 2026-10-21, from the remote repo, no local sources)
+## Current state (queried 2026-10-25)
 
-256 entity records (252 live), 442 people (435 live), 9,229 sources, 56 quotes,
-88 media records, 42 deliveries, 44 open questions; graph schema v13, 1,266 nodes
-(75 marked sanctioned: a named regime is required, fixed 21.10), 2,187 edges,
-114 unresolved. `check_registry.py --no-local-files`: 0 errors, 26 warnings; all
-test files pass. Last Mac round report 06.10 (the daily round was retired as a scheduled job on 24.10.2026, user); Actions has run nothing since 10.10
-(see `repo_review_20261021.md`). Story 1 is drafted in full and waits on its
-second-person check and the personal-data review.
+260 entity records, 449 people, 9,633 sources, 70 quotes, 91 media records, 158 delivery events, 47 open
+questions; graph schema v13, 1,270 nodes, 2,197 edges, 114 unresolved; 72 organisations tied to ЦБСТ (6 core, 55
+makers, 8 partners and services, 2 other: reviewed 25.10 after the owner's comment). `check_registry.py
+--no-local-files`: 0 errors, 26 warnings. The landing preview (artifact W5m6W6w663RjwfqqTEjQ6z) had a narrative
+pass on 25.10: process narration cut, the trial-and-error story moved to a collapsed method annex, Kherson clip with
+the 0:13 flash and the post's own words. The daily round was retired as a scheduled job on 24.10.2026 (user);
+Actions has run nothing since 10.10 (see `repo_review_20261021.md`). Story 1 is drafted in full and waits on its
+second-person check and the personal-data review (not started until the user says so).
 
 Held, never committed until the user says so: `notes/reference/script_notes.md`
 (modified), `.claude/agents/product-researcher.md`, `scripts/verify_findings.py`
@@ -385,9 +418,9 @@ and `notes/SOURCE_REGISTER.md`; `notes/unverified_people_gap.md`,
   `data/sources/ARTIFACT_2026*`); the Овод residency decision (membership on
   РЛВТ); the three large zakupki institutes reviewed (partial, 01.09.2026).
 - Dropped: Phase 4/5 generator-and-prose plan (2026-09-08); the overview-first
-  explorer with static excerpts (2026-09-14 plan, superseded by chain views);
-  the national project's money flows; programme and event profile pages; rosters
-  of other НПЦ; the relation envelope beyond `sells_for` except `products[]` on
+  explorer with static excerpts (2026-09-14 plan, superseded by chain views); reversed 25.10.2026 (user): the
+  national project's money flows and the НПЦ rosters were dropped on 02.10 and are now the next step, above;
+  programme and event profile pages; the relation envelope beyond `sells_for` except `products[]` on
   state contracts (B2).
 
 ## Archive index (line numbers in the 2026-09-19 archive)
