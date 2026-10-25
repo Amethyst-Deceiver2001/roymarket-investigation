@@ -17,7 +17,7 @@ a tool's output is never a fact). What to do with a hit is the same chain we use
     python3 scripts/sanctions_people_check.py --pick 10 --out data/watch/sanctions/people_check_20261025.md
 
 The lists are the ones the sanctions watch downloaded (SANCTIONS_EU_*, SANCTIONS_US_*) and the UK CSV with statements of
-reasons (SANCTIONS_UK_*.csv); the newest of each is used. The Swiss SECO list (SANCTIONS_CH_*.xml) the Japan MOF list (SANCTIONS_JP_*.csv) the Australian DFAT list (SANCTIONS_AU_*.xlsx) and the New Zealand MFAT register (SANCTIONS_NZ_*.xlsx) are searched too. Names are compared with
+reasons (SANCTIONS_UK_*.csv); the newest of each is used. The Swiss SECO list (SANCTIONS_CH_*.xml) the Japan MOF list (SANCTIONS_JP_*.csv) the Australian DFAT list (SANCTIONS_AU_*.xlsx) the New Zealand MFAT register (SANCTIONS_NZ_*.xlsx) and the Canadian SEMA list (SANCTIONS_CA_*.pdf; Russia and Belarus rows) are searched too. Names are compared with
 ё folded to е and a plain transliteration, so «Водолацкий» finds VODOLATSKY, but a spelling the table does not
 reach (a Ukrainian-form name, a different Latin rendering) can be missed: no hit is not a clean result.
 """
@@ -220,6 +220,60 @@ def load_nz(path: Path) -> list[dict]:
     return out
 
 
+CA_REGIMES = ("Russia / Russie", "Belarus / Bélarus")
+CA_TAIL = re.compile(r"\s(\d+(?:, Part [\d.]+)?)\s+(\d+)\s+(\d{4}-\d{2}-\d{2})$")
+
+
+def ca_text(path: Path) -> str:
+    """The Canadian list is a PDF table. Its text is extracted once (pypdf, in the roymarket311 venv) into a working
+    file beside it (underscore name: not a catalogued source); the system python then reads that."""
+    cache = path.with_name("_" + path.stem + ".txt")
+    if not cache.exists():
+        from pypdf import PdfReader
+        cache.write_text("\n".join(pg.extract_text() for pg in PdfReader(path).pages), encoding="utf-8")
+    return cache.read_text(encoding="utf-8")
+
+
+def parse_ca(path: Path) -> list[dict]:
+    """Russia and Belarus rows of the Canadian consolidated list (SEMA). One row per record: regime, name text (Latin
+    and Cyrillic as printed), date of birth, schedule, item number, listing date. Schedule 1 Part 1 is persons."""
+    rows, buf = [], ""
+    for line in ca_text(path).split("\n"):
+        if line.startswith("UNCLASSIFIED"):
+            continue
+        if not buf and not line.startswith(CA_REGIMES):
+            continue
+        buf = (buf + " " + line.strip()).strip()
+        m = CA_TAIL.search(buf)
+        if not m:
+            if len(buf) > 700:      # a row that never closes (ships and the like): drop it, do not swallow the next
+                buf = ""
+            continue
+        head = buf[:m.start()]
+        for r in CA_REGIMES:
+            if head.startswith(r):
+                head = head[len(r):].strip()
+        dob = re.search(r"\s(\d{4}(?:-\d{2}-\d{2})?)$", head)
+        if dob:
+            head = head[:dob.start()].strip()
+        latin = re.split(r"[\u0400-\u04FF]", head, 1)[0].strip()
+        cyr = head[len(latin):].strip()
+        rows.append({"regime": buf.split(" / ")[0], "schedule": m.group(1), "item": m.group(2), "date": m.group(3),
+                     "dob": dob.group(1) if dob else "", "latin": re.sub(r"\s+", " ", latin), "cyr": re.sub(r"\s+", " ", cyr)})
+        buf = ""
+    return rows
+
+
+def load_ca(path: Path) -> list[dict]:
+    out = []
+    for r in parse_ca(path):
+        if not r["schedule"].startswith("1, Part 1"):      # Part 1 (and Belarus Part 1.1): persons
+            continue
+        out.append({"list": "CA", "id": f"SEMA {r['regime']} {r['item']}", "names": [n for n in (r["latin"], r["cyr"]) if n],
+                    "dob": [r["dob"]] if r["dob"] else [], "info": f"listed {r['date']}"})
+    return out
+
+
 def newest(pattern: str) -> Path | None:
     files = sorted(glob.glob(str(SRC / pattern)))
     return Path(files[-1]) if files else None
@@ -311,7 +365,7 @@ def main() -> None:
     if not todo:
         sys.exit("give --slug or --pick")
     lists, loaded = [], []
-    for label, pat, fn in (("EU", "SANCTIONS_EU_*.xml", load_eu), ("US", "SANCTIONS_US_*.xml", load_us), ("UK", "SANCTIONS_UK_*.csv", load_uk), ("CH", "SANCTIONS_CH_*.xml", load_ch), ("JP", "SANCTIONS_JP_*.csv", load_jp), ("AU", "SANCTIONS_AU_*.xlsx", load_au), ("NZ", "SANCTIONS_NZ_*.xlsx", load_nz)):
+    for label, pat, fn in (("EU", "SANCTIONS_EU_*.xml", load_eu), ("US", "SANCTIONS_US_*.xml", load_us), ("UK", "SANCTIONS_UK_*.csv", load_uk), ("CH", "SANCTIONS_CH_*.xml", load_ch), ("JP", "SANCTIONS_JP_*.csv", load_jp), ("AU", "SANCTIONS_AU_*.xlsx", load_au), ("NZ", "SANCTIONS_NZ_*.xlsx", load_nz), ("CA", "SANCTIONS_CA_*.pdf", load_ca)):
         p = newest(pat)
         if p is None:
             loaded.append(f"{label}: no file")

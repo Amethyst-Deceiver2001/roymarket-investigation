@@ -1,6 +1,6 @@
 # Organisations against the other sanctions lists we hold
 
-Lists: CSL: SANCTIONS_CSL_20261025.csv (6281); NZ: SANCTIONS_NZ_20261025.xlsx (529); JP: SANCTIONS_JP_20261025.csv (869); AU: SANCTIONS_AU_20261025.xlsx (1077); CH: SANCTIONS_CH_20261025.xml (3329). A candidate is a work item, not a fact; no candidate is not a clean result.
+Lists: CSL: SANCTIONS_CSL_20261025.csv (6281); NZ: SANCTIONS_NZ_20261025.xlsx (529); JP: SANCTIONS_JP_20261025.csv (869); AU: SANCTIONS_AU_20261025.xlsx (1077); CH: SANCTIONS_CH_20261025.xml (3329); CA: SANCTIONS_CA_20261025.pdf (966). A candidate is a work item, not a fact; no candidate is not a clean result.
 
 ## АНО «ЦБСТ» | Centre for Unmanned Systems & Technologies (`ano-tsbst-centre-for-unmanned-systems-technologies`; ИНН 9702064851)
 - **name-part** (list already in sanctions[]): AU DFAT 8687: Center for Unmanned Systems and Technologies; Autonomous non-profit organization "The center for uncrewed vehicle system; Autonomous Sanctions (Designated Persons and Entities and Declared Persons – Russia and Ukraine) Amendment (No. 1) Instrument 2026; Kirov Street, 135, Building 1, Premise 9, 15, Tula, Tula Region, 300
@@ -15,6 +15,7 @@ Lists: CSL: SANCTIONS_CSL_20261025.csv (6281); NZ: SANCTIONS_NZ_20261025.xlsx (5
 - **name** (list already in sanctions[]): CH SECO 105821: JSC Technodron; АО “Технодрон”; 
 ## ООО «Атлант Аэро» (`ooo-atlant-aero`; ИНН 6154165878)
 - **name** (list already in sanctions[]): CH SECO 104723: Limited Liability Company “Atlant Aero”; Общество с ограниченной ответственностью “АТЛАНТ АЭРО”; 
+- **name** (list already in sanctions[]): CA SEMA Russia 1, Part 2 #837: Atlant Aero LLC; listed 2026-06-12
 ## ООО «Гаскар» (`ooo-gaskar`; ИНН 9710112989)
 - **name**: CH SECO 104739: Limited Liability Company “Gaskar Group”; Общество с ограниченной ответственностью “Гаскар Групп”; 
 ## ООО «СКБ Пиранья» (`ooo-skb-piranya`; ИНН 7300024069)
@@ -50,6 +51,7 @@ Lists: CSL: SANCTIONS_CSL_20261025.csv (6281); NZ: SANCTIONS_NZ_20261025.xlsx (5
 - **name**: CH SECO 104739: Limited Liability Company “Gaskar Group”; Общество с ограниченной ответственностью “Гаскар Групп”; 
 ## АНО «НПЦ «Ушкуйник»» (`ano-npts-ushkuynik`; ИНН 5300010714)
 - **name** (list already in sanctions[]): CH SECO 92836: Autonomous non-profit Organisation “Scientific and Production Center for Testing and Competence in the Field of Developm; 
+- **name-part** (list already in sanctions[]): CA SEMA Russia 1, Part 2 #838: ANO NPC Ushkuynik Scientific Research Centre "Ushkunik", Ushkunik Scientific and Practical Center, ANO SPC Ushkuynik and; listed 2026-06-12
 ## АО «НПП «Радар ММС»» (`npp-radar-mms`; ИНН 7814027653)
 - **name-part** (list already in sanctions[]): Entity List (EL) 92fe3a634f3c49650aaa2f25a38e7d3ce221308c940621ae2371f61e: Joint Stock Company Research and Production Enterprise Radar MMS; AO Nauchno-Proizvodstvennoe Predpriyatie Radar MMS; 2023-02-27; 37A Novoselkovskaya Street, Saint Petersburg, 197375, RU
 - **name**: NZ ENT-103: RADAR MMS NPP; sanctioned 2022-08-02; Novoselkovskaya st., 37A Saint Petersburg  197375 Russia
@@ -87,10 +89,12 @@ Lists: CSL: SANCTIONS_CSL_20261025.csv (6281); NZ: SANCTIONS_NZ_20261025.xlsx (5
 - **name**: NZ ENT-21: Joint Stock Company Kronshtadt; sanctioned 2022-05-03; 
 - **name**: AU DFAT 6311: Kronshtadt; Instrument of first designation and declaration: Autonomous Sanctions (Designated Persons and Entities and Declared Persons-Ukraine) Amendment (No. 2) Instrument 2022; d. 18 k. 9 etazh/pomeshch. 13/36
 - **name**: CH SECO 52515: AO Kronshtadt; Акционерноe Обществo «Кронштадт»; 
+- **name**: CA SEMA Russia 1, Part 2 #136: Kronshtadt; listed 2022-04-08
 ## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ПРОМЕТЕЙ" (`ooo-prometey`; ИНН 6154171470)
 - **name**: Entity List (EL) e7eb8b866962e45c535a1fe8aa759ac750c7fc116ad8f1f4074bd323: Federal State Unitary Enterprise Central Research Institute of Structural Materials Prometheus named after I.V. Gorynina; 2024-02-23; 49 Shpalernaya Street, Saint Petersburg, 191015, RU; 120th Gatchina Division, 12, Gatchina, Leningrad Region, RU
 ## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ "АТЛАНТ АЭРО" (`ooo-npk-atlant-aero`; ИНН 6154166381)
 - **name-part**: CH SECO 104723: Limited Liability Company “Atlant Aero”; Общество с ограниченной ответственностью “АТЛАНТ АЭРО”; 
+- **name-part**: CA SEMA Russia 1, Part 2 #837: Atlant Aero LLC; listed 2026-06-12
 ## ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ПРОМ-ТЕХ" (`ooo-prom-tekh`; ИНН 6163233330)
 - **name**: JP MOF 028-000396: Aktsionernoe Obshchestvo Promyshlennye Tekhnologii; Closed Joint Stock Company Industrial Technologies; notice 2026.10.2; Russia
 - **name**: CH SECO 89132: “Promtech” Joint Stock Company; Акционерное общество “Промтех”; 
@@ -101,10 +105,12 @@ Lists: CSL: SANCTIONS_CSL_20261025.csv (6281); NZ: SANCTIONS_NZ_20261025.xlsx (5
 - **name** (list already in sanctions[]): NZ ENT-21: Joint Stock Company Kronshtadt; sanctioned 2022-05-03; 
 - **name** (list already in sanctions[]): AU DFAT 6311: Kronshtadt; Instrument of first designation and declaration: Autonomous Sanctions (Designated Persons and Entities and Declared Persons-Ukraine) Amendment (No. 2) Instrument 2022; d. 18 k. 9 etazh/pomeshch. 13/36
 - **name** (list already in sanctions[]): CH SECO 52515: AO Kronshtadt; Акционерноe Обществo «Кронштадт»; 
+- **name** (list already in sanctions[]): CA SEMA Russia 1, Part 2 #136: Kronshtadt; listed 2022-04-08
 ## АО «Конструкторское бюро приборостроения им. академика А. Г. Шипунова» (`ao-kbp-shipunova`; ИНН 7105514574)
 - **name-part**: Entity List (EL) 5e7ea9133d2c334e1fa0232250086a2609249e8768ad43e4042b104e: Konstruktorskoe Byuro Priborostroeniya Otkrytoe Aktsionernoe Obshchestvo; Instrument Design Bureau; 2014-07-22; 59 Shcheglovskaya Zaseka ul., Tula, 300001, RU
 - **name** (list already in sanctions[]): CH SECO 69431: JSC Design Bureau of Instrument-Making Named After Academic A. G. Shipunov; АО “Конструкторское Бюро Приборостроения Им.; 
 ## ВСЕРОССИЙСКАЯ ПОЛИТИЧЕСКАЯ ПАРТИЯ «ЕДИНАЯ РОССИЯ» (`vpp-edinaya-rossiya`; ИНН 7702330228)
 - **name-part** (list already in sanctions[]): CH SECO 58364: United Russia; Единая Россия; 
+- **name-part**: CA SEMA Russia 1, Part 2 #332: United Russia; listed 2023-02-23
 
 39 of 260 organisations have at least one candidate.

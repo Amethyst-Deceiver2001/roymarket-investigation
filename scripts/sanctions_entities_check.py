@@ -3,7 +3,7 @@
 
 Lists (the newest SANCTIONS_* file of each in data/sources/): the US Consolidated Screening List without its OFAC
 parts (Commerce Entity List, Military End User, Unverified, Denied Persons, State nonproliferation and ITAR), the New
-Zealand register, Japan MOF, Australia DFAT and Switzerland SECO. The EU, US SDN and UK entity lists are covered by
+Zealand register, Japan MOF, Australia DFAT, Switzerland SECO and Canada SEMA (Russia and Belarus rows). The EU, US SDN and UK entity lists are covered by
 sanctions_watch.py (identifier match) and are not searched here.
 
 An organisation is a candidate when (1) an ИНН or ОГРН appears in the list entry's ids or remarks, or (2) its
@@ -45,7 +45,7 @@ GENERIC |= {translit(w) for w in """центр инвестиции инвест
 GENERIC = {translit(w) for w in GENERIC} | GENERIC
 RECORDED = {"CH": ("switzerland", "swiss", "seco"), "AU": ("australia",), "JP": ("japan",), "NZ": ("new zealand",),
             "Entity List (EL)": ("entity list", "bis"), "Military End User (MEU) List": ("military end user", "bis"),
-            "Unverified List (UVL)": ("unverified",), "Denied Persons List (DPL)": ("denied persons",)}
+            "CA": ("canada",), "Unverified List (UVL)": ("unverified",), "Denied Persons List (DPL)": ("denied persons",)}
 
 
 def recorded(org: dict, lst: str) -> bool:
@@ -106,6 +106,16 @@ def load_au_ent(path: Path) -> list[dict]:
     return list(by.values())
 
 
+def load_ca_ent(path: Path) -> list[dict]:
+    out = []
+    for r in sp.parse_ca(path):
+        if r["schedule"].startswith("1, Part 1") or not r["latin"]:
+            continue
+        out.append({"list": "CA", "id": f"SEMA {r['regime']} {r['schedule']} #{r['item']}", "names": [r["latin"]], "text": "",
+                    "info": f"listed {r['date']}"})
+    return out
+
+
 def load_ch_ent(path: Path) -> list[dict]:
     seen: dict[str, dict] = {}
     for t in ET.parse(path).getroot().iter("target"):
@@ -157,7 +167,7 @@ def main() -> None:
     entries, loaded = [], []
     for label, pat, fn in (("CSL", "SANCTIONS_CSL_*.csv", load_csl), ("NZ", "SANCTIONS_NZ_*.xlsx", load_nz_ent),
                            ("JP", "SANCTIONS_JP_*.csv", load_jp_ent), ("AU", "SANCTIONS_AU_*.xlsx", load_au_ent),
-                           ("CH", "SANCTIONS_CH_*.xml", load_ch_ent)):
+                           ("CH", "SANCTIONS_CH_*.xml", load_ch_ent), ("CA", "SANCTIONS_CA_*.pdf", load_ca_ent)):
         p = newest(pat)
         if p is None:
             loaded.append(f"{label}: no file")
