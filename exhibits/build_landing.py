@@ -878,9 +878,10 @@ class Landing(Chain):
                 f'<span class="rm-grade rep">Reported</span> {said}{self.tref("osv_38645")}. '
                 'What the footage shows: a recording of a drone pilot\'s controller screen (the channel blurred the telemetry '
                 'panel). The camera looks straight down onto a damaged road bridge beside a river; a yellow tracking box follows '
-                'small dark shapes near the kerb, and dark marks cover the deck. We see no explosion and no impact in these thirty '
-                'seconds, and nothing that shows who the shapes are or what became of them. The sound is removed; the original has '
-                'an audio track we have not assessed, and the full 1:19 is kept in our own record of the channel.</figcaption></figure>')
+                'small dark shapes near the kerb. At 0:13 a bright flash fills part of the deck for about a fifth of a second; the next '
+                'frames show a small fire and smoke on the road surface, gone within a second. The footage does not show who or what '
+                'was there, or what became of them; the post itself says a dog was killed. The sound is removed; the original has '
+'an audio track we have not assessed, and the full 1:19 is kept in our own record of the channel.</figcaption></figure>')
 
     def dual_use(self):
         """The label on the order line: the supplier page's own sentence before and after it changed."""
