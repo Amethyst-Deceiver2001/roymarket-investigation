@@ -86,3 +86,32 @@ Only the main session writes facts into the registry. Something that needs the u
 
 **Python 3.11 parity (user, 08.10.2026).** CI (now abandoned) ran Python 3.11 and the Mac a newer one, so 3.12-only syntax (a backslash or a reused quote inside an f-string expression) passed locally and turned 14 pushes red. The same hook now byte-compiles every staged `.py` file with `python3.11` and blocks the commit on failure (install once: `brew install python@3.11`; without it the hook warns and skips). Never write a backslash inside an f-string expression: build the string first.
 
+
+## Local sanctions checks across the lists we hold (added 25.10.2026)
+
+Two scripts search the downloaded lists in `data/sources/` in one local pass (no network, no OpenSanctions quota). They write nothing to the registry: a hit is a work item, and a miss is not a clean result.
+
+| Script | What it checks | Lists it reads |
+|---|---|---|
+| `scripts/sanctions_people_check.py` | registry people: `--slug S` (repeatable) or `--pick N` (the next N people with no `sanctions[]`, remembered in `data/watch/sanctions/people_checked.json`); `--out FILE` writes the report | EU, US SDN, UK (CSV with statements of reasons), Switzerland (SECO), Japan (MOF), Australia (DFAT), New Zealand (MFAT), Canada (SEMA, Russia and Belarus rows), UN |
+| `scripts/sanctions_entities_check.py` | registry organisations: an ИНН/ОГРН in the entry first, then distinctive-name words (legal forms dropped) | US Consolidated Screening List without its OFAC parts (Commerce Entity List, Military End User, Unverified, Denied Persons), New Zealand, Japan, Australia, Switzerland, Canada, UN, and **EU Annex IV of Regulation 833/2014** |
+
+How each file is obtained (all single GETs; a HEAD request is refused by several of these servers and looks like a 404):
+
+- **EU, US, UK, Switzerland:** the sanctions-watch downloads (`sanctions_watch.py`), `SANCTIONS_<X>_<date>`.
+- **Japan:** the Ministry of Finance page `…/gaitame/economic_sanctions/list.html` links `shisantouketsu<date>.csv`, one file for every asset-freeze regime (UTF-8, English names, DOB, notice date). The per-regime PDFs on that page (for example `ukraine_list_russia_<yymmdd>.pdf`) are the notice annexes; `pypdf` and `cryptography` are installed in `~/.venvs/roymarket311` to read them. The Russia annex of 2.10.2026 is only the latest round (entries 370 onward).
+- **Australia:** `https://www.dfat.gov.au/sites/default/files/Australian_Sanctions_Consolidated_List.xlsx`. It is Strict OOXML, which openpyxl cannot open; the checkers read the sheet XML with the standard library (`xlsx_rows`).
+- **New Zealand:** `https://www.mfat.govt.nz/assets/Countries-and-Regions/Europe/Ukraine/Russia-Sanctions-Register.xlsx` (21 MB; the first sheet is the register).
+- **Canada:** the XML URL fails the certificate check in curl here; the PDF table (`sema-lmes.pdf`) was saved from a browser. The text is extracted once into `data/sources/_SANCTIONS_CA_<date>.txt` (needs `pypdf`, i.e. the roymarket311 venv); the checkers then run on system python.
+- **Commerce screening list:** `https://data.trade.gov/downloadable_consolidated_screening_list/v1/consolidated.csv`.
+- **UN:** `https://scsanctions.un.org/resources/xml/en/consolidated.xml`.
+- **EU Annex IV:** `python3 scripts/eu_cellar.py act 02014R0833-<yyyymmdd>` fetches the consolidated Regulation 833/2014 from CELLAR into `data/sources/_cellar/` (find the latest date with the SPARQL query in `eu_cellar.py`). Annex IV prints the local name, the address and the ИНН, so it is the one list here matched on an identifier. The consolidated text has no legal effect: cite the Official Journal act that prints the entry (Regulation 2025/932 replaced Annex IV on 20.5.2025; 2025/1494 added entries on 18.7.2025), and say whether the act that first listed the entity was read.
+- **Federal Register:** `https://www.federalregister.gov/api/v1/documents.json?conditions[term]=<name>` finds OFAC, State and Commerce notices; `…/documents/full_text/xml/<yyyy>/<mm>/<dd>/<document number>.xml` is the full text. Use it to date a US designation that the SDN XML leaves undated.
+
+Rules that held in use:
+
+- A person is a hit only if the list entry includes the surname; first name plus patronymic alone is no match. Name plus patronymic plus DOB is recordable, with the caveat "not an independent identifier match" when our record has no DOB of its own. Name plus patronymic alone becomes an open question.
+- The Swiss download keeps amendment dates, not the original listing date; leave the date empty. Japan's "notice date" (告示日付) is the date the ministry notified the listing.
+- Check the patronymic before accepting a surname-and-first-name hit: the Kremlin spokesman Dmitry Sergeyevich Peskov is not our Дмитрий Николаевич Песков.
+- A name-only organisation hit on the Japanese, Swiss, Australian or New Zealand lists stays a lead until an identifier, an address or a named person agrees. Addresses are the usual tie-breaker (Trimix, Eliars, 25.10.2026).
+- Still not reached: Ukraine's NSDC decrees, the US DoD 1260H list, Poland and the Baltic national lists, Singapore, South Korea, Taiwan, Japan METI end-user list. Not searched on request: the Norwegian, Liechtenstein and Icelandic lists, which follow the EU.
