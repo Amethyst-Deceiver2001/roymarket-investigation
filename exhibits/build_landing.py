@@ -272,8 +272,11 @@ class Landing(Chain):
     def hist(self, slug, field, value_part):
         return next((h for h in self.ents[slug].get(field) or [] if value_part in (h.get("value") or "")), {})
 
-    def ledger(self):
-        """Who stands behind ЦБСТ and what it holds: a short list of graded relations."""
+    def ledger_rows(self):
+        """Who stands behind ЦБСТ and what it holds: graded relations (from, grade, text, note, to). Built once, because
+        each call numbers its footnotes."""
+        if getattr(self, "_ledger_rows", None):
+            return self._ledger_rows
         c, rows = self.ents[CBST], []
         np_f = self.hist(CBST, "founders_history", "Наша Правда")
         psb_f = self.hist(CBST, "founders_history", "ПСБ")
@@ -315,11 +318,107 @@ class Landing(Chain):
                          f"reports handing «Bulat» drone detectors to military units {len(ds)} times, "
                          f"{ru_date(dates[0])} to {ru_date(dates[-1])}; each handover is cited in the chain view",
                          self.ref(ds[0].get("source_id")), None))
+        self._ledger_rows = rows
+        return rows
+
+    def ledger(self):
+        """The ledger as a list: the same rows the ties diagram draws, with their notes."""
         out = []
-        for a, g, text, ref, b in rows:
+        for a, g, text, ref, b in self.ledger_rows():
             out.append(f'<li><span class="from">{a if isinstance(a, str) else self.en(a, pop=True)}</span>{ln(g)}<span class="what">{esc(text)}{ref}</span>'
                        f'<span class="rm-grade {g}">{esc({"doc": "Documented", "rep": "Reported", "open": "Not documented"}[g])}</span></li>')
         return "".join(out)
+
+    def ties_diagram(self):
+        """The ledger's relations as one picture: who holds TsBST, who sits on its board, what it takes part in, and the
+        donor's handovers. Line style is the grade of the row it draws (rm-ln). The notes stay in the list beside it."""
+        rows = self.ledger_rows()
+        gr = {"ur": rows[0][1], "sid": rows[1][1], "np": rows[2][1], "psb": rows[3][1], "mptm": rows[4][1], "op": rows[5][1],
+              "del": rows[-1][1]}
+        nh = len([d for d in self.p.get("deliveries") or [] if d.get("donor") == NP])
+
+        def lat(slug):
+            return display_name(self.ents[slug])["latin"]
+        W, H = 1110, 350
+        box = {}
+
+        def node(key, x, y, w, title, sub, cls=""):
+            h = 58
+            box[key] = (x, y, w, h)
+            return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="6" class="bx {cls}"/>'
+                    f'<text x="{x + w / 2}" y="{y + 25}" class="bt">{esc(title)}</text>'
+                    f'<text x="{x + w / 2}" y="{y + 44}" class="bs">{esc(sub)}</text>')
+
+        def edge(a, b, g, label="", ay=None, by=None, side="mid", dx=0, dy=-7):
+            (ax, ay0, aw, ah), (bx, by0, bw, bh) = box[a], box[b]
+            x1, y1 = ax + aw, (ay if ay is not None else ay0 + ah / 2)
+            x2, y2 = bx, (by if by is not None else by0 + bh / 2)
+            if side == "up":    # from the top-middle of a to the bottom-middle of b
+                x1, y1, x2, y2 = ax + aw / 2, ay0, bx + bw / 2, by0 + bh
+                d = f"M{x1} {y1} L{x2} {y2}"
+                lx, ly, anchor = x1 + 10, (y1 + y2) / 2 + 4, "start"
+            else:
+                c = (x1 + x2) / 2
+                d = f"M{x1} {y1} C{c} {y1} {c} {y2} {x2} {y2}"
+                lx, ly, anchor = (x1 + x2) / 2 + dx, (y1 + y2) / 2 + dy, "middle"
+            lab = f'<text x="{lx}" y="{ly}" class="lbl" text-anchor="{anchor}">{esc(label)}</text>' if label else ""
+            return f'<path d="{d}" class="rm-ln {g}" marker-end="url(#ah3)"/>{lab}'
+        n = [node("np", 10, 22, 190, lat(NP), "donor foundation"),
+             node("psb", 10, 146, 190, lat(PSB), "state-owned bank"),
+             node("ur", 10, 270, 190, "United Russia", "ruling party"),
+             node("cbst", 380, 146, 190, lat(CBST), "non-profit, Moscow", "hub"),
+             node("sid", 380, 270, 190, "Aleksandr Sidyakin", "supervisory board secretary"),
+             node("units", 760, 22, 140, "Military units", "recipients"),
+             node("mptm", 760, 146, 140, lat(MPTM), "company"),
+             node("rm", 970, 146, 130, "ROY.MARKET", "catalogue is login-only")]
+        e = [edge("np", "cbst", gr["np"], "co-founder", by=160, dx=-14, dy=-14),
+             edge("psb", "cbst", gr["psb"], "co-founder", by=175, dx=-4, dy=-5),
+             edge("ur", "cbst", gr["ur"], "named by TsBST as a founder", by=190, dx=46, dy=2),
+             edge("sid", "cbst", gr["sid"], "sits on its board", side="up"),
+             edge("sid", "ur", gr["sid"], "heads its central executive committee", ay=299, by=299, dy=-8),
+             edge("np", "units", gr["del"], f"hands equipment to units: {nh} «Bulat» handovers posted", ay=51, by=51, dy=-9),
+             edge("cbst", "mptm", gr["mptm"], "takes part; share not stated", dy=-9),
+             edge("mptm", "rm", gr["op"], "operates", dy=-9)]
+        # the Sidyakin -> United Russia line runs right-to-left; draw it by hand
+        sx, sy = box["sid"][0], 299
+        ux = box["ur"][0] + box["ur"][2]
+        e[4] = (f'<path d="M{sx} {sy} L{ux + 6} {sy}" class="rm-ln {gr["sid"]}" marker-end="url(#ah3)"/>'
+                f'<text x="{(sx + ux) / 2}" y="{sy + 19}" class="lbl" text-anchor="middle">heads its central committee</text>')
+        defs = ('<defs><marker id="ah3" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">'
+                '<path d="M0 0L8 4L0 8z" class="ah"/></marker></defs>')
+        return (f'<figure class="ties"><div class="ties-svg"><svg viewBox="0 0 {W} {H}" class="mdl" role="img" '
+                f'aria-label="Who is tied to TsBST: its co-founders, its supervisory board secretary, the company it takes part '
+                f'in and the foundation\'s handovers to units">{defs}{"".join(e)}{"".join(n)}</svg></div>'
+                f'<figcaption>Line style is the grade of the evidence, as in the key at the foot of the page. The notes for each '
+                f'line are in the list.</figcaption></figure>')
+
+    def found(self, n, sanc):
+        """What the investigation found, in five lines, each graded, each pointing to its section. Says nothing the
+        sections below do not source."""
+        items = [
+            ("rep", "A strike video, then a sales line", "#h-open",
+             "TsBST re-posted a drone maker's footage of a strike and told servicemen they can order the two products used "
+             "on its own marketplace."),
+            ("doc", "A state bank and a donor foundation co-found it", "#h-hub",
+             "TsBST's registered co-founders are Bank PSB and the Nasha Pravda foundation, which has posted handovers of "
+             "drone detectors to military units."),
+            ("rep", "The ruling party sits above it", "#h-hub",
+             "TsBST names United Russia as a third founder, and the head of the party's central executive committee is "
+             "secretary of its supervisory board."),
+            ("rep", "Supply to a front the UN names", "#h-front",
+             "TsBST's circle supplies and recruits for units of the formation the UN names in its finding on drone attacks "
+             "on civilians in Kherson. Nothing on file shows an item used against civilians."),
+            ("doc", "A platform that hides its operator", "#h-origin",
+             "ROY.MARKET's public terms print its operator as «****». An archived copy names MPTM, a company TsBST's own "
+             "report to the Justice Ministry lists."),
+        ]
+        cards = "".join(
+            f'<li class="rm-card"><span class="rm-grade {g}">{esc({"doc": "Documented", "rep": "Reported"}[g])}</span>'
+            f'<h3><a href="{h}">{esc(t)}</a></h3><p>{esc(x)}</p></li>' for g, t, h, x in items)
+        return (f'<section class="found" aria-labelledby="h-found"><h2 class="rm-h2" id="h-found">What we found</h2>'
+                f'<ol class="found-list">{cards}</ol>'
+                f'<p class="found-n"><b>{n}</b> organisations are tied to TsBST on file; <b>{sanc}</b> of them are on a sanctions '
+                f'list.</p></section>')
 
     def restricted(self):
         """The date from which the register withholds МПТМ's owners, with its source."""
@@ -1089,7 +1188,7 @@ def unique_popovers(doc):
 
 # The chain view's picture viewer, shared rather than copied: everything in chain_view.js from its comment on.
 # The contents bar: (section heading id, short label), in page order.
-TOC_ITEMS = [("h-open", "The strike"), ("h-limits", "Limits"), ("h-hub", "Who stands behind"), ("h-front", "The front"),
+TOC_ITEMS = [("h-found", "What we found"), ("h-open", "The strike"), ("h-limits", "Limits"), ("h-hub", "Who stands behind"), ("h-front", "The front"),
              ("h-beyond", "Beyond the shop"), ("h-chains", "Products"), ("h-net", "Network"), ("h-origin", "The platform"),
              ("h-read", "How to read"), ("h-method", "Method"), ("h-sources", "Sources")]
 TOC = ('<nav class="toc" aria-label="Contents"><ol>' + "".join(f'<li><a href="#{i}">{esc(t)}</a></li>' for i, t in TOC_ITEMS)
@@ -1152,6 +1251,9 @@ def render(preview: bool, out: Path):
     sid_name_l = sid_name.replace(f'id="nm-{SIDYAKIN}"', f'id="nm-{SIDYAKIN}-q"').replace(
         f'popovertarget="nm-{SIDYAKIN}"', f'popovertarget="nm-{SIDYAKIN}-q"')
     ledger = L.ledger()
+    ties = L.ties_diagram()
+    n0, _, sanc0 = L.network()
+    found = L.found(n0, sanc0)
     handed = L.pics([NP], {"handover"}, skip={"m0070"})   # m0070: boxes and a crate beside a van, no equipment visible (user, 24.10.2026)
     handovers = L.band(handed, f"Published by «Nasha Pravda» with its handover posts, {ru_date(handed[0]['published'])} – "
                        f"{ru_date(handed[-1]['published'])}: deliveries of «Bulat» detectors and other kit to units. A handover "
@@ -1199,6 +1301,7 @@ def render(preview: bool, out: Path):
 </header></div>
 {TOC}
 <main class="rm-page">
+  {found}
   <section class="open" aria-labelledby="h-open">
     <h2 class="rm-h2" id="h-open">A strike, then a sales line</h2>
     {opening}
@@ -1220,13 +1323,13 @@ def render(preview: bool, out: Path):
     <h2 class="rm-h2" id="h-hub">Who stands behind TsBST</h2>
     <p class="lede">The seller in that post is not an ordinary shop. TsBST's co-founders on the company register are a donor foundation and a state-owned bank; TsBST names the ruling party as a third, and the head of the party's central executive committee is secretary of its supervisory board.</p>
     {lead_quote}
-    <div class="hub-grid">
-      <article class="rm-card hub"><header><span class="rm-kind">Hub</span>{L.logo(CBST)}</header>
+    <article class="rm-card hub hub-solo"><header><span class="rm-kind">Hub</span>{L.logo(CBST)}</header>
         <h3 class="rm-name">{cbst_name}</h3>{cbst_sanc}
         <p class="row">Targeted funding received: {funds}. These are a non-profit's funds, not revenue.</p>
         <p class="row"><span class="rm-id">INN {esc(c['inn'])}</span> <span class="rm-id">OGRN {esc(c['ogrn'])}</span></p></article>
-      <ul class="ledger" aria-label="Relations">{ledger}</ul>
-    </div>
+    {ties}
+    <ul class="ledger ledger-phone" aria-label="Relations">{ledger}</ul>
+    <details class="fold ledger-desk"><summary>The ties as a list, with notes</summary><ul class="ledger" aria-label="Relations">{ledger}</ul></details>
     {handovers}
   </section>
 
