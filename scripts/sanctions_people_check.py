@@ -360,7 +360,7 @@ def read_log() -> dict:
 
 def pick(people: list[dict], n: int) -> list[dict]:
     done = read_log()
-    chosen = [p for p in people if not p.get("sanctions") and p.get("fio_ru") and p["slug"] not in done]
+    chosen = [p for p in people if not p.get("sanctions") and p.get("fio_ru") and not p.get("_merged_into") and p["slug"] not in done]
     # people whose OpenSanctions screen already flagged a sanction topic come first: they are the likeliest to be listed
     flagged = lambda p: any("sanction" in (m.get("topics") or []) and (m.get("score") or 0) >= 0.9 for m in p.get("opensanctions_matches") or [])
     chosen.sort(key=lambda p: not flagged(p))
