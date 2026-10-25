@@ -17,7 +17,7 @@ a tool's output is never a fact). What to do with a hit is the same chain we use
     python3 scripts/sanctions_people_check.py --pick 10 --out data/watch/sanctions/people_check_20261025.md
 
 The lists are the ones the sanctions watch downloaded (SANCTIONS_EU_*, SANCTIONS_US_*) and the UK CSV with statements of
-reasons (SANCTIONS_UK_*.csv); the newest of each is used. The Swiss SECO list (SANCTIONS_CH_*.xml) is searched too. Names are compared with
+reasons (SANCTIONS_UK_*.csv); the newest of each is used. The Swiss SECO list (SANCTIONS_CH_*.xml) and the Japan MOF list (SANCTIONS_JP_*.csv) are searched too. Names are compared with
 ё folded to е and a plain transliteration, so «Водолацкий» finds VODOLATSKY, but a spelling the table does not
 reach (a Ukrainian-form name, a different Latin rendering) can be missed: no hit is not a clean result.
 """
@@ -147,6 +147,21 @@ def load_ch(path: Path) -> list[dict]:
     return list(seen.values())
 
 
+def load_jp(path: Path) -> list[dict]:
+    """Japan MOF asset-freeze list (all regimes, one CSV): individuals, English and Japanese names, the notice date."""
+    out = []
+    for row in csv.DictReader(path.open(encoding="utf-8-sig", newline="")):
+        if row.get("個人・団体") != "個人":
+            continue
+        names = [row.get("氏名（英語）", ""), row.get("氏名（日本語）", "")]
+        for k in ("別名・別称（英語）", "旧称（英語）"):
+            names += [x.strip() for x in (row.get(k) or "").split(";") if x.strip()]
+        out.append({"list": "JP", "id": "MOF " + row.get("番号", ""), "names": [n for n in names if n],
+                    "dob": [row["生年月日"]] if row.get("生年月日") else [],
+                    "info": f"notice {row.get('告示日付', '')}; {row.get('役職（英語）') or row.get('その他の情報', '')}"[:200]})
+    return out
+
+
 def newest(pattern: str) -> Path | None:
     files = sorted(glob.glob(str(SRC / pattern)))
     return Path(files[-1]) if files else None
@@ -158,6 +173,9 @@ def norm_dob(d: str) -> str:
     m = re.match(r"^(\d{4})-(\d{2})-(\d{2})$", d)
     if m:
         return d
+    m = re.match(r"^(\d{4})/(\d{1,2})/(\d{1,2})$", d)      # Japan MOF
+    if m:
+        return f"{m.group(1)}-{int(m.group(2)):02d}-{int(m.group(3)):02d}"
     m = re.match(r"^(\d{1,2})/(\d{1,2})/(\d{4})$", d)
     if m:
         return f"{m.group(3)}-{int(m.group(2)):02d}-{int(m.group(1)):02d}"
@@ -235,7 +253,7 @@ def main() -> None:
     if not todo:
         sys.exit("give --slug or --pick")
     lists, loaded = [], []
-    for label, pat, fn in (("EU", "SANCTIONS_EU_*.xml", load_eu), ("US", "SANCTIONS_US_*.xml", load_us), ("UK", "SANCTIONS_UK_*.csv", load_uk), ("CH", "SANCTIONS_CH_*.xml", load_ch)):
+    for label, pat, fn in (("EU", "SANCTIONS_EU_*.xml", load_eu), ("US", "SANCTIONS_US_*.xml", load_us), ("UK", "SANCTIONS_UK_*.csv", load_uk), ("CH", "SANCTIONS_CH_*.xml", load_ch), ("JP", "SANCTIONS_JP_*.csv", load_jp)):
         p = newest(pat)
         if p is None:
             loaded.append(f"{label}: no file")
