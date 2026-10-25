@@ -17,7 +17,7 @@ a tool's output is never a fact). What to do with a hit is the same chain we use
     python3 scripts/sanctions_people_check.py --pick 10 --out data/watch/sanctions/people_check_20261025.md
 
 The lists are the ones the sanctions watch downloaded (SANCTIONS_EU_*, SANCTIONS_US_*) and the UK CSV with statements of
-reasons (SANCTIONS_UK_*.csv); the newest of each is used. The Swiss SECO list (SANCTIONS_CH_*.xml) the Japan MOF list (SANCTIONS_JP_*.csv) and the Australian DFAT list (SANCTIONS_AU_*.xlsx) are searched too. Names are compared with
+reasons (SANCTIONS_UK_*.csv); the newest of each is used. The Swiss SECO list (SANCTIONS_CH_*.xml) the Japan MOF list (SANCTIONS_JP_*.csv) the Australian DFAT list (SANCTIONS_AU_*.xlsx) and the New Zealand MFAT register (SANCTIONS_NZ_*.xlsx) are searched too. Names are compared with
 ё folded to е and a plain transliteration, so «Водолацкий» finds VODOLATSKY, but a spelling the table does not
 reach (a Ukrainian-form name, a different Latin rendering) can be missed: no hit is not a clean result.
 """
@@ -162,15 +162,13 @@ def load_jp(path: Path) -> list[dict]:
     return out
 
 
-def load_au(path: Path) -> list[dict]:
-    """Australian Sanctions Consolidated List (DFAT). The workbook is Strict OOXML, which openpyxl cannot open,
-    so the sheet XML is read directly. One row per name; aliases share the reference number (2, 2a, 2b)."""
+def xlsx_rows(path: Path, sheet: int = 1):
+    """Rows of one sheet as {column letter: text}, read from the sheet XML (stdlib only; Strict OOXML needs this)."""
     import zipfile
     z = zipfile.ZipFile(path)
     ln = lambda e: e.tag.split("}")[-1]
     ss = ["".join(t.text or "" for t in si.iter() if ln(t) == "t") for si in ET.fromstring(z.read("xl/sharedStrings.xml"))]
-    by: dict[str, dict] = {}
-    for r in ET.fromstring(z.read("xl/worksheets/sheet1.xml")).iter():
+    for r in ET.fromstring(z.read(f"xl/worksheets/sheet{sheet}.xml")).iter():
         if ln(r) != "row":
             continue
         d = {}
@@ -178,6 +176,23 @@ def load_au(path: Path) -> list[dict]:
             v = next((x.text for x in c if ln(x) == "v"), None)
             if v is not None:
                 d[re.match(r"[A-Z]+", c.get("r")).group(0)] = ss[int(v)] if c.get("t") == "s" else v
+        yield d
+
+
+def excel_date(v: str) -> str:
+    """An Excel serial day number as YYYY-MM-DD; text is returned as it is."""
+    import datetime
+    try:
+        return (datetime.date(1899, 12, 30) + datetime.timedelta(days=int(float(v)))).isoformat()
+    except (ValueError, OverflowError):
+        return v
+
+
+def load_au(path: Path) -> list[dict]:
+    """Australian Sanctions Consolidated List (DFAT). The workbook is Strict OOXML, which openpyxl cannot open,
+    so the sheet XML is read directly. One row per name; aliases share the reference number (2, 2a, 2b)."""
+    by: dict[str, dict] = {}
+    for d in xlsx_rows(path):
         if d.get("C") != "Individual":
             continue
         ref = re.match(r"\d+", d.get("A", ""))
@@ -189,6 +204,20 @@ def load_au(path: Path) -> list[dict]:
         if d.get("F"):
             e["dob"] += [x.strip() for x in d["F"].split(",") if x.strip() and x.strip() not in e["dob"]]
     return list(by.values())
+
+
+def load_nz(path: Path) -> list[dict]:
+    """New Zealand Russia Sanctions Register (MFAT), first sheet: individuals, with their alternate spellings.
+    Columns: B id, C-E first/middle/last name, H DOB, I title, J aliases, R date of sanction."""
+    out = []
+    for d in xlsx_rows(path):
+        if d.get("A") != "Individual":
+            continue
+        names = [" ".join(d[k] for k in ("C", "D", "E") if d.get(k))]
+        names += [a.strip() for a in re.split(r"[;\n]", d.get("J", "")) if a.strip()]
+        out.append({"list": "NZ", "id": d.get("B", ""), "names": names, "dob": [excel_date(d["H"])] if d.get("H") else [],
+                    "info": f"sanctioned {excel_date(d.get('R', ''))}; {d.get('I', '')}"[:200]})
+    return out
 
 
 def newest(pattern: str) -> Path | None:
@@ -282,7 +311,7 @@ def main() -> None:
     if not todo:
         sys.exit("give --slug or --pick")
     lists, loaded = [], []
-    for label, pat, fn in (("EU", "SANCTIONS_EU_*.xml", load_eu), ("US", "SANCTIONS_US_*.xml", load_us), ("UK", "SANCTIONS_UK_*.csv", load_uk), ("CH", "SANCTIONS_CH_*.xml", load_ch), ("JP", "SANCTIONS_JP_*.csv", load_jp), ("AU", "SANCTIONS_AU_*.xlsx", load_au)):
+    for label, pat, fn in (("EU", "SANCTIONS_EU_*.xml", load_eu), ("US", "SANCTIONS_US_*.xml", load_us), ("UK", "SANCTIONS_UK_*.csv", load_uk), ("CH", "SANCTIONS_CH_*.xml", load_ch), ("JP", "SANCTIONS_JP_*.csv", load_jp), ("AU", "SANCTIONS_AU_*.xlsx", load_au), ("NZ", "SANCTIONS_NZ_*.xlsx", load_nz)):
         p = newest(pat)
         if p is None:
             loaded.append(f"{label}: no file")
