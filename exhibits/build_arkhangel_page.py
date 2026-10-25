@@ -114,8 +114,8 @@ class Page:
                     f', registered {ru_date(own.get("from"))}.{self.ref(own.get("source_id"))}')
         out += "</p>"
         href, m = self.mark("m0095")
-        return (f'<div class="head-card"><figure class="head-pic"><img src="{href}" alt="{esc(m["shows_en"])}" width="205" height="320">'
-                f'<figcaption>Preview frame of the video in the project\'s post of 23.10.2026, which is signed with his name as head of the project.'
+        return (f'<div class="head-card"><figure class="head-pic"><img src="{href}" alt="{esc(m["shows_en"])}" width="544" height="848">'
+                f'<figcaption>A frame of the video in the project\'s post of 23.10.2026, which is signed with his name as head of the project.'
                 f'{self.ref(m.get("source_id"))}</figcaption></figure><div>{out}</div></div>')
 
     def tie(self):
@@ -307,11 +307,11 @@ table.bom td.no { font: 600 12px var(--font-mono); color: var(--accent); width: 
 ul.plain { padding-left: 20px; color: var(--ink-2); max-width: var(--measure); }
 ul.plain li { margin: 4px 0; }
 .proj-logo { display: block; width: 72px; height: 72px; border-radius: 50%; margin: 0 0 var(--space-3); border: 1px solid var(--rule); }
-.head-card { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: var(--space-4); align-items: start; margin-bottom: var(--space-3); }
+.head-card { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: var(--space-4); align-items: start; margin-bottom: var(--space-3); }
 .head-pic { margin: 0; }
 .head-pic img { display: block; width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--rule); }
 .head-pic figcaption { font-size: var(--t-note); color: var(--ink-3); margin-top: 6px; }
-@media (max-width: 560px) { .head-card { grid-template-columns: minmax(0, 1fr); } .head-pic { max-width: 150px; } }
+@media (max-width: 560px) { .head-card { grid-template-columns: minmax(0, 1fr); } .head-pic { max-width: 240px; } }
 .rm-gallery { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
 .prose ul { padding-left: 20px; color: var(--ink-2); max-width: var(--measure); }
 @media (max-width: 760px) { .build { grid-template-columns: minmax(0, 1fr); } }
