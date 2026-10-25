@@ -1177,7 +1177,6 @@ class Landing(Chain):
     def origin(self):
         """The platform: who launched it, whom it recruits, the operator it hides, and where the products go instead."""
         recruit = self.mclaim(MPTM, "s8854")
-        only = self.claim("ooo-trimiks", "только у нас")
         return (
             f'<p class="lede">In December 2025 Sidyakin wrote that the party, Bank PSB and TsBST had launched a military '
             f'marketplace. In August 2026 it opened to outside sellers and named the ones it wanted first:</p>'
@@ -1185,12 +1184,9 @@ class Landing(Chain):
                          f"ROY.MARKET's announcement, {ru_date(recruit['as_of'])}{self.ref(recruit['source_id'])}", "q-recruit")
             + self.step_shot(3, "ROY.MARKET's page for prospective sellers, 24.10.2026. The catalogue itself is behind a login.")
             + '<h3 class="rm-h3">One outlet among several</h3>'
-            f'<p>«Bulat», a drone detector shown at Dronnitsa 2025, a showcase TsBST takes part in, is a case in point. Asked '
-            f'whether the new «Bulat» would go on ROY.MARKET, its maker answered:</p>'
-            + quote_html(only["text_ru"], latinize_gloss(only["text_en"]),
-                         f"3mx, in its customer chat, {ru_date(only['as_of'])}{self.ref(only['source_id'])}", "q-3mx") +
-            '<p>The detector is sold through dealers and sole traders, and a foundation that co-founded TsBST buys it and posts '
-            'the handovers. No Wildberries seller carries the maker\'s INN, so a sanctions screen keyed on that identifier '
+            '<p>«Bulat», a drone detector shown at Dronnitsa 2025, a showcase TsBST takes part in, is sold through dealers and '
+            'sole traders, and a foundation that co-founded TsBST buys it and posts the handovers. No Wildberries seller carries '
+            'the maker\'s INN, so a sanctions screen keyed on that identifier '
             f'finds none of them.</p>{self.blind_spot()}' + self.models(first=False))
 
     def annex(self):
