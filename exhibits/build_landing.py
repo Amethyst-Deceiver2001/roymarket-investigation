@@ -84,6 +84,10 @@ OPENING_SOURCES = {
     "np_280": ("Telegram, @nashapravdafond, post 280, 07.05.2024", "https://t.me/nashapravdafond/280"),
     "np_580": ("Telegram, @nashapravdafond, post 580, 05.03.2026", "https://t.me/nashapravdafond/580"),
     "gag_2811": ("Telegram, @my_el_lab (Gagaring), post 2811, 23.12.2025", "https://t.me/my_el_lab/2811"),
+    # Pictures in the ties diagram (25.10.2026): the credit and licence the photograph needs travel with it.
+    "sid_photo": ("Photograph of Aleksandr Sidyakin by Karmaks, 28.09.2016, Wikimedia Commons, licence CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:SidyakinA.G..jpg"),
+    "er_logo": ("United Russia's logo, as hosted on Russian Wikipedia and credited there to the party's official site",
+                "https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%BF%D0%B0%D1%80%D1%82%D0%B8%D0%B8_%22%D0%95%D0%B4%D0%B8%D0%BD%D0%B0%D1%8F_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%22.svg"),
 }
 # Two lines of the supplier page, read from the saved copies; not in the Telegram scrape, so not checked by oq().
 SUPPLIER_LINES = {
@@ -341,13 +345,26 @@ class Landing(Chain):
             return display_name(self.ents[slug])["latin"]
         W, H = 1110, 350
         box = {}
+        pics = {}
+        for key, mid, kind in (("sid", "m0092", "face"), ("ur", "m0093", "logo")):
+            m = next((x for x in self.media if x["id"] == mid), None)
+            src = self.img(m) if m else None
+            if src:
+                pics[key] = (src, kind)
 
-        def node(key, x, y, w, title, sub, cls=""):
+        def node(key, x, y, w, title, sub, cls="", pic=None):
             h = 58
             box[key] = (x, y, w, h)
-            return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="6" class="bx {cls}"/>'
-                    f'<text x="{x + w / 2}" y="{y + 25}" class="bt">{esc(title)}</text>'
-                    f'<text x="{x + w / 2}" y="{y + 44}" class="bs">{esc(sub)}</text>')
+            tx = x + w / 2
+            img = ""
+            if pic:   # a picture of the party's logo or the person, 42 px, at the left of the box
+                href, kind = pic
+                img = (f'<image href="{esc(href)}" x="{x + 8}" y="{y + 8}" width="42" height="42" class="pic {kind}" '
+                       f'preserveAspectRatio="xMidYMid {"slice" if kind == "face" else "meet"}"/>')
+                tx = x + 54 + (w - 54) / 2
+            return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="6" class="bx {cls}"/>{img}'
+                    f'<text x="{tx}" y="{y + 25}" class="bt">{esc(title)}</text>'
+                    f'<text x="{tx}" y="{y + 44}" class="bs">{esc(sub)}</text>')
 
         def edge(a, b, g, label="", ay=None, by=None, side="mid", dx=0, dy=-7):
             (ax, ay0, aw, ah), (bx, by0, bw, bh) = box[a], box[b]
@@ -365,9 +382,9 @@ class Landing(Chain):
             return f'<path d="{d}" class="rm-ln {g}" marker-end="url(#ah3)"/>{lab}'
         n = [node("np", 10, 22, 190, lat(NP), "donor foundation"),
              node("psb", 10, 146, 190, lat(PSB), "state-owned bank"),
-             node("ur", 10, 270, 190, "United Russia", "ruling party"),
+             node("ur", 10, 270, 190, "United Russia", "ruling party", pic=pics.get("ur")),
              node("cbst", 380, 146, 190, lat(CBST), "non-profit, Moscow", "hub"),
-             node("sid", 380, 270, 190, "Aleksandr Sidyakin", "supervisory board secretary"),
+             node("sid", 380, 270, 190, "Aleksandr Sidyakin", "board secretary", pic=pics.get("sid")),
              node("units", 760, 22, 140, "Military units", "recipients"),
              node("mptm", 760, 146, 140, lat(MPTM), "company"),
              node("rm", 970, 146, 130, "ROY.MARKET", "catalogue is login-only")]
@@ -390,7 +407,8 @@ class Landing(Chain):
                 f'aria-label="Who is tied to TsBST: its co-founders, its supervisory board secretary, the company it takes part '
                 f'in and the foundation\'s handovers to units">{defs}{"".join(e)}{"".join(n)}</svg></div>'
                 f'<figcaption>Line style is the grade of the evidence, as in the key at the foot of the page. The notes for each '
-                f'line are in the list.</figcaption></figure>')
+                f'line are in the list. Pictures: Sidyakin, Karmaks, 2016, CC BY-SA 4.0{self.tref("sid_photo")}; the party\'s '
+                f'logo{self.tref("er_logo")}.</figcaption></figure>')
 
     def found(self, n, sanc):
         """What the investigation found, in five lines, each graded, each pointing to its section. Says nothing the

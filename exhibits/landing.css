@@ -269,3 +269,5 @@ main section > .rm-h2 { margin-top: 0; }
   .ties, .ledger-desk { display: none; }
   .ledger-phone { display: flex; }
 }
+.ties .pic.face { clip-path: circle(50%); }
+.ties .pic.logo { filter: none; }
