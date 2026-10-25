@@ -748,7 +748,7 @@ class Landing(Chain):
         return (f'<button class="{c}" type="button" data-fig="{fig}" aria-label="{esc(aria)}">'
                 f'<img src="{esc(img)}" alt="" loading="lazy">{label}</button>')
 
-    def band(self, ms, label, big=3, lead=(), limit=9):
+    def band(self, ms, label, big=3, lead=(), limit=9, owners=False):
         """A band of pictures. Pictures named in `lead` come first; the first `big` are drawn large with a visible label;
         any past `limit` sit behind "Show all". Each opens its full figure."""
         if not ms:
@@ -760,7 +760,11 @@ class Landing(Chain):
             if m.get("source_id") not in sids:
                 sids.append(m.get("source_id"))
             en = m.get("shows_en") or latinize_gloss(m["shows"])
-            tiles.append(self.tile(f"fig-{m['id']}", self.img(m), en, self.tile_label(en, ru_date(m.get("published"))), big=i < big))
+            cap = self.tile_label(en, ru_date(m.get("published")))
+            if owners:   # name whose picture it is: the first entity the record is about
+                ent = next((self.ents[a["id"]] for a in m["about"] if a["type"] == "entity" and a["id"] in self.ents), None)
+                cap = f"{display_name(ent)['latin']}: {cap}" if ent else cap
+            tiles.append(self.tile(f"fig-{m['id']}", self.img(m), en, cap, big=i < big))
         shown, rest = tiles[:limit], tiles[limit:]
         more = (f'<details class="more"><summary>Show all {len(tiles)} pictures</summary>'
                 f'<div class="band-grid">{"".join(rest)}</div></details>') if rest else ""
@@ -1283,10 +1287,11 @@ def render(preview: bool, out: Path):
     extra_cards = L.more_cards(preview)
     n, by, sanc = L.network()
     shown = {m["id"] for m in L.pics(["ooo-gagaring", "ano-dpo-obrazovatelny-tsentr-gagaring", NP, "csn-bars-sarmat", "proekt-kb-arkhangel"])}
-    own = L.band(L.pics([s for s in L.tied() if s != CBST], skip=shown | {L.HERO}),
-                 "What the linked organisations publish of themselves: products, shops, exhibition stands, workshops and "
-                 "handovers. "
-                 "Product pictures are evidence of what a company offers, not of sales.", big=4)
+    # Product, stand and handover pictures that the makers publish of themselves. Showrooms, customer photos, interview
+    # stills, documents and a CGI render are left out: they support no line of the story (owner's comment, 25.10.2026).
+    own_ms = L.pics([s for s in L.tied() if s != CBST], genres={"marketing", "handover", "event"}, skip=shown | {L.HERO, "m0006"})
+    own = L.band(own_ms, "Makers in the network show their own products and stands; each tile names the company. "
+                 "A product picture is evidence of what a company offers, not of sales.", big=3, owners=True)
     wall = L.wall()
     sgrid, undated = L.sanctions_grid()
     revenue, n_rev = L.revenue_bars()
