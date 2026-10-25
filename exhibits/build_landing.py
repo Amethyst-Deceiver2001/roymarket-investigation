@@ -894,7 +894,7 @@ class Landing(Chain):
             return ""
         tiles = []
         for key in KHERSON_STILLS:
-            if key in self.k_inline:
+            if key in self.k_inline or key == "osv_21384":   # the channel's own warning map: the page has the front map
                 continue
             r = self._kreg(key)
             if not r:
@@ -904,8 +904,7 @@ class Landing(Chain):
         if not tiles:
             return ""
         return (f'<figure class="band"><div class="band-grid">{"".join(tiles)}</div><figcaption><span class="rm-label">'
-                f'More stills · {len(tiles)}</span> From the channel\'s own videos, 2024–2026, and the map it posted with '
-                f'one of its warnings. Nobody in them can be identified, and no frame we looked at shows a dead or wounded '
+                f'More stills · {len(tiles)}</span> From the channel\'s own videos, 2024–2026. Nobody in them can be identified, and no frame we looked at shows a dead or wounded '
                 f'person. Each opens with its caption, date and the post\'s own words.</figcaption></figure>')
 
     def center_band(self):
