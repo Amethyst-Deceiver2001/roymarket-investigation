@@ -566,8 +566,8 @@ class Landing(Chain):
             f'<p class="print">{name_html(t[0], t[1], key=f"doc-{i}", what="Line as printed, in Russian:")}</p></figure>' for i, (d, w, t, r, c) in enumerate(cells)) + \
             '<p class="note">Lines as printed in each document, rendered in English; the Russian original is under RU. The masked version shows the requisites only after login.</p></div>'
 
-    def models(self):
-        """Hypothesis 1 beside hypothesis 2, as two small flow diagrams."""
+    def models(self, first):
+        """The first hypothesis (method annex) or the working model (narrative), as a small flow diagram."""
         def box(x, y, w, t, cls=""):
             lines = t.split("|")
             h = 18 + 16 * len(lines)
@@ -597,12 +597,13 @@ class Landing(Chain):
             o, ro = box(380, y, 140, t)
             p += [o, arrow(rm, ro, g), arrow(ro, ru, g)]
         two = f'<svg viewBox="0 0 660 290" class="mdl" role="img" aria-label="Working model">{defs.replace("ah", "ah2")}{"".join(p).replace("url(#ah)", "url(#ah2)")}</svg>'
-        return (f'<div class="models"><figure><figcaption><span class="rm-label">First guess</span> The platform would be '
-                f'stocked by people already selling on the mass marketplaces and by TsBST\'s own residents.</figcaption>'
-                f'<div class="mdl-wrap">{one}</div></figure>'
-                f'<figure><figcaption><span class="rm-label">Working model</span> The platform is one outlet among several. '
-                f'Makers sell through their own dealers and marketplaces, to the state, and to donors who hand the goods to units.'
-                f'</figcaption><div class="mdl-wrap">{two}</div></figure></div>')
+        if first:
+            return (f'<figure class="mdl-one"><figcaption><span class="rm-label">First guess</span> The platform would be '
+                    f'stocked by people already selling on the mass marketplaces and by TsBST\'s own residents.</figcaption>'
+                    f'<div class="mdl-wrap">{one}</div></figure>')
+        return (f'<figure class="mdl-one"><figcaption><span class="rm-label">Working model</span> The platform is one outlet '
+                f'among several. Makers sell through their own dealers and marketplaces, to the state, and to donors who hand '
+                f'the goods to units.</figcaption><div class="mdl-wrap">{two}</div></figure>')
 
     # -- pictures: registered media only (media.json), each opening its full figure with caption, date and source ----
     HERO = "m0085"   # Nasha Pravda's crates and cases by a truck, 24.04.2026: no faces, the supply itself
@@ -773,12 +774,8 @@ class Landing(Chain):
             f'of arms on its façade: smoke, no fire, nobody hurt{self.tref("ukrinform")}. ROY.MARKET is TsBST\'s own '
             f'marketplace for military units. '
             + ("" if listed else "No sanctions listing for the maker is on file. ") +
-            '</p><p class="note"><span class="rm-grade rep">Reported</span> Both posts are the parties\' own word. We watched '
-            'the 25-second video. It follows a drone in over a large government building, labelled “Kuznechik/Sova 5.8”, '
-            'down to a trident coat of arms on its façade; the last eight seconds are a separate vertical clip, with its own '
-            'watermark, of the coat of arms hanging damaged from its frame. That is consistent with the report of 8 October, '
-            'but neither post dates the strike, we have not placed the building on a map, and the impact itself is not in the '
-            'frames we checked.</p>'
+            '</p><p class="note"><span class="rm-grade rep">Reported</span> Both posts are the parties\' own word. The video is '
+            'consistent with the report of 8 October, but neither post dates the strike.</p>'
             + self.band(self.pics(["ooo-gagaring", "ano-dpo-obrazovatelny-tsentr-gagaring"]),
                         "Gagaring's own: its director at one of its field courses, and graduates of its training centre.", big=2)
             + self.dual_use())
@@ -849,10 +846,9 @@ class Landing(Chain):
                 'aria-label="Gagaring\'s video: a drone flies in over a large government building to a trident coat of arms on '
                 'its façade, then a separate clip of the coat of arms hanging damaged">'
                 '<source src="images/video/gagaring-5142.mp4" type="video/mp4"></video>'
-                '<figcaption><span class="rm-label">Video · 0:25</span> As posted by Gagaring, labelled “Kuznechik/Sova 5.8”. '
-                'The drone flies in over the building to the coat of arms on its façade; the last eight seconds are a separate '
-                f'vertical clip, with its own watermark, of the coat of arms hanging damaged. It has no spoken words, only footage. Re-encoded smaller for this page; '
-                f'the original is kept in our own record of the channel{self.tref("gag")}.</figcaption></figure>')
+                '<figcaption><span class="rm-label">Video · 0:25</span> As posted by Gagaring, labelled “Kuznechik/Sova 5.8”: '
+                'a drone flies in over the building to the coat of arms on its façade. The last eight seconds, a separate clip '
+                f'with its own watermark, show the coat of arms hanging damaged{self.tref("gag")}.</figcaption></figure>')
 
     def osv_clip(self):
         """The first 30 seconds of the channel's post 38645, playable, with the post's own words in the caption. Preview
@@ -876,12 +872,9 @@ class Landing(Chain):
                 '<source src="images/video/osv-38645.mp4" type="video/mp4"></video>'
                 '<figcaption><span class="rm-label">Video · first 0:30 of 1:19</span> The channel\'s post of 22.10.2026 says '
                 f'<span class="rm-grade rep">Reported</span> {said}{self.tref("osv_38645")}. '
-                'What the footage shows: a recording of a drone pilot\'s controller screen (the channel blurred the telemetry '
-                'panel). The camera looks straight down onto a damaged road bridge beside a river; a yellow tracking box follows '
-                'small dark shapes near the kerb. At 0:13 a bright flash fills part of the deck for about a fifth of a second; the next '
-                'frames show a small fire and smoke on the road surface, gone within a second. The footage does not show who or what '
-                'was there, or what became of them; the post itself says a dog was killed. The sound is removed; the original has '
-'an audio track we have not assessed, and the full 1:19 is kept in our own record of the channel.</figcaption></figure>')
+                'The footage, a pilot\'s controller screen, looks down on a damaged road bridge; a tracking box follows small '
+                'dark shapes near the kerb. At 0:13 a flash, then a small fire on the road. Who or what was there cannot be made '
+                'out; the post itself says a dog was killed. Sound removed.</figcaption></figure>')
 
     def dual_use(self):
         """The label on the order line: the supplier page's own sentence before and after it changed."""
@@ -909,9 +902,9 @@ class Landing(Chain):
             f'finding to 300 km of the river and three regions, and named the formation the operators serve in:</p>'
             + self.un_quote("dnepr", f'UN report A/80/497, para. 40, 21.10.2025{self.tref("un_ga")}') +
             f'<p>The Commission names the 18th Combined Arms Army; it names no brigade. The Centre for Information Resilience '
-            f'and DW named the 205th among three units whose drones were at work over Beryslav during the attacks there, and '
-            f'said they could not prove who carried them out{self.tref("cir")}. The 205th is a motor-rifle brigade, as DW\'s film labels it on a map{self.tref("dw_film")}; the channel '
-            f'that posts its footage, under the brigade\'s emblem, places it in the 49th Army{self.tref("osv_27702")}. A senior '
+            f'and DW named the 205th motor-rifle brigade{self.tref("dw_film")} among three units whose drones worked over Beryslav '
+            f'during the attacks, while saying they could not prove who carried them out{self.tref("cir")}. A channel that posts '
+            f'the brigade\'s footage places it in the 49th Army{self.tref("osv_27702")}. A senior '
             f'doctor at a Kherson hospital told the Commission:</p>'
             + self.un_quote("safari", f'UN paper A/HRC/59/CRP.2, para. 42, 28.05.2025{self.tref("un_crp")}'))
         np_ = self.ents[NP]
@@ -942,24 +935,16 @@ class Landing(Chain):
             '<h3 class="rm-h3">What TsBST\'s circle says about that front</h3>'
             f'<ul class="ledger front" aria-label="Ties to the formations the UN names">{"".join(lis)}</ul>'
             + self.oq("arch_9067", f'«Arkhangel», Telegram, 01.12.2025{self.tref("arch_9067")}')
-            + (f'<p>DW\'s film on the Beryslav attacks shows the school too. In a passage on Russia\'s volunteer drone groups, '
-               f'over footage of men soldering a drone at a workbench, watermarked with the school\'s channel address, its '
-               f'narration says: “This Russian volunteer group proudly posts on Telegram” how it makes drones and trains '
-               f'operators{self.tref("dw_film")}. The film does not say the school supplied the 205th, and the footage of the '
-               f'attacks it shows is credited to another channel.</p>'
-               '<p class="note"><span class="rm-grade rep">Reported</span> DW\'s own film, as press: it shows the school\'s '
-               'footage as an example of such groups. It does not show the school\'s tie to TsBST, which is still not '
-               'documented.</p>')
-            + (f'<p>The school\'s own channel draws it closer to TsBST\'s circle than any document does. Its forum channel calls '
-               f'Kvadrosim, the simulator maker TsBST names as a resident, “our partners”, and says the heads of its Moscow branch, '
-               f'among them {self.person_pop("shatrakova-anastasiya-artemovna")}, presented an interceptor called «Arkhangel» to a '
-               f'security agency together with that company{self.tref("arch_175293")}. TsBST\'s own post names an Anastasia '
-               f'Shatrakova as general director of the interceptor maker «Arkhangel», a finalist of its accelerator'
-               f'{self.tref("cbst_1976")}, and the company register lists a person of that name as director of '
-               f'{self.pop("ooo-arkhangel")} since it was registered{self.ref("s5507")}. Same name, same product: we take them to '
-               f'be one person. No document links that company to the school.</p>'
-               '<p class="note"><span class="rm-grade rep">Reported</span> This is the school\'s, TsBST\'s and the register\'s '
-               'own text, joined by a name. The school\'s tie to TsBST is still not documented.</p>')
+            + (f'<p>DW\'s film on the Beryslav attacks shows the school too: over footage of men soldering a drone, watermarked '
+               f'with the school\'s channel address, the narration says “This Russian volunteer group proudly posts on Telegram” '
+               f'how it makes drones and trains operators{self.tref("dw_film")}. The film does not say the school supplied the '
+               f'205th.</p>')
+            + (f'<p>The school\'s forum channel calls Kvadrosim, the simulator maker TsBST names as a resident, “our partners”, '
+               f'and says the heads of its Moscow branch, among them {self.person_pop("shatrakova-anastasiya-artemovna")}, '
+               f'presented an interceptor called «Arkhangel» to a security agency together with that company'
+               f'{self.tref("arch_175293")}. TsBST\'s own post names an Anastasia Shatrakova as general director of the '
+               f'interceptor maker «Arkhangel», a finalist of its accelerator{self.tref("cbst_1976")}. No document on file ties '
+               f'the school to TsBST.</p>')
             + self.band(self.pics(["proekt-kb-arkhangel"]), "The «Arkhangel» school's own channel: its lab bench, a device it "
                         "builds, its flight-instruction video and its recruitment video. Its tie to TsBST is not documented.", big=2)
             + self.band(self.pics(["csn-bars-sarmat"]), "Bars-Sarmat's own, from its stand at «Dronnitsa 2025», a gathering "
@@ -976,9 +961,8 @@ class Landing(Chain):
             + self.oq("osv_38703", f'the same channel, 24.10.2026, over a clip watermarked by the 98th Airborne Division{self.tref("osv_38703")}')
             + self.osv_clip()
             + self.kherson_band() +
-            '<p class="note"><span class="rm-grade rep">Reported</span> The ties above are the parties\' own posts. They show '
-            'TsBST\'s circle supplying and recruiting for the formations the UN names; they do not show that any item from it '
-            'was used against civilians, and the UN names no unit below the army.</p>')
+            '<p class="note"><span class="rm-grade rep">Reported</span> The ties above are the parties\' own posts. They do not '
+            'show any item from TsBST\'s circle used against civilians; the UN names no unit below the army.</p>')
 
     def beyond_shop(self):
         """Two of TsBST's own lines on what it does besides the shop."""
@@ -994,45 +978,49 @@ class Landing(Chain):
             'shows the system in service.</p>')
 
     def origin(self):
-        """How the investigation got here, in six steps; each step carries its own picture."""
+        """The platform: who launched it, whom it recruits, the operator it hides, and where the products go instead."""
         recruit = self.mclaim(MPTM, "s8854")
         only = self.claim("ooo-trimiks", "только у нас")
+        return (
+            f'<p class="lede">In December 2025 Sidyakin wrote that the party, Bank PSB and TsBST had launched a military '
+            f'marketplace. In August 2026 it opened to outside sellers and named the ones it wanted first:</p>'
+            + quote_html(recruit["text_ru"], latinize_gloss(recruit["text_en"]),
+                         f"ROY.MARKET's announcement, {ru_date(recruit['as_of'])}{self.ref(recruit['source_id'])}", "q-recruit")
+            + self.step_shot(3, "ROY.MARKET's page for prospective sellers, 24.10.2026. The catalogue itself is behind a login.")
+            + '<h3 class="rm-h3">The site hides its operator. An older copy does not</h3>'
+            f'<p>The platform\'s public terms print the operator as “OOO «****»”. A copy archived on 22.08.2026 names it: '
+            f'{self.pop(MPTM)}, INN 9714068459. TsBST\'s own report to the Justice Ministry lists the same company as one it has '
+            f'taken part in since the day it was registered.</p>{self.masked()}'
+            + '<h3 class="rm-h3">One outlet among several</h3>'
+            f'<p>«Bulat», a drone detector shown at Dronnitsa 2025, a showcase TsBST takes part in, is a case in point. Asked '
+            f'whether the new «Bulat» would go on ROY.MARKET, its maker answered:</p>'
+            + quote_html(only["text_ru"], latinize_gloss(only["text_en"]),
+                         f"3mx, in its customer chat, {ru_date(only['as_of'])}{self.ref(only['source_id'])}", "q-3mx") +
+            '<p>The detector is sold through dealers and sole traders, and a foundation that co-founded TsBST buys it and posts '
+            'the handovers. No Wildberries seller carries the maker\'s INN, so a sanctions screen keyed on that identifier '
+            f'finds none of them.</p>{self.blind_spot()}' + self.models(first=False))
+
+    def annex(self):
+        """Method annex: how the investigation arrived at the working model, kept off the narrative."""
         steps = [
             ("We had been watching Wildberries",
              '<p>The investigation started as <a href="https://amethyst-deceiver2001.github.io/wb-watcher/">WB Watch</a>, a tracker of '
-             'military goods sold on Russia\'s largest consumer marketplace. It found a large, open trade in kit for the war.</p>'
+             'military goods sold on Russia\'s largest consumer marketplace. It found a large, open trade in kit for the war. '
+             'ROY.MARKET then invited “first of all” sellers already on Wildberries and Ozon: the seller base already mapped.</p>'
              '<div class="figs"><div class="fig"><span class="n">7,666</span><span class="w">military-item listings</span></div>'
              '<div class="fig"><span class="n">89%</span><span class="w">shipped from Wildberries\' own warehouses</span></div>'
              '<div class="fig"><span class="n">802</span><span class="w">sellers</span></div></div>'),
-            ("Then a military marketplace announced itself",
-             f'<p>In December 2025 Sidyakin wrote that the '
-             f'party, Bank PSB and TsBST had launched a military marketplace. In August 2026 the platform opened to outside sellers '
-             f'and named the ones it wanted first.</p>'
-             + quote_html(recruit["text_ru"], latinize_gloss(recruit["text_en"]),
-                          f"ROY.MARKET's announcement, {ru_date(recruit['as_of'])}{self.ref(recruit['source_id'])}", "q-recruit")
-             + self.step_shot(3, "ROY.MARKET's page for prospective sellers as it reads now, captured 24.10.2026. The August version "
-                                 "is archived as text only. The catalogue itself is behind a login.")
-             + '<p>Its target was the seller base we had already mapped.</p>'),
-            ("The site hid its operator. An older copy did not",
-             f'<p>The platform\'s public terms print the operator as “OOO «****»”. A copy archived on 22.08.2026 names it: '
-             f'{self.pop(MPTM)}, INN 9714068459. TsBST\'s own report to the Justice Ministry lists the same company as one it has '
-             f'taken part in since the day it was registered.</p>{self.masked()}'),
             ("First guess: the usual sellers, plus TsBST's residents",
              '<p>If the platform recruits Wildberries sellers, and TsBST runs a residency for drone makers, the likely suppliers are '
-             'makers that are both. We checked every maker on file against the Wildberries sellers by INN.</p>' + self.test_bar()),
+             'makers that are both. Every maker on file was checked against the Wildberries sellers by INN.</p>'
+             + self.test_bar() + self.models(first=True)),
             ("The check missed the best case",
-             f'<p>«Bulat», a drone detector shown at Dronnitsa 2025, a showcase TsBST takes part in, returned nothing: no Wildberries seller carries its '
-             f'maker\'s INN. The detector is on sale all the same, through dealers and sole traders. A sanctions screen keyed on the '
-             f'maker\'s identifier would make the same mistake.</p>{self.blind_spot()}'),
-            ("The marketplace is one outlet among several",
-             f'<p>Asked whether the new «Bulat» would go on ROY.MARKET, 3mx answered:</p>'
-             + quote_html(only["text_ru"], latinize_gloss(only["text_en"]),
-                          f"3mx, in its customer chat, {ru_date(only['as_of'])}{self.ref(only['source_id'])}", "q-3mx") +
-             '<p>The detector reaches units another way: a foundation that co-founded TsBST buys it and posts the handovers. So we '
-             'stopped following the platform and started following products, from the maker to the people who receive them.</p>'
-             + self.models()),
+             '<p>«Bulat» returned nothing, though it is on sale through dealers and sole traders. That is why the investigation '
+             'follows products, from the maker to the units that receive them, rather than the platform.</p>'),
         ]
-        return "".join(f'<li class="step"><h3 class="rm-h3">{esc(h)}</h3>{body}</li>' for h, body in steps)
+        return ('<details class="fold annex"><summary>Annex: how the investigation got here</summary><ol class="steps">'
+                + "".join(f'<li class="step"><h3 class="rm-h3">{esc(h)}</h3>{body}</li>' for h, body in steps)
+                + '</ol></details>')
 
     def more_cards(self, preview):
         """The company file and the foundation story, linked only in the preview until they are public."""
@@ -1049,8 +1037,7 @@ class Landing(Chain):
                     ref, nm = m.group(0), nm.replace(m.group(0), "", 1)
             cards.append(f'<article class="rm-card chain-card"><header><span class="rm-kind">Company file</span>{self.logo(slug)}</header>'
                          f'<h3 class="rm-name">{f"<a href={chr(34)}{esc(href)}{chr(34)}>" if href else ""}{nm}'
-                         f'{"</a>" if href else ""}{ref}</h3>{self.sanctions(e)}<p class="row">Register history, people, sanctions, '
-                         f'accounts, products, pictures and the company in its own words.</p>'
+                         f'{"</a>" if href else ""}{ref}</h3>{self.sanctions(e)}'
                          + (f'<p class="go"><a href="{esc(href)}">Open the company file →</a></p>' if href
                             else '<p class="go wait">The company file is in review and not yet public.</p>') + '</article>')
         if preview and STORY:
@@ -1101,7 +1088,7 @@ def unique_popovers(doc):
 # The chain view's picture viewer, shared rather than copied: everything in chain_view.js from its comment on.
 # The contents bar: (section heading id, short label), in page order.
 TOC_ITEMS = [("h-open", "The strike"), ("h-limits", "Limits"), ("h-hub", "Who stands behind"), ("h-front", "The front"),
-             ("h-beyond", "Beyond the shop"), ("h-chains", "Products"), ("h-net", "Network"), ("h-origin", "How we found it"),
+             ("h-beyond", "Beyond the shop"), ("h-chains", "Products"), ("h-net", "Network"), ("h-origin", "The platform"),
              ("h-read", "How to read"), ("h-method", "Method"), ("h-sources", "Sources")]
 TOC = ('<nav class="toc" aria-label="Contents"><ol>' + "".join(f'<li><a href="#{i}">{esc(t)}</a></li>' for i, t in TOC_ITEMS)
        + '</ol></nav>')
@@ -1182,6 +1169,7 @@ def render(preview: bool, out: Path):
     sgrid, undated = L.sanctions_grid()
     revenue, n_rev = L.revenue_bars()
     origin, timeline = L.origin(), L.timeline()
+    annex = L.annex()
     restr_date, restr_ref = L.restricted()
     lead_quote = quote_html(f"{qa['text_ru']} […] {qb['text_ru']}",
                             latinize_gloss(f"{qa['text_en']} […] {qb['text_en']}"),
@@ -1222,8 +1210,6 @@ def render(preview: bool, out: Path):
       {restr_date} the company register withholds who owns that company{restr_ref}.</li>
       <li>A US sanctions entry under a similar name belongs to a different company registered in Tula. TsBST itself is
       not shown here as sanctioned by the US.</li>
-      <li>This is a draft. The earlier case studies and company profiles were withdrawn while the site is rebuilt
-      around chain views.</li>
     </ul>
     </details>
   </section>
@@ -1256,17 +1242,14 @@ def render(preview: bool, out: Path):
     <h2 class="rm-h2" id="h-chains">Follow a product</h2>
     <p class="lede">A chain view follows one product from TsBST and its events to the maker, the shops and dealers that
     sell it, the state agencies that buy it and the units that receive it. Each line is drawn in the style of its evidence.</p>
-    <div class="chains">{chains}{extra_cards}
-      <aside class="rm-card absent"><header><span class="rm-kind">Next</span></header>
-        <p>More chain views follow one product at a time, each after its record has been read in full.</p></aside>
-    </div>
+    <div class="chains">{chains}{extra_cards}</div>
   </section>
 
   <section aria-labelledby="h-net">
     <h2 class="rm-h2" id="h-net">The network on file</h2>
-    <p class="lede">The investigation's registry links <b>{n}</b> organisations to TsBST: {by['doc']} through a document
-    (a register entry, a contract, TsBST's own posts), {by['rep']} on their own word or press reports alone.
-    <b>{sanc}</b> of them are on at least one sanctions list. Counted from the registry on {ru_date(today)}.</p>
+    <p class="lede"><b>{n}</b> organisations are tied to TsBST on file: {by['doc']} through a document (a register entry,
+    a contract, TsBST's own posts), {by['rep']} on their own word or press reports alone. <b>{sanc}</b> of them are on at
+    least one sanctions list.</p>
     {own}
     <details class="fold"><summary>Show all {n} organisations, with logos and charts</summary>
     <figure class="netfig">{wall}
@@ -1285,10 +1268,8 @@ def render(preview: bool, out: Path):
   </section>
 
   <section class="origin" aria-labelledby="h-origin">
-    <h2 class="rm-h2" id="h-origin">How we found it</h2>
-    <p class="lede">We did not set out to investigate TsBST. We were following military goods on a consumer marketplace,
-    and a new marketplace came looking for the same sellers.</p>
-    <ol class="steps">{origin}</ol>
+    <h2 class="rm-h2" id="h-origin">A marketplace with a hidden operator</h2>
+    {origin}
     <h3 class="rm-h3">The dates</h3>
     {timeline}
   </section>
@@ -1315,6 +1296,7 @@ def render(preview: bool, out: Path):
       <li>Pictures are evidence only for what they show, and each says who published it. Faces of people taking part
       are shown; nobody is named from a face.</li>
     </ul>
+    {annex}
   </section>
 
   <section class="rm-prose rm-sources" aria-labelledby="h-sources"><h2 class="rm-h2" id="h-sources">Sources</h2>
