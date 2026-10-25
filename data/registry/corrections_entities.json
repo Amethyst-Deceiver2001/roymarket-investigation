@@ -25774,8 +25774,8 @@
             "note": "Форма 0710096, тыс. руб. Revenue up ~6x on FY2024 while net profit collapsed to near-zero — consistent with rapid scale-up on thin margins for a young (registered Dec 2023) retailer."
           }
         ],
-        "tier": "money-layer",
-        "tier_basis": "Not part of the ЦБСТ/РОЙ.МАРКЕТ network — found while tracing the retail supply chain for the GAONENG FPV drone battery a Moscow Arbitration Court judgment (s0043) documents НПО «Рустехдрон» delivering to ООО «ДСГ» in 2023 (see ooo-npo-rustekhdron litigation[]). Included on its own merits: a Russian military-goods retailer (trading as «Военторг ИРПТОРГ») that self-describes as producing rations, clothing, drone-countermeasure (РЭБ) systems and drones for the Russian Armed Forces, and that markets this exact battery model with explicit military/security-structure language. There is NO confirmed link between this entity and the specific ДСГ purchase — the battery is sold at open retail by at least six Russian shops and nothing ties ДСГ's 2023 purchase to any one of them. Recorded as an adjacent finding from the same court-filing thread, not as the resolved supply chain for that transaction.",
+        "tier": "adjacent",
+        "tier_basis": "UPDATE 25.10.2026 (owner's review of the landing wall): reclassified from money-layer to adjacent. Nothing in the record shows it funds anything; it is a military-goods retailer whose development director ЦБСТ's channel calls a resident (t-open). Earlier basis: Not part of the ЦБСТ/РОЙ.МАРКЕТ network — found while tracing the retail supply chain for the GAONENG FPV drone battery a Moscow Arbitration Court judgment (s0043) documents НПО «Рустехдрон» delivering to ООО «ДСГ» in 2023 (see ooo-npo-rustekhdron litigation[]). Included on its own merits: a Russian military-goods retailer (trading as «Военторг ИРПТОРГ») that self-describes as producing rations, clothing, drone-countermeasure (РЭБ) systems and drones for the Russian Armed Forces, and that markets this exact battery model with explicit military/security-structure language. There is NO confirmed link between this entity and the specific ДСГ purchase — the battery is sold at open retail by at least six Russian shops and nothing ties ДСГ's 2023 purchase to any one of them. Recorded as an adjacent finding from the same court-filing thread, not as the resolved supply chain for that transaction.",
         "products": [
           {
             "name_ru": "Аккумулятор GAONENG GNB 6S 22.2В 6500мАч 50C LiPo XT90 (реселлер, не производитель)",
@@ -32976,7 +32976,8 @@
         ],
         "ecosystem_roles": [
           "manufacturer"
-        ]
+        ],
+        "tier": "manufacturer"
       },
       "verified_against": "s0009 — this entity's own full signed ЕГРЮЛ extract, pulled 17.08.2026",
       "why": [

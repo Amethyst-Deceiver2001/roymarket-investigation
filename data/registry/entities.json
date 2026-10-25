@@ -22102,7 +22102,7 @@
     "facility_type_history": [],
     "parents": [],
     "subsidiaries": [],
-    "tier": "money-layer",
+    "tier": "adjacent",
     "cbst_tie": {
       "claim": "ЦБСТ's channel calls the company's development director a ЦБСТ resident.",
       "confidence": "t-open",
@@ -22200,7 +22200,7 @@
       "72.19.9 Научные исследования и разработки",
       "74.90 Деятельность профессиональная научная и техническая прочая"
     ],
-    "tier_basis": "Not part of the ЦБСТ/РОЙ.МАРКЕТ network — found while tracing the retail supply chain for the GAONENG FPV drone battery a Moscow Arbitration Court judgment (s0043) documents НПО «Рустехдрон» delivering to ООО «ДСГ» in 2023 (see ooo-npo-rustekhdron litigation[]). Included on its own merits: a Russian military-goods retailer (trading as «Военторг ИРПТОРГ») that self-describes as producing rations, clothing, drone-countermeasure (РЭБ) systems and drones for the Russian Armed Forces, and that markets this exact battery model with explicit military/security-structure language. There is NO confirmed link between this entity and the specific ДСГ purchase — the battery is sold at open retail by at least six Russian shops and nothing ties ДСГ's 2023 purchase to any one of them. Recorded as an adjacent finding from the same court-filing thread, not as the resolved supply chain for that transaction.",
+    "tier_basis": "UPDATE 25.10.2026 (owner's review of the landing wall): reclassified from money-layer to adjacent. Nothing in the record shows it funds anything; it is a military-goods retailer whose development director ЦБСТ's channel calls a resident (t-open). Earlier basis: Not part of the ЦБСТ/РОЙ.МАРКЕТ network — found while tracing the retail supply chain for the GAONENG FPV drone battery a Moscow Arbitration Court judgment (s0043) documents НПО «Рустехдрон» delivering to ООО «ДСГ» in 2023 (see ooo-npo-rustekhdron litigation[]). Included on its own merits: a Russian military-goods retailer (trading as «Военторг ИРПТОРГ») that self-describes as producing rations, clothing, drone-countermeasure (РЭБ) systems and drones for the Russian Armed Forces, and that markets this exact battery model with explicit military/security-structure language. There is NO confirmed link between this entity and the specific ДСГ purchase — the battery is sold at open retail by at least six Russian shops and nothing ties ДСГ's 2023 purchase to any one of them. Recorded as an adjacent finding from the same court-filing thread, not as the resolved supply chain for that transaction.",
     "why": [
       "2026-09-19: cbst_tie added from ЦБСТ's own channel / press, quote and post read against the archived source; only ties where the text names the company or its director.",
       {
@@ -61812,7 +61812,7 @@
     ],
     "parents": [],
     "subsidiaries": [],
-    "tier": "cbst-core",
+    "tier": "manufacturer",
     "tier_basis": "own OKVED codes explicitly declare weapons/ammunition manufacturing (25.40) and military-security-related activity (84.22) alongside R&D (72.19); its own channel documents direct front-line FPV-drone supply to the 106th Guards Airborne Division and two MoD-stamped commendation letters from the commander of the «Добровольческий корпус»",
     "cbst_tie": {
       "claim": "All four projects submitted by НПЦ БАСиРТК were selected into the III stream of ЦБСТ's own Accelerator for special and dual-purpose projects, and completed its first two modules.",

@@ -352,8 +352,10 @@ class Landing(Chain):
         return len(slugs), by, sanc
 
     # -- the network as pictures ---------------------------------------------------------
-    TIER_ORDER = [("cbst-core", "TsBST and its core"), ("money-layer", "Money"), ("plumbing", "Platform and services"),
-                  ("manufacturer", "Makers"), ("adjacent", "Other")]
+    # A group can take several tiers; "network" (a resident that sells software, not a listed good) sits with the services.
+    TIER_ORDER = [(("cbst-core",), "TsBST and its core"), (("money-layer",), "Money"),
+                  (("plumbing", "network"), "Partners, institutions and services"),
+                  (("manufacturer",), "Makers"), (("adjacent",), "Other")]
 
     def tied(self):
         ties = [e for e in self.graph["edges"] if e["type"] == "cbst_tie"]
@@ -363,8 +365,8 @@ class Landing(Chain):
         """Every organisation linked to TsBST as a tile: its logo where one is on file, its name, and the Sanctioned
         flag naming the regimes. Grouped by its place in the network."""
         groups = []
-        for tier, label in self.TIER_ORDER:
-            slugs = [s for s in self.tied() if self.ents.get(s, {}).get("tier") == tier]
+        for tiers, label in self.TIER_ORDER:
+            slugs = [s for s in self.tied() if self.ents.get(s, {}).get("tier") in tiers]
             if not slugs:
                 continue
             slugs.sort(key=lambda s: (not self.logo(s), not sanction_regimes(self.ents[s].get("sanctions")), short(self.ents[s])))

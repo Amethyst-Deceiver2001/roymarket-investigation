@@ -3403,7 +3403,7 @@
           "label": "ООО «Боевые технологии» (Военторг «ИРПТОРГ»)",
           "name_latin": null,
           "inn": "5262393781",
-          "tier": "money-layer",
+          "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ООО",
           "product_count": 1,
@@ -4063,7 +4063,7 @@
           "label": "ООО «НПЦ БАСИРТК»",
           "name_latin": "NPTs BASiRTK",
           "inn": "3300009049",
-          "tier": "cbst-core",
+          "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
           "product_count": 1,
@@ -42575,7 +42575,7 @@
           "label": "ООО «Боевые технологии» (Военторг «ИРПТОРГ»)",
           "name_latin": null,
           "inn": "5262393781",
-          "tier": "money-layer",
+          "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ООО",
           "product_count": 1,
@@ -43175,7 +43175,7 @@
           "label": "ООО «НПЦ БАСИРТК»",
           "name_latin": "NPTs BASiRTK",
           "inn": "3300009049",
-          "tier": "cbst-core",
+          "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
           "product_count": 1,
@@ -49070,14 +49070,6 @@
           "degree": 8
         },
         {
-          "id": "baygutlina-irina-anatolevna",
-          "kind": "person",
-          "label": "Байгутлина Ирина Анатольевна",
-          "name_latin": null,
-          "sanctioned": false,
-          "degree": 5
-        },
-        {
           "id": "dmitriy-vladimirovich-rubinshteyn",
           "kind": "person",
           "label": "Дмитрий Владимирович Рубинштейн",
@@ -49409,7 +49401,7 @@
           "label": "ООО «Боевые технологии» (Военторг «ИРПТОРГ»)",
           "name_latin": null,
           "inn": "5262393781",
-          "tier": "money-layer",
+          "tier": "adjacent",
           "sanctioned": false,
           "legal_form": "ООО",
           "product_count": 1,
@@ -49649,7 +49641,7 @@
           "label": "ООО «НПЦ БАСИРТК»",
           "name_latin": "NPTs BASiRTK",
           "inn": "3300009049",
-          "tier": "cbst-core",
+          "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
           "product_count": 1,
@@ -49868,19 +49860,6 @@
           "degree": 3
         },
         {
-          "id": "product::ooo-npts-basirtk::ковровец",
-          "kind": "product",
-          "label": "«Ковровец»",
-          "owner_slug": "ooo-npts-basirtk",
-          "source_id": "s7962",
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
           "id": "product::ooo-sistemnyy-integrator::яким",
           "kind": "product",
           "label": "«Яким»",
@@ -49925,13 +49904,6 @@
           "label": "Резидентство ЦБСТ",
           "subtype": "residency",
           "degree": 30
-        },
-        {
-          "id": "program::ushkuynik-residency",
-          "kind": "program",
-          "label": "Резидентство НПЦ «Ушкуйник»",
-          "subtype": "residency",
-          "degree": 7
         },
         {
           "id": "stub::михайлов юрий геннадьевич",
@@ -50012,14 +49984,6 @@
           "legal_form": null,
           "product_count": 6,
           "degree": 11
-        },
-        {
-          "id": "zamyatin-aleksandr-yurevich",
-          "kind": "person",
-          "label": "Замятин Александр Юрьевич",
-          "name_latin": null,
-          "sanctioned": false,
-          "degree": 1
         }
       ],
       "edges": [
@@ -50488,71 +50452,6 @@
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": "t-doc",
-          "detail": null,
-          "grade": "doc"
-        },
-        {
-          "source": "baygutlina-irina-anatolevna",
-          "target": "ooo-npts-basirtk",
-          "type": "directs",
-          "label": null,
-          "source_id": "s0003",
-          "as_of": "2024-01-31",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null,
-          "detail": null,
-          "grade": "doc"
-        },
-        {
-          "source": "baygutlina-irina-anatolevna",
-          "target": "ooo-npts-basirtk",
-          "type": "founded",
-          "label": "100%",
-          "source_id": "s6782",
-          "as_of": "2026-07-14",
-          "weight": 1.0,
-          "temporal_status": "current",
-          "confidence": null,
-          "detail": null,
-          "grade": "doc"
-        },
-        {
-          "source": "baygutlina-irina-anatolevna",
-          "target": "ooo-npts-basirtk",
-          "type": "role",
-          "label": "director",
-          "source_id": "s8111",
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null,
-          "detail": null,
-          "grade": "doc"
-        },
-        {
-          "source": "baygutlina-irina-anatolevna",
-          "target": "ooo-npts-basirtk",
-          "type": "role",
-          "label": "founder",
-          "source_id": "s8111",
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null,
-          "detail": null,
-          "grade": "doc"
-        },
-        {
-          "source": "baygutlina-irina-anatolevna",
-          "target": "ooo-npts-basirtk",
-          "type": "role",
-          "label": "General Director / sole founder (100%)",
-          "source_id": "s0003",
-          "as_of": "2024-01-31",
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null,
           "detail": null,
           "grade": "doc"
         },
@@ -51406,45 +51305,6 @@
           "grade": "open"
         },
         {
-          "source": "ooo-npts-basirtk",
-          "target": "product::ooo-npts-basirtk::ковровец",
-          "type": "produces",
-          "label": null,
-          "source_id": "s7962",
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null,
-          "detail": null,
-          "grade": "rep"
-        },
-        {
-          "source": "ooo-npts-basirtk",
-          "target": "program::cbst-accelerator",
-          "type": "resident_of",
-          "label": "accelerator_participant",
-          "source_id": "s7522",
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "doc",
-          "detail": null,
-          "grade": "doc"
-        },
-        {
-          "source": "ooo-npts-basirtk",
-          "target": "program::ushkuynik-residency",
-          "type": "resident_of",
-          "label": "resident",
-          "source_id": "s8940",
-          "as_of": "2025-10-15",
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": "doc",
-          "detail": null,
-          "grade": "doc"
-        },
-        {
           "source": "ooo-opkb-eksplomet",
           "target": "ano-tsbst-centre-for-unmanned-systems-technologies",
           "type": "cbst_tie",
@@ -51859,19 +51719,6 @@
           "confidence": "t-doc",
           "detail": null,
           "grade": "doc"
-        },
-        {
-          "source": "zamyatin-aleksandr-yurevich",
-          "target": "ooo-npts-basirtk",
-          "type": "role",
-          "label": "технический директор — главный конструктор",
-          "source_id": "s0232",
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null,
-          "detail": null,
-          "grade": "open"
         }
       ]
     },
