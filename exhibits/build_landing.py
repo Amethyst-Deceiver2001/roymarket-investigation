@@ -1410,7 +1410,7 @@ def render(preview: bool, out: Path):
 
   <section class="hub" aria-labelledby="h-hub">
     <h2 class="rm-h2" id="h-hub">Who stands behind TsBST</h2>
-    <p class="lede">The seller in that post is not an ordinary shop. TsBST's co-founders on the company register are a donor foundation and a state-owned bank; TsBST names the ruling party as a third, and the head of the party's central executive committee is secretary of its supervisory board.</p>
+    <p class="lede">TsBST, the non-profit that told servicemen on 20 October where to order the two products, is not an ordinary trade body. Its co-founders on the company register are a donor foundation and a state-owned bank; TsBST names the ruling party as a third, and the head of the party's central executive committee is secretary of its supervisory board.</p>
     {lead_quote}
     <article class="rm-card hub hub-solo"><header><span class="rm-kind">Hub</span>{L.logo(CBST)}</header>
         <h3 class="rm-name">{cbst_name}</h3>{cbst_sanc}
