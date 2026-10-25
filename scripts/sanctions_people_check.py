@@ -403,7 +403,7 @@ def main() -> None:
         hits.sort(key=lambda h: order[h[0]])
         lines.append(f"## {p['fio_ru']} (`{p['slug']}`; DOB on record: {dob or 'none'})")
         if not hits:
-            lines += ["no candidate on the three lists", ""]
+            lines += ["no candidate on the lists we hold", ""]
             continue
         for g, e, n in hits[:12]:
             lines.append(f"- **{g}**: {e['list']} {e['id']}: {n}; DOB {', '.join(e['dob'][:2]) or 'not given'}; {e['info'][:200]}")
