@@ -894,7 +894,7 @@ class Landing(Chain):
             return ""
         tiles = []
         for key in KHERSON_STILLS:
-            if key in self.k_inline or key == "osv_21384":   # the channel's own warning map: the page has the front map
+            if key in self.k_inline or key in ("osv_21384", "osv_20993", "osv_34459"):   # the channel's own warning map: the page has the front map
                 continue
             r = self._kreg(key)
             if not r:
