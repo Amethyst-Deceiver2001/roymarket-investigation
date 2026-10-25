@@ -25,7 +25,7 @@ from display_helpers import (NAME_JS, caption_html, design_head, display_name, f
 
 SLUG = "proekt-kb-arkhangel"
 LEADER = "filippov-mikhail-gennadevich"
-# the project's own picture for a product box, by a word in its Russian name; Germes and Slonenok have none on file
+# the project's own picture for a product box, by a word in its Russian name; Slonenok has none on file
 PRODUCT_PIC = {"Дрон-ракета": ("m0097", "Photo in the project's post on the third generation, which says it works with carrier aircraft; the post does not label it"),
                "Ночник": ("m0050", "The project's own picture")}
 # The project's own words, grouped by what they show. Keyed by (source, first words of the Russian). Build

@@ -20628,6 +20628,11 @@
             "name_ru": "«Аргус-Антифурия» (мобильная станция РЭБ)",
             "description": "Mobile RF-jamming station, exhibited at Дронница 2023.",
             "source_id": "s7506"
+          },
+          {
+            "name_ru": "«Гермес коллектив»",
+            "description": "Multi-drone control architecture allowing an operator to deploy and switch between several drones from cover (\"высаживать и переключаться между ними... не выходя из укрытия\"). Developed for ambush-drone (засадные) tasking, described as also suited to ПВО/interceptor drones. Announced by the «Гермес» channel (t.me/germesfpv, post 2304, 03.11.2025: «Мы разработали «Гермес коллектив»…») with a quoted combat participant's endorsement; the «Архангел» channel forwarded that post the same day (its post 8871). Filed under «Архангел» until 25.10.2026 by mistake: the forward metadata names the «Гермес» channel as the origin.",
+            "source_id": "s5457"
           }
         ],
         "tier_basis": "brief section: 525 residents, and how many of them are under EU sanctions. MAJOR ESCALATION (2026-09-04, s5488/s5489, found via a repost in the Проект «Архангел» private Академия chat, msg 111803, independently verified via TAdviser and cross-checked against the real Roscosmos launch manifest): НПО «Кайсант», a Сколково resident, successfully put its own experimental smallsat constellation into orbit — three cubesats (МКА «Моха-1», «Ея-2», «Аргус-312») launched 28.12.2025 from Восточный on a Союз-2.1б/Фрегат alongside the «Аист-2Т» №1/№2 remote-sensing satellites — as part of its own «Гермес» satellite-communications program. This is the SAME «Гермес» brand already on file as this entity's ground-based tactical comms/repeater product line (ГЕРМЕС связь/мачты/ПО), resolving the standing open question of whether it's the same brand Проект «Архангел» claimed serial production of (2024, 'тысяч комплектов «Гермес» в неделю' — see the Архангел adjacent-network memory) — same company, now confirmed to have real orbital R&D capability behind the brand, not just ground hardware. Stated purpose: satellite-relay infrastructure for autonomous remote control of robotic systems beyond 200km line-of-sight range (Direct-to-Device, no ground relay stations needed). TAdviser's own analysis flags the military angle explicitly: 'Возможность кастомизации под задачи силовых ведомств указывает на военное применение системы... Беспилотные наземные аппараты, дроны и другая робототехника могут управляться через спутниковый канал' — i.e. a satellite command-and-control layer for exactly the class of UGV/drone hardware this entity's own «ГУСЬ-7» interceptor and GISP-listed interceptor product already represent. Not yet independently linked to Проект «Архангел» beyond the shared brand name and the chat repost — no document ties the satellite program itself to the Архангел network, only the comms-kit brand overlap already flagged.",
@@ -44371,7 +44376,24 @@
               "note": "\"Геннадий Архангельский\"'s own MAX channel — see open_questions"
             }
           ]
-        }
+        },
+        "products": [
+          {
+            "name_ru": "Дрон-ракета-перехватчик «Архангел»",
+            "description": "Self-described as \"по сути, управляемая ракета с вертикальным взлётом или возможностью размещения на самолёте-матке\" (in essence a guided rocket with vertical takeoff, or carriage on a mothership aircraft). Range up to 50km, max speed 340km/h, cruise 100-120km/h (33% power); 200+km/h needs 50% power at reduced 25-30km range. Intended use case: paired with air-defense radar (РЛС ПВО), operator guides the drone (fitted with a corner reflector) onto target by instruments. Full open-source build files (3D-printable PLA-CF airframe, Betaflight config, BOM) published publicly by the project's own channel for free self-assembly. B2B integration channel offered for aircraft/radar/ground-vehicle (БЭК) integration via @arhangel_channel_bot.",
+            "source_id": "s5454"
+          },
+          {
+            "name_ru": "«Слоненок»",
+            "description": "Unified airspace surveillance-and-strike complex combining radar/video detection with interceptor-drone engagement. 15km monitoring radius, AI-based automatic target engagement, capacity for 17 interceptor drones per unit; operator role reduced to a single switch-toggle at the engagement moment. Press-quoted (paraphrase, not verbatim — see s5459) description from Филиппов: the system can replace the work of several mobile fire groups (МОГ). Described as a collaboration between Проект «Архангел» specialists and unnamed colleagues in St. Petersburg.",
+            "source_id": "s5459"
+          },
+          {
+            "name_ru": "«Ночник ПВН» — прибор наблюдения (ПВН = пост воздушного наблюдения) с экраном 7\" и 5\"",
+            "description": "Hand-held/turret-mounted observation device the channel published as open design files (post 10796, 19.09.2026: «Это ночник ПВН. Кому надо было. Берите пользуйтесь.»; RAR with STEP/STL files and a parts note in msg 10797). From the demonstrator's narration (machine transcript, approximate) it is a low-cost 'thermal-style' imager for air-observation posts in two versions, 7-inch and 5-inch screen, an ordinary FPV camera, a green laser pointer on a button on the grip that marks a found target (not visible in the imager), a removable 6S1P pack on XT60, a voltmeter/charge indicator, one (7-inch) or two (5-inch) buck modules, and a dovetail quick-release so it can sit on a turret or take a hand grip. The parts note lists a 5\" monitor, voltmeter, step-down converter and laser, each as an Ozon link with no make named. Sensor make/model and thermal-versus-low-light are not stated.",
+            "source_id": "s7618"
+          }
+        ]
       },
       "why": [
         "[2026-09-15] wb_overlap=none_found: Brand-name search for дрон-перехватчик «Архангел» on wildberries.ru (2026-09-15) found no product listing (same finding as sibling Архангел-network entities) — only branded project merchandise found, not the drone.",

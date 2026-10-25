@@ -3042,8 +3042,8 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "НПО",
-          "product_count": 13,
-          "degree": 24
+          "product_count": 14,
+          "degree": 25
         },
         {
           "id": "npo-kilobatt",
@@ -6604,6 +6604,19 @@
           "label": "«Аргус-Антифурия» (мобильная станция РЭБ)",
           "owner_slug": "npo-kaysant",
           "source_id": "s7506",
+          "classification": {
+            "status": "unclassified",
+            "uav_platform": "unknown",
+            "ew_installation": "unknown"
+          },
+          "degree": 1
+        },
+        {
+          "id": "product::npo-kaysant::гермес-коллектив",
+          "kind": "product",
+          "label": "«Гермес коллектив»",
+          "owner_slug": "npo-kaysant",
+          "source_id": "s5457",
           "classification": {
             "status": "unclassified",
             "uav_platform": "unknown",
@@ -10980,19 +10993,6 @@
           "degree": 1
         },
         {
-          "id": "product::proekt-kb-arkhangel::гермес-коллектив",
-          "kind": "product",
-          "label": "«Гермес коллектив»",
-          "owner_slug": "proekt-kb-arkhangel",
-          "source_id": "s5457",
-          "classification": {
-            "status": "unclassified",
-            "uav_platform": "unknown",
-            "ew_installation": "unknown"
-          },
-          "degree": 1
-        },
-        {
           "id": "product::proekt-kb-arkhangel::дрон-ракета-перехватчик-архангел",
           "kind": "product",
           "label": "Дрон-ракета-перехватчик «Архангел»",
@@ -11131,8 +11131,8 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "product_count": 4,
-          "degree": 26
+          "product_count": 3,
+          "degree": 25
         },
         {
           "id": "program::cbst-accelerator",
@@ -26779,6 +26779,19 @@
         },
         {
           "source": "npo-kaysant",
+          "target": "product::npo-kaysant::гермес-коллектив",
+          "type": "produces",
+          "label": null,
+          "source_id": "s5457",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "rep"
+        },
+        {
+          "source": "npo-kaysant",
           "target": "product::npo-kaysant::гермес-мачты",
           "type": "produces",
           "label": null,
@@ -34729,19 +34742,6 @@
           "type": "related",
           "label": "component-supplier",
           "source_id": "s5539",
-          "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null,
-          "detail": null,
-          "grade": "rep"
-        },
-        {
-          "source": "proekt-kb-arkhangel",
-          "target": "product::proekt-kb-arkhangel::гермес-коллектив",
-          "type": "produces",
-          "label": null,
-          "source_id": "s5457",
           "as_of": null,
           "weight": 1.0,
           "temporal_status": "unknown",
@@ -49260,8 +49260,8 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "НПО",
-          "product_count": 13,
-          "degree": 24
+          "product_count": 14,
+          "degree": 25
         },
         {
           "id": "npp-elvo-kolskaya-verf",
@@ -49881,8 +49881,8 @@
           "tier": "manufacturer",
           "sanctioned": false,
           "legal_form": null,
-          "product_count": 4,
-          "degree": 26
+          "product_count": 3,
+          "degree": 25
         },
         {
           "id": "program::cbst-accelerator",
@@ -51804,8 +51804,8 @@
           "tier": "manufacturer",
           "sanctioned": true,
           "legal_form": "НПО",
-          "product_count": 13,
-          "degree": 24
+          "product_count": 14,
+          "degree": 25
         },
         {
           "id": "npo-kilobatt",
