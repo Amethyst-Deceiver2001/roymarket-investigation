@@ -401,13 +401,31 @@ class Landing(Chain):
         ux = box["ur"][0] + box["ur"][2]
         e[4] = (f'<path d="M{sx} {sy} L{ux + 6} {sy}" class="rm-ln {gr["sid"]}" marker-end="url(#ah3)"/>'
                 f'<text x="{(sx + ux) / 2}" y="{sy + 19}" class="lbl" text-anchor="middle">heads its central committee</text>')
+        # Marks for the arms the handover posts' recipients name (counted from the delivery record), under the units box:
+        # a monochrome hostile frame with a glyph, as the design system draws unit marks. They show what kinds of unit
+        # the posts name, not which unit got which item.
+        arms = [("airborne", "airborne and air-assault", r"десантн|ВДВ|воздушно-десант", '<path d="M7.6 14.2Q12 7 16.4 14.2"/>'),
+                ("army", "army and motor-rifle", r"мотострелк|ОМСБР|армия|армии|армей", '<path d="M7.5 7.5L16.5 16.5M16.5 7.5L7.5 16.5"/>'),
+                ("recon", "reconnaissance", r"разведк|разведотряд", '<path d="M7.5 16.5L16.5 7.5"/>'),
+                ("sf", "special forces", r"спецназ|специального назначения",
+                 '<text x="12" y="14.6" text-anchor="middle" class="sf">SF</text>')]
+        recip = [e.get("recipient") or "" for e in json.loads((REPO / "data" / "registry" / "deliveries.json").read_text())]
+        marks, kinds, mx = [], [], 760 + 70 - 12 * 1.0
+        shown = [(k, name, g) for k, name, rx, g in arms if any(re.search(rx, r, re.I) for r in recip)]
+        mx = 760 + 70 - 21 * len(shown) + 3
+        for i, (k, name, g) in enumerate(shown):
+            marks.append(f'<g transform="translate({mx + 42 * i:.1f} 88) scale(1.5)" class="arm"><title>{esc(name)}</title>'
+                         f'<path d="M12 1.5l10.5 10.5L12 22.5 1.5 12z" class="fr"/>{g}</g>')
+            kinds.append(name)
+        self._arm_names = kinds
         defs = ('<defs><marker id="ah3" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">'
                 '<path d="M0 0L8 4L0 8z" class="ah"/></marker></defs>')
         return (f'<figure class="ties"><div class="ties-svg"><svg viewBox="0 0 {W} {H}" class="mdl" role="img" '
                 f'aria-label="Who is tied to TsBST: its co-founders, its supervisory board secretary, the company it takes part '
-                f'in and the foundation\'s handovers to units">{defs}{"".join(e)}{"".join(n)}</svg></div>'
+                f'in and the foundation\'s handovers to units">{defs}{"".join(e)}{"".join(n)}{"".join(marks)}</svg></div>'
                 f'<figcaption>Line style is the grade of the evidence, as in the key at the foot of the page. The notes for each '
-                f'line are in the list. Pictures: Sidyakin, Karmaks, 2016, CC BY-SA 4.0{self.tref("sid_photo")}; the party\'s '
+                f'line are in the list. The marks under "Military units" are the kinds of unit the posts name as recipients '
+                f'({", ".join(self._arm_names)}); they do not say which unit got which item. Pictures: Sidyakin, Karmaks, 2016, CC BY-SA 4.0{self.tref("sid_photo")}; the party\'s '
                 f'logo{self.tref("er_logo")}.</figcaption></figure>')
 
     def found(self, n, sanc):
