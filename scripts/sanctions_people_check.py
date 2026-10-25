@@ -17,7 +17,7 @@ a tool's output is never a fact). What to do with a hit is the same chain we use
     python3 scripts/sanctions_people_check.py --pick 10 --out data/watch/sanctions/people_check_20261025.md
 
 The lists are the ones the sanctions watch downloaded (SANCTIONS_EU_*, SANCTIONS_US_*) and the UK CSV with statements of
-reasons (SANCTIONS_UK_*.csv); the newest of each is used. The Swiss SECO list (SANCTIONS_CH_*.xml) the Japan MOF list (SANCTIONS_JP_*.csv) the Australian DFAT list (SANCTIONS_AU_*.xlsx) the New Zealand MFAT register (SANCTIONS_NZ_*.xlsx) and the Canadian SEMA list (SANCTIONS_CA_*.pdf; Russia and Belarus rows) are searched too. Names are compared with
+reasons (SANCTIONS_UK_*.csv); the newest of each is used. The Swiss SECO list (SANCTIONS_CH_*.xml) the Japan MOF list (SANCTIONS_JP_*.csv) the Australian DFAT list (SANCTIONS_AU_*.xlsx) the New Zealand MFAT register (SANCTIONS_NZ_*.xlsx) the Canadian SEMA list (SANCTIONS_CA_*.pdf; Russia and Belarus rows) and the UN Security Council list (SANCTIONS_UN_*.xml) are searched too. Names are compared with
 ё folded to е and a plain transliteration, so «Водолацкий» finds VODOLATSKY, but a spelling the table does not
 reach (a Ukrainian-form name, a different Latin rendering) can be missed: no hit is not a clean result.
 """
@@ -274,6 +274,24 @@ def load_ca(path: Path) -> list[dict]:
     return out
 
 
+def load_un(path: Path, kind: str = "INDIVIDUAL") -> list[dict]:
+    """UN Security Council consolidated list. kind INDIVIDUAL or ENTITY (an entity's name is in FIRST_NAME)."""
+    out = []
+    for e in ET.parse(path).getroot().iter(kind):
+        g = lambda tag: (e.findtext(tag) or "").strip()
+        names = [" ".join(g(t) for t in ("FIRST_NAME", "SECOND_NAME", "THIRD_NAME", "FOURTH_NAME") if g(t))]
+        alias_tag = "INDIVIDUAL_ALIAS" if kind == "INDIVIDUAL" else "ENTITY_ALIAS"
+        names += [a.findtext("ALIAS_NAME").strip() for a in e.iter(alias_tag) if (a.findtext("ALIAS_NAME") or "").strip()]
+        dob = []
+        for d in e.iter("INDIVIDUAL_DATE_OF_BIRTH"):
+            v = d.findtext("DATE") or d.findtext("YEAR") or ""
+            if v:
+                dob.append(v[:10])
+        out.append({"list": "UN", "id": g("REFERENCE_NUMBER"), "names": names, "dob": dob,
+                    "text": "", "info": f"{g('UN_LIST_TYPE')}; listed {g('LISTED_ON')}; {g('COMMENTS1')[:120]}"})
+    return out
+
+
 def newest(pattern: str) -> Path | None:
     files = sorted(glob.glob(str(SRC / pattern)))
     return Path(files[-1]) if files else None
@@ -365,7 +383,7 @@ def main() -> None:
     if not todo:
         sys.exit("give --slug or --pick")
     lists, loaded = [], []
-    for label, pat, fn in (("EU", "SANCTIONS_EU_*.xml", load_eu), ("US", "SANCTIONS_US_*.xml", load_us), ("UK", "SANCTIONS_UK_*.csv", load_uk), ("CH", "SANCTIONS_CH_*.xml", load_ch), ("JP", "SANCTIONS_JP_*.csv", load_jp), ("AU", "SANCTIONS_AU_*.xlsx", load_au), ("NZ", "SANCTIONS_NZ_*.xlsx", load_nz), ("CA", "SANCTIONS_CA_*.pdf", load_ca)):
+    for label, pat, fn in (("EU", "SANCTIONS_EU_*.xml", load_eu), ("US", "SANCTIONS_US_*.xml", load_us), ("UK", "SANCTIONS_UK_*.csv", load_uk), ("CH", "SANCTIONS_CH_*.xml", load_ch), ("JP", "SANCTIONS_JP_*.csv", load_jp), ("AU", "SANCTIONS_AU_*.xlsx", load_au), ("NZ", "SANCTIONS_NZ_*.xlsx", load_nz), ("CA", "SANCTIONS_CA_*.pdf", load_ca), ("UN", "SANCTIONS_UN_*.xml", load_un)):
         p = newest(pat)
         if p is None:
             loaded.append(f"{label}: no file")

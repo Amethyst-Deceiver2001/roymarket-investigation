@@ -116,6 +116,28 @@ def load_ca_ent(path: Path) -> list[dict]:
     return out
 
 
+def load_eu_annex4(path: Path) -> list[dict]:
+    """Annex IV of Regulation 833/2014 (military end-users) from the consolidated text fetched by eu_cellar.py. The
+    entries print the local name and the ИНН ("Registration number: 7704730655 (Tax ID/INN)"), so this list can be
+    matched on an identifier. The cut between entries is a convenience; read the act before citing."""
+    import eu_cellar
+    t = eu_cellar.text_of(path)
+    a = t.find("ANNEX IV")
+    b = t.find("ANNEX V", a)
+    seg = t[a:b if b > a else None]
+    seg = seg.replace("Date of listing 1. ", "Date of listing 0000 1. ")      # the first entry has no date before it
+    out = []
+    for m in re.finditer(r"(?:^|(?<=\d{4}) )(\d{1,4})\. (.+?)(?= \d{1,2}\.\d{1,2}\.\d{4}(?: \d{1,4}\. |$))", seg):
+        body = m.group(2)
+        local = re.search(r"Local name: (.*?)(?: A\.k\.a:| Address| Registration| Telephone|$)", body)
+        aka = re.search(r"A\.k\.a: (.*?)(?: Address| Registration| Telephone| Website|$)", body)
+        names = [body.split(" Local name:")[0].strip()] + ([local.group(1)] if local else []) + (aka.group(1).split("; ") if aka else [])
+        addr = re.search(r"Address\(es\): (.*?)(?: Telephone| Website| Registration| Email|$)", body)
+        out.append({"list": "EU-833-AnnexIV", "id": "#" + m.group(1), "names": [n for n in names if n], "text": body,
+                    "info": (addr.group(1) if addr else "")[:160]})
+    return out
+
+
 def load_ch_ent(path: Path) -> list[dict]:
     seen: dict[str, dict] = {}
     for t in ET.parse(path).getroot().iter("target"):
@@ -167,7 +189,7 @@ def main() -> None:
     entries, loaded = [], []
     for label, pat, fn in (("CSL", "SANCTIONS_CSL_*.csv", load_csl), ("NZ", "SANCTIONS_NZ_*.xlsx", load_nz_ent),
                            ("JP", "SANCTIONS_JP_*.csv", load_jp_ent), ("AU", "SANCTIONS_AU_*.xlsx", load_au_ent),
-                           ("CH", "SANCTIONS_CH_*.xml", load_ch_ent), ("CA", "SANCTIONS_CA_*.pdf", load_ca_ent)):
+                           ("CH", "SANCTIONS_CH_*.xml", load_ch_ent), ("CA", "SANCTIONS_CA_*.pdf", load_ca_ent), ("EU-IV", "_cellar/02014R0833-*.xhtml", load_eu_annex4), ("UN", "SANCTIONS_UN_*.xml", lambda p: sp.load_un(p, "ENTITY"))):
         p = newest(pat)
         if p is None:
             loaded.append(f"{label}: no file")
