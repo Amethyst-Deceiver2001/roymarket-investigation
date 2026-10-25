@@ -50,7 +50,9 @@ named = [e for e in real if any(i["product"] for i in e["items"])]
 assert len(named) >= 23 and all(e["source_id"] for e in named), "a product event rests on a catalogued source"
 assert sum(1 for e in named for i in e["items"] if i["product"]) >= 26
 two = [e for e in named if len({i["product"] for i in e["items"]}) == 2]
-assert len(two) == 3 and all(e["items"][1].get("id") for e in two), "posts 382, 397, 448 carry both products"
+legacy = [e for e in two if e["source_channel"] == "@nashapravdafond"]
+assert len(legacy) == 3 and all(e["items"][1].get("id") for e in legacy), "posts 382, 397, 448 carry both products"
+assert len(two) >= 3, "later events (24.10.2026: er_molnia 13931) may name both products without item ids"
 prods = {p["slug"]: p for p in dl.load_products()}
 assert len(prods["bulat"]["deliveries"]) >= 18 and len(prods["kapyushon"]["deliveries"]) >= 8
 print("test_deliveries: ok")
