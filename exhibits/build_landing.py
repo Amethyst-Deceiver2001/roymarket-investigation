@@ -855,8 +855,8 @@ class Landing(Chain):
                 f'the original is kept in our own record of the channel{self.tref("gag")}.</figcaption></figure>')
 
     def osv_clip(self):
-        """Ten seconds of the channel's post 38645, playable. Preview only: the file is not catalogued, and a public page
-        shows key frames plus a link to the archived original."""
+        """The first 30 seconds of the channel's post 38645, playable, with the post's own words in the caption. Preview
+        only: the file is not catalogued, and a public page shows key frames plus a link to the archived original."""
         src = REPO / "exhibits" / "images" / "video"
         if not self.preview or not (src / "osv-38645.mp4").exists():
             return ""
@@ -867,16 +867,20 @@ class Landing(Chain):
                 (dest / name).write_bytes((src / name).read_bytes())
             if (f"images/video/{name}", dest / name) not in self.media_files:
                 self.media_files.append((f"images/video/{name}", dest / name))
+        chan, msg, ru, en = OPENING_QUOTES["osv_38645"]
+        self.verbatim("osv_38645", chan, msg, ru)
+        said = name_html("\u201c" + en + "\u201d", ru, key="q-osv_38645", what="Russian original of")
         return ('<figure class="clip"><video controls preload="none" playsinline poster="images/video/osv-38645.jpg" '
                 'aria-label="A drone pilot\'s controller screen: a view down onto a damaged road bridge beside a river, with a '
-                'yellow tracking box on a small dark shape near the kerb">'
+                'yellow tracking box on small dark shapes near the kerb">'
                 '<source src="images/video/osv-38645.mp4" type="video/mp4"></video>'
-                '<figcaption><span class="rm-label">Video · 0:10 of 1:19</span> From the channel\'s post. A recording of a drone '
-                'pilot\'s controller screen: the camera looks down onto a damaged road bridge beside a river, and a yellow '
-                'tracking box follows a small dark shape near the kerb (the channel blurred the telemetry panel). The footage '
-                'does not show who or what the shape is, and this cut shows no strike; the post\'s description of the targets is '
-                'the channel\'s own claim. The sound is removed, and the original has an audio track we have not assessed. '
-                f'The full 1:19 original is kept in our own record of the channel{self.tref("osv_38645")}.</figcaption></figure>')
+                '<figcaption><span class="rm-label">Video · first 0:30 of 1:19</span> The channel\'s post of 22.10.2026 says '
+                f'<span class="rm-grade rep">Reported</span> {said}{self.tref("osv_38645")}. '
+                'What the footage shows: a recording of a drone pilot\'s controller screen (the channel blurred the telemetry '
+                'panel). The camera looks straight down onto a damaged road bridge beside a river; a yellow tracking box follows '
+                'small dark shapes near the kerb, and dark marks cover the deck. We see no explosion and no impact in these thirty '
+                'seconds, and nothing that shows who the shapes are or what became of them. The sound is removed; the original has '
+                'an audio track we have not assessed, and the full 1:19 is kept in our own record of the channel.</figcaption></figure>')
 
     def dual_use(self):
         """The label on the order line: the supplier page's own sentence before and after it changed."""
@@ -969,7 +973,6 @@ class Landing(Chain):
             '<p>And under the heading the platform used for its sellers:</p>'
             + self.oq("osv_36192", f'the same channel, 24.07.2026{self.tref("osv_36192")}')
             + self.oq("osv_38703", f'the same channel, 24.10.2026, over a clip watermarked by the 98th Airborne Division{self.tref("osv_38703")}')
-            + self.oq("osv_38645", f'the same channel, 22.10.2026, over a screen recording from a drone pilot\'s controller{self.tref("osv_38645")}')
             + self.osv_clip()
             + self.kherson_band() +
             '<p class="note"><span class="rm-grade rep">Reported</span> The ties above are the parties\' own posts. They show '
