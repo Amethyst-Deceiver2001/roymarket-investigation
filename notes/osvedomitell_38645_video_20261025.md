@@ -1,0 +1,13 @@
+# @osvedomitell_alex post 38645: video looked at and clipped (25.10.2026)
+
+**Post:** t.me/osvedomitell_alex/38645, 22.10.2026 19:37 UTC (edited 19:38), video 1:19, 1280×720, 34 MB, with an audio track; the file is `data/sources/TGMEDIA_20261022_osvedomitell_alex-post38645-media.mp4` (local source L0307, pending an s-id). It was fetched with `tg_media_pull.py download`; the public preview does not serve it. The post text (from the local database, not the live post) opens «Херсон. Красная зона.», then «Объективный контроль уничтожения живой силы противника на первом берегу переодетого по "гражданке". Все цели подтверждены, но к сожалению погиб песель…» and ends with a link to the channel's page on max.ru; the only link recorded is that max.ru address.
+
+**What the footage shows (looked at: 20 frames at 4-second spacing at 640 px, then frames 35–45 s one per second at 960–1280 px).** A recording of a drone pilot's controller screen (camera and flight-mode overlays; the telemetry panel is pixelated in the channel's own copy). Several short segments (hard cuts at about 7.5, 13, 28.5, 35 and 36.5 s); the longest continuous one from 36.5 s shows a damaged road bridge beside a river, with a yellow tracking box on a small dark shape near the kerb and a few shell-hole marks on the deck; later segments show a bridge approach with a ruined building and a stairway. No explosion or flash was seen in the frames looked at (a frame-difference scan at 4 frames per second found only cuts). Persons, their dress, the number killed and the dog the post mentions are **not** identifiable at this resolution.
+
+**What the footage does not show:** that anyone is a combatant or a civilian, any death, the place (no landmark was read), or the unit. Everything beyond the pictures is the channel's own claim, graded Reported.
+
+**Audio:** not assessed (mean level −9.2 dB, so there is sound; a person must listen before a sentence says the clip is silent). The page clip has the audio removed and says so.
+
+**On the landing page (private preview, v36):** a 10-second clip (36.6–46.6 s, 960 px, no audio, 1.0 MB) under the Kherson paragraph, with a poster frame at 41 s, after the quote «Херсон. Красная зона. […] … Все цели подтверждены». Files `exhibits/images/video/osv-38645.mp4/.jpg`. Preview only: the clip has no media record (no s-id on this Mac). The quote and its footnote **are** in the public build; add that to the legal/personal-data review list.
+
+**Also fetched in the same session (not yet used):** ten Nasha Pravda videos (posts 393, 399, 409, 448, 473, 487, 493, 494, 519, 608; L0308–L0317) to replace the soft preview frames of m0068, m0071, m0074 and m0077–m0082, m0085 with full-resolution frames.

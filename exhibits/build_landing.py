@@ -73,6 +73,7 @@ OPENING_SOURCES = {
     "osv_19953": ("Telegram, @osvedomitell_alex, post 19953, 19.08.2024", "https://t.me/osvedomitell_alex/19953"),
     "osv_36192": ("Telegram, @osvedomitell_alex, post 36192, 24.07.2026", "https://t.me/osvedomitell_alex/36192"),
     "osv_38703": ("Telegram, @osvedomitell_alex, post 38703, 24.10.2026", "https://t.me/osvedomitell_alex/38703"),
+    "osv_38645": ("Telegram, @osvedomitell_alex, post 38645, 22.10.2026", "https://t.me/osvedomitell_alex/38645"),
     "osv_20344": ("Telegram, @osvedomitell_alex, post 20344, 28.08.2024", "https://t.me/osvedomitell_alex/20344"),
     "osv_20801": ("Telegram, @osvedomitell_alex, post 20801, 15.09.2024", "https://t.me/osvedomitell_alex/20801"),
     "osv_20993": ("Telegram, @osvedomitell_alex, post 20993, 22.09.2024", "https://t.me/osvedomitell_alex/20993"),
@@ -156,6 +157,10 @@ OPENING_QUOTES = {   # key: (channel, post, verbatim Russian, our translation)
                   "Транспорт двойного назначения. Расчет Родной выявил технику, которая перемещается по Красной зоне под видом ритуальных услуг.",
                   "Dual-use transport. The «Rodnoy» crew spotted a vehicle moving through the Red Zone in the guise of funeral "
                   "services."),
+    "osv_38645": ("osvedomitell_alex", 38645,
+                  "Херсон. Красная зона. […] Объективный контроль уничтожения живой силы противника на первом берегу переодетого по \"гражданке\". Все цели подтверждены",
+                  "Kherson. Red zone. […] Objective monitoring of the destruction of enemy manpower on the first bank, disguised "
+                  "in \"civilian\" clothes. All targets confirmed"),
     "rog_8057": ("rogozin_do", 8057,
                  "Центр специального назначения беспилотных систем \"Барс-Сармат\", командиром которого я являюсь, выполняет "
                  "боевые задачи командующего ВДВ и Генерального штаба.",
@@ -847,6 +852,30 @@ class Landing(Chain):
                 f'vertical clip, with its own watermark, of the coat of arms hanging damaged. It has no spoken words, only footage. Re-encoded smaller for this page; '
                 f'the original is kept in our own record of the channel{self.tref("gag")}.</figcaption></figure>')
 
+    def osv_clip(self):
+        """Ten seconds of the channel's post 38645, playable. Preview only: the file is not catalogued, and a public page
+        shows key frames plus a link to the archived original."""
+        src = REPO / "exhibits" / "images" / "video"
+        if not self.preview or not (src / "osv-38645.mp4").exists():
+            return ""
+        dest = self.img_dir.parent / "video"
+        for name in ("osv-38645.mp4", "osv-38645.jpg"):
+            if dest != src:
+                dest.mkdir(parents=True, exist_ok=True)
+                (dest / name).write_bytes((src / name).read_bytes())
+            if (f"images/video/{name}", dest / name) not in self.media_files:
+                self.media_files.append((f"images/video/{name}", dest / name))
+        return ('<figure class="clip"><video controls preload="none" playsinline poster="images/video/osv-38645.jpg" '
+                'aria-label="A drone pilot\'s controller screen: a view down onto a damaged road bridge beside a river, with a '
+                'yellow tracking box on a small dark shape near the kerb">'
+                '<source src="images/video/osv-38645.mp4" type="video/mp4"></video>'
+                '<figcaption><span class="rm-label">Video · 0:10 of 1:19</span> From the channel\'s post. A recording of a drone '
+                'pilot\'s controller screen: the camera looks down onto a damaged road bridge beside a river, and a yellow '
+                'tracking box follows a small dark shape near the kerb (the channel blurred the telemetry panel). The footage '
+                'does not show who or what the shape is, and this cut shows no strike; the post\'s description of the targets is '
+                'the channel\'s own claim. The sound is removed, and the original has an audio track we have not assessed. '
+                f'The full 1:19 original is kept in our own record of the channel{self.tref("osv_38645")}.</figcaption></figure>')
+
     def dual_use(self):
         """The label on the order line: the supplier page's own sentence before and after it changed."""
         (d_ru, d_en), (s_ru, s_en) = SUPPLIER_LINES["dual"], SUPPLIER_LINES["special"]
@@ -938,6 +967,8 @@ class Landing(Chain):
             '<p>And under the heading the platform used for its sellers:</p>'
             + self.oq("osv_36192", f'the same channel, 24.07.2026{self.tref("osv_36192")}')
             + self.oq("osv_38703", f'the same channel, 24.10.2026, over a clip watermarked by the 98th Airborne Division{self.tref("osv_38703")}')
+            + self.oq("osv_38645", f'the same channel, 22.10.2026, over a screen recording from a drone pilot\'s controller{self.tref("osv_38645")}')
+            + self.osv_clip()
             + self.kherson_band() +
             '<p class="note"><span class="rm-grade rep">Reported</span> The ties above are the parties\' own posts. They show '
             'TsBST\'s circle supplying and recruiting for the formations the UN names; they do not show that any item from it '
