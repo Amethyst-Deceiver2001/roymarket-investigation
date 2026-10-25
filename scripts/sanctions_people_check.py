@@ -17,7 +17,7 @@ a tool's output is never a fact). What to do with a hit is the same chain we use
     python3 scripts/sanctions_people_check.py --pick 10 --out data/watch/sanctions/people_check_20261025.md
 
 The lists are the ones the sanctions watch downloaded (SANCTIONS_EU_*, SANCTIONS_US_*) and the UK CSV with statements of
-reasons (SANCTIONS_UK_*.csv); the newest of each is used. The Swiss list is not searched here. Names are compared with
+reasons (SANCTIONS_UK_*.csv); the newest of each is used. The Swiss SECO list (SANCTIONS_CH_*.xml) is searched too. Names are compared with
 ё folded to е and a plain transliteration, so «Водолацкий» finds VODOLATSKY, but a spelling the table does not
 reach (a Ukrainian-form name, a different Latin rendering) can be missed: no hit is not a clean result.
 """
@@ -113,6 +113,40 @@ def load_uk(path: Path) -> list[dict]:
     return list(by.values())
 
 
+def load_ch(path: Path) -> list[dict]:
+    """SECO (SESAM) whole list: individuals, with every spelling variant (Latin and Cyrillic) as a name."""
+    root = ET.parse(path).getroot()
+    sets = {}
+    for e in root.iter("sanctions-set"):
+        if e.get("lang") == "eng":
+            sets[e.get("ssid")] = (e.text or "").strip()
+    seen: dict[str, dict] = {}
+    for t in root.iter("target"):
+        ind = t.find("individual")
+        if ind is None:
+            continue
+        names, dob = [], []
+        for ident in ind.iter("identity"):
+            for nm in ident.iter("name"):
+                parts = sorted(nm.iter("name-part"), key=lambda x: int(x.get("order", "0")))
+                opts = [[(x.findtext("value") or "")] + [v.text or "" for v in x.iter("spelling-variant")] for x in parts]
+                names.append(" ".join(o[0] for o in opts))
+                for i in range(1, max((len(o) for o in opts), default=1)):
+                    names.append(" ".join(o[i] if i < len(o) else o[0] for o in opts))
+            for d in ident.iter("day-month-year"):
+                if d.get("year"):
+                    dob.append(f"{d.get('year')}-{int(d.get('month', 0)):02d}-{int(d.get('day', 0)):02d}" if d.get("day") and d.get("month") else d.get("year"))
+        just = " ".join((j.text or "") for j in t.iter("justification"))[:200]
+        sid = (t.findtext("sanctions-set-id") or "")
+        key = "SECO " + t.get("ssid", "")
+        if key in seen:      # SECO repeats a person once per version of the entry
+            seen[key]["names"] += [n for n in names if n not in seen[key]["names"]]
+            seen[key]["dob"] += [d for d in dob if d not in seen[key]["dob"]]
+            continue
+        seen[key] = {"list": "CH", "id": key, "names": names, "dob": dob, "info": (sets.get(sid, "") + "; " + just).strip("; ")}
+    return list(seen.values())
+
+
 def newest(pattern: str) -> Path | None:
     files = sorted(glob.glob(str(SRC / pattern)))
     return Path(files[-1]) if files else None
@@ -201,14 +235,14 @@ def main() -> None:
     if not todo:
         sys.exit("give --slug or --pick")
     lists, loaded = [], []
-    for label, pat, fn in (("EU", "SANCTIONS_EU_*.xml", load_eu), ("US", "SANCTIONS_US_*.xml", load_us), ("UK", "SANCTIONS_UK_*.csv", load_uk)):
+    for label, pat, fn in (("EU", "SANCTIONS_EU_*.xml", load_eu), ("US", "SANCTIONS_US_*.xml", load_us), ("UK", "SANCTIONS_UK_*.csv", load_uk), ("CH", "SANCTIONS_CH_*.xml", load_ch)):
         p = newest(pat)
         if p is None:
             loaded.append(f"{label}: no file")
             continue
         lists += fn(p)
         loaded.append(f"{label}: {p.name}")
-    lines = ["# People against the sanctions lists we hold", "", "Lists: " + "; ".join(loaded) + ". Swiss list not searched. A hit is a work item, not a fact; no hit is not a clean result.", ""]
+    lines = ["# People against the sanctions lists we hold", "", "Lists: " + "; ".join(loaded) + ". A hit is a work item, not a fact; no hit is not a clean result.", ""]
     for p in todo:
         pt = tokens(p["fio_ru"])
         dob = p.get("dob")
