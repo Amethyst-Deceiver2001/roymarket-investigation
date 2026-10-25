@@ -145,7 +145,7 @@ def media_about(media: list[dict], refs: set[tuple[str, str]], publishable=True)
     return out
 
 
-def publish_copy(m: dict, dest_dir: Path, max_px: int = 1200) -> str | None:
+def publish_copy(m: dict, dest_dir: Path, max_px: int = 1600) -> str | None:
     """Copy a media file into dest_dir as <id>.<ext>, downscaled to max_px; returns the file name."""
     src = REPO / (m.get("file") or "")
     if not m.get("file") or not src.exists():
