@@ -25,9 +25,10 @@ from display_helpers import (NAME_JS, caption_html, design_head, display_name, f
 
 SLUG = "proekt-kb-arkhangel"
 LEADER = "filippov-mikhail-gennadevich"
-# the project's own picture for a product box, by a word in its Russian name; Slonenok has none on file
+# the project's own picture for a product box, by a word in its Russian name
 PRODUCT_PIC = {"Дрон-ракета": ("m0097", "Photo in the project's post on the third generation, which says it works with carrier aircraft; the post does not label it"),
-               "Ночник": ("m0050", "The project's own picture")}
+               "Ночник": ("m0050", "The project's own picture"),
+               "Слонен": ("m0098", "Frame from the project's video of the complex at EXPO.UAV, 26.03.2026: the radar panel and the camera turret on the vehicle roof", "50% 4%")}
 # The project's own words, grouped by what they show. Keyed by (source, first words of the Russian). Build
 # instructions that only help assemble the device (where to put the payload weight) are left out on purpose.
 GROUPS = [
@@ -190,10 +191,11 @@ class Page:
             name = p["name_ru"].split(" — ")[0]
             tr = translation(name)
             pic = ""
-            mid, cap = next((v for k, v in PRODUCT_PIC.items() if k in p["name_ru"]), (None, ""))
+            mid, cap, *pos = next((v for k, v in PRODUCT_PIC.items() if k in p["name_ru"]), (None, ""))
             if mid:
                 href, pm = self.mark(mid)
-                pic = (f'<figure class="prod-pic"><img src="{href}" alt="{esc(pm["shows_en"])}" loading="lazy">'
+                style = ' style="object-position:' + pos[0] + '"' if pos else ""
+                pic = (f'<figure class="prod-pic"><img src="{href}" alt="{esc(pm["shows_en"])}" loading="lazy"{style}>'
                        f'<figcaption>{esc(cap)}{self.ref(pm.get("source_id"))}</figcaption></figure>')
             out.append(f'<li>{pic}<h3 class="rm-name">{self.pop(tr["en"] if tr else latin_text(name), p["name_ru"])}</h3>'
                        f'<p>{caption_html(d, "pd-" + str(len(out)))}{self.ref(p.get("source_id"))}</p></li>')
