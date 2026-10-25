@@ -10,7 +10,8 @@ Two readers:
 - **A lay reader** (press, policy staff), who gets a story: the landing page's opening and story 1. These follow the chain from ЦБСТ and its programmes to the maker, the product, the sellers and state buyers, and the front-line recipients, with every line graded doc / rep / open.
 - **A specialist** (sanctions desk, lawyer), who needs to check each claim and reach the identifiers.
 
-Current work (24.10.2026):
+Current work (25.10.2026):
+- **next:** the national БАС programme layer: НПЦ resident rosters and subsidy recipients, resolved by identifier, screened, a second page beside the ЦБСТ story (`notes/rebuild_plan.md`, "Next");
 - the landing page opening and the story (private previews);
 - chain views per product («Булат», «Капюшон»);
 - the delivery record (`deliveries.json`);
