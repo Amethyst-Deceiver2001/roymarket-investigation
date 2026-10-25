@@ -1086,10 +1086,10 @@ class Landing(Chain):
         if not svg_path.exists():
             return ""
         return ('<figure class="front-map-fig"><div class="front-map-wrap">' + svg_path.read_text() + '</div><figcaption>'
-                '<span class="rm-label">Map</span> The Russian-held area, and where the sources put the units this section names. '
-                'No source gives a unit\'s position: the brigade is pinned to the town the film and the Centre for Information '
-                f'Resilience name{self.tref("dw_film")}{self.tref("cir")}, the armies are named for a sector{self.tref("un_ga")}'
-                f'{self.tref("osv_27702")}. Front line: DeepState{self.tref("deepstate")}.</figcaption></figure>')
+                '<span class="rm-label">Map</span> The Russian-held area and the formations this section names, as DeepState marks them. '
+                'The markers are DeepState\'s own estimate, not a document: the brigade is graded on the strength of the film and the '
+                f'Centre for Information Resilience, which put its drones over Beryslav{self.tref("dw_film")}{self.tref("cir")}; the 18th Army is named by '
+                f'the UN{self.tref("un_ga")} and the 49th by a channel that posts the brigade\'s footage{self.tref("osv_27702")}. Map and markers: DeepState{self.tref("deepstate")}.</figcaption></figure>')
 
     def front(self):
         """The Kherson drone campaign: the UN's finding, the circle's own ties to the formations it names, and how the

@@ -16,7 +16,7 @@ REPO = Path(__file__).resolve().parent.parent
 SRC = REPO / "data" / "sources" / "WEBCAPTURE_20261025_deepstatemap-last-state-20261023.json"
 OUT = REPO / "exhibits" / "images" / "maps" / "kherson-front.svg"
 
-LON0, LON1, LAT0, LAT1 = 32.15, 34.05, 46.45, 47.0
+LON0, LON1, LAT0, LAT1 = 32.15, 34.05, 46.3, 47.0
 W = 1150
 K = math.cos(math.radians(46.8))
 H = round(W * (LAT1 - LAT0) / ((LON1 - LON0) * K))
@@ -70,23 +70,36 @@ def main():
         tx = x + 11 if right else x - 11
         s.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="5" fill="var(--ink)" stroke="var(--paper)" stroke-width="1.5"/>'
                  f'<text x="{tx:.1f}" y="{y + 4:.1f}" text-anchor="{"start" if right else "end"}" class="fm-t">{name}</text>')
-    # the units: pinned where a source names a place, a dashed run along the river where it names only a sector
-    bx, by = xy(33.4256, 46.8419)
-    cx, cw = 800, 335
-    callouts = [  # (x, y, w, grade, title, line 1, line 2, pin)
-        (cx, 195, cw, "rep", "205th motor-rifle brigade", "Its drones worked over Beryslav; the CIR and DW", "could not prove who carried out the attacks", (bx, by)),
-        (cx, 300, cw, "rep", "49th Army", "Kherson direction; a channel that posts the", "brigade's footage places the 205th in it", None),
-        (cx, 380, cw, "doc", "18th Combined Arms Army", "Named in the UN's October 2025 report on the", "attacks along 300 km of the Dnipro", None),
+    # the units: DeepState's own markers (Point features) for the formations this section names; the callouts sit in the
+    # empty Ukrainian-held corner and point at them. A unit with no marker in the area is listed without a pin.
+    marks = {}
+    for f in feats:
+        g, n = f["geometry"], f["properties"].get("name", "")
+        if g["type"] != "Point":
+            continue
+        for key, needle in (("205", "205th Separate Motorized"), ("49", "49th combined-arms army"),
+                            ("98a", "331st Airborne"), ("98b", "217th Airborne"), ("98c", "299th Airborne")):
+            if needle in n:
+                marks[key] = xy(g["coordinates"][0], g["coordinates"][1])
+    assert {"205", "49", "98a", "98b", "98c"} <= set(marks), marks
+    cx, cw = 20, 345
+    callouts = [  # (y, grade, title, line 1, line 2, pins)
+        (14, "rep", "205th motor-rifle brigade", "DeepState's marker. DW and the CIR say its drones", "worked over Beryslav; they could not prove who fired", [marks["205"]]),
+        (90, "rep", "49th Army", "DeepState's marker for its headquarters. A channel", "that posts the 205th's footage places the brigade in it", [marks["49"]]),
+        (166, "rep", "98th Airborne Division", "Three of its regiments as DeepState marks them; the", "channel's 24.10.2026 clip carries the division's watermark", [marks["98a"], marks["98b"], marks["98c"]]),
+        (242, "doc", "18th Combined Arms Army", "Named in the UN's October 2025 report; DeepState", "has no marker for it in this area", []),
     ]
-    s.append(f'<text x="{cx}" y="290" class="fm-s">Named by their sources for a sector, not placed:</text>')
-    for x, y, w, g, t, l1, l2, pin in callouts:
-        if pin:
-            s.append(f'<path d="M{pin[0]:.0f} {pin[1]:.0f}L{x + 14:.0f} {y:.0f}" stroke="var(--ink)" stroke-width="1.6" fill="none"/>')
-        s.append(f'<g><rect x="{x:.0f}" y="{y:.0f}" width="{w}" height="62" rx="4" fill="var(--panel)" stroke="var(--g-{g})" stroke-width="2" '
+    names = {"205": "205th brigade", "49": "49th Army HQ", "98a": "331st (98th Div.)", "98b": "217th (98th Div.)", "98c": "299th (98th Div.)"}
+    for k, (px, py) in ((k, marks[k]) for k in ("205", "49", "98a", "98b", "98c")):
+        s.append(f'<g transform="translate({px:.1f} {py:.1f})"><rect x="-9" y="-9" width="18" height="18" transform="rotate(45)" fill="var(--panel)" '
+                 'stroke="var(--ink)" stroke-width="2.2"/><path d="M-6 -6L6 6M6 -6L-6 6" stroke="var(--ink)" stroke-width="1.6"/></g>'
+                 f'<text x="{px + 16:.1f}" y="{py + 18:.1f}" class="fm-t">{names[k]}</text>')
+    for y, g, t, l1, l2, pins in callouts:
+        s.append(f'<g><rect x="{cx}" y="{y}" width="{cw}" height="62" rx="4" fill="var(--panel)" stroke="var(--g-{g})" stroke-width="2" '
                  f'stroke-dasharray="{"0" if g == "doc" else "7 4"}"/>'
-                 f'<text x="{x + 12:.0f}" y="{y + 21:.0f}" class="fm-h">{t}</text>'
-                 f'<text x="{x + 12:.0f}" y="{y + 40:.0f}" class="fm-n">{l1}</text><text x="{x + 12:.0f}" y="{y + 54:.0f}" class="fm-n">{l2}</text></g>')
-    s.append(f'<text x="{W - 12}" y="{H - 12}" text-anchor="end" class="fm-s">Hatched: Russian-held, {stamp} (DeepState)</text>')
+                 f'<text x="{cx + 12}" y="{y + 21}" class="fm-h">{t}</text>'
+                 f'<text x="{cx + 12}" y="{y + 40}" class="fm-n">{l1}</text><text x="{cx + 12}" y="{y + 54}" class="fm-n">{l2}</text></g>')
+    s.append(f'<text x="{W - 12}" y="{H - 12}" text-anchor="end" class="fm-s">Hatched: Russian-held, {stamp}. Diamonds: unit markers. Both from DeepState</text>')
     s.append("</svg>")
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(s))
