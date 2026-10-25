@@ -15812,7 +15812,7 @@
       "subsidiary_liability_checked_at": null,
       "social": [],
       "photo": null,
-      "notes": "Named as «руководитель Центрального штаба МГЕР Александр Амелин» in @er_molnia 13107 (L0329), where he came with Сидякин and the war correspondent Лисицын to the front, and quoted in 13129 (L0330), 03–04.11.2024. МГЕР has no entity record yet. Added 25.10.2026 at the user's direction (important PEPs around the deliveries; persons of interest). Not screened: no sanctions, PEP or disqualification check has been run on this record, so its empty sanctions[] means 'not screened', not 'clean'. No date of birth or identifier is given by any source read, and none is filled from a namesake.",
+      "notes": "Named as «руководитель Центрального штаба МГЕР Александр Амелин» in @er_molnia 13107 (L0329), where he came with Сидякин and the war correspondent Лисицын to the front, and quoted in 13129 (L0330), 03–04.11.2024. МГЕР has no entity record yet. Added 25.10.2026 at the user's direction (important PEPs around the deliveries; persons of interest). Not screened: no sanctions, PEP or disqualification check has been run on this record, so its empty sanctions[] means 'not screened', not 'clean'. No date of birth or identifier is given by any source read, and none is filled from a namesake. Screening 25.10.2026 (OpenSanctions, name only): candidates «Amelin Alexander Nikolaevich» (PEP), «Amelin Alexander Ivanovich» and others; none accepted, because the posts give no patronymic or date of birth and the candidates name no МГЕР office. Open.",
       "sources": [],
       "_verified": false,
       "_origin": "corrections:people_add_entities",
@@ -15837,7 +15837,32 @@
           "source_id": "L0342"
         }
       ],
-      "sanctions": [],
+      "sanctions": [
+        {
+          "date": "2014-09-12",
+          "regime": [
+            "EU (Council Regulation 269/2014, Ukraine territorial-integrity regime)"
+          ],
+          "source_id": "L0387",
+          "note": "Council Implementing Regulation (EU) 2024/849 of 12 March 2024, Annex I to Regulation 269/2014, entry 109, read in full: «Member of the State Duma since its fifth convocation from 2 December 2007 on… voted in favour of the ratification of treaties… on accession of the so-called Donetsk and Luhansk People's Republics…»; date of listing 12.9.2014 as printed there. The EU list download of 25.10.2026 (L0354) carries it as EU.272.55. Identity: full name, patronymic and office agree between the party's post (@ZurabMakiev 1245, L0342: «Водолацкий Виктор Петрович — депутат Госдумы РФ») and the listing («Member of the State Duma»); the listing's date of birth is 19.8.1957. No personal identifier is printed in the post, so this is a name-and-office match, not an identifier match."
+        },
+        {
+          "date": null,
+          "regime": [
+            "US (OFAC SDN, programme RUSSIA-EO14024)"
+          ],
+          "source_id": "L0389",
+          "note": "SDN list of 21.10.2026 (L0389), uid 37304, «Victor Petrovich VODOLATSKY», DOB 19 Aug 1957, programme RUSSIA-EO14024; the XML gives no date of designation and no statement of reasons. The designation order itself is not read. Identity: full name, patronymic and office agree between the party's post (@ZurabMakiev 1245, L0342: «Водолацкий Виктор Петрович — депутат Госдумы РФ») and the listing («Member of the State Duma»); the listing's date of birth is 19.8.1957. No personal identifier is printed in the post, so this is a name-and-office match, not an identifier match."
+        },
+        {
+          "date": null,
+          "regime": [
+            "UK (Russia (Sanctions) (EU Exit) Regulations 2019)"
+          ],
+          "source_id": "L0390",
+          "note": "UK Sanctions List (FCDO) of 16.10.2026 (L0390), RUS0153 «Vodolatsky, Viktor», DOB 19/08/1957, designated 31/12/2020 as the list prints it (the date the UK regime took over the EU listing). The UK statement of reasons is not read. Identity: full name, patronymic and office agree between the party's post (@ZurabMakiev 1245, L0342: «Водолацкий Виктор Петрович — депутат Госдумы РФ») and the listing («Member of the State Duma»); the listing's date of birth is 19.8.1957. No personal identifier is printed in the post, so this is a name-and-office match, not an identifier match."
+        }
+      ],
       "other_entities": [],
       "other_entities_checked_at": null,
       "disqualification_hits": [],
@@ -15871,7 +15896,32 @@
           "source_id": "L0344"
         }
       ],
-      "sanctions": [],
+      "sanctions": [
+        {
+          "date": "2014-04-29",
+          "regime": [
+            "EU (Council Regulation 269/2014, Ukraine territorial-integrity regime)"
+          ],
+          "source_id": "L0387",
+          "note": "Council Implementing Regulation (EU) 2024/849 of 12 March 2024, Annex I to Regulation 269/2014, entry 46, read in full: «One of the leaders of the so-called «Donetsk People's Republic»… Member of the United Russia party and its secretary in the so-called «Donetsk People's Republic»»; date of listing 29.4.2014 as printed there. The EU list download of 25.10.2026 (L0354) carries it as EU.3481.27. Identity: name and office agree between the post (@er_molnia 16134, L0344: «глава Донецкой Народной Республики, секретарь реготделения партии Денис Пушилин») and the listing («Head of the Donetsk People's Republic… Member of the United Russia party and its secretary in the so-called «Donetsk People's Republic»»); the listing's date of birth is 9.5.1981. The post gives no patronymic or identifier, so this is a name-and-office match, not an identifier match."
+        },
+        {
+          "date": null,
+          "regime": [
+            "US (OFAC SDN, programme UKRAINE-EO13660)"
+          ],
+          "source_id": "L0389",
+          "note": "SDN list of 21.10.2026 (L0389), uid 16958, «Denis PUSHILIN», DOB 09 May 1981, programme UKRAINE-EO13660; the XML gives no date of designation and no statement of reasons. The designation order itself is not read. Identity: name and office agree between the post (@er_molnia 16134, L0344: «глава Донецкой Народной Республики, секретарь реготделения партии Денис Пушилин») and the listing («Head of the Donetsk People's Republic… Member of the United Russia party and its secretary in the so-called «Donetsk People's Republic»»); the listing's date of birth is 9.5.1981. The post gives no patronymic or identifier, so this is a name-and-office match, not an identifier match."
+        },
+        {
+          "date": null,
+          "regime": [
+            "UK (Russia (Sanctions) (EU Exit) Regulations 2019)"
+          ],
+          "source_id": "L0390",
+          "note": "UK Sanctions List (FCDO) of 16.10.2026 (L0390), RUS0059 «Pushylin, Denys», DOB 09/05/1981, designated 31/12/2020 as the list prints it (the date the UK regime took over the EU listing). The UK statement of reasons is not read. Identity: name and office agree between the post (@er_molnia 16134, L0344: «глава Донецкой Народной Республики, секретарь реготделения партии Денис Пушилин») and the listing («Head of the Donetsk People's Republic… Member of the United Russia party and its secretary in the so-called «Donetsk People's Republic»»); the listing's date of birth is 9.5.1981. The post gives no patronymic or identifier, so this is a name-and-office match, not an identifier match."
+        }
+      ],
       "other_entities": [],
       "other_entities_checked_at": null,
       "disqualification_hits": [],
@@ -15911,7 +15961,16 @@
           "source_id": "L0342"
         }
       ],
-      "sanctions": [],
+      "sanctions": [
+        {
+          "date": "2018-12-10",
+          "regime": [
+            "EU (Council Regulation 269/2014, Ukraine territorial-integrity regime)"
+          ],
+          "source_id": "L0388",
+          "note": "Council Implementing Regulation (EU) 2023/1765 of 13 September 2023, Annex I to Regulation 269/2014, entry 171, read in full: ««Chairperson» of the so-called «People's Council» of the so-called «Luhansk People's Republic»… Member of the United Russia party and its secretary in the so-called «Luhansk People's Republic»»; date of listing 10.12.2018 as printed there. The EU list download of 25.10.2026 (L0354) carries it as EU.4833.14. No US or UK entry was found in the lists of 21.10 and 16.10.2026 by this name. Identity: full name, patronymic and office agree between the post (@ZurabMakiev 1245, L0342: «Мирошниченко Денис Николаевич — председатель Народного Совета ЛНР») and the listing («Chairperson of the so-called People's Council of the so-called Luhansk People's Republic»; «Member of the United Russia party and its secretary in the so-called «Luhansk People's Republic»»); the listing's date of birth is 8.12.1987. No personal identifier is printed in the post, so this is a name-and-office match, not an identifier match."
+        }
+      ],
       "other_entities": [],
       "other_entities_checked_at": null,
       "disqualification_hits": [],
