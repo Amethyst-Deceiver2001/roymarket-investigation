@@ -1157,8 +1157,10 @@ class Landing(Chain):
     def beyond_shop(self):
         """Two of TsBST's own lines on what it does besides the shop."""
         return (
-            f'<p>TsBST presents itself as a support body for drone makers, and ROY.MARKET as a catalogue. Its own posts and its '
-            'board secretary\'s describe more than that. It says it showed the marketplace at «Tsentr-2026», a strategic '
+            f'<p>The front above is where TsBST\'s circle says its goods and recruits go. The next question is what TsBST says '
+            'it does itself, and its own account reaches past the shop. It presents itself as a support body for drone makers, and '
+            'ROY.MARKET as a catalogue; its posts and its board secretary\'s describe more. It says it showed the marketplace at '
+            '«Tsentr-2026», a strategic '
             'military exercise with delegations from 41 countries, and signed up sellers there:</p>'
             + self.oq("tsentr", f"TsBST, Telegram, 04.10.2026{self.tref('tsentr')}") + self.center_band() +
             f'<p>On 15 October its board secretary, the United Russia official {self.person_pop(SIDYAKIN)}, announced an app '
