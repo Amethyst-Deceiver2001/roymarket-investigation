@@ -25,6 +25,8 @@ from display_helpers import (NAME_JS, caption_html, design_head, display_name, f
 
 SLUG = "proekt-kb-arkhangel"
 LEADER = "filippov-mikhail-gennadevich"
+# the project's own picture for a product box, by a word in its Russian name; Germes and Slonenok have none on file
+PRODUCT_PIC = {"Дрон-ракета": "m0049", "Ночник": "m0050"}
 # The project's own words, grouped by what they show. Keyed by (source, first words of the Russian). Build
 # instructions that only help assemble the device (where to put the payload weight) are left out on purpose.
 GROUPS = [
@@ -186,7 +188,13 @@ class Page:
             d = " ".join(sent[:2])
             name = p["name_ru"].split(" — ")[0]
             tr = translation(name)
-            out.append(f'<li><h3 class="rm-name">{self.pop(tr["en"] if tr else latin_text(name), p["name_ru"])}</h3>'
+            pic = ""
+            mid = next((v for k, v in PRODUCT_PIC.items() if k in p["name_ru"]), None)
+            if mid:
+                href, pm = self.mark(mid)
+                pic = (f'<figure class="prod-pic"><img src="{href}" alt="{esc(pm["shows_en"])}" loading="lazy">'
+                       f'<figcaption>The project\'s own picture{self.ref(pm.get("source_id"))}</figcaption></figure>')
+            out.append(f'<li>{pic}<h3 class="rm-name">{self.pop(tr["en"] if tr else latin_text(name), p["name_ru"])}</h3>'
                        f'<p>{caption_html(d, "pd-" + str(len(out)))}{self.ref(p.get("source_id"))}</p></li>')
         return f'<ul class="prods">{"".join(out)}</ul>'
 
@@ -305,6 +313,9 @@ table.bom td:nth-child(2) { color: var(--ink); }
 table.bom td.no { font: 600 12px var(--font-mono); color: var(--accent); width: 3.5em; }
 .prods { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-3); }
 .prods li { background: var(--panel); border: 1px solid var(--rule); border-radius: var(--radius); padding: 10px 12px; min-width: 0; }
+.prod-pic { margin: 0 0 var(--space-2); }
+.prod-pic img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 3px; border: 1px solid var(--rule); }
+.prod-pic figcaption { font-size: 11.5px; color: var(--ink-3); margin-top: 4px; }
 .prods p { margin: 6px 0 0; font-size: var(--t-note); color: var(--ink-2); }
 .rm-quote { max-width: 760px; margin: 0 0 var(--space-3); }
 ul.plain { padding-left: 20px; color: var(--ink-2); max-width: var(--measure); }
