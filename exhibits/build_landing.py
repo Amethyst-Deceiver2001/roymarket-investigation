@@ -266,6 +266,7 @@ class Landing(Chain):
         self.graph = json.loads((REPO / "data" / "registry" / "relationship_graph.json").read_text())
         self.img_dir = REPO / "exhibits" / "images" / "media"
         self.preview = False
+        self.k_inline = set()   # Kherson stills already set under a quote
         people = json.loads((REPO / "data" / "registry" / "people.json").read_text())
         self.people = {x["slug"]: x for x in (people if isinstance(people, list) else people.get("people", []))}
 
@@ -851,36 +852,59 @@ class Landing(Chain):
         self.verbatim(key, chan, msg, ru)
         return quote_html(ru, en, cite, f"q-{key}", strong=key in self.STRONG_QUOTES)
 
-    def kherson_band(self):
-        """Stills from the Kherson channel (KHERSON_STILLS), as a picture band. Preview only: they have no media record."""
+    def _kreg(self, key):
+        """Register one Kherson still (image copy, evidence figure for the viewer); returns what a tile needs. Preview only."""
+        src_dir, dest = REPO / "exhibits" / "images" / "kherson", self.img_dir.parent / "kherson"
+        msg, name, shows, ru, en = KHERSON_STILLS[key]
+        if not (src_dir / name).exists():
+            return None
+        self.verbatim(key, "osvedomitell_alex", msg, ru)
+        if dest != src_dir:
+            dest.mkdir(parents=True, exist_ok=True)
+            (dest / name).write_bytes((src_dir / name).read_bytes())
+        rel = f"images/kherson/{name}"
+        if (rel, dest / name) not in self.media_files:
+            self.media_files.append((rel, dest / name))
+        when = OPENING_SOURCES[key][0].rsplit(", ", 1)[-1] if key != "osv_21384" else "06.10.2024"
+        video = "" if name == "k21384.jpg" else ('<span class="orig">Still from a video. Original on Telegram, kept in '
+                                                 'our own record of the channel.</span>')
+        self.templates[f"k{msg}"] = (
+            f'<figure class="rm-fig"><div class="frame"><img src="{esc(rel)}" alt="{esc(shows)}"></div><figcaption>'
+            f'<span class="rm-prov">Posted by «From Mariupol to the Carpathians»</span><span>{esc(shows)} The post: '
+            f'{orig_line(ru, f"ks-{msg}", en)}{self.tref(key)}</span>{video}<span class="when">{esc(when)}</span>'
+            f'</figcaption></figure>')
+        cap = self.tile_label(shows.split(" Still at")[0], when)
+        return msg, rel, shows, cap, name in ("k27702.jpg", "k34459.jpg")
+
+    def kstill(self, key):
+        """One still set right under the quote it belongs to. Preview only: the stills have no media record."""
         if not self.preview:
             return ""
-        src_dir, dest = REPO / "exhibits" / "images" / "kherson", self.img_dir.parent / "kherson"
+        r = self._kreg(key)
+        if not r:
+            return ""
+        self.k_inline.add(key)
+        msg, rel, shows, cap, contain = r
+        return (f'<figure class="band kstill"><div class="band-grid">{self.tile(f"fig-k{msg}", rel, shows, cap, big=True, contain=contain)}'
+                f'</div><figcaption>{esc(shows)}</figcaption></figure>')
+
+    def kherson_band(self):
+        """The other stills from the Kherson channel (those not already set under a quote), as a picture band. Preview only."""
+        if not self.preview:
+            return ""
         tiles = []
-        for key, (msg, name, shows, ru, en) in KHERSON_STILLS.items():
-            if not (src_dir / name).exists():
+        for key in KHERSON_STILLS:
+            if key in self.k_inline:
                 continue
-            self.verbatim(key, "osvedomitell_alex", msg, ru)
-            if dest != src_dir:
-                dest.mkdir(parents=True, exist_ok=True)
-                (dest / name).write_bytes((src_dir / name).read_bytes())
-            rel = f"images/kherson/{name}"
-            if (rel, dest / name) not in self.media_files:
-                self.media_files.append((rel, dest / name))
-            when = OPENING_SOURCES[key][0].rsplit(", ", 1)[-1] if key != "osv_21384" else "06.10.2024"
-            video = "" if name == "k21384.jpg" else ('<span class="orig">Still from a video. Original on Telegram, kept in '
-                                                     'our own record of the channel.</span>')
-            self.templates[f"k{msg}"] = (
-                f'<figure class="rm-fig"><div class="frame"><img src="{esc(rel)}" alt="{esc(shows)}"></div><figcaption>'
-                f'<span class="rm-prov">Posted by «From Mariupol to the Carpathians»</span><span>{esc(shows)} The post: '
-                f'{orig_line(ru, f"ks-{msg}", en)}{self.tref(key)}</span>{video}<span class="when">{esc(when)}</span>'
-                f'</figcaption></figure>')
-            cap = self.tile_label(shows.split(" Still at")[0], when)
-            tiles.append(self.tile(f"fig-k{msg}", rel, shows, cap, big=len(tiles) < 2, contain=name in ("k27702.jpg", "k34459.jpg")))
+            r = self._kreg(key)
+            if not r:
+                continue
+            msg, rel, shows, cap, contain = r
+            tiles.append(self.tile(f"fig-k{msg}", rel, shows, cap, big=len(tiles) < 2, contain=contain))
         if not tiles:
             return ""
         return (f'<figure class="band"><div class="band-grid">{"".join(tiles)}</div><figcaption><span class="rm-label">'
-                f'Pictures · {len(tiles)}</span> Stills from the channel\'s own videos, 2024–2026, and the map it posted with '
+                f'More stills · {len(tiles)}</span> From the channel\'s own videos, 2024–2026, and the map it posted with '
                 f'one of its warnings. Nobody in them can be identified, and no frame we looked at shows a dead or wounded '
                 f'person. Each opens with its caption, date and the post\'s own words.</figcaption></figure>')
 
@@ -1120,12 +1144,12 @@ class Landing(Chain):
             f'<p>The Commission reproduces posts of a Kherson-front channel, «From Mariupol to the Carpathians», as figures in '
             f'its paper{self.tref("un_crp")}. The channel signs its strike videos with the units\' names. Under footage of the '
             f'205th brigade:</p>'
-            + self.oq("osv_27702", f'«From Mariupol to the Carpathians», Telegram, 23.07.2025{self.tref("osv_27702")}') +
+            + self.oq("osv_27702", f'«From Mariupol to the Carpathians», Telegram, 23.07.2025{self.tref("osv_27702")}') + self.kstill("osv_27702") +
             '<p>Under a video of a van being struck in a residential yard:</p>'
-            + self.oq("osv_19953", f'the same channel, 19.08.2024{self.tref("osv_19953")}') +
+            + self.oq("osv_19953", f'the same channel, 19.08.2024{self.tref("osv_19953")}') + self.kstill("osv_19953") +
             '<p>And under the heading the platform used for its sellers:</p>'
-            + self.oq("osv_36192", f'the same channel, 24.07.2026{self.tref("osv_36192")}')
-            + self.oq("osv_38703", f'the same channel, 24.10.2026, over a clip watermarked by the 98th Airborne Division{self.tref("osv_38703")}')
+            + self.oq("osv_36192", f'the same channel, 24.07.2026{self.tref("osv_36192")}') + self.kstill("osv_36192")
+            + self.oq("osv_38703", f'the same channel, 24.10.2026, over a clip watermarked by the 98th Airborne Division{self.tref("osv_38703")}') + self.kstill("osv_38703")
             + self.osv_clip()
             + self.kherson_band() +
             '<p class="note"><span class="rm-grade rep">Reported</span> The ties above are the parties\' own posts. They do not '

@@ -284,3 +284,7 @@ main section > .rm-h2 { margin-top: 0; }
 .front-map .fm-n, .front-map .fm-s { font: 12.5px var(--font-sans); fill: var(--ink-2); }
 .front-map-fig figcaption { margin-top: 8px; max-width: var(--measure); font-size: var(--t-note); color: var(--ink-2); }
 .front-map-fig figcaption .rm-label { margin-right: 6px; }
+/* One still set under the quote it belongs to */
+.kstill { margin: calc(-1 * var(--space-2)) 0 var(--space-4); max-width: 520px; }
+.kstill .band-grid { grid-template-columns: minmax(0, 1fr); grid-auto-rows: 260px; }
+.kstill .pic.big { grid-column: auto; grid-row: auto; }
