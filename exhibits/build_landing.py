@@ -1106,7 +1106,7 @@ class Landing(Chain):
             f'the brigade\'s footage places it in the 49th Army{self.tref("osv_27702")}. A senior '
             f'doctor at a Kherson hospital told the Commission:</p>'
             + self.un_quote("safari", f'UN paper A/HRC/59/CRP.2, para. 42, 28.05.2025{self.tref("un_crp")}')
-            + self.kstill("osv_20993"))
+            + self.osv_clip())
         np_ = self.ents[NP]
         rows = [
             ("Bars-Sarmat", "rep",
@@ -1150,7 +1150,6 @@ class Landing(Chain):
             '<p>And under the heading the platform used for its sellers:</p>'
             + self.oq("osv_36192", f'the same channel, 24.07.2026{self.tref("osv_36192")}') + self.kstill("osv_36192")
             + self.oq("osv_38703", f'the same channel, 24.10.2026, over a clip watermarked by the 98th Airborne Division{self.tref("osv_38703")}') + self.kstill("osv_38703")
-            + self.osv_clip()
             + self.kherson_band() +
             '<p class="note"><span class="rm-grade rep">Reported</span> The ties above are the parties\' own posts. They do not '
             'show any item from TsBST\'s circle used against civilians; the UN names no unit below the army.</p>')
