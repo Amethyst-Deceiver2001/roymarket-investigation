@@ -1099,7 +1099,8 @@ class Landing(Chain):
             f'Russian drone operators on the left bank of the Dnipro had spent ten months attacking civilians in Kherson, and '
             f'that the attacks amount to the crime against humanity of murder{self.tref("un_crp")}. In October it extended the '
             f'finding to 300 km of the river and three regions, and named the formation the operators serve in:</p>'
-            + self.un_quote("dnepr", f'UN report A/80/497, para. 40, 21.10.2025{self.tref("un_ga")}') +
+            + self.un_quote("dnepr", f'UN report A/80/497, para. 40, 21.10.2025{self.tref("un_ga")}')
+            + self.front_map() +
             f'<p>The Commission names the 18th Combined Arms Army; it names no brigade. The Centre for Information Resilience '
             f'and DW named the 205th motor-rifle brigade{self.tref("dw_film")} among three units whose drones worked over Beryslav '
             f'during the attacks, while saying they could not prove who carried them out{self.tref("cir")}. A channel that posts '
@@ -1128,7 +1129,6 @@ class Landing(Chain):
             intro +
             '<h3 class="rm-h3">What TsBST\'s circle says about that front</h3>'
             f'<ul class="ledger front" aria-label="Ties to the formations the UN names">{"".join(lis)}</ul>'
-            + self.front_map()
             + '<h3 class="rm-h3">A school that recruits for the 205th brigade</h3>'
             + ('<p>TsBST\'s own channel says a resident\'s anti-drone simulator runs at the «Arkhangel» drone school\'s training '
                f'centre in Tuapse{self.tref("cbst_1562")}. The school\'s own channel recruits operators for the 205th brigade and '
