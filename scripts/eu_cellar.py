@@ -43,7 +43,9 @@ SPARQL = "https://publications.europa.eu/webapi/rdf/sparql"
 CELEX_URL = "http://publications.europa.eu/resource/celex/"
 # The work "Regulation (EU) No 269/2014" (CELEX 32014R0269) in CELLAR: acts "based on" it amend its Annex I.
 BASE_WORK = "http://publications.europa.eu/resource/cellar/4295095e-ae10-11e3-86f9-01aa75ed71a1"
-STAMP = re.compile(r"\b\d{1,2}\.\d{1,2}\.\d{4}\b")
+# A listing date closes an entry; it is followed by the next entry's number ("29.4.2014 14. Name"). A date of birth
+# inside an entry is not followed by a number, so it does not cut the entry.
+STAMP = re.compile(r"\b\d{1,2}\.\d{1,2}\.\d{4}\b(?= \d{1,3}\. )")
 
 
 def sparql(query: str) -> list[dict]:
@@ -114,6 +116,8 @@ def entries(text: str, names: list[str]) -> list[str]:
             after = [s for s in stamps if s[0] >= i]
             a = before[-1][1] if before else max(0, i - 200)
             b = after[0][1] if after else min(len(text), i + 1500)
+            if a < i - 3000:
+                a = i - 200
             if (a, b) in seen:
                 continue
             seen.add((a, b))
