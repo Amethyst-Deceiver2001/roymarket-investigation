@@ -1478,7 +1478,17 @@
             "s9117"
           ]
         },
-        "fio_ru": "Дмитрий Николаевич Песков"
+        "fio_ru": "Дмитрий Николаевич Песков",
+        "sanctions": [
+          {
+            "date": "2023-02-23",
+            "regime": [
+              "UK (Russia (Sanctions) (EU Exit) Regulations 2019)"
+            ],
+            "source_id": "L0403",
+            "note": "Statement of reasons read in full in the UK Sanctions List CSV of 16.10.2026 (L0403), RUS1770, «PESKOV, Dmitry», DOB 26/12/1975, designated 23/02/2023, position «Member of the Board of Directors of Aeroflot-Russian Airlines PJSC»: «Dmitry Nikolaevich Peskov is an 'involved person' under the Russia (Sanctions) (EU Exit) Regulation 2019 because he has been, and is, involved in obtaining a benefit from or supporting the Government of Russia by: (1) working as director or equivalent of a person (other than an individual) which is carrying on business in a sector of strategic significance to the Government of Russia, namely Aeroflot PJSC which is carrying on business in the Russian transport sector.» Trust services sanctions imposed 21/03/2023 and director disqualification 09/04/2025 as the list prints them. The UK designation notice itself is not read. Identity: full name, patronymic and date of birth (26.12.1975) agree between the listing and the registry record «Дмитрий Николаевич Песков», whose date of birth comes from the rupep.org profile (s2606). The listing's office (Aeroflot board) is not in our record, and the ЦБСТ supervisory-board document (s7600) prints no date of birth, so the tie rests on name, patronymic and date of birth, not on an identifier. The Aeroflot board seat is not checked against a document here. This is NOT the Kremlin press secretary Дмитрий Сергеевич Песков (guard oq024); the UK lists a different Peskov for him. Found by scripts/sanctions_people_check.py. No EU or US entry under this name and date of birth was found in the lists of 21–23.10.2026."
+          }
+        ]
       },
       "verified_against": "s6817 -- АНО «Платформа НТИ»'s own primary-source founding/EGRUL document, naming Дмитрий Песков as director (cross-referenced from the entity's own director_history entry). | 24.10.2026: fio_ru gains the patronymic so he is not read as the Kremlin press secretary: the RUPEP profile (s2606, archived RUPEP_20260826_peskov-dmitriy-nikolaevich.pdf) gives father_name «Николаевич».",
       "why": [
