@@ -122,6 +122,43 @@ class Page:
                 "running a TsBST resident's drone-interception training mode. That makes the school a user of a resident's "
                 f"product; it does not make the project a resident.{self.ref(t.get('source_id'))}</p>")
 
+    def tref(self, key):
+        """A note for a post or page read in full but not catalogued on this machine: plain words and its public link."""
+        from build_landing import OPENING_SOURCES   # lazy: the landing builder is heavy and not needed elsewhere
+        note = OPENING_SOURCES[key]
+        if note not in self.notes:
+            self.notes.append(note)
+        return f'<sup class="rm-ref"><a href="#n{self.notes.index(note) + 1}">{self.notes.index(note) + 1}</a></sup>'
+
+    def circle(self):
+        """Where the project meets TsBST's circle and the 205th brigade: the school's recruitment, Bars-Sarmat, DW's film,
+        and the Kvadrosim / Shatrakova link. Moved here from the landing page, which keeps one paragraph and two quotes."""
+        from build_landing import OPENING_QUOTES
+        def q(key, cite):
+            _, _, ru, en = OPENING_QUOTES[key]
+            return quote_html(ru, en, cite, key=f"ci-{key}", strong=True)
+        sh = self.people.get("shatrakova-anastasiya-artemovna")
+        shn = person_names(sh["fio_ru"], sh.get("name_latin")) if sh else None
+        shat = self.pop(shn["first"] if shn else "Anastasiya Shatrakova", sh["fio_ru"] if sh else "Анастасия Шатракова")
+        return (
+            '<p>The project\'s channel recruits operators for the 205th Guards Separate Motor Rifle Brigade, which Russian-language '
+            f'channels place in the 49th Army of the «Dnepr» Group of Forces{self.tref("osv_27702")}. Its own words:</p>'
+            + q("arch_9067", f'The project\'s channel, 01.12.2025{self.tref("arch_9067")}')
+            + q("arch_10667", f'The project\'s channel, 17.08.2026{self.tref("arch_10667")}')
+            + f'<p>The school says it trains within Bars-Sarmat, Dmitry Rogozin\'s drone centre.{self.ref("s6915")}</p>'
+            + '<p>DW\'s film on the drone attacks in Beryslav shows the school too: over footage of men soldering a drone, '
+              'watermarked with the school\'s channel address, the narration says “This Russian volunteer group proudly posts on '
+              f'Telegram” how it makes drones and trains operators{self.tref("dw_film")}. The film does not say the school supplied '
+              'the 205th, and the footage of the attacks it shows is credited to another channel. It does not show the school\'s '
+              'tie to TsBST.</p>'
+            + '<p>The school\'s forum channel calls Kvadrosim, the simulator maker TsBST names as a resident, “our partners”, and '
+              f'says the heads of its Moscow branch, among them {shat}, presented an interceptor called «Arkhangel» to a security '
+              f'agency together with that company{self.tref("arch_175293")}. TsBST\'s own post names an Anastasia Shatrakova as '
+              f'general director of the interceptor maker «Arkhangel», a finalist of its accelerator{self.tref("cbst_1976")}, and '
+              f'the company register lists a person of that name as director of OOO «Arkhangel» since it was registered'
+              f'{self.ref("s5507")}. The name and the product match, so the records are read as one person. No document links '
+              'that company to the school.</p>')
+
     def partners(self):
         items = []
         for r in self.e.get("related_entities") or []:
@@ -264,6 +301,7 @@ def render(out: Path):
     e = P.e
     # called in page order so the footnotes number from the top
     who, tie = P.who(), P.tie()
+    circle = P.circle()
     pics = P.pictures()
     bom, china = P.bom()
     prods, words, partners = P.products(), P.own_words(), P.partners()
@@ -288,6 +326,9 @@ def render(out: Path):
 </header>
 <main class="rm-page">
   <section aria-labelledby="h-who"><h2 class="rm-h2" id="h-who">Who runs it, and its link to TsBST</h2>{who}{tie}</section>
+  <section aria-labelledby="h-circle"><h2 class="rm-h2" id="h-circle">Where it meets TsBST's circle and the 205th brigade</h2>{circle}
+    <p class="note"><span class="rm-grade rep">Reported</span> The school's, TsBST's and the register's own text, joined by a name. The
+    school's tie to TsBST is still not documented.</p></section>
   <section aria-labelledby="h-pics"><h2 class="rm-h2" id="h-pics">Its own pictures</h2>
     <p>Stills from the project's own posts and videos: the build bench, the airframe in CAD, the flight controller, an
     observation device it released, and a recruitment video.</p>
@@ -309,7 +350,7 @@ def render(out: Path):
     <li>Every statement about training, units and the drone's performance is the project's own. None is confirmed by the units named.</li>
     <li>The parts list shows what the project says it uses. It does not show who sold the parts to it or how many drones were built.</li>
     <li>One instruction on how to load the drone is left out on purpose. The page is not sufficient to build the device it describes.</li>
-    <li>The tie to TsBST is one mention of the project's school as a user of a TsBST resident's product.</li>
+    <li>The tie to TsBST is one mention of the project's school as a user of a TsBST resident's product, and the school's forum calling that resident a partner.</li>
   </ul></section>
   <section class="prose rm-prose rm-sources"><h2 class="rm-h2">Sources</h2><ol>{P.notes_list()}</ol></section>
 </main>

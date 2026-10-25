@@ -1070,10 +1070,6 @@ class Landing(Chain):
             + self.un_quote("safari", f'UN paper A/HRC/59/CRP.2, para. 42, 28.05.2025{self.tref("un_crp")}'))
         np_ = self.ents[NP]
         rows = [
-            ("«Arkhangel» drone school", "open",
-             "TsBST's own channel says a resident's anti-drone simulator runs at the school's training centre in Tuapse"
-             + self.tref("cbst_1562") + ". The school's channel recruits operators for the 205th brigade" + self.tref("arch_9067")
-             + ". The school says it trains within Bars-Sarmat, Dmitry Rogozin's drone centre" + self.ref("s6915") + "."),
             ("Bars-Sarmat", "rep",
              "Its commander, Dmitry Rogozin, says the centre fights for the commander of the Airborne Forces and that units of "
              "the «Dnepr» Group of Forces fit its munitions to their assault drones" + self.tref("rog_8057") + self.tref("rog_7780") + "."),
@@ -1094,23 +1090,20 @@ class Landing(Chain):
             intro +
             '<h3 class="rm-h3">What TsBST\'s circle says about that front</h3>'
             f'<ul class="ledger front" aria-label="Ties to the formations the UN names">{"".join(lis)}</ul>'
-            + self.oq("arch_10667", f'«Arkhangel», Telegram, 17.08.2026{self.tref("arch_10667")}')
-            + self.oq("arch_9067", f'«Arkhangel», Telegram, 01.12.2025{self.tref("arch_9067")}')
-            + (f'<p>DW\'s film on the Beryslav attacks shows the school too: over footage of men soldering a drone, watermarked '
-               f'with the school\'s channel address, the narration says “This Russian volunteer group proudly posts on Telegram” '
-               f'how it makes drones and trains operators{self.tref("dw_film")}. The film does not say the school supplied the '
-               f'205th.</p>')
-            + (f'<p>The school\'s forum channel calls Kvadrosim, the simulator maker TsBST names as a resident, “our partners”, '
-               f'and says the heads of its Moscow branch, among them {self.person_pop("shatrakova-anastasiya-artemovna")}, '
-               f'presented an interceptor called «Arkhangel» to a security agency together with that company'
-               f'{self.tref("arch_175293")}. TsBST\'s own post names an Anastasia Shatrakova as general director of the '
-               f'interceptor maker «Arkhangel», a finalist of its accelerator{self.tref("cbst_1976")}. No document on file ties '
-               f'the school to TsBST.</p>')
-            + self.band(self.pics(["proekt-kb-arkhangel"]), "The «Arkhangel» school's own channel: its lab bench, a device it "
-                        "builds, its flight-instruction video and its recruitment video. Its tie to TsBST is not documented.", big=2)
             + self.band(self.pics(["csn-bars-sarmat"]), "Bars-Sarmat's own, from its stand at «Dronnitsa 2025», a gathering "
-                        "of combat drone operators in Novgorod region, 6–7 September 2025.", big=2) +
-            '<h3 class="rm-h3">What the units say about their targets</h3>'
+                        "of combat drone operators in Novgorod region, 6–7 September 2025.", big=2)
+            + '<h3 class="rm-h3">A school that recruits for the 205th brigade</h3>'
+            + ('<p>TsBST\'s own channel says a resident\'s anti-drone simulator runs at the «Arkhangel» drone school\'s training '
+               f'centre in Tuapse{self.tref("cbst_1562")}. The school\'s own channel recruits operators for the 205th brigade and '
+               f'says it trains within Bars-Sarmat, Dmitry Rogozin\'s drone centre{self.ref("s6915")}. No document ties the school to '
+               'TsBST; it is the circle\'s word and the school\'s.</p>')
+            + self.oq("arch_9067", f'«Arkhangel», Telegram, 01.12.2025{self.tref("arch_9067")}')
+            + self.oq("arch_10667", f'«Arkhangel», Telegram, 17.08.2026{self.tref("arch_10667")}')
+            + self.band([m for m in self.pics(["proekt-kb-arkhangel"]) if m["id"] in ("m0052", "m0047")],
+                        "The school's own channel: its recruitment video and its assembly bench.", big=2, lead=("m0052", "m0047"))
+            + (f'<p class="note"><a href="{esc(MORE[1][3])}">The full «Arkhangel» file: products, parts list, partners and ties →</a></p>'
+               if self.preview else "") +
+                        '<h3 class="rm-h3">What the units say about their targets</h3>'
             f'<p>The Commission reproduces posts of a Kherson-front channel, «From Mariupol to the Carpathians», as figures in '
             f'its paper{self.tref("un_crp")}. The channel signs its strike videos with the units\' names. Under footage of the '
             f'205th brigade:</p>'
