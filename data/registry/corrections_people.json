@@ -6476,6 +6476,38 @@
       },
       "verified_against": "@er_molnia 13107 (L0329) and the signed posts @ZurabMakiev 1186, 1189, 1245 (L0338, L0342); read in full 25.10.2026",
       "why": "role and notes carry a local source; no screening has been run"
+    },
+    "rogozin-dmitriy-olegovich": {
+      "set": {
+        "sanctions": [
+          {
+            "date": "2014-03-21",
+            "regime": [
+              "EU (Council Regulation 269/2014, Ukraine territorial-integrity regime)"
+            ],
+            "source_id": "L0394",
+            "note": "First listing, read in full: Council Implementing Regulation (EU) No 284/2014 of 21 March 2014 (OJ L 86, 21.3.2014, L0394), Annex entry 1: «Rogozin, Dmitry Olegovich d.o.b. 21.12.1963; in Moscow. Deputy Prime Minister of the Russian Federation. Publicly called for the annexation of Crimea.»; date of listing 21.3.2014. The EU list download of 25.10.2026 (L0354) carries him as EU.3515.39, last published in Implementing Regulation 2024/849 of 13.3.2024 (that act's entry not read). Identity: full name, patronymic and date of birth (21.12.1963) agree between the listing and the registry record «Рогозин Дмитрий Олегович» (dob 1963-12-21); the listing's office («Deputy Prime Minister of the Russian Federation») agrees with the record's description of him as former Deputy Prime Minister and Federation Council senator. No personal identifier is printed in the listing, so this is a name, patronymic and date-of-birth match, not an identifier match. The record's own link to Проект «Архангел» and ЦСН «Барс-Сармат» rests on its own sources (s6912, s6915, s7687), not on this listing."
+          },
+          {
+            "date": null,
+            "regime": [
+              "US (OFAC SDN, programme UKRAINE-EO13661)"
+            ],
+            "source_id": "L0389",
+            "note": "SDN list of 21.10.2026 (L0389), uid 16649, «Dmitry Olegovich ROGOZIN», DOB 21 Dec 1963, programme UKRAINE-EO13661; the XML gives no date of designation and no statement of reasons. The designation order itself is not read. Identity: full name, patronymic and date of birth (21.12.1963) agree between the listing and the registry record «Рогозин Дмитрий Олегович» (dob 1963-12-21); the listing's office («Deputy Prime Minister of the Russian Federation») agrees with the record's description of him as former Deputy Prime Minister and Federation Council senator. No personal identifier is printed in the listing, so this is a name, patronymic and date-of-birth match, not an identifier match. The record's own link to Проект «Архангел» and ЦСН «Барс-Сармат» rests on its own sources (s6912, s6915, s7687), not on this listing."
+          },
+          {
+            "date": null,
+            "regime": [
+              "UK (Russia (Sanctions) (EU Exit) Regulations 2019)"
+            ],
+            "source_id": "L0390",
+            "note": "UK Sanctions List (FCDO) of 16.10.2026 (L0390), RUS0122 «Rogozin, Dmitry», DOB 21/12/1963, designated 31/12/2020 as the list prints it (the date the UK regime took over the EU listing). The UK statement of reasons is not read. Identity: full name, patronymic and date of birth (21.12.1963) agree between the listing and the registry record «Рогозин Дмитрий Олегович» (dob 1963-12-21); the listing's office («Deputy Prime Minister of the Russian Federation») agrees with the record's description of him as former Deputy Prime Minister and Federation Council senator. No personal identifier is printed in the listing, so this is a name, patronymic and date-of-birth match, not an identifier match. The record's own link to Проект «Архангел» and ЦСН «Барс-Сармат» rests on its own sources (s6912, s6915, s7687), not on this listing."
+          }
+        ]
+      },
+      "verified_against": "Council Implementing Regulation (EU) No 284/2014, read in full 25.10.2026 via CELLAR (L0394); SDN and UK list downloads of 21.10 and 16.10.2026",
+      "why": "sanctions[] was empty although the person is listed by the EU since 21.03.2014; found with scripts/eu_cellar.py"
     }
   },
   "people_add_entities": [
