@@ -92,6 +92,7 @@ OPENING_SOURCES = {
                 "https://commons.wikimedia.org/wiki/File:Small_emblem_of_the_Russian_Airborne_Forces.svg"),
     "emb_gru": ("Emblem of the GRU's special-purpose units as circulated (not an official emblem), public domain, Wikimedia Commons",
                 "https://commons.wikimedia.org/wiki/File:Spetsnaz_emblem.svg"),
+    "rm_logo": ("ROY.MARKET's logo, as served by the platform's own site, roimarket.ru", "https://roimarket.ru/logo-400.png"),
     "er_logo": ("United Russia's logo, as hosted on Russian Wikipedia and credited there to the party's official site",
                 "https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%BF%D0%B0%D1%80%D1%82%D0%B8%D0%B8_%22%D0%95%D0%B4%D0%B8%D0%BD%D0%B0%D1%8F_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%22.svg"),
 }
@@ -349,10 +350,10 @@ class Landing(Chain):
 
         def lat(slug):
             return display_name(self.ents[slug])["latin"]
-        W, H = 1110, 350
+        W, H = 1150, 350
         box = {}
         pics = {}
-        for key, mid, kind in (("sid", "m0092", "face"), ("ur", "m0093", "logo")):
+        for key, mid, kind in (("sid", "m0092", "face"), ("ur", "m0093", "logo"), ("rm", "m0094", "logo")):
             m = next((x for x in self.media if x["id"] == mid), None)
             src = self.img(m) if m else None
             if src:
@@ -393,7 +394,7 @@ class Landing(Chain):
              node("sid", 380, 270, 190, "Aleksandr Sidyakin", "board secretary", pic=pics.get("sid")),
              node("units", 760, 22, 140, "Military units", "recipients"),
              node("mptm", 760, 146, 140, lat(MPTM), "company"),
-             node("rm", 970, 146, 130, "ROY.MARKET", "catalogue is login-only")]
+             node("rm", 970, 146, 170, "ROY.MARKET", "login-only catalogue", pic=pics.get("rm"))]
         e = [edge("np", "cbst", gr["np"], "co-founder", by=160, dx=-14, dy=-14),
              edge("psb", "cbst", gr["psb"], "co-founder", by=175, dx=-4, dy=-5),
              edge("ur", "cbst", gr["ur"], "named by TsBST as a founder", by=190, dx=46, dy=2),
@@ -439,7 +440,7 @@ class Landing(Chain):
                 f'<figcaption>Line style is the grade of the evidence, as in the key at the foot of the page. The notes for each '
                 f'line are in the list. The emblems under "Military units" stand for the kinds of unit the posts name as recipients: '
                 f'{", ".join(self._arm_names)}. They do not say which unit got which item. Pictures: Sidyakin, Karmaks, 2016, CC BY-SA 4.0{self.tref("sid_photo")}; the party\'s '
-                f'logo{self.tref("er_logo")}.</figcaption></figure>')
+                f'logo{self.tref("er_logo")}; ROY.MARKET\'s logo from its own site{self.tref("rm_logo")}.</figcaption></figure>')
 
     def found(self, n, sanc):
         """What the investigation found, in five lines, each graded, each pointing to its section. Says nothing the
