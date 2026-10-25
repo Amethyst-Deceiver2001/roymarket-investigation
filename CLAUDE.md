@@ -108,6 +108,7 @@ Never stage the held files listed in `notes/rebuild_plan.md` ("Held, never commi
 **Jobs:**
 - Live third-party work at scale (`tg_scan.py`, `tg_scan_users.py`, `tg_media_pull.py download`, batch ЕГРЮЛ/БФО/zakupki/ЕГРИП/ФНС sweeps) is handed to the user as an exact command, never run or backgrounded.
 - Single lookups are fine inline.
+- **Capped batches (user, 25.10.2026):** a pull of up to 30 ИНН, contracts or lists from one non-Telegram service (БФО, ЕГРЮЛ extracts, zakupki, sanctions-list downloads, GUR) may be run inline, in the background with output to a log, one script at a time; read only the tail. Telegram jobs, OpenSanctions (monthly quota) and anything over the cap stay with the user.
 - A local job over ~100 files or ~2 minutes: say so, run it in the background, report when it ends.
 - Read `notes/reference/script_notes.md` before running or changing a pull or screening script. It covers the parser lessons: sample before a full run; an all-null field is a parser bug; non-profit `funds_*` is never revenue.
 

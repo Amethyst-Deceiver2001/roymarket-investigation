@@ -11107,7 +11107,25 @@
       "confidence": null,
       "_verified": true,
       "_verified_against": "EGRUL_7702330228_20261024_inn-7702330228.pdf (ЕГРЮЛ выписка of 24.10.2026, read in full)",
-      "_origin": "corrections:add_entities"
+      "_origin": "corrections:add_entities",
+      "sanctions": [
+        {
+          "date": "2022-12-16",
+          "regime": [
+            "EU (Council Regulation 2022/2476 of 16.12.2022, Ukraine territorial-integrity regime; entry EU.9357.37)"
+          ],
+          "source_id": "L0354",
+          "note": "Listed by the EU under the entity's own identifiers. The EU consolidated list (downloaded 25.10.2026, read in full for this entry) names \"United Russia\" / «Единая Россия», address 39th Building, Kutuzovsky Prospekt, Moscow, and carries OGRN 1037739350934 and INN 7702330228, identical to this record; designation date 16.12.2022 (Regulation 2022/2476); the entry was amended by Regulation 2024/2455 (13.09.2024). Found by sanctions_watch.py (identifier match); the registry had no entry before 25.10.2026."
+        },
+        {
+          "date": null,
+          "regime": [
+            "Switzerland (SECO sanctions list, Art. 15 financial sanctions and Art. 29 travel ban, annexe 8; entry 58364)"
+          ],
+          "source_id": "L0355",
+          "note": "Listed by Switzerland under the entity's own identifiers. The SECO list (downloaded 25.10.2026, read in full for this entry) names \"United Russia\" / «Единая Россия» with OGRN 1037739350934 and INN 7702330228, identical to this record, and justifies the listing by its support for the war and for the annexation of the Donetsk, Luhansk, Zaporizhzhia and Kherson regions. The listing date is not stated in the extract; the last amendment is dated 12.12.2024 (published 13.12.2024), so date is left null."
+        }
+      ]
     },
     {
       "slug": "bf-veterany-svo-i-kto",
