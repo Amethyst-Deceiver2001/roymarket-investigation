@@ -95,7 +95,7 @@ class Story:
     def __init__(self):
         self.ent = {e["slug"]: e for e in load("entities.json")}[SLUG]
         self.src = {s["id"]: s for s in load("sources.json")}
-        self.quotes = {q["text_ru"][:60]: q for q in load("quotes.json")}
+        self.quotes = {q["id"]: q for q in load("quotes.json")}   # keyed by id: two quotes can open with the same 60 characters
         self.media = {m["id"]: m for m in load("media.json")}
         self.notes: list[str] = []
         self.uses: dict[str, int] = {}
@@ -131,7 +131,8 @@ class Story:
         return doc.replace("@@NOTES@@", "".join(items))
 
     def quote(self, ru_start: str) -> dict:
-        q = next((q for k, q in self.quotes.items() if q["text_ru"].startswith(ru_start)), None)
+        hits = [q for q in self.quotes.values() if q["text_ru"].startswith(ru_start)]
+        q = next((q for q in hits if q.get("source_id")), hits[0] if hits else None)   # the sourced one when a quote appears twice
         assert q, f"quote not in quotes.json: {ru_start}"
         return q
 
