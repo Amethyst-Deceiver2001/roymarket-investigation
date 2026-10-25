@@ -1105,7 +1105,8 @@ class Landing(Chain):
             f'during the attacks, while saying they could not prove who carried them out{self.tref("cir")}. A channel that posts '
             f'the brigade\'s footage places it in the 49th Army{self.tref("osv_27702")}. A senior '
             f'doctor at a Kherson hospital told the Commission:</p>'
-            + self.un_quote("safari", f'UN paper A/HRC/59/CRP.2, para. 42, 28.05.2025{self.tref("un_crp")}'))
+            + self.un_quote("safari", f'UN paper A/HRC/59/CRP.2, para. 42, 28.05.2025{self.tref("un_crp")}')
+            + self.kstill("osv_20993"))
         np_ = self.ents[NP]
         rows = [
             ("Bars-Sarmat", "rep",
