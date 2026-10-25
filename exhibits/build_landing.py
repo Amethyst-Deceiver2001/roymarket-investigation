@@ -461,7 +461,7 @@ class Landing(Chain):
             ("doc", "A state bank and a donor foundation co-found it", "#h-hub",
              "TsBST's registered co-founders are Bank PSB and the Nasha Pravda foundation, which has posted handovers of "
              "drone detectors to military units."),
-            ("rep", "The ruling party sits above it", "#h-hub",
+            ("rep", "The ruling party among its founders and on its board", "#h-hub",
              "TsBST names United Russia as a third founder, and the head of the party's central executive committee is "
              "secretary of its supervisory board."),
             ("rep", "Supply to a front the UN names", "#h-front",
@@ -942,7 +942,7 @@ class Landing(Chain):
         nodes = [("8 October", "Zaporizhzhia", "The head of the regional administration reports that an FPV drone hit the coat of arms on its building.", "rep"),
                  ("19 October", "Gagaring", "The maker posts a video of “the results” of its Kuznechik and Sova 5.8.", "rep"),
                  ("20 October", "TsBST", "Re-posts it as “a TsBST resident showed footage of the strike” and names both products.", "rep"),
-                 ("Order line", "ROY.MARKET", "“Servicemen can order them” there. The catalogue is behind a login, so TsBST's post is the only evidence.", "rep")]
+                 ("Order line", "ROY.MARKET", "TsBST says servicemen can order both products there. The catalogue is behind a login: the post is the only evidence they are listed.", "rep")]
         joins = [("open", "neither post dates the strike"), ("rep", "same video"), ("rep", "sales line")]
         return (
             self.gag_video()
@@ -954,10 +954,11 @@ class Landing(Chain):
             f'products used, and closed with a sales line:</p>'
             + self.oq("cbst", f"TsBST, Telegram, 20.10.2026{self.tref('cbst')}")
             + f'<ol class="flow" aria-label="From the strike report to the order line">{self.flow_html(nodes, joins)}</ol>' +
-            f'<p>TsBST calls the city “occupied”. Zaporizhzhia is held by Ukraine; the building is the seat of its regional '
-            f'government. On 8 October the head of the regional administration reported that an FPV drone had hit the coat '
-            f'of arms on its façade: smoke, no fire, nobody hurt{self.tref("ukrinform")}. ROY.MARKET is TsBST\'s own '
-            f'marketplace for military units. '
+            f'<p>TsBST\'s post calls the city “occupied”. Zaporizhzhia is held by Ukraine, and the building is the seat of its '
+            f'regional government. On 8 October the head of the regional administration reported that an FPV drone had hit the coat '
+            f'of arms on its façade: smoke, no fire, nobody hurt{self.tref("ukrinform")}. ROY.MARKET is a login-only '
+            f'marketplace that, by the post of TsBST\'s board secretary, a United Russia official, TsBST launched with the party '
+            f'and Bank PSB{self.ref("s8847")}. '
             + ("" if listed else "No sanctions listing for the maker is on file. ") +
             '</p><p class="note"><span class="rm-grade rep">Reported</span> Both posts are the parties\' own word. The video is '
             'consistent with the report of 8 October, but neither post dates the strike.</p>'
@@ -1068,8 +1069,8 @@ class Landing(Chain):
             f'<p>TsBST\'s “dual-use” is the platform\'s own label. From August 2026 its page for prospective sellers opened with '
             f'{orig_line(d_ru, "rm-dual", d_en)}{self.tref("rm_aug")} The copy archived on 12 October still did'
             f'{self.tref("rm_oct")}. By 24 October the same sentence read {orig_line(s_ru, "rm-special", s_en)}'
-            f'{self.tref("rm_now")} The kamikaze drone in TsBST\'s post used the two products it advertises; the platform\'s '
-            f'public terms and buyer offer use neither phrase.</p>')
+            f'{self.tref("rm_now")} The platform\'s public terms and buyer offer use neither '
+            f'phrase.</p>')
 
     @staticmethod
     def un_quote(key, cite):
@@ -1178,7 +1179,7 @@ class Landing(Chain):
         recruit = self.mclaim(MPTM, "s8854")
         return (
             f'<p class="lede">In December 2025 Sidyakin wrote that the party, Bank PSB and TsBST had launched a military '
-            f'marketplace. In August 2026 it opened to outside sellers and named the ones it wanted first:</p>'
+            f'marketplace{self.ref("s8847")}. In August 2026 it opened to outside sellers and named the ones it wanted first:</p>'
             + quote_html(recruit["text_ru"], latinize_gloss(recruit["text_en"]),
                          f"ROY.MARKET's announcement, {ru_date(recruit['as_of'])}{self.ref(recruit['source_id'])}", "q-recruit")
             + self.step_shot(3, "ROY.MARKET's page for prospective sellers, 24.10.2026. The catalogue itself is behind a login.")
@@ -1383,8 +1384,8 @@ def render(preview: bool, out: Path):
   <p class="rm-eyebrow">Draft · {ru_date(today)}</p>
   <h1 class="rm-h1">TsBST and ROY.MARKET <span class="rm-muted">a Moscow non-profit, its military marketplace, and the drone-war supply around it</span></h1>
   <p class="rm-dek">An open-source investigation of ANO «TsBST», a Moscow non-profit for the drone industry, and of the
-  companies, products, sales and handovers to military units that connect to it. Every claim rests on an archived
-  document and is graded by how well that document shows it.</p>
+  companies around it: what they make, who sells it, and which military units receive it. Every claim rests on an
+  archived document and is graded by how well that document shows it.</p>
   {hero_credit}
 </header></div>
 {TOC}
