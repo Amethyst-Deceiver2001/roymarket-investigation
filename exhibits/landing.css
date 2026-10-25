@@ -291,3 +291,6 @@ main section > .rm-h2 { margin-top: 0; }
 /* Quotes in the marketplace section keep the reading width of the quotes elsewhere */
 .origin .rm-quote { max-width: 720px; margin: 0 0 var(--space-3); }
 .blind.one { grid-template-columns: minmax(0, 1fr); max-width: 720px; }
+/* Profiles and stories: three groups, each under its own heading */
+[aria-labelledby="h-chains"] .rm-h3 { margin: var(--space-5) 0 var(--space-3); }
+[aria-labelledby="h-chains"] .note { margin: calc(-1 * var(--space-2)) 0 var(--space-3); }

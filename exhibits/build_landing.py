@@ -1228,17 +1228,18 @@ class Landing(Chain):
                          f'{"</a>" if href else ""}{ref}</h3>{self.sanctions(e)}'
                          + (f'<p class="go"><a href="{esc(href)}">Open the company file →</a></p>' if href
                             else '<p class="go wait">The company file is in review and not yet public.</p>') + '</article>')
-        if preview and STORY:
-            cards.append(f'<article class="rm-card chain-card"><header><span class="rm-kind">Story</span>{self.logo(NP)}</header>'
-                         f'<h3 class="rm-name"><a href="{esc(STORY)}">Aid for the Zone</a><small>How {self.en(self.ents[NP])} '
-                         f'raises money, co-founded TsBST and hands equipment to units</small></h3>'
-                         f'<p class="go"><a href="{esc(STORY)}">Read the story →</a></p></article>')
         if preview:
             for kind, title, line, url in MORE:
                 cards.append(f'<article class="rm-card chain-card"><header><span class="rm-kind">{esc(kind)}</span></header>'
                              f'<h3 class="rm-name"><a href="{esc(url)}">{esc(title)}</a><small>{esc(line)}</small></h3>'
                              f'<p class="go"><a href="{esc(url)}">Open →</a></p></article>')
-        return "".join(cards)
+        stories = []
+        if preview and STORY:
+            stories.append(f'<article class="rm-card chain-card"><header><span class="rm-kind">Story</span>{self.logo(NP)}</header>'
+                           f'<h3 class="rm-name"><a href="{esc(STORY)}">Aid for the Zone</a><small>How {self.en(self.ents[NP])} '
+                           f'raises money, co-founded TsBST and hands equipment to units</small></h3>'
+                           f'<p class="go"><a href="{esc(STORY)}">Read the story →</a></p></article>')
+        return "".join(cards), "".join(stories)
 
     def chain_card(self, slug, href):
         """href None: the chain view is not public yet, so the card states that instead of linking."""
@@ -1254,9 +1255,7 @@ class Landing(Chain):
         return (f'<article class="rm-card chain-card"><header><span class="rm-kind">Chain view</span>{logo}</header>'
                 f'<h3 class="rm-name">{f"<a href={chr(34)}{esc(href)}{chr(34)}>{esc(ch.pq_en)}</a>" if href else esc(ch.pq_en)}<small>{esc(cap(p.get("category")))} made by '
                 f'{ch.en(m)}{(" (" + esc(display_name(m)["latin"]) + ")") if display_name(m)["legal"] else ""}</small><small class="cyr" lang="ru">{esc(ch.pq)}</small></h3>'
-                f'{regimes}<dl class="counts"><div><dt>Sale channels</dt><dd>{len(ch.rows)}</dd></div>'
-                f'<div><dt>Listings</dt><dd>{n_list}</dd></div><div><dt>State contracts</dt><dd>{n_buy}</dd></div>'
-                f'<div><dt>Handovers to units</dt><dd>{n_del}</dd></div></dl>'
+                f'{regimes}'
                 + (f'<p class="go"><a href="{esc(href)}">Follow {esc(ch.pq_en)} from TsBST to the front line →</a></p>' if href
                    else '<p class="go wait">The chain view is in review and not yet public.</p>') + '</article>')
 
@@ -1276,7 +1275,7 @@ def unique_popovers(doc):
 # The chain view's picture viewer, shared rather than copied: everything in chain_view.js from its comment on.
 # The contents bar: (section heading id, short label), in page order.
 TOC_ITEMS = [("h-found", "What we found"), ("h-open", "The strike"), ("h-limits", "Limits"), ("h-hub", "Who stands behind"), ("h-front", "The front"),
-             ("h-beyond", "Beyond the shop"), ("h-origin", "The marketplace"), ("h-chains", "Products"), ("h-net", "Network"),
+             ("h-beyond", "Beyond the shop"), ("h-origin", "The marketplace"), ("h-chains", "Profiles"), ("h-net", "Network"),
              ("h-read", "How to read"), ("h-method", "Method"), ("h-sources", "Sources")]
 TOC = ('<nav class="toc" aria-label="Contents"><ol>' + "".join(f'<li><a href="#{i}">{esc(t)}</a></li>' for i, t in TOC_ITEMS)
        + '</ol></nav>')
@@ -1350,7 +1349,7 @@ def render(preview: bool, out: Path):
     origin, timeline = L.origin(), L.timeline()
     chains = "".join(L.chain_card(s, url if preview else (f"chain_{s}.html" if (out.parent / f"chain_{s}.html").exists() else None))
                      for s, url in CHAINS.items())
-    extra_cards = L.more_cards(preview)
+    file_cards, story_cards = L.more_cards(preview)
     n, by, sanc = L.network()
     shown = {m["id"] for m in L.pics(["ooo-gagaring", "ano-dpo-obrazovatelny-tsentr-gagaring", NP, "csn-bars-sarmat", "proekt-kb-arkhangel"])}
     # Product, stand and handover pictures that the makers publish of themselves. Showrooms, customer photos, interview
@@ -1439,10 +1438,16 @@ def render(preview: bool, out: Path):
   </section>
 
   <section aria-labelledby="h-chains">
-    <h2 class="rm-h2" id="h-chains">Follow a product</h2>
-    <p class="lede">A chain view follows one product from TsBST and its events to the maker, the shops and dealers that
-    sell it, the state agencies that buy it and the units that receive it. Each line is drawn in the style of its evidence.</p>
-    <div class="chains">{chains}{extra_cards}</div>
+    <h2 class="rm-h2" id="h-chains">Profiles and stories</h2>
+    <p class="lede">The investigation's longer pieces, each its own page: a chain view for a product, a file for a company,
+    a project or a set of people, and narrative stories.</p>
+    <h3 class="rm-h3">Follow a product</h3>
+    <p class="note">A chain view follows one product from TsBST and its events to the maker, the shops and dealers that sell it, the
+    state agencies that buy it and the units that receive it. Each line is drawn in the style of its evidence.</p>
+    <div class="chains">{chains}</div>
+    <h3 class="rm-h3">Company, project and people files</h3>
+    <div class="chains">{file_cards}</div>
+    {('<h3 class="rm-h3">Stories</h3><div class="chains">' + story_cards + '</div>') if story_cards else ''}
   </section>
 
   <section aria-labelledby="h-net">
