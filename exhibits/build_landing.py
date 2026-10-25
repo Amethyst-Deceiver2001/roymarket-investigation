@@ -86,6 +86,12 @@ OPENING_SOURCES = {
     "gag_2811": ("Telegram, @my_el_lab (Gagaring), post 2811, 23.12.2025", "https://t.me/my_el_lab/2811"),
     # Pictures in the ties diagram (25.10.2026): the credit and licence the photograph needs travel with it.
     "sid_photo": ("Photograph of Aleksandr Sidyakin by Karmaks, 28.09.2016, Wikimedia Commons, licence CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:SidyakinA.G..jpg"),
+    "emb_sv": ("Small emblem of the Russian Ground Forces (collar insignia), public domain, Wikimedia Commons",
+               "https://commons.wikimedia.org/wiki/File:Small_emblem_of_the_Russian_Ground_Forces.svg"),
+    "emb_vdv": ("Small emblem of the Russian Airborne Forces, public domain, Wikimedia Commons",
+                "https://commons.wikimedia.org/wiki/File:Small_emblem_of_the_Russian_Airborne_Forces.svg"),
+    "emb_gru": ("Emblem of the GRU's special-purpose units as circulated (not an official emblem), public domain, Wikimedia Commons",
+                "https://commons.wikimedia.org/wiki/File:Spetsnaz_emblem.svg"),
     "er_logo": ("United Russia's logo, as hosted on Russian Wikipedia and credited there to the party's official site",
                 "https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%BF%D0%B0%D1%80%D1%82%D0%B8%D0%B8_%22%D0%95%D0%B4%D0%B8%D0%BD%D0%B0%D1%8F_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%22.svg"),
 }
@@ -401,22 +407,29 @@ class Landing(Chain):
         ux = box["ur"][0] + box["ur"][2]
         e[4] = (f'<path d="M{sx} {sy} L{ux + 6} {sy}" class="rm-ln {gr["sid"]}" marker-end="url(#ah3)"/>'
                 f'<text x="{(sx + ux) / 2}" y="{sy + 19}" class="lbl" text-anchor="middle">heads its central committee</text>')
-        # Marks for the arms the handover posts' recipients name (counted from the delivery record), under the units box:
-        # a monochrome hostile frame with a glyph, as the design system draws unit marks. They show what kinds of unit
-        # the posts name, not which unit got which item.
-        arms = [("airborne", "airborne and air-assault", r"десантн|ВДВ|воздушно-десант", '<path d="M7.6 14.2Q12 7 16.4 14.2"/>'),
-                ("army", "army and motor-rifle", r"мотострелк|ОМСБР|армия|армии|армей", '<path d="M7.5 7.5L16.5 16.5M16.5 7.5L7.5 16.5"/>'),
-                ("recon", "reconnaissance", r"разведк|разведотряд", '<path d="M7.5 16.5L16.5 7.5"/>'),
-                ("sf", "special forces", r"спецназ|специального назначения",
-                 '<text x="12" y="14.6" text-anchor="middle" class="sf">SF</text>')]
+        # Emblems of the arms the handover posts' recipients name (counted from the delivery record), under the units box.
+        # They show what kinds of unit the posts name, not which unit got which item.
+        arms = [("army", "army and motor-rifle (and reconnaissance)", r"мотострелк|ОМСБР|армия|армии|армей|разведк|разведотряд",
+                 "ground-forces", "emb_sv"),
+                ("airborne", "airborne and air-assault", r"десантн|ВДВ|воздушно-десант", "airborne-forces", "emb_vdv"),
+                ("sf", "special forces", r"спецназ|специального назначения", "spetsnaz-gru", "emb_gru")]
         recip = [e.get("recipient") or "" for e in json.loads((REPO / "data" / "registry" / "deliveries.json").read_text())]
-        marks, kinds, mx = [], [], 760 + 70 - 12 * 1.0
-        shown = [(k, name, g) for k, name, rx, g in arms if any(re.search(rx, r, re.I) for r in recip)]
-        mx = 760 + 70 - 21 * len(shown) + 3
-        for i, (k, name, g) in enumerate(shown):
-            marks.append(f'<g transform="translate({mx + 42 * i:.1f} 88) scale(1.5)" class="arm"><title>{esc(name)}</title>'
-                         f'<path d="M12 1.5l10.5 10.5L12 22.5 1.5 12z" class="fr"/>{g}</g>')
-            kinds.append(name)
+        shown = [a for a in arms if any(re.search(a[2], r, re.I) for r in recip)]
+        marks, kinds = [], []
+        mx = 760 + 70 - 37 * len(shown) + 4
+        edir = REPO / "exhibits" / "images" / "emblems"
+        for i, (k, name, rx, fname, key) in enumerate(shown):
+            rel = f"images/emblems/{fname}.svg"
+            dest = self.img_dir.parent / "emblems" / f"{fname}.svg"
+            if dest != edir / f"{fname}.svg":
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                dest.write_bytes((edir / f"{fname}.svg").read_bytes())
+            if (rel, dest) not in self.media_files:
+                self.media_files.append((rel, dest))
+            marks.append(f'<g transform="translate({mx + 74 * i:.1f} 84)" class="arm"><title>{esc(name)}</title>'
+                         f'<rect width="66" height="56" rx="5" class="fr"/>'
+                         f'<image href="{rel}" x="4" y="4" width="58" height="48" preserveAspectRatio="xMidYMid meet"/></g>')
+            kinds.append(f"{name}{self.tref(key)}")
         self._arm_names = kinds
         defs = ('<defs><marker id="ah3" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">'
                 '<path d="M0 0L8 4L0 8z" class="ah"/></marker></defs>')
@@ -424,8 +437,8 @@ class Landing(Chain):
                 f'aria-label="Who is tied to TsBST: its co-founders, its supervisory board secretary, the company it takes part '
                 f'in and the foundation\'s handovers to units">{defs}{"".join(e)}{"".join(n)}{"".join(marks)}</svg></div>'
                 f'<figcaption>Line style is the grade of the evidence, as in the key at the foot of the page. The notes for each '
-                f'line are in the list. The marks under "Military units" are the kinds of unit the posts name as recipients '
-                f'({", ".join(self._arm_names)}); they do not say which unit got which item. Pictures: Sidyakin, Karmaks, 2016, CC BY-SA 4.0{self.tref("sid_photo")}; the party\'s '
+                f'line are in the list. The emblems under "Military units" stand for the kinds of unit the posts name as recipients: '
+                f'{", ".join(self._arm_names)}. They do not say which unit got which item. Pictures: Sidyakin, Karmaks, 2016, CC BY-SA 4.0{self.tref("sid_photo")}; the party\'s '
                 f'logo{self.tref("er_logo")}.</figcaption></figure>')
 
     def found(self, n, sanc):
