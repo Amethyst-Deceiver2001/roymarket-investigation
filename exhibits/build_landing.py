@@ -709,8 +709,7 @@ class Landing(Chain):
                 kind = "sole trader" if ip else ("company" if ent else "storefront, seller unidentified")
             rows.append(f'<li><span class="ch">{esc(latin_text(chan))}</span><span class="who">{who}</span>'
                         f'<span class="k">{esc(kind)}</span>{self.ref(li.get("source_id"))}</li>')
-        return (f'<div class="blind"><div class="side screen"><span class="rm-label">Screening by the maker\'s INN</span>'
-                f'<p class="zero">0</p><p>Wildberries sellers carrying {self.pop(self.p["maker"])}\'s INN in the earlier dataset</p></div>'
+        return (f'<div class="blind one">'
                 f'<div class="side found"><span class="rm-label">Where «Bulat» is actually sold</span><ul>{"".join(rows)}</ul></div></div>')
 
     def masked(self):

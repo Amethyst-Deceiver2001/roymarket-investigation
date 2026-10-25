@@ -290,3 +290,4 @@ main section > .rm-h2 { margin-top: 0; }
 .kstill .pic.big { grid-column: auto; grid-row: auto; }
 /* Quotes in the marketplace section keep the reading width of the quotes elsewhere */
 .origin .rm-quote { max-width: 720px; margin: 0 0 var(--space-3); }
+.blind.one { grid-template-columns: minmax(0, 1fr); max-width: 720px; }
