@@ -1,0 +1,5004 @@
+{
+ "as_of": "2026-10-25",
+ "lists": {
+  "us": {
+   "url": "https://www.treasury.gov/ofac/downloads/sdn.xml",
+   "sha256": "421c5f6ee841eb7c0e327eb0d6bdbe24cbb58091e3cbfd77d83dd41c7b5a5e08",
+   "bytes": 29245041,
+   "fetched": "2026-10-25T12:15:46+00:00",
+   "entries": 19471,
+   "with_ru_id": 3973,
+   "entry_tag": "sdnEntry",
+   "publish_date": "10/21/2026"
+  },
+  "eu": {
+   "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/xmlFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+   "sha256": "636800c3e494b2ef8934f51f5e23c914a6208a383ac850e674b1b35a7d49d34f",
+   "bytes": 25899600,
+   "fetched": "2026-10-25T12:15:46+00:00",
+   "entries": 6269,
+   "with_ru_id": 1071,
+   "entry_tag": "sanctionEntity",
+   "publish_date": "2026-10-23T17:05:43.888+02:00"
+  },
+  "ch": {
+   "url": "https://www.sesam.search.admin.ch/sesam-search-web/pages/downloadXmlGesamtliste.xhtml?lang=en&action=downloadXmlGesamtlisteAction",
+   "sha256": "e1ebf355f4854d22d623064c808e82dfdf16ea40c3be7d6c258c729d6228e64c",
+   "bytes": 42320666,
+   "fetched": "2026-10-25T12:15:46+00:00",
+   "entries": 17318,
+   "with_ru_id": 1819,
+   "entry_tag": "target",
+   "publish_date": "2026-10-20"
+  },
+  "uk": {
+   "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.xml",
+   "sha256": "8e71e2237d0dee3191d433f94ba6cec65ec76b5f0f3e9d2e42b4f3f992682281",
+   "bytes": 22051514,
+   "fetched": "2026-10-25T12:15:46+00:00",
+   "entries": 6408,
+   "with_ru_id": 519,
+   "entry_tag": "Designation",
+   "publish_date": "16/10/2026"
+  }
+ },
+ "hits": [
+  {
+   "list": "us",
+   "entry_id": "16864",
+   "identifier": "1117154036911",
+   "field": "ogrn",
+   "slug": "ao-kbp-shipunova",
+   "kind": "entity",
+   "registry_name": "АО «Конструкторское бюро приборостроения им. академика А. Г. Шипунова»",
+   "list_names": [
+    "INSTRUMENT DESIGN BUREAU",
+    "JSC KBP INSTRUMENT DESIGN BUREAU",
+    "KBP INSTRUMENT DESIGN BUREAU",
+    "KBP INSTRUMENT DESIGN BUREAU JOINT STOCK COMPANY",
+    "KBP OAO",
+    "KONSTRUKTORSKOE BYURO PRIBOROSTROENIYA OTKRYTOE AKTSIONERNOE OBSHCHESTVO"
+   ],
+   "programs": [
+    "UKRAINE-EO13661"
+   ],
+   "dates": [],
+   "refs": [
+    "UKRAINE-EO13661"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "17260",
+   "identifier": "1077799030847",
+   "field": "ogrn",
+   "slug": "gk-rostekh",
+   "kind": "entity",
+   "registry_name": "ГК «Ростех»",
+   "list_names": [
+    "STATE CORPORATION FOR THE PROMOTION OF THE DEVELOPMENT, MANUFACTURE, AND EXPORT OF HIGH TECH PRODUCTS ROSTEC",
+    "STATE CORPORATION ROSTEC"
+   ],
+   "programs": [
+    "RUSSIA-EO14024",
+    "UKRAINE-EO13662"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024",
+    "UKRAINE-EO13662"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "17260",
+   "identifier": "7704274402",
+   "field": "inn",
+   "slug": "gk-rostekh",
+   "kind": "entity",
+   "registry_name": "ГК «Ростех»",
+   "list_names": [
+    "STATE CORPORATION FOR THE PROMOTION OF THE DEVELOPMENT, MANUFACTURE, AND EXPORT OF HIGH TECH PRODUCTS ROSTEC",
+    "STATE CORPORATION ROSTEC"
+   ],
+   "programs": [
+    "RUSSIA-EO14024",
+    "UKRAINE-EO13662"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024",
+    "UKRAINE-EO13662"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "18774",
+   "identifier": "1037719005873",
+   "field": "ogrn",
+   "slug": "ao-tekhnodinamika",
+   "kind": "entity",
+   "registry_name": "АО «Технодинамика»",
+   "list_names": [
+    "AKTSIONERNOE OBSCHESTVO TEKHNODINAMIKA",
+    "AO TEKHNODINAMIKA",
+    "JOINT STOCK COMPANY AVIATION EQUIPMENT",
+    "JOINT STOCK COMPANY TEKHNODINAMIKA",
+    "JSC TEKHNODINAMIKA",
+    "TEKNODINAMIKA JSC"
+   ],
+   "programs": [
+    "RUSSIA-EO14024",
+    "UKRAINE-EO13662"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024",
+    "UKRAINE-EO13662"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "18774",
+   "identifier": "7719265496",
+   "field": "inn",
+   "slug": "ao-tekhnodinamika",
+   "kind": "entity",
+   "registry_name": "АО «Технодинамика»",
+   "list_names": [
+    "AKTSIONERNOE OBSCHESTVO TEKHNODINAMIKA",
+    "AO TEKHNODINAMIKA",
+    "JOINT STOCK COMPANY AVIATION EQUIPMENT",
+    "JOINT STOCK COMPANY TEKHNODINAMIKA",
+    "JSC TEKHNODINAMIKA",
+    "TEKNODINAMIKA JSC"
+   ],
+   "programs": [
+    "RUSSIA-EO14024",
+    "UKRAINE-EO13662"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024",
+    "UKRAINE-EO13662"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "34656",
+   "identifier": "1027739019142",
+   "field": "ogrn",
+   "slug": "pao-bank-psb",
+   "kind": "entity",
+   "registry_name": "ПАО «Банк ПСБ»",
+   "list_names": [
+    "OJSC PROMSVYAZBANK",
+    "PROMSVYAZBANK PAO",
+    "PROMSVYAZBANK PJSC",
+    "PROMSVYAZBANK PUBLIC JOINT STOCK COMPANY",
+    "PUBLICHNOE AKTSIONERNOE OBSHCHESTVO PROMSVYAZBANK"
+   ],
+   "programs": [
+    "RUSSIA-EO14024",
+    "UKRAINE-EO13662"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024",
+    "UKRAINE-EO13662"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "34656",
+   "identifier": "7744000912",
+   "field": "inn",
+   "slug": "pao-bank-psb",
+   "kind": "entity",
+   "registry_name": "ПАО «Банк ПСБ»",
+   "list_names": [
+    "OJSC PROMSVYAZBANK",
+    "PROMSVYAZBANK PAO",
+    "PROMSVYAZBANK PJSC",
+    "PROMSVYAZBANK PUBLIC JOINT STOCK COMPANY",
+    "PUBLICHNOE AKTSIONERNOE OBSHCHESTVO PROMSVYAZBANK"
+   ],
+   "programs": [
+    "RUSSIA-EO14024",
+    "UKRAINE-EO13662"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024",
+    "UKRAINE-EO13662"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "35156",
+   "identifier": "1117847020400",
+   "field": "ogrn",
+   "slug": "ao-nii-vektor",
+   "kind": "entity",
+   "registry_name": "АО «НИИ «Вектор»»",
+   "list_names": [
+    "AO NII VEKTOR",
+    "JOINT STOCK COMPANY SCIENTIFIC-RESEARCH INSTITUTE VEKTOR"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "35156",
+   "identifier": "7813491943",
+   "field": "inn",
+   "slug": "ao-nii-vektor",
+   "kind": "entity",
+   "registry_name": "АО «НИИ «Вектор»»",
+   "list_names": [
+    "AO NII VEKTOR",
+    "JOINT STOCK COMPANY SCIENTIFIC-RESEARCH INSTITUTE VEKTOR"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "35854",
+   "identifier": "1027809176141",
+   "field": "ogrn",
+   "slug": "ao-kronshtadt",
+   "kind": "entity",
+   "registry_name": "АО «Кронштадт»",
+   "list_names": [
+    "AKTSIONERNOE OBSHCHESTVO KRONSHTADT",
+    "AO KRONSHTADT",
+    "JOINT STOCK COMPANY KRONSHTADT"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "35854",
+   "identifier": "7808035536",
+   "field": "inn",
+   "slug": "ao-kronshtadt",
+   "kind": "entity",
+   "registry_name": "АО «Кронштадт»",
+   "list_names": [
+    "AKTSIONERNOE OBSHCHESTVO KRONSHTADT",
+    "AO KRONSHTADT",
+    "JOINT STOCK COMPANY KRONSHTADT"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "37667",
+   "identifier": "1027807560186",
+   "field": "ogrn",
+   "slug": "npp-radar-mms",
+   "kind": "entity",
+   "registry_name": "АО «НПП «Радар ММС»»",
+   "list_names": [
+    "JOINT STOCK COMPANY RADAR MMS",
+    "JOINT STOCK COMPANY RESEARCH AND PRODUCTION ENTERPRISE RADAR MMS",
+    "RADAR MMS NPP",
+    "SCIENTIFIC PRODUCTION ASSOCIATION RADAR MMS JSC"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "37667",
+   "identifier": "7814027653",
+   "field": "inn",
+   "slug": "npp-radar-mms",
+   "kind": "entity",
+   "registry_name": "АО «НПП «Радар ММС»»",
+   "list_names": [
+    "JOINT STOCK COMPANY RADAR MMS",
+    "JOINT STOCK COMPANY RESEARCH AND PRODUCTION ENTERPRISE RADAR MMS",
+    "RADAR MMS NPP",
+    "SCIENTIFIC PRODUCTION ASSOCIATION RADAR MMS JSC"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "37792",
+   "identifier": "1147746392200",
+   "field": "ogrn",
+   "slug": "ooo-rt-razvitie-biznesa",
+   "kind": "entity",
+   "registry_name": "ООО «РТ-Развитие бизнеса»",
+   "list_names": [
+    "RT-BUSINESS DEVELOPMENT",
+    "RT-RAZVITIE BIZNESA, OOO"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "37792",
+   "identifier": "7704861136",
+   "field": "inn",
+   "slug": "ooo-rt-razvitie-biznesa",
+   "kind": "entity",
+   "registry_name": "ООО «РТ-Развитие бизнеса»",
+   "list_names": [
+    "RT-BUSINESS DEVELOPMENT",
+    "RT-RAZVITIE BIZNESA, OOO"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "37823",
+   "identifier": "781002279818",
+   "field": "inn_personal",
+   "slug": "andrey-turchak",
+   "kind": "person",
+   "registry_name": "Андрей Турчак",
+   "list_names": [
+    "Andrei",
+    "Andrey Anatolyevich",
+    "TURCHAK"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [
+    "dateOfBirth=20 Dec 1975"
+   ],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "39179",
+   "identifier": "7735582816",
+   "field": "inn",
+   "slug": "npts-elvis",
+   "kind": "entity",
+   "registry_name": "АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС)",
+   "list_names": [
+    "ELVEES R AND D CENTER JSC",
+    "ELVEES R&D CENTER JSC",
+    "ELVEES RESEARCH AND DEVELOPMENT CENTER JSC",
+    "JOINT STOCK COMPANY SCIENTIFIC AND PRODUCTION CENTER ELECTRONIC COMPUTING AND INFORMATION SYSTEMS",
+    "JSC SPC ELVIS"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "47713",
+   "identifier": "1237800084235",
+   "field": "ogrn",
+   "slug": "ooo-trimiks",
+   "kind": "entity",
+   "registry_name": "ООО «Тримикс»",
+   "list_names": [
+    "3MX",
+    "LIMITED LIABILITY COMPANY TRIMIX",
+    "OBSHCHESTVO S OGRANICHENNOI OTVETSTVENNOSTIU 3MKH"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "47713",
+   "identifier": "7802942873",
+   "field": "inn",
+   "slug": "ooo-trimiks",
+   "kind": "entity",
+   "registry_name": "ООО «Тримикс»",
+   "list_names": [
+    "3MX",
+    "LIMITED LIABILITY COMPANY TRIMIX",
+    "OBSHCHESTVO S OGRANICHENNOI OTVETSTVENNOSTIU 3MKH"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "48441",
+   "identifier": "1225000003458",
+   "field": "ogrn",
+   "slug": "ooo-tskbr",
+   "kind": "entity",
+   "registry_name": "ООО «ЦКБР»",
+   "list_names": [
+    "COMPLEX UNMANNED SOLUTIONS CENTER LTD",
+    "USC LTD"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "48441",
+   "identifier": "5040176793",
+   "field": "inn",
+   "slug": "ooo-tskbr",
+   "kind": "entity",
+   "registry_name": "ООО «ЦКБР»",
+   "list_names": [
+    "COMPLEX UNMANNED SOLUTIONS CENTER LTD",
+    "USC LTD"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "48496",
+   "identifier": "7735140825",
+   "field": "inn",
+   "slug": "ooo-eliars",
+   "kind": "entity",
+   "registry_name": "ООО «Элиарс»",
+   "list_names": [
+    "LIMITED LIABILITY COMPANY ELIARS"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "49193",
+   "identifier": "1232700009398",
+   "field": "ogrn",
+   "slug": "ooo-aero-khit",
+   "kind": "entity",
+   "registry_name": "ООО «Аэро-Хит»",
+   "list_names": [
+    "LIMITED LIABILITY COMPANY AERO-HIT",
+    "LLC AERO-HIT"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "49193",
+   "identifier": "2700012608",
+   "field": "inn",
+   "slug": "ooo-aero-khit",
+   "kind": "entity",
+   "registry_name": "ООО «Аэро-Хит»",
+   "list_names": [
+    "LIMITED LIABILITY COMPANY AERO-HIT",
+    "LLC AERO-HIT"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "49243",
+   "identifier": "1125263004162",
+   "field": "ogrn",
+   "slug": "ooo-gruppa-promavto",
+   "kind": "entity",
+   "registry_name": "ООО «Группа ПРОМАВТО»",
+   "list_names": [
+    "GRUPPA PROMAVTO"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "49243",
+   "identifier": "5263093100",
+   "field": "inn",
+   "slug": "ooo-gruppa-promavto",
+   "kind": "entity",
+   "registry_name": "ООО «Группа ПРОМАВТО»",
+   "list_names": [
+    "GRUPPA PROMAVTO"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "49943",
+   "identifier": "1237300010430",
+   "field": "ogrn",
+   "slug": "ooo-skb-piranya",
+   "kind": "entity",
+   "registry_name": "ООО «СКБ Пиранья»",
+   "list_names": [
+    "LIMITED LIABILITY COMPANY SIMBIRSKOE KONSTRUKTORSKOE BYURO PIRANYA",
+    "SIMBIRSK DESIGN BUREAU",
+    "SKB PIRANHA",
+    "SKB PIRANYA"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "49943",
+   "identifier": "7300024069",
+   "field": "inn",
+   "slug": "ooo-skb-piranya",
+   "kind": "entity",
+   "registry_name": "ООО «СКБ Пиранья»",
+   "list_names": [
+    "LIMITED LIABILITY COMPANY SIMBIRSKOE KONSTRUKTORSKOE BYURO PIRANYA",
+    "SIMBIRSK DESIGN BUREAU",
+    "SKB PIRANHA",
+    "SKB PIRANYA"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "49954",
+   "identifier": "1236600057011",
+   "field": "ogrn",
+   "slug": "uraldronzavod",
+   "kind": "entity",
+   "registry_name": "ООО «Уралдронзавод»",
+   "list_names": [
+    "LIMITED LIABILITY COMPANY URALDRONZAVOD"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "49954",
+   "identifier": "6671284030",
+   "field": "inn",
+   "slug": "uraldronzavod",
+   "kind": "entity",
+   "registry_name": "ООО «Уралдронзавод»",
+   "list_names": [
+    "LIMITED LIABILITY COMPANY URALDRONZAVOD"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "50246",
+   "identifier": "1237700447324",
+   "field": "ogrn",
+   "slug": "ao-stratim",
+   "kind": "entity",
+   "registry_name": "АО «Стратим»",
+   "list_names": [
+    "JOINT STOCK COMPANY STRATIM",
+    "JSC STRATIM",
+    "STRATIM COMPANY",
+    "STRATIM DESIGN BUREAU"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "50246",
+   "identifier": "7720901379",
+   "field": "inn",
+   "slug": "ao-stratim",
+   "kind": "entity",
+   "registry_name": "АО «Стратим»",
+   "list_names": [
+    "JOINT STOCK COMPANY STRATIM",
+    "JSC STRATIM",
+    "STRATIM COMPANY",
+    "STRATIM DESIGN BUREAU"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "50274",
+   "identifier": "1245200009075",
+   "field": "ogrn",
+   "slug": "ooo-stratim",
+   "kind": "entity",
+   "registry_name": "ООО «Стратим»",
+   "list_names": [
+    "STRATIM LIMITED LIABILITY COMPANY",
+    "STRATIM LLC"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "50274",
+   "identifier": "5260494520",
+   "field": "inn",
+   "slug": "ooo-stratim",
+   "kind": "entity",
+   "registry_name": "ООО «Стратим»",
+   "list_names": [
+    "STRATIM LIMITED LIABILITY COMPANY",
+    "STRATIM LLC"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "50359",
+   "identifier": "7802491148",
+   "field": "inn",
+   "slug": "ooo-radiofid-sistemy",
+   "kind": "entity",
+   "registry_name": "ООО «Радиофид Системы»",
+   "list_names": [
+    "RADIOFID SISTEMY LLC",
+    "RADIOFID SYSTEMS"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "50691",
+   "identifier": "771911447529",
+   "field": "inn_personal",
+   "slug": "kiselev-dmitriy-konstantinovich",
+   "kind": "person",
+   "registry_name": "Киселёв Дмитрий Константинович",
+   "list_names": [
+    "Dmitry Konstantinovich",
+    "KISELEV",
+    "KISELYOV"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [
+    "dateOfBirth=26 Apr 1954"
+   ],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "50741",
+   "identifier": "7733393203",
+   "field": "inn",
+   "slug": "npo-kaysant",
+   "kind": "entity",
+   "registry_name": "НПО «КАЙСАНТ»",
+   "list_names": [
+    "LIMITED LIABILITY COMPANY NAUCHNO PROIZVODSTVENNOE OBYEDINENIE KAISANT",
+    "NPO KAYSANT"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "50772",
+   "identifier": "1177746007900",
+   "field": "ogrn",
+   "slug": "ooo-aeromaks",
+   "kind": "entity",
+   "registry_name": "ООО «Аэромакс»",
+   "list_names": [
+    "AEROMAX GROUP",
+    "AEROMAX LTD",
+    "LIMITED LIABILITY COMPANY AEROMAKS"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "50772",
+   "identifier": "7725347482",
+   "field": "inn",
+   "slug": "ooo-aeromaks",
+   "kind": "entity",
+   "registry_name": "ООО «Аэромакс»",
+   "list_names": [
+    "AEROMAX GROUP",
+    "AEROMAX LTD",
+    "LIMITED LIABILITY COMPANY AEROMAKS"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "50778",
+   "identifier": "1237100001467",
+   "field": "ogrn",
+   "slug": "ooo-tsentr-bespilotnykh-sistem-tula",
+   "kind": "entity",
+   "registry_name": "ООО «Центр беспилотных систем»",
+   "list_names": [
+    "CENTER FOR UNMANNED SYSTEMS OF THE TULA REGION",
+    "OOO TSENTR BESPILOTNYKH SISTEM",
+    "TSBS"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "50778",
+   "identifier": "7100032961",
+   "field": "inn",
+   "slug": "ooo-tsentr-bespilotnykh-sistem-tula",
+   "kind": "entity",
+   "registry_name": "ООО «Центр беспилотных систем»",
+   "list_names": [
+    "CENTER FOR UNMANNED SYSTEMS OF THE TULA REGION",
+    "OOO TSENTR BESPILOTNYKH SISTEM",
+    "TSBS"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "50789",
+   "identifier": "1227100012369",
+   "field": "ogrn",
+   "slug": "ovod",
+   "kind": "entity",
+   "registry_name": "ООО «Русская лаборатория воздушного транспорта»",
+   "list_names": [
+    "LIMITED LIABILITY COMPANY RUSSKAYA LABORATORIYA VOZDUSHNOGO TRANSPORTA",
+    "RLVT",
+    "RUSSIAN AIR TRANSPORT LABORATORY LLC"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "50789",
+   "identifier": "7100027464",
+   "field": "inn",
+   "slug": "ovod",
+   "kind": "entity",
+   "registry_name": "ООО «Русская лаборатория воздушного транспорта»",
+   "list_names": [
+    "LIMITED LIABILITY COMPANY RUSSKAYA LABORATORIYA VOZDUSHNOGO TRANSPORTA",
+    "RLVT",
+    "RUSSIAN AIR TRANSPORT LABORATORY LLC"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "50791",
+   "identifier": "1237100015767",
+   "field": "ogrn",
+   "slug": "ooo-vozdushnyy-traktat",
+   "kind": "entity",
+   "registry_name": "ООО «Воздушный трактат»",
+   "list_names": [
+    "LIMITED LIABILITY COMPANY VOZDUSHNYI TRAKTAT",
+    "OOO VOZDUSHNY TRAKT"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "50791",
+   "identifier": "7100046925",
+   "field": "inn",
+   "slug": "ooo-vozdushnyy-traktat",
+   "kind": "entity",
+   "registry_name": "ООО «Воздушный трактат»",
+   "list_names": [
+    "LIMITED LIABILITY COMPANY VOZDUSHNYI TRAKTAT",
+    "OOO VOZDUSHNY TRAKT"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "50792",
+   "identifier": "1237700463032",
+   "field": "ogrn",
+   "slug": "ao-ploshchad",
+   "kind": "entity",
+   "registry_name": "АО «Площадь»",
+   "list_names": [
+    "AO PLOSHCHAD",
+    "AREA JOINT STOCK COMPANY"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "50792",
+   "identifier": "9723203841",
+   "field": "inn",
+   "slug": "ao-ploshchad",
+   "kind": "entity",
+   "registry_name": "АО «Площадь»",
+   "list_names": [
+    "AO PLOSHCHAD",
+    "AREA JOINT STOCK COMPANY"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "50914",
+   "identifier": "1107154016529",
+   "field": "ogrn",
+   "slug": "ooo-npo-programmnye-kompleksy-realnogo-vremeni",
+   "kind": "entity",
+   "registry_name": "ООО «Научно-производственное объединение Программные комплексы реального времени»",
+   "list_names": [
+    "NAUCHNO PROIZVODSTVENNOE OBYEDINENIE PROGRAMMNYE KOMPLEKSY REALNOGO VREMENI",
+    "NPO PKRV"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "us",
+   "entry_id": "50914",
+   "identifier": "7105509736",
+   "field": "inn",
+   "slug": "ooo-npo-programmnye-kompleksy-realnogo-vremeni",
+   "kind": "entity",
+   "registry_name": "ООО «Научно-производственное объединение Программные комплексы реального времени»",
+   "list_names": [
+    "NAUCHNO PROIZVODSTVENNOE OBYEDINENIE PROGRAMMNYE KOMPLEKSY REALNOGO VREMENI",
+    "NPO PKRV"
+   ],
+   "programs": [
+    "RUSSIA-EO14024"
+   ],
+   "dates": [],
+   "refs": [
+    "RUSSIA-EO14024"
+   ],
+   "urls": []
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.7395.36",
+   "identifier": "1027739019142",
+   "field": "ogrn",
+   "slug": "pao-bank-psb",
+   "kind": "entity",
+   "registry_name": "ПАО «Банк ПСБ»",
+   "list_names": [
+    "PROMSVJAZBANK",
+    "PROMSVYAZBANK",
+    "ПАО “Промсвязьбанк\""
+   ],
+   "programs": [
+    "2023/1765 (OJ L226)",
+    "2023/571 (OJ L75 I)",
+    "2024/2455 (OJ L13092024)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2022-02-23",
+    "entryIntoForceDate=2024-09-14",
+    "publicationDate=2023-03-14",
+    "publicationDate=2023-09-14",
+    "publicationDate=2024-09-13"
+   ],
+   "refs": [
+    "2023/1765 (OJ L226)",
+    "2023/571 (OJ L75 I)",
+    "2024/2455 (OJ L13092024)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R0571",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1765",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402455"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.7395.36",
+   "identifier": "7744000912",
+   "field": "inn",
+   "slug": "pao-bank-psb",
+   "kind": "entity",
+   "registry_name": "ПАО «Банк ПСБ»",
+   "list_names": [
+    "PROMSVJAZBANK",
+    "PROMSVYAZBANK",
+    "ПАО “Промсвязьбанк\""
+   ],
+   "programs": [
+    "2023/1765 (OJ L226)",
+    "2023/571 (OJ L75 I)",
+    "2024/2455 (OJ L13092024)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2022-02-23",
+    "entryIntoForceDate=2024-09-14",
+    "publicationDate=2023-03-14",
+    "publicationDate=2023-09-14",
+    "publicationDate=2024-09-13"
+   ],
+   "refs": [
+    "2023/1765 (OJ L226)",
+    "2023/571 (OJ L75 I)",
+    "2024/2455 (OJ L13092024)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R0571",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1765",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402455"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.9357.37",
+   "identifier": "1037739350934",
+   "field": "ogrn",
+   "slug": "vpp-edinaya-rossiya",
+   "kind": "entity",
+   "registry_name": "ВСЕРОССИЙСКАЯ ПОЛИТИЧЕСКАЯ ПАРТИЯ «ЕДИНАЯ РОССИЯ»",
+   "list_names": [
+    "Egyesült Oroszország",
+    "Enade Ryssland",
+    "Jedna Rosja",
+    "Jednotné Rusko",
+    "Partidul Rusia Unită",
+    "Rusia Unida"
+   ],
+   "programs": [
+    "2022/2476 (OJ L322-I)",
+    "2024/2455 (OJ L13092024)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2022-12-16",
+    "entryIntoForceDate=2024-09-14",
+    "publicationDate=2022-12-16",
+    "publicationDate=2024-09-13"
+   ],
+   "refs": [
+    "2022/2476 (OJ L322-I)",
+    "2024/2455 (OJ L13092024)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://er.ru",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R2476",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402455"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.9357.37",
+   "identifier": "7702330228",
+   "field": "inn",
+   "slug": "vpp-edinaya-rossiya",
+   "kind": "entity",
+   "registry_name": "ВСЕРОССИЙСКАЯ ПОЛИТИЧЕСКАЯ ПАРТИЯ «ЕДИНАЯ РОССИЯ»",
+   "list_names": [
+    "Egyesült Oroszország",
+    "Enade Ryssland",
+    "Jedna Rosja",
+    "Jednotné Rusko",
+    "Partidul Rusia Unită",
+    "Rusia Unida"
+   ],
+   "programs": [
+    "2022/2476 (OJ L322-I)",
+    "2024/2455 (OJ L13092024)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2022-12-16",
+    "entryIntoForceDate=2024-09-14",
+    "publicationDate=2022-12-16",
+    "publicationDate=2024-09-13"
+   ],
+   "refs": [
+    "2022/2476 (OJ L322-I)",
+    "2024/2455 (OJ L13092024)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://er.ru",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R2476",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402455"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.9381.47",
+   "identifier": "1037719005873",
+   "field": "ogrn",
+   "slug": "ao-tekhnodinamika",
+   "kind": "entity",
+   "registry_name": "АО «Технодинамика»",
+   "list_names": [
+    "AO Технодинамика",
+    "JSC Technodinamika",
+    "Těchnodinamika"
+   ],
+   "programs": [
+    "2022/2476 (OJ L322-I)",
+    "2024/2455 (OJ L13092024)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2022-12-16",
+    "entryIntoForceDate=2024-09-14",
+    "publicationDate=2022-12-16",
+    "publicationDate=2024-09-13"
+   ],
+   "refs": [
+    "2022/2476 (OJ L322-I)",
+    "2024/2455 (OJ L13092024)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "http://technodinamika.ru",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R2476",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402455"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.10373.35",
+   "identifier": "7813491943",
+   "field": "inn",
+   "slug": "ao-nii-vektor",
+   "kind": "entity",
+   "registry_name": "АО «НИИ «Вектор»»",
+   "list_names": [
+    "AKTSIONERNOE OBSHCHESTVO “NAUCHNO-ISSLEDOVATELSKII  INSTITUT ‘VEKTOR’”",
+    "AO “NII  ‘VEKTOR’",
+    "Akciová společnost Vektor",
+    "Spoločnosť Vektor JSC j",
+    "Vektor JSC",
+    "Vektor SA"
+   ],
+   "programs": [
+    "2023/1216 (OJ L159 I)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2023-06-23",
+    "entryIntoForceDate=2023-06-23",
+    "issueDate=2011-01-26",
+    "publicationDate=2023-06-23"
+   ],
+   "refs": [
+    "2023/1216 (OJ L159 I)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1216"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.10959.48",
+   "identifier": "1117154036911",
+   "field": "ogrn",
+   "slug": "ao-kbp-shipunova",
+   "kind": "entity",
+   "registry_name": "АО «Конструкторское бюро приборостроения им. академика А. Г. Шипунова»",
+   "list_names": [
+    "A. G. Shipunov Műszeripari Tervezőiroda RT.",
+    "JSC Design Bureau of Instrument-Making Named After Academic A. G. Shipunov",
+    "JSC Design Bureau of Instrument-Making Named, επ’ ονόματι του ακαδημαϊκού A. G. Shipunov",
+    "JSC KBP",
+    "KBP Rt.",
+    "Nástrojářská projekční kancelář akademika A, G. Šipunova"
+   ],
+   "programs": [
+    "2023/2875 (OJ L18122023)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2023-12-18",
+    "entryIntoForceDate=2023-12-18",
+    "issueDate=2011-12-30",
+    "publicationDate=2023-12-18"
+   ],
+   "refs": [
+    "2023/2875 (OJ L18122023)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202302875"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.11308.41",
+   "identifier": "780105167705",
+   "field": "inn_personal",
+   "slug": "antsev-georgiy-vladimirovich",
+   "kind": "person",
+   "registry_name": "Анцев Георгий Владимирович",
+   "list_names": [
+    "Georgij Ancev",
+    "Georgiy Vladimirovich ANTSEV",
+    "Георгий Владимирович АНЦЕВ"
+   ],
+   "programs": [
+    "2024/753 (OJ L23022024) (2)",
+    "UKR"
+   ],
+   "dates": [
+    "birthdate=1961-01-29",
+    "designationDate=2024-02-23",
+    "entryIntoForceDate=2024-02-23",
+    "publicationDate=2024-02-23"
+   ],
+   "refs": [
+    "2024/753 (OJ L23022024) (2)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202400753"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.11374.22",
+   "identifier": "7814027653",
+   "field": "inn",
+   "slug": "npp-radar-mms",
+   "kind": "entity",
+   "registry_name": "АО «НПП «Радар ММС»»",
+   "list_names": [
+    "JSC “NPP “Radar MMS”",
+    "Joint Stock Company \"Research and Production Enterprise \"RADAR MMS\"",
+    "Radar MMS (Акционерное общество научно-производственное предприятие “РАДАР ММС”)",
+    "sociedad anónima Research and Production Enterprise Radar MMS",
+    "Întreprinderea de cercetare și producție Radar MMS, societate pe acțiuni",
+    "АО \"НПП \"Радар ММС\""
+   ],
+   "programs": [
+    "2024/753 (OJ L23022024)",
+    "2024/753-corr 2024/90233 (OJ L12042024)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2024-02-23",
+    "entryIntoForceDate=2024-04-12",
+    "issueDate=1992-05-13",
+    "publicationDate=2024-02-23",
+    "publicationDate=2024-04-12"
+   ],
+   "refs": [
+    "2024/753 (OJ L23022024)",
+    "2024/753-corr 2024/90233 (OJ L12042024)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202400753",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202490233",
+    "https://radar-mms.com/"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.12748.38",
+   "identifier": "1237800084235",
+   "field": "ogrn",
+   "slug": "ooo-trimiks",
+   "kind": "entity",
+   "registry_name": "ООО «Тримикс»",
+   "list_names": [
+    "3MX Kft.",
+    "LLC 3MX",
+    "LLC TRIMIX",
+    "Limited Liability Company “TRIMIX”",
+    "TRIMIX Kft.",
+    "»TRIMIX« Korlátolt Felelősségű  Társaság"
+   ],
+   "programs": [
+    "2025/389 (OJ L24022025)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2025-02-24",
+    "entryIntoForceDate=2025-02-24",
+    "issueDate=2023-07-21",
+    "publicationDate=2025-02-24"
+   ],
+   "refs": [
+    "2025/389 (OJ L24022025)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202500389"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.12748.38",
+   "identifier": "7802942873",
+   "field": "inn",
+   "slug": "ooo-trimiks",
+   "kind": "entity",
+   "registry_name": "ООО «Тримикс»",
+   "list_names": [
+    "3MX Kft.",
+    "LLC 3MX",
+    "LLC TRIMIX",
+    "Limited Liability Company “TRIMIX”",
+    "TRIMIX Kft.",
+    "»TRIMIX« Korlátolt Felelősségű  Társaság"
+   ],
+   "programs": [
+    "2025/389 (OJ L24022025)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2025-02-24",
+    "entryIntoForceDate=2025-02-24",
+    "issueDate=2023-07-21",
+    "publicationDate=2025-02-24"
+   ],
+   "refs": [
+    "2025/389 (OJ L24022025)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202500389"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.12764.77",
+   "identifier": "773514103490",
+   "field": "inn_personal",
+   "slug": "atlivanchik-sergey-nikolaevich",
+   "kind": "person",
+   "registry_name": "Атливанчик Сергей Николаевич",
+   "list_names": [
+    "Sergey Nikolaevich ATLIVANCHIK",
+    "Сергей Николаевич АТЛИВАНЧИК"
+   ],
+   "programs": [
+    "2025/389 (OJ L24022025)",
+    "UKR"
+   ],
+   "dates": [
+    "birthdate=1980-01-11",
+    "designationDate=2025-02-24",
+    "entryIntoForceDate=2025-02-24",
+    "publicationDate=2025-02-24"
+   ],
+   "refs": [
+    "2025/389 (OJ L24022025)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202500389"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.12773.47",
+   "identifier": "7735140825",
+   "field": "inn",
+   "slug": "ooo-eliars",
+   "kind": "entity",
+   "registry_name": "ООО «Элиарс»",
+   "list_names": [
+    "LLC Eliars",
+    "Limited Liability Company Eliars",
+    "Ribotos atsakomybės bendrovė Eliars",
+    "»Eliars« Korlátolt Felelsősségű Társaság",
+    "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “ЭЛИАРС”",
+    "ООО “ЭЛИАРС”"
+   ],
+   "programs": [
+    "2025/389 (OJ L24022025)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2025-02-24",
+    "entryIntoForceDate=2025-02-24",
+    "issueDate=2015-02-12",
+    "publicationDate=2025-02-24"
+   ],
+   "refs": [
+    "2025/389 (OJ L24022025)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202500389"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.13044.64",
+   "identifier": "501306766736",
+   "field": "inn_personal",
+   "slug": "kuzyakin-dmitriy-vasilevich",
+   "kind": "person",
+   "registry_name": "Кузякин Дмитрий Васильевич",
+   "list_names": [
+    "Dmitry Vasilevich KUZYAKIN",
+    "Дмитрий Васильевич КУЗЯКИН"
+   ],
+   "programs": [
+    "2025/933 (OJ L202500933)",
+    "UKR"
+   ],
+   "dates": [
+    "birthdate=1974-06-29",
+    "designationDate=2025-05-20",
+    "entryIntoForceDate=2025-05-20",
+    "publicationDate=2025-05-20"
+   ],
+   "refs": [
+    "2025/933 (OJ L202500933)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500933"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.13073.69",
+   "identifier": "1237700447324",
+   "field": "ogrn",
+   "slug": "ao-stratim",
+   "kind": "entity",
+   "registry_name": "АО «Стратим»",
+   "list_names": [
+    "JSC Stratim",
+    "Joint Stock Company Stratim",
+    "»Stratim« Részvénytársaság",
+    "Акционерное Общество “Стратим”"
+   ],
+   "programs": [
+    "2025/933 (OJ L202500933)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2025-05-20",
+    "entryIntoForceDate=2025-05-20",
+    "issueDate=2023-07-03",
+    "publicationDate=2025-05-20"
+   ],
+   "refs": [
+    "2025/933 (OJ L202500933)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500933"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.13077.65",
+   "identifier": "1225000003458",
+   "field": "ogrn",
+   "slug": "ooo-tskbr",
+   "kind": "entity",
+   "registry_name": "ООО «ЦКБР»",
+   "list_names": [
+    "Centro para Soluções Não Tripuladas Integradas",
+    "Complex Unmanned Solutions Center Ltd",
+    "Limited Liability Company “Center for Integrated Unmanned Solutions”",
+    "Pilóta Nélküli Komplex  Megoldások Központja Kft.",
+    "STC LTD",
+    "USC Kft."
+   ],
+   "programs": [
+    "2025/933 (OJ L202500933)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2025-05-20",
+    "entryIntoForceDate=2025-05-20",
+    "issueDate=2022-01-20",
+    "publicationDate=2025-05-20"
+   ],
+   "refs": [
+    "2025/933 (OJ L202500933)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500933"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.13077.65",
+   "identifier": "5040176793",
+   "field": "inn",
+   "slug": "ooo-tskbr",
+   "kind": "entity",
+   "registry_name": "ООО «ЦКБР»",
+   "list_names": [
+    "Centro para Soluções Não Tripuladas Integradas",
+    "Complex Unmanned Solutions Center Ltd",
+    "Limited Liability Company “Center for Integrated Unmanned Solutions”",
+    "Pilóta Nélküli Komplex  Megoldások Központja Kft.",
+    "STC LTD",
+    "USC Kft."
+   ],
+   "programs": [
+    "2025/933 (OJ L202500933)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2025-05-20",
+    "entryIntoForceDate=2025-05-20",
+    "issueDate=2022-01-20",
+    "publicationDate=2025-05-20"
+   ],
+   "refs": [
+    "2025/933 (OJ L202500933)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500933"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.13083.38",
+   "identifier": "5300010714",
+   "field": "inn",
+   "slug": "ano-npts-ushkuynik",
+   "kind": "entity",
+   "registry_name": "АНО «НПЦ «Ушкуйник»»",
+   "list_names": [
+    "Autonomous non-profit Organisation “Scientific and Production Center for Testing and Competence in the Field of Development of Unmanned Aircraft Systems and Means of Protection Against their Illegal Use ‘Ushkuynik’”",
+    "Neovisna neprofitna organizacija ‚Scientific and Production Center for  Testing and Competence in the Field of  Development of Unmanned Aircraft Systems and Means of Protection Against their Illegal Use ‚Ushkuynik’’",
+    "Organização autónoma sem fins lucrativos “Centro científico e de  produção para ensaios e competências  no domínio do desenvolvimento de  sistemas de aeronaves não tripuladas e meios de proteção contra a sua utilização ilegal ‘Ushkuynik’”",
+    "Scientific-Research Centre “Ushkuynik”",
+    "»Ushkuynik« Tudományos Kutatóközpont",
+    "»’Ushkuynik’ Tudományos és Gyártóközpont a Pilóta Nélküli  Légijármű-rendszerek és a Jogellenes  Használatuk Elleni Védelmet Szolgáló  Eszközök Teszteléséért és Kompetenciájáért« autonóm nonprofit szervezet"
+   ],
+   "programs": [
+    "2025/933 (OJ L202500933)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2025-05-20",
+    "entryIntoForceDate=2025-05-20",
+    "publicationDate=2025-05-20"
+   ],
+   "refs": [
+    "2025/933 (OJ L202500933)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500933",
+    "https://nvgushkuynik.ru/"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.13274.86",
+   "identifier": "1235000022179",
+   "field": "ogrn",
+   "slug": "ooo-npo-rustekhdron",
+   "kind": "entity",
+   "registry_name": "ООО «НПО Рустехдрон»",
+   "list_names": [
+    "Associação científica e de produção Rustecdrone",
+    "LLC NPO Rustecdrone",
+    "Limited Liability Company “Scientific And Production Association Rustecdrone”",
+    "NPO Rustecdrone Kft.",
+    "OOO “НПО Рустехдрон”",
+    "»Rustecdrone Tudományos és Gyártási Szövetség« Korlátolt Felelősségű Társaság"
+   ],
+   "programs": [
+    "2025/933 (OJ L202500933)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2025-05-20",
+    "entryIntoForceDate=2025-05-20",
+    "publicationDate=2025-05-20"
+   ],
+   "refs": [
+    "2025/933 (OJ L202500933)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500933",
+    "https://rustecdrone.ru/"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.13274.86",
+   "identifier": "5003155499",
+   "field": "inn",
+   "slug": "ooo-npo-rustekhdron",
+   "kind": "entity",
+   "registry_name": "ООО «НПО Рустехдрон»",
+   "list_names": [
+    "Associação científica e de produção Rustecdrone",
+    "LLC NPO Rustecdrone",
+    "Limited Liability Company “Scientific And Production Association Rustecdrone”",
+    "NPO Rustecdrone Kft.",
+    "OOO “НПО Рустехдрон”",
+    "»Rustecdrone Tudományos és Gyártási Szövetség« Korlátolt Felelősségű Társaság"
+   ],
+   "programs": [
+    "2025/933 (OJ L202500933)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2025-05-20",
+    "entryIntoForceDate=2025-05-20",
+    "publicationDate=2025-05-20"
+   ],
+   "refs": [
+    "2025/933 (OJ L202500933)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202500933",
+    "https://rustecdrone.ru/"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.13366.27",
+   "identifier": "1026701461160",
+   "field": "ogrn",
+   "slug": "ao-nii-stt",
+   "kind": "entity",
+   "registry_name": "АО «НИИ СТТ»",
+   "list_names": [
+    "AO “NII STT”",
+    "JSC “Research Institute of Modern Telecommunication Technologies”",
+    "Joint Stock Company “Research Institute of Modern Telecommunication Technologies”",
+    "АО “НИИ СТТ”",
+    "Акционерное Общество “Научно Исследовательский Институт Современных Телекоммуникационных Технологий”"
+   ],
+   "programs": [
+    "2025/1476 (OJ L202501476)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2025-07-19",
+    "entryIntoForceDate=2025-07-19",
+    "issueDate=2002-12-26",
+    "publicationDate=2025-07-19"
+   ],
+   "refs": [
+    "2025/1476 (OJ L202501476)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202501476"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.13366.27",
+   "identifier": "6730046954",
+   "field": "inn",
+   "slug": "ao-nii-stt",
+   "kind": "entity",
+   "registry_name": "АО «НИИ СТТ»",
+   "list_names": [
+    "AO “NII STT”",
+    "JSC “Research Institute of Modern Telecommunication Technologies”",
+    "Joint Stock Company “Research Institute of Modern Telecommunication Technologies”",
+    "АО “НИИ СТТ”",
+    "Акционерное Общество “Научно Исследовательский Институт Современных Телекоммуникационных Технологий”"
+   ],
+   "programs": [
+    "2025/1476 (OJ L202501476)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2025-07-19",
+    "entryIntoForceDate=2025-07-19",
+    "issueDate=2002-12-26",
+    "publicationDate=2025-07-19"
+   ],
+   "refs": [
+    "2025/1476 (OJ L202501476)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202501476"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.13402.32",
+   "identifier": "1237700463032",
+   "field": "ogrn",
+   "slug": "ao-ploshchad",
+   "kind": "entity",
+   "registry_name": "АО «Площадь»",
+   "list_names": [
+    "JSC “Ploshchad”",
+    "JSC “Square”",
+    "Joint Stock Company  “Ploshchad”",
+    "Societatea pe  acțiuni «Ploshchad»",
+    "sociedade por  ações “Ploshchad”",
+    "»Ploshchad« Részvénytársaság"
+   ],
+   "programs": [
+    "2025/1476 (OJ L202501476)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2025-07-18",
+    "entryIntoForceDate=2025-07-19",
+    "issueDate=2023-07-10",
+    "publicationDate=2025-07-19"
+   ],
+   "refs": [
+    "2025/1476 (OJ L202501476)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://areasystems.tech/",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202501476"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.13402.32",
+   "identifier": "9723203841",
+   "field": "inn",
+   "slug": "ao-ploshchad",
+   "kind": "entity",
+   "registry_name": "АО «Площадь»",
+   "list_names": [
+    "JSC “Ploshchad”",
+    "JSC “Square”",
+    "Joint Stock Company  “Ploshchad”",
+    "Societatea pe  acțiuni «Ploshchad»",
+    "sociedade por  ações “Ploshchad”",
+    "»Ploshchad« Részvénytársaság"
+   ],
+   "programs": [
+    "2025/1476 (OJ L202501476)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2025-07-18",
+    "entryIntoForceDate=2025-07-19",
+    "issueDate=2023-07-10",
+    "publicationDate=2025-07-19"
+   ],
+   "refs": [
+    "2025/1476 (OJ L202501476)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://areasystems.tech/",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202501476"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.13801.69",
+   "identifier": "1227700378553",
+   "field": "ogrn",
+   "slug": "ooo-tsugam",
+   "kind": "entity",
+   "registry_name": "ООО «Центр управления городской аэромобильностью»",
+   "list_names": [
+    "LLC “UAMOC”",
+    "Limited Liability Company “Urban Air Mobility Operations Center”",
+    "Sociedade de responsabilidade limitada “Urban Air Mobility Operations Centre”",
+    "»UAMOC« Kft.",
+    "»Urban Air Mobility Operations Center« korlátolt felelősségű társaság",
+    "ООО “ЦУГАМ”"
+   ],
+   "programs": [
+    "2025/2035 (OJ L202502035)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2025-10-23",
+    "entryIntoForceDate=2025-10-23",
+    "publicationDate=2025-10-23"
+   ],
+   "refs": [
+    "2025/2035 (OJ L202502035)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202502035"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.13801.69",
+   "identifier": "9731094770",
+   "field": "inn",
+   "slug": "ooo-tsugam",
+   "kind": "entity",
+   "registry_name": "ООО «Центр управления городской аэромобильностью»",
+   "list_names": [
+    "LLC “UAMOC”",
+    "Limited Liability Company “Urban Air Mobility Operations Center”",
+    "Sociedade de responsabilidade limitada “Urban Air Mobility Operations Centre”",
+    "»UAMOC« Kft.",
+    "»Urban Air Mobility Operations Center« korlátolt felelősségű társaság",
+    "ООО “ЦУГАМ”"
+   ],
+   "programs": [
+    "2025/2035 (OJ L202502035)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2025-10-23",
+    "entryIntoForceDate=2025-10-23",
+    "publicationDate=2025-10-23"
+   ],
+   "refs": [
+    "2025/2035 (OJ L202502035)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202502035"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14032.85",
+   "identifier": "645001842561",
+   "field": "inn_personal",
+   "slug": "kosolapov-oleg-yurevich",
+   "kind": "person",
+   "registry_name": "Косолапов Олег Юрьевич",
+   "list_names": [
+    "Oleg  Youryevitch  KOSOLAPOV",
+    "Oleg Jurijevič KOSOLAPOV",
+    "Oleg Yuryevich KOSOLAPOV",
+    "Олег Юрьевич КОСОЛАПОВ"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14019.43",
+   "identifier": "1237300010430",
+   "field": "ogrn",
+   "slug": "ooo-skb-piranya",
+   "kind": "entity",
+   "registry_name": "ООО «СКБ Пиранья»",
+   "list_names": [
+    "LLC SDB “Piranya”",
+    "LLC SKB “Piranya”",
+    "Limited Liability Company Simbirsk Design Bureau “Piranya”",
+    "Limited Liability Company Simbirskoe Konstruktrskoe Byuro “Piranya”",
+    "ООО СКБ “Пиранья”",
+    "Общество с Ограниченной Ответственностью Симбирское Конструкторское Бюро “Пиранья”"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "issueDate=2023-09-19",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14019.43",
+   "identifier": "7300024069",
+   "field": "inn",
+   "slug": "ooo-skb-piranya",
+   "kind": "entity",
+   "registry_name": "ООО «СКБ Пиранья»",
+   "list_names": [
+    "LLC SDB “Piranya”",
+    "LLC SKB “Piranya”",
+    "Limited Liability Company Simbirsk Design Bureau “Piranya”",
+    "Limited Liability Company Simbirskoe Konstruktrskoe Byuro “Piranya”",
+    "ООО СКБ “Пиранья”",
+    "Общество с Ограниченной Ответственностью Симбирское Конструкторское Бюро “Пиранья”"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "issueDate=2023-09-19",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14023.18",
+   "identifier": "1232700009398",
+   "field": "ogrn",
+   "slug": "ooo-aero-khit",
+   "kind": "entity",
+   "registry_name": "ООО «Аэро-Хит»",
+   "list_names": [
+    "LLC “AERO-HIT”",
+    "Limited Liability Company Aero-HIT",
+    "OOO “АЭРО-ХИТ”",
+    "Общество с ограниченной ответственностью “Аэро-ХИТ”"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14023.18",
+   "identifier": "2700012608",
+   "field": "inn",
+   "slug": "ooo-aero-khit",
+   "kind": "entity",
+   "registry_name": "ООО «Аэро-Хит»",
+   "list_names": [
+    "LLC “AERO-HIT”",
+    "Limited Liability Company Aero-HIT",
+    "OOO “АЭРО-ХИТ”",
+    "Общество с ограниченной ответственностью “Аэро-ХИТ”"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14116.55",
+   "identifier": "500905260513",
+   "field": "inn_personal",
+   "slug": "olga-sokolova",
+   "kind": "person",
+   "registry_name": "Ольга Соколова",
+   "list_names": [
+    "Olga Mikhailovna SOKOLOVA",
+    "Ольга Михайловна СОКОЛОВА"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "birthdate=1976-01-03",
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14080.29",
+   "identifier": "1185275047176",
+   "field": "ogrn",
+   "slug": "ooo-kleverkopter",
+   "kind": "entity",
+   "registry_name": "ООО «Клеверкоптер»",
+   "list_names": [
+    "LLC “KLEVERCOPTER”",
+    "ООО “Клеверкоптер“"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://clevercopter.ru/",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14080.29",
+   "identifier": "5257183517",
+   "field": "inn",
+   "slug": "ooo-kleverkopter",
+   "kind": "entity",
+   "registry_name": "ООО «Клеверкоптер»",
+   "list_names": [
+    "LLC “KLEVERCOPTER”",
+    "ООО “Клеверкоптер“"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://clevercopter.ru/",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14137.89",
+   "identifier": "1177746007900",
+   "field": "ogrn",
+   "slug": "ooo-aeromaks",
+   "kind": "entity",
+   "registry_name": "ООО «Аэромакс»",
+   "list_names": [
+    "LLC \"AEROMAKS\"",
+    "ОOO \"АЭРОМАКС\""
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509",
+    "https://www.aeromax-group.ru/"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14137.89",
+   "identifier": "7725347482",
+   "field": "inn",
+   "slug": "ooo-aeromaks",
+   "kind": "entity",
+   "registry_name": "ООО «Аэромакс»",
+   "list_names": [
+    "LLC \"AEROMAKS\"",
+    "ОOO \"АЭРОМАКС\""
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509",
+    "https://www.aeromax-group.ru/"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14138.88",
+   "identifier": "1027806064571",
+   "field": "ogrn",
+   "slug": "ao-kotlin-novator",
+   "kind": "entity",
+   "registry_name": "АО «Котлин-Новатор»",
+   "list_names": [
+    "JSC ”Kotlin-Novator”",
+    "АО «Котлин-Новатор»"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509",
+    "https://kotlin-novator.ru/"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14138.88",
+   "identifier": "7811075899",
+   "field": "inn",
+   "slug": "ao-kotlin-novator",
+   "kind": "entity",
+   "registry_name": "АО «Котлин-Новатор»",
+   "list_names": [
+    "JSC ”Kotlin-Novator”",
+    "АО «Котлин-Новатор»"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509",
+    "https://kotlin-novator.ru/"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14155.29",
+   "identifier": "1247700354175",
+   "field": "ogrn",
+   "slug": "ao-tekhnodron",
+   "kind": "entity",
+   "registry_name": "АО «Технодрон»",
+   "list_names": [
+    "JSC Technodron",
+    "АО “Технодрон”"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "issueDate=2024-05-03",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14155.29",
+   "identifier": "9704241986",
+   "field": "inn",
+   "slug": "ao-tekhnodron",
+   "kind": "entity",
+   "registry_name": "АО «Технодрон»",
+   "list_names": [
+    "JSC Technodron",
+    "АО “Технодрон”"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "issueDate=2024-05-03",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14158.26",
+   "identifier": "1245000058489",
+   "field": "ogrn",
+   "slug": "ooo-arkhangel-tsentr",
+   "kind": "entity",
+   "registry_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ-ЦЕНТР\"",
+   "list_names": [
+    "Archangel Combat and Special Training Center",
+    "Archangel Military Tactical Center",
+    "LLC “Archangel Center”",
+    "Limited Liability Company “Archangel Center”",
+    "ООО “Архангел-Центр”",
+    "Общество с ограниченной ответственностью “Архангел- Центр”"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "issueDate=2024-04-17",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://archangel.center/; https://archangel-center.ru/",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14158.26",
+   "identifier": "5032379630",
+   "field": "inn",
+   "slug": "ooo-arkhangel-tsentr",
+   "kind": "entity",
+   "registry_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ-ЦЕНТР\"",
+   "list_names": [
+    "Archangel Combat and Special Training Center",
+    "Archangel Military Tactical Center",
+    "LLC “Archangel Center”",
+    "Limited Liability Company “Archangel Center”",
+    "ООО “Архангел-Центр”",
+    "Общество с ограниченной ответственностью “Архангел- Центр”"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "issueDate=2024-04-17",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://archangel.center/; https://archangel-center.ru/",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14159.25",
+   "identifier": "1236100025633",
+   "field": "ogrn",
+   "slug": "ooo-atlant-aero",
+   "kind": "entity",
+   "registry_name": "ООО «Атлант Аэро»",
+   "list_names": [
+    "LLC “ATLANT AERO”",
+    "Limited Liability Company “Atlant Aero",
+    "OОО «АТЛАНТ АЭРО»",
+    "Общество с ограниченной ответственностью «АТЛАНТ АЭРО»"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "issueDate=2023-09-21",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14159.25",
+   "identifier": "6154165878",
+   "field": "inn",
+   "slug": "ooo-atlant-aero",
+   "kind": "entity",
+   "registry_name": "ООО «Атлант Аэро»",
+   "list_names": [
+    "LLC “ATLANT AERO”",
+    "Limited Liability Company “Atlant Aero",
+    "OОО «АТЛАНТ АЭРО»",
+    "Общество с ограниченной ответственностью «АТЛАНТ АЭРО»"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "issueDate=2023-09-21",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14160.3",
+   "identifier": "1207700279797",
+   "field": "ogrn",
+   "slug": "ooo-stims",
+   "kind": "entity",
+   "registry_name": "ООО «СТИМС»",
+   "list_names": [
+    "Gaskar Group of Companies",
+    "LLC Gaskar Group of the Skolkovo Innovation Center",
+    "LLC “Gaskar Group”",
+    "Limited Liability Company “Gaskar Group”",
+    "OOO “Гаскар Групп”",
+    "ГК «ГАСКАР»"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "issueDate=2020-08-07",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14160.3",
+   "identifier": "7734436058",
+   "field": "inn",
+   "slug": "ooo-stims",
+   "kind": "entity",
+   "registry_name": "ООО «СТИМС»",
+   "list_names": [
+    "Gaskar Group of Companies",
+    "LLC Gaskar Group of the Skolkovo Innovation Center",
+    "LLC “Gaskar Group”",
+    "Limited Liability Company “Gaskar Group”",
+    "OOO “Гаскар Групп”",
+    "ГК «ГАСКАР»"
+   ],
+   "programs": [
+    "2026/509 (OJ L202600509)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-04-23",
+    "entryIntoForceDate=2026-04-23",
+    "issueDate=2020-08-07",
+    "publicationDate=2026-04-23"
+   ],
+   "refs": [
+    "2026/509 (OJ L202600509)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202600509"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14563.36",
+   "identifier": "1125263004162",
+   "field": "ogrn",
+   "slug": "ooo-gruppa-promavto",
+   "kind": "entity",
+   "registry_name": "ООО «Группа ПРОМАВТО»",
+   "list_names": [
+    "LLC GRUPPA PROMAVTO",
+    "Limited liability company GRUPPA PROMAVTO",
+    "Sociedad de responsabilidad limitada GRUPPA PROMAVTO",
+    "ООО ГРУППА ПРОМАВТО"
+   ],
+   "programs": [
+    "2026/1845 (OJ L202601845)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-07-23",
+    "entryIntoForceDate=2026-07-23",
+    "issueDate=2012-07-03",
+    "publicationDate=2026-07-23"
+   ],
+   "refs": [
+    "2026/1845 (OJ L202601845)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202601845",
+    "https://promavto.net"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14563.36",
+   "identifier": "5263093100",
+   "field": "inn",
+   "slug": "ooo-gruppa-promavto",
+   "kind": "entity",
+   "registry_name": "ООО «Группа ПРОМАВТО»",
+   "list_names": [
+    "LLC GRUPPA PROMAVTO",
+    "Limited liability company GRUPPA PROMAVTO",
+    "Sociedad de responsabilidad limitada GRUPPA PROMAVTO",
+    "ООО ГРУППА ПРОМАВТО"
+   ],
+   "programs": [
+    "2026/1845 (OJ L202601845)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-07-23",
+    "entryIntoForceDate=2026-07-23",
+    "issueDate=2012-07-03",
+    "publicationDate=2026-07-23"
+   ],
+   "refs": [
+    "2026/1845 (OJ L202601845)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202601845",
+    "https://promavto.net"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14773.23",
+   "identifier": "732703148651",
+   "field": "inn_personal",
+   "slug": "korchagina-olga-aleksandrovna",
+   "kind": "person",
+   "registry_name": "Корчагина Ольга Александровна",
+   "list_names": [
+    "Olga Aleksandrovna KORCHAGINA",
+    "Ольга Александровна КОРЧАГИНА"
+   ],
+   "programs": [
+    "2026/1845 (OJ L202601845)",
+    "UKR"
+   ],
+   "dates": [
+    "birthdate=1972-04-25",
+    "designationDate=2026-07-23",
+    "entryIntoForceDate=2026-07-23",
+    "publicationDate=2026-07-23"
+   ],
+   "refs": [
+    "2026/1845 (OJ L202601845)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202601845"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14774.22",
+   "identifier": "732508747179",
+   "field": "inn_personal",
+   "slug": "chernyshov-pavel-alekseevich",
+   "kind": "person",
+   "registry_name": "Чернышов Павел Алексеевич",
+   "list_names": [
+    "Pavel Alekseevich CHERNYSHOV",
+    "Павел Алексеевич ЧЕРНЫШОВ"
+   ],
+   "programs": [
+    "2026/1845 (OJ L202601845)",
+    "UKR"
+   ],
+   "dates": [
+    "birthdate=1984-05-09",
+    "designationDate=2026-07-23",
+    "entryIntoForceDate=2026-07-23",
+    "publicationDate=2026-07-23"
+   ],
+   "refs": [
+    "2026/1845 (OJ L202601845)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202601845"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14799.52",
+   "identifier": "1227100012369",
+   "field": "ogrn",
+   "slug": "ovod",
+   "kind": "entity",
+   "registry_name": "ООО «Русская лаборатория воздушного транспорта»",
+   "list_names": [
+    "Limited Liability  Company Russian  Air Transport  Laboratory",
+    "RLVT LLC,  LLC Russkaya  Laboratoriya  Vozdushnogo  Transporta",
+    "ООО РЛВТ",
+    "Общество с ограниченной ответственностью Русская лаборатория  воздушного транспорта"
+   ],
+   "programs": [
+    "2026/1845 (OJ L202601845)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-07-23",
+    "entryIntoForceDate=2026-07-23",
+    "issueDate=2022-09-28",
+    "publicationDate=2026-07-23"
+   ],
+   "refs": [
+    "2026/1845 (OJ L202601845)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202601845"
+   ]
+  },
+  {
+   "list": "eu",
+   "entry_id": "EU.14799.52",
+   "identifier": "7100027464",
+   "field": "inn",
+   "slug": "ovod",
+   "kind": "entity",
+   "registry_name": "ООО «Русская лаборатория воздушного транспорта»",
+   "list_names": [
+    "Limited Liability  Company Russian  Air Transport  Laboratory",
+    "RLVT LLC,  LLC Russkaya  Laboratoriya  Vozdushnogo  Transporta",
+    "ООО РЛВТ",
+    "Общество с ограниченной ответственностью Русская лаборатория  воздушного транспорта"
+   ],
+   "programs": [
+    "2026/1845 (OJ L202601845)",
+    "UKR"
+   ],
+   "dates": [
+    "designationDate=2026-07-23",
+    "entryIntoForceDate=2026-07-23",
+    "issueDate=2022-09-28",
+    "publicationDate=2026-07-23"
+   ],
+   "refs": [
+    "2026/1845 (OJ L202601845)",
+    "UKR",
+    "amendment",
+    "en"
+   ],
+   "urls": [
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202601845"
+   ]
+  },
+  {
+   "list": "ch",
+   "entry_id": "48067",
+   "identifier": "1027739019142",
+   "field": "ogrn",
+   "slug": "pao-bank-psb",
+   "kind": "entity",
+   "registry_name": "ПАО «Банк ПСБ»",
+   "list_names": [
+    "PROMSVYAZBANK",
+    "PSB Bank",
+    "PSB Bank (formerly. PROMSVYAZBANK)",
+    "Promsvyazbank"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2022-02-25",
+    "effective-date=2023-11-02",
+    "effective-date=2024-12-13",
+    "effective-date=2026-02-24",
+    "effective-date=2026-05-22",
+    "enactment-date=2022-02-25",
+    "enactment-date=2023-11-01",
+    "enactment-date=2024-12-12",
+    "enactment-date=2026-02-23",
+    "enactment-date=2026-05-21",
+    "publication-date=2022-02-25",
+    "publication-date=2023-11-02"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "48067",
+   "identifier": "7744000912",
+   "field": "inn",
+   "slug": "pao-bank-psb",
+   "kind": "entity",
+   "registry_name": "ПАО «Банк ПСБ»",
+   "list_names": [
+    "PROMSVYAZBANK",
+    "PSB Bank",
+    "PSB Bank (formerly. PROMSVYAZBANK)",
+    "Promsvyazbank"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2022-02-25",
+    "effective-date=2023-11-02",
+    "effective-date=2024-12-13",
+    "effective-date=2026-02-24",
+    "effective-date=2026-05-22",
+    "enactment-date=2022-02-25",
+    "enactment-date=2023-11-01",
+    "enactment-date=2024-12-12",
+    "enactment-date=2026-02-23",
+    "enactment-date=2026-05-21",
+    "publication-date=2022-02-25",
+    "publication-date=2023-11-02"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "50649",
+   "identifier": "7704274402",
+   "field": "inn",
+   "slug": "gk-rostekh",
+   "kind": "entity",
+   "registry_name": "ГК «Ростех»",
+   "list_names": [
+    "Rostec",
+    "Rostec (Russian Technologies State Corporation)",
+    "Rostekh",
+    "Rostekhnologii",
+    "Russian Technologies State Corporation",
+    "State Corporation for the Promotion of the Development, Manufacture, and Export of High-Tech Products “Rostec”"
+   ],
+   "programs": [
+    "29445"
+   ],
+   "dates": [
+    "effective-date=2022-03-04",
+    "effective-date=2023-08-16",
+    "effective-date=2026-08-17",
+    "enactment-date=2022-03-04",
+    "enactment-date=2023-08-16",
+    "enactment-date=2026-08-14",
+    "publication-date=2022-03-04",
+    "publication-date=2023-08-16",
+    "publication-date=2026-08-17"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "50653",
+   "identifier": "7701583410",
+   "field": "inn",
+   "slug": "ao-pk-azimut",
+   "kind": "entity",
+   "registry_name": "АО ПК «Азимут»",
+   "list_names": [
+    "Azimut JSC",
+    "Rostekh – Azimuth"
+   ],
+   "programs": [
+    "29445"
+   ],
+   "dates": [
+    "effective-date=2022-03-04",
+    "effective-date=2023-08-16",
+    "effective-date=2026-08-17",
+    "enactment-date=2022-03-04",
+    "enactment-date=2023-08-16",
+    "enactment-date=2026-08-14",
+    "publication-date=2022-03-04",
+    "publication-date=2023-08-16",
+    "publication-date=2026-08-17"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "52515",
+   "identifier": "7808035536",
+   "field": "inn",
+   "slug": "ao-kronshtadt",
+   "kind": "entity",
+   "registry_name": "АО «Кронштадт»",
+   "list_names": [
+    "AO Kronshtadt",
+    "Kronde Group",
+    "Kronshtadt",
+    "Kronshtadt Group",
+    "ZAO Kronshtadt"
+   ],
+   "programs": [
+    "29445"
+   ],
+   "dates": [
+    "effective-date=2022-03-25",
+    "effective-date=2023-08-16",
+    "effective-date=2026-08-17",
+    "enactment-date=2022-03-25",
+    "enactment-date=2023-08-16",
+    "enactment-date=2026-08-14",
+    "publication-date=2022-03-25",
+    "publication-date=2023-08-16",
+    "publication-date=2026-08-17"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "52521",
+   "identifier": "7808035536",
+   "field": "inn",
+   "slug": "ao-kronshtadt",
+   "kind": "entity",
+   "registry_name": "АО «Кронштадт»",
+   "list_names": [
+    "AO “Baikal Elektroniks”",
+    "Baikal Electronics"
+   ],
+   "programs": [
+    "29445"
+   ],
+   "dates": [
+    "effective-date=2022-03-25",
+    "effective-date=2023-08-16",
+    "effective-date=2026-08-11",
+    "effective-date=2026-08-17",
+    "enactment-date=2022-03-25",
+    "enactment-date=2023-08-16",
+    "enactment-date=2026-08-10",
+    "enactment-date=2026-08-14",
+    "publication-date=2022-03-25",
+    "publication-date=2023-08-16",
+    "publication-date=2026-08-11",
+    "publication-date=2026-08-17"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "52539",
+   "identifier": "7735582816",
+   "field": "inn",
+   "slug": "npts-elvis",
+   "kind": "entity",
+   "registry_name": "АО «НПЦ «Электронные вычислительно-информационные системы»» (ЭЛВИС)",
+   "list_names": [
+    "ELVIS",
+    "Electronic Computing and Information Systems",
+    "JSC Research and Development Center ELVEES",
+    "Scientific Production Center Elvis"
+   ],
+   "programs": [
+    "29445"
+   ],
+   "dates": [
+    "effective-date=2022-03-25",
+    "effective-date=2023-08-16",
+    "effective-date=2026-08-17",
+    "enactment-date=2022-03-25",
+    "enactment-date=2023-08-16",
+    "enactment-date=2026-08-14",
+    "publication-date=2022-03-25",
+    "publication-date=2023-08-16",
+    "publication-date=2026-08-17"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "58364",
+   "identifier": "1037739350934",
+   "field": "ogrn",
+   "slug": "vpp-edinaya-rossiya",
+   "kind": "entity",
+   "registry_name": "ВСЕРОССИЙСКАЯ ПОЛИТИЧЕСКАЯ ПАРТИЯ «ЕДИНАЯ РОССИЯ»",
+   "list_names": [
+    "United Russia"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2022-12-21",
+    "effective-date=2024-12-13",
+    "enactment-date=2022-12-20",
+    "enactment-date=2024-12-12",
+    "publication-date=2022-12-21",
+    "publication-date=2024-12-13"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "58364",
+   "identifier": "7702330228",
+   "field": "inn",
+   "slug": "vpp-edinaya-rossiya",
+   "kind": "entity",
+   "registry_name": "ВСЕРОССИЙСКАЯ ПОЛИТИЧЕСКАЯ ПАРТИЯ «ЕДИНАЯ РОССИЯ»",
+   "list_names": [
+    "United Russia"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2022-12-21",
+    "effective-date=2024-12-13",
+    "enactment-date=2022-12-20",
+    "enactment-date=2024-12-12",
+    "publication-date=2022-12-21",
+    "publication-date=2024-12-13"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "59234",
+   "identifier": "1037719005873",
+   "field": "ogrn",
+   "slug": "ao-tekhnodinamika",
+   "kind": "entity",
+   "registry_name": "АО «Технодинамика»",
+   "list_names": [
+    "JSC Technodinamika",
+    "Technodinamika"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2022-12-21",
+    "effective-date=2024-12-13",
+    "effective-date=2026-02-24",
+    "enactment-date=2022-12-20",
+    "enactment-date=2024-12-12",
+    "enactment-date=2026-02-23",
+    "publication-date=2022-12-21",
+    "publication-date=2024-12-13",
+    "publication-date=2026-02-24"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "59234",
+   "identifier": "7719265496",
+   "field": "inn",
+   "slug": "ao-tekhnodinamika",
+   "kind": "entity",
+   "registry_name": "АО «Технодинамика»",
+   "list_names": [
+    "JSC Technodinamika",
+    "Technodinamika"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2022-12-21",
+    "effective-date=2024-12-13",
+    "effective-date=2026-02-24",
+    "enactment-date=2022-12-20",
+    "enactment-date=2024-12-12",
+    "enactment-date=2026-02-23",
+    "publication-date=2022-12-21",
+    "publication-date=2024-12-13",
+    "publication-date=2026-02-24"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "61734",
+   "identifier": "7814027653",
+   "field": "inn",
+   "slug": "npp-radar-mms",
+   "kind": "entity",
+   "registry_name": "АО «НПП «Радар ММС»»",
+   "list_names": [
+    "JSC Radar MMS",
+    "Joint Stock Company Research and Production Enterprise Radar MMS",
+    "NPP Radar MMS",
+    "Scientific Production Association Radar MMS JSC"
+   ],
+   "programs": [
+    "29445"
+   ],
+   "dates": [
+    "effective-date=2023-03-29",
+    "effective-date=2023-08-16",
+    "effective-date=2026-08-17",
+    "enactment-date=2023-03-29",
+    "enactment-date=2023-08-16",
+    "enactment-date=2026-08-14",
+    "publication-date=2023-03-29",
+    "publication-date=2023-08-16",
+    "publication-date=2026-08-17"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "61629",
+   "identifier": "7719265496",
+   "field": "inn",
+   "slug": "ao-tekhnodinamika",
+   "kind": "entity",
+   "registry_name": "АО «Технодинамика»",
+   "list_names": [
+    "JSC Aviation Equipment",
+    "JSC Technodynamics",
+    "Technodinamika, JSC"
+   ],
+   "programs": [
+    "29445"
+   ],
+   "dates": [
+    "effective-date=2023-03-29",
+    "effective-date=2023-08-16",
+    "effective-date=2026-08-17",
+    "enactment-date=2023-03-29",
+    "enactment-date=2023-08-16",
+    "enactment-date=2026-08-14",
+    "publication-date=2023-03-29",
+    "publication-date=2023-08-16",
+    "publication-date=2026-08-17"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "63612",
+   "identifier": "7813491943",
+   "field": "inn",
+   "slug": "ao-nii-vektor",
+   "kind": "entity",
+   "registry_name": "АО «НИИ «Вектор»»",
+   "list_names": [
+    "AKTSIONERNOE OBSHCHESTVO “NAUCHNO-ISSLEDOVATELSKII INSTITUT ‘VEKTOR’”",
+    "AO “NII ‘VEKTOR’”",
+    "Vektor JSC"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2023-06-28",
+    "enactment-date=2023-06-27",
+    "publication-date=2023-06-28"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "69431",
+   "identifier": "1117154036911",
+   "field": "ogrn",
+   "slug": "ao-kbp-shipunova",
+   "kind": "entity",
+   "registry_name": "АО «Конструкторское бюро приборостроения им. академика А. Г. Шипунова»",
+   "list_names": [
+    "JSC Design Bureau of Instrument-Making Named After Academic A. G. Shipunov",
+    "JSC KBP"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2023-12-21",
+    "effective-date=2024-01-31",
+    "effective-date=2026-02-24",
+    "enactment-date=2023-12-20",
+    "enactment-date=2024-01-31",
+    "enactment-date=2026-02-23",
+    "publication-date=2023-12-21",
+    "publication-date=2024-01-31",
+    "publication-date=2026-02-24"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "69431",
+   "identifier": "7105514574",
+   "field": "inn",
+   "slug": "ao-kbp-shipunova",
+   "kind": "entity",
+   "registry_name": "АО «Конструкторское бюро приборостроения им. академика А. Г. Шипунова»",
+   "list_names": [
+    "JSC Design Bureau of Instrument-Making Named After Academic A. G. Shipunov",
+    "JSC KBP"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2023-12-21",
+    "effective-date=2024-01-31",
+    "effective-date=2026-02-24",
+    "enactment-date=2023-12-20",
+    "enactment-date=2024-01-31",
+    "enactment-date=2026-02-23",
+    "publication-date=2023-12-21",
+    "publication-date=2024-01-31",
+    "publication-date=2026-02-24"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "69431",
+   "identifier": "1117154036911",
+   "field": "ogrn",
+   "slug": "ao-kbp-shipunova",
+   "kind": "entity",
+   "registry_name": "АО «Конструкторское бюро приборостроения им. академика А. Г. Шипунова»",
+   "list_names": [
+    "JSC Design Bureau of Instrument-Making Named After Academic A. G. Shipunov",
+    "JSC KBP"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "73410",
+   "identifier": "1027807560186",
+   "field": "ogrn",
+   "slug": "npp-radar-mms",
+   "kind": "entity",
+   "registry_name": "АО «НПП «Радар ММС»»",
+   "list_names": [
+    "JSC “NPP ‘Radar MMS’”",
+    "Joint Stock Company Research and Production Enterprise “RADAR MMS”",
+    "Radar MMS",
+    "Генеральный директор- генеральный конструктор анцев георгий владимирович"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2024-03-01",
+    "effective-date=2024-03-22",
+    "effective-date=2024-06-04",
+    "effective-date=2025-12-13",
+    "effective-date=2026-04-01",
+    "enactment-date=2024-02-29",
+    "enactment-date=2024-03-21",
+    "enactment-date=2024-06-03",
+    "enactment-date=2025-12-12",
+    "enactment-date=2026-03-31",
+    "publication-date=2024-03-01",
+    "publication-date=2024-03-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "73410",
+   "identifier": "7814027653",
+   "field": "inn",
+   "slug": "npp-radar-mms",
+   "kind": "entity",
+   "registry_name": "АО «НПП «Радар ММС»»",
+   "list_names": [
+    "JSC “NPP ‘Radar MMS’”",
+    "Joint Stock Company Research and Production Enterprise “RADAR MMS”",
+    "Radar MMS",
+    "Генеральный директор- генеральный конструктор анцев георгий владимирович"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2024-03-01",
+    "effective-date=2024-03-22",
+    "effective-date=2024-06-04",
+    "effective-date=2025-12-13",
+    "effective-date=2026-04-01",
+    "enactment-date=2024-02-29",
+    "enactment-date=2024-03-21",
+    "enactment-date=2024-06-03",
+    "enactment-date=2025-12-12",
+    "enactment-date=2026-03-31",
+    "publication-date=2024-03-01",
+    "publication-date=2024-03-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "73410",
+   "identifier": "7814027653",
+   "field": "inn",
+   "slug": "npp-radar-mms",
+   "kind": "entity",
+   "registry_name": "АО «НПП «Радар ММС»»",
+   "list_names": [
+    "JSC “NPP ‘Radar MMS’”",
+    "Joint Stock Company Research and Production Enterprise “RADAR MMS”",
+    "Radar MMS",
+    "Генеральный директор- генеральный конструктор анцев георгий владимирович"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "72680",
+   "identifier": "780105167705",
+   "field": "inn_personal",
+   "slug": "antsev-georgiy-vladimirovich",
+   "kind": "person",
+   "registry_name": "Анцев Георгий Владимирович",
+   "list_names": [
+    "Antsev",
+    "Georgiy",
+    "Vladimirovich"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2024-03-01",
+    "effective-date=2025-12-13",
+    "enactment-date=2024-02-29",
+    "enactment-date=2025-12-12",
+    "publication-date=2024-03-01",
+    "publication-date=2025-12-12"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "72680",
+   "identifier": "780105167705",
+   "field": "inn_personal",
+   "slug": "antsev-georgiy-vladimirovich",
+   "kind": "person",
+   "registry_name": "Анцев Георгий Владимирович",
+   "list_names": [
+    "Antsev",
+    "Georgiy",
+    "Vladimirovich"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "86958",
+   "identifier": "7838044584",
+   "field": "inn",
+   "slug": "ooo-spdbbk",
+   "kind": "entity",
+   "registry_name": "ООО «СПДББК»",
+   "list_names": [
+    "LLC SPDBBK"
+   ],
+   "programs": [
+    "29445"
+   ],
+   "dates": [
+    "effective-date=2024-12-24",
+    "enactment-date=2024-12-20",
+    "publication-date=2024-12-23"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "88614",
+   "identifier": "773514103490",
+   "field": "inn_personal",
+   "slug": "atlivanchik-sergey-nikolaevich",
+   "kind": "person",
+   "registry_name": "Атливанчик Сергей Николаевич",
+   "list_names": [
+    "Atlivanchik",
+    "Nikolaevich",
+    "Sergey"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2025-03-04",
+    "enactment-date=2025-03-03",
+    "publication-date=2025-03-04"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "89489",
+   "identifier": "1026701461160",
+   "field": "ogrn",
+   "slug": "ao-nii-stt",
+   "kind": "entity",
+   "registry_name": "АО «НИИ СТТ»",
+   "list_names": [
+    "JSC NII STT",
+    "Scientific Research Institute for Modern Telecommunications Technologies (NII STT)",
+    "АО НИИ СТТ"
+   ],
+   "programs": [
+    "29445"
+   ],
+   "dates": [
+    "effective-date=2025-03-04",
+    "enactment-date=2025-03-03",
+    "publication-date=2025-03-04"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "88998",
+   "identifier": "7735140825",
+   "field": "inn",
+   "slug": "ooo-eliars",
+   "kind": "entity",
+   "registry_name": "ООО «Элиарс»",
+   "list_names": [
+    "LLC Eliars",
+    "Limited Liability Company “Eliars”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2025-03-04",
+    "enactment-date=2025-03-03",
+    "publication-date=2025-03-04"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "89623",
+   "identifier": "1237800084235",
+   "field": "ogrn",
+   "slug": "ooo-trimiks",
+   "kind": "entity",
+   "registry_name": "ООО «Тримикс»",
+   "list_names": [
+    "LLC 3MX",
+    "Limited Liability Company “TRIMIX”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2025-03-04",
+    "effective-date=2026-04-01",
+    "enactment-date=2025-03-03",
+    "enactment-date=2026-03-31",
+    "publication-date=2025-03-04",
+    "publication-date=2026-04-01"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "89623",
+   "identifier": "7802942873",
+   "field": "inn",
+   "slug": "ooo-trimiks",
+   "kind": "entity",
+   "registry_name": "ООО «Тримикс»",
+   "list_names": [
+    "LLC 3MX",
+    "Limited Liability Company “TRIMIX”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2025-03-04",
+    "effective-date=2026-04-01",
+    "enactment-date=2025-03-03",
+    "enactment-date=2026-03-31",
+    "publication-date=2025-03-04",
+    "publication-date=2026-04-01"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "89623",
+   "identifier": "1237800084235",
+   "field": "ogrn",
+   "slug": "ooo-trimiks",
+   "kind": "entity",
+   "registry_name": "ООО «Тримикс»",
+   "list_names": [
+    "LLC 3MX",
+    "Limited Liability Company “TRIMIX”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "89623",
+   "identifier": "7802942873",
+   "field": "inn",
+   "slug": "ooo-trimiks",
+   "kind": "entity",
+   "registry_name": "ООО «Тримикс»",
+   "list_names": [
+    "LLC 3MX",
+    "Limited Liability Company “TRIMIX”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "92761",
+   "identifier": "1225000003458",
+   "field": "ogrn",
+   "slug": "ooo-tskbr",
+   "kind": "entity",
+   "registry_name": "ООО «ЦКБР»",
+   "list_names": [
+    "Complex Unmanned Solutions Center Ltd",
+    "Limited Liability Company “Center for Integrated Unmanned Solutions”",
+    "USC LTD",
+    "ООО “ЦКБР”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2025-06-03",
+    "enactment-date=2025-06-02",
+    "publication-date=2025-06-03"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "92761",
+   "identifier": "5040176793",
+   "field": "inn",
+   "slug": "ooo-tskbr",
+   "kind": "entity",
+   "registry_name": "ООО «ЦКБР»",
+   "list_names": [
+    "Complex Unmanned Solutions Center Ltd",
+    "Limited Liability Company “Center for Integrated Unmanned Solutions”",
+    "USC LTD",
+    "ООО “ЦКБР”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2025-06-03",
+    "enactment-date=2025-06-02",
+    "publication-date=2025-06-03"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "92861",
+   "identifier": "1235000022179",
+   "field": "ogrn",
+   "slug": "ooo-npo-rustekhdron",
+   "kind": "entity",
+   "registry_name": "ООО «НПО Рустехдрон»",
+   "list_names": [
+    "LLC NPO Rustecdrone",
+    "Limited Liability Company “Scientific And Production Association Rustecdrone”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2025-06-03",
+    "enactment-date=2025-06-02",
+    "publication-date=2025-06-03"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "92861",
+   "identifier": "5003155499",
+   "field": "inn",
+   "slug": "ooo-npo-rustekhdron",
+   "kind": "entity",
+   "registry_name": "ООО «НПО Рустехдрон»",
+   "list_names": [
+    "LLC NPO Rustecdrone",
+    "Limited Liability Company “Scientific And Production Association Rustecdrone”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2025-06-03",
+    "enactment-date=2025-06-02",
+    "publication-date=2025-06-03"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "92836",
+   "identifier": "5300010714",
+   "field": "inn",
+   "slug": "ano-npts-ushkuynik",
+   "kind": "entity",
+   "registry_name": "АНО «НПЦ «Ушкуйник»»",
+   "list_names": [
+    "Autonomous non-profit Organisation “Scientific and Production Center for Testing and Competence in the Field of Development of Unmanned Aircraft Systems and Means of Protection Against their Illegal Use ‘Ushkuynik’”",
+    "Scientific-Research Centre “Ushkuynik”",
+    "АНО “НПЦ ‘Ушкуйник’”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2025-06-03",
+    "effective-date=2026-04-01",
+    "enactment-date=2025-06-02",
+    "enactment-date=2026-03-31",
+    "publication-date=2025-06-03",
+    "publication-date=2026-04-01"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "92836",
+   "identifier": "5300010714",
+   "field": "inn",
+   "slug": "ano-npts-ushkuynik",
+   "kind": "entity",
+   "registry_name": "АНО «НПЦ «Ушкуйник»»",
+   "list_names": [
+    "Autonomous non-profit Organisation “Scientific and Production Center for Testing and Competence in the Field of Development of Unmanned Aircraft Systems and Means of Protection Against their Illegal Use ‘Ushkuynik’”",
+    "Scientific-Research Centre “Ushkuynik”",
+    "АНО “НПЦ ‘Ушкуйник’”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "93372",
+   "identifier": "1237700447324",
+   "field": "ogrn",
+   "slug": "ao-stratim",
+   "kind": "entity",
+   "registry_name": "АО «Стратим»",
+   "list_names": [
+    "Joint Stock Company Stratim"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2025-06-03",
+    "effective-date=2025-08-12",
+    "enactment-date=2025-06-02",
+    "enactment-date=2025-08-11",
+    "publication-date=2025-06-03",
+    "publication-date=2025-08-12"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "93372",
+   "identifier": "1237700447324",
+   "field": "ogrn",
+   "slug": "ao-stratim",
+   "kind": "entity",
+   "registry_name": "АО «Стратим»",
+   "list_names": [
+    "Joint Stock Company Stratim"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "91706",
+   "identifier": "7720901379",
+   "field": "inn",
+   "slug": "ao-stratim",
+   "kind": "entity",
+   "registry_name": "АО «Стратим»",
+   "list_names": [
+    "JSC “STRATIM”",
+    "STRATIM DESIGN BUREAU"
+   ],
+   "programs": [
+    "29445"
+   ],
+   "dates": [
+    "effective-date=2025-06-03",
+    "enactment-date=2025-06-02",
+    "publication-date=2025-06-03"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "91832",
+   "identifier": "5260494520",
+   "field": "inn",
+   "slug": "ooo-stratim",
+   "kind": "entity",
+   "registry_name": "ООО «Стратим»",
+   "list_names": [
+    "LLC “STRATIM”"
+   ],
+   "programs": [
+    "29445"
+   ],
+   "dates": [
+    "effective-date=2025-06-03",
+    "enactment-date=2025-06-02",
+    "publication-date=2025-06-03"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "93541",
+   "identifier": "501306766736",
+   "field": "inn_personal",
+   "slug": "kuzyakin-dmitriy-vasilevich",
+   "kind": "person",
+   "registry_name": "Кузякин Дмитрий Васильевич",
+   "list_names": [
+    "Dmitry",
+    "Kuzyakin",
+    "Vasilevich"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2025-06-03",
+    "effective-date=2026-04-01",
+    "enactment-date=2025-06-02",
+    "enactment-date=2026-03-31",
+    "publication-date=2025-06-03",
+    "publication-date=2026-04-01"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "93541",
+   "identifier": "501306766736",
+   "field": "inn_personal",
+   "slug": "kuzyakin-dmitriy-vasilevich",
+   "kind": "person",
+   "registry_name": "Кузякин Дмитрий Васильевич",
+   "list_names": [
+    "Dmitry",
+    "Kuzyakin",
+    "Vasilevich"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "96063",
+   "identifier": "5040176793",
+   "field": "inn",
+   "slug": "ooo-tskbr",
+   "kind": "entity",
+   "registry_name": "ООО «ЦКБР»",
+   "list_names": [
+    "USC Ltd; Complex Unmanned Solutions Center Ltd",
+    "Unmanned Solutions Center Ltd."
+   ],
+   "programs": [
+    "29445"
+   ],
+   "dates": [
+    "effective-date=2025-08-12",
+    "enactment-date=2025-08-11",
+    "publication-date=2025-08-12"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "95532",
+   "identifier": "1026701461160",
+   "field": "ogrn",
+   "slug": "ao-nii-stt",
+   "kind": "entity",
+   "registry_name": "АО «НИИ СТТ»",
+   "list_names": [
+    "AO “NII STT”",
+    "JSC “Research Institute of Modern Telecommunication Technologies”",
+    "Joint Stock Company “Research Institute of Modern Telecommunication Technologies”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2025-08-12",
+    "enactment-date=2025-08-11",
+    "publication-date=2025-08-12"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "95532",
+   "identifier": "6730046954",
+   "field": "inn",
+   "slug": "ao-nii-stt",
+   "kind": "entity",
+   "registry_name": "АО «НИИ СТТ»",
+   "list_names": [
+    "AO “NII STT”",
+    "JSC “Research Institute of Modern Telecommunication Technologies”",
+    "Joint Stock Company “Research Institute of Modern Telecommunication Technologies”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2025-08-12",
+    "enactment-date=2025-08-11",
+    "publication-date=2025-08-12"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "95826",
+   "identifier": "1237700463032",
+   "field": "ogrn",
+   "slug": "ao-ploshchad",
+   "kind": "entity",
+   "registry_name": "АО «Площадь»",
+   "list_names": [
+    "JSC “Ploshchad”",
+    "JSC “Square”",
+    "Joint Stock Company “Ploshchad”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2025-08-12",
+    "enactment-date=2025-08-11",
+    "publication-date=2025-08-12"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "95826",
+   "identifier": "9723203841",
+   "field": "inn",
+   "slug": "ao-ploshchad",
+   "kind": "entity",
+   "registry_name": "АО «Площадь»",
+   "list_names": [
+    "JSC “Ploshchad”",
+    "JSC “Square”",
+    "Joint Stock Company “Ploshchad”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2025-08-12",
+    "enactment-date=2025-08-11",
+    "publication-date=2025-08-12"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "99495",
+   "identifier": "7802491148",
+   "field": "inn",
+   "slug": "ooo-radiofid-sistemy",
+   "kind": "entity",
+   "registry_name": "ООО «Радиофид Системы»",
+   "list_names": [
+    "Radiofid Systems LLC"
+   ],
+   "programs": [
+    "29445"
+   ],
+   "dates": [
+    "effective-date=2025-12-13",
+    "enactment-date=2025-12-12",
+    "publication-date=2025-12-12"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "99053",
+   "identifier": "1227700378553",
+   "field": "ogrn",
+   "slug": "ooo-tsugam",
+   "kind": "entity",
+   "registry_name": "ООО «Центр управления городской аэромобильностью»",
+   "list_names": [
+    "LLC “UAMOC”",
+    "Limited Liability Company “Urban Air Mobility Operations Center”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2025-12-13",
+    "enactment-date=2025-12-12",
+    "publication-date=2025-12-12"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "99053",
+   "identifier": "9731094770",
+   "field": "inn",
+   "slug": "ooo-tsugam",
+   "kind": "entity",
+   "registry_name": "ООО «Центр управления городской аэромобильностью»",
+   "list_names": [
+    "LLC “UAMOC”",
+    "Limited Liability Company “Urban Air Mobility Operations Center”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2025-12-13",
+    "enactment-date=2025-12-12",
+    "publication-date=2025-12-12"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "104705",
+   "identifier": "500905260513",
+   "field": "inn_personal",
+   "slug": "olga-sokolova",
+   "kind": "person",
+   "registry_name": "Ольга Соколова",
+   "list_names": [
+    "Mikhailovna",
+    "Olga",
+    "Sokolova"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "104739",
+   "identifier": "1207700279797",
+   "field": "ogrn",
+   "slug": "ooo-stims",
+   "kind": "entity",
+   "registry_name": "ООО «СТИМС»",
+   "list_names": [
+    "Gaskar Group of Companies",
+    "LLC Gaskar Group of the Skolkovo Innovation Center",
+    "LLC “Gaskar Group”",
+    "Limited Liability Company “Gaskar Group”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "104739",
+   "identifier": "7734436058",
+   "field": "inn",
+   "slug": "ooo-stims",
+   "kind": "entity",
+   "registry_name": "ООО «СТИМС»",
+   "list_names": [
+    "Gaskar Group of Companies",
+    "LLC Gaskar Group of the Skolkovo Innovation Center",
+    "LLC “Gaskar Group”",
+    "Limited Liability Company “Gaskar Group”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "104723",
+   "identifier": "1236100025633",
+   "field": "ogrn",
+   "slug": "ooo-atlant-aero",
+   "kind": "entity",
+   "registry_name": "ООО «Атлант Аэро»",
+   "list_names": [
+    "LLC “ATLANT AERO”",
+    "Limited Liability Company “Atlant Aero”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "104723",
+   "identifier": "6154165878",
+   "field": "inn",
+   "slug": "ooo-atlant-aero",
+   "kind": "entity",
+   "registry_name": "ООО «Атлант Аэро»",
+   "list_names": [
+    "LLC “ATLANT AERO”",
+    "Limited Liability Company “Atlant Aero”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "105178",
+   "identifier": "1237300010430",
+   "field": "ogrn",
+   "slug": "ooo-skb-piranya",
+   "kind": "entity",
+   "registry_name": "ООО «СКБ Пиранья»",
+   "list_names": [
+    "LLC SDB “Piranya”",
+    "LLC SKB “Piranya”",
+    "Limited Liability Company Simbirsk Design Bureau “Piranya”",
+    "Limited Liability Company Simbirskoe Konstruktrskoe Byuro “Piranya”",
+    "ООО СКБ “Пиранья”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "105178",
+   "identifier": "7300024069",
+   "field": "inn",
+   "slug": "ooo-skb-piranya",
+   "kind": "entity",
+   "registry_name": "ООО «СКБ Пиранья»",
+   "list_names": [
+    "LLC SDB “Piranya”",
+    "LLC SKB “Piranya”",
+    "Limited Liability Company Simbirsk Design Bureau “Piranya”",
+    "Limited Liability Company Simbirskoe Konstruktrskoe Byuro “Piranya”",
+    "ООО СКБ “Пиранья”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "104986",
+   "identifier": "645001842561",
+   "field": "inn_personal",
+   "slug": "kosolapov-oleg-yurevich",
+   "kind": "person",
+   "registry_name": "Косолапов Олег Юрьевич",
+   "list_names": [
+    "Kosolapov",
+    "Oleg",
+    "Yuryevich"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "105434",
+   "identifier": "1177746007900",
+   "field": "ogrn",
+   "slug": "ooo-aeromaks",
+   "kind": "entity",
+   "registry_name": "ООО «Аэромакс»",
+   "list_names": [
+    "LLC “AEROMAKS”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "105434",
+   "identifier": "7725347482",
+   "field": "inn",
+   "slug": "ooo-aeromaks",
+   "kind": "entity",
+   "registry_name": "ООО «Аэромакс»",
+   "list_names": [
+    "LLC “AEROMAKS”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "105445",
+   "identifier": "1027806064571",
+   "field": "ogrn",
+   "slug": "ao-kotlin-novator",
+   "kind": "entity",
+   "registry_name": "АО «Котлин-Новатор»",
+   "list_names": [
+    "JSC “Kotlin-Novator”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "105445",
+   "identifier": "7811075899",
+   "field": "inn",
+   "slug": "ao-kotlin-novator",
+   "kind": "entity",
+   "registry_name": "АО «Котлин-Новатор»",
+   "list_names": [
+    "JSC “Kotlin-Novator”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "105290",
+   "identifier": "1232700009398",
+   "field": "ogrn",
+   "slug": "ooo-aero-khit",
+   "kind": "entity",
+   "registry_name": "ООО «Аэро-Хит»",
+   "list_names": [
+    "LLC “AERO-HIT”",
+    "Limited Liability Company Aero-HIT"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "105290",
+   "identifier": "2700012608",
+   "field": "inn",
+   "slug": "ooo-aero-khit",
+   "kind": "entity",
+   "registry_name": "ООО «Аэро-Хит»",
+   "list_names": [
+    "LLC “AERO-HIT”",
+    "Limited Liability Company Aero-HIT"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "105506",
+   "identifier": "1185275047176",
+   "field": "ogrn",
+   "slug": "ooo-kleverkopter",
+   "kind": "entity",
+   "registry_name": "ООО «Клеверкоптер»",
+   "list_names": [
+    "LLC “KLEVERCOPTER”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "105506",
+   "identifier": "5257183517",
+   "field": "inn",
+   "slug": "ooo-kleverkopter",
+   "kind": "entity",
+   "registry_name": "ООО «Клеверкоптер»",
+   "list_names": [
+    "LLC “KLEVERCOPTER”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "105828",
+   "identifier": "1245000058489",
+   "field": "ogrn",
+   "slug": "ooo-arkhangel-tsentr",
+   "kind": "entity",
+   "registry_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ-ЦЕНТР\"",
+   "list_names": [
+    "Archangel Combat and Special Training Center",
+    "Archangel Military Tactical Center",
+    "LLC “Archangel Center”",
+    "Limited Liability Company “Archangel Center”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "105828",
+   "identifier": "5032379630",
+   "field": "inn",
+   "slug": "ooo-arkhangel-tsentr",
+   "kind": "entity",
+   "registry_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АРХАНГЕЛ-ЦЕНТР\"",
+   "list_names": [
+    "Archangel Combat and Special Training Center",
+    "Archangel Military Tactical Center",
+    "LLC “Archangel Center”",
+    "Limited Liability Company “Archangel Center”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "105821",
+   "identifier": "1247700354175",
+   "field": "ogrn",
+   "slug": "ao-tekhnodron",
+   "kind": "entity",
+   "registry_name": "АО «Технодрон»",
+   "list_names": [
+    "JSC Technodron"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "105821",
+   "identifier": "9704241986",
+   "field": "inn",
+   "slug": "ao-tekhnodron",
+   "kind": "entity",
+   "registry_name": "АО «Технодрон»",
+   "list_names": [
+    "JSC Technodron"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-05-22",
+    "enactment-date=2026-05-21",
+    "publication-date=2026-05-22"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "107260",
+   "identifier": "1146196001621",
+   "field": "ogrn",
+   "slug": "alyaska",
+   "kind": "entity",
+   "registry_name": "ООО «ИОНОС»",
+   "list_names": [
+    "LLC “IONOS”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-08-11",
+    "enactment-date=2026-08-10",
+    "publication-date=2026-08-11"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "ch",
+   "entry_id": "107260",
+   "identifier": "6168719068",
+   "field": "inn",
+   "slug": "alyaska",
+   "kind": "entity",
+   "registry_name": "ООО «ИОНОС»",
+   "list_names": [
+    "LLC “IONOS”"
+   ],
+   "programs": [
+    "27286"
+   ],
+   "dates": [
+    "effective-date=2026-08-11",
+    "enactment-date=2026-08-10",
+    "publication-date=2026-08-11"
+   ],
+   "refs": [],
+   "urls": []
+  },
+  {
+   "list": "uk",
+   "entry_id": "RUS0238",
+   "identifier": "1077799030847",
+   "field": "ogrn",
+   "slug": "gk-rostekh",
+   "kind": "entity",
+   "registry_name": "ГК «Ростех»",
+   "list_names": [
+    "Rostec",
+    "State Corporation for the Promotion of the Development, Manufacture and Export of High Technology Products \"Rostec\""
+   ],
+   "programs": [
+    "The Russia (Sanctions) (EU Exit) Regulations 2019"
+   ],
+   "dates": [
+    "DateDesignated=24/02/2022",
+    "LastUpdated=08/10/2026"
+   ],
+   "refs": [
+    "The Russia (Sanctions) (EU Exit) Regulations 2019"
+   ],
+   "urls": [
+    "https://www.rostec.ru"
+   ]
+  },
+  {
+   "list": "uk",
+   "entry_id": "RUS1402",
+   "identifier": "1117847020400",
+   "field": "ogrn",
+   "slug": "ao-nii-vektor",
+   "kind": "entity",
+   "registry_name": "АО «НИИ «Вектор»»",
+   "list_names": [
+    "AO NII VEKTOR",
+    "JOINT STOCK COMPANY SCIENTIFIC-RESEARCH INSTITUTE VEKTOR"
+   ],
+   "programs": [
+    "The Russia (Sanctions) (EU Exit) Regulations 2019"
+   ],
+   "dates": [
+    "DateDesignated=04/05/2022",
+    "LastUpdated=09/04/2025"
+   ],
+   "refs": [
+    "The Russia (Sanctions) (EU Exit) Regulations 2019"
+   ],
+   "urls": []
+  },
+  {
+   "list": "uk",
+   "entry_id": "RUS1402",
+   "identifier": "7813491943",
+   "field": "inn",
+   "slug": "ao-nii-vektor",
+   "kind": "entity",
+   "registry_name": "АО «НИИ «Вектор»»",
+   "list_names": [
+    "AO NII VEKTOR",
+    "JOINT STOCK COMPANY SCIENTIFIC-RESEARCH INSTITUTE VEKTOR"
+   ],
+   "programs": [
+    "The Russia (Sanctions) (EU Exit) Regulations 2019"
+   ],
+   "dates": [
+    "DateDesignated=04/05/2022",
+    "LastUpdated=09/04/2025"
+   ],
+   "refs": [
+    "The Russia (Sanctions) (EU Exit) Regulations 2019"
+   ],
+   "urls": []
+  },
+  {
+   "list": "uk",
+   "entry_id": "RUS2019",
+   "identifier": "1027807560186",
+   "field": "ogrn",
+   "slug": "npp-radar-mms",
+   "kind": "entity",
+   "registry_name": "АО «НПП «Радар ММС»»",
+   "list_names": [
+    "JSC Research and Production Enterprise Radar MMS"
+   ],
+   "programs": [
+    "The Russia (Sanctions) (EU Exit) Regulations 2019"
+   ],
+   "dates": [
+    "DateDesignated=06/12/2023",
+    "LastUpdated=09/04/2025"
+   ],
+   "refs": [
+    "The Russia (Sanctions) (EU Exit) Regulations 2019"
+   ],
+   "urls": []
+  },
+  {
+   "list": "uk",
+   "entry_id": "RUS2019",
+   "identifier": "7814027653",
+   "field": "inn",
+   "slug": "npp-radar-mms",
+   "kind": "entity",
+   "registry_name": "АО «НПП «Радар ММС»»",
+   "list_names": [
+    "JSC Research and Production Enterprise Radar MMS"
+   ],
+   "programs": [
+    "The Russia (Sanctions) (EU Exit) Regulations 2019"
+   ],
+   "dates": [
+    "DateDesignated=06/12/2023",
+    "LastUpdated=09/04/2025"
+   ],
+   "refs": [
+    "The Russia (Sanctions) (EU Exit) Regulations 2019"
+   ],
+   "urls": []
+  },
+  {
+   "list": "uk",
+   "entry_id": "RUS2921",
+   "identifier": "1037719005873",
+   "field": "ogrn",
+   "slug": "ao-tekhnodinamika",
+   "kind": "entity",
+   "registry_name": "АО «Технодинамика»",
+   "list_names": [
+    "JOINT STOCK COMPANY AVIATION EQUIPMENT",
+    "JSC TECHNODINAMIKA",
+    "JSC TEKHNODINAMIKA",
+    "JSC Technodinamika",
+    "JSC Technodynamics",
+    "Joint Stock Company Technodinamika"
+   ],
+   "programs": [
+    "The Russia (Sanctions) (EU Exit) Regulations 2019"
+   ],
+   "dates": [
+    "DateDesignated=12/09/2025",
+    "LastUpdated=12/09/2025"
+   ],
+   "refs": [
+    "The Russia (Sanctions) (EU Exit) Regulations 2019"
+   ],
+   "urls": [
+    "http://www.technodinamika.ru/"
+   ]
+  },
+  {
+   "list": "uk",
+   "entry_id": "RUS2921",
+   "identifier": "7719265496",
+   "field": "inn",
+   "slug": "ao-tekhnodinamika",
+   "kind": "entity",
+   "registry_name": "АО «Технодинамика»",
+   "list_names": [
+    "JOINT STOCK COMPANY AVIATION EQUIPMENT",
+    "JSC TECHNODINAMIKA",
+    "JSC TEKHNODINAMIKA",
+    "JSC Technodinamika",
+    "JSC Technodynamics",
+    "Joint Stock Company Technodinamika"
+   ],
+   "programs": [
+    "The Russia (Sanctions) (EU Exit) Regulations 2019"
+   ],
+   "dates": [
+    "DateDesignated=12/09/2025",
+    "LastUpdated=12/09/2025"
+   ],
+   "refs": [
+    "The Russia (Sanctions) (EU Exit) Regulations 2019"
+   ],
+   "urls": [
+    "http://www.technodinamika.ru/"
+   ]
+  }
+ ],
+ "diff": {
+  "new": [],
+  "removed": [],
+  "listed_not_in_registry": [
+   {
+    "slug": "vpp-edinaya-rossiya",
+    "list": "ch",
+    "name": "ВСЕРОССИЙСКАЯ ПОЛИТИЧЕСКАЯ ПАРТИЯ «ЕДИНАЯ РОССИЯ»"
+   },
+   {
+    "slug": "vpp-edinaya-rossiya",
+    "list": "eu",
+    "name": "ВСЕРОССИЙСКАЯ ПОЛИТИЧЕСКАЯ ПАРТИЯ «ЕДИНАЯ РОССИЯ»"
+   }
+  ],
+  "registry_claims_not_matched": [
+   {
+    "slug": "alyaska",
+    "list": "eu",
+    "name": "ООО «ИОНОС»"
+   },
+   {
+    "slug": "ao-kronshtadt",
+    "list": "eu",
+    "name": "АО «Кронштадт»"
+   },
+   {
+    "slug": "ao-kronshtadt",
+    "list": "uk",
+    "name": "АО «Кронштадт»"
+   },
+   {
+    "slug": "ao-nii-stt",
+    "list": "us",
+    "name": "АО «НИИ СТТ»"
+   },
+   {
+    "slug": "ao-pk-azimut",
+    "list": "eu",
+    "name": "АО ПК «Азимут»"
+   },
+   {
+    "slug": "ao-pk-azimut",
+    "list": "us",
+    "name": "АО ПК «Азимут»"
+   },
+   {
+    "slug": "gk-rostekh",
+    "list": "eu",
+    "name": "ГК «Ростех»"
+   },
+   {
+    "slug": "ooo-radiofid-sistemy",
+    "list": "eu",
+    "name": "ООО «Радиофид Системы»"
+   },
+   {
+    "slug": "ooo-spdbbk",
+    "list": "eu",
+    "name": "ООО «СПДББК»"
+   },
+   {
+    "slug": "ooo-stratim",
+    "list": "eu",
+    "name": "ООО «Стратим»"
+   },
+   {
+    "slug": "pao-bank-psb",
+    "list": "uk",
+    "name": "ПАО «Банк ПСБ»"
+   },
+   {
+    "slug": "uraldronzavod",
+    "list": "ch",
+    "name": "ООО «Уралдронзавод»"
+   },
+   {
+    "slug": "uraldronzavod",
+    "list": "eu",
+    "name": "ООО «Уралдронзавод»"
+   }
+  ]
+ }
+}
