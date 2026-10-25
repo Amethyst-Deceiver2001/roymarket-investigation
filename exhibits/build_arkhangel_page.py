@@ -344,11 +344,6 @@ def render(out: Path):
   <p class="rm-dek">{P.pop("Proekt KB «Arkhangel»", e["name_ru"])} works through Telegram. Its own posts say it trains drone and
   air-defence operators for named army units, builds an interceptor drone with a declared combat version, and publishes the
   drone's parts list. Almost every part in that list is made in China.</p>
-  <div class="figs">
-    <div class="fig"><span class="n">{china}</span><span class="w">parts and tools in its own build files made in China</span></div>
-    <div class="fig"><span class="n">{len(e.get("products") or [])}</span><span class="w">products it describes</span></div>
-    <div class="fig"><span class="n">{n_claims}</span><span class="w">of its own statements quoted below</span></div>
-  </div>
 </header>
 <main class="rm-page">
   <section aria-labelledby="h-who"><h2 class="rm-h2" id="h-who">Who runs it, and its link to TsBST</h2>{who}{tie}</section>
