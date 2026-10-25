@@ -330,9 +330,19 @@ def surname_of(person_tokens: list[str]) -> str | None:
     return None
 
 
+def first_name_of(person_tokens: list[str]) -> str | None:
+    """With three tokens, the one that is neither the surname nor the patronymic."""
+    sur = surname_of(person_tokens)
+    if not sur:
+        return None
+    rest = [t for t in person_tokens if t != sur and not PATRONYMIC.search(t)]
+    return rest[0] if len(rest) == 1 else None
+
+
 def grade(person_tokens: list[str], entry: dict, dob: str | None) -> tuple[str, str]:
     best = ("", "")
     sur = surname_of(person_tokens)
+    first = first_name_of(person_tokens)
     for n in entry["names"]:
         et = tokens(n)
         hit = [t for t in person_tokens if t in et]
@@ -341,6 +351,8 @@ def grade(person_tokens: list[str], entry: dict, dob: str | None) -> tuple[str, 
         if len(person_tokens) >= 3 and len(hit) == len(person_tokens):
             g = "name+patronymic"
         elif len(person_tokens) >= 2 and len(hit) >= 2:
+            if first and first not in hit:
+                continue    # surname + patronymic with a different first name is another person
             g = "surname+first name"
         else:
             continue
