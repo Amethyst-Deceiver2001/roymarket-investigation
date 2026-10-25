@@ -23169,6 +23169,19 @@
         {
           "source": "ivan-igorevich-karabinskiy",
           "target": "fond-gradislava-historic-cultural-heritage-preservation",
+          "type": "directs",
+          "label": null,
+          "source_id": "L0011",
+          "as_of": "2013-04-12",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "ivan-igorevich-karabinskiy",
+          "target": "fond-gradislava-historic-cultural-heritage-preservation",
           "type": "role",
           "label": "General Director, Фонд «Градислава»",
           "source_id": "s0216",
@@ -40186,6 +40199,19 @@
         {
           "source": "vladimir-vadimovich-yakushev",
           "target": "vpp-edinaya-rossiya",
+          "type": "directs",
+          "label": null,
+          "source_id": "L0010",
+          "as_of": "2025-01-09",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "vladimir-vadimovich-yakushev",
+          "target": "vpp-edinaya-rossiya",
           "type": "role",
           "label": "director",
           "source_id": "s8076",
@@ -41998,6 +42024,14 @@
           "name_latin": null,
           "sanctioned": false,
           "degree": 5
+        },
+        {
+          "id": "ivan-igorevich-karabinskiy",
+          "kind": "person",
+          "label": "Иван Игоревич Карабинский",
+          "name_latin": null,
+          "sanctioned": false,
+          "degree": 3
         },
         {
           "id": "ivlev-artem-yurevich",
@@ -44342,6 +44376,14 @@
           "degree": 4
         },
         {
+          "id": "vladimir-vadimovich-yakushev",
+          "kind": "person",
+          "label": "Владимир Владимирович Якушев",
+          "name_latin": null,
+          "sanctioned": true,
+          "degree": 3
+        },
+        {
           "id": "vlasov-artem-arkadevich",
           "kind": "person",
           "label": "Власов Артём Аркадьевич",
@@ -44364,6 +44406,18 @@
           "name_latin": null,
           "sanctioned": false,
           "degree": 5
+        },
+        {
+          "id": "vpp-edinaya-rossiya",
+          "kind": "entity",
+          "label": "ВСЕРОССИЙСКАЯ ПОЛИТИЧЕСКАЯ ПАРТИЯ «ЕДИНАЯ РОССИЯ»",
+          "name_latin": "All-Russian political party “United Russia”",
+          "inn": "7702330228",
+          "tier": "plumbing",
+          "sanctioned": false,
+          "legal_form": "Политическая партия",
+          "product_count": 0,
+          "degree": 3
         },
         {
           "id": "yarl",
@@ -45562,6 +45616,19 @@
           "label": null,
           "source_id": "s7621",
           "as_of": "2026-04-15",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "ivan-igorevich-karabinskiy",
+          "target": "fond-gradislava-historic-cultural-heritage-preservation",
+          "type": "directs",
+          "label": null,
+          "source_id": "L0011",
+          "as_of": "2013-04-12",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null,
@@ -48604,6 +48671,19 @@
           "label": null,
           "source_id": "s0214",
           "as_of": "2008-05-27",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "vladimir-vadimovich-yakushev",
+          "target": "vpp-edinaya-rossiya",
+          "type": "directs",
+          "label": null,
+          "source_id": "L0010",
+          "as_of": "2025-01-09",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null,
@@ -51862,30 +51942,10 @@
           "degree": 6
         },
         {
-          "id": "fond-gradislava-historic-cultural-heritage-preservation",
-          "kind": "entity",
-          "label": "Фонд «Градислава» | historic & cultural heritage preservation",
-          "name_latin": null,
-          "inn": "7704278421",
-          "tier": "money-layer",
-          "sanctioned": false,
-          "legal_form": "Фонд",
-          "product_count": 0,
-          "degree": 7
-        },
-        {
           "id": "group::ushkuynik-group",
           "kind": "group",
           "label": "Группа «Ушкуйник»",
           "subtype": "brand_cluster",
-          "degree": 3
-        },
-        {
-          "id": "ivan-igorevich-karabinskiy",
-          "kind": "person",
-          "label": "Иван Игоревич Карабинский",
-          "name_latin": null,
-          "sanctioned": false,
           "degree": 3
         },
         {
@@ -52340,26 +52400,6 @@
           "degree": 2
         },
         {
-          "id": "vladimir-vadimovich-yakushev",
-          "kind": "person",
-          "label": "Владимир Владимирович Якушев",
-          "name_latin": null,
-          "sanctioned": true,
-          "degree": 3
-        },
-        {
-          "id": "vpp-edinaya-rossiya",
-          "kind": "entity",
-          "label": "ВСЕРОССИЙСКАЯ ПОЛИТИЧЕСКАЯ ПАРТИЯ «ЕДИНАЯ РОССИЯ»",
-          "name_latin": "All-Russian political party “United Russia”",
-          "inn": "7702330228",
-          "tier": "plumbing",
-          "sanctioned": false,
-          "legal_form": "Политическая партия",
-          "product_count": 0,
-          "degree": 3
-        },
-        {
           "id": "yarl",
           "kind": "entity",
           "label": "ООО «БПР ЯРЛ»",
@@ -52445,19 +52485,6 @@
           "label": "генеральный конструктор (per leader-id.ru self-report)",
           "source_id": null,
           "as_of": null,
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null,
-          "detail": null,
-          "grade": "open"
-        },
-        {
-          "source": "ivan-igorevich-karabinskiy",
-          "target": "fond-gradislava-historic-cultural-heritage-preservation",
-          "type": "directs",
-          "label": null,
-          "source_id": null,
-          "as_of": "2013-04-12",
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
@@ -52762,19 +52789,6 @@
           "confidence": "doc",
           "detail": null,
           "grade": "doc"
-        },
-        {
-          "source": "vladimir-vadimovich-yakushev",
-          "target": "vpp-edinaya-rossiya",
-          "type": "directs",
-          "label": null,
-          "source_id": null,
-          "as_of": "2025-01-09",
-          "weight": 1.0,
-          "temporal_status": "unknown",
-          "confidence": null,
-          "detail": null,
-          "grade": "open"
         },
         {
           "source": "yarl",
