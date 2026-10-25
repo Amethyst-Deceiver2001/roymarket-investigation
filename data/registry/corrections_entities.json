@@ -11459,13 +11459,19 @@
             "source_id": null
           }
         ],
-        "address": "125167, Москва, вн.тер.г. муниципальный округ Аэропорт, ал. Нарышкинская, д. 5, стр. 2, помещ. 1/1",
+        "address": "109202, Москва, вн.тер.г. муниципальный округ Нижегородский, ул. 1-я Фрезерная, д. 2/1 к. 2",
         "address_history": [
           {
             "as_of": "2025-01-22",
             "note": "ГРН 1257700021468, 22.01.2025 — address at registration, unchanged as of the 14.08.2026 extract",
             "source_id": "s0230",
             "value": "125167, Москва, вн.тер.г. муниципальный округ Аэропорт, ал. Нарышкинская, д. 5, стр. 2, помещ. 1/1"
+          },
+          {
+            "value": "109202, Москва, вн.тер.г. муниципальный округ Нижегородский, ул. 1-я Фрезерная, д. 2/1 к. 2",
+            "as_of": "2026-10-09",
+            "source_id": "L0360",
+            "note": "ГРН 2267708568873, 09.10.2026: change of registered address, shown in the extract of 25.10.2026 (the extract of 14.08.2026, s0230, still showed the registration address). The same extract restricts the head and the founders («Доступ к сведениям ограничен»), and the tax registration is dated 09.10.2026 (ИФНС №21 по г. Москве)."
           }
         ],
         "related_entities": [
@@ -34413,7 +34419,9 @@
               "Булат v.4"
             ]
           }
-        ]
+        ],
+        "okved_code": "26.30.17",
+        "okved_label": "Производство радио- и телевизионной передающей аппаратуры"
       },
       "verified_against": "egrul.nalog.ru open API, 2026-08-24",
       "why": [
@@ -39951,7 +39959,7 @@
     "ovod": {
       "set": {
         "_verified": true,
-        "address": "Тульская область, г.о. город Тула, с. Осиновая Гора",
+        "address": "Тульская область, г.о. город Тула, г. Тула, ул. Рязанская, д. 3Д, офис 3",
         "brand_latin": "Ovod",
         "brand_ru": "«Овод»",
         "director": "Черезов Андрей Павлович",
@@ -40275,6 +40283,12 @@
           }
         ],
         "address_history": [
+          {
+            "value": "Тульская область, г.о. город Тула, г. Тула, ул. Рязанская, д. 3Д, офис 3",
+            "as_of": "2023-08-04",
+            "source_id": "L0357",
+            "note": "ГРН 2237100216637, 04.08.2023: registered address in the extract of 25.10.2026. The ГУ МЧС record of April 2026 (s6960) names «здание 5Ж» on the same street; the two are not reconciled."
+          },
           {
             "value": "Тульская область, г. Тула, ул. Рязанская, здание 5Ж",
             "as_of": "2026-04-01",
