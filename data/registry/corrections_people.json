@@ -6459,6 +6459,23 @@
           "note": "Pre-sort of 03.10.2026 (PR #24), checked 04.10.2026 by reading the OFAC SDN record directly. \"Linked To: ...ROSSIYA SEGODNYA\" matches this record's existing identification exactly -- unambiguous, not a namesake. Genuine designation; EU/UK/French lists in the match metadata not independently read yet."
         }
       }
+    },
+    "voenkor-evgeniy-lisitsyn": {
+      "set": {
+        "roles": [
+          {
+            "entity_slug": null,
+            "title": "Embedded war correspondent",
+            "body": null,
+            "from": null,
+            "to": null,
+            "source_id": "L0329"
+          }
+        ],
+        "notes": "Documented Наша Правда front-line deliveries on at least nine occasions from Apr 2024. His footage is the richest untapped visual-evidence source identified so far. Primary doc 25.10.2026: named as «военкор Евгений Лисицын» who travelled with Сидякин and Амелин to the front (@er_molnia 13107, L0329) and signs «Военкор Лисицын» under the party's Zaporizhzhia and Donetsk delivery posts of 09–10.04.2025 and 06.06.2025 (@ZurabMakiev 1186, 1189, 1245; L0338, L0342). Not screened."
+      },
+      "verified_against": "@er_molnia 13107 (L0329) and the signed posts @ZurabMakiev 1186, 1189, 1245 (L0338, L0342); read in full 25.10.2026",
+      "why": "role and notes carry a local source; no screening has been run"
     }
   },
   "people_add_entities": [
@@ -15766,6 +15783,148 @@
         "L0001 -- ЕГРЮЛ extract of ООО «НИНСАР», 24.10.2026.",
         "s8651 -- ЦБСТ post 1562 names him as the «Квадросим» project head."
       ]
+    },
+    {
+      "slug": "aleksandr-amelin",
+      "fio_ru": "Александр Амелин",
+      "name_latin": "Aleksandr Amelin",
+      "dob": null,
+      "birthplace": null,
+      "address": null,
+      "inn_personal": null,
+      "roles": [
+        {
+          "entity_name": null,
+          "entity_slug": null,
+          "body": "МГЕР (Молодая Гвардия Единой России)",
+          "title": "руководитель Центрального штаба МГЕР (as printed; the post's wording)",
+          "from": null,
+          "to": null,
+          "source_id": "L0330"
+        }
+      ],
+      "sanctions": [],
+      "other_entities": [],
+      "other_entities_checked_at": null,
+      "disqualification_hits": [],
+      "disqualification_checked_at": null,
+      "subsidiary_liability_hits": [],
+      "subsidiary_liability_checked_at": null,
+      "social": [],
+      "photo": null,
+      "notes": "Named as «руководитель Центрального штаба МГЕР Александр Амелин» in @er_molnia 13107 (L0329), where he came with Сидякин and the war correspondent Лисицын to the front, and quoted in 13129 (L0330), 03–04.11.2024. МГЕР has no entity record yet. Added 25.10.2026 at the user's direction (important PEPs around the deliveries; persons of interest). Not screened: no sanctions, PEP or disqualification check has been run on this record, so its empty sanctions[] means 'not screened', not 'clean'. No date of birth or identifier is given by any source read, and none is filled from a namesake.",
+      "sources": [],
+      "_verified": false,
+      "_origin": "corrections:people_add_entities",
+      "_raw": {}
+    },
+    {
+      "slug": "viktor-petrovich-vodolatskiy",
+      "fio_ru": "Виктор Петрович Водолацкий",
+      "name_latin": "Viktor Petrovich Vodolatskiy",
+      "dob": null,
+      "birthplace": null,
+      "address": null,
+      "inn_personal": null,
+      "roles": [
+        {
+          "entity_name": null,
+          "entity_slug": null,
+          "body": "Государственная Дума",
+          "title": "депутат Госдумы РФ (as printed)",
+          "from": null,
+          "to": null,
+          "source_id": "L0342"
+        }
+      ],
+      "sanctions": [],
+      "other_entities": [],
+      "other_entities_checked_at": null,
+      "disqualification_hits": [],
+      "disqualification_checked_at": null,
+      "subsidiary_liability_hits": [],
+      "subsidiary_liability_checked_at": null,
+      "social": [],
+      "photo": null,
+      "notes": "Named «Водолацкий Виктор Петрович — депутат Госдумы РФ» among those present at the handover to the Cossack brigades in the LNR on 06.06.2025 (@ZurabMakiev 1245, L0342) and as «депутат Госдумы Виктор Водолацкий» in @er_molnia 15356 (L0341). Duma term and committee not stated there. Added 25.10.2026 at the user's direction (important PEPs around the deliveries; persons of interest). Not screened: no sanctions, PEP or disqualification check has been run on this record, so its empty sanctions[] means 'not screened', not 'clean'. No date of birth or identifier is given by any source read, and none is filled from a namesake.",
+      "sources": [],
+      "_verified": false,
+      "_origin": "corrections:people_add_entities",
+      "_raw": {}
+    },
+    {
+      "slug": "denis-pushilin",
+      "fio_ru": "Денис Пушилин",
+      "name_latin": "Denis Pushilin",
+      "dob": null,
+      "birthplace": null,
+      "address": null,
+      "inn_personal": null,
+      "roles": [
+        {
+          "entity_name": null,
+          "entity_slug": null,
+          "body": "Донецкая Народная Республика",
+          "title": "глава Донецкой Народной Республики, секретарь регионального отделения партии «Единая Россия» (as printed)",
+          "from": null,
+          "to": null,
+          "source_id": "L0344"
+        }
+      ],
+      "sanctions": [],
+      "other_entities": [],
+      "other_entities_checked_at": null,
+      "disqualification_hits": [],
+      "disqualification_checked_at": null,
+      "subsidiary_liability_hits": [],
+      "subsidiary_liability_checked_at": null,
+      "social": [
+        {
+          "platform": "Telegram",
+          "source_id": "L0344",
+          "url": "https://t.me/PushilinDenis"
+        }
+      ],
+      "photo": null,
+      "notes": "Named in @er_molnia 16134 (10.09.2025, L0344) as «глава Донецкой Народной Республики, секретарь реготделения партии Денис Пушилин», who brought the equipment with Якушев, Сидякин and Макиев. The post links https://t.me/PushilinDenis/7585. No patronymic is printed there. Added 25.10.2026 at the user's direction (important PEPs around the deliveries; persons of interest). Not screened: no sanctions, PEP or disqualification check has been run on this record, so its empty sanctions[] means 'not screened', not 'clean'. No date of birth or identifier is given by any source read, and none is filled from a namesake.",
+      "sources": [],
+      "_verified": false,
+      "_origin": "corrections:people_add_entities",
+      "_raw": {}
+    },
+    {
+      "slug": "denis-nikolaevich-miroshnichenko",
+      "fio_ru": "Денис Николаевич Мирошниченко",
+      "name_latin": "Denis Nikolaevich Miroshnichenko",
+      "dob": null,
+      "birthplace": null,
+      "address": null,
+      "inn_personal": null,
+      "roles": [
+        {
+          "entity_name": null,
+          "entity_slug": null,
+          "body": "Народный Совет ЛНР",
+          "title": "председатель Народного Совета ЛНР (as printed)",
+          "from": null,
+          "to": null,
+          "source_id": "L0342"
+        }
+      ],
+      "sanctions": [],
+      "other_entities": [],
+      "other_entities_checked_at": null,
+      "disqualification_hits": [],
+      "disqualification_checked_at": null,
+      "subsidiary_liability_hits": [],
+      "subsidiary_liability_checked_at": null,
+      "social": [],
+      "photo": null,
+      "notes": "Named «Мирошниченко Денис Николаевич — председатель Народного Совета ЛНР» among those present at the handover to the Cossack brigades on 06.06.2025 (@ZurabMakiev 1245, L0342). Added 25.10.2026 at the user's direction (important PEPs around the deliveries; persons of interest). Not screened: no sanctions, PEP or disqualification check has been run on this record, so its empty sanctions[] means 'not screened', not 'clean'. No date of birth or identifier is given by any source read, and none is filled from a namesake.",
+      "sources": [],
+      "_verified": false,
+      "_origin": "corrections:people_add_entities",
+      "_raw": {}
     }
   ]
 }
