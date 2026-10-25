@@ -145,6 +145,12 @@ h1, h2, h3 { text-wrap: balance; }
 .rm-quote .rm-label { display: block; margin-bottom: 6px; }
 .rm-quote cite { display: block; margin-top: 8px; font: normal 400 12.5px/1.4 var(--font-sans); color: var(--ink-3); }
 .rm-quote .q { display: block; }   /* English first: the translation leads, the Russian original is under RU */
+/* Key quote: a party's own telling words, set apart by type and a heavy neutral bar (not the accent: that is structure, not a finding). */
+.rm-quote.key { padding: 18px 20px 16px; border-left: 4px solid var(--ink); border-radius: 0 var(--radius) var(--radius) 0;
+  font: 500 20px/1.4 var(--font-serif); }
+.rm-quote.key .rm-label { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.rm-quote.key cite { font-size: 13px; }
+@media (max-width: 520px) { .rm-quote.key { font-size: 18px; padding: 14px 16px 12px; } }
 .rm-quote .gloss { display: block; margin-top: 8px; font: 400 13.5px/1.5 var(--font-sans); color: var(--ink-2); }
 
 /* Finding callout: one per section at most. */

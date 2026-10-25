@@ -429,12 +429,17 @@ def name_html(visible: str, cyrillic: str, translit: str | None = None, key: str
             f'<span popover id="{pid}" class="rm-nm-pop">{body}</span>')
 
 
-def quote_html(ru: str, en: str, cite: str = "", key: str = "") -> str:
+def quote_html(ru: str, en: str, cite: str = "", key: str = "", strong: bool = False) -> str:
     """A quotation, English first (STYLE_GUIDE §3.1, 23.10.2026): our translation in quotation marks, the verbatim
-    Russian original under the RU control, copyable. `cite` is ready-made HTML (who, when, footnote)."""
+    Russian original under the RU control, copyable. `cite` is ready-made HTML (who, when, footnote).
+    `strong` (25.10.2026, user) sets a party's own telling words apart: larger type and a heavy neutral bar, with the
+    Reported chip beside the label so the emphasis never reads as more than one party's word."""
     shown = "\u201c" + latinize_gloss(en).strip().strip("\u201c\u201d\"") + "\u201d"
     inner = name_html(shown, ru, key=key, what="Russian original of")
     tail = f"<cite>{cite}</cite>" if cite else ""
+    if strong:
+        return (f'<blockquote class="rm-quote key"><span class="rm-label">Their own words <span class="rm-grade rep">Reported</span>'
+                f'</span><span class="q">{inner}</span>{tail}</blockquote>')
     return f'<blockquote class="rm-quote"><span class="rm-label">Translation</span><span class="q">{inner}</span>{tail}</blockquote>'
 
 

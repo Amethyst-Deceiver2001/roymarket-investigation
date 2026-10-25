@@ -679,11 +679,13 @@ class Landing(Chain):
                 if not row or part not in row[0]:
                     raise SystemExit(f"quote {key}: not verbatim in {chan}/{msg}")
 
+    STRONG_QUOTES = {"cbst", "arch_9067", "osv_27702", "osv_36192", "yakim"}   # a party's own telling words (user, 25.10.2026)
+
     def oq(self, key, cite):
         """A quotation from OPENING_QUOTES, checked word for word against the scraped post where the scrape exists."""
         chan, msg, ru, en = OPENING_QUOTES[key]
         self.verbatim(key, chan, msg, ru)
-        return quote_html(ru, en, cite, f"q-{key}")
+        return quote_html(ru, en, cite, f"q-{key}", strong=key in self.STRONG_QUOTES)
 
     def kherson_band(self):
         """Stills from the Kherson channel (KHERSON_STILLS), as a picture band. Preview only: they have no media record."""
