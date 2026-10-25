@@ -272,3 +272,5 @@ main section > .rm-h2 { margin-top: 0; }
 .ties .pic.face { clip-path: circle(50%); }
 .ties .pic.logo { filter: none; }
 .ties .arm .fr { fill: var(--panel); stroke: var(--rule); stroke-width: 1; }
+.ties .plate { fill: var(--logo-plate); stroke: var(--rule); stroke-width: 1; }
+.ties .plate.dark { fill: var(--logo-plate-dark); }

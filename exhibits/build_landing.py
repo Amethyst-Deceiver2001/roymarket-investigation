@@ -353,11 +353,15 @@ class Landing(Chain):
         W, H = 1150, 350
         box = {}
         pics = {}
-        for key, mid, kind in (("sid", "m0092", "face"), ("ur", "m0093", "logo"), ("rm", "m0094", "logo")):
-            m = next((x for x in self.media if x["id"] == mid), None)
+        wanted = [("sid", next((x for x in self.media if x["id"] == "m0092"), None), "face"),
+                  ("ur", next((x for x in self.media if x["id"] == "m0093"), None), "logo"),
+                  ("rm", next((x for x in self.media if x["id"] == "m0094"), None), "logo")]
+        for key, slug in (("np", NP), ("psb", PSB), ("cbst", CBST)):   # the entity's own logo, as its cards show it
+            wanted.append((key, next((x for x in media_about(self.media, {("entity", slug)}) if x.get("genre") == "logo"), None), "logo"))
+        for key, m, kind in wanted:
             src = self.img(m) if m else None
             if src:
-                pics[key] = (src, kind)
+                pics[key] = (src, kind, "dark" if m.get("logo_ground") == "dark" else "light")
 
         def node(key, x, y, w, title, sub, cls="", pic=None):
             h = 58
@@ -365,8 +369,10 @@ class Landing(Chain):
             tx = x + w / 2
             img = ""
             if pic:   # a picture of the party's logo or the person, 42 px, at the left of the box
-                href, kind = pic
-                img = (f'<image href="{esc(href)}" x="{x + 8}" y="{y + 8}" width="42" height="42" class="pic {kind}" '
+                href, kind, ground = pic
+                plate = (f'<rect x="{x + 6}" y="{y + 6}" width="46" height="46" rx="4" class="plate {ground}"/>'
+                         if kind == "logo" else "")
+                img = (f'{plate}<image href="{esc(href)}" x="{x + 8}" y="{y + 8}" width="42" height="42" class="pic {kind}" '
                        f'preserveAspectRatio="xMidYMid {"slice" if kind == "face" else "meet"}"/>')
                 tx = x + 54 + (w - 54) / 2
             return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="6" class="bx {cls}"/>{img}'
@@ -387,10 +393,10 @@ class Landing(Chain):
                 lx, ly, anchor = (x1 + x2) / 2 + dx, (y1 + y2) / 2 + dy, "middle"
             lab = f'<text x="{lx}" y="{ly}" class="lbl" text-anchor="{anchor}">{esc(label)}</text>' if label else ""
             return f'<path d="{d}" class="rm-ln {g}" marker-end="url(#ah3)"/>{lab}'
-        n = [node("np", 10, 22, 190, lat(NP), "donor foundation"),
-             node("psb", 10, 146, 190, lat(PSB), "state-owned bank"),
+        n = [node("np", 10, 22, 190, lat(NP), "donor foundation", pic=pics.get("np")),
+             node("psb", 10, 146, 190, lat(PSB), "state-owned bank", pic=pics.get("psb")),
              node("ur", 10, 270, 190, "United Russia", "ruling party", pic=pics.get("ur")),
-             node("cbst", 380, 146, 190, lat(CBST), "non-profit, Moscow", "hub"),
+             node("cbst", 380, 146, 190, lat(CBST), "non-profit, Moscow", "hub", pic=pics.get("cbst")),
              node("sid", 380, 270, 190, "Aleksandr Sidyakin", "board secretary", pic=pics.get("sid")),
              node("units", 760, 22, 140, "Military units", "recipients"),
              node("mptm", 760, 146, 140, lat(MPTM), "company"),
@@ -835,7 +841,7 @@ class Landing(Chain):
                 if not row or part not in row[0]:
                     raise SystemExit(f"quote {key}: not verbatim in {chan}/{msg}")
 
-    STRONG_QUOTES = {"cbst", "arch_9067", "osv_27702", "osv_36192", "yakim"}   # a party's own telling words (user, 25.10.2026)
+    STRONG_QUOTES = {"cbst", "arch_9067", "arch_10667", "osv_27702", "osv_36192", "yakim"}   # a party's own telling words (user, 25.10.2026)
 
     def oq(self, key, cite):
         """A quotation from OPENING_QUOTES, checked word for word against the scraped post where the scrape exists."""
@@ -1067,7 +1073,6 @@ class Landing(Chain):
             ("«Arkhangel» drone school", "open",
              "TsBST's own channel says a resident's anti-drone simulator runs at the school's training centre in Tuapse"
              + self.tref("cbst_1562") + ". The school's channel recruits operators for the 205th brigade" + self.tref("arch_9067")
-             + ", which it calls “the terror of Kherson region”" + self.tref("arch_10667")
              + ". The school says it trains within Bars-Sarmat, Dmitry Rogozin's drone centre" + self.ref("s6915") + "."),
             ("Bars-Sarmat", "rep",
              "Its commander, Dmitry Rogozin, says the centre fights for the commander of the Airborne Forces and that units of "
@@ -1089,6 +1094,7 @@ class Landing(Chain):
             intro +
             '<h3 class="rm-h3">What TsBST\'s circle says about that front</h3>'
             f'<ul class="ledger front" aria-label="Ties to the formations the UN names">{"".join(lis)}</ul>'
+            + self.oq("arch_10667", f'«Arkhangel», Telegram, 17.08.2026{self.tref("arch_10667")}')
             + self.oq("arch_9067", f'«Arkhangel», Telegram, 01.12.2025{self.tref("arch_9067")}')
             + (f'<p>DW\'s film on the Beryslav attacks shows the school too: over footage of men soldering a drone, watermarked '
                f'with the school\'s channel address, the narration says “This Russian volunteer group proudly posts on Telegram” '
