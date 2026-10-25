@@ -24,3 +24,18 @@ Ten of the nashapravdafond videos in the first command (393, 399, 409, 448, 473,
 ## Rule for a re-created file
 
 Same path and name where the original name is known, never over an existing file; if the content differs from the registered `sha256`, write it as `-r2` and mark the old source `superseded_by`. A fact is re-checked against the new file before the draft relies on it.
+
+## Web pages re-fetched 25.10.2026 (inline, one request each)
+
+None of these is byte-identical to the registered file (dynamic pages), so each is a **re-capture** with a local id; the facts keep their old source id until the archive Mac merges.
+
+| Old source | New file | Local id | Check |
+|---|---|---|---|
+| s8867 cbst.ru article | `WEBCAPTURE_20261025_cbst-ru-masshtabiruet-…` | L0345 | quotes q040, q041 found word for word |
+| s8820 roimarket.ru/legal | `WEBCAPTURE_20261025_roimarket-ru-legal-index.html` | L0346 | JavaScript shell only (no operator text) |
+| s8822 roimarket.ru/legal/supplier-offer | `WEBCAPTURE_20261025_roimarket-ru-supplier-offer.html` | L0347 | shell only; q052 found |
+| s8817 Wayback supplier offer (22.08.2026) | `WAYBACK_20260822_roimarket-supplier-offer-r2.html` | L0353 | raw Wayback copy, **not** the registered file; the operator line (q051 «Агент / Оператор платформы / владелец агрегатора — … «МПТМ», ИНН 9714068459») is **not** in it; archive.org then answered 429 |
+| s8018, s8019, s8020 3mx.ru product pages | `WEBCAPTURE_7802942873_20261025_3mx-…` | L0348–L0350 | no registry quote to test |
+| s8553, s8866 Kommersant | `PRESS_20261025_kommersant-…` | L0351, L0352 | no registry quote to test |
+
+**Not recreatable by a plain fetch:** the registered ROY.MARKET captures (s8817, s8820, s8822) were rendered in a browser; a plain download returns the page shell without the offer text. They need a browser "Save page as" by the user (or a rendered capture). Until then q051 rests on a source file that is gone.
