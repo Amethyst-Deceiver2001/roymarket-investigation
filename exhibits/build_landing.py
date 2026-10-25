@@ -1281,7 +1281,7 @@ def unique_popovers(doc):
 # The chain view's picture viewer, shared rather than copied: everything in chain_view.js from its comment on.
 # The contents bar: (section heading id, short label), in page order.
 TOC_ITEMS = [("h-found", "What we found"), ("h-open", "The strike"), ("h-limits", "Limits"), ("h-hub", "Who stands behind"), ("h-front", "The front"),
-             ("h-beyond", "Beyond the shop"), ("h-chains", "Products"), ("h-net", "Network"), ("h-origin", "The platform"),
+             ("h-beyond", "Beyond the shop"), ("h-origin", "The marketplace"), ("h-chains", "Products"), ("h-net", "Network"),
              ("h-read", "How to read"), ("h-method", "Method"), ("h-sources", "Sources")]
 TOC = ('<nav class="toc" aria-label="Contents"><ol>' + "".join(f'<li><a href="#{i}">{esc(t)}</a></li>' for i, t in TOC_ITEMS)
        + '</ol></nav>')
@@ -1352,6 +1352,7 @@ def render(preview: bool, out: Path):
                        "does not show use in combat.", big=3, lead=("m0085", "m0083", "m0087")) if handed else ""
     front = L.front()
     beyond = L.beyond_shop()
+    origin, timeline = L.origin(), L.timeline()
     chains = "".join(L.chain_card(s, url if preview else (f"chain_{s}.html" if (out.parent / f"chain_{s}.html").exists() else None))
                      for s, url in CHAINS.items())
     extra_cards = L.more_cards(preview)
@@ -1365,7 +1366,6 @@ def render(preview: bool, out: Path):
     wall = L.wall()
     sgrid, undated = L.sanctions_grid()
     revenue, n_rev = L.revenue_bars()
-    origin, timeline = L.origin(), L.timeline()
     annex = L.annex()
     restr_date, restr_ref = L.restricted()
     lead_quote = quote_html(f"{qa['text_ru']} […] {qb['text_ru']}",
@@ -1436,6 +1436,13 @@ def render(preview: bool, out: Path):
     {beyond}
   </section>
 
+  <section class="origin" aria-labelledby="h-origin">
+    <h2 class="rm-h2" id="h-origin">The marketplace and its sellers</h2>
+    {origin}
+    <h3 class="rm-h3">The dates</h3>
+    {timeline}
+  </section>
+
   <section aria-labelledby="h-chains">
     <h2 class="rm-h2" id="h-chains">Follow a product</h2>
     <p class="lede">A chain view follows one product from TsBST and its events to the maker, the shops and dealers that
@@ -1463,13 +1470,6 @@ def render(preview: bool, out: Path):
         {n_rev} of the {n} organisations have accounts on file. Non-profits' funds are not revenue and are left out.</figcaption></figure>
     </div>
     </details>
-  </section>
-
-  <section class="origin" aria-labelledby="h-origin">
-    <h2 class="rm-h2" id="h-origin">A marketplace with a hidden operator</h2>
-    {origin}
-    <h3 class="rm-h3">The dates</h3>
-    {timeline}
   </section>
 
   <section class="read" aria-labelledby="h-read">
