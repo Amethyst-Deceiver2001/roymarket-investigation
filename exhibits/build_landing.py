@@ -467,7 +467,7 @@ class Landing(Chain):
             ("rep", "Supply to a front the UN names", "#h-front",
              "TsBST's circle supplies and recruits for units of the formation the UN names in its finding on drone attacks "
              "on civilians in Kherson. Nothing on file shows an item used against civilians."),
-            ("doc", "A platform that hides its operator", "#h-origin",
+            ("doc", "A platform that hides its operator", "#h-beyond",
              "ROY.MARKET's public terms print its operator as «****». An archived copy names MPTM, a company TsBST's own "
              "report to the Justice Ministry lists."),
         ]
@@ -1167,7 +1167,12 @@ class Landing(Chain):
             f'that assigns incoming Ukrainian drones to mobile fire teams in Kursk region, and placed it inside a TsBST system:</p>'
             + self.oq("yakim", f"Sidyakin, Telegram, 15.10.2026{self.tref('yakim')}") +
             '<p class="note"><span class="rm-grade rep">Reported</span> Both are the parties\' own claims; no document on file '
-            'shows the system in service.</p>')
+            'shows the system in service.</p>'
+            '<h3 class="rm-h3">The marketplace hides who runs it. An older copy does not</h3>'
+            f'<p>The platform\'s public terms print the operator as “OOO «****»”. A copy archived on 22.08.2026 names it: '
+            f'{self.pop(MPTM)}, INN 9714068459. TsBST\'s own report to the Justice Ministry lists the same company as one it has '
+            f'taken part in since the day it was registered.</p>{self.masked()}'
+            '<p class="note"><a href="#h-origin">How the marketplace recruits sellers, and where its products go instead →</a></p>')
 
     def origin(self):
         """The platform: who launched it, whom it recruits, the operator it hides, and where the products go instead."""
@@ -1179,10 +1184,6 @@ class Landing(Chain):
             + quote_html(recruit["text_ru"], latinize_gloss(recruit["text_en"]),
                          f"ROY.MARKET's announcement, {ru_date(recruit['as_of'])}{self.ref(recruit['source_id'])}", "q-recruit")
             + self.step_shot(3, "ROY.MARKET's page for prospective sellers, 24.10.2026. The catalogue itself is behind a login.")
-            + '<h3 class="rm-h3">The site hides its operator. An older copy does not</h3>'
-            f'<p>The platform\'s public terms print the operator as “OOO «****»”. A copy archived on 22.08.2026 names it: '
-            f'{self.pop(MPTM)}, INN 9714068459. TsBST\'s own report to the Justice Ministry lists the same company as one it has '
-            f'taken part in since the day it was registered.</p>{self.masked()}'
             + '<h3 class="rm-h3">One outlet among several</h3>'
             f'<p>«Bulat», a drone detector shown at Dronnitsa 2025, a showcase TsBST takes part in, is a case in point. Asked '
             f'whether the new «Bulat» would go on ROY.MARKET, its maker answered:</p>'
