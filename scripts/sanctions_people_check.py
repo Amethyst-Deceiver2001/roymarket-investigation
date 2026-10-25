@@ -17,7 +17,7 @@ a tool's output is never a fact). What to do with a hit is the same chain we use
     python3 scripts/sanctions_people_check.py --pick 10 --out data/watch/sanctions/people_check_20261025.md
 
 The lists are the ones the sanctions watch downloaded (SANCTIONS_EU_*, SANCTIONS_US_*) and the UK CSV with statements of
-reasons (SANCTIONS_UK_*.csv); the newest of each is used. The Swiss SECO list (SANCTIONS_CH_*.xml) and the Japan MOF list (SANCTIONS_JP_*.csv) are searched too. Names are compared with
+reasons (SANCTIONS_UK_*.csv); the newest of each is used. The Swiss SECO list (SANCTIONS_CH_*.xml) the Japan MOF list (SANCTIONS_JP_*.csv) and the Australian DFAT list (SANCTIONS_AU_*.xlsx) are searched too. Names are compared with
 ё folded to е and a plain transliteration, so «Водолацкий» finds VODOLATSKY, but a spelling the table does not
 reach (a Ukrainian-form name, a different Latin rendering) can be missed: no hit is not a clean result.
 """
@@ -162,6 +162,35 @@ def load_jp(path: Path) -> list[dict]:
     return out
 
 
+def load_au(path: Path) -> list[dict]:
+    """Australian Sanctions Consolidated List (DFAT). The workbook is Strict OOXML, which openpyxl cannot open,
+    so the sheet XML is read directly. One row per name; aliases share the reference number (2, 2a, 2b)."""
+    import zipfile
+    z = zipfile.ZipFile(path)
+    ln = lambda e: e.tag.split("}")[-1]
+    ss = ["".join(t.text or "" for t in si.iter() if ln(t) == "t") for si in ET.fromstring(z.read("xl/sharedStrings.xml"))]
+    by: dict[str, dict] = {}
+    for r in ET.fromstring(z.read("xl/worksheets/sheet1.xml")).iter():
+        if ln(r) != "row":
+            continue
+        d = {}
+        for c in r:
+            v = next((x.text for x in c if ln(x) == "v"), None)
+            if v is not None:
+                d[re.match(r"[A-Z]+", c.get("r")).group(0)] = ss[int(v)] if c.get("t") == "s" else v
+        if d.get("C") != "Individual":
+            continue
+        ref = re.match(r"\d+", d.get("A", ""))
+        if not ref:
+            continue
+        e = by.setdefault(ref.group(0), {"list": "AU", "id": "DFAT " + ref.group(0), "names": [], "dob": [],
+                                          "info": f"{d.get('O', '')}; {d.get('K', '')}"[:200]})
+        e["names"].append(d.get("B", ""))
+        if d.get("F"):
+            e["dob"] += [x.strip() for x in d["F"].split(",") if x.strip() and x.strip() not in e["dob"]]
+    return list(by.values())
+
+
 def newest(pattern: str) -> Path | None:
     files = sorted(glob.glob(str(SRC / pattern)))
     return Path(files[-1]) if files else None
@@ -253,7 +282,7 @@ def main() -> None:
     if not todo:
         sys.exit("give --slug or --pick")
     lists, loaded = [], []
-    for label, pat, fn in (("EU", "SANCTIONS_EU_*.xml", load_eu), ("US", "SANCTIONS_US_*.xml", load_us), ("UK", "SANCTIONS_UK_*.csv", load_uk), ("CH", "SANCTIONS_CH_*.xml", load_ch), ("JP", "SANCTIONS_JP_*.csv", load_jp)):
+    for label, pat, fn in (("EU", "SANCTIONS_EU_*.xml", load_eu), ("US", "SANCTIONS_US_*.xml", load_us), ("UK", "SANCTIONS_UK_*.csv", load_uk), ("CH", "SANCTIONS_CH_*.xml", load_ch), ("JP", "SANCTIONS_JP_*.csv", load_jp), ("AU", "SANCTIONS_AU_*.xlsx", load_au)):
         p = newest(pat)
         if p is None:
             loaded.append(f"{label}: no file")
