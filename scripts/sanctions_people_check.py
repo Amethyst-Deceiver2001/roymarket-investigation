@@ -169,8 +169,16 @@ def grade(person_tokens: list[str], entry: dict, dob: str | None) -> tuple[str, 
     return best
 
 
+LOG = ROOT / "data" / "watch" / "sanctions" / "people_checked.json"
+
+
+def read_log() -> dict:
+    return json.loads(LOG.read_text(encoding="utf-8")) if LOG.exists() else {}
+
+
 def pick(people: list[dict], n: int) -> list[dict]:
-    chosen = [p for p in people if not p.get("sanctions") and p.get("fio_ru")]
+    done = read_log()
+    chosen = [p for p in people if not p.get("sanctions") and p.get("fio_ru") and p["slug"] not in done]
     # people whose OpenSanctions screen already flagged a sanction topic come first: they are the likeliest to be listed
     flagged = lambda p: any("sanction" in (m.get("topics") or []) and (m.get("score") or 0) >= 0.9 for m in p.get("opensanctions_matches") or [])
     chosen.sort(key=lambda p: not flagged(p))
@@ -222,6 +230,11 @@ def main() -> None:
         lines.append("")
     text = "\n".join(lines)
     print(text)
+    if args.pick:   # a --pick run remembers whom it looked at, so the next --pick takes the next people
+        log = read_log()
+        for p in todo:
+            log.setdefault(p["slug"], __import__("datetime").date.today().isoformat())
+        LOG.write_text(json.dumps(log, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     if args.out:
         Path(args.out).write_text(text + "\n", encoding="utf-8")
 
