@@ -194,7 +194,7 @@ def build_plan(sources: list[dict], cited: set[str], prev: dict,
             e["captures"] = [{"service": "wayback" if "archive.org" in u else "archive_today",
                               "archive_url": u, "timestamp": m.group(1) if m else None,
                               "method": "cited", "checked": None, "sha256": None}]
-        for k in ("last_attempt", "last_error"):
+        for k in ("last_attempt", "last_error", "not_archivable"):
             if k in o:
                 e[k] = o[k]
     # A URL nobody cites any more keeps its captures, flagged, so history is not lost.
@@ -283,6 +283,8 @@ def pending(data: dict, tiers: set[int], today: date, *, skip_looked_up: bool = 
     for u, e in data["urls"].items():
         if e.get("dropped") or e.get("tier") not in tiers or is_current(e, today):
             continue
+        if e.get("not_archivable"):
+            continue  # the site or the archive refuses it; the local copy and hash are the record
         if e.get("kind") == "telegram" and not INCLUDE_TELEGRAM:
             continue
         base = data["urls"].get(e.get("variant_of") or "")
