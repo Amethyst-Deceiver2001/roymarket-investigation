@@ -20,7 +20,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 sys.path.insert(0, str(REPO / "exhibits"))
 from graph_contract import source_grade  # noqa: E402
 import deliveries as dl  # noqa: E402
-from display_helpers import (NAME_JS, design_head, display_name, figure_html, latin_display, latin_text, load_media, media_about, latinize_gloss, name_html, orig_line, popup_originals, quote_html, sanction_regimes,  # noqa: E402
+from display_helpers import (NAME_JS, caption_html, design_head, display_name, figure_html, latin_display, latin_text, load_media, media_about, latinize_gloss, name_html, orig_line, popup_originals, quote_html, sanction_regimes,  # noqa: E402
                              person_names, publish_copy, reader_grade, ru_date, translation)
 from build_chain_view import ROLE_EN, describe_source, esc, load, money  # noqa: E402
 
@@ -178,7 +178,7 @@ class Page:
         if e.get("registered"):
             rows.append(("Registered", f'{esc(e["registered"])}{self.ref(reg_src)}'))
         addr = next((h for h in sorted(e.get("address_history") or [], key=lambda h: h.get("as_of") or "", reverse=True)
-                     if self.doc(h.get("source_id"))), None)
+                     if self.doc(h.get("source_id")) and h.get("kind", "registered") == "registered"), None)
         if addr:
             rows.append(("Registered address", f'{name_html(latin_text(addr["value"]), addr["value"], key="addr-1", what="Register address in Russian:")}{self.ref(addr["source_id"])}'))
         if e.get("okved_code"):
@@ -277,27 +277,54 @@ class Page:
             self.limits.append(f"The dossier names {staff} further staff members. They are not listed here.")
         return f'<ul class="plain">{"".join(items)}</ul>' if items else ("" if reg_people else "<p>None recorded.</p>")
 
+    ADDR_KIND = {"registered": "Registered address (register)", "legal-own-site": "Legal address (its own site)",
+                 "actual": "Actual address (showroom)"}
+    CONTACT_KIND = (("phone", "Phones"), ("email", "E-mail"), ("messenger", "Messengers"))
+
     def place(self):
-        """Where it is: the register address, and slots for the satellite and street views until they are captured."""
-        addr = next((h for h in sorted(self.e.get("address_history") or [], key=lambda h: h.get("as_of") or "", reverse=True)
-                     if self.doc(h.get("source_id"))), None)
+        """Where it is: its addresses, contacts and pictures of the place; slots stay for the views not captured yet."""
+        e = self.e
+        mine = media_about(self.media, {("entity", e["slug"])})
         figs = self.premises()
-        any_fac = any(m.get("genre") == "facility" for m in media_about(self.media, {("entity", self.e["slug"])}))
-        if not addr and not figs and not any_fac:
+        any_fac = any(m.get("genre") == "facility" for m in mine)
+        hist = e.get("address_history") or []
+        if not hist and not figs and not any_fac:
             return ""
-        slot = lambda t: (f'<figure class="rm-fig empty"><div class="frame">{t} not yet captured</div>'
-                          f'<figcaption><span class="rm-prov">{t}</span><span class="rm-geo">Coordinates · provider · imagery date</span></figcaption></figure>')
-        line = (f'<p>Registered address, as the register gives it: {name_html(latin_text(addr["value"]), addr["value"], key="addr-2", what="Register address in Russian:")}'
-                f'{self.ref(addr["source_id"])}</p>') if addr else ""
-        views = f'<div class="rm-facility">{slot("Satellite view")}{slot("Street view")}</div>' if (addr or any_fac) else ""
+
+        def view(kind, title):
+            m = next((m for m in mine if m.get("kind") == kind and m.get("publish") != "internal"), None)
+            if not m:
+                return (f'<figure class="rm-fig empty"><div class="frame">{title} not yet captured</div>'
+                        f'<figcaption><span class="rm-prov">{title}</span><span class="rm-geo">Coordinates · provider · imagery date</span></figcaption></figure>')
+            name = publish_copy(m, self.img_dir)
+            self.media_files.append((f"images/media/{name}", self.img_dir / name))
+            g, im = m["geo"], m["imagery"]
+            geo = f'{g["lat"]:.5f}, {g["lon"]:.5f} · {esc(im["provider"])} · {esc(im["date"])}'
+            return (f'<figure class="rm-fig"><div class="frame"><img src="images/media/{name}" alt="{esc(m.get("shows_en") or m["shows"])}"></div>'
+                    f'<figcaption><span class="rm-prov">{title}</span><span>{caption_html(m["shows"], "cap-" + m["id"], m.get("shows_en"))}'
+                    f'{self.ref(m.get("source_id"))}</span><span class="rm-geo">{geo}</span></figcaption></figure>')
+
+        rows = []
+        for n, h in enumerate(sorted(hist, key=lambda h: list(self.ADDR_KIND).index(h.get("kind", "registered")))):
+            lab = self.ADDR_KIND.get(h.get("kind", "registered"), "Address")
+            rows.append((lab, f'{name_html(latin_text(h["value"]), h["value"], key=f"addr-h{n}", what="Address in Russian:")}'
+                              f'{self.ref(h.get("source_id"), *(h.get("also") or []))}'))
+        for kind, lab in self.CONTACT_KIND:
+            cs = [c for c in e.get("contacts") or [] if c.get("kind") == kind]
+            if cs:
+                rows.append((lab, "<br>".join(f'<span class="rm-id">{esc(c["value"])}</span>'
+                                              f'{" · " + esc(c["label"]) if c.get("label") else ""}'
+                                              f'{self.ref(c.get("source_id"), *(c.get("also") or []))}' for c in cs)))
+        facts = "<dl class=\"facts\">" + "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in rows) + "</dl>" if rows else ""
+        views = f'<div class="rm-facility">{view("satellite", "Satellite view")}{view("street-level", "Street view")}</div>'
         even = " even" if figs.count("<figure") in (2, 4) else ""   # four pictures sit 2x2, never three and one
-        return line + (f'<div class="rm-gallery{even}">{figs}</div>' if figs else "") + views
+        return facts + (f'<div class="rm-gallery{even}">{figs}</div>' if figs else "") + views
 
     def premises(self):
         """Pictures of the company's own premises (media genre facility), with their captions and sources."""
         figs = []
         for m in media_about(self.media, {("entity", self.e["slug"])}):
-            if m.get("genre") != "facility" or m.get("publish") == "internal":
+            if m.get("genre") != "facility" or m.get("publish") == "internal" or m.get("kind") in ("satellite", "street-level"):
                 continue
             name = publish_copy(m, self.img_dir)
             if name:

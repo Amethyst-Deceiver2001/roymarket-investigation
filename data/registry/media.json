@@ -3025,5 +3025,59 @@
     "publish": "ok",
     "redact": "none_needed",
     "note": "Album of the museum's post 3195 (17.12.2025) on the ceremony of 16.12.2025: the handover of «Булат» v. 4 and «Таир» and the agreement between the Mikhailovsky Military Artillery Academy and ООО «ТРИМИКС». Everyone shown takes part in the ceremony; nobody is named from a face. Looked at full size 26.10.2026."
+  },
+  {
+    "id": "m0132",
+    "kind": "photo",
+    "genre": "facility",
+    "shows": "Фасад шоурума GoDrone с контактной страницы godrone.ru: вывеска «GODRONE» с круглым логотипом над окном, в окне — фигура военнослужащего в снаряжении и ленточный значок, на правой двери — красная звезда и ленточные наклейки. Людей на снимке, которых можно назвать, нет.",
+    "shows_en": "The front of the GoDrone showroom, from the contacts page of godrone.ru: a «GODRONE» sign with a round logo above the window, a figure of a soldier in gear and a ribbon badge in the window, and a red star and ribbon stickers on the right-hand door. No one in the picture is named.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-goudron"
+      }
+    ],
+    "asserted_by": "self",
+    "published": null,
+    "captured": "2026-10-26",
+    "source_id": "L0519",
+    "original_url": "https://godrone.ru/upload/iblock/a1f/2dp33cnxwkjizlms28eb6n72a7s3mp34.jpg",
+    "file": "data/sources/SITEIMAGE_9721203814_20261026_godrone-ru-showroom-storefront.jpg",
+    "publish": "ok",
+    "redact": "none_needed",
+    "note": "The company's own picture on its contacts page, presented there beside the Bolshoy Simonovsky address; the page does not caption it. Replaces the customer storefront photo m0024 (internal). The picture shows no street number, so the address rests on the page, not on the picture."
+  },
+  {
+    "id": "m0133",
+    "kind": "satellite",
+    "genre": "facility",
+    "shows": "Вид со спутника на дом 2 по Большому Симоновскому переулку, Москва: красная метка на здании у улицы, подпись на снимке 55°43'41.27\"N 37°40'21.31\"E.",
+    "shows_en": "Satellite view of 2 Bolshoy Simonovsky pereulok, Moscow: a red marker on the building beside the street, labelled on the image 55°43'41.27\"N 37°40'21.31\"E.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-goudron"
+      }
+    ],
+    "asserted_by": "investigator",
+    "published": null,
+    "captured": "2026-10-26",
+    "source_id": "L0520",
+    "original_url": null,
+    "file": "data/sources/SCREENSHOT_9721203814_20261026_satellite-view-bolshoy-simonovsky-2.png",
+    "publish": "ok",
+    "redact": "none_needed",
+    "imagery": {
+      "provider": "Google Maps (satellite layer)",
+      "date": "2025"
+    },
+    "geo": {
+      "lat": 55.728131,
+      "lon": 37.672586,
+      "precision": "building",
+      "method": "geolocated"
+    },
+    "note": "Screenshot supplied by the user, 26.10.2026. The imagery year is the © 2025 Google notice on the image; the capture date of the imagery itself is not shown. The marker was placed by the user; a reverse lookup of the same point in OpenStreetMap on 26.10.2026 returned Bolshoy Simonovsky pereulok, 2."
   }
 ]

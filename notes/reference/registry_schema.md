@@ -59,6 +59,18 @@ Six new arrays on every entity, defaulting empty, populated by hand via
   a structured home for what used to get buried in prose `why[]` notes.
   Optional `site_operator` (added 26.10.2026): the operator's wording shown
   under a price list, kept when the claim is the price list itself.
+- `address_history[]` entries may carry `kind` (26.10.2026): `registered` (the
+  default; from the register extract), `legal-own-site` (the legal address the
+  company's own site gives) or `actual` (where it receives visitors or post),
+  and `also` (further `source_id`s). The register block and "Registered address"
+  use only `registered`; a page lists all kinds under "Where it is".
+- `contacts[]` (26.10.2026) — `{kind: phone|email|messenger, value, label,
+  as_of, source_id, also[], note}`. One entry per number, address or handle
+  as a source prints it; `as_of` is the date of the source it was read from,
+  `also` lists later or other sources, and `label` is English (the Russian
+  wording goes in `note`). A number seen only in a post is cited by that
+  post's source. A look-alike domain (gdrone.ru for godrone.ru) is recorded as
+  printed, with the difference named in `label`.
 - `legal_form: "Military unit"` (26.10.2026) — a unit with no INN or OGRN of
   its own. Its supporting foundation is the `related_entities` link with
   `relationship_type: "group-structure"` whose record holds the INN/OGRN; the

@@ -26448,7 +26448,37 @@
         "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
       }
     ],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "111677, Москва, вн.тер.г. муниципальный округ Некрасовка",
+        "kind": "registered",
+        "as_of": "2026-09-07",
+        "source_id": "s6768",
+        "note": "As the record holds it from the register extract of 07.09.2026: the district only. The street and flat are not in the copy held here (the extract is on the archive Mac). The own-site legal address below has the same postcode 111677 and is in the same district."
+      },
+      {
+        "value": "111677, Россия, г. Москва, ул. Ухтомского ополчения, д. 2, оф кв. 131",
+        "kind": "legal-own-site",
+        "as_of": "2026-10-26",
+        "source_id": "L0482",
+        "also": [
+          "L0479"
+        ],
+        "note": "«Юридический адрес» on the requisites page of godrone.ru; the privacy policy of the same site (edition of 22.10.2026) gives it as the operator's address, 'ул. Ухтомского Ополчения, д. 2, кв. 131', and calls the Bolshoy Simonovsky address its actual and postal address."
+      },
+      {
+        "value": "г. Москва, Большой Симоновский пер., д. 2",
+        "kind": "actual",
+        "as_of": "2026-10-26",
+        "source_id": "L0517",
+        "also": [
+          "L0518",
+          "L0479",
+          "L0480"
+        ],
+        "note": "The GoDrone showroom and the address its sites give for visitors and post: «Метро: Пролетарская, Крестьянская Застава». Hours on godrone.ru: Mon-Fri 09:00-20:00, Sat-Sun 10:00-19:00; on набат.рф: daily 09:00-21:00. The channel has named it as the shop's address since 12.2024."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
@@ -26857,6 +26887,10 @@
       {
         "source_id": "L0515",
         "text": "zakupki.gov.ru (44-ФЗ) has no contract with ООО «ГОУДРОН» as supplier on 26.10.2026 (L0515; 223-ФЗ search L0516 does not test supplier role): which contracts, if any, back the claimed state customers in 10-12 regions? Not checked: purchases under other entities, unpublished (defence) purchases, and ЕИС notices of procurement without a contract card."
+      },
+      {
+        "source_id": "L0482",
+        "text": "Confirm in the register extract (s6768, on the archive Mac) that the registered address is ул. Ухтомского Ополчения, д. 2, кв. 131, and that the flat is a private residence: the user reports on 26.10.2026 that both the registered and the legal address are one private flat in Nekrasovka. Our copy of the extract gives the district only."
       }
     ],
     "sources": [],
@@ -27240,7 +27274,155 @@
       "outcome": "closed",
       "note": "Contract search of 26.10.2026 (44-ФЗ, supplier ИНН 9721203814, morphology on): 'Поиск не дал результатов' (L0515); same as the scan of 05.09.2026 (0 hits). 223-ФЗ search by the ИНН in its subject/customer field: no results (L0516), which does not test the company as a supplier. The pages were fetched through a connection verified against the Russian Trusted Root CA (SHA-256 D2:6D:2D:02:31:B7:C3:9F:92:CC:73:85:12:BA:54:10:35:19:E4:40:5D:68:B5:BD:70:3E:97:88:CA:8E:CF:31). No state contract is on record for the company, so the 'state customers in 12 regions' and ten-regions claims stay unmatched; they may run through intermediaries, other entities or non-published purchases. Nothing wired.",
       "hits": 0
-    }
+    },
+    "contacts": [
+      {
+        "kind": "phone",
+        "value": "+7 495 151-51-93",
+        "label": "Main line; listed as the retail department on the contacts page",
+        "as_of": "2026-10-26",
+        "source_id": "L0517",
+        "also": [
+          "L0482",
+          "L0526",
+          "L0527"
+        ],
+        "note": "Listed as «Розничный отдел» on the contacts page and as «Телефон, факс» on the requisites page; in channel posts from 22.04.2026 to 02.07.2026."
+      },
+      {
+        "kind": "phone",
+        "value": "+7 930 036-94-70",
+        "label": "Corporate department",
+        "as_of": "2026-10-26",
+        "source_id": "L0517",
+        "also": [
+          "L0480"
+        ],
+        "note": "Listed as «Корпоративный отдел» on the contacts page. Also the click-to-call link on набат.рф."
+      },
+      {
+        "kind": "phone",
+        "value": "+7 930 035-33-75",
+        "label": "Phone printed on the product site",
+        "as_of": "2026-10-26",
+        "source_id": "L0480"
+      },
+      {
+        "kind": "phone",
+        "value": "+7 999 333-45-09",
+        "label": "Showroom phone in channel posts",
+        "as_of": "2025-06-12",
+        "source_id": "L0523",
+        "also": [
+          "L0524"
+        ],
+        "note": "Posts of 11.02.2025 and 12.06.2025."
+      },
+      {
+        "kind": "phone",
+        "value": "+7 999 444-50-59",
+        "label": "Showroom phone in channel posts; WhatsApp link on godrone.ru",
+        "as_of": "2026-10-26",
+        "source_id": "L0521",
+        "also": [
+          "L0522",
+          "L0485"
+        ],
+        "note": "Posts of 30.12.2024 and 03.07.2026 name it with the showroom address; godrone.ru links it as WhatsApp."
+      },
+      {
+        "kind": "phone",
+        "value": "+7 958 795-01-33",
+        "label": "Orders, pre-orders and promotions in channel posts",
+        "as_of": "2026-10-26",
+        "source_id": "L0510",
+        "also": [
+          "L0525"
+        ],
+        "note": "55 posts from 02.04.2025 to 28.04.2026."
+      },
+      {
+        "kind": "phone",
+        "value": "+7 958 488-39-86",
+        "label": "Phone on the company presentation",
+        "as_of": "2025-09-22",
+        "source_id": "L0514"
+      },
+      {
+        "kind": "email",
+        "value": "sales@godrone.ru",
+        "label": "Sales e-mail on godrone.ru and the product site",
+        "as_of": "2026-10-26",
+        "source_id": "L0517",
+        "also": [
+          "L0480"
+        ]
+      },
+      {
+        "kind": "email",
+        "value": "godronells@gmail.com",
+        "label": "E-mail on the requisites page",
+        "as_of": "2026-10-26",
+        "source_id": "L0482"
+      },
+      {
+        "kind": "email",
+        "value": "205@gdrone.ru",
+        "label": "Contact e-mail in the privacy policy (domain gdrone.ru, not godrone.ru)",
+        "as_of": "2026-10-26",
+        "source_id": "L0479"
+      },
+      {
+        "kind": "email",
+        "value": "partner@gdrone.ru",
+        "label": "Partner e-mail on the product site (domain gdrone.ru)",
+        "as_of": "2026-10-26",
+        "source_id": "L0480"
+      },
+      {
+        "kind": "messenger",
+        "value": "Telegram @GoDrone",
+        "label": "The company's channel",
+        "as_of": "2026-10-26",
+        "source_id": "L0485"
+      },
+      {
+        "kind": "messenger",
+        "value": "Telegram @GoDron_bot",
+        "label": "Bot linked from godrone.ru",
+        "as_of": "2026-10-26",
+        "source_id": "L0485"
+      },
+      {
+        "kind": "messenger",
+        "value": "Telegram @godrone_ru",
+        "label": "Orders and questions, named in channel posts",
+        "as_of": "2026-10-26",
+        "source_id": "L0510"
+      },
+      {
+        "kind": "messenger",
+        "value": "Telegram @godrone_press",
+        "label": "Reviews and field reports, named in channel posts",
+        "as_of": "2026-10-26",
+        "source_id": "L0510"
+      },
+      {
+        "kind": "messenger",
+        "value": "WhatsApp +7 999 444-50-59",
+        "label": "Link on godrone.ru",
+        "as_of": "2026-10-26",
+        "source_id": "L0485"
+      },
+      {
+        "kind": "messenger",
+        "value": "Max (bot id7720907532_bot)",
+        "label": "Link on godrone.ru",
+        "as_of": "2026-10-26",
+        "source_id": "L0485"
+      }
+    ],
+    "kpp": "772101001"
   },
   {
     "slug": "va-technologies",
