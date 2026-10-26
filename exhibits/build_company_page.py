@@ -267,13 +267,14 @@ class Page:
         addr = next((h for h in sorted(self.e.get("address_history") or [], key=lambda h: h.get("as_of") or "", reverse=True)
                      if self.doc(h.get("source_id"))), None)
         figs = self.premises()
-        if not addr and not figs:
+        any_fac = any(m.get("genre") == "facility" for m in media_about(self.media, {("entity", self.e["slug"])}))
+        if not addr and not figs and not any_fac:
             return ""
         slot = lambda t: (f'<figure class="rm-fig empty"><div class="frame">{t} not yet captured</div>'
-                          f'<figcaption><span class="rm-prov">{t}</span></figcaption></figure>')
+                          f'<figcaption><span class="rm-prov">{t}</span><span class="rm-geo">Coordinates · provider · imagery date</span></figcaption></figure>')
         line = (f'<p>Registered address, as the register gives it: {name_html(latin_text(addr["value"]), addr["value"], key="addr-2", what="Register address in Russian:")}'
                 f'{self.ref(addr["source_id"])}</p>') if addr else ""
-        views = f'<div class="rm-facility">{slot("Satellite view")}{slot("Street view")}</div>' if addr else ""
+        views = f'<div class="rm-facility">{slot("Satellite view")}{slot("Street view")}</div>' if (addr or any_fac) else ""
         even = " even" if figs.count("<figure") in (2, 4) else ""   # four pictures sit 2x2, never three and one
         return line + (f'<div class="rm-gallery{even}">{figs}</div>' if figs else "") + views
 
