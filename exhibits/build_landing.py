@@ -86,6 +86,7 @@ OPENING_SOURCES = {
     "gag_2811": ("Telegram, @my_el_lab (Gagaring), post 2811, 23.12.2025", "https://t.me/my_el_lab/2811"),
     # Pictures in the ties diagram (25.10.2026): the credit and licence the photograph needs travel with it.
     "sid_photo": ("Photograph of Aleksandr Sidyakin by Karmaks, 28.09.2016, Wikimedia Commons, licence CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:SidyakinA.G..jpg"),
+    "privacy": ("ROY.MARKET privacy policy, revision 2.0, on roimarket.ru, captured 26.10.2026", "https://roimarket.ru/privacy"),
     "deepstate": ("DeepState, the map of the front line, latest state of 23.10.2026 (its own data download); the Russian-held area is drawn from it",
                   "https://deepstatemap.live/en"),
     "emb_sv": ("Small emblem of the Russian Ground Forces (collar insignia), public domain, Wikimedia Commons",
@@ -718,6 +719,9 @@ class Landing(Chain):
         sub = next(s for s in self.ents[CBST].get("subsidiaries") or [] if s["slug"] == MPTM)
         cells = [("22.08.2026", "Supplier offer, archived copy", ("OOO «MPTM» · INN 9714068459", "ООО «МПТМ» · ИНН 9714068459"), self.ref("s8817"), "named"),
                  ("01.10.2026", "Supplier offer, live site", ("Name of the Agent: OOO «****»", "Наименование Агента: ООО «****»"), self.ref(oq.get("source_id"), "s8822"), "hidden"),
+                 ("26.10.2026", "Privacy policy, live site",
+                  ("OOO «MPTM», INN 9714068459, address: 109202, Moscow, 1-ya Frezernaya st., 2/1, bldg 2", "ООО «МПТМ», ИНН 9714068459, адрес: 109202, г. Москва, вн. тер. г. муниципальный округ Нижегородский, ул. 1-я Фрезерная, д. 2/1, корп. 2"),
+                  self.tref("privacy"), "named"),
                  (ru_date(sub["as_of"]), "TsBST's report to the Justice Ministry, for 2025",
                   ("OOO \"MPTM\" · OGRN 1257700021468 · 22.01.2025 · as a participant", "ООО \"МПТМ\" · 1257700021468 · 22.01.2025 · в качестве участника"), self.ref(sub.get("source_id")), "named")]
         return '<div class="docs">' + "".join(
@@ -1010,6 +1014,25 @@ class Landing(Chain):
         return (f'<button class="shot" type="button" data-fig="fig-o{i}" aria-label="{esc(shows)}">'
                 f'<img src="{esc(rel)}" alt=""><span class="cap">{esc(label)}</span></button>')
 
+    def offer_collage(self):
+        """The two captures of the supplier offer side by side (exhibits/make_offer_collage.py). Preview only: the image
+        is a composite of our own captures of third-party pages."""
+        name = "opening/offer-collage.png"
+        if not self.preview or not (REPO / "exhibits" / "images" / name).exists():
+            return ""
+        src_dir, dest = REPO / "exhibits" / "images", self.img_dir.parent
+        rel = f"images/{name}"
+        if dest != src_dir:
+            (dest / name).parent.mkdir(parents=True, exist_ok=True)
+            (dest / name).write_bytes((src_dir / name).read_bytes())
+        if (rel, dest / name) not in self.media_files:
+            self.media_files.append((rel, dest / name))
+        return (f'<figure class="rm-fig"><div class="frame"><img src="{esc(rel)}" alt="The supplier offer as archived on 22 August 2026 '
+                f'beside our capture of 25 October 2026, with the lines that changed highlighted"></div><figcaption>'
+                f'<span class="rm-prov">Composite of two captures</span><span>The same offer, revision 3.0, in the archived copy of 22.08.2026 '
+                f'and our capture of 25.10.2026. Yellow: on the page in August and gone in October. Blue: new in October. Green: still public{self.ref("s8817")}'
+                f'{self.ref("s8822")}{self.tref("privacy")}.</span></figcaption></figure>')
+
     def step_shot(self, i, caption):
         """A screenshot from SHOTS under a step of the origin story, with its own plain caption. Preview only."""
         btn = self.shot(i)
@@ -1170,8 +1193,9 @@ class Landing(Chain):
             'shows the system in service.</p>'
             '<h3 class="rm-h3">The marketplace hides who runs it. An older copy does not</h3>'
             f'<p>The platform\'s public terms print the operator as “OOO «****»”. A copy archived on 22.08.2026 names it: '
-            f'{self.pop(MPTM)}, INN 9714068459. TsBST\'s own report to the Justice Ministry lists the same company as one it has '
-            f'taken part in since the day it was registered.</p>{self.masked()}'
+            f'{self.pop(MPTM)}, INN 9714068459. The privacy policy on the live site still names it, at a different address from the August '
+            f'offer{self.tref("privacy")}. TsBST\'s own report to the Justice Ministry lists the same company as one it has '
+            f'taken part in since the day it was registered.</p>{self.masked()}{self.offer_collage()}'
             '<p class="note"><a href="#h-origin">How the marketplace recruits sellers, and where its products go instead →</a></p>')
 
     def origin(self):
