@@ -301,3 +301,5 @@ main section > .rm-h2 { margin-top: 0; }
 :root[data-theme="dark"] { --map-held: #4a2326; --map-held-line: #e06a64; --map-river: #6fb0e6; }
 .front-map .fm-e { font: 700 12px var(--font-sans); fill: var(--ink); letter-spacing: .04em; paint-order: stroke; stroke: var(--panel-2); stroke-width: 3px; }
 .front-map .fm-r { font: italic 600 15px var(--font-serif); fill: var(--map-river); paint-order: stroke; stroke: var(--panel-2); stroke-width: 4px; }
+.tile .tl { font: 600 10.5px/1.2 var(--font-mono); letter-spacing: .04em; color: var(--accent); text-decoration: none; }
+.tile .tl:hover, .tile .tl:focus-visible { text-decoration: underline; }

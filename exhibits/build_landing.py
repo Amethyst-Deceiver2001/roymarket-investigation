@@ -551,9 +551,20 @@ class Landing(Chain):
                 regs = [lab for lab, _ in sanction_regimes(e.get("sanctions"))]
                 logo = self.logo(s)
                 flag = f'<span class="rm-sanction">Sanctioned <b>{esc(", ".join(regs))}</b></span>' if regs else ""
-                tiles.append(f'<li class="tile{" has-logo" if logo else ""}">{logo}<span class="tn">{self.en(e, pop=True)}</span>{flag}</li>')
+                page = self.file_link(s)
+                go = f'<a class="tl" href="{esc(page[0])}">{esc(page[1])} →</a>' if page else ""
+                tiles.append(f'<li class="tile{" has-logo" if logo else ""}">{logo}<span class="tn">{self.en(e, pop=True)}</span>{go}{flag}</li>')
             groups.append(f'<div class="wall-g"><h3 class="rm-label">{esc(label)} · {len(slugs)}</h3><ul class="wall">{"".join(tiles)}</ul></div>')
         return "".join(groups)
+
+    def file_link(self, slug):
+        """(url, label) of the profile page for an organisation, where one exists. Preview only: the pages are private."""
+        if not self.preview:
+            return None
+        from build_company_page import COMPANY_PAGES   # noqa: E402
+        if slug in COMPANY_PAGES:
+            return COMPANY_PAGES[slug], "Company file"
+        return next(((url, kind) for kind, _, _, url, sl in MORE if sl == slug), None)
 
     def sanctions_grid(self):
         """When the linked organisations were listed, by regime and year: one count per cell, from dated entries."""
