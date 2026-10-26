@@ -59,6 +59,20 @@ Six new arrays on every entity, defaulting empty, populated by hand via
   a structured home for what used to get buried in prose `why[]` notes.
   Optional `site_operator` (added 26.10.2026): the operator's wording shown
   under a price list, kept when the claim is the price list itself.
+- `appearances[]` and `timeline_extra[]` (26.10.2026) — hand-held, English only.
+  `appearances[]` is `{date, date_end, kind: report|programme|exhibition, outlet,
+  speaker (people slug), text_en, source_id, also[]}`: a public statement or show as a
+  source reports it; the company page lists it under "Public appearances" and on the
+  timeline. `timeline_extra[]` is `{date, text_en, source_id}` for one dated
+  event with no field of its own (an announcement).
+- People on a company page (26.10.2026): a role entry with no title shows the
+  register-derived role (director, owner) from the entity's `director`/`founders`;
+  a title starting "Co-founder" shows as the company's own claim. Under each person the
+  page lists, from their record, `egrip_hits[]` that carry `source_id` (with
+  `terminated`, `activity_en`), `other_entities[]` where they are director, and
+  sanctions with a read source. A person's `inn_basis` text goes to the page's limits:
+  use it when the personal INN came from the investigator, not from a document that
+  names the person in the role.
 - `address_history[]` entries may carry `kind` (26.10.2026): `registered` (the
   default; from the register extract), `legal-own-site` (the legal address the
   company's own site gives) or `actual` (where it receives visitors or post),

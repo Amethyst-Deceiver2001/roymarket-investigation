@@ -17178,7 +17178,8 @@
         "termination_method": "on the entrepreneur's own decision",
         "okved_main": "47.54",
         "email": "FRONDIBALL@GMAIL.COM",
-        "note": "Read in the ЕГРИП extract of 26.10.2026: registered 18.05.2023 (six weeks after ООО «ГОУДРОН»), main activity 47.54 retail of household electrical appliances in specialised shops, 29 further ОКВЭД codes including wholesale and retail of electronics, 47.91 internet retail, freight transport and warehousing; terminated 08.10.2026 on his own decision (ГРН 426774604120402), 16 months after the Ukrainian sanction of 20.06.2025. Not modelled as an entity: its trade is not documented here."
+        "note": "Read in the ЕГРИП extract of 26.10.2026: registered 18.05.2023 (six weeks after ООО «ГОУДРОН»), main activity 47.54 retail of household electrical appliances in specialised shops, 29 further ОКВЭД codes including wholesale and retail of electronics, 47.91 internet retail, freight transport and warehousing; terminated 08.10.2026 on his own decision (ГРН 426774604120402), 16 months after the Ukrainian sanction of 20.06.2025. Not modelled as an entity: its trade is not documented here.",
+        "activity_en": "retail of household electrical appliances"
       }
     ],
     "egrip_checked_at": "2026-10-26"
@@ -52506,7 +52507,12 @@
         "ogrnip": "322774600653852",
         "name": "ДОЙНИКОВ АЛЕКСЕЙ АНДРЕЕВИЧ",
         "registered": "02.11.2022",
-        "excluded_or_flag": "18.12.2025"
+        "excluded_or_flag": "18.12.2025",
+        "source_id": "L0542",
+        "terminated": "18.12.2025",
+        "termination_method": "on the entrepreneur's own decision",
+        "okved_main": "49.41",
+        "activity_en": "freight transport"
       }
     ],
     "egrip_checked_at": "2026-10-26",
@@ -52544,6 +52550,7 @@
     },
     "sources": [
       "L0551"
-    ]
+    ],
+    "inn_basis": "The tax number linking him to the sole-proprietor registration and to the company he owns was supplied by the investigator on 26.10.2026; no document on file prints it beside the name of the co-founder named by GoDrone. The register extracts name the holder of this number."
   }
 ]

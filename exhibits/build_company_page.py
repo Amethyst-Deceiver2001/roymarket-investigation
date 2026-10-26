@@ -267,15 +267,55 @@ class Page:
                     continue
                 m = re.match(r"co-inventor \(patent (\w+)\)", t)
                 role = f"Inventor on patent {m.group(1)}" if m else ROLE_TITLE_EN.get(t)
+                grade = "doc" if self.doc(r.get("source_id")) else "rep"
+                if not role and t.startswith("Co-founder"):
+                    role = "Co-founder, as the company, its site and the press call him; not in the register extract"
+                if not role and not t:
+                    role = self.register_role(p)
                 if not role:
                     continue
-                grade = "doc" if self.doc(r.get("source_id")) else "rep"
                 pn = person_names(p.get("fio_ru") or "", p.get("name_latin"))
+                sub = self.person_lines(p)
                 items.append(f'<li><span class="rm-grade {grade}">{"Documented" if grade == "doc" else "Reported"}</span> '
-                             f'{esc(pn["first"])} (<span lang="ru">{esc(pn["fio"])}</span>): {esc(role)}{self.ref(r.get("source_id"))}</li>')
+                             f'{esc(pn["first"])} (<span lang="ru">{esc(pn["fio"])}</span>): {esc(role)}{self.ref(r.get("source_id"))}'
+                             + (f'<ul class="plain sub">{sub}</ul>' if sub else "") + "</li>")
+                if p.get("inn_basis"):
+                    self.limits.append(esc(p["inn_basis"]))
         if staff:
             self.limits.append(f"The dossier names {staff} further staff members. They are not listed here.")
         return f'<ul class="plain">{"".join(items)}</ul>' if items else ("" if reg_people else "<p>None recorded.</p>")
+
+    def register_role(self, p):
+        """'Director and sole owner (100%)' from the entity's register-derived fields, for a role entry with no title."""
+        fio, e = (p.get("fio_ru") or "").strip(), self.e
+        parts = []
+        if (e.get("director") or "").strip() == fio:
+            parts.append("director")
+        fo = next((f for f in e.get("founders") or [] if (f.get("name") or "").strip() == fio), None)
+        if fo:
+            parts.append("sole owner (100%)" if fo.get("share_percent") == 100 else "owner")
+        return (" and ".join(parts)).capitalize() if parts else ""
+
+    def person_lines(self, p):
+        """What else the registers show for a person with a role here: sole-proprietor spell, other companies, sanctions."""
+        out = []
+        for h in p.get("egrip_hits") or []:
+            if not h.get("source_id"):
+                continue
+            act = f' ({esc(h["activity_en"])})' if h.get("activity_en") else ""
+            end = f' to {esc(h["terminated"])}' if h.get("terminated") else ""
+            out.append(f'<li>Registered as a sole proprietor{act}: {esc(h.get("registered"))}{end}{self.ref(h["source_id"])}</li>')
+        for o in p.get("other_entities") or []:
+            if o.get("inn") == self.e.get("inn") or not o.get("source_id") or o.get("role") != "director":
+                continue
+            ent = next((x for x in self.ents.values() if x.get("inn") == o.get("inn")), None)
+            label = self.en(ent) if ent else name_html(latin_text(o.get("name") or ""), o.get("name") or "", key="oe-" + str(o.get("inn")))
+            out.append(f'<li>Sole owner and director of {label} (INN {esc(o.get("inn"))}), registered {esc(o.get("registered"))}'
+                       f'{self.ref(o["source_id"])}</li>')
+        for lab, ss in sanction_regimes(p.get("sanctions")):
+            if any(self.doc(s) for s in ss):
+                out.append(f'<li><span class="rm-sanction">Sanctioned <b>{esc(lab)}</b></span>{self.ref(*ss)}</li>')
+        return "".join(out)
 
     ADDR_KIND = {"registered": "Registered address (register)", "legal-own-site": "Legal address (its own site)",
                  "actual": "Actual address (showroom)"}
@@ -380,13 +420,38 @@ class Page:
             if ds:
                 ev.append((ds[0]["date"], f'First reported handover of {esc(latin_text(p["name_ru"]))} to a unit '
                                           f'({len(ds)} reported to {ru_date(ds[-1]["date"])})', ds[0].get("source_id")))
+        for x in e.get("timeline_extra") or []:
+            ev.append((x["date"], esc(x["text_en"]), x.get("source_id")))
+        for a in e.get("appearances") or []:
+            ev.append((a["date"], f'Appearance: {esc(a["outlet"])}', a.get("source_id")))
+        for p in load("people.json"):
+            if not any(r.get("entity_slug") == e["slug"] and not r.get("_candidate") for r in p.get("roles") or []):
+                continue
+            who = person_names(p.get("fio_ru") or "", p.get("name_latin"))["first"]
+            for h in p.get("egrip_hits") or []:
+                if h.get("source_id"):
+                    for k, verb in (("registered", "opened"), ("terminated", "closed")):
+                        v = h.get(k) or ""
+                        if re.match(r"\d\d\.\d\d\.\d{4}$", v):
+                            ev.append((f"{v[6:]}-{v[3:5]}-{v[:2]}", f"Sole-proprietor registration of {esc(who)} {verb}", h["source_id"]))
+            for o in p.get("other_entities") or []:
+                v = o.get("registered") or ""
+                if o.get("inn") != e.get("inn") and o.get("role") == "director" and o.get("source_id") and re.match(r"\d\d\.\d\d\.\d{4}$", v):
+                    ent = next((x for x in self.ents.values() if x.get("inn") == o.get("inn")), None)
+                    ev.append((f"{v[6:]}-{v[3:5]}-{v[:2]}", f"Related company registered: {self.en(ent) if ent else esc(latin_text(o.get('name') or ''))}, "
+                                                           f"later owned and run by {esc(who)}", o["source_id"]))
+            for s in p.get("sanctions") or []:
+                if s.get("date") and re.match(r"\d{4}-\d\d-\d\d$", s["date"]) and any(self.doc(s.get("source_id")) for _ in [0]):
+                    lab = ", ".join(l for l, _ in sanction_regimes([s]))
+                    ev.append((s["date"], f"Its owner and director {esc(who)} listed under {esc(lab)} sanctions", s.get("source_id")))
         ev.sort(key=lambda x: x[0])
         rows = "".join(f'<li id="tl{i}"><time>{ru_date(d)}</time><span>{t}{self.ref(sid)}</span></li>' for i, (d, t, sid) in enumerate(ev, 1))
         return self.timeline_strip(ev) + f'<ol class="tline">{rows}</ol>'
 
     LANES = [("Register", ("Registered", "Owners")), ("Trademarks and patents", ("Trademark", "Patent")),
              ("Sanctions", ("Listed under",)), ("State and programmes", ("State contract", "Showed")),
-             ("Handovers", ("First reported handover",))]
+             ("Handovers", ("First reported handover",)), ("Announcements", ("Announced",)),
+             ("People and related", ("Sole-proprietor", "Related company", "Its owner")), ("Appearances", ("Appearance",))]
 
     def timeline_strip(self, ev):
         """The same events on one date scale, one lane per kind; each mark is numbered like the list beneath."""
@@ -582,6 +647,20 @@ class Page:
             figs.append(figure_html(m, f"images/media/{name}", prov, self.ref(m.get("source_id"))))
         return f'<div class="rm-gallery{" even" if len(figs) in (2, 4) else ""}">{"".join(figs)}</div>' if figs else ""
 
+    def appearances(self):
+        """Public statements and shows, dated, each with what the source says and who spoke (§ no quotes beyond the record)."""
+        rows = []
+        for a in sorted(self.e.get("appearances") or [], key=lambda a: a["date"]):
+            sp = next((p for p in load("people.json") if p["slug"] == a.get("speaker")), None)
+            who = f' Speaker: {esc(person_names(sp.get("fio_ru") or "", sp.get("name_latin"))["first"])}, named as co-founder.' if sp else ""
+            when = ru_date(a["date"]) + (f' to {ru_date(a["date_end"])}' if a.get("date_end") else "")
+            rows.append(f'<li><time>{when}</time> <span><b>{esc(a["outlet"])}.</b> {esc(a["text_en"])}{who}'
+                        f'{self.ref(a.get("source_id"), *(a.get("also") or []))}</span></li>')
+        if not rows:
+            return ""
+        self.limits.append("Public appearances are listed as the sources report them; none of the recordings was transcribed here.")
+        return f'<ul class="plain">{"".join(rows)}</ul>'
+
     def handovers(self):
         """Handovers the company itself reports on its own channel (deliveries.json, donor = this company), as it words them."""
         evs = sorted((d for d in load("deliveries.json") if d.get("donor") == self.e["slug"] and d.get("source_id")
@@ -649,7 +728,7 @@ def render(pg, out, chains):
     sections = [("Company register", pg.register()), ("Command" if pg.unit() else "Before the register was closed", pg.before()),
                 ("People", pg.people_block()), ("Where it is", pg.place()), ("Sanctions", pg.sanctions_block()),
                 ("Timeline", pg.timeline()), ("Annual accounts", pg.accounts()),
-                ("Products", pg.products_block(chains)), ("Handovers it reports", pg.handovers()), ("Reported by others", pg.reported_by_others(img_dir)),
+                ("Products", pg.products_block(chains)), ("Handovers it reports", pg.handovers()), ("Public appearances", pg.appearances()), ("Reported by others", pg.reported_by_others(img_dir)),
                 ("Pictures", pg.pictures(img_dir)), ("In its own words", pg.own_words()), ("Trademarks and patents", pg.ip_block()),
                 ("Links to TsBST and the state", pg.network()), ("Sellers of its products", pg.sellers())]
     pg.gaps()
@@ -696,6 +775,7 @@ th { font: 600 var(--t-label)/1.4 var(--font-mono); letter-spacing: .06em; text-
 .lead-note { font-size: 13.5px; color: var(--ink-2); margin: 0 0 12px; }
 .nolist { font-size: 13px; color: var(--ink-2); margin: 4px 0; }
 ul.plain .nolist { margin: 2px 0 0; }
+ul.plain.sub { margin: 4px 0 0 18px; gap: 4px; font-size: 13px; }
 .rm-facility { margin-top: 12px; max-width: 640px; }
 ol.tline { list-style: none; padding: 0; margin: 0; font-size: 14px; color: var(--ink-2); display: flex; flex-direction: column; gap: 6px; }
 ol.tline li { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 12px; }
