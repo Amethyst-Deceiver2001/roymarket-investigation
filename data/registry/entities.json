@@ -21679,7 +21679,26 @@
         "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 29530, status «active»): «Товариство з обмеженою відповідальністю \"Трімікс\"»; identifiers on the entry match this record (inn 7802942873, ogrn 1237800084235). Actions: applied by decree 301/2025 of 2025-05-09 (appendix 2, position 61). Term: Десять років, until 2035-05-09."
       }
     ],
-    "litigation": [],
+    "litigation": [
+      {
+        "case": "А40-57294/26-12-555",
+        "court": "Арбитражный суд города Москвы",
+        "date": "2026-03-11",
+        "role": "plaintiff",
+        "counterparty": "ООО «Гоудрон» (ИНН 9721203814)",
+        "amount_rub": 5000000,
+        "subject_ru": "Защита прав на изобретение по патенту №2826668 и взыскание компенсации в размере 5.000.000 рублей.",
+        "judge": "Чадов А.С.",
+        "outcome": "No judgment; proceedings suspended (21.07.2026)",
+        "status": "Производство приостановлено определением от 21.07.2026 до вступления в силу решения Роспатента по возражениям ответчика против выдачи патента RU 2826668 C1; решение Роспатента к 07.07.2026 не принято.",
+        "source_id": "L0558",
+        "also": [
+          "L0559",
+          "L0560"
+        ],
+        "note": "Read in full: the three rulings of 11.03.2026, 19.05.2026 and 21.07.2026. They name the parties, the patent and the sum, and do not say which product is accused; the claim itself is not on file. The ruling of 21.07.2026 records that the defendant asked for the stay and the claimant opposed it. The case card at kad.arbitr.ru after 21.07.2026 is not checked."
+      }
+    ],
     "licences": [],
     "trademarks": [
       {
@@ -22188,7 +22207,24 @@
     "proverki_inspections": [],
     "proverki_checked_at": "2026-09-07",
     "fssp_debt_matches": [],
-    "fssp_debt_checked_at": "2026-09-08"
+    "fssp_debt_checked_at": "2026-09-08",
+    "timeline_extra": [
+      {
+        "date": "2026-03-11",
+        "text_en": "Claim against GoDrone (patent RU 2826668, ₽5,000,000 compensation) accepted by the Moscow Arbitration Court, case A40-57294/26-12-555; preliminary hearing set for 19.05.2026",
+        "source_id": "L0558"
+      },
+      {
+        "date": "2026-05-19",
+        "text_en": "Preliminary hearing held; trial set for 07.07.2026",
+        "source_id": "L0559"
+      },
+      {
+        "date": "2026-07-21",
+        "text_en": "Proceedings suspended until the decision on GoDrone's objections to patent RU 2826668 C1 at Rospatent takes legal effect (ruling announced 07.07.2026, written 21.07.2026)",
+        "source_id": "L0560"
+      }
+    ]
   },
   {
     "slug": "ooo-boevye-tekhnologii",
@@ -26551,7 +26587,26 @@
         "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 29698, status «active»): «Товариство з обмеженою відповідальністю \"Гоудрон\"»; identifiers on the entry match this record (inn 9721203814, ogrn 1237700265846). Actions: applied by decree 415/2025 of 2025-06-20 (appendix 2, position 28). Term: Десять років, until 2035-06-20."
       }
     ],
-    "litigation": [],
+    "litigation": [
+      {
+        "case": "А40-57294/26-12-555",
+        "court": "Арбитражный суд города Москвы",
+        "date": "2026-03-11",
+        "role": "defendant",
+        "counterparty": "ООО «ТРИМИКС» (ИНН 7802942873)",
+        "amount_rub": 5000000,
+        "subject_ru": "Защита прав на изобретение по патенту №2826668 и взыскание компенсации в размере 5.000.000 рублей.",
+        "judge": "Чадов А.С.",
+        "outcome": "No judgment; proceedings suspended (21.07.2026)",
+        "status": "Производство приостановлено определением от 21.07.2026 до вступления в силу решения Роспатента по возражениям ответчика против выдачи патента RU 2826668 C1; решение Роспатента к 07.07.2026 не принято.",
+        "source_id": "L0558",
+        "also": [
+          "L0559",
+          "L0560"
+        ],
+        "note": "Read in full: the three rulings of 11.03.2026, 19.05.2026 and 21.07.2026. They name the parties, the patent and the sum, and do not say which product is accused; the claim itself is not on file. The ruling of 21.07.2026 records that the defendant asked for the stay and the claimant opposed it. The case card at kad.arbitr.ru after 21.07.2026 is not checked."
+      }
+    ],
     "licences": [],
     "trademarks": [
       {
@@ -27472,6 +27527,21 @@
         "date": "2025-12-03",
         "text_en": "Announced the first batch of the Nabat 3 detector ready to ship",
         "source_id": "L0486"
+      },
+      {
+        "date": "2026-03-11",
+        "text_en": "Trimiks's claim (patent RU 2826668, ₽5,000,000 compensation) accepted by the Moscow Arbitration Court, case A40-57294/26-12-555; preliminary hearing set for 19.05.2026",
+        "source_id": "L0558"
+      },
+      {
+        "date": "2026-05-19",
+        "text_en": "Preliminary hearing held; trial set for 07.07.2026",
+        "source_id": "L0559"
+      },
+      {
+        "date": "2026-07-21",
+        "text_en": "Proceedings suspended until the decision on its objections to patent RU 2826668 C1 at Rospatent takes legal effect (ruling announced 07.07.2026, written 21.07.2026)",
+        "source_id": "L0560"
       }
     ]
   },
@@ -94276,6 +94346,10 @@
       {
         "source_id": "L0545",
         "text": "What does ООО «ИМЭНС» trade, and does it deal with ООО «ГОУДРОН»? Owner and director Дойников since 11.07.2025 (the extract shows the current holder only); earlier owner and director from 15.02.2024 not on file; address changed to пр-кт Андропова, 10, помещ. 98 on 22.12.2025. To read: financial statements for 2024-2025, public procurement, the Ozon and Wildberries seller registers, the trademark register, and the address (which building, residential or commercial). Trademarks, 26.10.2026 (L0549): the whole Rospatent register dump of 02.10.2026 (1,212,536 rows) searched by the INNs 772161707648, 9717155759, 502727680236 and 9721203814, by holder names «Дойников А.», «ИМЭНС», «ГОУДРОН», and by the addresses Ухтомского Ополчения 2, пр-кт Андропова 10 and Большой Симоновский: only the three GOUDRON marks (1085944, 1088602, 1203185) are held under these INNs; no mark is held by Дойников, ИМЭНС or Козлов. The other rows are other holders at the same buildings: пр-кт Андропова, 10, помещ. 98 is the registered address of at least six unrelated companies in that register (Решения, СТАРЛАБ, РЕВАЛЮКС, ГЛОБАЛЬНОЕ КОГНИТИВНОЕ ВИДЕОНАБЛЮДЕНИЕ, УАЙТ ГРУПП, АЛМИ), so it is a shared address, and flats 54, 72, 96, 165 at Ухтомского Ополчения 2 belong to other holders. The register holds holders, not word marks, so a mark under another name or holder's address is not excluded."
+      },
+      {
+        "source_id": "L0547",
+        "text": "Vacancy 28245606 on meec.com.ru (L0547, posted 23.10.2026) names the employer «GoDron store (ИП Дойников Алексей Андреевич)» and describes an online shop of quadcopters and accessories that «grew 4.5 times over the last year», hiring a drone repair engineer. It names neither ООО «ГОУ ДРОН» nor ООО «ИМЭНС». GoDrone's own site (ten captured pages, read 26.10.2026) names ООО «ГОУДРОН» as the operator and never mentions either company or Yatsenko. Parked 26.10.2026: whether the «GoDron store» is a retail side of the GoDrone circle run through Дойников's sole-proprietor registration, and whether ООО «ГОУ ДРОН» or ООО «ИМЭНС» trade at all, would need the Ozon and Wildberries seller registers and financial statements; nothing on file settles it."
       }
     ],
     "_verified": true,
@@ -94366,6 +94440,10 @@
       {
         "source_id": "L0552",
         "text": "Is ООО «ГОУ ДРОН» run for the ООО «ГОУДРОН» circle? Facts: the extract of 26.10.2026 shows registration 03.06.2025, sole owner and general director Яценко А.В. (ИНН 505603159114), address пр-кт Андропова, 10, помещ. 98 (a shared address), e-mail GO-DRONE2025@MAIL.RU, ОКВЭД 46.43 first with the same further codes as ООО «ГОУДРОН»'s circle companies. Not established: that she is Kozlov's mother (the research file s3664 says so; no register document does), what the company sells, and whether it is the «GoDron store» of a vacancy listing that names ИП Дойников. Not found: any sanction by INN or name in Ukraine's register (26.10.2026) or the EU, UK, UN, Swiss, US and Japanese lists (25.10.2026), and any trademark in the register dump of 02.10.2026 under the name or address."
+      },
+      {
+        "source_id": "L0547",
+        "text": "Vacancy 28245606 on meec.com.ru (L0547, posted 23.10.2026) names the employer «GoDron store (ИП Дойников Алексей Андреевич)» and describes an online shop of quadcopters and accessories that «grew 4.5 times over the last year», hiring a drone repair engineer. It names neither ООО «ГОУ ДРОН» nor ООО «ИМЭНС». GoDrone's own site (ten captured pages, read 26.10.2026) names ООО «ГОУДРОН» as the operator and never mentions either company or Yatsenko. Parked 26.10.2026: whether the «GoDron store» is a retail side of the GoDrone circle run through Дойников's sole-proprietor registration, and whether ООО «ГОУ ДРОН» or ООО «ИМЭНС» trade at all, would need the Ozon and Wildberries seller registers and financial statements; nothing on file settles it."
       }
     ],
     "_verified": true,
