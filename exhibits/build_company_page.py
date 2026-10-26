@@ -165,6 +165,13 @@ class Page:
         e = self.e
         rows = []
         reg_src = egrul_source(e, self.src)
+        if self.unit():
+            rows.append(("Legal form", "Military unit. It is not a registered company and has no INN or OGRN of its own."))
+            fd = self.foundation()
+            if fd:
+                fe, fsrc = fd
+                ids = ", ".join(f"{lab} {fe[k]}" for lab, k in (("INN", "inn"), ("OGRN", "ogrn")) if fe.get(k))
+                rows.append(("Supporting foundation", f'{self.en(fe)} ({esc(ids)}){self.ref(fsrc)}'))
         rows.append(("INN", f'<span class="rm-id">{esc(e.get("inn"))}</span>' if e.get("inn") else ""))
         rows.append(("OGRN", f'<span class="rm-id">{esc(e.get("ogrn"))}</span>' if e.get("ogrn") else ""))
         if e.get("registered"):
@@ -185,6 +192,18 @@ class Page:
         if r:
             rows.append(("Owners and director", f'Hidden in the register since {ru_date(r["as_of"])}{self.ref(r["source_id"])}'))
         return self.dl(rows)
+
+    def unit(self):
+        return (self.e.get("legal_form") or "").lower() == "military unit"
+
+    def foundation(self):
+        """The unit's supporting foundation: the group-structure link whose record carries an INN/OGRN, with the
+        source that shows the unit's own page naming it (a fresh capture of the foundation's page where one is on file)."""
+        for r in self.e.get("related_entities") or []:
+            f = self.ents.get(r.get("slug"))
+            if r.get("relationship_type") == "group-structure" and f and (f.get("inn") or f.get("ogrn")):
+                return f, r.get("source_id")
+        return None
 
     def before(self):
         """Owners, directors and names recorded only from a weaker source (an investigator's dossier): shown, graded
@@ -209,6 +228,10 @@ class Page:
                                     f'{self.ref(h["source_id"])}'))
         if not rows:
             return ""
+        if self.unit():
+            self.limits.append("The unit's commander is named on its own site and posts. There is no register to confirm it.")
+            return ('<p class="lead-note"><span class="rm-grade rep">Reported</span> From the unit\'s own site. A military '
+                    'unit is not in the company register.</p>' + self.dl(rows))
         self.limits.append("The owners, directors and original name before the register was closed come from an "
                            "investigator's dossier. They are graded Reported until a register extract from before that "
                            "date confirms them.")
@@ -394,6 +417,10 @@ class Page:
         prices = [f'<p class="lead-note">Price list on the product\'s own site, {ru_date(c["as_of"])}: '
                   f'{orig_line(c["text_ru"], f"price-{i}", latinize_gloss(c.get("text_en") or ""))}{self.ref(c.get("source_id"))}</p>'
                   for i, c in enumerate(self.e.get("marketing_claims") or [], 1) if (c.get("context") or "").startswith("price list")]
+        for c in self.e.get("marketing_claims") or []:
+            so = c.get("site_operator")
+            if so and (c.get("context") or "").startswith("price list"):
+                prices.append(f'<p class="lead-note">{esc(so["text_en"])}{"".join(self.ref(x) for x in so["source_ids"])}</p>')
         return (f'<ul class="plain">{"".join(items)}</ul>' if items else "<p>No products recorded.</p>") + "".join(prices)
 
     def ip_block(self):
@@ -524,7 +551,12 @@ class Page:
 
     def gaps(self):
         e = self.e
-        if not any(lab == "Ukraine" for lab, _ in regimes(e)):
+        fd = self.foundation() if self.unit() else None
+        if fd and not any(lab == "Ukraine" for lab, _ in regimes(e)) and not any(lab == "Ukraine" for lab, _ in regimes(fd[0])):
+            self.limits.append("A military unit has no INN or OGRN to match. No entry in Ukraine's State Register of "
+                               "Sanctions carries the INN or OGRN of its supporting foundation, in the register's export of "
+                               "26.10.2026.")
+        elif not any(lab == "Ukraine" for lab, _ in regimes(e)):
             self.limits.append("No entry in Ukraine's State Register of Sanctions carries its INN or OGRN, in the register's "
                                "export of 26.10.2026." if (e.get("inn") or e.get("ogrn")) else
                                "No Ukrainian sanction is recorded. Ukraine's State Register of Sanctions is matched by identifier, "
@@ -546,7 +578,7 @@ def render(pg, out, chains):
            if n["legal"] else f'<p class="names"><span lang="ru">{esc(legal)}</span></p>')
     logo = pg.logo(img_dir)
     dek = brief(e, pg.ref, pg.src)
-    sections = [("Company register", pg.register()), ("Before the register was closed", pg.before()),
+    sections = [("Company register", pg.register()), ("Command" if pg.unit() else "Before the register was closed", pg.before()),
                 ("People", pg.people_block()), ("Where it is", pg.place()), ("Sanctions", pg.sanctions_block()),
                 ("Timeline", pg.timeline()), ("Annual accounts", pg.accounts()),
                 ("Products", pg.products_block(chains)), ("Reported by others", pg.reported_by_others(img_dir)),
