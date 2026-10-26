@@ -1,6 +1,129 @@
 {
  "schema_version": 1,
  "urls": {
+  "http://kotlin-novator.ru": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ao-kotlin-novator"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Remote end closed connection without response"
+  },
+  "http://publications.europa.eu/resource/celex/32014R0284": {
+   "kind": "web",
+   "source_ids": [
+    "L0394"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "http://publications.europa.eu/resource/celex/32014R0433": {
+   "kind": "web",
+   "source_ids": [
+    "L0391"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "http://publications.europa.eu/resource/celex/32014R0961": {
+   "kind": "web",
+   "source_ids": [
+    "L0392"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "http://publications.europa.eu/resource/celex/32018R1929": {
+   "kind": "web",
+   "source_ids": [
+    "L0393"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "http://publications.europa.eu/resource/celex/32022R0581": {
+   "kind": "web",
+   "source_ids": [
+    "L0404"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "http://publications.europa.eu/resource/celex/32022R1529": {
+   "kind": "web",
+   "source_ids": [
+    "L0395"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "http://publications.europa.eu/resource/celex/32023R1765": {
+   "kind": "web",
+   "source_ids": [
+    "L0388"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "http://publications.europa.eu/resource/celex/32024R0849": {
+   "kind": "web",
+   "source_ids": [
+    "L0387"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "http://publications.europa.eu/resource/celex/32025R0932": {
+   "kind": "web",
+   "source_ids": [
+    "L0409"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "http://publications.europa.eu/resource/celex/32025R1494": {
+   "kind": "web",
+   "source_ids": [
+    "L0410"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "http://www.treasury.gov/press-center/press-releases/Pages/jl2438.aspx": {
+   "kind": "web",
+   "source_ids": [
+    "L0402"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "http://эколибри.рф": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ao-ekolibri"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: 'ascii' codec can't encode characters in position 17-24: ordinal not in range(128)"
+  },
   "https://360.ru/news/ukrainian-crisis/bespilotnik-tejlsitter-asja-iz-plastika-skoro-projdet-aprobatsiju-v-zone-svo/": {
    "kind": "web",
    "source_ids": [
@@ -15,9 +138,14 @@
    "source_ids": [
     "s7546"
    ],
-   "cited": false,
-   "tier": 3,
-   "captures": []
+   "cited": true,
+   "entities": [
+    "ooo-trimiks"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Remote end closed connection without response"
   },
   "https://3mx.ru/dilery/": {
    "kind": "web",
@@ -43,6 +171,7 @@
   "https://3mx.ru/products/detektor-bpla-bulat-v3/": {
    "kind": "web",
    "source_ids": [
+    "L0348",
     "s8018"
    ],
    "cited": true,
@@ -63,6 +192,7 @@
   "https://3mx.ru/products/detektor-bpla-bulat-v4/": {
    "kind": "web",
    "source_ids": [
+    "L0349",
     "s8019"
    ],
    "cited": true,
@@ -83,6 +213,7 @@
   "https://3mx.ru/products/kompleks-obnaruzheniya-bpla-bulat-online/": {
    "kind": "web",
    "source_ids": [
+    "L0350",
     "s8020"
    ],
    "cited": true,
@@ -161,6 +292,28 @@
     }
    ]
   },
+  "https://921921.ru/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ip-kuznetsov-ruslan-nikolaevich"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026150703/https://921921.ru/",
+     "timestamp": "20261026150703",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "85e36e7318e66622bc97f68cd80ef220a1ffa03a983758a317502288e6316307",
+     "bytes": 14453,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
+  },
   "https://agentura.ru/profile/federalnaja-sluzhba-bezopasnosti-rossii-fsb/nii-1-ili-institut-specialnoj-tehniki/": {
    "kind": "web",
    "source_ids": [
@@ -210,14 +363,41 @@
    "tier": 3,
    "captures": []
   },
+  "https://archangel-center.ru/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ooo-arkhangel-tsentr"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Remote end closed connection without response"
+  },
   "https://areasystems.tech/": {
    "kind": "web",
    "source_ids": [
     "s7556"
    ],
-   "cited": false,
-   "tier": 3,
-   "captures": []
+   "cited": true,
+   "entities": [
+    "ao-ploshchad"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026150932/https://areasystems.tech/",
+     "timestamp": "20261026150932",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "97b90a1d38f1d4dd8b37e0f21a220ca3df09b1597e29b4b87b54c01fd3af9862",
+     "bytes": 169882,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://areasystems.tech/%d1%80%d0%b5%d1%88%d0%b5%d0%bd%d0%b8%d1%8f/": {
    "kind": "web",
@@ -239,12 +419,27 @@
     }
    ]
   },
+  "https://asellabs.com/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ooo-asel-labs"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Remote end closed connection without response"
+  },
   "https://avangard-pmc.ru/": {
    "kind": "web",
    "source_ids": [
     "s8622"
    ],
    "cited": true,
+   "entities": [
+    "ao-pmts-avangard"
+   ],
    "tier": 1,
    "captures": [
     {
@@ -328,6 +523,44 @@
     }
    ]
   },
+  "https://bars-sarmat.ru": {
+   "kind": "web",
+   "source_ids": [
+    "L0439"
+   ],
+   "cited": true,
+   "entities": [
+    "csn-bars-sarmat"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Remote end closed connection without response"
+  },
+  "https://bars-sarmat.ru/fond-sarmat/": {
+   "kind": "web",
+   "source_ids": [
+    "L0481"
+   ],
+   "cited": true,
+   "entities": [
+    "fond-sarmat"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026151309/https://bars-sarmat.ru/fond-sarmat/",
+     "timestamp": "20261026151309",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "7985a8b0ef980ff73c98d9272283217244f02090d0f9ba9aeb2f1f29c2276cf9",
+     "bytes": 43005,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
+  },
   "https://beastfpv.ru/product/akkumulyator-dlya-fpv-drona-gnb-9000-mah-6s-70s-xt60/": {
    "kind": "web",
    "source_ids": [
@@ -348,6 +581,18 @@
     }
    ]
   },
+  "https://bpla.archangel.school": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "proekt-kb-arkhangel"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: SPN HTTP 523"
+  },
   "https://bpla.ru-dpo.ru": {
    "kind": "web",
    "source_ids": [
@@ -357,12 +602,28 @@
    "tier": 3,
    "captures": []
   },
+  "https://bpla.ru-dpo.ru/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ano-nii-dpo"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Remote end closed connection without response"
+  },
   "https://bpryarl.ru/": {
    "kind": "web",
    "source_ids": [
+    "L0461",
     "s8731"
    ],
    "cited": true,
+   "entities": [
+    "yarl"
+   ],
    "tier": 1,
    "captures": [
     {
@@ -395,9 +656,22 @@
    "tier": 3,
    "captures": []
   },
+  "https://cbst.ru/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ano-tsbst-centre-for-unmanned-systems-technologies"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Remote end closed connection without response"
+  },
   "https://cbst.ru/tpost/9j5esvv061-tsbst-masshtabiruet-ploschadku-dvoinogo": {
    "kind": "web",
    "source_ids": [
+    "L0345",
     "s8867"
    ],
    "cited": true,
@@ -423,6 +697,9 @@
     "s8052"
    ],
    "cited": true,
+   "entities": [
+    "ooo-kleverkopter"
+   ],
    "tier": 1,
    "captures": [
     {
@@ -437,6 +714,42 @@
     }
    ]
   },
+  "https://commons.wikimedia.org/wiki/File:SidyakinA.G..jpg": {
+   "kind": "web",
+   "source_ids": [
+    "L0405"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://commons.wikimedia.org/wiki/File:Small_emblem_of_the_Russian_Airborne_Forces.svg": {
+   "kind": "web",
+   "source_ids": [
+    "L0413"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://commons.wikimedia.org/wiki/File:Small_emblem_of_the_Russian_Ground_Forces.svg": {
+   "kind": "web",
+   "source_ids": [
+    "L0411"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://commons.wikimedia.org/wiki/File:Spetsnaz_emblem.svg": {
+   "kind": "web",
+   "source_ids": [
+    "L0415"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
   "https://copterlab.ru": {
    "kind": "web",
    "source_ids": [
@@ -446,13 +759,234 @@
    "tier": 3,
    "captures": []
   },
+  "https://copterlab.ru/": {
+   "kind": "web",
+   "source_ids": [
+    "L0455"
+   ],
+   "cited": true,
+   "entities": [
+    "ooo-kopterlab"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Remote end closed connection without response"
+  },
+  "https://data.trade.gov/downloadable_consolidated_screening_list/v1/consolidated.csv": {
+   "kind": "web",
+   "source_ids": [
+    "L0425"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://deepstatemap.live/en": {
+   "kind": "web",
+   "source_ids": [
+    "L0432"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://dimon.navalny.com": {
+   "kind": "web",
+   "source_ids": [
+    "L0080",
+    "L0081",
+    "L0082",
+    "L0083",
+    "L0084",
+    "L0085",
+    "L0086",
+    "L0087",
+    "L0088",
+    "L0089",
+    "L0090",
+    "L0091",
+    "L0092",
+    "L0093",
+    "L0094",
+    "L0095",
+    "L0096",
+    "L0097",
+    "L0098",
+    "L0099",
+    "L0100",
+    "L0101",
+    "L0102",
+    "L0103",
+    "L0104",
+    "L0105",
+    "L0106",
+    "L0107",
+    "L0108",
+    "L0109",
+    "L0110",
+    "L0111",
+    "L0112",
+    "L0113",
+    "L0114",
+    "L0115",
+    "L0116",
+    "L0117",
+    "L0118",
+    "L0119",
+    "L0120",
+    "L0121",
+    "L0122",
+    "L0123",
+    "L0124",
+    "L0125",
+    "L0126",
+    "L0127",
+    "L0128",
+    "L0129",
+    "L0130",
+    "L0131",
+    "L0132",
+    "L0133",
+    "L0134",
+    "L0135",
+    "L0136",
+    "L0137",
+    "L0138",
+    "L0139",
+    "L0140",
+    "L0141",
+    "L0142",
+    "L0143",
+    "L0144",
+    "L0145",
+    "L0146",
+    "L0147",
+    "L0148",
+    "L0149",
+    "L0150",
+    "L0151",
+    "L0152",
+    "L0153",
+    "L0154",
+    "L0155",
+    "L0156",
+    "L0157",
+    "L0158",
+    "L0159",
+    "L0160",
+    "L0161",
+    "L0162",
+    "L0163",
+    "L0164",
+    "L0165",
+    "L0166",
+    "L0167",
+    "L0168",
+    "L0169",
+    "L0170",
+    "L0171",
+    "L0172",
+    "L0173",
+    "L0174",
+    "L0175",
+    "L0176",
+    "L0177",
+    "L0178",
+    "L0179",
+    "L0180",
+    "L0181",
+    "L0182",
+    "L0183",
+    "L0184",
+    "L0185",
+    "L0186",
+    "L0187",
+    "L0188",
+    "L0189",
+    "L0190",
+    "L0191",
+    "L0192",
+    "L0193",
+    "L0194",
+    "L0195",
+    "L0196",
+    "L0197",
+    "L0198",
+    "L0199",
+    "L0200",
+    "L0201",
+    "L0202",
+    "L0203",
+    "L0204",
+    "L0205",
+    "L0206",
+    "L0207",
+    "L0208",
+    "L0209",
+    "L0210",
+    "L0211",
+    "L0212",
+    "L0213",
+    "L0214",
+    "L0215",
+    "L0216",
+    "L0217",
+    "L0218",
+    "L0219",
+    "L0220",
+    "L0221",
+    "L0222",
+    "L0223",
+    "L0224",
+    "L0225",
+    "L0226",
+    "L0227",
+    "L0228",
+    "L0229",
+    "L0230",
+    "L0231",
+    "L0232",
+    "L0233",
+    "L0234",
+    "L0235",
+    "L0236",
+    "L0237",
+    "L0238",
+    "L0239",
+    "L0240",
+    "L0241",
+    "L0242",
+    "L0243",
+    "L0244",
+    "L0245",
+    "L0246",
+    "L0247",
+    "L0248",
+    "L0249",
+    "L0250",
+    "L0251",
+    "L0252",
+    "L0253",
+    "L0254",
+    "L0255",
+    "L0256"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
   "https://dinarus.ru/": {
    "kind": "web",
    "source_ids": [
+    "L0459",
     "s7946",
     "s8061"
    ],
    "cited": true,
+   "entities": [
+    "ooo-tsentr-dinarus"
+   ],
    "tier": 1,
    "captures": [
     {
@@ -486,6 +1020,18 @@
    "cited": false,
    "tier": 3,
    "captures": []
+  },
+  "https://dji911.com/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ip-korovkin-aleksandr-anatolevich"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Remote end closed connection without response"
   },
   "https://dji911.com/contacts": {
    "kind": "web",
@@ -546,6 +1092,30 @@
     }
    ]
   },
+  "https://drontech.pro/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ooo-mo-pniei-kraskript"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Remote end closed connection without response"
+  },
+  "https://drs.nsdc.gov.ua/": {
+   "kind": "web",
+   "source_ids": [
+    "L0475",
+    "L0476",
+    "L0477",
+    "L0478"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
   "https://eadaily.com/ru/news/2025/12/01/na-baze-narodnogo-proekta-arhangel-idet-razvitie-celoy-lineyki-bpla-lushnikov": {
    "kind": "web",
    "source_ids": [
@@ -565,6 +1135,50 @@
      "wayback_sha1": "U7VGC463JMEXQ4QLLYIDIWKJG3LWCVHT"
     }
    ]
+  },
+  "https://egrul.nalog.ru/": {
+   "kind": "web",
+   "source_ids": [
+    "L0001",
+    "L0008"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://elvees.ru/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "npts-elvis"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026152115/https://elvees.ru/",
+     "timestamp": "20261026152115",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "b9f41b5144a22b342dce8d76ec06abca11c00b664836e687cdc4c463644d28ea",
+     "bytes": 18582,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
+  },
+  "https://er.ru/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "vpp-edinaya-rossiya"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Remote end closed connection without response"
   },
   "https://eur-lex.europa.eu/eli/reg/2026/1848/oj/eng": {
    "kind": "web",
@@ -652,9 +1266,24 @@
    "source_ids": [
     "s7945"
    ],
-   "cited": false,
-   "tier": 3,
-   "captures": []
+   "cited": true,
+   "entities": [
+    "ooo-gagaring"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026152329/https://gagaring.ru/",
+     "timestamp": "20261026152329",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "bec88877e06b2f3255cc0b0b8f1ad569f489f68fb02fdf24cffedaabfe5f2907",
+     "bytes": 278950,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://gagaring.ru/product/detektor-portativnyy-yurka-1-2-DY12001": {
    "kind": "web",
@@ -747,6 +1376,28 @@
    "cited": false,
    "tier": 3,
    "captures": []
+  },
+  "https://gaskar.group/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ooo-gaskar-integratsiya"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026152425/https://gaskar.group/",
+     "timestamp": "20261026152425",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "c1260b3fb630d22408ead2053a20e8cfe2ffb84c116ec54fc9aa690e063a7299",
+     "bytes": 112650,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://gaskar.group/bespilotnye-letatelnye-apparaty": {
    "kind": "web",
@@ -940,6 +1591,66 @@
    ],
    "last_attempt": "2026-10-03"
   },
+  "https://geronavia.ru/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ooo-geron"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Remote end closed connection without response"
+  },
+  "https://godrone.ru/": {
+   "kind": "web",
+   "source_ids": [
+    "L0436"
+   ],
+   "cited": true,
+   "entities": [
+    "ooo-goudron"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026152702/https://godrone.ru/",
+     "timestamp": "20261026152702",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "25470cf43af37f4fe0994af44bf69e8fafa2eafcccdc3b41099393175b58e100",
+     "bytes": 56147,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
+  },
+  "https://godrone.ru/policy/": {
+   "kind": "web",
+   "source_ids": [
+    "L0479"
+   ],
+   "cited": true,
+   "entities": [
+    "ooo-goudron"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026152806/https://godrone.ru/policy/",
+     "timestamp": "20261026152806",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "2cbce4e5dab847d96ece05935b120cfbb9706c8a50c7d5cd134537b0720fe08b",
+     "bytes": 33574,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
+  },
   "https://guberniya.tv/obshhestvo/303220": {
    "kind": "web",
    "source_ids": [
@@ -960,6 +1671,15 @@
     }
    ],
    "last_attempt": "2026-10-03"
+  },
+  "https://home.treasury.gov/news/press-releases/jy0981": {
+   "kind": "web",
+   "source_ids": [
+    "L0401"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
   },
   "https://incrussia.ru/news/v-rossii-predstavili-pervyj-dron-konstruktor-cheburashka/": {
    "kind": "web",
@@ -1000,8 +1720,8 @@
      "wayback_sha1": "C7ZISZADFT267ODIEFZ7NCBDEG3YMFMV"
     }
    ],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: SPN HTTP 520"
   },
   "https://instechno.ru/": {
    "kind": "web",
@@ -1009,6 +1729,9 @@
     "s8638"
    ],
    "cited": true,
+   "entities": [
+    "ooo-instekh"
+   ],
    "tier": 1,
    "captures": [
     {
@@ -1020,10 +1743,19 @@
      "sha256": "263f8a62f3ad1b7ee99d8461d0b9fa59afd6056b9e38cd77040e9f1565cc7708",
      "bytes": 36272,
      "wayback_sha1": "Z7ZZQFEVHTNFPQLKMRDSTJLTOMV5DBPB"
+    },
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026144147/https://instechno.ru/",
+     "timestamp": "20261026144147",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "ae401e38e5b2dc2ca110d89074121bbee4954e4711654f93b43f79297152d431",
+     "bytes": 15225,
+     "wayback_sha1": null
     }
    ],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
+   "last_attempt": "2026-10-26"
   },
   "https://instechno.ru/aura-instechno-aura-seo.html": {
    "kind": "web",
@@ -1033,8 +1765,8 @@
    "cited": true,
    "tier": 1,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: SPN HTTP 523"
   },
   "https://instechno.ru/oralo": {
    "kind": "web",
@@ -1044,8 +1776,8 @@
    "cited": true,
    "tier": 1,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: SPN HTTP 523"
   },
   "https://irptorg.ru/": {
    "kind": "web",
@@ -1064,8 +1796,8 @@
    "cited": true,
    "tier": 1,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: 'ascii' codec can't encode characters in position 45-55: ordinal not in range(128)"
   },
   "https://istories.media/stories/2024/01/19/dron-inferno/": {
    "kind": "web",
@@ -1106,8 +1838,8 @@
      "wayback_sha1": "UXJ4YPN7RBRHBQSCZTIO26JRDCZ2BMS2"
     }
    ],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Remote end closed connection without response"
   },
   "https://kaysant.ru": {
    "kind": "web",
@@ -1129,12 +1861,52 @@
     }
    ]
   },
+  "https://kaysant.ru/": {
+   "kind": "web",
+   "source_ids": [
+    "L0450"
+   ],
+   "cited": true,
+   "entities": [
+    "npo-kaysant"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Remote end closed connection without response"
+  },
+  "https://kbspektr.ru/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "kb-spektr-novosibirsk"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026153335/https://kbspektr.ru/",
+     "timestamp": "20261026153335",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "fec01b27c446b14f136980b82ee2de2e33b502d3707ee3d66bcc394596f95794",
+     "bytes": 45527,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
+  },
   "https://kilowat48.ru/": {
    "kind": "web",
    "source_ids": [
+    "L0440",
     "s7562"
    ],
    "cited": true,
+   "entities": [
+    "ooo-npo-kilovatt-shestopalov"
+   ],
    "tier": 1,
    "captures": [
     {
@@ -1281,6 +2053,52 @@
    ],
    "last_attempt": "2026-10-03"
   },
+  "https://krams.pro/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "krams-brand-unresolved"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026153423/https://krams.pro/",
+     "timestamp": "20261026153423",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "9808f927ec6ddc691591681610c13af2796ec58dd06b3b203080550ee1825b92",
+     "bytes": 6747,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
+  },
+  "https://kravt-studio.ru/": {
+   "kind": "web",
+   "source_ids": [
+    "L0456"
+   ],
+   "cited": true,
+   "entities": [
+    "ooo-kravt"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026153519/https://kravt-studio.ru/",
+     "timestamp": "20261026153519",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "b55d54ed5c07c57fba899e09e109284d261fb374972530862f8710e8214ca630",
+     "bytes": 93769,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
+  },
   "https://kravt-studio.ru/product/kravt-bms": {
    "kind": "web",
    "source_ids": [
@@ -1422,6 +2240,18 @@
     }
    ]
   },
+  "https://kronshtadt.ru": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ao-kronshtadt"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: SPN HTTP 520"
+  },
   "https://lenta.ru/news/2023/10/27/muzh-viki-tsyganovoy-obmanyval-zriteley-na-kontsertah-laskovogo-maya/": {
    "kind": "web",
    "source_ids": [
@@ -1439,6 +2269,28 @@
    "cited": false,
    "tier": 3,
    "captures": []
+  },
+  "https://madro.ru/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ip-artemeva-viktoriya-mikhaylovna"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026153700/https://madro.ru/",
+     "timestamp": "20261026153700",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "ac6409c201496b98454b43912dc0138158feca269adc313eff9b5f603dc6297a",
+     "bytes": 43740,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://madro.ru/kontakty/": {
    "kind": "web",
@@ -1516,6 +2368,20 @@
     }
    ]
   },
+  "https://neiry.ru/": {
+   "kind": "web",
+   "source_ids": [
+    "L0446"
+   ],
+   "cited": true,
+   "entities": [
+    "ao-neyrorevolyutsiya"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Remote end closed connection without response"
+  },
   "https://nesiditsa.ru/vacancy/136610779": {
    "kind": "web",
    "source_ids": [
@@ -1562,8 +2428,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1032339": {
    "kind": "trademark",
@@ -1576,8 +2441,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1048759": {
    "kind": "trademark",
@@ -1682,8 +2546,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1090031": {
    "kind": "trademark",
@@ -1722,8 +2585,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1105074": {
    "kind": "trademark",
@@ -1810,8 +2672,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1159964": {
    "kind": "trademark",
@@ -1848,8 +2709,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1203185": {
    "kind": "trademark",
@@ -1984,8 +2844,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=376714": {
    "kind": "trademark",
@@ -2081,8 +2940,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=536654": {
    "kind": "trademark",
@@ -2144,8 +3002,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=601552": {
    "kind": "trademark",
@@ -2158,8 +3015,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=601553": {
    "kind": "trademark",
@@ -2237,8 +3093,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=738742": {
    "kind": "trademark",
@@ -2262,8 +3117,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=744949": {
    "kind": "trademark",
@@ -2328,8 +3182,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=824420": {
    "kind": "trademark",
@@ -2433,8 +3286,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=837293": {
    "kind": "trademark",
@@ -2512,8 +3364,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=872056": {
    "kind": "trademark",
@@ -2526,8 +3377,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=877451": {
    "kind": "trademark",
@@ -2540,8 +3390,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=880543": {
    "kind": "trademark",
@@ -2617,8 +3466,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=910152": {
    "kind": "trademark",
@@ -2631,8 +3479,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=910730": {
    "kind": "trademark",
@@ -2645,8 +3492,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=910913": {
    "kind": "trademark",
@@ -2761,8 +3607,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=982517": {
    "kind": "trademark",
@@ -2775,8 +3620,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=988975": {
    "kind": "trademark",
@@ -2789,8 +3633,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=989519": {
    "kind": "trademark",
@@ -2804,6 +3647,15 @@
    "captures": [],
    "last_attempt": "2026-10-09",
    "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+  },
+  "https://news.un.org/en/story/2025/05/1163781": {
+   "kind": "web",
+   "source_ids": [
+    "L0259"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
   },
   "https://nppelvo.ru": {
    "kind": "web",
@@ -2837,6 +3689,18 @@
    ],
    "last_attempt": "2026-10-03"
   },
+  "https://nppelvo.ru/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "npp-elvo-kolskaya-verf"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Remote end closed connection without response"
+  },
   "https://nvgushkuynik.ru": {
    "kind": "web",
    "source_ids": [
@@ -2857,12 +3721,40 @@
     }
    ]
   },
+  "https://nvgushkuynik.ru/": {
+   "kind": "web",
+   "source_ids": [
+    "L0445"
+   ],
+   "cited": true,
+   "entities": [
+    "ano-npts-ushkuynik"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026154103/https://nvgushkuynik.ru/",
+     "timestamp": "20261026154103",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "b8d102856e1e1b1adee693389217ba927107b1d3b32c13ccc07dddf3dfd644a6",
+     "bytes": 25690,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
+  },
   "https://octagon-bpla.ru/": {
    "kind": "web",
    "source_ids": [
+    "L0448",
     "s8678"
    ],
    "cited": true,
+   "entities": [
+    "ao-shkola-bpla-oktagon"
+   ],
    "tier": 1,
    "captures": [
     {
@@ -2876,6 +3768,33 @@
      "wayback_sha1": "EYT4QNL2FVBEZQE5ZZAUXEQ65F7R3TXV"
     }
    ]
+  },
+  "https://ofac.treasury.gov/recent-actions/20140317": {
+   "kind": "web",
+   "source_ids": [
+    "L0398"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://ofac.treasury.gov/recent-actions/20140620": {
+   "kind": "web",
+   "source_ids": [
+    "L0399"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://ofac.treasury.gov/recent-actions/20220930": {
+   "kind": "web",
+   "source_ids": [
+    "L0400"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
   },
   "https://onf.ru/news/narodnyj-front-raskryvaet-karty-kak-kulibin-klub-prevrashhaet-garazhnye-idei-v-oruzhie-pobedy": {
    "kind": "web",
@@ -2905,6 +3824,28 @@
    "cited": false,
    "tier": 3,
    "captures": []
+  },
+  "https://orsyst.ru/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ooo-orient-sistems"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026154152/https://orsyst.ru/",
+     "timestamp": "20261026154152",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "c7d187981e1e13a146852f20e44c9fa5ac052b2f5c16b3434a455d99e17cc788",
+     "bytes": 88414,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://orsyst.ru/4gnss/oc": {
    "kind": "web",
@@ -3182,6 +4123,18 @@
    ],
    "last_attempt": "2026-10-03"
   },
+  "https://partner.nso.ru/company/33/view/84": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ip-bratenkov-andrey-alekseevich"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: SPN HTTP 523"
+  },
   "https://piranhafpv.ru/": {
    "kind": "web",
    "source_ids": [
@@ -3189,6 +4142,9 @@
     "s7950"
    ],
    "cited": true,
+   "entities": [
+    "ooo-skb-piranya"
+   ],
    "tier": 1,
    "captures": [
     {
@@ -3224,6 +4180,28 @@
     }
    ]
   },
+  "https://pokrovsystem.ru/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ooo-pokrov"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026154425/https://pokrovsystem.ru/",
+     "timestamp": "20261026154425",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "f72cec37be9791102255a98c1cc8ceb5b21a8801fa7128fcdbe25ea3033499d7",
+     "bytes": 52532,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
+  },
   "https://pokrovsystem.ru/bulat": {
    "kind": "web",
    "source_ids": [
@@ -3258,9 +4236,24 @@
    "source_ids": [
     "s7953"
    ],
-   "cited": false,
-   "tier": 3,
-   "captures": []
+   "cited": true,
+   "entities": [
+    "npp-radar-mms"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026154537/https://radar-mms.com/",
+     "timestamp": "20261026154537",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "cc65aa8078973c62ae8e1d12a22dcd4ff8a97333f7c171c1b0e8da4a2fcba823",
+     "bytes": 73356,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://radar-mms.com/product/sistemy-meteobespecheniya/": {
    "kind": "web",
@@ -3324,6 +4317,15 @@
    ],
    "last_attempt": "2026-10-03"
   },
+  "https://riamo.ru/news/ekonomika/kompanija-iz-reutova-predstavila-putinu-simuljator-bpla/": {
+   "kind": "web",
+   "source_ids": [
+    "L0002"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
   "https://roimarket.ru": {
    "kind": "web",
    "source_ids": [
@@ -3334,9 +4336,34 @@
    "tier": 3,
    "captures": []
   },
+  "https://roimarket.ru/": {
+   "kind": "web",
+   "source_ids": [
+    "L0427"
+   ],
+   "cited": true,
+   "entities": [
+    "ooo-mptm"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026154731/https://roimarket.ru/",
+     "timestamp": "20261026154731",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "fddc3c869c3c8b20dc6287f4c2f739983d0ccdd1bb420a1090689b4dee54add0",
+     "bytes": 15510,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
+  },
   "https://roimarket.ru/legal": {
    "kind": "web",
    "source_ids": [
+    "L0346",
     "s8820"
    ],
    "cited": true,
@@ -3358,6 +4385,7 @@
   "https://roimarket.ru/legal/buyer-offer": {
    "kind": "web",
    "source_ids": [
+    "L0441",
     "s8818"
    ],
    "cited": false,
@@ -3367,6 +4395,7 @@
   "https://roimarket.ru/legal/platform-rules": {
    "kind": "web",
    "source_ids": [
+    "L0442",
     "s8821"
    ],
    "cited": false,
@@ -3376,7 +4405,41 @@
   "https://roimarket.ru/legal/supplier-offer": {
    "kind": "web",
    "source_ids": [
+    "L0347",
     "s8822"
+   ],
+   "cited": true,
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026154815/https://roimarket.ru/legal/supplier-offer",
+     "timestamp": "20261026154815",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "3917815c1c44149f2895c0b4753207f80c7613d6ad72b3353b918c4dc8867df5",
+     "bytes": 23251,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
+  },
+  "https://roimarket.ru/privacy": {
+   "kind": "web",
+   "source_ids": [
+    "L0443"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://roimarket.ru/sell-with-roy": {
+   "kind": "web",
+   "source_ids": [
+    "L0074",
+    "L0075",
+    "L0076",
+    "L0257"
    ],
    "cited": false,
    "tier": 3,
@@ -3387,9 +4450,46 @@
    "source_ids": [
     "s7564"
    ],
-   "cited": false,
-   "tier": 3,
-   "captures": []
+   "cited": true,
+   "entities": [
+    "ooo-rokot-tekh"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026154902/https://rokottech.ru",
+     "timestamp": "20261026154902",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "8fc3364095fe1149e0ba265faa858e7a08ba2dc62e709619ceeca5456057bcf8",
+     "bytes": 58080,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
+  },
+  "https://rostec.ru/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "gk-rostekh"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026154957/https://rostec.ru/",
+     "timestamp": "20261026154957",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "155318ae9f30b3526b75f8fcca5ce72aa27b8fe6ee114b262c61ac4bdd284bdd",
+     "bytes": 24519,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://ru.themoscowtimes.com/2026/04/10/odin-iz-klyuchevih-rossiiskih-proizvoditelei-udarnih-dronov-okazalsya-na-grani-bankrotstva-a192300": {
    "kind": "web",
@@ -3415,6 +4515,15 @@
    "kind": "web",
    "source_ids": [
     "s7989"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%BF%D0%B0%D1%80%D1%82%D0%B8%D0%B8_%22%D0%95%D0%B4%D0%B8%D0%BD%D0%B0%D1%8F_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%22.svg": {
+   "kind": "web",
+   "source_ids": [
+    "L0407"
    ],
    "cited": false,
    "tier": 3,
@@ -3500,6 +4609,24 @@
    "tier": 3,
    "captures": []
   },
+  "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv": {
+   "kind": "web",
+   "source_ids": [
+    "L0403"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://scsanctions.un.org/resources/xml/en/consolidated.xml": {
+   "kind": "web",
+   "source_ids": [
+    "L0426"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
   "https://sdelanounas.ru/blogs/173120/": {
    "kind": "web",
    "source_ids": [
@@ -3537,9 +4664,19 @@
    ],
    "cited": true,
    "tier": 1,
-   "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026155157/https://smolin.info/nauchno-proizvodstvennyi-tsentr-ushkuinik-razboiniche-zakulise-rashistskogo-bespilotia/",
+     "timestamp": "20261026155157",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "9732520052db63f108410fb98e3bbe2129271945d0324ef7b24feb7944dc4617",
+     "bytes": 54727,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://smolin.info/npk-geron-pod-seniu-akatsii-avia/": {
    "kind": "web",
@@ -3578,6 +4715,28 @@
      "wayback_sha1": "DSA5IKFSR7LF5MB2MYY6EXOYWNLUN72H"
     }
    ]
+  },
+  "https://stratolink.ru/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ao-stratolink"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026155342/https://stratolink.ru/",
+     "timestamp": "20261026155342",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "449e174ca548f48754f5202c2eadd797ac13e0fc684de178dfd9b0ce16f4b0a4",
+     "bytes": 1262,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://synergy.ru/about/blog/komanda_konstruktorskogo_byuro_sinergiya_stali_uchastnikami_foruma_sovremennoj_avioniki": {
    "kind": "web",
@@ -3892,6 +5051,25 @@
     }
    ]
   },
+  "https://t.me/ANO_CBST/1524": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0003"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/ANO_CBST/1524?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0003"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/ANO_CBST/1524",
+   "tier": 3,
+   "captures": []
+  },
   "https://t.me/ANO_CBST/1572": {
    "kind": "telegram",
    "source_ids": [
@@ -3932,6 +5110,25 @@
      "wayback_sha1": "K5ABTTM4JHRZOYJXADWHDWRQRZXWHPOB"
     }
    ]
+  },
+  "https://t.me/ANO_CBST/1584": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0004"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/ANO_CBST/1584?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0004"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/ANO_CBST/1584",
+   "tier": 3,
+   "captures": []
   },
   "https://t.me/ANO_CBST/1701": {
    "kind": "telegram",
@@ -4326,8 +5523,8 @@
    "source_ids": [
     "s7435"
    ],
-   "cited": true,
-   "tier": 1,
+   "cited": false,
+   "tier": 3,
    "captures": [
     {
      "service": "wayback",
@@ -4347,9 +5544,9 @@
    "source_ids": [
     "s7435"
    ],
-   "cited": true,
+   "cited": false,
    "variant_of": "https://t.me/ANO_CBST/2428",
-   "tier": 1,
+   "tier": 3,
    "captures": [
     {
      "service": "wayback",
@@ -4381,6 +5578,35 @@
    "cited": true,
    "variant_of": "https://t.me/ANO_CBST/2583",
    "tier": 1,
+   "captures": []
+  },
+  "https://t.me/ANO_CBST/2605": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0058",
+    "L0059",
+    "L0060",
+    "L0061",
+    "L0062",
+    "L0063"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/ANO_CBST/2605?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0058",
+    "L0059",
+    "L0060",
+    "L0061",
+    "L0062",
+    "L0063"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/ANO_CBST/2605",
+   "tier": 3,
    "captures": []
   },
   "https://t.me/ANO_CBST/369": {
@@ -4672,6 +5898,7 @@
   "https://t.me/AO_NPP": {
    "kind": "telegram",
    "source_ids": [
+    "L0447",
     "s8584"
    ],
    "cited": true,
@@ -4763,6 +5990,25 @@
     }
    ]
   },
+  "https://t.me/Archangel_Forum/175293": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0007"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/Archangel_Forum/175293?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0007"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/Archangel_Forum/175293",
+   "tier": 3,
+   "captures": []
+  },
   "https://t.me/Archangel_Forum/183433": {
    "kind": "telegram",
    "source_ids": [
@@ -4826,6 +6072,24 @@
     }
    ],
    "last_attempt": "2026-10-02"
+  },
+  "https://t.me/KBinteldron": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0454"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/UAS_development": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0457"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
   },
   "https://t.me/UAS_development/223": {
    "kind": "telegram",
@@ -5183,6 +6447,44 @@
    ],
    "last_attempt": "2026-10-02"
   },
+  "https://t.me/ZurabMakiev/1189": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0338"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/ZurabMakiev/1189?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0338"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/ZurabMakiev/1189",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/ZurabMakiev/1245": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0342"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/ZurabMakiev/1245?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0342"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/ZurabMakiev/1245",
+   "tier": 3,
+   "captures": []
+  },
   "https://t.me/aeromax_group/125": {
    "kind": "telegram",
    "source_ids": [
@@ -5246,6 +6548,15 @@
     }
    ],
    "last_attempt": "2026-10-02"
+  },
+  "https://t.me/alaskadron": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0444"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
   },
   "https://t.me/ano_cbst/1033": {
    "kind": "telegram",
@@ -5764,6 +7075,25 @@
     }
    ]
   },
+  "https://t.me/ano_cbst/1484": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0276"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/ano_cbst/1484?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0276"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/ano_cbst/1484",
+   "tier": 3,
+   "captures": []
+  },
   "https://t.me/ano_cbst/1509": {
    "kind": "telegram",
    "source_ids": [
@@ -6025,6 +7355,25 @@
      "wayback_sha1": "RZ3MLAKBA6UVZOPIL2Y2BD672YKEA5GT"
     }
    ]
+  },
+  "https://t.me/ano_cbst/1761": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0286"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/ano_cbst/1761?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0286"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/ano_cbst/1761",
+   "tier": 3,
+   "captures": []
   },
   "https://t.me/ano_cbst/1926": {
    "kind": "telegram",
@@ -6963,6 +8312,25 @@
    "tier": 1,
    "captures": []
   },
+  "https://t.me/ano_cbst/2564": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0064"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/ano_cbst/2564?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0064"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/ano_cbst/2564",
+   "tier": 3,
+   "captures": []
+  },
   "https://t.me/ano_cbst/2565": {
    "kind": "telegram",
    "source_ids": [
@@ -7005,6 +8373,44 @@
     }
    ],
    "last_attempt": "2026-10-03"
+  },
+  "https://t.me/ano_cbst/2610": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0065"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/ano_cbst/2610?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0065"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/ano_cbst/2610",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/ano_cbst/2677": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0070"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/ano_cbst/2677?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0070"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/ano_cbst/2677",
+   "tier": 3,
+   "captures": []
   },
   "https://t.me/ano_cbst/305": {
    "kind": "telegram",
@@ -7131,6 +8537,25 @@
     }
    ],
    "last_attempt": "2026-10-03"
+  },
+  "https://t.me/ano_cbst/338": {
+   "kind": "telegram",
+   "source_ids": [
+    "s9342"
+   ],
+   "cited": true,
+   "tier": 1,
+   "captures": []
+  },
+  "https://t.me/ano_cbst/338?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "s9342"
+   ],
+   "cited": true,
+   "variant_of": "https://t.me/ano_cbst/338",
+   "tier": 1,
+   "captures": []
   },
   "https://t.me/ano_cbst/362": {
    "kind": "telegram",
@@ -7868,6 +9293,7 @@
   "https://t.me/archangel_center": {
    "kind": "telegram",
    "source_ids": [
+    "L0451",
     "s8649"
    ],
    "cited": true,
@@ -7916,6 +9342,27 @@
    "captures": [],
    "last_error": "lookup 2026-10-03: CDX HTTP 503"
   },
+  "https://t.me/asidyakin/1112": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0038",
+    "L0290"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/asidyakin/1112?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0038",
+    "L0290"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/asidyakin/1112",
+   "tier": 3,
+   "captures": []
+  },
   "https://t.me/asidyakin/1230": {
    "kind": "telegram",
    "source_ids": [
@@ -7947,6 +9394,63 @@
    "tier": 1,
    "captures": [],
    "last_error": "lookup 2026-10-03: CDX HTTP 503"
+  },
+  "https://t.me/asidyakin/1405": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0068"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/asidyakin/1405?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0068"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/asidyakin/1405",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/asidyakin/595": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0294"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/asidyakin/595?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0294"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/asidyakin/595",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/asidyakin/609": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0269"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/asidyakin/609?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0269"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/asidyakin/609",
+   "tier": 3,
+   "captures": []
   },
   "https://t.me/asidyakin/618": {
    "kind": "telegram",
@@ -7988,6 +9492,25 @@
      "wayback_sha1": "CKRM2CYSLQBQVDFVG5XVSCVLBTDYMF5M"
     }
    ]
+  },
+  "https://t.me/asidyakin/743": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0262"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/asidyakin/743?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0262"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/asidyakin/743",
+   "tier": 3,
+   "captures": []
   },
   "https://t.me/bpryarl": {
    "kind": "telegram",
@@ -9699,6 +11222,692 @@
     }
    ]
   },
+  "https://t.me/er_molnia/13105": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0328"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13105?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0328"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/13105",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13107": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0329"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13107?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0329"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/13107",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13129": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0330"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13129?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0330"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/13129",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13142": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0331"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13142?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0331"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/13142",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13608": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0325"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13608?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0325"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/13608",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13679": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0363"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13679?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0363"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/13679",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13692": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0332"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13692?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0332"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/13692",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13694": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0364"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13694?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0364"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/13694",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13743": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0326"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13743?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0326"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/13743",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13857": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0366"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13857?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0366"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/13857",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13864": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0367"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13864?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0367"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/13864",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13882": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0368"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13882?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0368"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/13882",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13923": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0327"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13923?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0327"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/13923",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13931": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0333"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/13931?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0333"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/13931",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/14138": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0334"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/14138?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0334"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/14138",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/14146": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0335"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/14146?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0335"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/14146",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/14559": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0336"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/14559?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0336"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/14559",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/14576": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0337"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/14576?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0337"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/14576",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/15097": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0339"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/15097?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0339"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/15097",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/15098": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0340"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/15098?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0340"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/15098",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/15335": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0371"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/15335?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0371"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/15335",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/15356": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0341"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/15356?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0341"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/15356",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/15630": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0372"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/15630?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0372"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/15630",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/15850": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0343"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/15850?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0343"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/15850",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/15960": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0373"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/15960?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0373"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/15960",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/16026": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0374"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/16026?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0374"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/16026",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/16134": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0344"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/16134?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0344"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/16134",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/16207": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0375"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/16207?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0375"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/16207",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/16439": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0376"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/16439?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0376"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/16439",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/16941": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0379"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/16941?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0379"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/16941",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/17100": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0381"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/17100?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0381"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/17100",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/17312": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0382"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/17312?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0382"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/17312",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/17827": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0383"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/17827?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0383"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/17827",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/18763": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0384"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/18763?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0384"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/18763",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/19136": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0040",
+    "L0041"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/19136?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0040",
+    "L0041"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/19136",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/19807": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0385"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/er_molnia/19807?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0385"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/er_molnia/19807",
+   "tier": 3,
+   "captures": []
+  },
   "https://t.me/evgeniy_lisitsyn/15599": {
    "kind": "telegram",
    "source_ids": [
@@ -10223,6 +12432,25 @@
    ],
    "cited": false,
    "variant_of": "https://t.me/kb_spektr/337",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/kbinteldron/136": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0067"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/kbinteldron/136?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0067"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/kbinteldron/136",
    "tier": 3,
    "captures": []
   },
@@ -10927,6 +13155,7 @@
   "https://t.me/my_el_lab": {
    "kind": "telegram",
    "source_ids": [
+    "L0452",
     "s5417",
     "s5444",
     "s5445",
@@ -11449,6 +13678,25 @@
    "tier": 1,
    "captures": []
   },
+  "https://t.me/my_el_lab/3840": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0288"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/my_el_lab/3840?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0288"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/my_el_lab/3840",
+   "tier": 3,
+   "captures": []
+  },
   "https://t.me/my_el_lab/3864": {
    "kind": "telegram",
    "source_ids": [
@@ -11698,6 +13946,25 @@
    ],
    "cited": false,
    "variant_of": "https://t.me/my_el_lab/4336",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/my_el_lab/5142": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0069"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/my_el_lab/5142?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0069"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/my_el_lab/5142",
    "tier": 3,
    "captures": []
   },
@@ -12137,6 +14404,7 @@
   "https://t.me/nashapravdafond/393": {
    "kind": "telegram",
    "source_ids": [
+    "L0308",
     "s8891",
     "s8966",
     "s8967"
@@ -12159,6 +14427,7 @@
   "https://t.me/nashapravdafond/393?embed=1&mode=tme": {
    "kind": "telegram",
    "source_ids": [
+    "L0308",
     "s8891",
     "s8966",
     "s8967"
@@ -12258,6 +14527,25 @@
    "captures": [],
    "last_error": "lookup 2026-10-03: <urlopen error [Errno 61] Connection refused>"
   },
+  "https://t.me/nashapravdafond/399": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0309"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/399?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0309"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/399",
+   "tier": 3,
+   "captures": []
+  },
   "https://t.me/nashapravdafond/408": {
    "kind": "telegram",
    "source_ids": [
@@ -12290,6 +14578,27 @@
    "cited": true,
    "variant_of": "https://t.me/nashapravdafond/408",
    "tier": 1,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/409": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0310",
+    "L0318"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/409?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0310",
+    "L0318"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/409",
+   "tier": 3,
    "captures": []
   },
   "https://t.me/nashapravdafond/421": {
@@ -12465,6 +14774,8 @@
   "https://t.me/nashapravdafond/448": {
    "kind": "telegram",
    "source_ids": [
+    "L0311",
+    "L0319",
     "s8898",
     "s8975"
    ],
@@ -12486,6 +14797,8 @@
   "https://t.me/nashapravdafond/448?embed=1&mode=tme": {
    "kind": "telegram",
    "source_ids": [
+    "L0311",
+    "L0319",
     "s8898",
     "s8975"
    ],
@@ -12539,6 +14852,8 @@
   "https://t.me/nashapravdafond/473": {
    "kind": "telegram",
    "source_ids": [
+    "L0312",
+    "L0320",
     "s8900",
     "s8976"
    ],
@@ -12560,6 +14875,8 @@
   "https://t.me/nashapravdafond/473?embed=1&mode=tme": {
    "kind": "telegram",
    "source_ids": [
+    "L0312",
+    "L0320",
     "s8900",
     "s8976"
    ],
@@ -12582,6 +14899,7 @@
   "https://t.me/nashapravdafond/486": {
    "kind": "telegram",
    "source_ids": [
+    "L0275",
     "s9224"
    ],
    "cited": true,
@@ -12591,6 +14909,7 @@
   "https://t.me/nashapravdafond/486?embed=1&mode=tme": {
    "kind": "telegram",
    "source_ids": [
+    "L0275",
     "s9224"
    ],
    "cited": true,
@@ -12601,6 +14920,8 @@
   "https://t.me/nashapravdafond/487": {
    "kind": "telegram",
    "source_ids": [
+    "L0313",
+    "L0321",
     "s8901",
     "s8977"
    ],
@@ -12622,6 +14943,8 @@
   "https://t.me/nashapravdafond/487?embed=1&mode=tme": {
    "kind": "telegram",
    "source_ids": [
+    "L0313",
+    "L0321",
     "s8901",
     "s8977"
    ],
@@ -12633,6 +14956,8 @@
   "https://t.me/nashapravdafond/493": {
    "kind": "telegram",
    "source_ids": [
+    "L0314",
+    "L0322",
     "s8902",
     "s8978"
    ],
@@ -12654,6 +14979,8 @@
   "https://t.me/nashapravdafond/493?embed=1&mode=tme": {
    "kind": "telegram",
    "source_ids": [
+    "L0314",
+    "L0322",
     "s8902",
     "s8978"
    ],
@@ -12665,6 +14992,8 @@
   "https://t.me/nashapravdafond/494": {
    "kind": "telegram",
    "source_ids": [
+    "L0315",
+    "L0323",
     "s8903",
     "s8979"
    ],
@@ -12687,6 +15016,8 @@
   "https://t.me/nashapravdafond/494?embed=1&mode=tme": {
    "kind": "telegram",
    "source_ids": [
+    "L0315",
+    "L0323",
     "s8903",
     "s8979"
    ],
@@ -12709,6 +15040,7 @@
   "https://t.me/nashapravdafond/502": {
    "kind": "telegram",
    "source_ids": [
+    "L0280",
     "s9225"
    ],
    "cited": true,
@@ -12718,6 +15050,7 @@
   "https://t.me/nashapravdafond/502?embed=1&mode=tme": {
    "kind": "telegram",
    "source_ids": [
+    "L0280",
     "s9225"
    ],
    "cited": true,
@@ -12728,6 +15061,8 @@
   "https://t.me/nashapravdafond/519": {
    "kind": "telegram",
    "source_ids": [
+    "L0316",
+    "L0324",
     "s8904",
     "s8980"
    ],
@@ -12749,6 +15084,8 @@
   "https://t.me/nashapravdafond/519?embed=1&mode=tme": {
    "kind": "telegram",
    "source_ids": [
+    "L0316",
+    "L0324",
     "s8904",
     "s8980"
    ],
@@ -12758,13 +15095,70 @@
    "captures": [],
    "last_error": "lookup 2026-10-03: <urlopen error [Errno 61] Connection refused>"
   },
+  "https://t.me/nashapravdafond/520": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0304"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/520?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0304"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/520",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/524": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0302"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/524?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0302"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/524",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/526": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0284"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/526?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0284"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/526",
+   "tier": 3,
+   "captures": []
+  },
   "https://t.me/nashapravdafond/528": {
    "kind": "telegram",
    "source_ids": [
     "s8995"
    ],
-   "cited": false,
-   "tier": 3,
+   "cited": true,
+   "tier": 1,
    "captures": []
   },
   "https://t.me/nashapravdafond/528?embed=1&mode=tme": {
@@ -12772,8 +15166,27 @@
    "source_ids": [
     "s8995"
    ],
-   "cited": false,
+   "cited": true,
    "variant_of": "https://t.me/nashapravdafond/528",
+   "tier": 1,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/529": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0293"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/529?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0293"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/529",
    "tier": 3,
    "captures": []
   },
@@ -12796,9 +15209,105 @@
    "tier": 1,
    "captures": []
   },
+  "https://t.me/nashapravdafond/533": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0300"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/533?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0300"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/533",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/534": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0291"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/534?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0291"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/534",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/535": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0298"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/535?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0298"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/535",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/539": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0263"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/539?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0263"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/539",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/541": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0271"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/541?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0271"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/541",
+   "tier": 3,
+   "captures": []
+  },
   "https://t.me/nashapravdafond/545": {
    "kind": "telegram",
    "source_ids": [
+    "L0264",
     "s9226"
    ],
    "cited": true,
@@ -12808,6 +15317,7 @@
   "https://t.me/nashapravdafond/545?embed=1&mode=tme": {
    "kind": "telegram",
    "source_ids": [
+    "L0264",
     "s9226"
    ],
    "cited": true,
@@ -12815,9 +15325,86 @@
    "tier": 1,
    "captures": []
   },
+  "https://t.me/nashapravdafond/549": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0305"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/549?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0305"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/549",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/550": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0260"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/550?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0260"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/550",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/557": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0295"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/557?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0295"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/557",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/559": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0272"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/559?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0272"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/559",
+   "tier": 3,
+   "captures": []
+  },
   "https://t.me/nashapravdafond/560": {
    "kind": "telegram",
    "source_ids": [
+    "L0301",
     "s9227"
    ],
    "cited": true,
@@ -12827,6 +15414,7 @@
   "https://t.me/nashapravdafond/560?embed=1&mode=tme": {
    "kind": "telegram",
    "source_ids": [
+    "L0301",
     "s9227"
    ],
    "cited": true,
@@ -12834,9 +15422,88 @@
    "tier": 1,
    "captures": []
   },
+  "https://t.me/nashapravdafond/561": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0036",
+    "L0303"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/561?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0036",
+    "L0303"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/561",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/564": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0297"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/564?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0297"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/564",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/570": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0287"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/570?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0287"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/570",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/579": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0292"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/579?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0292"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/579",
+   "tier": 3,
+   "captures": []
+  },
   "https://t.me/nashapravdafond/580": {
    "kind": "telegram",
    "source_ids": [
+    "L0306",
     "s9228"
    ],
    "cited": true,
@@ -12846,11 +15513,31 @@
   "https://t.me/nashapravdafond/580?embed=1&mode=tme": {
    "kind": "telegram",
    "source_ids": [
+    "L0306",
     "s9228"
    ],
    "cited": true,
    "variant_of": "https://t.me/nashapravdafond/580",
    "tier": 1,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/588": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0281"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/588?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0281"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/588",
+   "tier": 3,
    "captures": []
   },
   "https://t.me/nashapravdafond/59": {
@@ -12860,6 +15547,25 @@
    ],
    "cited": true,
    "tier": 1,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/592": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0277"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/592?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0277"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/592",
+   "tier": 3,
    "captures": []
   },
   "https://t.me/nashapravdafond/593": {
@@ -12917,9 +15623,29 @@
    "tier": 1,
    "captures": []
   },
+  "https://t.me/nashapravdafond/603": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0266"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/603?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0266"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/603",
+   "tier": 3,
+   "captures": []
+  },
   "https://t.me/nashapravdafond/608": {
    "kind": "telegram",
    "source_ids": [
+    "L0317",
     "s8906",
     "s8983",
     "s8984"
@@ -12942,6 +15668,7 @@
   "https://t.me/nashapravdafond/608?embed=1&mode=tme": {
    "kind": "telegram",
    "source_ids": [
+    "L0317",
     "s8906",
     "s8983",
     "s8984"
@@ -12961,6 +15688,63 @@
      "wayback_sha1": "IYGOMFHSZOSADQX2ZEP3V3ZDMNGYHEP4"
     }
    ]
+  },
+  "https://t.me/nashapravdafond/611": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0282"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/611?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0282"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/611",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/613": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0289"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/613?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0289"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/613",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/614": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0261"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/614?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0261"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/614",
+   "tier": 3,
+   "captures": []
   },
   "https://t.me/nashapravdafond/615": {
    "kind": "telegram",
@@ -12995,9 +15779,182 @@
    "tier": 1,
    "captures": []
   },
+  "https://t.me/nashapravdafond/617": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0270"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/617?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0270"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/617",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/620": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0265"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/620?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0265"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/620",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/622": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0285"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/622?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0285"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/622",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/630": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0268"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/630?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0268"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/630",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/632": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0273"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/632?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0273"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/632",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/643": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0278"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/643?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0278"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/643",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/645": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0274"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/645?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0274"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/645",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/653": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0042"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/653?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0042"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/653",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/654": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0043"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/654?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0043"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/654",
+   "tier": 3,
+   "captures": []
+  },
   "https://t.me/nashapravdafond/656": {
    "kind": "telegram",
    "source_ids": [
+    "L0044",
+    "L0283",
     "s9229"
    ],
    "cited": true,
@@ -13007,11 +15964,70 @@
   "https://t.me/nashapravdafond/656?embed=1&mode=tme": {
    "kind": "telegram",
    "source_ids": [
+    "L0044",
+    "L0283",
     "s9229"
    ],
    "cited": true,
    "variant_of": "https://t.me/nashapravdafond/656",
    "tier": 1,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/657": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0045"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/657?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0045"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/657",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/664": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0299"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/664?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0299"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/664",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/677": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0267"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/677?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0267"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/677",
+   "tier": 3,
    "captures": []
   },
   "https://t.me/nashapravdafond/678": {
@@ -13093,6 +16109,25 @@
    "cited": true,
    "variant_of": "https://t.me/nashapravdafond/688",
    "tier": 1,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/692": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0296"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/nashapravdafond/692?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0296"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/nashapravdafond/692",
+   "tier": 3,
    "captures": []
   },
   "https://t.me/nashapravdafond/81": {
@@ -13366,6 +16401,537 @@
    "tier": 1,
    "captures": [],
    "last_error": "lookup 2026-10-03: <urlopen error [Errno 61] Connection refused>"
+  },
+  "https://t.me/orient4gnss": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0458"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/19952": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0015"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/19952?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0015"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/19952",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/19953": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0016"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/19953?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0016"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/19953",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20296": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0017"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20296?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0017"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/20296",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20333": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0018"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20333?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0018"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/20333",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20334": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0019"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20334?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0019"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/20334",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20344": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0020"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20344?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0020"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/20344",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20351": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0021"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20351?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0021"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/20351",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20398": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0022"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20398?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0022"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/20398",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20458": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0023"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20458?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0023"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/20458",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20801": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0024"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20801?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0024"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/20801",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20986": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0025"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20986?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0025"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/20986",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20993": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0026"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/20993?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0026"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/20993",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/21303": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0027"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/21303?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0027"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/21303",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/21342": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0028"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/21342?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0028"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/21342",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/21384": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0029"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/21384?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0029"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/21384",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/22762": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0030"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/22762?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0030"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/22762",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/23051": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0031"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/23051?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0031"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/23051",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/25962": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0032"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/25962?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0032"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/25962",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/26795": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0033"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/26795?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0033"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/26795",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/27702": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0034"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/27702?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0034"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/27702",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/30686": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0035"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/30686?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0035"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/30686",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/34459": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0037"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/34459?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0037"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/34459",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/36192": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0039"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/36192?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0039"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/36192",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/37672": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0046"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/37672?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0046"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/37672",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/38581": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0047"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/38581?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0047"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/38581",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/38645": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0307"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/38645?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0307"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/38645",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/38703": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0049"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/osvedomitell_alex/38703?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0049"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/osvedomitell_alex/38703",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/piranhafpv": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0438"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
   },
   "https://t.me/piranhafpv/257": {
    "kind": "telegram",
@@ -13865,6 +17431,7 @@
   "https://t.me/projectArchangel": {
    "kind": "telegram",
    "source_ids": [
+    "L0428",
     "s5443",
     "s5448",
     "s5457",
@@ -14021,6 +17588,25 @@
    "cited": true,
    "variant_of": "https://t.me/projectArchangel/10522",
    "tier": 1,
+   "captures": []
+  },
+  "https://t.me/projectArchangel/10550": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0006"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/projectArchangel/10550?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0006"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/projectArchangel/10550",
+   "tier": 3,
    "captures": []
   },
   "https://t.me/projectArchangel/10573": {
@@ -14244,6 +17830,48 @@
     }
    ],
    "last_attempt": "2026-10-03"
+  },
+  "https://t.me/projectArchangel/10874": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0433"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/projectArchangel/10874?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0433"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/projectArchangel/10874",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/projectArchangel/10922": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0429",
+    "L0430",
+    "L0431"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/projectArchangel/10922?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0429",
+    "L0430",
+    "L0431"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/projectArchangel/10922",
+   "tier": 3,
+   "captures": []
   },
   "https://t.me/projectArchangel/4504": {
    "kind": "telegram",
@@ -14778,6 +18406,39 @@
     }
    ],
    "last_attempt": "2026-10-03"
+  },
+  "https://t.me/projectArchangel/9497": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0050",
+    "L0051",
+    "L0052",
+    "L0053",
+    "L0054",
+    "L0055",
+    "L0056",
+    "L0057"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/projectArchangel/9497?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0050",
+    "L0051",
+    "L0052",
+    "L0053",
+    "L0054",
+    "L0055",
+    "L0056",
+    "L0057"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/projectArchangel/9497",
+   "tier": 3,
+   "captures": []
   },
   "https://t.me/projectArchangel/9498": {
    "kind": "telegram",
@@ -15491,6 +19152,46 @@
     }
    ]
   },
+  "https://t.me/projectArchangel/9709": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0005"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/projectArchangel/9709?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0005"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/projectArchangel/9709",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/projectArchangel/9817": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0434",
+    "L0435"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/projectArchangel/9817?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0434",
+    "L0435"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/projectArchangel/9817",
+   "tier": 3,
+   "captures": []
+  },
   "https://t.me/projectarchangel/10095": {
    "kind": "telegram",
    "source_ids": [
@@ -15918,9 +19619,29 @@
    "tier": 3,
    "captures": []
   },
+  "https://t.me/rogozin_do/9106": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0066"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/rogozin_do/9106?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0066"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/rogozin_do/9106",
+   "tier": 3,
+   "captures": []
+  },
   "https://t.me/rostecru": {
    "kind": "telegram",
    "source_ids": [
+    "L0449",
     "s8656"
    ],
    "cited": true,
@@ -16717,6 +20438,15 @@
    ],
    "last_attempt": "2026-10-03"
   },
+  "https://t.me/s/veterany_SvoKto?before=715": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0258"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
   "https://t.me/s/vika_tsyganova63?before=11786": {
    "kind": "telegram",
    "source_ids": [
@@ -16757,6 +20487,44 @@
      "wayback_sha1": "OC2NY2A7ALVN24I4YXIPMBRVKEQPFSHQ"
     }
    ]
+  },
+  "https://t.me/sbukr/17759": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0071"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/sbukr/17759?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0071"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/sbukr/17759",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/tehnofrontrv/5211": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0279"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/tehnofrontrv/5211?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0279"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/tehnofrontrv/5211",
+   "tier": 3,
+   "captures": []
   },
   "https://t.me/tsg_group71/168": {
    "kind": "telegram",
@@ -16802,6 +20570,7 @@
   "https://t.me/tulaovod": {
    "kind": "telegram",
    "source_ids": [
+    "L0437",
     "s5446",
     "s6456"
    ],
@@ -17018,6 +20787,7 @@
   "https://t.me/uavintec": {
    "kind": "telegram",
    "source_ids": [
+    "L0453",
     "s8677"
    ],
    "cited": true,
@@ -17094,6 +20864,234 @@
      "wayback_sha1": "W5GR2J47MY7UVGTGJ5AHGPMOBPC3MBI2"
     }
    ]
+  },
+  "https://t.me/veterany_SvoKto/120": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0369"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/veterany_SvoKto/120?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0369"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/veterany_SvoKto/120",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/veterany_SvoKto/205": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0370"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/veterany_SvoKto/205?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0370"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/veterany_SvoKto/205",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/veterany_SvoKto/389": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0377"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/veterany_SvoKto/389?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0377"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/veterany_SvoKto/389",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/veterany_SvoKto/442": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0378"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/veterany_SvoKto/442?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0378"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/veterany_SvoKto/442",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/veterany_SvoKto/473": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0380"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/veterany_SvoKto/473?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0380"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/veterany_SvoKto/473",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/veterany_SvoKto/94": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0365"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/veterany_SvoKto/94?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0365"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/veterany_SvoKto/94",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/vimaivivs/3195": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0469"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/vimaivivs/3195?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0469"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/vimaivivs/3195",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/vimaivivs/3197": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0470"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/vimaivivs/3197?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0470"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/vimaivivs/3197",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/vimaivivs/3198": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0471"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/vimaivivs/3198?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0471"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/vimaivivs/3198",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/vimaivivs/3199": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0472"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/vimaivivs/3199?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0472"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/vimaivivs/3199",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/vimaivivs/3200": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0473"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/vimaivivs/3200?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0473"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/vimaivivs/3200",
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/zaporizhzhiatrident/5142": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0048"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://t.me/zaporizhzhiatrident/5142?embed=1&mode=tme": {
+   "kind": "telegram",
+   "source_ids": [
+    "L0048"
+   ],
+   "cited": false,
+   "variant_of": "https://t.me/zaporizhzhiatrident/5142",
+   "tier": 3,
+   "captures": []
   },
   "https://tass.ru/interviews/26025185": {
    "kind": "web",
@@ -17207,6 +21205,50 @@
    ],
    "last_attempt": "2026-10-03"
   },
+  "https://uav.intecgroup.ru/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ooo-intek-promyshlennye-sistemy"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026155432/https://uav.intecgroup.ru/",
+     "timestamp": "20261026155432",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "0f5a0ada035f28df6bb3616e938942468b445ebf437a00c0e74a07229525b1a0",
+     "bytes": 36989,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
+  },
+  "https://va-technologies.ru/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "va-technologies"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026155612/https://va-technologies.ru/",
+     "timestamp": "20261026155612",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "7c104a49ebcdcdfaa0130ba525e907b62e738baebcf22b75af9e5aaa0e158fe3",
+     "bytes": 54683,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
+  },
   "https://visionero.ru": {
    "kind": "web",
    "source_ids": [
@@ -17215,6 +21257,18 @@
    "cited": false,
    "tier": 3,
    "captures": []
+  },
+  "https://visionero.ru/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ooo-vizionero"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The read operation timed out"
   },
   "https://visionero.ru/cognitive": {
    "kind": "web",
@@ -17276,6 +21330,16 @@
     }
    ],
    "last_attempt": "2026-10-03"
+  },
+  "https://vot-tak.tv/95546179/wildberries-ozon-kreml": {
+   "kind": "web",
+   "source_ids": [
+    "L0012",
+    "L0013"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
   },
   "https://vpk.name/news/1045794_kalashnikov_zapustit_proizvodstvo_dronov_proekta_arhangel.html": {
    "kind": "web",
@@ -17400,9 +21464,19 @@
    ],
    "cited": true,
    "tier": 1,
-   "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026160142/https://war-sanctions.gur.gov.ua/en/propaganda/persons/35810",
+     "timestamp": "20261026160142",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "722453d59edcb61893f624cccdab2599df036c7280bfc9ef56e84d9e763e330a",
+     "bytes": 13059,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://war-sanctions.gur.gov.ua/en/sanctions/companies/11711": {
    "kind": "web",
@@ -17485,6 +21559,15 @@
    "kind": "web",
    "source_ids": [
     "s0957"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://war-sanctions.gur.gov.ua/en/uav/companies/13126": {
+   "kind": "web",
+   "source_ids": [
+    "s9338"
    ],
    "cited": false,
    "tier": 3,
@@ -17736,9 +21819,19 @@
    ],
    "cited": true,
    "tier": 1,
-   "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026160344/https://war-sanctions.gur.gov.ua/en/uav/companies/15560",
+     "timestamp": "20261026160344",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "4e05758ec018f6d591e9ffda6c3bfb574ecad7dd783b8adf66084eb3d5ee42ca",
+     "bytes": 13477,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://war-sanctions.gur.gov.ua/en/uav/companies/15561": {
    "kind": "web",
@@ -17761,6 +21854,15 @@
     }
    ]
   },
+  "https://war-sanctions.gur.gov.ua/ru/components/companies/15599": {
+   "kind": "web",
+   "source_ids": [
+    "L0464"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
   "https://war-sanctions.gur.gov.ua/ru/components/companies/8229": {
    "kind": "web",
    "source_ids": [
@@ -17780,6 +21882,60 @@
      "wayback_sha1": "XHEYLO3UKTTDCQAAPWVTRV4OGWXSQT47"
     }
    ]
+  },
+  "https://war-sanctions.gur.gov.ua/ru/sanctions/companies/12685": {
+   "kind": "web",
+   "source_ids": [
+    "L0474"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://war-sanctions.gur.gov.ua/ru/sanctions/companies/12829": {
+   "kind": "web",
+   "source_ids": [
+    "L0466"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://war-sanctions.gur.gov.ua/ru/sanctions/companies/13164": {
+   "kind": "web",
+   "source_ids": [
+    "L0463"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://war-sanctions.gur.gov.ua/ru/sanctions/companies/13729": {
+   "kind": "web",
+   "source_ids": [
+    "L0462"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://war-sanctions.gur.gov.ua/ru/sanctions/companies/14300": {
+   "kind": "web",
+   "source_ids": [
+    "L0465"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://war-sanctions.gur.gov.ua/ru/sanctions/companies/14306": {
+   "kind": "web",
+   "source_ids": [
+    "L0467"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
   },
   "https://war-sanctions.gur.gov.ua/ru/uav/companies/14306": {
    "kind": "web",
@@ -17858,6 +22014,7 @@
   "https://web.archive.org/web/20260822091340/https://roimarket.ru/legal/supplier-offer": {
    "kind": "archived",
    "source_ids": [
+    "L0386",
     "s8817"
    ],
    "cited": true,
@@ -17999,6 +22156,30 @@
     }
    ]
   },
+  "https://wheelies.ru/": {
+   "kind": "web",
+   "source_ids": [
+    "L0460"
+   ],
+   "cited": true,
+   "entities": [
+    "ooo-villis-wheelies"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026160508/https://wheelies.ru/",
+     "timestamp": "20261026160508",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "5068a1ebc4634cf7c9c058e13d4d57e7a7c2adfac505f6dfdc0f9d4596496a04",
+     "bytes": 51795,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
+  },
   "https://www.aeromax-group.ru/": {
    "kind": "web",
    "source_ids": [
@@ -18034,9 +22215,24 @@
    "source_ids": [
     "s7566"
    ],
-   "cited": false,
-   "tier": 3,
-   "captures": []
+   "cited": true,
+   "entities": [
+    "ooo-aeromaks"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026160854/https://www.aeromax-group.ru/produkciya/",
+     "timestamp": "20261026160854",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "00eb3efea2d2486ed110f7e0c4087261335eb5647c904a7e354fb2fe09009896",
+     "bytes": 33001,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://www.aeromax-group.ru/produkciya/bas-samoletnogo-tipa/a-5-m-l/": {
    "kind": "web",
@@ -18118,6 +22314,28 @@
     }
    ]
   },
+  "https://www.arkodimpro.ru/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ooo-arkodim-pro"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026161046/https://www.arkodimpro.ru/",
+     "timestamp": "20261026161046",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "cf74f077bbc1d2a7c51f25c84d33a2bb6bc44fe00a6d1706f4925347d5f8a52e",
+     "bytes": 27356,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
+  },
   "https://www.aviaport.ru/news/dlya-dronov-smyagchat-lokalizatsiyu-batarey-akkamulyatornye-yacheyki-ostanutsya-importnymi/": {
    "kind": "web",
    "source_ids": [
@@ -18168,10 +22386,73 @@
     }
    ]
   },
+  "https://www.dfat.gov.au/sites/default/files/Australian_Sanctions_Consolidated_List.xlsx": {
+   "kind": "web",
+   "source_ids": [
+    "L0422"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
   "https://www.evening-kazan.ru/nauka/news/v-kazani-razrabotali-unikalnoe-uluchshenie-dlya-sistemy-pvo": {
    "kind": "web",
    "source_ids": [
     "s8577"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://www.federalregister.gov/documents/2024/07/12/2024-15285/notice-of-ofac-sanctions-actions": {
+   "kind": "web",
+   "source_ids": [
+    "L0418"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://www.federalregister.gov/documents/2024/08/27/2024-19130/revisions-to-the-entity-list": {
+   "kind": "web",
+   "source_ids": [
+    "L0417"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://www.federalregister.gov/documents/2025/12/17/2025-23017/notice-of-2024-department-of-state-sanctions-actions-pursuant-to-the-executive-order-regarding": {
+   "kind": "web",
+   "source_ids": [
+    "L0419"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://www.fondsvo.ru": {
+   "kind": "web",
+   "source_ids": [
+    "L0078"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://www.hrw.org/report/2025/06/03/hunted-from-above/russias-use-of-drones-to-attack-civilians-in-kherson-ukraine": {
+   "kind": "web",
+   "source_ids": [
+    "L0079"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://www.info-res.org/eyes-on-russia/articles/tracing-the-russian-units-responsible-for-drone-attack-in-kherson/": {
+   "kind": "web",
+   "source_ids": [
+    "L0077"
    ],
    "cited": false,
    "tier": 3,
@@ -18196,6 +22477,15 @@
      "wayback_sha1": "3DVCID2B3GOST4H7MAZEDVUQFSZ2464Y"
     }
    ]
+  },
+  "https://www.international.gc.ca/world-monde/assets/pdfs/international_relations-relations_internationales/sanctions/sema-lmes.pdf": {
+   "kind": "web",
+   "source_ids": [
+    "L0424"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
   },
   "https://www.ixbt.com/news/2023/04/14/v-rossii-delajut-jekolibri--pervyj-polnostju-jelektricheskij-dvigatel-dlja-samoljotov.html": {
    "kind": "web",
@@ -18271,6 +22561,7 @@
   "https://www.kommersant.ru/doc/8605427": {
    "kind": "web",
    "source_ids": [
+    "L0351",
     "s8553"
    ],
    "cited": true,
@@ -18320,6 +22611,7 @@
   "https://www.kommersant.ru/doc/8878535": {
    "kind": "web",
    "source_ids": [
+    "L0352",
     "s8866"
    ],
    "cited": true,
@@ -18397,6 +22689,45 @@
     }
    ]
   },
+  "https://www.mfat.govt.nz/assets/Countries-and-Regions/Europe/Ukraine/Russia-Sanctions-Register.xlsx": {
+   "kind": "web",
+   "source_ids": [
+    "L0423"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://www.mof.go.jp/policy/international_policy/gaitame_kawase/gaitame/economic_sanctions/shisantouketsu20261021.csv": {
+   "kind": "web",
+   "source_ids": [
+    "L0421"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://www.mof.go.jp/policy/international_policy/gaitame_kawase/gaitame/economic_sanctions/ukraine_list_russia_261002.pdf": {
+   "kind": "web",
+   "source_ids": [
+    "L0420"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://www.niistt.ru": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ao-nii-stt"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: SPN HTTP 520"
+  },
   "https://www.opensanctions.org/entities/NK-4grV6ATH3pzWsvc8hEeCeU/": {
    "kind": "web",
    "source_ids": [
@@ -18471,6 +22802,15 @@
    "tier": 3,
    "captures": []
   },
+  "https://www.pravda.com.ua/eng/news/2026/10/19/8058771/": {
+   "kind": "web",
+   "source_ids": [
+    "L0014"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
   "https://www.pravda.ru/news/showbiz/1906083-prodjuser_cyganov_priznalsja_chto_zaschischaetsja_ot_proslushki/": {
    "kind": "web",
    "source_ids": [
@@ -18507,9 +22847,36 @@
    "source_ids": [
     "s7533"
    ],
-   "cited": false,
-   "tier": 3,
-   "captures": []
+   "cited": true,
+   "entities": [
+    "pao-bank-psb"
+   ],
+   "tier": 1,
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: SPN HTTP 520"
+  },
+  "https://www.radiofid.ru/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ooo-radiofid-sistemy"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026161541/https://www.radiofid.ru/",
+     "timestamp": "20261026161541",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "858b2ee45b83034b8cb47c380b47d2e29b5b8f563e195a9f091ea6f7a7c0b8a3",
+     "bytes": 403111,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://www.reg.ru/domain/shop/lot/kbspektr.ru": {
    "kind": "web",
@@ -18545,9 +22912,19 @@
    ],
    "cited": true,
    "tier": 1,
-   "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026161725/https://www.rusprofile.ru/id/1245300001650",
+     "timestamp": "20261026161725",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "e01bbff8b6c214a7bc82cb373b2a2f45863c3968deb034640889f19f51200758",
+     "bytes": 125086,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://www.rusprofile.ru/id/1245300003827": {
    "kind": "web",
@@ -18600,6 +22977,24 @@
    "tier": 3,
    "captures": []
   },
+  "https://www.treasury.gov/ofac/downloads/sdnew14.txt": {
+   "kind": "web",
+   "source_ids": [
+    "L0396"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
+  "https://www.treasury.gov/ofac/downloads/sdnnew22.txt": {
+   "kind": "web",
+   "source_ids": [
+    "L0397"
+   ],
+   "cited": false,
+   "tier": 3,
+   "captures": []
+  },
   "https://www.tsiganova.ru/": {
    "kind": "web",
    "source_ids": [
@@ -18619,6 +23014,28 @@
      "wayback_sha1": "GZG6CDQBDDIQROMULNXY4TJUZLKNPLMC"
     }
    ]
+  },
+  "https://www.urfpv.com/ru": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "uraldronzavod"
+   ],
+   "tier": 1,
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026161908/https://www.urfpv.com/ru",
+     "timestamp": "20261026161908",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "73da4fc2db6c1d9d2c35ade31b2034be781ba5292660b29879c1382ccac51404",
+     "bytes": 6341,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://www.urfpv.com/ru/": {
    "kind": "web",
@@ -18698,11 +23115,19 @@
      "sha256": "4ee0cf9bbe8d6bb7ef1306f665100465d808cc00c800f06aa970c4290037af0c",
      "bytes": 72164,
      "wayback_sha1": "SYNSH37Q5AWTTF4P7XBZUZCPJDIKITPL"
+    },
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026162103/https://www.vesti.ru/article/4108951",
+     "timestamp": "20261026162103",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "b9fb3efe3862d438b2209f70bb39aab08af015817ab97962f1a677a07e2e2e59",
+     "bytes": 410415,
+     "wayback_sha1": null
     }
    ],
-   "looked_up": "2026-10-09",
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26"
   },
   "https://www1.ru/news/2025/01/06/v-novosibirske-naladiat-proizvodstvo-propellerov-dlia-trofeinyx-tiazelyx-bpla-baba-iaga.html": {
    "kind": "web",
@@ -18828,6 +23253,16 @@
     }
    ]
   },
+  "https://xn----7sbabalo0evak8f.xn--p1ai/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "fond-nasha-pravda"
+   ],
+   "tier": 1,
+   "captures": []
+  },
   "https://xn----etbb2caedho.xn--p1ai": {
    "kind": "web",
    "source_ids": [
@@ -18835,6 +23270,16 @@
    ],
    "cited": false,
    "tier": 3,
+   "captures": []
+  },
+  "https://xn----etbb2caedho.xn--p1ai/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ooo-ti-es-dzhi-grupp"
+   ],
+   "tier": 1,
    "captures": []
   },
   "https://xn--80aaa6amhjw6a9e.xn--p1ai/": {
@@ -18981,6 +23426,38 @@
     }
    ]
   },
+  "https://xn--80aac0c2a.xn--p1ai/": {
+   "kind": "web",
+   "source_ids": [
+    "L0480"
+   ],
+   "cited": true,
+   "entities": [
+    "ooo-goudron"
+   ],
+   "tier": 1,
+   "captures": []
+  },
+  "https://xn--80aaorhk2b.xn--p1ai/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ooo-tstp-tsifrovaya-transportnaya-platforma"
+   ],
+   "tier": 1,
+   "captures": []
+  },
+  "https://xn--90a3a1b.xn--p1acf/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "gk-logos"
+   ],
+   "tier": 1,
+   "captures": []
+  },
   "https://xn--90a3a1b.xn--p1acf/privacy": {
    "kind": "web",
    "source_ids": [
@@ -19029,8 +23506,7 @@
    "tier": 1,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakon.rada.gov.ua/laws/show/447/2026": {
    "kind": "web",
@@ -19359,8 +23835,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0172100011314000086": {
    "kind": "procurement",
@@ -19399,8 +23874,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0172200002011000053": {
    "kind": "procurement",
@@ -19647,8 +24121,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100002911000093": {
    "kind": "procurement",
@@ -19659,8 +24132,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100002911000094": {
    "kind": "procurement",
@@ -19671,8 +24143,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100002911000095": {
    "kind": "procurement",
@@ -19683,8 +24154,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100002911000096": {
    "kind": "procurement",
@@ -19706,8 +24176,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100003412000127": {
    "kind": "procurement",
@@ -19850,8 +24319,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100004512000059": {
    "kind": "procurement",
@@ -19862,8 +24330,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100004512000078": {
    "kind": "procurement",
@@ -19986,8 +24453,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100004513000388": {
    "kind": "procurement",
@@ -19998,8 +24464,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100004513000607": {
    "kind": "procurement",
@@ -20010,8 +24475,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100004513001187": {
    "kind": "procurement",
@@ -20027,8 +24491,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100004513001557": {
    "kind": "procurement",
@@ -20257,8 +24720,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100007912000132": {
    "kind": "procurement",
@@ -20269,8 +24731,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100007912000206": {
    "kind": "procurement",
@@ -20363,8 +24824,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100009511000602": {
    "kind": "procurement",
@@ -20380,8 +24840,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100009511000713": {
    "kind": "procurement",
@@ -20501,8 +24960,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100009511001436": {
    "kind": "procurement",
@@ -20527,8 +24985,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100009511001799": {
    "kind": "procurement",
@@ -20666,8 +25123,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100009511002072": {
    "kind": "procurement",
@@ -20699,8 +25155,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100009511002212": {
    "kind": "procurement",
@@ -20720,8 +25175,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100009511002279": {
    "kind": "procurement",
@@ -20852,8 +25306,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100009512000826": {
    "kind": "procurement",
@@ -20864,8 +25317,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100009512001144": {
    "kind": "procurement",
@@ -20876,8 +25328,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100009513000090": {
    "kind": "procurement",
@@ -20997,8 +25448,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100009514000152": {
    "kind": "procurement",
@@ -21017,8 +25467,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100009514000226": {
    "kind": "procurement",
@@ -21029,8 +25478,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100009514000229": {
    "kind": "procurement",
@@ -21159,8 +25607,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100009713000601": {
    "kind": "procurement",
@@ -21171,8 +25618,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100009714000003": {
    "kind": "procurement",
@@ -21263,8 +25709,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error _ssl.c:999: The handshake operation timed out>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error _ssl.c:999: The handshake operation timed out>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100012512000028": {
    "kind": "procurement",
@@ -21275,8 +25720,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100012512000029": {
    "kind": "procurement",
@@ -21287,8 +25731,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100012512000030": {
    "kind": "procurement",
@@ -21365,8 +25808,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100012512000969": {
    "kind": "procurement",
@@ -21388,8 +25830,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100012513000049": {
    "kind": "procurement",
@@ -21477,8 +25918,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error _ssl.c:999: The handshake operation timed out>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error _ssl.c:999: The handshake operation timed out>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100012513000738": {
    "kind": "procurement",
@@ -21489,8 +25929,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100012513000741": {
    "kind": "procurement",
@@ -21501,8 +25940,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100012514000112": {
    "kind": "procurement",
@@ -21557,8 +25995,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error _ssl.c:999: The handshake operation timed out>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error _ssl.c:999: The handshake operation timed out>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100013911000106": {
    "kind": "procurement",
@@ -21569,8 +26006,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100013911000107": {
    "kind": "procurement",
@@ -21636,8 +26072,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100013912000083": {
    "kind": "procurement",
@@ -21648,8 +26083,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100013913000042": {
    "kind": "procurement",
@@ -21693,8 +26127,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100013914000083": {
    "kind": "procurement",
@@ -21705,8 +26138,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100014113000148": {
    "kind": "procurement",
@@ -21717,8 +26149,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100014114000105": {
    "kind": "procurement",
@@ -21751,8 +26182,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100014714000189": {
    "kind": "procurement",
@@ -21763,8 +26193,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173100014812000051": {
    "kind": "procurement",
@@ -21776,8 +26205,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0173200001511000252": {
    "kind": "procurement",
@@ -21896,8 +26324,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0318100021012000143": {
    "kind": "procurement",
@@ -21908,8 +26335,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0318100021013000355": {
    "kind": "procurement",
@@ -21920,8 +26346,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0318100021013000356": {
    "kind": "procurement",
@@ -22025,8 +26450,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0324100009011000024": {
    "kind": "procurement",
@@ -22037,8 +26461,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0325100003814000101": {
    "kind": "procurement",
@@ -22060,8 +26483,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0325100013012000190": {
    "kind": "procurement",
@@ -22179,8 +26601,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0335100005613000042": {
    "kind": "procurement",
@@ -22191,8 +26612,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0335100005613000047": {
    "kind": "procurement",
@@ -22294,8 +26714,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0345100002214000017": {
    "kind": "procurement",
@@ -22315,8 +26734,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0345100016313000167": {
    "kind": "procurement",
@@ -22474,8 +26892,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0348100053711000154": {
    "kind": "procurement",
@@ -22788,8 +27205,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0349200000813000067": {
    "kind": "procurement",
@@ -22800,8 +27216,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0350100003313000182": {
    "kind": "procurement",
@@ -22841,8 +27256,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error _ssl.c:999: The handshake operation timed out>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error _ssl.c:999: The handshake operation timed out>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0351200018112000011": {
    "kind": "procurement",
@@ -22853,8 +27267,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0357100004411000106": {
    "kind": "procurement",
@@ -23169,8 +27582,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0372100000111000110": {
    "kind": "procurement",
@@ -23190,8 +27602,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0372100000113000182": {
    "kind": "procurement",
@@ -23568,8 +27979,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0372100047313000102": {
    "kind": "procurement",
@@ -23788,8 +28198,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0373100038212000015": {
    "kind": "procurement",
@@ -23891,8 +28300,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0373100064613000334": {
    "kind": "procurement",
@@ -24308,8 +28716,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now.",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0573100002013000022": {
    "kind": "procurement",
@@ -24331,8 +28738,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0618100000113000071": {
    "kind": "procurement",
@@ -24824,8 +29230,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=1366202088624000019": {
    "kind": "procurement",
@@ -25161,8 +29566,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=1440101710419000206": {
    "kind": "procurement",
@@ -25179,8 +29583,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=1463204748024000101": {
    "kind": "procurement",
@@ -25403,8 +29806,7 @@
    "tier": 2,
    "captures": [],
    "last_attempt": "2026-10-08",
-   "last_error": "save 2026-10-08: <urlopen error [Errno 111] Connection refused>",
-   "looked_up": "2026-10-09"
+   "last_error": "save 2026-10-08: <urlopen error [Errno 111] Connection refused>"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=1500300810225000157": {
    "kind": "procurement",
@@ -34412,6 +38814,26 @@
    "tier": 3,
    "captures": []
   },
+  "https://альфамарин.рф/": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ooo-opkb-eksplomet"
+   ],
+   "tier": 1,
+   "captures": []
+  },
+  "https://архангел-фпв.рф": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "proekt-kb-arkhangel"
+   ],
+   "tier": 1,
+   "captures": []
+  },
   "https://налетай.рф/product/komplekt_svyazi_dlya_bpla_peppa_s_antennoj_moxon": {
    "kind": "web",
    "source_ids": [
@@ -34422,6 +38844,16 @@
    "captures": [],
    "last_attempt": "2026-10-09",
    "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+  },
+  "https://роймаркет.рф": {
+   "kind": "web",
+   "source_ids": [],
+   "cited": true,
+   "entities": [
+    "ooo-mptm"
+   ],
+   "tier": 1,
+   "captures": []
   },
   "https://рэб.рус": {
    "kind": "web",

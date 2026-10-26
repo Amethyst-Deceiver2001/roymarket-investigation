@@ -141,8 +141,24 @@ def save_archives(data: dict) -> None:
     tmp.replace(ARCHIVES_JSON)
 
 
-def build_plan(sources: list[dict], cited: set[str], prev: dict) -> tuple[dict, list[dict]]:
-    """Merge the current citations into the archive file. Returns (data, unusable)."""
+def company_sites() -> dict[str, list[str]]:
+    """Site URLs on entity records (`web.sites`), keyed by URL, listing the slugs."""
+    out: dict[str, list[str]] = {}
+    for e in json.loads((REGISTRY / "entities.json").read_text(encoding="utf-8")):
+        web = e.get("web")
+        for s in (web.get("sites") or []) if isinstance(web, dict) else []:
+            u = s.get("url") if isinstance(s, dict) else s
+            if u and classify(u) == "web":
+                out.setdefault(u, []).append(e["slug"])
+    return out
+
+
+def build_plan(sources: list[dict], cited: set[str], prev: dict,
+               sites: dict[str, list[str]] | None = None) -> tuple[dict, list[dict]]:
+    """Merge the current citations into the archive file. Returns (data, unusable).
+
+    `sites` are company sites on record: tier 1 like a cited page, with the
+    entity slugs in `entities` and no source ids."""
     urls: dict[str, dict] = {}
     unusable = []
     for r in sources:
@@ -161,6 +177,10 @@ def build_plan(sources: list[dict], cited: set[str], prev: dict) -> tuple[dict, 
             if r["id"] not in e["source_ids"]:
                 e["source_ids"].append(r["id"])
             e["cited"] = e["cited"] or r["id"] in cited
+    for u, slugs in (sites or {}).items():
+        e = urls.setdefault(u, {"kind": "web", "source_ids": [], "cited": True})
+        e["cited"] = True
+        e["entities"] = sorted(set(slugs))
     old = prev.get("urls", {})
     for u, e in urls.items():
         e["source_ids"].sort()
@@ -435,7 +455,7 @@ def record_capture(e: dict, ts: str, url: str, method: str, sha1: str | None = N
 
 def cmd_plan(args) -> dict:
     sources = json.loads(SOURCES_JSON.read_text(encoding="utf-8"))
-    data, unusable = build_plan(sources, cited_source_ids(), load_archives())
+    data, unusable = build_plan(sources, cited_source_ids(), load_archives(), company_sites())
     save_archives(data)
     print(f"{len(data['urls'])} URLs on file; {len(unusable)} public_url values cannot be archived as given")
     for u in unusable[:20]:
@@ -611,7 +631,9 @@ def cmd_save(args, data: dict | None = None) -> int:
     budget = args.limit
     budget -= save_previews(data, parse_tiers(args.tier), today, capture, delay, budget)
     todo = pending(data, parse_tiers(args.tier), today)[: max(budget, 0)]
-    print(f"save: {len(todo)} URLs ({'keyed SPN2' if access else 'anonymous SPN'}, {delay:.0f}s apart)")
+    if access and not secret:
+        print("save: WAYBACK_S3_ACCESS is set but WAYBACK_S3_SECRET is not; using the anonymous endpoint")
+    print(f"save: {len(todo)} URLs ({'keyed SPN2' if access and secret else 'anonymous SPN'}, {delay:.0f}s apart)")
     saved = failed = 0
     for i, u in enumerate(todo, 1):
         e = data["urls"][u]
