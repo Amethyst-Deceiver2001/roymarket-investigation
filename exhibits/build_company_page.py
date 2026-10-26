@@ -301,6 +301,19 @@ class Page:
     def person_lines(self, p):
         """What else the registers show for a person with a role here: sole-proprietor spell, other companies, sanctions."""
         out = []
+        if p.get("dob") and p.get("dob_source"):
+            single = " (from a third-party database; no register document shows it)" if p["dob_source"] == "L0551" else ""
+            out.append(f'<li>Born {ru_date(p["dob"])}{single}{self.ref(p["dob_source"])}</li>')
+            if single:
+                self.limits.append(f"The date of birth of {esc(person_names(p.get('fio_ru') or '', p.get('name_latin'))['first'])} comes from one third-party database and is not confirmed by a register.")
+        for kind, lab in (("phone", "Phone"), ("email", "E-mail")):
+            cs = [c for c in p.get("contacts") or [] if c.get("kind") == kind]
+            if any((c.get("note") or "").startswith("Single source") for c in cs):
+                self.limits.append(f"The phone number of {esc(person_names(p.get('fio_ru') or '', p.get('name_latin'))['first'])} comes from one research compilation and is not confirmed by a register or his own publication.")
+            if cs:
+                out.append("<li>" + lab + ": " + "; ".join(
+                    f'<span class="rm-id">{esc(c["value"])}</span> ({esc(c["label"][0].lower() + c["label"][1:])}){self.ref(c.get("source_id"), *(c.get("also") or []))}'
+                    for c in cs) + "</li>")
         for h in p.get("egrip_hits") or []:
             if not h.get("source_id"):
                 continue

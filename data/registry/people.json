@@ -17183,7 +17183,28 @@
       }
     ],
     "egrip_checked_at": "2026-10-26",
-    "inn_personal_source": "L0529"
+    "inn_personal_source": "L0529",
+    "dob_source": "s0849",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "FRONDIBALL@GMAIL.COM",
+        "label": "E-mail on his sole-proprietor register entry",
+        "as_of": "2026-10-26",
+        "source_id": "L0529",
+        "also": [
+          "s3664"
+        ]
+      },
+      {
+        "kind": "phone",
+        "value": "+7 926 358-96-91",
+        "label": "Phone in a research compilation supplied to the investigation",
+        "as_of": "2026-08-29",
+        "source_id": "s3664",
+        "note": "Single source; not confirmed by a register or his own publication."
+      }
+    ]
   },
   {
     "slug": "kalinovskiy-nikita-vladislavovich",
@@ -52553,6 +52574,37 @@
       "L0551"
     ],
     "inn_basis": "The tax number linking him to the sole-proprietor registration and to the company he owns was supplied by the investigator on 26.10.2026; no document on file prints it beside the name of the co-founder named by GoDrone. The register extracts name the holder of this number.",
-    "inn_personal_source": "L0545"
+    "inn_personal_source": "L0545",
+    "dob_source": "L0551",
+    "contacts": [
+      {
+        "kind": "phone",
+        "value": "+7 985 037-07-29",
+        "label": "Phone on a third-party database profile",
+        "as_of": "2026-10-26",
+        "source_id": "L0551"
+      },
+      {
+        "kind": "email",
+        "value": "DOYNIKOV79@outlook.com",
+        "label": "E-mail on a third-party database profile",
+        "as_of": "2026-10-26",
+        "source_id": "L0551"
+      },
+      {
+        "kind": "email",
+        "value": "doynikov79@outlook.com",
+        "label": "Same address in lower case on the same profile",
+        "as_of": "2026-10-26",
+        "source_id": "L0551"
+      },
+      {
+        "kind": "email",
+        "value": "IPAADOYNIKOV@GMAIL.COM",
+        "label": "E-mail on his sole-proprietor register entry",
+        "as_of": "2026-10-26",
+        "source_id": "L0542"
+      }
+    ]
   }
 ]

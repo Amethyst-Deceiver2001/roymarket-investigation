@@ -3099,7 +3099,28 @@
           }
         ],
         "_verified": true,
-        "inn_personal_source": "L0529"
+        "inn_personal_source": "L0529",
+        "dob_source": "s0849",
+        "contacts": [
+          {
+            "kind": "email",
+            "value": "FRONDIBALL@GMAIL.COM",
+            "label": "E-mail on his sole-proprietor register entry",
+            "as_of": "2026-10-26",
+            "source_id": "L0529",
+            "also": [
+              "s3664"
+            ]
+          },
+          {
+            "kind": "phone",
+            "value": "+7 926 358-96-91",
+            "label": "Phone in a research compilation supplied to the investigation",
+            "as_of": "2026-08-29",
+            "source_id": "s3664",
+            "note": "Single source; not confirmed by a register or his own publication."
+          }
+        ]
       },
       "verified_against": "s0458 -- ООО «ГОУДРОН»'s own primary-source founding/EGRUL document, naming Козлов Дмитрий Сергеевич as director (cross-referenced from the entity's own director_history entry).",
       "why": [
@@ -17093,7 +17114,38 @@
           "source_id": "L0546"
         }
       ],
-      "inn_personal_source": "L0545"
+      "inn_personal_source": "L0545",
+      "dob_source": "L0551",
+      "contacts": [
+        {
+          "kind": "phone",
+          "value": "+7 985 037-07-29",
+          "label": "Phone on a third-party database profile",
+          "as_of": "2026-10-26",
+          "source_id": "L0551"
+        },
+        {
+          "kind": "email",
+          "value": "DOYNIKOV79@outlook.com",
+          "label": "E-mail on a third-party database profile",
+          "as_of": "2026-10-26",
+          "source_id": "L0551"
+        },
+        {
+          "kind": "email",
+          "value": "doynikov79@outlook.com",
+          "label": "Same address in lower case on the same profile",
+          "as_of": "2026-10-26",
+          "source_id": "L0551"
+        },
+        {
+          "kind": "email",
+          "value": "IPAADOYNIKOV@GMAIL.COM",
+          "label": "E-mail on his sole-proprietor register entry",
+          "as_of": "2026-10-26",
+          "source_id": "L0542"
+        }
+      ]
     }
   ]
 }
