@@ -319,6 +319,13 @@ class Landing(Chain):
                      self.ref(sub.get("source_id")), self.ents[MPTM]))
         rows.append((self.ents[MPTM], self.g(offer), "the operator of the ROI.MARKET marketplace, by the platform's own supplier offer",
                      self.ref(offer), None))
+        # The platform's own word that units buy on it: TsBST's posts on connected units (marketing claims of MPTM).
+        tech, conn = self.mclaim(MPTM, "s8852"), self.mclaim(MPTM, "s8857")
+        rows.append(("ROI.MARKET", self.g(conn["source_id"]),
+                     f"says military units buy on it directly: TsBST's posts speak of units “connected to ROI.MARKET” "
+                     f"({ru_date(conn['as_of'])}) and plan to connect all the Defence Ministry's technical-maintenance units by "
+                     f"1 September 2026 ({ru_date(tech['as_of'])}); no order by a unit is on file",
+                     self.ref(conn["source_id"]) + self.ref(tech["source_id"]), None))
         stock = next((c for c in self.p.get("claims") or [] if c.get("metric") == "donor_stock" and c.get("entity") == NP), None)
         if stock:
             n = re.search(r"Кол\. (\d+)", stock["text_ru"])
@@ -348,7 +355,7 @@ class Landing(Chain):
         """The ledger's relations as one picture: who holds TsBST, who sits on its board, what it takes part in, and the
         donor's handovers. Line style is the grade of the row it draws (rm-ln). The notes stay in the list beside it."""
         rows = self.ledger_rows()
-        gr = {"ur": rows[0][1], "sid": rows[1][1], "np": rows[2][1], "psb": rows[3][1], "mptm": rows[4][1], "op": rows[5][1],
+        gr = {"ur": rows[0][1], "sid": rows[1][1], "np": rows[2][1], "psb": rows[3][1], "mptm": rows[4][1], "op": rows[5][1], "units": rows[6][1],
               "del": rows[-1][1]}
         nh = len([d for d in self.p.get("deliveries") or [] if d.get("donor") == NP])
 
@@ -413,6 +420,13 @@ class Landing(Chain):
              edge("np", "units", gr["del"], f"hands equipment to units: {nh} «Bulat» handovers posted", ay=51, by=51, dy=-9),
              edge("cbst", "mptm", gr["mptm"], "takes part; share not stated", dy=-9),
              edge("mptm", "rm", gr["op"], "operates", dy=-9)]
+        # ROI.MARKET -> units: from the top of the platform's box up and left to the units box
+        rx, ry, rw = box["rm"][0], box["rm"][1], box["rm"][2]
+        ux, uy, uw, uh = box["units"]
+        e.append(f'<path d="M{rx + rw / 2} {ry} C{rx + rw / 2} {uy + uh / 2} {ux + uw + 40} {uy + uh / 2} {ux + uw + 2} {uy + uh / 2}" '
+                 f'class="rm-ln {gr["units"]}" marker-end="url(#ah3)"/>'
+                 f'<text x="{rx + rw / 2 + 8}" y="{uy + uh / 2 + 34}" class="lbl">says units order</text>'
+                 f'<text x="{rx + rw / 2 + 8}" y="{uy + uh / 2 + 49}" class="lbl">here directly</text>')
         # the Sidyakin -> United Russia line runs right-to-left; draw it by hand
         sx, sy = box["sid"][0], 299
         ux = box["ur"][0] + box["ur"][2]
