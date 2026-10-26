@@ -267,6 +267,11 @@ class Page:
                     continue
                 m = re.match(r"co-inventor \(patent (\w+)\)", t)
                 role = f"Inventor on patent {m.group(1)}" if m else ROLE_TITLE_EN.get(t)
+                mf = re.fullmatch(r"(Директор и учредитель|Учредитель) \((\d+)%\)", t)
+                if mf:
+                    role = f'{"Director and founder" if mf.group(1).startswith("Директор") else "Founder"} ({mf.group(2)}%)'
+                if t.startswith("Начальник Центра"):
+                    role = "Head of the centre and commander, as the unit's own site and the Arkhangel channel give it"
                 grade = "doc" if self.doc(r.get("source_id")) else "rep"
                 if not role and t.startswith("Co-founder"):
                     role = "Co-founder, as the company, its site and the press call him; not in the register extract"
@@ -320,13 +325,17 @@ class Page:
             act = f' ({esc(h["activity_en"])})' if h.get("activity_en") else ""
             end = f' to {esc(h["terminated"])}' if h.get("terminated") else ""
             out.append(f'<li>Registered as a sole proprietor{act}: {esc(h.get("registered"))}{end}{self.ref(h["source_id"])}</li>')
+        seen = set()
         for o in p.get("other_entities") or []:
-            if o.get("inn") == self.e.get("inn") or not o.get("source_id") or o.get("role") != "director":
+            if o.get("inn") == self.e.get("inn") or not o.get("source_id") or o.get("inn") in seen:
                 continue
+            seen.add(o.get("inn"))
+            rs = {x.get("role") for x in p["other_entities"] if x.get("inn") == o.get("inn")}
+            what = ("Director and founder" if rs >= {"director", "founder"} else "Director" if "director" in rs else "Founder")
             ent = next((x for x in self.ents.values() if x.get("inn") == o.get("inn")), None)
-            label = self.en(ent) if ent else name_html(latin_text(o.get("name") or ""), o.get("name") or "", key="oe-" + str(o.get("inn")))
-            out.append(f'<li>Sole owner and director of {label} (INN {esc(o.get("inn"))}), registered {esc(o.get("registered"))}'
-                       f'{self.ref(o["source_id"])}</li>')
+            short = re.sub(r'^ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ\s*"(.*)"$', r"ООО «\1»", (o.get("name") or "").strip())
+            label = self.en(ent) if ent else name_html(latin_text(short), short, key="oe-" + str(o.get("inn")))
+            out.append(f'<li>{what} of {label} (INN {esc(o.get("inn"))}), registered {esc(o.get("registered"))}{self.ref(o["source_id"])}</li>')
         for lab, ss in sanction_regimes(p.get("sanctions")):
             if any(self.doc(s) for s in ss):
                 out.append(f'<li><span class="rm-sanction">Sanctioned <b>{esc(lab)}</b></span>{self.ref(*ss)}</li>')

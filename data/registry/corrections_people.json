@@ -1494,7 +1494,9 @@
             "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 28069, status «active»): «Чернишов Павло Олексійович»; identifiers on the entry match this record (inn_personal 732508747179). Actions: applied by decree 796/2024 of 2024-12-02 (appendix 1, position 6). Term: Десять років, until 2034-12-02."
           }
         ],
-        "_verified": true
+        "_verified": true,
+        "dob_source": "L0477",
+        "inn_personal_source": "L0477"
       },
       "verified_against": "s0487 -- ООО «СКБ Пиранья»'s own primary-source founding/EGRUL document, naming Чернышов Павел Алексеевич as director (cross-referenced from the entity's own director_history entry).",
       "why": [
@@ -1504,7 +1506,8 @@
         "2026-08-25: OSINT research pass -- adds press background (currency trader to FPV-drone community) and an unverified 8,000+ drone supply claim.",
         "2026-08-25: photo/social-media OSINT research pass.",
         "2026-09-07: verification backlog closure — identity already confirmed by ООО «СКБ Пиранья»'s (ooo-skb-piranya) own director_history entry (s0487), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
-        "04.10.2026: EU listing read in Decision 2026/1845 (s9124): ИНН and DOB match; replaces the OpenSanctions-only PLAUSIBLE basis."
+        "04.10.2026: EU listing read in Decision 2026/1845 (s9124): ИНН and DOB match; replaces the OpenSanctions-only PLAUSIBLE basis.",
+        "2026-10-26: per-field sources for date of birth and personal INN, shown on the company page at the user's direction. L0477 is the Ukrainian sanctions-register export of 26.10.2026: its subject row carries this tax number and this date of birth (checked in the file). L0403 is the UK list download, whose entry RUS0122 prints this date of birth."
       ]
     },
     "chernyy-mikhail-davidovich": {
@@ -2905,14 +2908,17 @@
             "to": null,
             "source_id": "s6730"
           }
-        ]
+        ],
+        "dob_source": "L0477",
+        "inn_personal_source": "L0477"
       },
       "verified_against": "ИНН checksum (self-verified) + OpenSanctions innCode field cross-check (source: data/sources/OPENSANCTIONS_korchagina-olga-aleksandrovna_20260906_korchagina-olga-aleksandrovna.json)",
       "why": [
         "2026-08-24: OpenSanctions screening, role-corroborated name match (no personal ИНН to cross-check).",
         "2026-08-25: sanctions[].regime had been populated with an OpenSanctions *topics* code (e.g. \"sanction\", \"role.pol\", \"corp.disqual\") rather than an actual sanctioning jurisdiction -- not a real regime name, so it was cluttering the wb_overlap-style enum/spelling audit with non-answers. Nulled regime (genuinely not yet identified) and preserved the topics value in the note where it was not already stated there.",
         "2026-09-07: user supplied her personal ИНН directly for verification; checksum valid, and it exactly matches the innCode already embedded in her existing OpenSanctions match raw payload -- confirms the sanctions match is her, not a namesake.",
-        "2026-09-14: screen_upr_uchr.py (manual-captcha run) other_entities scan found this founder link via egrul.nalog.ru open API; the entity's own founders/founders_history already carries s6730 naming this person's share, but roles[] had no reciprocal entry — added it, same source already on file."
+        "2026-09-14: screen_upr_uchr.py (manual-captcha run) other_entities scan found this founder link via egrul.nalog.ru open API; the entity's own founders/founders_history already carries s6730 naming this person's share, but roles[] had no reciprocal entry — added it, same source already on file.",
+        "2026-10-26: per-field sources for date of birth and personal INN, shown on the company page at the user's direction. L0477 is the Ukrainian sanctions-register export of 26.10.2026: its subject row carries this tax number and this date of birth (checked in the file). L0403 is the UK list download, whose entry RUS0122 prints this date of birth."
       ]
     },
     "korolev-aleksey-aleksandrovich": {
@@ -4510,7 +4516,9 @@
             "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 29463, status «active»): «Шагіахметов Айрат Фатхутдінович»; identifiers on the entry match this record (inn_personal 636501708070). Actions: applied by decree 301/2025 of 2025-05-09 (appendix 1, position 52). Term: Десять років, until 2035-05-09."
           }
         ],
-        "_verified": true
+        "_verified": true,
+        "dob_source": "L0477",
+        "inn_personal_source": "L0477"
       },
       "verified_against": "s1408 -- ООО «Тримикс»'s own primary-source founding/EGRUL document, naming Шагиахметов Айрат Фатхутдинович as director (cross-referenced from the entity's own director_history entry).",
       "why": [
@@ -4520,7 +4528,8 @@
         "2026-08-25: per third-party OSINT dossier (\"202608_Trimix_Companies_&_People.xlsx\", s1408) covering ООО «Тримикс»/3MX's corporate and personnel network — not independently re-verified against EGRUL/primary sources by us yet; treat as a well-sourced lead requiring the usual verification before it goes into brief narrative text.",
         "2026-08-25: photo + corroborating public appearance from @vimaivivs (ВИМАИВиВС, St. Petersburg Military Artillery Museum) post 3195, 17.12.2025 (t.me/vimaivivs/3195, s1409) — ceremony where ООО «Тримикс» handed the museum a «Булат» v.4 detector and a «Таир» individual-warning device, and signed a cooperation agreement with the Михайловская военная артиллерийская академия, with Шагиахметов personally awarding certificates (благодарственные письма) to cadets — same genre as other roster entities' cadet/unit recognition events. Confirms his GD role and personal public-facing promotion of the product line in a military-institutional setting.",
         "2026-08-25: OSINT research pass — adds prior (unrelated-industry, now-liquidated) ИП registration.",
-        "2026-09-07: verification backlog closure — identity already confirmed by ООО «Тримикс»'s (ooo-trimiks) own director_history entry (s1408), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence."
+        "2026-09-07: verification backlog closure — identity already confirmed by ООО «Тримикс»'s (ooo-trimiks) own director_history entry (s1408), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
+        "2026-10-26: per-field sources for date of birth and personal INN, shown on the company page at the user's direction. L0477 is the Ukrainian sanctions-register export of 26.10.2026: its subject row carries this tax number and this date of birth (checked in the file). L0403 is the UK list download, whose entry RUS0122 prints this date of birth."
       ]
     },
     "shakhmatov-ivan-anatolevich": {
@@ -6067,12 +6076,16 @@
             "source_id": "L0477",
             "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 28087, status «active»): «Черезов Андрій Павлович»; identifiers on the entry match this record (inn_personal 712802968839). Actions: applied by decree 796/2024 of 2024-12-02 (appendix 1, position 24). Term: Десять років, until 2034-12-02."
           }
-        ]
+        ],
+        "dob": "1984-07-04",
+        "dob_source": "L0477",
+        "inn_personal_source": "L0477"
       },
       "why": [
         "2026-09-20: photo = Mash.ru press image (s7851/s7852, 29.07.2026) showing him at the «Патриот-2024» award; the diploma in it reads «Черезов Андрей Павлович». Alias «Андрей Иванов» added to name_history from The Insider (s7853), corroborated by the Фёдоров LIVE on-screen caption (s7854, user-supplied screenshot) and the «За работу» workshop interview (s7855 and Readovka/Ramzay reposts s7858/s7859). Identification is press-level; no second independent outlet states the alias. Mash's remark that the attacker may have confused him with a second co-founder named Андрей is NOT used: the ЕГРЮЛ выписка (s6727) has him as sole founder.",
         "2026-09-08: personal ИНН found in the already-pulled EGRUL выписка for ovod (ИНН 7100027464, s6727) — he's named there as director since 28.09.2022, ИНН 712802968839. Sitting unexploited since 2026-09-07; closing the gap now that this Гагаринг-adjacent 'Архангел'-family thread is being worked.",
-        "2026-09-17: added roles[] entries for both ooo-vozdushnyy-traktat and ovod (director+100% founder of each, per each entity's own director/founders_history fields, sourced s6728/s6727) -- the entity-side records and relationship_graph.json already carried this tie, but people.json's own roles[] array was empty, so no person profile page existed for him. Found while wiring clickable profile links into the 'Five Residents' case-study exhibit."
+        "2026-09-17: added roles[] entries for both ooo-vozdushnyy-traktat and ovod (director+100% founder of each, per each entity's own director/founders_history fields, sourced s6728/s6727) -- the entity-side records and relationship_graph.json already carried this tie, but people.json's own roles[] array was empty, so no person profile page existed for him. Found while wiring clickable profile links into the 'Five Residents' case-study exhibit.",
+        "2026-10-26: per-field sources for date of birth and personal INN, shown on the company page at the user's direction. L0477 is the Ukrainian sanctions-register export of 26.10.2026: its subject row carries this tax number and this date of birth (checked in the file). L0403 is the UK list download, whose entry RUS0122 prints this date of birth."
       ]
     },
     "tkach-kirill-vladimirovich": {
@@ -7228,7 +7241,8 @@
             "source_id": "L0424",
             "note": "Read in the Canadian consolidated list (PDF, L0424): Russia, Schedule 1 Part 1, item 5, «ROGOZIN Dmitry Olegovich», listed 2014-03-17; the list prints no date of birth, so this is a name-and-patronymic match."
           }
-        ]
+        ],
+        "dob_source": "L0403"
       },
       "verified_against": "Council Implementing Regulation (EU) No 284/2014, read in full 25.10.2026 via CELLAR (L0394); SDN and UK list downloads of 21.10 and 16.10.2026",
       "why": "sanctions[] was empty although the person is listed by the EU since 21.03.2014; found with scripts/eu_cellar.py"
@@ -7252,8 +7266,13 @@
             "source_id": "L0477",
             "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 29465, status «active»): «Шандобило Сергій Сергійович»; identifiers on the entry match this record (inn_personal 781154619843). Actions: applied by decree 301/2025 of 2025-05-09 (appendix 1, position 54). Term: Десять років, until 2035-05-09."
           }
-        ]
-      }
+        ],
+        "dob_source": "L0477",
+        "inn_personal_source": "L0477"
+      },
+      "why": [
+        "2026-10-26: per-field sources for date of birth and personal INN, shown on the company page at the user's direction. L0477 is the Ukrainian sanctions-register export of 26.10.2026: its subject row carries this tax number and this date of birth (checked in the file). L0403 is the UK list download, whose entry RUS0122 prints this date of birth."
+      ]
     }
   },
   "people_add_entities": [
