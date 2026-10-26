@@ -3437,5 +3437,83 @@
     "shows_en": "A man in a dark jacket with a United Russia emblem holds out a small card to a masked serviceman in camouflage with a Russian-flag patch; a gilded Russian state emblem hangs on the wall behind.",
     "file": "data/sources/TGMEDIA_7702330228_20250911_er_molnia-post16141-4.jpg",
     "note": "The card is small and its text is not legible, so what it says (course certificate, per the post) is the post's claim, not read from the picture. No caption names the man; nobody is named from the picture."
+  },
+  {
+    "id": "m0147",
+    "kind": "scan",
+    "genre": "document",
+    "asserted_by": "self",
+    "captured": "2026-10-26",
+    "publish": "internal",
+    "redact": "none_needed",
+    "shows": "Сертификат соответствия № 00256 органа по сертификации «Академмаш» (аттестат RA.RU.13ФК63), выданный ООО «Научно-производственное объединение «КАЙСАНТ»» (Москва, Строительный проезд, 7А, корп. 28, помещ. 224; площадка в Ступино): система менеджмента качества соответствует ГОСТ Р ИСО 9001-2015; перечень включает антенны, ретрансляторы, наземную станцию управления, FPV-дрон «Артемида», дрон-перехватчик, противодроновое ружьё, систему кругового подавления БПЛА и холодильник «АРГУС»; регистрационный № RA.RU.ФК63.А00256, регистрация 06.05.2026, срок до 06.05.2029; подпись руководителя органа А.В. Крушеницкого, печать.",
+    "shows_en": "Conformity certificate No. 00256 of the certification body «Akademmash» (accreditation RA.RU.13FK63), issued to the Scientific-Production Association «KAYSANT» (LLC), Moscow, Stroitelny proezd 7A bldg 28 room 224, with a production site in Stupino: its quality management system conforms to GOST R ISO 9001-2015 for antennas, repeaters, a ground control station, the FPV drone «Artemida», an interceptor drone, an anti-drone gun, an all-round FPV-jamming system and the «ARGUS» cooler; registration No. RA.RU.FK63.A00256 dated 06.05.2026, valid to 06.05.2029; signed by the body's head, with a seal.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "npo-kaysant"
+      }
+    ],
+    "source_id": "L0563",
+    "original_url": "https://t.me/germesfpv/2875",
+    "file": "data/sources/TGMEDIA_20260518_germesfpv-2875-kaysant-iso9001-certificate.jpg",
+    "published": "2026-05-18",
+    "note": "Read at full size; every figure above is printed on the certificate. It certifies a quality system (what is listed is the scope), not any product's performance or type approval. The post (L0563) says the same. The issuer's standing is not checked."
+  },
+  {
+    "id": "m0148",
+    "kind": "scan",
+    "genre": "document",
+    "asserted_by": "self",
+    "captured": "2026-10-26",
+    "publish": "internal",
+    "redact": "none_needed",
+    "shows": "Скан раскрытого удостоверения: слева заголовок «МИНИСТЕРСТВО ЮСТИЦИИ», учётный номер, АНО «НИИ ДПО» с лицензией № Л035-01273-55/00207746, «ШКОЛА ВНЕШНИХ ПИЛОТОВ (ОПЕРАТОРОВ) БПЛА «АРХАНГЕЛ - ЩИТ»», «выдано 14 марта 2025 года», печать «Кафедра общественной безопасности», эмблема «Архангел», портрет и срок «бессрочно»; справа «УДОСТОВЕРЕНИЕ № 001666 - 2025», «Гагарин Юрий Алексеевич», «ИНСТРУКТОР FPV РАСЧЕТА ГРАЖДАНСКОЙ ПРОТИВОВОЗДУШНОЙ ОБОРОНЫ», подпись «Ректор / Еськов Н.Л.».",
+    "shows_en": "Scan of an opened ID card: on the left a header reading «Ministry of Justice», a registration number, the ANO «NII DPO» with licence No. L035-01273-55/00207746, «School of External Pilots (Operators) of UAVs «Arkhangel-Shchit»», «issued 14 March 2025», a «Department of Public Safety» seal, an «Arkhangel» emblem, a portrait and «valid indefinitely»; on the right «Certificate No. 001666-2025» in the name «Gagarin Yuri Alekseevich», «Instructor, FPV crew, civil air defence», signed «Rector / Eskov N.L.».",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ano-nii-dpo"
+      },
+      {
+        "type": "entity",
+        "id": "ooo-arkhangel-shchit"
+      },
+      {
+        "type": "person",
+        "id": "eskov-nikolay-leonidovich"
+      }
+    ],
+    "source_id": "L0562",
+    "original_url": "https://t.me/projectArchangel/9497",
+    "file": "data/sources/TGMEDIA_20260207_projectarchangel-9497-school-id-specimen.jpg",
+    "published": "2026-02-07",
+    "note": "A specimen: the holder's name is that of the cosmonaut Gagarin and the portrait appears to be his, so no real holder is shown. Posted with the text «список дипломов и профессий, который вы можете освоить в нашей школе». The «Ministry of Justice» header is printed on the card; the issuer by the card's own wording is the institute. The signature is matched to the person record on the printed «Ректор / Еськов Н.Л.» and his recorded role as rector of this institute, not on the signature."
+  },
+  {
+    "id": "m0149",
+    "kind": "scan",
+    "genre": "document",
+    "asserted_by": "self",
+    "captured": "2026-10-26",
+    "publish": "internal",
+    "redact": "none_needed",
+    "shows": "Скан страницы диплома о профессиональной переподготовке: АНО «Научно-исследовательский институт дополнительного профессионального образования», лицензия № Л035-01273-55/00207746 от 18.02.2022, номер ФИС ФРДО из нулей («000000000000, № 000000 - 2024 от 29.11.2024»), квалификация «Специалист по эксплуатации беспилотных авиационных систем … с максимальной взлётной массой 30 кг и менее (3 уровень квалификации). ИНСТРУКТОР» с кодами трудовых функций, голограммы и круглая печать «Кафедра общественной безопасности», «свидетельство внешнего пилота — бессрочно».",
+    "shows_en": "Scan of a page of a diploma of professional retraining: ANO «Scientific Research Institute of Additional Professional Education», licence No. L035-01273-55/00207746 of 18.02.2022, a FIS FRDO number filled with zeros («000000000000, No. 000000-2024 of 29.11.2024»), qualification «Specialist in the operation of unmanned aircraft systems … maximum take-off weight 30 kg or less (qualification level 3). INSTRUCTOR» with labour-function codes, hologram stickers and a round «Department of Public Safety» seal, «external pilot certificate — indefinite».",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ano-nii-dpo"
+      },
+      {
+        "type": "entity",
+        "id": "ooo-arkhangel-shchit"
+      }
+    ],
+    "source_id": "L0562",
+    "original_url": "https://t.me/projectArchangel/9499",
+    "file": "data/sources/TGMEDIA_20260207_projectarchangel-9499-school-diploma-specimen.jpg",
+    "published": "2026-02-07",
+    "note": "A specimen (numbers are zeros), one of ten pictures of the album 9497-9506 that shows the school's diplomas and cards; the others are not yet recorded. The school's name appears on its own document; whether the institute and the Arkhangel-Shchit entity are one operation is not read from this picture."
   }
 ]
