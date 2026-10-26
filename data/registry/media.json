@@ -3515,5 +3515,79 @@
     "file": "data/sources/TGMEDIA_20260207_projectarchangel-9499-school-diploma-specimen.jpg",
     "published": "2026-02-07",
     "note": "A specimen (numbers are zeros), one of ten pictures of the album 9497-9506 that shows the school's diplomas and cards; the others are not yet recorded. The school's name appears on its own document; whether the institute and the Arkhangel-Shchit entity are one operation is not read from this picture."
+  },
+  {
+    "id": "m0150",
+    "kind": "scan",
+    "genre": "document",
+    "asserted_by": "self",
+    "captured": "2026-10-26",
+    "publish": "internal",
+    "redact": "none_needed",
+    "shows": "Благодарственное письмо на бланке с гербом и триколором: «Обществу с ограниченной ответственностью «БПР ЯРЛ»»; «Выражаю слова благодарности за большой личный вклад, поддержку и сотрудничество в обеспечении деятельности при выполнении личным составом пускового расчета БПЛА «Герань-2» задач в ходе проведения специальной военной операции»; подпись «Начальник пускового расчета БПЛА «Герань-2» … ЛЕВИНСКИЙ Н.В.» и круглая печать войсковой части, номер читается не полностью.",
+    "shows_en": "Thank-you letter on a form with the state emblem and tricolour ribbons: addressed to the limited-liability company «BPR YARL»; «I express words of gratitude for a great personal contribution, support and cooperation in ensuring the work of the personnel of the Geran-2 UAV launch crew in carrying out its tasks during the special military operation»; signed «Head of the Geran-2 UAV launch crew … Levinsky N.V.» with a round military-unit stamp whose number is only partly legible.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "yarl"
+      },
+      {
+        "type": "delivery",
+        "id": "h0140"
+      }
+    ],
+    "source_id": "L0564",
+    "original_url": "https://t.me/bpryarl/1082",
+    "file": "data/sources/TGMEDIA_20250805_bpryarl-1082-geran2-launch-crew-thanks-letter.jpg",
+    "published": "2025-08-05",
+    "note": "Read at full size; the date is not printed. The stamp's unit number is not read. The signatory appears by surname and initials only."
+  },
+  {
+    "id": "m0151",
+    "kind": "scan",
+    "genre": "document",
+    "asserted_by": "self",
+    "captured": "2026-10-26",
+    "publish": "internal",
+    "redact": "none_needed",
+    "shows": "Диплом номинанта третьей всероссийской национальной премии за вклад в развитие экономики «Созидатель», на имя «КОМАНДА 3МХ», подпись «Л.Э. Слуцкий», «Москва, 2025 г.».",
+    "shows_en": "Diploma of a nominee of the third all-Russian national prize for contribution to the development of the economy «Sozidatel», in the name «TEAM 3MX», signed «L.E. Slutsky», «Moscow, 2025».",
+    "about": [
+      {
+        "type": "entity",
+        "id": "ooo-trimiks"
+      }
+    ],
+    "source_id": "L0565",
+    "original_url": "https://t.me/ru3mx/516",
+    "file": "data/sources/TGMEDIA_20250923_ru3mx-516-sozidatel-nominee-diploma.jpg",
+    "published": "2025-09-23",
+    "note": "A nominee's diploma, not a win. The signature is printed as «Л.Э. Слуцкий»; not matched to any record."
+  },
+  {
+    "id": "m0152",
+    "kind": "scan",
+    "genre": "document",
+    "asserted_by": "self",
+    "captured": "2026-10-26",
+    "publish": "internal",
+    "redact": "none_needed",
+    "shows": "Удостоверение о награждении нагрудным знаком «За содействие специальной военной операции» на имя Братенькова Андрея Алексеевича, с медалью в коробке; подпись «Мэр города Новосибирска М.Г. Кудрявцев», круглая печать мэрии Новосибирска.",
+    "shows_en": "Certificate of the award of the breast badge «For assistance to the special military operation» in the name of Bratenkov Andrey Alekseevich, with the medal in its case; signed «Mayor of Novosibirsk M.G. Kudryavtsev», with the round seal of the Novosibirsk city administration.",
+    "about": [
+      {
+        "type": "entity",
+        "id": "kb-spektr-novosibirsk"
+      },
+      {
+        "type": "person",
+        "id": "bratenkov-andrey-alekseevich"
+      }
+    ],
+    "source_id": "L0566",
+    "original_url": "https://t.me/kb_spektr/150",
+    "file": "data/sources/TGMEDIA_20250404_kb_spektr-150-sdo-support-badge-certificate.jpg",
+    "published": "2025-04-04",
+    "note": "The post says the KB «Спектр» team was awarded the badge; the certificate shown is in the name of one man, matched to the person record by the full name printed. The date is not printed."
   }
 ]
