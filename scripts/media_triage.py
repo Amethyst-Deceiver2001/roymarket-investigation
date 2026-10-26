@@ -72,6 +72,9 @@ IGNORE_CHANNELS = {"rostecru"}
 # A post whose only registry hits are these generic or self-matching names is noise for the queue (user, 26.10.2026):
 # «Архангел спецназа» channel signs its news digests with its own name, Rostec is corporate PR, and so on.
 RE_NOISE_REGISTRY_HIT = re.compile(r"^(архангел|ростех|сармат|барс|beastfpv|единая россия|федерация гонок)", re.I)
+# War-news channels (user, 26.10.2026): their posts match a registry word by chance and 30 sheets of them held nothing,
+# so they enter the queue only with a delivery reason or a citation, never on a registry hit alone.
+NEWS_REGISTRY_ONLY_CHANNELS = {"osvedomitell_alex", "arx_spn", "sudoplatov_official", "mil_hub", "rogozin_do", "evgeniy_lisitsyn"}
 IGNORE_REGISTRY_ONLY = {"ростех"}   # a post whose only registry hit is Rostec
 NEWS_CHANNELS = {"ano_cbst"}   # ЦБСТ's own channel is mostly analysis and news; it counts only when it names a donor or a recipient
 RE_DONOR_OR_RECIPIENT = re.compile(r"наша правда|нашей правд|единая россия|единой россии|фонд|бойцам|бойцов|бригад|полк|подразделени|военнослужащ|зенитчик|добровольческ", re.I)
@@ -317,6 +320,9 @@ def cmd_queue(args) -> None:
         if (uname.lower(), mid) in cited:
             rs["cited"] = "sources.json"
         if not rs:
+            continue
+        if set(rs) == {"registry"} and uname.lower() in NEWS_REGISTRY_ONLY_CHANNELS:
+            noise += 1
             continue
         if set(rs) == {"registry"} and all(RE_NOISE_REGISTRY_HIT.match(w.strip()) for w in rs["registry"].split(",")):
             noise += 1   # a cited post or one with a delivery reason never takes this branch
