@@ -250,7 +250,8 @@ class Page:
         line = (f'<p>Registered address, as the register gives it: {name_html(latin_text(addr["value"]), addr["value"], key="addr-2", what="Register address in Russian:")}'
                 f'{self.ref(addr["source_id"])}</p>') if addr else ""
         views = f'<div class="rm-facility">{slot("Satellite view")}{slot("Street view")}</div>' if addr else ""
-        return line + (f'<div class="rm-gallery">{figs}</div>' if figs else "") + views
+        even = " even" if figs.count("<figure") in (2, 4) else ""   # four pictures sit 2x2, never three and one
+        return line + (f'<div class="rm-gallery{even}">{figs}</div>' if figs else "") + views
 
     def premises(self):
         """Pictures of the company's own premises (media genre facility), with their captions and sources."""
@@ -508,7 +509,7 @@ class Page:
             pub = next((a["id"] for a in m.get("about") or [] if a.get("type") == "entity" and a["id"] in self.ents), self.e["slug"])
             prov = self.en(self.ents[pub])   # who published it: the entity the record is about, else this company
             figs.append(figure_html(m, f"images/media/{name}", prov, self.ref(m.get("source_id"))))
-        return f'<div class="rm-gallery">{"".join(figs)}</div>' if figs else ""
+        return f'<div class="rm-gallery{" even" if len(figs) in (2, 4) else ""}">{"".join(figs)}</div>' if figs else ""
 
     def sellers(self):
         items = []
@@ -584,7 +585,7 @@ th { font: 600 var(--t-label)/1.4 var(--font-mono); letter-spacing: .06em; text-
 .rm-quote { margin: 0 0 14px; max-width: 760px; }
 .rm-quote .q { white-space: pre-line; display: block; }
 .rm-gallery { max-width: 900px; }
-.rm-gallery.even { grid-template-columns: repeat(2, minmax(0, 1fr)); }   /* one post's photos: two a row, so four never leave one alone */
+.rm-gallery.even { grid-template-columns: repeat(2, minmax(0, 1fr)); }   /* two or four pictures: two a row, so none is left alone */
 @media (max-width: 520px) { .rm-gallery.even { grid-template-columns: minmax(0, 1fr); } }
 .lead-note { font-size: 13.5px; color: var(--ink-2); margin: 0 0 12px; }
 .nolist { font-size: 13px; color: var(--ink-2); margin: 4px 0; }
