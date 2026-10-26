@@ -69,6 +69,9 @@ RE_NOT_HANDOVER = re.compile(r"награ|медал|орден|грамот|б�
 FONT_PATHS = ("/System/Library/Fonts/Supplemental/Arial.ttf", "/Library/Fonts/Arial.ttf",
               "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
 IGNORE_CHANNELS = {"rostecru"}
+# A post whose only registry hits are these generic or self-matching names is noise for the queue (user, 26.10.2026):
+# «Архангел спецназа» channel signs its news digests with its own name, Rostec is corporate PR, and so on.
+RE_NOISE_REGISTRY_HIT = re.compile(r"^(архангел|ростех|сармат|барс|beastfpv|единая россия|федерация гонок)", re.I)
 IGNORE_REGISTRY_ONLY = {"ростех"}   # a post whose only registry hit is Rostec
 NEWS_CHANNELS = {"ano_cbst"}   # ЦБСТ's own channel is mostly analysis and news; it counts only when it names a donor or a recipient
 RE_DONOR_OR_RECIPIENT = re.compile(r"наша правда|нашей правд|единая россия|единой россии|фонд|бойцам|бойцов|бригад|полк|подразделени|военнослужащ|зенитчик|добровольческ", re.I)
@@ -302,7 +305,7 @@ def cmd_queue(args) -> None:
         elif uname in CORE_CHANNELS:
             rs["uncaptioned"] = "no text in the album"
         reasons_by_album[k] = rs
-    items, seen, dup_count, ledgered, skipped_kind = [], {}, 0, 0, Counter()
+    items, seen, dup_count, ledgered, skipped_kind, noise = [], {}, 0, 0, Counter(), 0
     for cid, mid, dt, text, mtype, mjson, fwd_u, fwd_m in rows:
         kind = kind_of(mtype, mjson)
         if not kind:
@@ -314,6 +317,9 @@ def cmd_queue(args) -> None:
         if (uname.lower(), mid) in cited:
             rs["cited"] = "sources.json"
         if not rs:
+            continue
+        if set(rs) == {"registry"} and all(RE_NOISE_REGISTRY_HIT.match(w.strip()) for w in rs["registry"].split(",")):
+            noise += 1   # a cited post or one with a delivery reason never takes this branch
             continue
         key = media_key(mjson) or f"m{cid}-{mid}"
         if key in seen:
@@ -354,7 +360,7 @@ def cmd_queue(args) -> None:
     full_video_mb = sum(it["size"] for it in items if it["kind"] == "video") / 1048576
     have = sum((FILES / it["file"]).exists() for it in items)
     print(f"{len(items)} media to triage from {len(rows)} posts "
-          f"({dup_count} repeats folded by Telegram id, {ledgered} already labelled in the ledger)")
+          f"({dup_count} repeats folded by Telegram id, {ledgered} already labelled in the ledger, {noise} dropped as name-only noise)")
     print("  by first reason: " + ", ".join(f"{r} {by_reason[r]}" for r in REASONS if by_reason[r]))
     print("  by kind: " + ", ".join(f"{k} {n}" for k, n in by_kind.most_common()))
     print(f"  download: photos and images {photo_mb:.0f} MB in full; {by_kind['video']} video thumbnails "
