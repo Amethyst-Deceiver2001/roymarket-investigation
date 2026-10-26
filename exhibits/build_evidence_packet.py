@@ -41,7 +41,7 @@ import deliveries as dl  # noqa: E402
 
 OUT = ROOT / "notes" / "packets"
 GAP_CSV = ROOT / "exhibits" / "sanctions_gap.csv"
-GAP_AS_OF = "02.10.2026"   # date of the exhibits/ snapshot; pass --gap/--gap-as-of for a newer run
+GAP_AS_OF = "25.10.2026"   # date of the exhibits/ snapshot (sanctions watch of 25.10); pass --gap/--gap-as-of for a newer run
 GRADE_WORD = {"doc": "Documented", "rep": "Reported", "open": "Not documented"}
 REGIME_LABEL = {"eu": "EU", "us": "US (OFAC)", "uk": "UK", "ch": "Switzerland (SECO)", "ua": "Ukraine",
                 "ca": "Canada", "au": "Australia", "jp": "Japan", "nz": "New Zealand"}

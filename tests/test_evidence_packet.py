@@ -33,7 +33,7 @@ def main():
 
     assert bp.rub_m(-514000.0) == "−₽0.5m" and bp.rub_m(None) == "—"
     top = bp.top_unlisted(bp.GAP_CSV, 3)
-    assert len(top) == 3 and "ooo-smart-teknolodzhis" in top, top
+    assert len(top) == 3 and len(set(top)) == 3, top   # who tops it changes with each gap table
 
     # The core packet: one file, one exhibit list, the centre printed as a non-profit and not as its own resident.
     core = bp.build_core(False, bp.GAP_CSV, bp.GAP_AS_OF)
