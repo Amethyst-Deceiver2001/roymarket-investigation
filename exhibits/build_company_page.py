@@ -292,7 +292,7 @@ class Page:
             return ""
 
         def view(kind, title):
-            m = next((m for m in mine if m.get("kind") == kind and m.get("publish") != "internal"), None)
+            m = next((m for m in mine if kind in (m.get("kind"), m.get("view")) and m.get("publish") != "internal"), None)
             if not m:
                 return (f'<figure class="rm-fig empty"><div class="frame">{title} not yet captured</div>'
                         f'<figcaption><span class="rm-prov">{title}</span><span class="rm-geo">Coordinates · provider · imagery date</span></figcaption></figure>')
@@ -324,7 +324,7 @@ class Page:
         """Pictures of the company's own premises (media genre facility), with their captions and sources."""
         figs = []
         for m in media_about(self.media, {("entity", self.e["slug"])}):
-            if m.get("genre") != "facility" or m.get("publish") == "internal" or m.get("kind") in ("satellite", "street-level"):
+            if m.get("genre") != "facility" or m.get("publish") == "internal" or m.get("kind") in ("satellite", "street-level") or m.get("view"):
                 continue
             name = publish_copy(m, self.img_dir)
             if name:

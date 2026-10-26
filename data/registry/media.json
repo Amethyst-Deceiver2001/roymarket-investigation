@@ -3046,7 +3046,19 @@
     "file": "data/sources/SITEIMAGE_9721203814_20261026_godrone-ru-showroom-storefront.jpg",
     "publish": "ok",
     "redact": "none_needed",
-    "note": "The company's own picture on its contacts page, presented there beside the Bolshoy Simonovsky address; the page does not caption it. Replaces the customer storefront photo m0024 (internal). The picture shows no street number, so the address rests on the page, not on the picture."
+    "note": "The company's own picture on its contacts page, presented there beside the Bolshoy Simonovsky address; the page does not caption it. Replaces the customer storefront photo m0024 (internal). The picture shows no street number, so the address rests on the page, not on the picture. Shown in the street-view slot at the user's request (26.10.2026); it is the company's own photograph, not a street-level service capture. The point is the one marked on the satellite view, placed there from the address on the contacts page.",
+    "view": "street-level",
+    "geo": {
+      "lat": 55.728131,
+      "lon": 37.672586,
+      "precision": "building",
+      "method": "source_stated",
+      "source_id": "L0517"
+    },
+    "imagery": {
+      "provider": "Company's own photo",
+      "date": "date not shown"
+    }
   },
   {
     "id": "m0133",
