@@ -663,6 +663,14 @@
         ],
         "source_id": "L0424",
         "note": "Read in the Canadian consolidated list (PDF) downloaded 25.10.2026 (L0424): SEMA Russia 501, «FRADKOV Petr Mikhailovich», DOB 1978-02-07; listed 2022-02-24; the list prints a date of birth. Name and date of birth 1978-02-07 equal this record's own. The registry holds no separate source for that date of birth, so this is a match between the list and the record, not an independent identification; who the person is rests on the entries and roles recorded earlier."
+      },
+      {
+        "date": "2022-10-19",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 726/2022 of 2022-10-19, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 17354, status «active»): «Фрадков Петро Михайлович»; identifiers on the entry match this record (inn_personal 770200967631). Actions: applied by decree 726/2022 of 2022-10-19 (appendix 1, position 403). Term: Десять років, until 2032-10-19."
       }
     ],
     "other_entities": [
@@ -1689,6 +1697,14 @@
         ],
         "source_id": "s9106",
         "note": "Swiss SECO list of 02.10.2026, entry ssid 104705, dated 21.05.2026: same name, DOB 03.01.1976, Tax Identification Number 500905260513, general manager of LLC 'UAMOC'."
+      },
+      {
+        "date": "2026-05-29",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 447/2026 of 2026-05-29, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 36822, status «active»): «Соколова Ольга Михайлівна»; identifiers on the entry match this record (inn_personal 500905260513). Actions: applied by decree 447/2026 of 2026-05-29 (appendix 1, position 2). Term: Десять років, until 2036-05-29."
       }
     ],
     "other_entities": [
@@ -2251,6 +2267,14 @@
         ],
         "note": "CONFIRMED 2026-09-07 (upgraded from PLAUSIBLE): personal ИНН 771537069549 obtained directly from his own signed ЕГРИП выписка (ОГРНИП 324774600148072, s6918) EXACTLY matches the innCode field (771537069549) on the OpenSanctions match NK-FB8ZwerfADz5nYiuNzkaPG (Ukraine NSDC sanctions list, programId UA-SA1644, dataset ua_nsdc_sanctions cross-referenced against ext_ru_egrul) -- an exact primary-identifier match, not a name-only fuzzy match. DOB 1975-04-13 on the sanctions record also matches independently (see dob field, itself corroborated by investigator.org.ua, s6919). Full programme name: Ukraine NSDC sanctions.",
         "source_id": "s6918"
+      },
+      {
+        "date": "2025-08-16",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 599/2025 of 2025-08-16, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 33161, status «active»): «Рубінштейн Дмитро Володимирович»; identifiers on the entry match this record (inn_personal 771537069549). Actions: applied by decree 599/2025 of 2025-08-16 (appendix 1, position 30). Term: Десять років, until 2035-08-16."
       }
     ],
     "other_entities": [
@@ -3938,7 +3962,16 @@
         "source_id": "s6777"
       }
     ],
-    "sanctions": [],
+    "sanctions": [
+      {
+        "date": "2026-10-24",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 1058/2026 of 2026-10-24, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 37642, status «active»): «Барашков Олександр Сергійович»; identifiers on the entry match this record (inn_personal 252201766438). Actions: applied by decree 1058/2026 of 2026-10-24 (appendix 1, position 3). Term: Десять років, until 2036-10-24."
+      }
+    ],
     "other_entities": [
       {
         "inn": "2312325336",
@@ -5191,6 +5224,14 @@
         ],
         "source_id": "s9124",
         "note": "Council Decision (CFSP) 2026/1845 of 23.07.2026, entry 2099 (EU reference EU.14774.22): Павел Алексеевич ЧЕРНЫШОВ, Director and founder of SDB 'Piranya'; DOB 9.5.1984; INN 732508747179; passport number 7304202860. ИНН and DOB match this record. Reasons: SDB Piranya manufactures FPV drones (Piranya-7/10/13). Read in the Official Journal text."
+      },
+      {
+        "date": "2024-12-02",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 796/2024 of 2024-12-02, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 28069, status «active»): «Чернишов Павло Олексійович»; identifiers on the entry match this record (inn_personal 732508747179). Actions: applied by decree 796/2024 of 2024-12-02 (appendix 1, position 6). Term: Десять років, until 2034-12-02."
       }
     ],
     "other_entities": [
@@ -5381,6 +5422,14 @@
         "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check at the time), but corroborated by independent role/context detail: STRONG corroboration: OpenSanctions independently names him founder/co-owner of \"LLC Center for Integrated Unmanned Solutions\" — this registry's already ИНН-confirmed ООО «ЦКБР» (Complex Unmanned Solutions Center Ltd), Zhukovsky, full-cycle FPV production. Personal ИНН given in notes: 501306766736. Superseded in confidence tier by the RuPEP-confirmed entry above, kept for its independent corroboration detail.",
         "regime": null,
         "source_id": "s0852"
+      },
+      {
+        "date": "2024-12-02",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 796/2024 of 2024-12-02, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 28064, status «active»): «Кузякін Дмитро Васильович»; identifiers on the entry match this record (inn_personal 501306766736). Actions: applied by decree 796/2024 of 2024-12-02 (appendix 1, position 1). Term: Десять років, until 2034-12-02."
       }
     ],
     "other_entities": [
@@ -7202,6 +7251,14 @@
         "note": "OpenSanctions topics: sanction. PLAUSIBLE match via OpenSanctions screening (2026-08-24) — NOT personal-ИНН-confirmed (no idNumber on file to cross-check), but corroborated by independent role/context detail: consistent with this registry's already-documented personal-naming-pattern finding (exited 3mx/Тримикс founder whose surname matches jammer product names «Айрат 100»/«Алия 350» sold via Мэдро) — OpenSanctions record carries no notes to independently corroborate beyond the name/DOB match. Treat as a strong lead, not yet at the same confidence tier as an ИНН-confirmed match — a full primary designation document read would close the gap.",
         "regime": null,
         "source_id": "s0863"
+      },
+      {
+        "date": "2025-05-09",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 301/2025 of 2025-05-09, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 29463, status «active»): «Шагіахметов Айрат Фатхутдінович»; identifiers on the entry match this record (inn_personal 636501708070). Actions: applied by decree 301/2025 of 2025-05-09 (appendix 1, position 52). Term: Десять років, until 2035-05-09."
       }
     ],
     "other_entities": [],
@@ -7413,7 +7470,16 @@
         "to": null
       }
     ],
-    "sanctions": [],
+    "sanctions": [
+      {
+        "date": "2026-10-11",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 1037/2026 of 2026-10-11, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 37608, status «active»): «Кот Олег Петрович»; identifiers on the entry match this record (inn_personal 772453374643). Actions: applied by decree 1037/2026 of 2026-10-11 (appendix 1, position 24). Term: Десять років, until 2036-10-11."
+      }
+    ],
     "other_entities": [
       {
         "inn": "7751189419",
@@ -8433,6 +8499,14 @@
         ],
         "note": "ID-CONFIRMED 2026-09-07: personal ИНН 732703148651 (independently supplied and checksum-verified) exactly matches OpenSanctions' own innCode field on this match (source s-opensanctions, archived 2026-09-06) — upgrades from role-corroborated PLAUSIBLE to ID-confirmed. Passport 7317205966 also on file via the same match. Sanctioned as majority (60%) owner of ООО «СКБ «Пиранья»» alongside 40%-owner Чернышов Павел Алексеевич, per EU Regulation 2026/1843 (CELEX:32026R1843), France DGT gel-avoirs registry, and GUR Ukraine war-sanctions list.",
         "source_id": "s6357"
+      },
+      {
+        "date": "2024-12-02",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 796/2024 of 2024-12-02, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 28070, status «active»): «Корчагіна Ольга Олександрівна»; identifiers on the entry match this record (inn_personal 732703148651). Actions: applied by decree 796/2024 of 2024-12-02 (appendix 1, position 7). Term: Десять років, until 2034-12-02."
       }
     ],
     "other_entities": [
@@ -8869,6 +8943,14 @@
           "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)"
         ],
         "source_id": "s0842"
+      },
+      {
+        "date": "2026-08-03",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 704/2026 of 2026-08-03, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 37139, status «active»): «Хутєшен Олексій Олександрович»; identifiers on the entry match this record (inn_personal 615404085178). Actions: applied by decree 704/2026 of 2026-08-03 (appendix 1, position 17). Term: Десять років, until 2036-08-03."
       }
     ],
     "other_entities": [
@@ -9665,6 +9747,14 @@
           "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)"
         ],
         "source_id": "s0853"
+      },
+      {
+        "date": "2025-08-16",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 599/2025 of 2025-08-16, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 33168, status «active»): «Маслак Микита Юрійович»; identifiers on the entry match this record (inn_personal 771541815944). Actions: applied by decree 599/2025 of 2025-08-16 (appendix 1, position 37). Term: Десять років, until 2035-08-16."
       }
     ],
     "other_entities": [
@@ -11959,7 +12049,16 @@
     "address": "Самарская область, г. Самара, ул. Парижской Коммуны, д. 23, кв. 126; также Самарская область, Большечерниговский р-н, с. Большая Черниговка, ул. Чапаевская, д. 17, кв. 2",
     "inn_personal": "636501893256",
     "roles": [],
-    "sanctions": [],
+    "sanctions": [
+      {
+        "date": "2025-05-09",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 301/2025 of 2025-05-09, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 29418, status «active»): «Бєлоглазова Людмила Олександрівна»; identifiers on the entry match this record (inn_personal 636501893256). Actions: applied by decree 301/2025 of 2025-05-09 (appendix 1, position 7). Term: Десять років, until 2035-05-09."
+      }
+    ],
     "other_entities": [],
     "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
@@ -12066,7 +12165,16 @@
     "address": null,
     "inn_personal": "471010513778",
     "roles": [],
-    "sanctions": [],
+    "sanctions": [
+      {
+        "date": "2025-05-09",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 301/2025 of 2025-05-09, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 29467, status «active»): «Шахматов Іван Анатолійович»; identifiers on the entry match this record (inn_personal 471010513778). Actions: applied by decree 301/2025 of 2025-05-09 (appendix 1, position 56). Term: Десять років, until 2035-05-09."
+      }
+    ],
     "other_entities": [],
     "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
@@ -12164,7 +12272,16 @@
         "title": "Founder / sole owner / Генеральный директор (also operates a personal ИП storefront selling the company's products on Налетай.рф under her own name rather than the company's)"
       }
     ],
-    "sanctions": [],
+    "sanctions": [
+      {
+        "date": "2026-02-07",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 102/2026 of 2026-02-07, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 35138, status «active»): «Черепкова Ніна Сергіївна»; identifiers on the entry match this record (inn_personal 773376903806). Actions: applied by decree 102/2026 of 2026-02-07 (appendix 1, position 22). Term: Десять років, until 2036-02-07."
+      }
+    ],
     "other_entities": [
       {
         "inn": "7733393203",
@@ -12356,7 +12473,16 @@
         "source_id": "s6727"
       }
     ],
-    "sanctions": [],
+    "sanctions": [
+      {
+        "date": "2024-12-02",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 796/2024 of 2024-12-02, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 28087, status «active»): «Черезов Андрій Павлович»; identifiers on the entry match this record (inn_personal 712802968839). Actions: applied by decree 796/2024 of 2024-12-02 (appendix 1, position 24). Term: Десять років, until 2034-12-02."
+      }
+    ],
     "other_entities": [
       {
         "inn": "7100046925",
@@ -12751,6 +12877,14 @@
         ],
         "source_id": "s9106",
         "note": "Swiss SECO list of 02.10.2026, entry ssid 88614: Sergey Nikolaevich ATLIVANCHIK, General Director of LLC Eliars; Tax Identification Number 773514103490; listed for the «Зонт» anti-drone system."
+      },
+      {
+        "date": "2025-07-08",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 472/2025 of 2025-07-08, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 31818, status «active»): «Атліванчик Сергій Миколайович»; identifiers on the entry match this record (inn_personal 773514103490). Actions: applied by decree 472/2025 of 2025-07-08 (appendix 1, position 14). Term: Десять років, until 2035-07-08."
       }
     ],
     "other_entities": [],
@@ -15625,6 +15759,14 @@
         ],
         "source_id": "L0424",
         "note": "Read in the Canadian consolidated list (PDF) downloaded 25.10.2026 (L0424): SEMA Russia 728, «Леонид Викторович Михельсон», DOB 1955-08-11; listed 2022-04-05; the list prints a date of birth. Name and date of birth 1955-08-11 equal this record's own. The registry holds no separate source for that date of birth, so this is a match between the list and the record, not an independent identification; who the person is rests on the entries and roles recorded earlier."
+      },
+      {
+        "date": "2022-10-19",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 727/2022 of 2022-10-19, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 19733, status «active»): «Міхельсон Леонід Вікторович»; identifiers on the entry match this record (inn_personal 773600432474). Actions: applied by decree 727/2022 of 2022-10-19 (appendix 1, position 2). Term: Десять років, until 2032-10-19."
       }
     ],
     "other_entities": [
@@ -15841,6 +15983,14 @@
           "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)"
         ],
         "source_id": "s0856"
+      },
+      {
+        "date": "2022-10-19",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 727/2022 of 2022-10-19, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 19935, status «active»): «Міхельсон Вікторія Леонідівна»; identifiers on the entry match this record (inn_personal 772984313656). Actions: applied by decree 727/2022 of 2022-10-19 (appendix 1, position 219). Term: Десять років, until 2032-10-19."
       }
     ],
     "other_entities": [
@@ -16143,6 +16293,14 @@
         "note": "OpenSanctions topics: sanction. ИНН-CONFIRMED 2026-09-29: OpenSanctions' own raw record (s6343, OPENSANCTIONS_gavrilov-aleksandr-valerevich_20260906) carries an `innCode` field (165112438900, valid control-digit checksum) that had never been extracted into inn_personal -- this is EU/UA-sanctions-list-sourced (SECO-UKRAINE/UA-SA1644/EU-UKR designation, 2024-12-16), not a plausible name match. Also independently corroborated by role/context: OpenSanctions names him GD of \"LLC Gumich\" (= this registry's АО «ХК Гумич», already tied to the Инвестментс/Борей chain) — Gumich owns \"LLC Gumich RTK,\" maker of \"Impulse-M\" robot platforms field-tested by Russian forces since summer 2024. A follow-up АО «ХК Гумич» full ЕГРЮЛ выписка pull (EGRUL_9726051114_20260929) came back with its \"лицо, имеющее право без доверенности действовать\" (director) section access-restricted (\"Доступ к сведениям ограничен\", 129-ФЗ) -- consistent with the EGRUL UAV-data-closure trend, not a contradiction of this ИНН.",
         "regime": null,
         "source_id": "s6343"
+      },
+      {
+        "date": "2025-07-08",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 471/2025 of 2025-07-08, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 31670, status «active»): «Гаврилов Олександр Валерійович»; identifiers on the entry match this record (inn_personal 165112438900). Actions: applied by decree 471/2025 of 2025-07-08 (appendix 1, position 31). Term: Десять років, until 2035-07-08."
       }
     ],
     "other_entities": [],
@@ -16857,6 +17015,14 @@
           "OpenSanctions aggregation (multi-regime — see archived match for full source_urls)"
         ],
         "source_id": "s0849"
+      },
+      {
+        "date": "2025-06-20",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 415/2025 of 2025-06-20, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 29640, status «active»): «Козлов Дмитро Сергійович»; identifiers on the entry match this record (inn_personal 502727680236). Actions: applied by decree 415/2025 of 2025-06-20 (appendix 1, position 23). Term: Десять років, until 2035-06-20."
       }
     ],
     "other_entities": [
@@ -19548,6 +19714,14 @@
         ],
         "source_id": "L0355",
         "note": "Read in the Swiss list download of 25.10.2026 (L0355): SECO 62697, «АЛЁШИН Борис Сергеевич», DOB 1955-03-03; annexe 8 of the Ukraine ordinance (financial sanctions and travel ban): «Boris Alyoshin is a Russian businessman involved in the activities of Russian companies and corporations contrib»; the download keeps amendment dates only, so no listing date is given. Name and date of birth 1955-03-03 equal this record's own. The registry holds no separate source for that date of birth, so this is a match between the list and the record, not an independent identification; who the person is rests on the entries and roles recorded earlier."
+      },
+      {
+        "date": "2023-11-23",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 772/2023 of 2023-11-23, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 26324, status «active»): «Альошин Борис Сергійович»; identifiers on the entry match this record (inn_personal 770802770590). Actions: applied by decree 772/2023 of 2023-11-23 (appendix 1, position 44). Term: Десять років, until 2033-11-23."
       }
     ],
     "other_entities": [
@@ -19926,6 +20100,14 @@
           "UA-NSDC + role.pep"
         ],
         "source_id": "s0861"
+      },
+      {
+        "date": "2024-12-02",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 796/2024 of 2024-12-02, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 28086, status «active»): «Рогозін Олексій Дмитрович»; identifiers on the entry match this record (inn_personal 770301599800). Actions: applied by decree 796/2024 of 2024-12-02 (appendix 1, position 23). Term: Десять років, until 2034-12-02."
       }
     ],
     "other_entities": [
@@ -21499,6 +21681,14 @@
         ],
         "source_id": "s9106",
         "note": "Swiss SECO list of 02.10.2026, entry ssid 104986, dated 21.05.2026: same name and function, Tax Identification Number 645001842561; no date of birth printed."
+      },
+      {
+        "date": "2026-05-29",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 447/2026 of 2026-05-29, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 36825, status «active»): «Косолапов Олег Юрійович»; identifiers on the entry match this record (inn_personal 645001842561). Actions: applied by decree 447/2026 of 2026-05-29 (appendix 1, position 5). Term: Десять років, until 2036-05-29."
       }
     ],
     "other_entities": [
@@ -23093,6 +23283,14 @@
         ],
         "source_id": "s9106",
         "note": "Swiss SECO list of 02.10.2026, entry ssid 72680 (amended 12.12.2025): same name, DOB 29.01.1961, Tax Identification Number 780105167705, General Director and General Designer of JSC NPP Radar MMS. The first Swiss listing date was not read."
+      },
+      {
+        "date": "2025-06-29",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 445/2025 of 2025-06-29, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 31378, status «active»): «Анцев Георгій Володимирович»; identifiers on the entry match this record (inn_personal 780105167705). Actions: applied by decree 445/2025 of 2025-06-29 (appendix 1, position 83). Term: Десять років, until 2035-06-29."
       }
     ],
     "other_entities": [
@@ -23270,6 +23468,14 @@
         ],
         "source_id": "s9106",
         "note": "Swiss SECO list of 02.10.2026, entry ssid 89169: Ivan Georgyevich ANTSEV, Executive Director of JSC NPP Radar MMS. No ИНН or date of birth printed. Same identity basis."
+      },
+      {
+        "date": "2025-07-08",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 472/2025 of 2025-07-08, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 31806, status «active»): «Анцев Іван Георгійович»; identifiers on the entry match this record (inn_personal 780156016060). Actions: applied by decree 472/2025 of 2025-07-08 (appendix 1, position 2). Term: Десять років, until 2035-07-08."
       }
     ],
     "other_entities": [
@@ -27012,7 +27218,16 @@
         "to": null
       }
     ],
-    "sanctions": [],
+    "sanctions": [
+      {
+        "date": "2022-10-19",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 726/2022 of 2022-10-19, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 18135, status «active»): «Доронін Віктор Валентинович»; identifiers on the entry match this record (inn_personal 695001185808). Actions: applied by decree 726/2022 of 2022-10-19 (appendix 1, position 1862). Term: П'ять років, until 2027-10-19."
+      }
+    ],
     "other_entities": [
       {
         "inn": "5047051923",
@@ -35005,7 +35220,16 @@
         "to": null
       }
     ],
-    "sanctions": [],
+    "sanctions": [
+      {
+        "date": "2023-12-07",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 813/2023 of 2023-12-07, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 26844, status «active»): «Скорих Сергій Валерійович»; identifiers on the entry match this record (inn_personal 780212544531). Actions: applied by decree 813/2023 of 2023-12-07 (appendix 1, position 114). Term: Десять років, until 2033-12-07."
+      }
+    ],
     "other_entities": [
       {
         "inn": "7813491943",
@@ -39850,6 +40074,14 @@
           "Ukraine (NSDC decision, Presidential Decree 301/2025, State Register of Sanctions)"
         ],
         "source_id": "s7874"
+      },
+      {
+        "date": "2025-05-09",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 301/2025 of 2025-05-09, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 29465, status «active»): «Шандобило Сергій Сергійович»; identifiers on the entry match this record (inn_personal 781154619843). Actions: applied by decree 301/2025 of 2025-05-09 (appendix 1, position 54). Term: Десять років, until 2035-05-09."
       }
     ],
     "other_entities": [],
@@ -40449,6 +40681,14 @@
         "date": null,
         "note": "Confirmed via Aleph/OCCRP mirror of the Ukraine NSDC sanctions register: exact match on this person's own personal ИНН (504405055721) AND date of birth (1963-05-30) — passport 4608 106680 and taxNumber 11771152843 also given on the listing. Not yet independently opened on the primary sanctions.nsdc.gov.ua register itself; Aleph/OCCRP's own mirror is treated as sufficiently authoritative given the exact dual ИНН+DOB match (no namesake ambiguity), but grounds for listing have not been read.",
         "source_id": "s5718"
+      },
+      {
+        "date": "2025-05-09",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 301/2025 of 2025-05-09, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 29460, status «active»): «Циганов Вадим Борисович»; identifiers on the entry match this record (inn_personal 504405055721). Actions: applied by decree 301/2025 of 2025-05-09 (appendix 1, position 49). Term: Десять років, until 2035-05-09."
       }
     ],
     "other_entities": [
@@ -43241,7 +43481,16 @@
         "to": null
       }
     ],
-    "sanctions": [],
+    "sanctions": [
+      {
+        "date": "2023-12-07",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 813/2023 of 2023-12-07, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 26899, status «active»): «Борисов Олександр Сергійович»; identifiers on the entry match this record (inn_personal 561012075269). Actions: applied by decree 813/2023 of 2023-12-07 (appendix 1, position 169). Term: Десять років, until 2033-12-07."
+      }
+    ],
     "other_entities": [
       {
         "inn": "7100032961",
@@ -44975,7 +45224,16 @@
         "to": null
       }
     ],
-    "sanctions": [],
+    "sanctions": [
+      {
+        "date": "2026-10-24",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 1058/2026 of 2026-10-24, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 37644, status «active»): «Воронін Олександр Андрійович»; identifiers on the entry match this record (inn_personal 743400196100). Actions: applied by decree 1058/2026 of 2026-10-24 (appendix 1, position 5). Term: Десять років, until 2036-10-24."
+      }
+    ],
     "other_entities": [
       {
         "inn": "7448259249",
@@ -46112,6 +46370,14 @@
           "UA-NSDC"
         ],
         "source_id": "s5413"
+      },
+      {
+        "date": "2025-06-20",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 415/2025 of 2025-06-20, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 29644, status «active»): «Кусумов Вахід Абдулович»; identifiers on the entry match this record (inn_personal 202902196209). Actions: applied by decree 415/2025 of 2025-06-20 (appendix 1, position 27). Term: Десять років, until 2035-06-20."
       }
     ],
     "other_entities": [
@@ -49033,6 +49299,14 @@
           "UA-NSDC"
         ],
         "source_id": "s6177"
+      },
+      {
+        "date": "2025-08-16",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 599/2025 of 2025-08-16, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 33139, status «active»): «Шестопалов Сергій Анатолійович»; identifiers on the entry match this record (inn_personal 480601511636). Actions: applied by decree 599/2025 of 2025-08-16 (appendix 1, position 8). Term: Десять років, until 2035-08-16."
       }
     ],
     "other_entities": [
@@ -49181,7 +49455,16 @@
         "source_id": "s6406"
       }
     ],
-    "sanctions": [],
+    "sanctions": [
+      {
+        "date": "2025-08-23",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 612/2025 of 2025-08-23, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 33424, status «active»): «Жулідов Євген Михайлович»; identifiers on the entry match this record (inn_personal 332898705572). Actions: applied by decree 612/2025 of 2025-08-23 (appendix 1, position 9). Term: Десять років, until 2035-08-23."
+      }
+    ],
     "other_entities": [],
     "other_entities_checked_at": "2026-09-29",
     "disqualification_hits": [],
@@ -49239,6 +49522,14 @@
         ],
         "source_id": "s9164",
         "note": "ГУР war-sanctions \"Kremlin Mouthpieces\" list: АЛЕЙНИК Евгений Станиславович, TIN 310206521001, DOB 15.11.2000. Listed as \"administrator of the Telegram-channel Archangel of Spetsnaz\" -- matches this record's existing role (tg-arkhangel-spetsnaza, callsign «Внук», s6406) exactly, and the page cites the same iStories article (istories.media, 24.09.2024) already on file as this record's source. Reasons: propaganda, hate speech against Ukrainian military/civilians, organising fundraisers for occupation units including drone purchases. No EU/US/UK/Swiss list checked for this individual -- open."
+      },
+      {
+        "date": "2025-08-23",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 612/2025 of 2025-08-23, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 33416, status «active»): «Алейник Євген Станіславович»; identifiers on the entry match this record (inn_personal 310206521001). Actions: applied by decree 612/2025 of 2025-08-23 (appendix 1, position 1). Term: Десять років, until 2035-08-23."
       }
     ],
     "other_entities": [],
@@ -49358,6 +49649,14 @@
         ],
         "source_id": "s9165",
         "note": "ГУР war-sanctions \"Engineers of aggression\" list (updated 02.09.2026), total 56 individuals: БОГАТИКОВ Сергей Анатольевич, TIN 770304117100 -- exact match to this record's existing inn_personal. Listed as General Director of \"A.Y.BEREZNYAK GOSMKB RADUGA JSC\" (matches other_entities: director of АО «ГосМКБ «Радуга» им. А.Я.Березняка», s6885), the principal developer of Kh-101/Kh-102 strategic cruise missiles and Kh-59/Kh-69 guided air-launched missiles. Reasons cite his tenure overseeing the Kh-101 modernisation (cluster warhead integration) and name two strikes as the most significant by casualties: 08.07.2024 on Okhmatdyt Children's Medical Center, Kyiv; 19.11.2025 on an apartment building in Ternopil (33 dead incl. 6 children). No EU/US/UK/Swiss list checked yet for this individual -- open."
+      },
+      {
+        "date": "2023-03-18",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 163/2023 of 2023-03-18, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 21801, status «active»): «Богатиков Сергій Анатолійович»; identifiers on the entry match this record (inn_personal 770304117100). Actions: applied by decree 163/2023 of 2023-03-18 (appendix 1, position 116). Term: Десять років, until 2033-03-18."
       }
     ],
     "other_entities": [
@@ -51044,6 +51343,14 @@
         ],
         "source_id": "L0355",
         "note": "Read in the Swiss list download of 25.10.2026 (L0355): SECO 27447, «Киселёв Дмитрий Константинович», DOB 1954-04-26; annexe 8 of the Ukraine ordinance (financial sanctions and travel ban): «Appointed by Presidential Decree on 9 Dec 2013 Head of the Russian Federal State news agency \"Rossiya Segodnya\".»; the download keeps amendment dates only, so no listing date is given. Name and date of birth 1954-04-26 equal this record's own. The registry holds no separate source for that date of birth, so this is a match between the list and the record, not an independent identification; who the person is rests on the entries and roles recorded earlier."
+      },
+      {
+        "date": "2015-09-16",
+        "regime": [
+          "Ukraine (NSDC decision, Presidential Decree 549/2015 of 2015-09-16, State Register of Sanctions)"
+        ],
+        "source_id": "L0477",
+        "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 10511, status «active»): «Кисельов Дмитро Костянтинович»; identifiers on the entry match this record (inn_personal 771911447529). Actions: applied by decree 549/2015 of 2015-09-16 (appendix 1, position 60); Зміна санкцій by decree 467/2016 of 2016-10-17 (appendix 1, position 45); applied by decree 133/2017 of 2017-05-15 (appendix 1, position 45); lifted by decree 133/2017 of 2017-05-15 (appendix 0, position 534); lifted by decree 133/2017 of 2017-05-15 (appendix 0, position 60); applied by decree 126/2018 of 2018-05-14 (appendix 1, position 45); Зміна санкцій by decree 176/2018 of 2018-06-21 (appendix 1, position 45); applied by decree 4/2023 of 2023-01-07 (appendix 1, position 39). Term: Десять років, until 2033-01-07."
       }
     ],
     "other_entities": [],

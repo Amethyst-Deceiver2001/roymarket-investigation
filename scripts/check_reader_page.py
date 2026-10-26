@@ -63,10 +63,15 @@ class Registry:
     def __init__(self):
         self.people = load("people.json")
         self.by_name = {}
+        self.all_by_name = {}   # every record under a name: two companies can share a registered name
         for e in load("entities.json"):
             for n in [e.get("name_ru"), *(h.get("value") for h in e.get("name_history") or [] if isinstance(h, dict))]:
                 if isinstance(n, str) and n:
                     self.by_name.setdefault(norm_name(n.split(" | ")[0]), e)
+                    self.all_by_name.setdefault(norm_name(n.split(" | ")[0]), []).append(e)
+                    bare = re.sub(r"\s*\([^()]*\)\s*$", "", n.split(" | ")[0])   # a trailing note of ours: "(Шестопалов)"
+                    if bare != n.split(" | ")[0]:
+                        self.all_by_name.setdefault(norm_name(bare), []).append(e)
         for p in self.people:
             if p.get("fio_ru"):
                 self.by_name.setdefault(norm_name(p["fio_ru"]), p)
@@ -75,6 +80,13 @@ class Registry:
         for pr in load("products.json"):
             if pr.get("name_ru") and pr.get("maker") in ents:
                 self.by_name.setdefault(norm_name(pr["name_ru"]), ents[pr["maker"]])
+
+    def find_all(self, names: list[str]):
+        for n in names:
+            rs = self.all_by_name.get(norm_name(n)) or ([self.by_name[norm_name(n)]] if norm_name(n) in self.by_name else [])
+            if rs:
+                return rs
+        return []
 
     def find(self, names: list[str]):
         for n in names:
@@ -144,6 +156,11 @@ def check(path: Path, reg: Registry) -> tuple[list[str], list[str]]:
             head = (soup.find("h1") or soup).find_parent(["header", "section", "main"]) or soup
             names = [c.get_text(" ", strip=True) for c in head.select(".names [lang=ru], small.cyr")][:2]
         rec = reg.find(names)
+        # same-named records (two companies under one registered name): the flag is backed if one of them backs it
+        for cand in reg.find_all(names):
+            if set(shown) <= {lab for lab, _ in sanction_regimes(cand.get("sanctions"))}:
+                rec = cand
+                break
         if rec is None:
             warnings.append(f"sanctions: flag {', '.join(shown) or '(no regime)'} sits on no name that resolves "
                             f"to a registry record (nearest names: {names[:2]})")
