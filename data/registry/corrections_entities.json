@@ -29253,6 +29253,18 @@
           {
             "source_id": "s1392",
             "text": "Two GoDrone-branded Ozon sellers found. The larger one (\"GoDrone\", seller_id 3980614) is RESOLVED as a different legal entity (ООО «ИНВИЖН ТРЕЙД», ИНН 7720907532 -- see marketplace_listings note) -- a third-party reseller, not this entity itself. The smaller \"GD\" account (seller_id 2520832) remains genuinely unresolved -- its sellerLegalInformation modal has still never been captured with content, and a direct curl attempt at the endpoint was blocked by Ozon's antibot (307)."
+          },
+          {
+            "text": "Channel posts of 01.12.2024 and 10.03.2025 name Алексей Дойников as co-founder of GoDrone. The register extract of 07.09.2026 lists Козлов Дмитрий Сергеевич as sole owner and director. Check whether Дойников holds a role in ООО «ГОУДРОН» under another name or in a sister company, or is only a brand co-founder.",
+            "source_id": "L0511"
+          },
+          {
+            "text": "Post 1862 (03.12.2025) says nearly 100 Mavic 4 drones were fitted with the company's coordinate-spoofing board «together with a large enterprise» and handed to fighters. The enterprise is not named; find it from the company's tenders, the post's comments or the buyer's own posts.",
+            "source_id": "L0505"
+          },
+          {
+            "text": "The company's presentation (page 11) says state institutions in 12 regions trust it; its web page says ten regions, naming eight oblasts, Krasnodar Krai and Khanty-Mansi. No contract is on file for either; zakupki.gov.ru by INN 9721203814 has not been read for this record.",
+            "source_id": "L0514"
           }
         ],
         "products": [
@@ -29428,6 +29440,118 @@
             "context": "Own news item of 08.12.2025 on the first serial batch of «Набат 3»: the maker says front-line units are first in the shipping order.",
             "source_id": "L0486",
             "as_of": "2025-12-08"
+          },
+          {
+            "text_ru": "Отметим, что с сентября 2024 года в боевые подразделения поставлено более 3000 детекторов БПЛА «Набат».",
+            "text_en": "Note that since September 2024 more than 3,000 «Nabat» UAV detectors have been supplied to combat units.",
+            "context": "The maker's own count on its Telegram channel, 16.04.2025: a number it states, with no document behind it.",
+            "source_id": "L0494",
+            "as_of": "2025-04-16"
+          },
+          {
+            "text_ru": "«НАБАТ V.3»: отгружено несколько сотен устройств, бесплатно отправили всем провода для видеоперехвата",
+            "text_en": "«NABAT V.3»: several hundred devices shipped; video-interception cables sent to everyone free of charge",
+            "context": "Post title on its own channel, 20.01.2026: the maker's count of Nabat V.3 units shipped, no document behind it.",
+            "source_id": "L0502",
+            "as_of": "2026-01-20"
+          },
+          {
+            "text_ru": "На днях мы, совместно с большим предприятием, завершили установку плат подмены координат на крупную партию Mavic 4. Инженеры GoDrone провели полный цикл фронтовой подготовки для почти 100 аппаратов — установка плат, тесты, контроль качества. Все передано бойцам и уже работает на СВО.",
+            "text_en": "Recently we, together with a large enterprise, finished installing coordinate-spoofing boards on a large batch of Mavic 4. GoDrone engineers carried out the full front-line preparation cycle for almost 100 aircraft: board installation, tests, quality control. All of it has been handed to the fighters and is already working in the SVO.",
+            "context": "Own channel, 03.12.2025: the company says it fitted its own board to nearly 100 DJI Mavic 4 drones and handed them over for the war; the «large enterprise» is not named.",
+            "source_id": "L0505",
+            "as_of": "2025-12-03"
+          },
+          {
+            "text_ru": "5. Невидимость для «Аэроскопа» и аналогичных систем\nДрон перестает передавать телеметрию, которая позволяет вести слежение за оператором.",
+            "text_en": "5. Invisible to Aeroscope and similar systems. The drone stops transmitting the telemetry that allows the operator to be tracked.",
+            "context": "Own channel, 19.11.2025: product post for its coordinate-spoofing board for DJI Mavic 4. The same post offers take-off with zero satellites and flight under spoofing.",
+            "source_id": "L0506",
+            "as_of": "2025-11-19"
+          },
+          {
+            "text_ru": "Прошивка в Сервисном центре компании осуществляется в течение суток исключительно на безвозмездной основе и только для участников СВО.",
+            "text_en": "The firmware is installed at the company's service centre within a day, free of charge and only for SVO participants.",
+            "context": "Own channel, 28.04.2025, on the «1001» firmware that unlocks blocked DJI drones locally.",
+            "source_id": "L0507",
+            "as_of": "2025-04-28"
+          },
+          {
+            "text_ru": "В магазине GoDrone Matrice 4T будет продаваться со специальной прошивкой — подойдет и для применения в боевых действиях.",
+            "text_en": "In the GoDrone shop the Matrice 4T will be sold with a special firmware, suitable for use in combat as well.",
+            "context": "Own channel, 04.06.2025, on a DJI thermal drone it says it reflashes to lift Russian flight restrictions.",
+            "source_id": "L0508",
+            "as_of": "2025-06-04"
+          },
+          {
+            "text_ru": "Мы отправляем устройства с волонтерами и в индивидуальном порядке. И очень многое делается на безвозмездной основе.",
+            "text_en": "We send devices with volunteers and individually. And a great deal is done free of charge.",
+            "context": "Own channel, 02.04.2025, announcing a prize draw of four Nabat V.2.C detectors.",
+            "source_id": "L0510",
+            "as_of": "2025-04-02"
+          },
+          {
+            "text_ru": "Уже продолжительное время компания сотрудничает с бойцами бригады.",
+            "text_en": "The company has been working with the brigade's servicemen for a long time.",
+            "context": "Own channel, 21.03.2025, about a Marine officer who visited the showroom on the 336th Marine Brigade's birthday and gave the company a Marine flag; the same post says two quadcopters were handed over for reflashing.",
+            "source_id": "L0493",
+            "as_of": "2025-03-21"
+          },
+          {
+            "text_ru": "Детектор БПЛА «НАБАТ.V3» развернут на Запорожской атомной электростанции.",
+            "text_en": "The «NABAT.V3» UAV detector has been deployed at the Zaporizhzhia nuclear power plant.",
+            "context": "Own channel, 26.12.2025: the company places its detector at the Russian-held Zaporizhzhia plant; no recipient or document is named.",
+            "source_id": "L0501",
+            "as_of": "2025-12-26"
+          },
+          {
+            "text_ru": "Компания GoDrone стала победителем Всероссийской национальной премии «Ружейник года — 2026» в номинации «Универсальный солдат».",
+            "text_en": "GoDrone became the winner of the All-Russian national prize «Gunsmith of the Year 2026» in the nomination «Universal Soldier».",
+            "context": "Own channel, 07.10.2026: a prize it says is awarded by a veterans' organisation of the armed forces, presented at the Defence Ministry building.",
+            "source_id": "L0504",
+            "as_of": "2026-10-07"
+          },
+          {
+            "text_ru": "Обучение пилотов управлению БПЛА самолётного типа (VTOL) для выполнения разведывательных и специальных задач в зоне СВО",
+            "text_en": "Training of pilots to fly fixed-wing (VTOL) UAVs for reconnaissance and special tasks in the SVO zone",
+            "context": "Company presentation, page 13, under a photograph of a large group in uniform with two fixed-wing UAVs; the page names no unit or date.",
+            "source_id": "L0514",
+            "as_of": "2025-09-22"
+          },
+          {
+            "text_ru": "Работаем с госзакупками по 223 и 44-ФЗ. Наличие необходимых сертификатов и лицензий",
+            "text_en": "We work with state procurement under 223-FZ and 44-FZ. Necessary certificates and licences are in place",
+            "context": "Company presentation, page 10.",
+            "source_id": "L0514",
+            "as_of": "2025-09-22"
+          },
+          {
+            "text_ru": "государственные учреждения в 12 регионах России",
+            "text_en": "state institutions in 12 regions of Russia",
+            "context": "Company presentation, page 11, «Нам доверяют» over a map with 12 regions marked in red. The company's own web page says ten regions.",
+            "source_id": "L0514",
+            "as_of": "2025-09-22"
+          },
+          {
+            "text_ru": "Обеспечиваем безопасность промышленных компаний",
+            "text_en": "We provide security for industrial companies",
+            "context": "Company presentation, page 12, over the logos of Tatneft, TMK SinTZ, Transneft, AEMZ, Norilsk Nickel and the United Energy Company. A logo wall names no contract.",
+            "source_id": "L0514",
+            "as_of": "2025-09-22"
+          },
+          {
+            "text_ru": "Детектор среагировал вовремя! Успели посадить Ми-8 и спасти экипаж!",
+            "text_en": "The detector reacted in time! We managed to land the Mi-8 and save the crew!",
+            "context": "Company presentation, page 7, «Отзывы о спасении бойцов и техники в зоне СВО», beside two photographs of a helicopter crew member with a detector (the face is blurred in the original).",
+            "source_id": "L0514",
+            "as_of": "2025-09-22"
+          },
+          {
+            "text_ru": "Один из крупнейших сервисных центров в Москве в сфере обслуживания БПЛА",
+            "text_en": "One of the largest service centres in Moscow in the field of UAV maintenance",
+            "context": "Company presentation, page 15; the same page lists modernisation and re-equipping of electronic-warfare equipment.",
+            "source_id": "L0514",
+            "as_of": "2025-09-22"
           }
         ],
         "battlefield_evidence": [
@@ -29458,6 +29582,13 @@
             "context": "Recent (2026) formal field-test feedback from an active-duty unit, part of the same ongoing testimonial series.",
             "source_id": "s6458",
             "as_of": "2026-07-29"
+          },
+          {
+            "text_ru": "Первые сотня-полторы км, пока автобус в зоне СВО,  небо под особым контролем у наших бойцов, в этом помогает  дрон-детектора «НАБАТ 3».",
+            "text_en": "For the first hundred to hundred and fifty km, while the bus is in the SVO zone, our fighters keep the sky under special watch, helped by the «NABAT 3» drone detector.",
+            "context": "Own channel, 09.09.2026: a mobile fire group of the «Nevsky» brigade escorting children from a Makiivka nursery to a competition. A claim of use by that unit; no unit record is matched.",
+            "source_id": "L0503",
+            "as_of": "2026-09-09"
           }
         ],
         "charter_capital_history": [

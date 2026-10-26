@@ -555,6 +555,24 @@ class Page:
             figs.append(figure_html(m, f"images/media/{name}", prov, self.ref(m.get("source_id"))))
         return f'<div class="rm-gallery{" even" if len(figs) in (2, 4) else ""}">{"".join(figs)}</div>' if figs else ""
 
+    def handovers(self):
+        """Handovers the company itself reports on its own channel (deliveries.json, donor = this company), as it words them."""
+        evs = sorted((d for d in load("deliveries.json") if d.get("donor") == self.e["slug"] and d.get("source_id")
+                            and all(i.get("item_en") for i in d["items"])),   # only handovers glossed in English by hand
+                     key=lambda d: d["date"])
+        if not evs:
+            return ""
+        items = []
+        for d in evs:
+            what = "; ".join(esc(i.get("item_en") or latinize_gloss(i.get("item") or "equipment")) for i in d["items"])
+            rec = name_html(d.get("recipient_en") or d["recipient"], d["recipient"], key=f"ho-{d['id']}")
+            via = d.get("carrier_en")
+            via = f", via {esc(via)}" if via and via != "not stated" else ""
+            items.append(f'<li><time>{ru_date(d["date"])}</time> {rec}: {what}{via}{self.ref(d["source_id"])}</li>')
+        self.limits.append("Handovers listed here are the company's own account on its Telegram channel. Each is one post; none is "
+                           "confirmed by the recipient, and a post that names a regiment by number alone does not identify the unit.")
+        return f'<p class="lead-note">As the company reports them on its own channel.</p><ul class="plain">{"".join(items)}</ul>'
+
     def sellers(self):
         items = []
         for s in self.ents.values():
@@ -598,7 +616,7 @@ def render(pg, out, chains):
     sections = [("Company register", pg.register()), ("Command" if pg.unit() else "Before the register was closed", pg.before()),
                 ("People", pg.people_block()), ("Where it is", pg.place()), ("Sanctions", pg.sanctions_block()),
                 ("Timeline", pg.timeline()), ("Annual accounts", pg.accounts()),
-                ("Products", pg.products_block(chains)), ("Reported by others", pg.reported_by_others(img_dir)),
+                ("Products", pg.products_block(chains)), ("Handovers it reports", pg.handovers()), ("Reported by others", pg.reported_by_others(img_dir)),
                 ("Pictures", pg.pictures(img_dir)), ("In its own words", pg.own_words()), ("Trademarks and patents", pg.ip_block()),
                 ("Links to TsBST and the state", pg.network()), ("Sellers of its products", pg.sellers())]
     pg.gaps()
