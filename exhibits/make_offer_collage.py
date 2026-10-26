@@ -12,6 +12,7 @@ REPO = Path(__file__).resolve().parent.parent
 SRC = REPO / "data" / "sources"
 A = (SRC / "WAYBACK_20260822_roimarket-supplier-offer-decoded.html")
 B = (SRC / "WEBCAPTURE_20261025_roimarket-ru-supplier-offer.html")
+C = (SRC / "WEBCAPTURE_20261026_roimarket-ru-privacy-policy.html")
 from bs4 import BeautifulSoup
 
 
@@ -22,7 +23,8 @@ def lines(p):
     return [" ".join(l.split()) for l in s.get_text("\n").split("\n") if l.strip()]
 
 
-la, lb = lines(A), lines(B)
+la, lb, lc = lines(A), lines(B), lines(C)
+priv = next(l for l in lc if l.startswith("ООО «МПТМ», ИНН 9714068459"))
 need_a = ["ООО «МПТМ» · ИНН 9714068459", "Скачать DOCX", "Полный агентский договор: подключение, карточки товаров, заказы, расчёты, отчётность, возвраты, ответственность и приложения.",
           "17. РЕКВИЗИТЫ АГЕНТА", "Общество с ограниченной ответственностью «МПТМ»", "ОГРН 1257700021468, ИНН 9714068459, КПП 771401001"]
 need_b = ["Защищённый документ для Поставщиков", "Наименование Агента: ООО «****»", "ИНН: **********", "ОГРН: *************",
@@ -54,6 +56,7 @@ right = [
     mk("new", "What the page says it is", f'<mark>{e(need_b[0])}</mark><br>{e(need_b[6])}'),
     mk("new", "Full text and downloads", "<mark>Войти и открыть полную редакцию</mark> · Оглавление · 3 раздела"),
     mk("new", "Section 17 becomes «Реквизиты в публичной версии»", '<mark>Наименование Агента: ООО «****»</mark><br><mark>ИНН: **********</mark><br><mark>КПП: *********</mark><br><mark>ОГРН: *************</mark><br><mark>Юридический адрес и банковские реквизиты: скрыты до входа</mark>'),
+    mk("same", "Same site, privacy policy (revision 2.0), 26.10.2026: the operator is still named", f'<mark>{e(priv)}</mark>'),
 ]
 page = f"""<!doctype html><meta charset="utf-8"><title>Supplier offer, two captures</title>
 <style>
@@ -65,18 +68,18 @@ h1{{font-size:24px;margin:0 0 4px}}p.sub{{margin:0 0 18px;color:#555;max-width:1
 .row{{padding:9px 10px;margin-bottom:8px;border-radius:4px;border-left:4px solid #ccc;background:#faf9f6}}
 .row.gone{{border-left-color:#b45309}}.row.new{{border-left-color:#1d4ed8}}
 .lb{{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#6b6b66;margin-bottom:3px}}
-.ru{{font-size:14px}}mark{{background:#ffe08a;padding:0 2px}}.new mark{{background:#bcd4ff}}em{{color:#888}}
+.ru{{font-size:14px}}mark{{background:#ffe08a;padding:0 2px}}.new mark{{background:#bcd4ff}}.same mark{{background:#c9e8c9}}em{{color:#888}}
 .foot{{margin-top:14px;font-size:12.5px;color:#555;max-width:1250px}}
 .key span{{display:inline-block;padding:1px 8px;margin-right:8px;border-radius:3px;font-size:12px}}
 </style>
 <h1>The supplier offer, 22 August against 25 October 2026</h1>
-<p class="sub">Same document, same revision 3.0 dated 1 August 2026. On 22 August the whole text was public and named the operator. By 25 October the page is a login wall and the operator's details are starred out.</p>
+<p class="sub">Same document, same revision 3.0 dated 1 August 2026. On 22 August the whole text was public and named the operator. By 25 October the page is a login wall and the operator's details are starred out. The privacy policy on the same site still names it, at its new registered address.</p>
 <p class="key"><span style="background:#ffe08a">on 22.08, gone by 25.10</span><span style="background:#bcd4ff">on 25.10, new</span></p>
 <div class="grid">
 <div class="col"><h2>22.08.2026</h2><div class="d">roimarket.ru/legal/supplier-offer, Internet Archive capture of 22.08.2026 09:13</div>{''.join(left)}</div>
-<div class="col"><h2>25.10.2026</h2><div class="d">roimarket.ru/legal/supplier-offer, our own capture of 25.10.2026</div>{''.join(right)}</div>
+<div class="col"><h2>25.10.2026</h2><div class="d">roimarket.ru/legal/supplier-offer, our own captures of 25.10.2026 (offer) and 26.10.2026 (privacy policy)</div>{''.join(right)}</div>
 </div>
-<p class="foot">Quoted from the two saved page captures. «Защищённый документ для Поставщиков» is the page's own label; the starred fields are as printed.</p>"""
+<p class="foot">Quoted from the three saved page captures. Green: unchanged, still public. «Защищённый документ для Поставщиков» is the page's own label; the starred fields are as printed.</p>"""
 out = REPO / "exhibits" / "offer_collage.html"
 out.write_text(page)
 print(out)
