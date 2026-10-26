@@ -1629,6 +1629,14 @@
           "degree": 2
         },
         {
+          "id": "doynikov-aleksey-andreevich",
+          "kind": "person",
+          "label": "Дойников Алексей Андреевич",
+          "name_latin": "Doynikov Aleksey Andreevich",
+          "sanctioned": false,
+          "degree": 6
+        },
+        {
           "id": "dubinskiy-aleksey-vasilevich",
           "kind": "person",
           "label": "Дубинский Алексей Васильевич",
@@ -3635,7 +3643,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "product_count": 1,
-          "degree": 7
+          "degree": 8
         },
         {
           "id": "ooo-gruppa-promavto",
@@ -3672,6 +3680,18 @@
           "legal_form": "ООО",
           "product_count": 1,
           "degree": 6
+        },
+        {
+          "id": "ooo-imens",
+          "kind": "entity",
+          "label": "ООО «ИМЭНС»",
+          "name_latin": "OOO «IMENS»",
+          "inn": "9717155759",
+          "tier": "unverified",
+          "sanctioned": false,
+          "legal_form": "ООО",
+          "product_count": 0,
+          "degree": 5
         },
         {
           "id": "ooo-intek-bespilotnye-sistemy",
@@ -20911,6 +20931,84 @@
           "label": "co-inventor (patent RU2722633C1)",
           "source_id": "s1015",
           "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "doynikov-aleksey-andreevich",
+          "target": "ooo-goudron",
+          "type": "role",
+          "label": "Co-founder (as the company calls him; not in the register extract)",
+          "source_id": "L0539",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "rep"
+        },
+        {
+          "source": "doynikov-aleksey-andreevich",
+          "target": "ooo-imens",
+          "type": "directs",
+          "label": null,
+          "source_id": "L0545",
+          "as_of": "2025-07-11",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "doynikov-aleksey-andreevich",
+          "target": "ooo-imens",
+          "type": "founded",
+          "label": null,
+          "source_id": "L0545",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "doynikov-aleksey-andreevich",
+          "target": "ooo-imens",
+          "type": "role",
+          "label": "director",
+          "source_id": "L0546",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "doynikov-aleksey-andreevich",
+          "target": "ooo-imens",
+          "type": "role",
+          "label": "founder",
+          "source_id": "L0546",
+          "as_of": null,
+          "weight": 1.0,
+          "temporal_status": "unknown",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "doynikov-aleksey-andreevich",
+          "target": "ooo-imens",
+          "type": "role",
+          "label": "Генеральный директор / sole owner (100%)",
+          "source_id": "L0545",
+          "as_of": "2025-07-11",
           "weight": 1.0,
           "temporal_status": "unknown",
           "confidence": null,
@@ -41746,6 +41844,14 @@
           "degree": 14
         },
         {
+          "id": "doynikov-aleksey-andreevich",
+          "kind": "person",
+          "label": "Дойников Алексей Андреевич",
+          "name_latin": "Doynikov Aleksey Andreevich",
+          "sanctioned": false,
+          "degree": 6
+        },
+        {
           "id": "dzema-vadim-vadimovich",
           "kind": "person",
           "label": "Дзема Вадим Вадимович",
@@ -42783,7 +42889,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "product_count": 1,
-          "degree": 7
+          "degree": 8
         },
         {
           "id": "ooo-gruppa-promavto",
@@ -42820,6 +42926,18 @@
           "legal_form": "ООО",
           "product_count": 1,
           "degree": 6
+        },
+        {
+          "id": "ooo-imens",
+          "kind": "entity",
+          "label": "ООО «ИМЭНС»",
+          "name_latin": "OOO «IMENS»",
+          "inn": "9717155759",
+          "tier": "unverified",
+          "sanctioned": false,
+          "legal_form": "ООО",
+          "product_count": 0,
+          "degree": 5
         },
         {
           "id": "ooo-intek-bespilotnye-sistemy",
@@ -45187,6 +45305,19 @@
           "label": null,
           "source_id": "s7453",
           "as_of": "2026-09-14",
+          "weight": 1.0,
+          "temporal_status": "current",
+          "confidence": null,
+          "detail": null,
+          "grade": "doc"
+        },
+        {
+          "source": "doynikov-aleksey-andreevich",
+          "target": "ooo-imens",
+          "type": "directs",
+          "label": null,
+          "source_id": "L0545",
+          "as_of": "2025-07-11",
           "weight": 1.0,
           "temporal_status": "current",
           "confidence": null,
@@ -49453,7 +49584,7 @@
           "sanctioned": true,
           "legal_form": "ООО",
           "product_count": 1,
-          "degree": 7
+          "degree": 8
         },
         {
           "id": "ooo-intek-bespilotnye-sistemy",

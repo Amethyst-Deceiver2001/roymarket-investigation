@@ -52470,5 +52470,77 @@
     "_verified": false,
     "_origin": "corrections:people_add_entities",
     "_raw": {}
+  },
+  {
+    "_verified": false,
+    "address": null,
+    "birthplace": null,
+    "dob": null,
+    "fio_ru": "Дойников Алексей Андреевич",
+    "inn_personal": "772161707648",
+    "name_latin": "Doynikov Aleksey Andreevich",
+    "photo": null,
+    "slug": "doynikov-aleksey-andreevich",
+    "social": [],
+    "notes": "2026-10-26: new record. Named as co-founder of GoDrone by the company's channel (posts of 01.12.2024 and 10.03.2025), its own site (L0539) and TASS (21.10.2024, reprinted L0540). The INN 772161707648 and the identification with the sole proprietor ДОЙНИКОВ АЛЕКСЕЙ АНДРЕЕВИЧ (ЕГРИП extract L0542) were given by the user on 26.10.2026; the basis for matching the co-founder to that registration is not on file and no document ties the two. Not in the ЕГРЮЛ extract of ООО «ГОУДРОН» as owner or director.",
+    "roles": [
+      {
+        "entity_name": "ООО «ИМЭНС»",
+        "entity_slug": "ooo-imens",
+        "from": "2025-07-11",
+        "source_id": "L0545",
+        "title": "Генеральный директор / sole owner (100%)",
+        "to": null
+      },
+      {
+        "entity_name": "ООО «ГОУДРОН»",
+        "entity_slug": "ooo-goudron",
+        "from": null,
+        "source_id": "L0539",
+        "title": "Co-founder (as the company calls him; not in the register extract)",
+        "to": null
+      }
+    ],
+    "egrip_hits": [
+      {
+        "ogrnip": "322774600653852",
+        "name": "ДОЙНИКОВ АЛЕКСЕЙ АНДРЕЕВИЧ",
+        "registered": "02.11.2022",
+        "excluded_or_flag": "18.12.2025"
+      }
+    ],
+    "egrip_checked_at": "2026-10-26",
+    "other_entities": [
+      {
+        "inn": "9717155759",
+        "ogrn": "1247700164898",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИМЭНС\"",
+        "role": "director",
+        "okved": "46.43",
+        "okved_label": "Торговля оптовая бытовыми электротоварами",
+        "registered": "15.02.2024",
+        "region": "МОСКВА Г.",
+        "source_id": "L0546"
+      },
+      {
+        "inn": "9717155759",
+        "ogrn": "1247700164898",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ИМЭНС\"",
+        "role": "founder",
+        "okved": "46.43",
+        "okved_label": "Торговля оптовая бытовыми электротоварами",
+        "registered": "15.02.2024",
+        "region": "МОСКВА Г.",
+        "source_id": "L0546"
+      }
+    ],
+    "other_entities_checked_at": "2026-10-26",
+    "disqualification_hits": [],
+    "disqualification_checked_at": "2026-10-26",
+    "sanctions_review": {
+      "as_of": "2026-10-26",
+      "outcome": "closed",
+      "note": "Checked 26.10.2026 against identifiers and the name: Ukraine's State Register of Sanctions (export of 26.10.2026, individual subjects): no tax_id or reg_id carries ИНН 772161707648 and no entry names an Алексей Дойников (the two Дойников entries are Юрий Васильевич and Олег Юрьевич); the official lists downloaded 25.10.2026 (EU, UK, UN, Swiss, US consolidated screening list, Japan) hold no entry with his INN or surname (the string matches found were «Imensazan», an Iranian entity); the tax service's disqualified-persons register: 0 hits. Not checked: the Australian, Canadian and New Zealand lists, and OpenSanctions (monthly quota)."
+    }
   }
 ]

@@ -11353,6 +11353,97 @@
         "s8651 -- ЦБСТ's own post 1562 (25.11.2025), read in full in the database: «Компания «Квадросим», являющаяся резидентом ЦБСТ» and «Руководитель проекта Егор Сечинский».",
         "Recorded on the machine without the archive: sources cited by local ids (L....), see notes/local_registry_protocol.md."
       ]
+    },
+    {
+      "slug": "ooo-imens",
+      "name_ru": "ООО «ИМЭНС»",
+      "name_en": "\"IMMENSE\" LIMITED LIABILITY COMPANY",
+      "name_latin": "OOO «IMENS»",
+      "name_display": "OOO «IMENS»",
+      "legal_form": "ООО",
+      "inn": "9717155759",
+      "ogrn": "1247700164898",
+      "kpp": "772501001",
+      "registered": "15.02.2024",
+      "address": "115432, Г.МОСКВА, ВН.ТЕР.Г. МУНИЦИПАЛЬНЫЙ ОКРУГ ДАНИЛОВСКИЙ, ПР-КТ АНДРОПОВА, Д. 10, ПОМЕЩ. 98",
+      "okved_code": "46.43",
+      "okved_label": "Торговля оптовая бытовыми электротоварами",
+      "director": "Дойников Алексей Андреевич",
+      "director_history": [
+        {
+          "value": "Дойников Алексей Андреевич",
+          "as_of": "2025-07-11",
+          "source_id": "L0545",
+          "note": "Генеральный директор; personal ИНН 772161707648; the entry carries GRN 2257719290520 of 11.07.2025. The extract of 26.10.2026 shows the current holder only, so who held the post from 15.02.2024 is not on file."
+        }
+      ],
+      "founders": [
+        {
+          "name": "Дойников Алексей Андреевич",
+          "inn_personal": "772161707648",
+          "nominal_value": 10000,
+          "share_percent": 100,
+          "source_id": "L0545"
+        }
+      ],
+      "founders_history": [
+        {
+          "value": "Дойников Алексей Андреевич 100% (₽10 000)",
+          "as_of": "2025-07-11",
+          "source_id": "L0545",
+          "note": "Sole participant; the entry carries GRN 2257719290520 of 11.07.2025. Earlier participants are not on the current extract."
+        }
+      ],
+      "charter_capital": 10000,
+      "charter_capital_history": [
+        {
+          "value": 10000,
+          "as_of": "2024-02-15",
+          "source_id": "L0545",
+          "note": "Charter capital ₽10,000 (extract of 26.10.2026)."
+        }
+      ],
+      "address_history": [
+        {
+          "value": "115432, Г.МОСКВА, ВН.ТЕР.Г. МУНИЦИПАЛЬНЫЙ ОКРУГ ДАНИЛОВСКИЙ, ПР-КТ АНДРОПОВА, Д. 10, ПОМЕЩ. 98",
+          "kind": "registered",
+          "as_of": "2025-12-22",
+          "source_id": "L0545",
+          "note": "Entered 22.12.2025 (GRN 2257724629380); the tax office changed to ИФНС №25 the same day (КПП 772501001). Earlier addresses are not on the current extract."
+        }
+      ],
+      "contacts": [
+        {
+          "kind": "email",
+          "value": "LLCIMMENSE@GMAIL.COM",
+          "label": "E-mail on the register extract",
+          "as_of": "2026-10-26",
+          "source_id": "L0545",
+          "note": "Entered 19.05.2025 (GRN 2257717427108)."
+        }
+      ],
+      "tier": "unverified",
+      "tier_basis": "The sole owner and director is Алексей Дойников, whom GoDrone's channel, its own site and TASS call a co-founder of GoDrone (ООО «ГОУДРОН»). The INN of this person was given by the user on 26.10.2026; the ЕГРЮЛ extract confirms that he is the company's owner and director. The company is a wholesale trader in household electrical goods (ОКВЭД 46.43, as is ООО «ГОУДРОН»). Nothing on file shows what it trades, or that it deals with ООО «ГОУДРОН» or ЦБСТ.",
+      "cbst_tie": null,
+      "products": [],
+      "sanctions": [],
+      "government_contracts": [],
+      "foreign_components": [],
+      "trademarks": [],
+      "patents": [],
+      "open_questions": [
+        {
+          "source_id": "L0545",
+          "text": "What does ООО «ИМЭНС» trade, and does it deal with ООО «ГОУДРОН»? Owner and director Дойников since 11.07.2025 (the extract shows the current holder only); earlier owner and director from 15.02.2024 not on file; address changed to пр-кт Андропова, 10, помещ. 98 on 22.12.2025. To read: financial statements for 2024-2025, public procurement, the Ozon and Wildberries seller registers, the trademark register, and the address (which building, residential or commercial)."
+        }
+      ],
+      "_verified": true,
+      "confidence": "high",
+      "sanctions_review": {
+        "as_of": "2026-10-26",
+        "outcome": "closed",
+        "note": "Checked 26.10.2026 by INN 9717155759 and OGRN 1247700164898: Ukraine's State Register of Sanctions (export of 26.10.2026, legal subjects) has no entry; the official lists downloaded 25.10.2026 (EU, UK, UN, Swiss, US consolidated screening list, Japan) have no entry with the INN, the OGRN, or the names «ИМЭНС» or «IMMENSE». Not checked: the Australian, Canadian and New Zealand lists, and OpenSanctions (monthly quota)."
+      }
     }
   ],
   "entities": {
@@ -29255,8 +29346,8 @@
             "text": "Two GoDrone-branded Ozon sellers found. The larger one (\"GoDrone\", seller_id 3980614) is RESOLVED as a different legal entity (ООО «ИНВИЖН ТРЕЙД», ИНН 7720907532 -- see marketplace_listings note) -- a third-party reseller, not this entity itself. The smaller \"GD\" account (seller_id 2520832) remains genuinely unresolved -- its sellerLegalInformation modal has still never been captured with content, and a direct curl attempt at the endpoint was blocked by Ozon's antibot (307)."
           },
           {
-            "text": "Алексей Дойников is named as GoDrone's co-founder by the company's channel (posts of 01.12.2024 and 10.03.2025), by its own site (the Иннопром.Беларусь news item, L0539), by TASS on 21.10.2024 (reprinted at vpk.name, L0540) and in a programme of 08.03.2025 that lists GoDrone as its supplier (L0541). Checked 26.10.2026: (1) the register extract of ООО «ГОУДРОН» lists only Козлов as owner and director, and the tax service's director/founder search on Козлов's INN finds only this company (L0528); (2) no other channel among the 171 held names him (258,638 posts searched); (3) a name search in the ЕГРЮЛ/ЕГРИП open register for «Дойников Алексей» returns 20 rows, all sole proprietors, and cannot say who founds a company. The one Moscow registration, Дойников Алексей Андреевич (ИНН 772161707648), was read in full (L0542): a freight-transport sole proprietor, 02.11.2022 to 18.12.2025, e-mail IPAADOYNIKOV@GMAIL.COM, nothing tying him to GoDrone, so not a match; (4) Ukraine's sanctions register has no Алексей Дойников (two namesakes, Юрий Васильевич and Олег Юрьевич); (5) the trademark register names only the company as holder of all three GoDrone marks. No INN, date of birth or role in any company is on file for him. Patents, 26.10.2026 (L0544): Google Patents, inventor «Дойников», Russian documents, 68 results; one Алексей, Алексей Валерьевич Дойников (a 2011 application from a state university, battery diagnostics), who cannot be tied to GoDrone; none with the company or the drone field. Google Patents' Russian coverage ends around 2020-2021, so recent filings are not covered; the FIPS registers were not searched. A document naming his INN is needed: a contract he signs, a court filing, a patent or software registration, or the on-screen caption of the RT DE report. He may be a brand co-founder with no shareholding.",
-            "source_id": "L0539"
+            "text": "Алексей Дойников is named GoDrone's co-founder by the company's channel (posts of 01.12.2024 and 10.03.2025), its own site (L0539), TASS on 21.10.2024 (reprinted L0540) and a programme of 08.03.2025 (L0541). He is not an owner or director in the register extract of ООО «ГОУДРОН». On 26.10.2026 the user identified him as the sole proprietor ДОЙНИКОВ АЛЕКСЕЙ АНДРЕЕВИЧ, ИНН 772161707648 (ЕГРИП extract L0542: freight transport, 02.11.2022 to 18.12.2025). That INN is the sole owner and general director, since 11.07.2025, of ООО «ИМЭНС» (ИНН 9717155759, wholesale of household electrical goods, ОКВЭД 46.43 as for ООО «ГОУДРОН»; extract L0545, tax-service search L0546), now recorded as ooo-imens. The matching of the co-founder to this INN rests on the user's identification: no document on file prints both the name «Алексей Дойников» of the co-founder and this INN. Still open: the document that does (a contract, a court filing, a patent or software registration, the RT DE report's caption); whether ООО «ИМЭНС» deals with ООО «ГОУДРОН»; whether he holds a stake in it that the register does not show. Searches that found nothing: Google Patents by inventor «Дойников» (68 Russian results, L0544); the 258,638 Telegram posts held; Ukraine's sanctions register by name and INN.",
+            "source_id": "L0542"
           },
           {
             "text": "Post 1862 (03.12.2025) says nearly 100 Mavic 4 drones were fitted with the company's coordinate-spoofing board «together with a large enterprise» and handed to fighters. The enterprise is not named; find it from the company's tenders, the post's comments or the buyer's own posts.",
