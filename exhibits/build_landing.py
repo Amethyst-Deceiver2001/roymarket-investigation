@@ -29,6 +29,15 @@ CHAINS = {"bulat": "https://claude.ai/artifact/6UaTv2jSwdNdfNUCibCwrf",
           "kapyushon": "https://claude.ai/artifact/5iYx5RsGmTRrAeooi8wdPd"}
 # The foundation story's private preview; the public page links it only once it is published in docs/.
 STORY = "https://claude.ai/artifact/DfLGJYwQY5mENE31J4tf8u"
+# One line under each company card's name, so a reader knows why to open it. Each line says only what that
+# company file itself sources.
+FILE_LINES = {
+    "ooo-trimiks": "Makes the «Bulat» drone detector, holds a patent on its design and is suing GoDrone over it",
+    "ovod": "Makes the «Ovod» family of FPV strike drones, some of them guided over optical fibre",
+    "ooo-goudron": "Trades as GoDrone and makes the «Nabat» drone detector; Trimiks is suing it over a detector patent",
+    "ooo-skb-piranya": "Makes the «Piranya» FPV strike drones and says it delivers drones directly to recipients in the «LNR» and «DNR»",
+    "csn-bars-sarmat": "Dmitry Rogozin's volunteer drone centre, which he says fights for the commander of the Airborne Forces",
+}
 # Other preview pages: (kind, title, one line, preview Artifact)
 MORE = [("People", "One person, many companies", "The people who direct or own two or more of the companies on file",
          "https://claude.ai/artifact/RDUCMFfzWc5G6f62sV9dTT", None),
@@ -478,15 +487,15 @@ class Landing(Chain):
              "TsBST re-posted a drone maker's footage of a strike and told servicemen they can order the two products used "
              "on its own marketplace."),
             ("doc", "A state bank and a donor foundation co-found it", "#h-hub",
-             "TsBST's registered co-founders are Bank PSB and the Nasha Pravda foundation, which has posted handovers of "
-             "drone detectors to military units."),
+             "TsBST's co-founders on the company register are Bank PSB, a state-owned bank, and the Nasha Pravda "
+             "foundation."),
             ("rep", "The ruling party among its founders and on its board", "#h-hub",
              "TsBST names United Russia as a third founder, and the head of the party's central executive committee is "
              "secretary of its supervisory board."),
             ("rep", "Supply to a front the UN names", "#h-front",
              "TsBST's circle supplies and recruits for units of the formation the UN names in its finding on drone attacks "
              "on civilians in Kherson. Nothing on file shows an item used against civilians."),
-            ("doc", "A platform that hides its operator", "#h-beyond",
+            ("doc", "A platform that hides its operator", "#h-operator",
              "ROI.MARKET's public terms print its operator as «****». An archived copy names MPTM, a company TsBST's own "
              "report to the Justice Ministry lists."),
         ]
@@ -712,12 +721,14 @@ class Landing(Chain):
                 ("none", k["none_found"], "no Wildberries seller carries their INN", ""),
                 ("unchecked", k["not_checked"], "not checked: no INN, or added later", "")]
         total = len(makers)
-        bar = "".join(f'<span class="seg {c}" style="flex-grow:{n}" title="{n}"></span>' for c, n, _, _ in segs if n)
+        tied = sum(1 for s in self.tied() if self.ents.get(s, {}).get("tier") == "manufacturer")
+        bar ="".join(f'<span class="seg {c}" style="flex-grow:{n}" title="{n}"></span>' for c, n, _, _ in segs if n)
         keys = "".join(f'<li><span class="sw {c}"></span><b>{n}</b> {esc(t)}{(": " + extra) if extra else ""}</li>'
                        for c, n, t, extra in segs)
         return (f'<figure class="test"><div class="bar" role="img" aria-label="{total} makers by Wildberries check result">{bar}</div>'
                 f'<figcaption><ul class="keys">{keys}</ul><p class="note">{total} makers on file, checked against the sellers '
-                f'in the earlier Wildberries dataset by INN. Counted from the registry.</p></figcaption></figure>')
+                f'in the earlier Wildberries dataset by INN: every maker the investigation has recorded, of which {tied} are '
+                f'tied to TsBST. Counted from the registry.</p></figcaption></figure>')
 
     def blind_spot(self):
         """What an INN screen of the maker sees, beside the storefronts the record actually holds for «Bulat»."""
@@ -727,16 +738,16 @@ class Landing(Chain):
             ent = self.ents.get(s.get("entity") or "")
             chan = re.sub(r"\s*\(.*", "", li.get("channel") or "")
             if ent and ent["slug"] == self.p["maker"]:
-                # The maker's brand page: the seller behind it is not the maker's INN, and has not been captured yet.
+                # The maker's brand page: the seller behind it is not the maker's INN, and is not on file.
                 if chan in seen:
                     continue
                 seen.add(chan)
-                who, kind = f'{self.en(ent)} brand page', "seller behind it not yet captured"
+                who, kind = f'{self.en(ent)} brand page', "seller not identified"
             else:
                 n = display_name(ent) if ent else {}
                 ip = ent and (n.get("legal") or n.get("head") or "").startswith("ИП ")
                 who = self.en(ent, pop=True) if ent else esc(latin_text(re.sub(r"\s*\(.*", "", s.get("storefront") or "")))
-                kind = "sole trader" if ip else ("company" if ent else "storefront, seller unidentified")
+                kind = "sole trader" if ip else ("company" if ent else "storefront, seller not identified")
             rows.append(f'<li><span class="ch">{esc(latin_text(chan))}</span><span class="who">{who}</span>'
                         f'<span class="k">{esc(kind)}</span>{self.ref(li.get("source_id"))}</li>')
         return (f'<div class="blind one">'
@@ -1192,14 +1203,14 @@ class Landing(Chain):
                         "The school's own channel: its recruitment video and its assembly bench.", big=2, lead=("m0052", "m0047"))
             + (f'<p class="note"><a href="{esc(MORE[1][3])}">The full «Arkhangel» file: products, parts list, partners and ties →</a></p>'
                if self.preview else "") +
-                        '<h3 class="rm-h3">What the units say about their targets</h3>'
+                        '<h3 class="rm-h3">What a front channel says about the targets</h3>'
             f'<p>The Commission reproduces posts of a Kherson-front channel, «From Mariupol to the Carpathians», as figures in '
             f'its paper{self.tref("un_crp")}. The channel signs its strike videos with the units\' names. Under footage of the '
             f'205th brigade:</p>'
             + self.oq("osv_27702", f'«From Mariupol to the Carpathians», Telegram, 23.07.2025{self.tref("osv_27702")}') + self.kstill("osv_27702") +
             '<p>Under a video of a van being struck in a residential yard:</p>'
             + self.oq("osv_19953", f'the same channel, 19.08.2024{self.tref("osv_19953")}') + self.kstill("osv_19953") +
-            '<p>And under the heading the platform used for its sellers:</p>'
+            '<p>And under “dual-use”, the label ROI.MARKET used for its sellers’ goods:</p>'
             + self.oq("osv_36192", f'the same channel, 24.07.2026{self.tref("osv_36192")}') + self.kstill("osv_36192")
             + self.oq("osv_38703", f'the same channel, 24.10.2026, over a clip watermarked by the 98th Airborne Division{self.tref("osv_38703")}') + self.kstill("osv_38703")
             + self.kherson_band() +
@@ -1217,21 +1228,23 @@ class Landing(Chain):
             f'that assigns incoming Ukrainian drones to mobile fire teams in Kursk region, and placed it inside a TsBST system:</p>'
             + self.oq("yakim", f"Sidyakin, Telegram, 15.10.2026{self.tref('yakim')}") +
             '<p class="note"><span class="rm-grade rep">Reported</span> Both are the parties\' own claims; no document on file '
-            'shows the system in service.</p>'
-            '<h3 class="rm-h3">The marketplace hides who runs it. An older copy does not</h3>'
+            'shows the system in service.</p>')
+
+    def operator(self):
+        """The operator's name, masked on the live terms and printed in an older copy, with TsBST's report row."""
+        return (
+            '<h3 class="rm-h3" id="h-operator">The marketplace hides who runs it. An older copy does not</h3>'
             f'<p>The platform\'s public terms print the operator as “OOO «****»”. A copy archived on 22.08.2026 names it: '
             f'{self.pop(MPTM)}, INN 9714068459. The privacy policy on the live site still names it, at a different address from the August '
             f'offer{self.tref("privacy")}. TsBST\'s own report to the Justice Ministry lists the same company as one it has '
-            f'taken part in since the day it was registered.</p>{self.masked()}{self.offer_collage()}'
-            )
+            f'taken part in since the day it was registered.</p>{self.masked()}{self.offer_collage()}')
 
     def origin(self):
         """The platform: who launched it, whom it recruits, the operator it hides, and where the products go instead."""
         recruit = self.mclaim(MPTM, "s8854")
         return (
             f'<p class="lede">The front above is where TsBST\'s circle says its goods and recruits go. The platform TsBST points servicemen to is ROI.MARKET. '
-            f'In December 2025 Sidyakin wrote that the party, Bank PSB and TsBST had launched a military '
-            f'marketplace{self.ref("s8847")}. In August 2026 it opened to outside sellers and named the ones it wanted first:</p>'
+            f'In August 2026 it opened to outside sellers and named the ones it wanted first:</p>'
             + quote_html(recruit["text_ru"], latinize_gloss(recruit["text_en"]),
                          f"ROI.MARKET's announcement, {ru_date(recruit['as_of'])}{self.ref(recruit['source_id'])}", "q-recruit")
             + self.step_shot(3, "ROI.MARKET's page for prospective sellers, 24.10.2026. The catalogue itself is behind a login.")
@@ -1270,7 +1283,7 @@ class Landing(Chain):
         for slug, url in COMPANY_PAGES.items():
             e = self.ents[slug]
             href = url if preview else None
-            nm = self.name(e, sub=False)
+            nm = self.name(e, sub=False) + (f'<small>{esc(FILE_LINES[slug])}</small>' if slug in FILE_LINES else "")
             ref = ""
             if href:   # a footnote link inside the name link would nest two <a>: park it after the name instead
                 m = re.search(r'<sup class="rm-ref">.*?</sup>', nm)
@@ -1399,7 +1412,7 @@ def render(preview: bool, out: Path):
                        f"{ru_date(handed[-1]['published'])}: deliveries of «Bulat» detectors and other kit to units. A handover "
                        "does not show use in combat.", big=3, lead=("m0085", "m0083", "m0087")) if handed else ""
     front = L.front()
-    beyond = L.beyond_shop()
+    beyond, operator = L.beyond_shop(), L.operator()
     origin, timeline = L.origin(), L.timeline()
     chains = "".join(L.chain_card(s, url if preview else (f"chain_{s}.html" if (out.parent / f"chain_{s}.html").exists() else None))
                      for s, url in CHAINS.items())
@@ -1438,7 +1451,7 @@ def render(preview: bool, out: Path):
 {design_head((REPO / 'exhibits' / 'landing.css').read_text(), None if preview else 'fonts/fonts.css')}</head>
 <body>
 <div class="hero"{hero_style}><header class="rm-page top">
-  <p class="rm-eyebrow">Draft · {ru_date(today)}</p>
+  {f'<p class="rm-eyebrow">Draft · {ru_date(today)}</p>' if preview else ''}
   <h1 class="rm-h1">TsBST and ROI.MARKET <span class="rm-muted">a Moscow non-profit, its military marketplace, and the drone-war supply around it</span></h1>
   <p class="rm-dek">An open-source investigation of ANO «TsBST», a Moscow non-profit for the drone industry, and of the
   companies around it: what they make, who sells it, and which military units receive it. Every claim rests on an
@@ -1489,6 +1502,7 @@ def render(preview: bool, out: Path):
     {origin}
     <h3 class="rm-h3">The dates</h3>
     {timeline}
+    {operator}
   </section>
 
   <section class="beyond" aria-labelledby="h-beyond">

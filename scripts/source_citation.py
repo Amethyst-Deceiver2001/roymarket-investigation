@@ -17,7 +17,7 @@ import html
 import re
 from pathlib import Path
 
-CITE_VERSION = 10
+CITE_VERSION = 11
 REPO = Path(__file__).resolve().parent.parent
 
 
@@ -339,6 +339,12 @@ def _cite(s: dict, f: dict | None) -> tuple[str, str | None]:
         site = _site(url)
         title = f"«{f['page_title']}», " if f.get("page_title") else ""
         return f"{title}{site or 'press article'}{dated}", url
+    if name.startswith("extract-DRS-"):
+        return f"Ukraine's State Register of Sanctions (NSDC), record extract{dated}", "https://drs.nsdc.gov.ua/"
+    m = re.match(r"SITE_[0-9A-Z]+_\d{8}_.+?-(logo|banner|brand|product(?:-photo)?)\.\w+$", name)
+    if m and not url and not f.get("page_title"):   # a picture saved from the company's site, with no page of its own
+        what = {"logo": "Logo", "brand": "Brand mark"}.get(m.group(1), "Picture")
+        return f"{what} from the company's own website, archived {date}".rstrip(", "), None
     if prefix in ("WEBCAPTURE", "SITE", "WEB"):
         site = _site(url)
         title = f"«{f['page_title']}», " if f.get("page_title") else ""

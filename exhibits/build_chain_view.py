@@ -123,7 +123,8 @@ def describe_source(s):
     """A reader-facing description and public link for one sources.json record. Both are derived once per
     source by scripts/source_citation.py (B4) and stored on the record; a page never builds its own."""
     title = s.get("title") or ""
-    if not title or title.startswith("Archived document"):   # a rule added since the Mac last catalogued it
+    # a generic fallback title: a rule may have been added since the Mac last catalogued it
+    if not title or title.startswith("Archived document") or re.fullmatch(r"Web page, archived [\d.]+", title):
         title = cite(s, None)[0]
     return reader_terms(title), s.get("public_url")
 
@@ -194,6 +195,9 @@ class Chain:
         if legal.startswith("ИП "):
             pn = person_names(legal)
             return name_html(pn["first"], pn["fio"], key=e["slug"]) if pop else esc(pn["first"])
+        tr = translation(legal)   # a state body or party: its English name, the official form under RU (§2.3a)
+        if tr and tr.get("kind") in ("state_body", "local_government", "political_party"):
+            return name_html(tr["en"], legal, n["latin"], key=e["slug"]) if pop else esc(tr["en"])
         vis = latin_text(n["head"]) if n["legal"] else n["latin"]
         return name_html(vis, legal, key=e["slug"]) if pop else esc(vis)
 
