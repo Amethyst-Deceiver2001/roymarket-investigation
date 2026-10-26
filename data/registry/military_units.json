@@ -941,5 +941,34 @@
         "as_of": "2026-09-24"
       }
     ]
+  },
+  {
+    "slug": "добровольческий-корпус",
+    "name_ru": "Добровольческий корпус",
+    "unit_type": "grouping",
+    "designation_confidence": "named",
+    "parent_grouping": null,
+    "sector_direction_history": [],
+    "notes": "Named as the recipient of the thank-you letter of 27.03.2026 shown in the post of 05.04.2026 (L0535, delivery h0137): «Командир Добровольческого корпуса … Д.Барило». No number, parent formation or в/ч is stated anywhere on file. A press article of 06.10.2024 (L0543, read in full) calls Барило «Командир добровольческого корпуса «Князь Владимир»»; that «Князь Владимир» is the same body as the letter's «Добровольческий корпус» rests on the common commander's name and on the user's statement (26.10.2026), so it is a lead, not recorded as the unit's name.",
+    "sources": [
+      "L0535",
+      "L0543"
+    ],
+    "names": [
+      {
+        "form": "post_wording",
+        "value": "Добровольческого корпуса",
+        "grade": "stated",
+        "source_id": "L0535",
+        "as_of": "2026-04-05"
+      },
+      {
+        "form": "informal",
+        "value": "«Князь Владимир»",
+        "grade": "lead",
+        "source_id": "L0543",
+        "as_of": "2024-10-06"
+      }
+    ]
   }
 ]
