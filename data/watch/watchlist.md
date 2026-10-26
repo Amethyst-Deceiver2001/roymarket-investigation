@@ -34,7 +34,7 @@ Not readable from the cloud: the two private invite chats (Архангел memb
 - «МПТМ», «Спецтех Инвестиции», «Системный интегратор» + ЦБСТ
 - «Ушкуйник», «Дронница», «Акселератор спецтехпроектов»
 - Sanctions: new EU / UK / US (OFAC) / Ukraine (РНБО, war-sanctions.gur.gov.ua) packages naming any registry entity or person
-- English: "Roy.Market" OR "ROY.MARKET" drone marketplace; "Center for Unmanned Systems and Technologies"
+- English: "Roy.Market" OR "ROY.MARKET" OR "ROI.MARKET" OR "roimarket" drone marketplace; "Center for Unmanned Systems and Technologies"
 
 ## Method (what the routine does)
 

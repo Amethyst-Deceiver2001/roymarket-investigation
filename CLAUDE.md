@@ -22,7 +22,7 @@ Current work (25.10.2026):
 
 ## Settled facts: never raise these as open work
 
-- **ROY.MARKET has no public catalogue.** It is behind a login; its public pages are the legal terms, offer, payment, delivery, returns and contacts. That is the premise of the investigation. What is "on the platform" is known only from the operator's posts, the supplier offer, vendors' own posts and the press. Never write "check the catalogue" or "not yet checked" on a page, in a brief or in a note. Say the catalogue is not public and grade the listing by who claims it. Ask before assuming any access.
+- **ROI.MARKET has no public catalogue.** It is behind a login; its public pages are the legal terms, offer, payment, delivery, returns and contacts. That is the premise of the investigation. What is "on the platform" is known only from the operator's posts, the supplier offer, vendors' own posts and the press. Never write "check the catalogue" or "not yet checked" on a page, in a brief or in a note. Say the catalogue is not public and grade the listing by who claims it. Ask before assuming any access.
 - **GitHub Actions is abandoned** (no minutes since 10.10). The checks, Wayback and sanctions workflows do not run. A red or missing run means nothing: do not report, fix, re-run or schedule it. `.github/workflows/` stays in the tree; nothing depends on it.
 - **The daily round is retired** (24.10.2026). There is no launch agent and no 09:15 job; the last round report is 06.10. `daily_mac.py`, `status_board.py --pull-queue` and `first_reading.py` run by hand when the user asks. `ops/launchd/` stays in the tree, not installed. A missed day is not a fault to report.
 - **Retired, kept by hand only:**

@@ -2,7 +2,7 @@
 
 Built from `data/registry/open_questions.json` (44 entries: oq001–oq027, src001–src017), the open `brief_items.json` entries, and the FBK exhibit read (`notes/fbk_images_analysis_20261024.md`). **A work list, not a fact file; nothing here is registered.** Ranked by what it does for the sanctions case (a claim a hostile lawyer can test) and by whether it can be done now, from here.
 
-Rules applied: no catalogue checks (ROY.MARKET is login-only), no warehouse hunt (oq001 stays a caveat), no CI or daily-round items. "User" means the user runs the job (live third-party work at scale).
+Rules applied: no catalogue checks (ROI.MARKET is login-only), no warehouse hunt (oq001 stays a caveat), no CI or daily-round items. "User" means the user runs the job (live third-party work at scale).
 
 ## What the 44 entries really are
 

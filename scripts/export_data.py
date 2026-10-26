@@ -50,7 +50,7 @@ REG = ROOT / "data" / "registry"
 sys.path.insert(0, str(ROOT / "scripts"))
 from display_helpers import display_name  # noqa: E402
 
-PUBLISHER = "RoyMarket / ЦБСТ investigation registry"
+PUBLISHER = "Roimarket / ЦБСТ investigation registry"
 GRADE_WORD = {"doc": "documented", "rep": "reported", "open": "not documented"}
 ORG_FORMS = {"АНО", "Фонд", "Ассоциация", "Общественная организация", "Некоммерческое партнёрство"}
 OWNERSHIP_EDGES = {"founded": "founder", "owns": "owner"}

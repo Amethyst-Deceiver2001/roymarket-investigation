@@ -123,7 +123,7 @@ The only red on a page. It marks an entity under sanctions and always names the 
 <h3 class="rm-name">3mx<small class="lat" lang="ru-Latn">OOO «Trimiks»<sup class="rm-ref"><a href="#">4</a></sup></small><small class="cyr" lang="ru">ООО «Тримикс»</small></h3><p>Revenue 2023: ₽45.6m<sup class="rm-ref"><a href="#">5</a></sup></p>
 <p><span class="rm-id">ИНН 7802942873</span></p></article>
 <article class="rm-card absent" style="width:240px"><header><span class="rm-kind">{kind_icon("storefront")}Not sold here</span></header>
-<h3 class="rm-name">ROY.MARKET<small class="cyr" lang="ru">РОЙ.МАРКЕТ</small></h3><p>No listing found.</p></article>
+<h3 class="rm-name">ROI.MARKET<small class="cyr" lang="ru">РОЙ.МАРКЕТ</small></h3><p>No listing found.</p></article>
 <article class="rm-card" style="width:240px"><header><span class="rm-kind">{kind_icon("storefront")}Sells</span></header>
 <h3 class="rm-name">Ruslan Kuznetsov<small>Sole trader (IP)</small><small class="cyr" lang="ru">ИП Кузнецов Руслан Николаевич</small></h3><p>own site 921921.ru</p></article>
 <article class="rm-card" style="width:240px"><header><span class="rm-kind">{kind_icon("buyer")}State buyer</span></header>

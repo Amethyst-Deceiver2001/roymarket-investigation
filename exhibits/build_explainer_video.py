@@ -164,7 +164,7 @@ def scene_title(D):
         d.text((128, 246), "Фонд «Наша Правда»", font=bold(64), fill=tuple(int(PAPER[i] + (INK[i] - PAPER[i]) * a) for i in range(3)))
         d.text((128, 340), "Money in, equipment out:", font=sans(34), fill=INK2)
         d.text((128, 384), "what a donor foundation reports delivering", font=sans(34), fill=INK2)
-        d.text((128, 450), "ROYMARKET INVESTIGATION  ·  OPEN-SOURCE RECORD", font=mono(15), fill=INK3)
+        d.text((128, 450), "ROIMARKET INVESTIGATION  ·  OPEN-SOURCE RECORD", font=mono(15), fill=INK3)
         return im
     return f, 4.5
 

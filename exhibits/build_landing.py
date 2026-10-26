@@ -54,7 +54,7 @@ OPENING_SOURCES = {
     "cbst_1976": ("Telegram, @ANO_CBST, post 1976, 17.03.2026", "https://t.me/ANO_CBST/1976"),
     "yakim": ("Telegram, @asidyakin (Alexander Sidyakin), post 1405, 15.10.2026", "https://t.me/asidyakin/1405"),
     # The supplier page and the Kherson section (24.10.2026): saved as WEBCAPTURE/PDF files on this machine, not catalogued.
-    "rm_aug": ("ROY.MARKET, «Начать продавать на РОЙ.МАРКЕТ» (page for prospective sellers), Internet Archive copy of 22.08.2026",
+    "rm_aug": ("ROI.MARKET, «Начать продавать на РОЙ.МАРКЕТ» (page for prospective sellers), Internet Archive copy of 22.08.2026",
                "https://web.archive.org/web/20260822091346/https://xn--80akkfikneu.xn--p1ai/"),
     "rm_oct": ("The same page, Internet Archive copy of 12.10.2026",
                "https://web.archive.org/web/20261012125816/https://xn--80akkfikneu.xn--p1ai/"),
@@ -86,7 +86,7 @@ OPENING_SOURCES = {
     "gag_2811": ("Telegram, @my_el_lab (Gagaring), post 2811, 23.12.2025", "https://t.me/my_el_lab/2811"),
     # Pictures in the ties diagram (25.10.2026): the credit and licence the photograph needs travel with it.
     "sid_photo": ("Photograph of Aleksandr Sidyakin by Karmaks, 28.09.2016, Wikimedia Commons, licence CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:SidyakinA.G..jpg"),
-    "privacy": ("ROY.MARKET privacy policy, revision 2.0, on roimarket.ru, captured 26.10.2026", "https://roimarket.ru/privacy"),
+    "privacy": ("ROI.MARKET privacy policy, revision 2.0, on roimarket.ru, captured 26.10.2026", "https://roimarket.ru/privacy"),
     "deepstate": ("DeepState, the map of the front line, latest state of 23.10.2026 (its own data download); the Russian-held area is drawn from it",
                   "https://deepstatemap.live/en"),
     "emb_sv": ("Small emblem of the Russian Ground Forces (collar insignia), public domain, Wikimedia Commons",
@@ -95,16 +95,16 @@ OPENING_SOURCES = {
                 "https://commons.wikimedia.org/wiki/File:Small_emblem_of_the_Russian_Airborne_Forces.svg"),
     "emb_gru": ("Emblem of the GRU's special-purpose units as circulated (not an official emblem), public domain, Wikimedia Commons",
                 "https://commons.wikimedia.org/wiki/File:Spetsnaz_emblem.svg"),
-    "rm_logo": ("ROY.MARKET's logo, as served by the platform's own site, roimarket.ru", "https://roimarket.ru/logo-400.png"),
+    "rm_logo": ("ROI.MARKET's logo, as served by the platform's own site, roimarket.ru", "https://roimarket.ru/logo-400.png"),
     "er_logo": ("United Russia's logo, as hosted on Russian Wikipedia and credited there to the party's official site",
                 "https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_%D0%BF%D0%B0%D1%80%D1%82%D0%B8%D0%B8_%22%D0%95%D0%B4%D0%B8%D0%BD%D0%B0%D1%8F_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%22.svg"),
 }
 # Two lines of the supplier page, read from the saved copies; not in the Telegram scrape, so not checked by oq().
 SUPPLIER_LINES = {
     "dual": ("РОЙ.МАРКЕТ - защищённый канал продаж товаров двойного назначения.",
-             "ROY.MARKET is a secure sales channel for dual-use goods."),
+             "ROI.MARKET is a secure sales channel for dual-use goods."),
     "special": ("РОЙ.МАРКЕТ - защищённый канал продаж товаров специального назначения.",
-                "ROY.MARKET is a secure sales channel for special-purpose goods."),
+                "ROI.MARKET is a secure sales channel for special-purpose goods."),
 }
 # English-original passages of the UN papers, copied from the PDFs (A/HRC/59/CRP.2 para 42; A/80/497 para 40).
 UN_QUOTES = {
@@ -123,13 +123,13 @@ OPENING_QUOTES = {   # key: (channel, post, verbatim Russian, our translation)
              "Военнослужащие могут заказать их на специализированной платформе товаров двойного назначения РОЙ.МАРКЕТ.",
              "“The trident came unstuck”: a TsBST resident showed footage of the strike on the Ukrainian administration of "
              "Zaporizhzhia […] The strike was carried out by a kamikaze drone using the «Kuznechik» communication system and "
-             "the «Sova 5.8» remote video receiver. […] Servicemen can order them on ROY.MARKET, the specialised platform "
+             "the «Sova 5.8» remote video receiver. […] Servicemen can order them on ROI.MARKET, the specialised platform "
              "for dual-use goods."),
     "tsentr": ("ANO_CBST", 2610,
                "Учения посетил Президент России Владимир Путин. […] В ходе выставки представители ЦБСТ договорились более "
                "чем с 10 участниками о размещении их ассортимента на платформе РОЙ.МАРКЕТ.",
                "The exercise was visited by the President of Russia, Vladimir Putin. […] During the exhibition, TsBST "
-               "representatives agreed with more than 10 participants to place their range on the ROY.MARKET platform."),
+               "representatives agreed with more than 10 participants to place their range on the ROI.MARKET platform."),
     "yakim": ("asidyakin", 1405,
               "Это часть системы «Яким», которая разработана ЦБСТ и уже год помогает контролировать воздушное пространство "
               "региона. […] В будущем планируем связать «Яким» с военной системой «Свод» для лучшего анализа ситуации. "
@@ -202,14 +202,14 @@ OPENING_QUOTES = {   # key: (channel, post, verbatim Russian, our translation)
 # record: they appear on the private preview only, never in a docs/ build, and move to media.json once catalogued.
 # key: (post, file in exhibits/images/kherson, what the frame shows, verbatim Russian from the post, our translation)
 # Two of the six pictures of ЦБСТ's own album from the «Tsentr-2026» exercise (post 2605–2610, 04.10.2026): its stall and
-# the ROY.MARKET booklet. The other four (the range) are not used. Each looked at full size 24.10.2026. Fetched from the public preview; not catalogued on this Mac (no source ids here), so like the Kherson
+# the ROI.MARKET booklet. The other four (the range) are not used. Each looked at full size 24.10.2026. Fetched from the public preview; not catalogued on this Mac (no source ids here), so like the Kherson
 # stills they appear on the private preview only. key: (file in exhibits/images/center2026, what the frame shows,
 # (verbatim Russian, English) of a line printed in it or None)
 CENTER_STILLS = [
-    ("c2605-1.jpg", "The stand under camouflage netting: a roll-up banner with the TsBST and ROY.MARKET logos and a QR code, a "
+    ("c2605-1.jpg", "The stand under camouflage netting: a roll-up banner with the TsBST and ROI.MARKET logos and a QR code, a "
      "monitor, a laptop and papers on the table. The face of the man standing at the stand is blurred in the post itself; "
      "we leave it so.", ("Технологии превосходства", "Technologies of superiority")),
-    ("c2605-2.jpg", "Folded ROY.MARKET leaflets and a red round patch. Each leaflet shows a gimbal camera and is printed "
+    ("c2605-2.jpg", "Folded ROI.MARKET leaflets and a red round patch. Each leaflet shows a gimbal camera and is printed "
      "“3000+” product items.", None),
 ]
 
@@ -317,7 +317,7 @@ class Landing(Chain):
                      f"lists MPTM, in its report for 2025, as a company it has taken part in since {ru_date(sub['as_of'])}; "
                      "the size of its share is not stated",
                      self.ref(sub.get("source_id")), self.ents[MPTM]))
-        rows.append((self.ents[MPTM], self.g(offer), "the operator of the ROY.MARKET marketplace, by the platform's own supplier offer",
+        rows.append((self.ents[MPTM], self.g(offer), "the operator of the ROI.MARKET marketplace, by the platform's own supplier offer",
                      self.ref(offer), None))
         stock = next((c for c in self.p.get("claims") or [] if c.get("metric") == "donor_stock" and c.get("entity") == NP), None)
         if stock:
@@ -404,7 +404,7 @@ class Landing(Chain):
              node("sid", 380, 270, 190, "Aleksandr Sidyakin", "board secretary", pic=pics.get("sid")),
              node("units", 760, 22, 140, "Military units", "recipients"),
              node("mptm", 760, 146, 140, lat(MPTM), "company"),
-             node("rm", 970, 146, 170, "ROY.MARKET", "login-only catalogue", pic=pics.get("rm"))]
+             node("rm", 970, 146, 170, "ROI.MARKET", "login-only catalogue", pic=pics.get("rm"))]
         e = [edge("np", "cbst", gr["np"], "co-founder", by=160, dx=-14, dy=-14),
              edge("psb", "cbst", gr["psb"], "co-founder", by=175, dx=-4, dy=-5),
              edge("ur", "cbst", gr["ur"], "named by TsBST as a founder", by=190, dx=46, dy=2),
@@ -450,7 +450,7 @@ class Landing(Chain):
                 f'<figcaption>Line style is the grade of the evidence, as in the key at the foot of the page. The notes for each '
                 f'line are in the list. The emblems under "Military units" stand for the kinds of unit the posts name as recipients: '
                 f'{", ".join(self._arm_names)}. They do not say which unit got which item. Pictures: Sidyakin, Karmaks, 2016, CC BY-SA 4.0{self.tref("sid_photo")}; the party\'s '
-                f'logo{self.tref("er_logo")}; ROY.MARKET\'s logo from its own site{self.tref("rm_logo")}.</figcaption></figure>')
+                f'logo{self.tref("er_logo")}; ROI.MARKET\'s logo from its own site{self.tref("rm_logo")}.</figcaption></figure>')
 
     def found(self, n, sanc):
         """What the investigation found, in five lines, each graded, each pointing to its section. Says nothing the
@@ -469,7 +469,7 @@ class Landing(Chain):
              "TsBST's circle supplies and recruits for units of the formation the UN names in its finding on drone attacks "
              "on civilians in Kherson. Nothing on file shows an item used against civilians."),
             ("doc", "A platform that hides its operator", "#h-beyond",
-             "ROY.MARKET's public terms print its operator as «****». An archived copy names MPTM, a company TsBST's own "
+             "ROI.MARKET's public terms print its operator as «****». An archived copy names MPTM, a company TsBST's own "
              "report to the Justice Ministry lists."),
         ]
         cards = "".join(
@@ -745,7 +745,7 @@ class Landing(Chain):
         p = []
         a, ra = box(10, 20, 170, "Wildberries and|Ozon sellers")
         b, rb = box(10, 100, 170, "TsBST residents")
-        c, rc = box(250, 58, 150, "ROY.MARKET", "hub")
+        c, rc = box(250, 58, 150, "ROI.MARKET", "hub")
         d, rd = box(470, 58, 150, "Military|units")
         p += [a, b, c, d, arrow(ra, rc, "open"), arrow(rb, rc, "open"), arrow(rc, rd, "open")]
         one = f'<svg viewBox="0 0 630 160" class="mdl" role="img" aria-label="First hypothesis">{defs}{"".join(p)}</svg>'
@@ -753,7 +753,7 @@ class Landing(Chain):
         h, rh = box(10, 100, 150, "TsBST, United|Russia, Bank PSB,|Nasha Pravda", "hub")
         m, rm = box(210, 112, 120, "Maker")
         outs = [("Dealers and|marketplaces", "doc", 10), ("State|contracts", "doc", 80), ("Donor foundation|handovers", "rep", 150),
-                ("ROY.MARKET|(other sellers)", "rep", 220)]
+                ("ROI.MARKET|(other sellers)", "rep", 220)]
         u, ru = box(560, 112, 90, "Military|units")
         p += [h, m, u, arrow(rh, rm, "doc")]
         for t, g, y in outs:
@@ -929,13 +929,13 @@ class Landing(Chain):
             self.templates[f"c{n}"] = (
                 f'<figure class="rm-fig"><div class="frame"><img src="{esc(rel)}" alt="{esc(shows)}"></div><figcaption>'
                 f'<span class="rm-prov">Posted by TsBST itself, picture {n} of 6 in the album</span><span>{esc(shows)}{printed} '
-                f'The post\'s caption says TsBST presented ROY.MARKET at the main stage of the exercise; it does not '
+                f'The post\'s caption says TsBST presented ROI.MARKET at the main stage of the exercise; it does not '
                 f'describe the pictures.{self.tref("tsentr_pics")}</span><span class="when">04.10.2026</span></figcaption></figure>')
             tiles.append(self.tile(f"fig-c{n}", rel, shows, self.tile_label(shows, "04.10.2026"), big=len(tiles) < 2))
         if not tiles:
             return ""
         return (f'<figure class="band"><div class="band-grid">{"".join(tiles)}</div><figcaption><span class="rm-label">'
-                f'Pictures · {len(tiles)}</span> TsBST\'s own stall at the exercise, and ROY.MARKET\'s printed booklet and patch. '
+                f'Pictures · {len(tiles)}</span> TsBST\'s own stall at the exercise, and ROI.MARKET\'s printed booklet and patch. '
                 f'Neither shows a listing on the platform. Each opens with its caption, date and source.</figcaption></figure>')
 
     def opening(self):
@@ -946,7 +946,7 @@ class Landing(Chain):
         nodes = [("8 October", "Zaporizhzhia", "The head of the regional administration reports that an FPV drone hit the coat of arms on its building.", "rep"),
                  ("19 October", "Gagaring", "The maker posts a video of “the results” of its Kuznechik and Sova 5.8.", "rep"),
                  ("20 October", "TsBST", "Re-posts it as “a TsBST resident showed footage of the strike” and names both products.", "rep"),
-                 ("Order line", "ROY.MARKET", "TsBST says servicemen can order both products there. The catalogue is behind a login: the post is the only evidence they are listed.", "rep")]
+                 ("Order line", "ROI.MARKET", "TsBST says servicemen can order both products there. The catalogue is behind a login: the post is the only evidence they are listed.", "rep")]
         joins = [("open", "neither post dates the strike"), ("rep", "same video"), ("rep", "sales line")]
         return (
             self.gag_video()
@@ -960,7 +960,7 @@ class Landing(Chain):
             + f'<ol class="flow" aria-label="From the strike report to the order line">{self.flow_html(nodes, joins)}</ol>' +
             f'<p>TsBST\'s post calls the city “occupied”. Zaporizhzhia is held by Ukraine, and the building is the seat of its '
             f'regional government. On 8 October the head of the regional administration reported that an FPV drone had hit the coat '
-            f'of arms on its façade: smoke, no fire, nobody hurt{self.tref("ukrinform")}. ROY.MARKET is a login-only '
+            f'of arms on its façade: smoke, no fire, nobody hurt{self.tref("ukrinform")}. ROI.MARKET is a login-only '
             f'marketplace that, by the post of TsBST\'s board secretary, a United Russia official, TsBST launched with the party '
             f'and Bank PSB{self.ref("s8847")}. '
             + ("" if listed else "No sanctions listing for the maker is on file. ") +
@@ -990,8 +990,8 @@ class Landing(Chain):
         ("opening/tsbst-post-2677.jpg", "TsBST's post, 20.10.2026",
          "Screenshot of TsBST's Telegram post of 20 October 2026: the same video, the headline «The trident came unstuck» "
          "(Russian original) and the sales line.", "cbst"),
-        ("opening/roymarket-supplier-page.jpg", "ROY.MARKET's public page, 24.10.2026",
-         "Screenshot of ROY.MARKET's public page for prospective sellers as it read on 24 October 2026. The catalogue itself "
+        ("opening/roymarket-supplier-page.jpg", "ROI.MARKET's public page, 24.10.2026",
+         "Screenshot of ROI.MARKET's public page for prospective sellers as it read on 24 October 2026. The catalogue itself "
          "is behind a login.", "rm_now"),
     ]
 
@@ -1180,7 +1180,7 @@ class Landing(Chain):
     def beyond_shop(self):
         """Two of TsBST's own lines on what it does besides the shop."""
         return (
-            '<p>TsBST presents itself as a support body for drone makers, and ROY.MARKET as a catalogue. Its own posts, and those '
+            '<p>TsBST presents itself as a support body for drone makers, and ROI.MARKET as a catalogue. Its own posts, and those '
             'of its board secretary, describe more. It says it showed the marketplace at «Tsentr-2026», a strategic '
             'military exercise with delegations from 41 countries, and signed up sellers there:</p>'
             + self.oq("tsentr", f"TsBST, Telegram, 04.10.2026{self.tref('tsentr')}") + self.center_band() +
@@ -1200,12 +1200,12 @@ class Landing(Chain):
         """The platform: who launched it, whom it recruits, the operator it hides, and where the products go instead."""
         recruit = self.mclaim(MPTM, "s8854")
         return (
-            f'<p class="lede">The front above is where TsBST\'s circle says its goods and recruits go. The platform TsBST points servicemen to is ROY.MARKET. '
+            f'<p class="lede">The front above is where TsBST\'s circle says its goods and recruits go. The platform TsBST points servicemen to is ROI.MARKET. '
             f'In December 2025 Sidyakin wrote that the party, Bank PSB and TsBST had launched a military '
             f'marketplace{self.ref("s8847")}. In August 2026 it opened to outside sellers and named the ones it wanted first:</p>'
             + quote_html(recruit["text_ru"], latinize_gloss(recruit["text_en"]),
-                         f"ROY.MARKET's announcement, {ru_date(recruit['as_of'])}{self.ref(recruit['source_id'])}", "q-recruit")
-            + self.step_shot(3, "ROY.MARKET's page for prospective sellers, 24.10.2026. The catalogue itself is behind a login.")
+                         f"ROI.MARKET's announcement, {ru_date(recruit['as_of'])}{self.ref(recruit['source_id'])}", "q-recruit")
+            + self.step_shot(3, "ROI.MARKET's page for prospective sellers, 24.10.2026. The catalogue itself is behind a login.")
             + '<h3 class="rm-h3">One outlet among several</h3>'
             '<p>«Bulat», a drone detector shown at Dronnitsa 2025, a showcase TsBST takes part in, is sold through dealers and '
             'sole traders, and a foundation that co-founded TsBST buys it and posts the handovers. No Wildberries seller carries '
@@ -1218,7 +1218,7 @@ class Landing(Chain):
             ("We had been watching Wildberries",
              '<p>The investigation started as <a href="https://amethyst-deceiver2001.github.io/wb-watcher/">WB Watch</a>, a tracker of '
              'military goods sold on Russia\'s largest consumer marketplace. It found a large, open trade in kit for the war. '
-             'ROY.MARKET then invited “first of all” sellers already on Wildberries and Ozon: the seller base already mapped.</p>'
+             'ROI.MARKET then invited “first of all” sellers already on Wildberries and Ozon: the seller base already mapped.</p>'
              '<div class="figs"><div class="fig"><span class="n">7,666</span><span class="w">military-item listings</span></div>'
              '<div class="fig"><span class="n">89%</span><span class="w">shipped from Wildberries\' own warehouses</span></div>'
              '<div class="fig"><span class="n">802</span><span class="w">sellers</span></div></div>'),
@@ -1395,17 +1395,17 @@ def render(preview: bool, out: Path):
     doc = f"""<!doctype html>
 <!-- Generated by exhibits/build_landing.py from data/registry on {today}. Do not edit by hand. -->
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ROY.MARKET Investigation</title>
-<meta name="description" content="An open-source investigation of ANO TsBST, a Moscow non-profit for the drone industry, its military marketplace ROY.MARKET, and the companies, products and handovers around them. Every claim is graded by the document behind it.">
-<meta property="og:type" content="article"><meta property="og:site_name" content="ROY.MARKET Investigation">
-<meta property="og:title" content="TsBST and ROY.MARKET: a Moscow non-profit, its military marketplace, and the drone-war supply around it">
+<title>ROI.MARKET Investigation</title>
+<meta name="description" content="An open-source investigation of ANO TsBST, a Moscow non-profit for the drone industry, its military marketplace ROI.MARKET, and the companies, products and handovers around them. Every claim is graded by the document behind it.">
+<meta property="og:type" content="article"><meta property="og:site_name" content="ROI.MARKET Investigation">
+<meta property="og:title" content="TsBST and ROI.MARKET: a Moscow non-profit, its military marketplace, and the drone-war supply around it">
 <meta property="og:description" content="Every claim rests on an archived document and is graded by how well that document shows it.">
 <meta name="twitter:card" content="summary">
 {design_head((REPO / 'exhibits' / 'landing.css').read_text(), None if preview else 'fonts/fonts.css')}</head>
 <body>
 <div class="hero"{hero_style}><header class="rm-page top">
   <p class="rm-eyebrow">Draft · {ru_date(today)}</p>
-  <h1 class="rm-h1">TsBST and ROY.MARKET <span class="rm-muted">a Moscow non-profit, its military marketplace, and the drone-war supply around it</span></h1>
+  <h1 class="rm-h1">TsBST and ROI.MARKET <span class="rm-muted">a Moscow non-profit, its military marketplace, and the drone-war supply around it</span></h1>
   <p class="rm-dek">An open-source investigation of ANO «TsBST», a Moscow non-profit for the drone industry, and of the
   companies around it: what they make, who sells it, and which military units receive it. Every claim rests on an
   archived document and is graded by how well that document shows it.</p>
@@ -1423,7 +1423,7 @@ def render(preview: bool, out: Path):
     <details open><summary><h2 class="rm-h2" id="h-limits">What this does not show</h2></summary>
     <ul>
       <li>A handover to a unit does not show that the equipment was used in combat. Some recipients are rear units.</li>
-      <li>TsBST's share in the company that runs ROY.MARKET is not stated in any document on file, and since
+      <li>TsBST's share in the company that runs ROI.MARKET is not stated in any document on file, and since
       {restr_date} the company register withholds who owns that company{restr_ref}.</li>
       <li>A US sanctions entry under a similar name belongs to a different company registered in Tula. TsBST itself is
       not shown here as sanctioned by the US.</li>

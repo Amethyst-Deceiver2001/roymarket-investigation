@@ -433,7 +433,7 @@ attached, never dropped. One helper renders it (`display_helpers.name_html()`,
   Kursk Oblast, Belgorod), otherwise transliterated. Places with a conventional form
   are listed in `data/registry/name_translations.json`.
 - **Brands, products, events**: transliterated, with the Cyrillic beneath on a card
-  or in a popover in prose: «Bulat» («Булат»), Dronnitsa 2025, ROY.MARKET. Acronyms
+  or in a popover in prose: «Bulat» («Булат»), Dronnitsa 2025, ROI.MARKET. Acronyms
   of organisations are transliterated too (TsBST, not ЦБСТ, in English prose).
 - **The same person must not appear in Cyrillic in one section and Latin in
   another.** The registry holds both forms and the helper picks.

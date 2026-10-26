@@ -56,7 +56,7 @@ def test_person_first_mention_and_surname():
 def test_proper_names_transliterated():
     assert latin_text("«Булат» в.3") == "«Bulat» v.3"
     assert latin_text("Дронница 2025 (IV)") == "Dronnitsa 2025 (IV)"
-    assert latin_display("РОЙ.МАРКЕТ") == "ROY.MARKET"
+    assert latin_display("РОЙ.МАРКЕТ") == "ROI.MARKET"
 
 
 def test_state_body_translated_with_original_attached():

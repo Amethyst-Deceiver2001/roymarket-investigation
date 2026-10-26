@@ -412,7 +412,7 @@ In the company's own words or the press (verbatim, Russian original first):
 
 > «Вместе с партией и ПСБ запустили военный маркетплейс «Роймаркет». Платформа протестирована.»
 >
-> Working translation: Together with the party and ПСБ we launched the military marketplace «Roymarket». The platform has been tested. [E19]
+> Working translation: Together with the party and ПСБ we launched the military marketplace «Roimarket». The platform has been tested. [E19]
 
 > «Пилотный запуск подтвердил реальный спрос: к платформе присоединились десятки потребителей, а каталог вырос до нескольких сотен позиций.»
 >

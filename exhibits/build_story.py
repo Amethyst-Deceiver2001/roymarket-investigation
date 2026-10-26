@@ -345,7 +345,7 @@ def structure_diagram(F, S) -> str:
         node(540, 4, 200, 52, [("Bank PSB", "r"), ("in the register since 01.04.2025", "m")]),
         node(540, 90, 200, 110, [("TsBST", "r"), ("registered 27.02.2024", "m"), ("2024: RUB 269.8m received,", "m"), ("all as «other receipts»", "m")], hub=True),
         node(540, 252, 200, 66, [("United Russia", "r"), ("a founder by TsBST's own site;", "m"), ("not in the register", "m")]),
-        node(820, 90, 180, 110, [("MPTM", "r"), ("operates ROY.MARKET", "m"), ("share not stated;", "m"), ("owners withheld", "m")]),
+        node(820, 90, 180, 110, [("MPTM", "r"), ("operates ROI.MARKET", "m"), ("share not stated;", "m"), ("owners withheld", "m")]),
         node(230, 332, 510, 70, [("Army units and civilian services", "n"), ("naming «Bulat» or «Kapyushon», Jul 2024 – May 2026", "m"), ("the party and TsBST named as co-donors", "m")]),
     ]
     svg.append("</svg>")
@@ -723,7 +723,7 @@ def render(out: Path):
 
 <section class="chapter" aria-labelledby="c6">
   <p class="rm-eyebrow">7 of 9 · The marketplace</p>
-  <h2 class="rm-h2" id="c6">TsBST participates in the company that runs ROY.MARKET, and the register now withholds who owns it</h2>
+  <h2 class="rm-h2" id="c6">TsBST participates in the company that runs ROI.MARKET, and the register now withholds who owns it</h2>
   <p>On 25 December 2024 TsBST's own channel announced that United Russia, TsBST and Bank PSB had launched a «military
   marketplace». The post gives the party official's words and the chairman of TsBST's board:{S.ref(sid338)}</p>
   <article class="post" aria-label="Excerpts from the post of 25 December 2024">
@@ -814,7 +814,7 @@ def render(out: Path):
     <li>The accounts do not name the donors behind {F['donor_share']:.0f}% of the foundation's 2024 money, and they do not define the state aid the foundation says it did not receive.</li>
     <li>The five contributions of 71.1 million rubles in the foundation's notes cannot be matched to TsBST's receipts. The register records TsBST's founders and no owner.</li>
     <li>TsBST's share in MPTM is not stated in any document on file, and the register withholds who owns the company.</li>
-    <li>No document on file puts «Bulat» on ROY.MARKET. Which sellers use the platform beyond the one named here is not established.</li>
+    <li>No document on file puts «Bulat» on ROI.MARKET. Which sellers use the platform beyond the one named here is not established.</li>
     <li>Sidyakin's figure of 2.5 billion dollars was not tested. His post gives no source for it.</li>
     <li>No document on file gives the date of the Duma vote on Sidyakin's appointment. The foundation's post shows only that it had been made by 30 September 2026.</li>
     <li>Photographs show what is visible in them. Nobody is identified from a face.</li>

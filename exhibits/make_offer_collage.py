@@ -1,4 +1,4 @@
-"""Two captures of the ROY.MARKET supplier offer side by side, differences highlighted.
+"""Two captures of the ROI.MARKET supplier offer side by side, differences highlighted.
 
 Left: Internet Archive capture of 22.08.2026 (full text). Right: our capture of 25.10.2026 (login wall).
 Quoted lines are copied from the saved captures; run, then screenshot offer_collage.html with Firefox headless.

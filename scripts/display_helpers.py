@@ -179,7 +179,7 @@ def publish_copy(m: dict, dest_dir: Path, max_px: int = 1600) -> str | None:
 _CYR = r"[А-Яа-яЁё][А-Яа-яЁё0-9\-]*"
 _KNOWN_EN = [("«Единая Россия»", "United Russia"), ("Единая Россия", "United Russia"), ("Единой России", "United Russia"),
              ("ЦБСТ", "TsBST"), ("ПСБ", "PSB"), ("МПТМ", "MPTM"), ("«Наша Правда»", "Nasha Pravda"), ("«Наша правда»", "Nasha Pravda"),
-             ("РОЙ.МАРКЕТ", "ROY.MARKET"), ("«Роймаркет»", "Roymarket"), ("Роймаркет", "Roymarket"),
+             ("РОЙ.МАРКЕТ", "ROI.MARKET"), ("«Роймаркет»", "Roimarket"), ("Роймаркет", "Roimarket"),
              # Ukrainian places in their Ukrainian-based English spelling (STYLE_GUIDE §2.2), also in stored English
              ("Zaporozhye", "Zaporizhzhia"), ("Zaporozhie", "Zaporizhzhia"), ("Lugansk", "Luhansk"), ("Gorlovka", "Horlivka"),
              ("Nikolaev", "Mykolaiv"), ("Kharkov", "Kharkiv")]
@@ -312,11 +312,21 @@ def _strip_note(name: str) -> str:
     return re.sub(r"\s*\((?![А-ЯЁA-Z0-9.\-]+\))[^)]*\)\s*$", "", name)
 
 
+# A name whose bearer prints its own Latin form, which wins over the transliteration: the platform's domain is roimarket.ru.
+_OWN_LATIN = [("РОЙ.МАРКЕТ", "ROI.MARKET"), ("Роймаркет", "Roimarket"), ("РОЙМАРКЕТ", "ROIMARKET")]
+
+
+def _own_latin(s: str) -> str:
+    for cyr, lat in _OWN_LATIN:
+        s = s.replace(cyr, lat)
+    return s
+
+
 def latin_display(legal: str) -> str:
     """'ООО «Тримикс»' -> 'OOO «Trimiks»'; 'НПЦ «Ушкуйник»' -> 'NPTs «Ushkuynik»'. Latin letters pass unchanged."""
     # A trailing note in brackets is ours, not part of the registered name ("(прекратил деятельность …)",
     # a founder's surname used to tell two namesakes apart); an all-caps alias like "(ФКК)" is kept.
-    s = _strip_note(legal)
+    s = _own_latin(_strip_note(legal))
     for pat, abbr in _LONG_FORMS:
         s = re.sub(pat, abbr, s, flags=re.I)
     return re.sub(r"[А-Яа-яЁё]+", lambda m: _lat_word(m.group(0)), s)
@@ -324,7 +334,7 @@ def latin_display(legal: str) -> str:
 
 def latin_text(s: str) -> str:
     """Transliterate the Cyrillic words of any proper name (brand, product, event): «Булат» -> «Bulat»."""
-    return re.sub(r"[А-Яа-яЁё]+", lambda m: _lat_word(m.group(0)), s or "")
+    return re.sub(r"[А-Яа-яЁё]+", lambda m: _lat_word(m.group(0)), _own_latin(s or ""))
 
 
 # EN names (STYLE_GUIDE §2.2-2.3a): Latin first, Cyrillic always within reach. People are "Given Surname" on
