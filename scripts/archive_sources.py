@@ -52,6 +52,7 @@ import base64
 import glob
 import gzip
 import hashlib
+from http.client import HTTPException
 import json
 import os
 import re
@@ -311,12 +312,20 @@ CTX = _ssl_context()
 def http(url: str, *, data: bytes | None = None, headers: dict | None = None,
          timeout: int = 90) -> tuple[int, dict, bytes, str]:
     h = {"User-Agent": USER_AGENT, **(headers or {})}
+    # a Cyrillic address inside a Wayback path must be percent-encoded for the request line
+    url = urllib.parse.quote(url, safe="".join(chr(c) for c in range(33, 127)))
     req = urllib.request.Request(url, data=data, headers=h)
-    try:
-        with urllib.request.urlopen(req, timeout=timeout, context=CTX) as resp:
-            return resp.status, dict(resp.headers), resp.read(), resp.geturl()
-    except urllib.error.HTTPError as err:
-        return err.code, dict(err.headers or {}), err.read() or b"", url
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout, context=CTX) as resp:
+                return resp.status, dict(resp.headers), resp.read(), resp.geturl()
+        except urllib.error.HTTPError as err:
+            return err.code, dict(err.headers or {}), err.read() or b"", url
+        except (ConnectionError, HTTPException, urllib.error.URLError, TimeoutError):
+            # archive.org drops connections now and then; a retry usually goes through
+            if attempt == 2:
+                raise
+            time.sleep(15 * (attempt + 1))
 
 
 def cdx_latest(url: str) -> dict | None:
