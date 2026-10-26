@@ -329,7 +329,17 @@ def latin_display(legal: str) -> str:
     s = _own_latin(_strip_note(legal))
     for pat, abbr in _LONG_FORMS:
         s = re.sub(pat, abbr, s, flags=re.I)
-    return re.sub(r"[А-Яа-яЁё]+", lambda m: _lat_word(m.group(0)), s)
+    return re.sub(r"[А-Яа-яЁё]+", lambda m: _lat_word(m.group(0)), guillemets(s))
+
+
+def guillemets(s: str) -> str:
+    """The register's straight quotes as «», the form the reader pages use: 'ООО "АРХАНГЕЛ"' -> 'ООО «АРХАНГЕЛ»'.
+    A quote after a space, a bracket, the start or another opening quote opens; any other closes. The register
+    often drops the last of a nested pair ('АНО "ЦВП "ЗОВ-АА"'), so missing closers are added at the end."""
+    if '"' not in s:
+        return s
+    out = re.sub(r'"', lambda m: "«" if m.start() == 0 or s[m.start() - 1] in " («" else "»", s)
+    return out + "»" * max(0, out.count("«") - out.count("»"))
 
 
 def latin_text(s: str) -> str:

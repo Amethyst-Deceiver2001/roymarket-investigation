@@ -20,7 +20,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "exhibits"))
 sys.path.insert(0, str(REPO / "scripts"))
 from build_chain_view import CBST, Chain, cap, esc, load, money  # noqa: E402
-from display_helpers import NAME_JS, design_head, display_name, latin_text, latinize_gloss, media_about, name_html, orig_line, person_names, popup_originals, quote_html, reader_grade, ru_date, sanction_regimes  # noqa: E402
+from display_helpers import NAME_JS, design_head, display_name, guillemets, latin_text, latinize_gloss, media_about, name_html, orig_line, person_names, popup_originals, quote_html, reader_grade, ru_date, sanction_regimes  # noqa: E402
 from graph_contract import source_grade  # noqa: E402
 
 MPTM, NP, PSB, SIDYAKIN = "ooo-mptm", "fond-nasha-pravda", "pao-bank-psb", "aleksandr-sidyakin"
@@ -550,7 +550,7 @@ class Landing(Chain):
     def wall(self):
         """Every organisation linked to TsBST as a tile: its logo where one is on file, its name, and the Sanctioned
         flag naming the regimes. Grouped by its place in the network."""
-        groups = []
+        groups, where = [], self.namesakes()
         for tiers, label in self.TIER_ORDER:
             slugs = [s for s in self.tied() if self.ents.get(s, {}).get("tier") in tiers]
             if not slugs:
@@ -564,9 +564,47 @@ class Landing(Chain):
                 flag = f'<span class="rm-sanction">Sanctioned <b>{esc(", ".join(regs))}</b></span>' if regs else ""
                 page = self.file_link(s)
                 go = f'<a class="tl" href="{esc(page[0])}">{esc(page[1])} →</a>' if page else ""
-                tiles.append(f'<li class="tile{" has-logo" if logo else ""}">{logo}<span class="tn">{self.en(e, pop=True)}</span>{go}{flag}</li>')
+                sub = f'<small class="tw">{esc(where[s])}</small>' if s in where else ""
+                tiles.append(f'<li class="tile{" has-logo" if logo else ""}">{logo}<span class="tn">{self.en(e, pop=True)}{sub}</span>{go}{flag}</li>')
             groups.append(f'<div class="wall-g"><h3 class="rm-label">{esc(label)} · {len(slugs)}</h3><ul class="wall">{"".join(tiles)}</ul></div>')
         return "".join(groups)
+
+    GENERIC_NAMES = {"научно-производственное предприятие"}   # a registered name that names nothing on its own
+    CITY_EN = {"Москва": "Moscow", "Санкт-Петербург": "St Petersburg", "Великий Новгород": "Veliky Novgorod"}
+
+    def namesakes(self):
+        """{slug: line} telling apart tied organisations that share a name (three «Arkhangel», two «Ushkuynik»), or
+        whose registered name is generic: the city on the register, or the INN where the cities are the same."""
+        def core(e):
+            inner = re.findall(r"«([^«»]+)»", guillemets(e.get("name_ru") or ""))
+            name = (inner[-1] if inner else e.get("name_ru") or "").lower().replace("ё", "е")
+            if name in self.GENERIC_NAMES:
+                return name
+            words = [w for w in re.split(r"[\s-]+", name.strip()) if w not in ("центр", "группа", "компаний")]
+            return words[0] if words else name
+
+        def city(e):
+            m = re.search(r"г\.\s*((?:[А-ЯЁ][а-яё-]+)(?:\s[А-ЯЁ][а-яё]+)?)", e.get("address") or "")
+            c = m.group(1) if m else e.get("city")
+            return self.CITY_EN.get(c, latin_text(c)) if c else None
+
+        by = {}
+        for s in self.tied():
+            by.setdefault(core(self.ents[s]), []).append(s)
+        out = {}
+        for key, ss in by.items():
+            if len(ss) < 2 and key not in self.GENERIC_NAMES:
+                continue
+            cities = [city(self.ents[s]) for s in ss]
+            for s, c in zip(ss, cities):
+                e = self.ents[s]
+                if not e.get("inn"):
+                    out[s] = "no registered company on file"
+                elif c and cities.count(c) == 1:
+                    out[s] = c
+                else:
+                    out[s] = f"INN {e['inn']}"
+        return out
 
     def file_link(self, slug):
         """(url, label) of the profile page for an organisation, where one exists. Preview only: the pages are private."""

@@ -61241,7 +61241,7 @@
       "2026-09-20: created from the certificate specimens posted by Архангел (s7897-s7906) and the ЕГРЮЛ выписка (s7907)."
     ],
     "_verified_against": null,
-    "name_display": "ANO \"NAUCHNO-ISSLEDOVATELSKIY INSTITUT DOPOLNITELNOGO PROFESSIONALNOGO OBRAZOVANIYA\"",
+    "name_display": "ANO «NAUCHNO-ISSLEDOVATELSKIY INSTITUT DOPOLNITELNOGO PROFESSIONALNOGO OBRAZOVANIYA»",
     "aleph_matches": [
       {
         "entity_id": "e3f03ca6eabb78c1e513d57fd5d59147d850c50a.953d49906a582b4ef09aba9ec69f393cd667493f",
@@ -61405,7 +61405,7 @@
       "[2026-09-30] charter_capital_history: dropped the sourceless scaffold entry copied from the brief (unverified); replaced it with the value read directly from the ЕГРЮЛ выписка (s7908)."
     ],
     "_verified_against": null,
-    "name_display": "OOO \"NAUCHNO-ISSLEDOVATELSKIY INSTITUT DOPOLNITELNOGO PROFESSIONALNOGO OBRAZOVANIYA\"",
+    "name_display": "OOO «NAUCHNO-ISSLEDOVATELSKIY INSTITUT DOPOLNITELNOGO PROFESSIONALNOGO OBRAZOVANIYA»",
     "aleph_matches": [],
     "aleph_screened_at": "2026-10-03",
     "gur_matches": [],
@@ -75188,7 +75188,7 @@
       "note": "Name-collision risk: same \"Архангел\" family ambiguity as ooo-arkhangel (see that entity's sanctions_review). This entity's own ИНН (9500026652) IS the exact ru-inn match in OpenSanctions (score 1.0) but that match's topics are only sanction.linked/sanction.control — i.e. OpenSanctions treats this entity as linked to/controlled by a sanctioned party, not itself directly designated. A separate exact-score Ukrainian-language \"sanction\"-topic match (NK-AeHbFuxDQJGPaCNKycGUdz) and a GUR/EU/France-sourced \"Archangel Military Tactical Center\" hit (score 0.92) may or may not refer to this same legal entity versus the sister ooo-arkhangel or the Tactical Center specifically — no source_urls on the exact-score match to disambiguate. Given the linked/controlled (not directly-designated) status of the one confirmed-ИНН match, and the unresolved multi-entity name collision, not promoted; flagged as worth a follow-up primary-source read of the underlying EU/GUR listing text to determine which \"Архангел\" entity/entities the designation actually names."
     },
     "_verified_against": null,
-    "name_display": "OOO \"ARKHANGEL\"",
+    "name_display": "OOO «ARKHANGEL»",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-9500026652",
@@ -75582,7 +75582,7 @@
       }
     ],
     "_verified_against": null,
-    "name_display": "OOO \"ARKHANGEL-TSENTR\"",
+    "name_display": "OOO «ARKHANGEL-TSENTR»",
     "opensanctions_matches": [
       {
         "match_id": "NK-Gmfrw9dvwnyXtXUsjwdvYa",
@@ -75998,7 +75998,7 @@
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
     ],
     "_verified_against": null,
-    "name_display": "OOO \"ML KONSTRAKSHNS\"",
+    "name_display": "OOO «ML KONSTRAKSHNS»",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [],
@@ -77002,7 +77002,7 @@
       "note": "Screened OpenSanctions/GUR/Aleph (as_of 2026-09-06/2026-09-05/2026-09-05). OpenSanctions: 1 match(es), top='Archangel Military Tactical Center' (score 0.8244, topics=['sanction']) No match carries a confirmed direct designation of this entity: no exact-ИНН OpenSanctions match with plain 'sanction' topic, no GUR match with confirmed listing language or ИНН/ОГРН correspondence, no Aleph 'sanctions'-category match with reliable same-entity correspondence. Evidence present is name-fuzzy namesake noise and/or 'sanction.linked'/'sanction.control' (related-party, not itself designated). Not promoted to sanctions[]."
     },
     "_verified_against": null,
-    "name_display": "OOO \"ARKHANGEL SHCHIT\"",
+    "name_display": "OOO «ARKHANGEL SHCHIT»",
     "opensanctions_matches": [
       {
         "match_id": "NK-Gmfrw9dvwnyXtXUsjwdvYa",
@@ -77352,7 +77352,7 @@
       "note": "Screened OpenSanctions, GUR (sanctions + UAV-industry registries), GUR components teardown, and Aleph/OCCRP (as_of 2026-09-05/06) — zero matches returned across all four sources. No designation evidence found."
     },
     "_verified_against": null,
-    "name_display": "OOO \"ARKHANGEL GRUPP\"",
+    "name_display": "OOO «ARKHANGEL GRUPP»",
     "opensanctions_matches": [],
     "opensanctions_screened_at": "2026-09-06",
     "aleph_matches": [],
@@ -77552,7 +77552,7 @@
       "2026-09-07: full ЕГРЮЛ выписка sweep (egrul_vypiska_pull.py + parse_egrul_vypiska.py)."
     ],
     "_verified_against": null,
-    "name_display": "OOO \"ARKHANGEL\"",
+    "name_display": "OOO «ARKHANGEL»",
     "opensanctions_matches": [
       {
         "match_id": "NK-AeHbFuxDQJGPaCNKycGUdz",
@@ -77832,7 +77832,7 @@
       "[2026-09-30 product research] Product research: dormant vehicle; accounts show 10 тыс. руб. total assets, equal to charter capital. No product tied to this ИНН."
     ],
     "_verified_against": null,
-    "name_display": "OOO \"ARKHANGEL\"",
+    "name_display": "OOO «ARKHANGEL»",
     "opensanctions_matches": [
       {
         "match_id": "NK-AeHbFuxDQJGPaCNKycGUdz",
@@ -78163,7 +78163,7 @@
       "2026-09-15: added relationship_type to related_entities[] (typed vocabulary, graph_contract.RELATED_ENTITY_RELATIONSHIP_TYPES, schema v5) -- classified from each entry's own already-sourced prose, no new lookups. See CLAUDE.md's relationship_graph.json section."
     ],
     "_verified_against": null,
-    "name_display": "OOO \"ARKHANGEL\"",
+    "name_display": "OOO «ARKHANGEL»",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-9500026652",
@@ -80216,7 +80216,7 @@
       "note": "not found in bo.nalog.gov.ru's БФО search index (bfo_pull.py, 2026-09-14 --all-missing sweep) -- either no filing has ever been submitted under this ИНН, or (for a bank/госкорпорация) financials are reported through a separate regulatory channel (Банк России for ПАО «Банк ПСБ», Ростех's own consolidated reporting for ГК «Ростех») rather than standard БФО. Scanned, not a parser gap."
     },
     "_verified_against": null,
-    "name_display": "OOO \"PROMETEY\"",
+    "name_display": "OOO «PROMETEY»",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-6154171470",
@@ -80381,7 +80381,7 @@
       "note": "Both filings on record (FY2024-2025, s7391-s7392) directly read via pdftotext: БАЛАНС (актив/пассив) 0/0 in both years. Genuine dormant shell, not a parser gap."
     },
     "_verified_against": "bo.nalog.gov.ru БФО pull, 2026-09-14",
-    "name_display": "OOO NAUCHNO-PROIZVODSTVENNAYA KOMPANIYA \"ATLANT AERO\"",
+    "name_display": "OOO NAUCHNO-PROIZVODSTVENNAYA KOMPANIYA «ATLANT AERO»",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-6154166381",
@@ -80513,7 +80513,7 @@
     "_corrected": [
       "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен А.А.; pulled full EGRUL выписка (s6969) to confirm details directly."
     ],
-    "name_display": "OOO \"ATLANT SERVIS\"",
+    "name_display": "OOO «ATLANT SERVIS»",
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
     "gur_matches": [],
@@ -80632,7 +80632,7 @@
       }
     ],
     "_verified_against": null,
-    "name_display": "OOO \"ATLANT LOGISTIK\"",
+    "name_display": "OOO «ATLANT LOGISTIK»",
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
     "gur_matches": [],
@@ -80756,7 +80756,7 @@
     ],
     "notes": "недостоверность flag resolved (2026-09-08): the flagged field was the registered address, not the director/founder record. Full EGRUL history (s6964) shows the record immediately following the 05.06.2025 недостоверность entry is a 'Решение об изменении места нахождения ЮЛ' (decision to change legal address), filed 25.09.2025, with the new current address (ул. Петровская, д.6, кв.16, Таганрог) entered 27.11.2025. The pre-flag address itself isn't recoverable from a standard выписка (only current values + the change log survive), but the sequence is unambiguous: ФНС's own address-verification check found the declared address didn't check out, forcing a move — and the replacement address is itself just a residential apartment, not a business premises. Consistent with the rest of this cluster's mail-drop/no-real-premises pattern, not a one-off.",
     "_verified_against": "data/sources/EGRUL_6163233330_20260907_ooo-prom-tekh.pdf, re-read in full",
-    "name_display": "OOO \"PROM-TEKH\"",
+    "name_display": "OOO «PROM-TEKH»",
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
     "gur_matches": [],
@@ -80886,7 +80886,7 @@
       "2026-09-29: read this entity's own full signed ЕГРЮЛ выписка's founders section (already pulled as s6963, 2026-09-07, for the director_history fact) for the first time while closing an unsourced role-edge backlog. Four participants: Хутешен 75% (also director), Лымарь 15% (also this entity's own registered co-signatory elsewhere in the network), Андреев 5%, Романов 5%."
     ],
     "_verified_against": "data/sources/EGRUL_6161154122_20260907_ooo-npk-zevs.pdf, participants section read in full",
-    "name_display": "OOO \"NAUCHNO-PROIZVODSTVENNAYA KOMPANIYA \"ZEVS\"",
+    "name_display": "OOO «NAUCHNO-PROIZVODSTVENNAYA KOMPANIYA «ZEVS»»",
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
     "gur_matches": [],
@@ -81097,7 +81097,7 @@
       "note": "Each post uses «оптические системы» as a generic term for optics in foreign-technology digests."
     },
     "_verified_against": "nspd.gov.ru geoportal API, live query 2026-09-08",
-    "name_display": "AO \"OPTICHESKIE SISTEMY\"",
+    "name_display": "AO «OPTICHESKIE SISTEMY»",
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
     "gur_matches": [],
@@ -81244,7 +81244,7 @@
       }
     ],
     "_verified_against": "nspd.gov.ru geoportal API, live query 2026-09-08",
-    "name_display": "OOO \"AMETIST\"",
+    "name_display": "OOO «AMETIST»",
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
     "gur_matches": [],
@@ -81389,7 +81389,7 @@
       }
     ],
     "_verified_against": null,
-    "name_display": "OOO \"EVEREST\"",
+    "name_display": "OOO «EVEREST»",
     "aleph_matches": [
       {
         "entity_id": "ru-inn-9704109459.5e30b157f52a0f379071a0f58f2eb88b2a96a5e5",
@@ -81523,7 +81523,7 @@
       }
     ],
     "_verified_against": "nspd.gov.ru geoportal API, live query 2026-09-08",
-    "name_display": "OOO PROIZVODSTVENNAYA KOMPANIYA \"STALNOY KUPOL\"",
+    "name_display": "OOO PROIZVODSTVENNAYA KOMPANIYA «STALNOY KUPOL»",
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
     "gur_matches": [],
@@ -81638,7 +81638,7 @@
     "_corrected": [
       "2026-09-07: found via scripts/screen_upr_uchr.py on Хутешен А.А.; pulled full EGRUL выписка (s6961) to confirm details directly."
     ],
-    "name_display": "OOO \"DS-BARS-T\"",
+    "name_display": "OOO «DS-BARS-T»",
     "aleph_matches": [
       {
         "entity_id": "ru-95a85219f7238cac560a8849ca846e7d0b145e76.7d74d9cefbec415ed7fd6de474133e0b26bcc4c8",
@@ -81870,7 +81870,7 @@
       "2026-09-29: filled an empty founders[] array -- director_history already said he was sole founder and director (s6971), it just never got its own founders[] entry."
     ],
     "_verified_against": null,
-    "name_display": "OOO INZHINIRINGOVAYA KOMPANIYA \"AVIAOK\"",
+    "name_display": "OOO INZHINIRINGOVAYA KOMPANIYA «AVIAOK»",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-6154569246",
@@ -82089,7 +82089,7 @@
       "[2026-09-30 product research] Product research (Russian web, Telegram, Rospatent, press): no product found for this ИНН."
     ],
     "_verified_against": "bo.nalog.gov.ru БФО pull (bfo_pull.py), parsed via parse_bfo_financials.py, 2026-09-14",
-    "name_display": "OOO \"SELSKOKHOZYAYSTVENNYE BESPILOTNYE SISTEMY \"MIRA\"",
+    "name_display": "OOO «SELSKOKHOZYAYSTVENNYE BESPILOTNYE SISTEMY «MIRA»»",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-7804712459",
@@ -82277,7 +82277,7 @@
       "[2026-09-30 product research] Product research: БФО FY2021–2025 show zero inventory and zero cost of sales — no production. Lead: EGRUL e-mail INBOX@K-TECH.RU (Кронштадт Технологии domain)."
     ],
     "_verified_against": null,
-    "name_display": "AO \"RTI-RADIO\"",
+    "name_display": "AO «RTI-RADIO»",
     "opensanctions_matches": [
       {
         "match_id": "ru-inn-7713133550",
@@ -82492,7 +82492,7 @@
       "2026-09-08: found via lead-mining a freshly-rescraped @projectArchangel corpus; resolved the linked punycode domain, fetched the site, and confirmed via a targeted egrul.nalog.ru ИНН search (single exact match).",
       "2026-09-08: pulled all 5 БФО filings (FY2021-2025) and ran a zakupki scan -- thin revenue throughout confirms this is a small training/logistics vendor, not an active manufacturer despite its OKVED. GUR/Aleph screened clean (0 hits / generic EGRUL-only). OpenSanctions screen attempted but blocked by the API key's monthly rate limit -- not yet completed, flag for a retry."
     ],
-    "name_display": "OOO \"OTKRYTOE NEBO\"",
+    "name_display": "OOO «OTKRYTOE NEBO»",
     "aleph_matches": [
       {
         "entity_id": "ru-88358897229f2649a71866d6072c2b39d33d6bd5.362fd5a98ea9a13fb5389cca31c4d4cfae711019",
@@ -91133,7 +91133,7 @@
       "2026-09-19: identified from the VK page vk.com/id463123770 (user-supplied) whose status line names «ЦПВ АНО «ZOV-AA»», then matched by name in the open ЕГРЮЛ search and confirmed with a full выписка (s7727)."
     ],
     "_verified_against": null,
-    "name_display": "ANO TSENTR POMOSHCHI VOENNOSLUZHASHCHIM \"ZA OTVAZHNYKH VOINOV - ARMII ANGELOV\"",
+    "name_display": "ANO TSENTR POMOSHCHI VOENNOSLUZHASHCHIM «ZA OTVAZHNYKH VOINOV - ARMII ANGELOV»",
     "aleph_matches": [],
     "aleph_screened_at": "2026-09-19",
     "gur_matches": [],

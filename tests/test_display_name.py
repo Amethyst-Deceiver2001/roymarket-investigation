@@ -19,7 +19,9 @@ CASES = {
     "НПЦ «Ушкуйник»": "NPTs «Ushkuynik»",
     "ПАО «Банк ПСБ»": "PAO «Bank PSB»",
     "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «ЭЛЬФ»": "OOO «ELF»",
-    'ООО "НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ "ЗЕВС"': 'OOO "NAUCHNO-PROIZVODSTVENNAYA KOMPANIYA "ZEVS"',
+    # the register's straight quotes become «», and a nested pair it left unclosed is closed
+    'ООО "НАУЧНО-ПРОИЗВОДСТВЕННАЯ КОМПАНИЯ "ЗЕВС"': "OOO «NAUCHNO-PROIZVODSTVENNAYA KOMPANIYA «ZEVS»»",
+    'ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "АРХАНГЕЛ-ЦЕНТР"': "OOO «ARKHANGEL-TSENTR»",
     "ИП Братеньков Андрей Алексеевич (прекратил деятельность 23.04.2020)": "IP Bratenkov Andrey Alekseevich",
     "ООО «Финконсалтингк» (ФКК)": "OOO «Finkonsaltingk» (FKK)",
     "ООО «Аэро-Хит»": "OOO «Aero-Khit»",
