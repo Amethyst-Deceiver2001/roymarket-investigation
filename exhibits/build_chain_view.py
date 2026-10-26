@@ -730,6 +730,7 @@ def render(ch, out):
 <title>{esc(ch.pq_en.strip('«»'))}: Maker to Front</title>
 {design_head((REPO / 'exhibits' / 'chain_view.css').read_text() + __import__('handover_map').CSS)}</head>
 <body>
+<nav class="toc" aria-label="Contents"><ol><li><a href="https://claude.ai/artifact/W5m6W6w663RjwfqqTEjQ6z" target="_blank" rel="noopener">← Overview</a></li></ol></nav>
 <header class="rm-page top">
   <p class="rm-eyebrow">Draft · {ru_date(dt.date.today().isoformat())}</p>
   <h1 class="rm-h1">{esc(ch.pq_en)} <span class="rm-muted">{'from TsBST to the front line' if ch.top['A'] else 'from the maker to the front line'}</span></h1>

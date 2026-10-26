@@ -231,6 +231,7 @@ def render(out: Path):
 <title>One Person, Many Companies</title>
 {design_head(CSS)}</head>
 <body>
+<nav class="toc" aria-label="Contents"><ol><li><a href="https://claude.ai/artifact/W5m6W6w663RjwfqqTEjQ6z" target="_blank" rel="noopener">← Overview</a></li></ol></nav>
 <header class="rm-page top">
   <p class="rm-eyebrow">Draft · {ru_date(today)}</p>
   <h1 class="rm-h1">One person, many companies <span class="rm-muted">the people who direct or own two or more of the companies on file</span></h1>

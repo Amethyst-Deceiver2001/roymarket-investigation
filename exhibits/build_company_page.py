@@ -25,6 +25,7 @@ from display_helpers import (NAME_JS, design_head, display_name, figure_html, la
 from build_chain_view import ROLE_EN, describe_source, esc, load, money  # noqa: E402
 
 # Published company pages (private preview Artifacts until the public cutoff), as CHAINS in build_landing.py.
+LANDING_URL = "https://claude.ai/artifact/W5m6W6w663RjwfqqTEjQ6z"   # private preview of the landing page
 COMPANY_PAGES = {"ooo-trimiks": "https://claude.ai/artifact/GVG9YdHZVHPZNtKqBoZqEc",
                  "ovod": "https://claude.ai/artifact/37aScZhS6wfCYedygwrjbk",
                  "ooo-goudron": "https://claude.ai/artifact/3rMXcnJ8DZ66WmvcTFk9Yi",
@@ -585,7 +586,13 @@ def render(pg, out, chains):
                 ("Pictures", pg.pictures(img_dir)), ("In its own words", pg.own_words()), ("Trademarks and patents", pg.ip_block()),
                 ("Links to TsBST and the state", pg.network()), ("Sellers of its products", pg.sellers())]
     pg.gaps()
-    body = "".join(f'<section class="sec"><h2 class="rm-h2">{t}</h2>{h}</section>' for t, h in sections if h)
+    shown = [(t, h) for t, h in sections if h]
+    sid = lambda t: "s-" + re.sub(r"[^a-z]+", "-", t.lower()).strip("-")
+    body = "".join(f'<section class="sec" id="{sid(t)}"><h2 class="rm-h2">{t}</h2>{h}</section>' for t, h in shown)
+    from build_landing import TOC_JS  # noqa: E402  (the landing's contents-bar script)
+    toc = ('<nav class="toc" aria-label="Contents"><ol><li><a href="' + LANDING_URL + '" target="_blank" rel="noopener">← Overview</a></li>'
+           + "".join(f'<li><a href="#{sid(t)}">{esc(t)}</a></li>' for t, _ in shown)
+           + '<li><a href="#s-limits">Limits</a></li><li><a href="#s-sources">Sources</a></li></ol></nav>')
     limits = "".join(f"<li>{x}</li>" for x in dict.fromkeys(pg.limits))
     notes = "".join(
         f'<li id="n{k}">{esc(t)}.' + (f' <a href="{esc(u)}" target="_blank" rel="noopener">'
@@ -645,6 +652,7 @@ ol.tline li:target { background: var(--accent-soft); }
 <title>{head}: Company File</title>
 {design_head(css)}</head>
 <body>
+{toc}
 <header class="rm-page top">
   <p class="rm-eyebrow">Company · Draft · {ru_date(dt.date.today().isoformat())}</p>
   <div class="co-head"><h1 class="rm-h1">{head}</h1>{logo}</div>
@@ -653,13 +661,14 @@ ol.tline li:target { background: var(--accent-soft); }
 </header>
 <main class="rm-page"><div class="body">
   {body}
-  <section class="prose rm-prose"><h2 class="rm-h2">What this page does not show</h2><ul>{limits}</ul>
+  <section class="prose rm-prose" id="s-limits"><h2 class="rm-h2">What this page does not show</h2><ul>{limits}</ul>
   <p class="rm-muted" style="font-size:13.5px">Facts here come from documents: the company register, its filed accounts,
   the patent and trademark registers, sanctions lists and its own posts. Entries resting on anything weaker are marked
   Reported and named above.</p></section>
-  <section class="prose rm-prose rm-sources"><h2 class="rm-h2">Sources</h2><ol>{notes}</ol></section>
+  <section class="prose rm-prose rm-sources" id="s-sources"><h2 class="rm-h2">Sources</h2><ol>{notes}</ol></section>
 </div></main>
 <script>{NAME_JS}</script>
+<script>{TOC_JS}</script>
 </body></html>
 """
     out.write_text(popup_originals(doc))
