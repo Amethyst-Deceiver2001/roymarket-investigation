@@ -1496,7 +1496,44 @@
         ],
         "_verified": true,
         "dob_source": "L0477",
-        "inn_personal_source": "L0477"
+        "inn_personal_source": "L0477",
+        "contacts": [
+          {
+            "kind": "phone",
+            "value": "+7 902 127-34-76",
+            "label": "Phone in a research compilation supplied to the investigation",
+            "as_of": "2026-10-26",
+            "source_id": "s3664"
+          },
+          {
+            "kind": "phone",
+            "value": "+7 951 099-50-55",
+            "label": "Phone in a research compilation supplied to the investigation",
+            "as_of": "2026-10-26",
+            "source_id": "s3664"
+          },
+          {
+            "kind": "email",
+            "value": "pawa_web@mail.ru",
+            "label": "E-mail in a research compilation supplied to the investigation",
+            "as_of": "2026-10-26",
+            "source_id": "s3664"
+          },
+          {
+            "kind": "email",
+            "value": "cubotweb73@gmail.com",
+            "label": "E-mail in a research compilation supplied to the investigation",
+            "as_of": "2026-10-26",
+            "source_id": "s3664"
+          },
+          {
+            "kind": "email",
+            "value": "roboteka2010@gmail.com",
+            "label": "E-mail in a research compilation supplied to the investigation",
+            "as_of": "2026-10-26",
+            "source_id": "s3664"
+          }
+        ]
       },
       "verified_against": "s0487 -- ООО «СКБ Пиранья»'s own primary-source founding/EGRUL document, naming Чернышов Павел Алексеевич as director (cross-referenced from the entity's own director_history entry).",
       "why": [
@@ -1507,7 +1544,8 @@
         "2026-08-25: photo/social-media OSINT research pass.",
         "2026-09-07: verification backlog closure — identity already confirmed by ООО «СКБ Пиранья»'s (ooo-skb-piranya) own director_history entry (s0487), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
         "04.10.2026: EU listing read in Decision 2026/1845 (s9124): ИНН and DOB match; replaces the OpenSanctions-only PLAUSIBLE basis.",
-        "2026-10-26: per-field sources for date of birth and personal INN, shown on the company page at the user's direction. L0477 is the Ukrainian sanctions-register export of 26.10.2026: its subject row carries this tax number and this date of birth (checked in the file). L0403 is the UK list download, whose entry RUS0122 prints this date of birth."
+        "2026-10-26: per-field sources for date of birth and personal INN, shown on the company page at the user's direction. L0477 is the Ukrainian sanctions-register export of 26.10.2026: its subject row carries this tax number and this date of birth (checked in the file). L0403 is the UK list download, whose entry RUS0122 prints this date of birth.",
+        "2026-10-26: phones and e-mails moved from the free-text notes into contacts[], shown on the company page at the user's direction; the user will add sources later (Чернышов's are in s3664)."
       ]
     },
     "chernyy-mikhail-davidovich": {
@@ -4518,7 +4556,33 @@
         ],
         "_verified": true,
         "dob_source": "L0477",
-        "inn_personal_source": "L0477"
+        "inn_personal_source": "L0477",
+        "contacts": [
+          {
+            "kind": "phone",
+            "value": "+7 921 570-67-88",
+            "label": "Phone in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          },
+          {
+            "kind": "email",
+            "value": "posenses@gmail.ru",
+            "label": "E-mail in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          },
+          {
+            "kind": "email",
+            "value": "info@prounit.info",
+            "label": "E-mail in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "The notes say it was shown once for a food-delivery listing and not rechecked; the source is to be added."
+          }
+        ]
       },
       "verified_against": "s1408 -- ООО «Тримикс»'s own primary-source founding/EGRUL document, naming Шагиахметов Айрат Фатхутдинович as director (cross-referenced from the entity's own director_history entry).",
       "why": [
@@ -4529,7 +4593,8 @@
         "2026-08-25: photo + corroborating public appearance from @vimaivivs (ВИМАИВиВС, St. Petersburg Military Artillery Museum) post 3195, 17.12.2025 (t.me/vimaivivs/3195, s1409) — ceremony where ООО «Тримикс» handed the museum a «Булат» v.4 detector and a «Таир» individual-warning device, and signed a cooperation agreement with the Михайловская военная артиллерийская академия, with Шагиахметов personally awarding certificates (благодарственные письма) to cadets — same genre as other roster entities' cadet/unit recognition events. Confirms his GD role and personal public-facing promotion of the product line in a military-institutional setting.",
         "2026-08-25: OSINT research pass — adds prior (unrelated-industry, now-liquidated) ИП registration.",
         "2026-09-07: verification backlog closure — identity already confirmed by ООО «Тримикс»'s (ooo-trimiks) own director_history entry (s1408), a primary-source document, but the person record had never been marked _verified. No new lookup needed; this is a cross-reference of already-collected primary evidence.",
-        "2026-10-26: per-field sources for date of birth and personal INN, shown on the company page at the user's direction. L0477 is the Ukrainian sanctions-register export of 26.10.2026: its subject row carries this tax number and this date of birth (checked in the file). L0403 is the UK list download, whose entry RUS0122 prints this date of birth."
+        "2026-10-26: per-field sources for date of birth and personal INN, shown on the company page at the user's direction. L0477 is the Ukrainian sanctions-register export of 26.10.2026: its subject row carries this tax number and this date of birth (checked in the file). L0403 is the UK list download, whose entry RUS0122 prints this date of birth.",
+        "2026-10-26: phones and e-mails moved from the free-text notes into contacts[], shown on the company page at the user's direction; the user will add sources later (Чернышов's are in s3664)."
       ]
     },
     "shakhmatov-ivan-anatolevich": {
@@ -5994,11 +6059,30 @@
     "safieva-viktoriya-zufarovna": {
       "set": {
         "graph_tier": "reference",
-        "notes": "Сотрудник 3MX. Тел. +7 911 201-55-11. Email: vsafieva205@mail.ru. 2026-09-07: identity independently confirmed via a leaked-database dossier pull (s6936) — exact match on DOB (28.01.1985), phone (+79112015511), and email (vsafieva205@mail.ru), all already on file from the smolin.info dossier (s1408). No personal ИНН in this source; it does carry a СНИЛС (110-136-414 80), recorded here since no dedicated field exists for it."
+        "notes": "Сотрудник 3MX. Тел. +7 911 201-55-11. Email: vsafieva205@mail.ru. 2026-09-07: identity independently confirmed via a leaked-database dossier pull (s6936) — exact match on DOB (28.01.1985), phone (+79112015511), and email (vsafieva205@mail.ru), all already on file from the smolin.info dossier (s1408). No personal ИНН in this source; it does carry a СНИЛС (110-136-414 80), recorded here since no dedicated field exists for it.",
+        "contacts": [
+          {
+            "kind": "phone",
+            "value": "+7 911 201-55-11",
+            "label": "Phone in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          },
+          {
+            "kind": "email",
+            "value": "vsafieva205@mail.ru",
+            "label": "E-mail in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          }
+        ]
       },
       "why": [
         "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
-        "2026-09-07: user supplied a leaked-database dossier confirming identity (DOB/phone/email match); no ИНН in the source."
+        "2026-09-07: user supplied a leaked-database dossier confirming identity (DOB/phone/email match); no ИНН in the source.",
+        "2026-10-26: phones and e-mails moved from the free-text notes into contacts[], shown on the company page at the user's direction; the user will add sources later (Чернышов's are in s3664)."
       ],
       "verified_against": "data/sources/REVENG_20260907_safieva-viktoriya-zufarovna-dossier.pdf (s6936)"
     },
@@ -6688,10 +6772,45 @@
       "set": {
         "sources": [
           "s1408"
+        ],
+        "contacts": [
+          {
+            "kind": "phone",
+            "value": "+7 931 006-93-94",
+            "label": "Phone in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          },
+          {
+            "kind": "phone",
+            "value": "+7 981 194-42-32",
+            "label": "Phone in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          },
+          {
+            "kind": "email",
+            "value": "r.k163@yandex.ru",
+            "label": "E-mail in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          },
+          {
+            "kind": "email",
+            "value": "s920.920@yandex.ru",
+            "label": "E-mail in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          }
         ]
       },
       "why": [
-        "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded)."
+        "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
+        "2026-10-26: phones and e-mails moved from the free-text notes into contacts[], shown on the company page at the user's direction; the user will add sources later (Чернышов's are in s3664)."
       ]
     },
     "kirtok-aleksandr-sergeevich": {
@@ -6699,11 +6818,30 @@
         "graph_tier": "reference",
         "sources": [
           "s1408"
+        ],
+        "contacts": [
+          {
+            "kind": "phone",
+            "value": "+7 999 203-92-18",
+            "label": "Phone in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          },
+          {
+            "kind": "email",
+            "value": "mr.kirtok95@gmail.com",
+            "label": "E-mail in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          }
         ]
       },
       "why": [
         "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
-        "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded)."
+        "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
+        "2026-10-26: phones and e-mails moved from the free-text notes into contacts[], shown on the company page at the user's direction; the user will add sources later (Чернышов's are in s3664)."
       ]
     },
     "shvetov-artemiy-andreevich": {
@@ -6711,11 +6849,46 @@
         "graph_tier": "reference",
         "sources": [
           "s1408"
+        ],
+        "contacts": [
+          {
+            "kind": "phone",
+            "value": "+7 911 625-23-22",
+            "label": "Phone in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          },
+          {
+            "kind": "email",
+            "value": "shvetaa@inbox.ru",
+            "label": "E-mail in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          },
+          {
+            "kind": "email",
+            "value": "shvetaa04061999@gmail.ru",
+            "label": "E-mail in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          },
+          {
+            "kind": "email",
+            "value": "9116252322@mail.ru",
+            "label": "E-mail in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          }
         ]
       },
       "why": [
         "2026-09-19: minor role (relative, staff member or contract signatory) -- kept on file as a lead, kept off the relationship graph (graph_tier: reference; resurfaces automatically if they gain an owns/founded/directs link).",
-        "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded)."
+        "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
+        "2026-10-26: phones and e-mails moved from the free-text notes into contacts[], shown on the company page at the user's direction; the user will add sources later (Чернышов's are in s3664)."
       ]
     },
     "petrov-aleksey-aleksandrovich": {
@@ -6732,10 +6905,37 @@
       "set": {
         "sources": [
           "s1408"
+        ],
+        "contacts": [
+          {
+            "kind": "phone",
+            "value": "+7 800 444-76-10",
+            "label": "Phone given as the dealer's on 3mx's site, per the notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          },
+          {
+            "kind": "phone",
+            "value": "+7 977 828-00-98",
+            "label": "Phone in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          },
+          {
+            "kind": "email",
+            "value": "mikhailovkostya@gmail.com",
+            "label": "E-mail in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          }
         ]
       },
       "why": [
-        "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded)."
+        "2026-09-19: DOB/identity of this individual traced to the user-supplied Trimix/3MX dossier (s1408), verified by exact surname + date-of-birth match on the same dossier row; attached as the DOB provenance (previously none recorded).",
+        "2026-10-26: phones and e-mails moved from the free-text notes into contacts[], shown on the company page at the user's direction; the user will add sources later (Чернышов's are in s3664)."
       ]
     },
     "lunev-ivan-ivanovich": {
@@ -7268,10 +7468,45 @@
           }
         ],
         "dob_source": "L0477",
-        "inn_personal_source": "L0477"
+        "inn_personal_source": "L0477",
+        "contacts": [
+          {
+            "kind": "phone",
+            "value": "+7 951 663-49-09",
+            "label": "Phone in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          },
+          {
+            "kind": "phone",
+            "value": "+7 966 755-33-77",
+            "label": "Phone in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          },
+          {
+            "kind": "email",
+            "value": "onediag.ru@gmail.com",
+            "label": "E-mail in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          },
+          {
+            "kind": "email",
+            "value": "79516634909@ya.ru",
+            "label": "E-mail in the investigation's notes",
+            "as_of": "2026-10-26",
+            "source_id": null,
+            "note": "Recorded in the investigation's notes; the source is to be added (user, 26.10.2026)."
+          }
+        ]
       },
       "why": [
-        "2026-10-26: per-field sources for date of birth and personal INN, shown on the company page at the user's direction. L0477 is the Ukrainian sanctions-register export of 26.10.2026: its subject row carries this tax number and this date of birth (checked in the file). L0403 is the UK list download, whose entry RUS0122 prints this date of birth."
+        "2026-10-26: per-field sources for date of birth and personal INN, shown on the company page at the user's direction. L0477 is the Ukrainian sanctions-register export of 26.10.2026: its subject row carries this tax number and this date of birth (checked in the file). L0403 is the UK list download, whose entry RUS0122 prints this date of birth.",
+        "2026-10-26: phones and e-mails moved from the free-text notes into contacts[], shown on the company page at the user's direction; the user will add sources later (Чернышов's are in s3664)."
       ]
     }
   },

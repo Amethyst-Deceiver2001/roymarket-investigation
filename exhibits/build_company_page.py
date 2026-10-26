@@ -263,10 +263,9 @@ class Page:
                     continue
                 t = r.get("title") or ""
                 if t.startswith("Сотрудник"):
-                    staff += 1
-                    continue
+                    role = "Staff member"
                 m = re.match(r"co-inventor \(patent (\w+)\)", t)
-                role = f"Inventor on patent {m.group(1)}" if m else ROLE_TITLE_EN.get(t)
+                role = role if t.startswith("Сотрудник") else (f"Inventor on patent {m.group(1)}" if m else ROLE_TITLE_EN.get(t))
                 mf = re.fullmatch(r"(Директор и учредитель|Учредитель) \((\d+)%\)", t)
                 if mf:
                     role = f'{"Director and founder" if mf.group(1).startswith("Директор") else "Founder"} ({mf.group(2)}%)'
@@ -313,11 +312,13 @@ class Page:
                 self.limits.append(f"The date of birth of {esc(person_names(p.get('fio_ru') or '', p.get('name_latin'))['first'])} comes from one third-party database and is not confirmed by a register.")
         for kind, lab in (("phone", "Phone"), ("email", "E-mail")):
             cs = [c for c in p.get("contacts") or [] if c.get("kind") == kind]
+            if any(not c.get("source_id") for c in cs):
+                self.limits.append("Some phone numbers and e-mails come from the investigation's own notes and are not yet tied to a published source.")
             if any((c.get("note") or "").startswith("Single source") for c in cs):
                 self.limits.append(f"The phone number of {esc(person_names(p.get('fio_ru') or '', p.get('name_latin'))['first'])} comes from one research compilation and is not confirmed by a register or his own publication.")
             if cs:
                 out.append("<li>" + lab + ": " + "; ".join(
-                    f'<span class="rm-id">{esc(c["value"])}</span> ({esc(c["label"][0].lower() + c["label"][1:])}){self.ref(c.get("source_id"), *(c.get("also") or []))}'
+                    f'<span class="rm-id">{esc(c["value"])}</span>' + (f' ({esc(c["label"][0].lower() + c["label"][1:])}){self.ref(c.get("source_id"), *(c.get("also") or []))}' if c.get("source_id") else "")
                     for c in cs) + "</li>")
         for h in p.get("egrip_hits") or []:
             if not h.get("source_id"):
