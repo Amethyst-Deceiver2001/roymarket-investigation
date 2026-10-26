@@ -596,6 +596,12 @@ class Page:
                                "export of 26.10.2026." if (e.get("inn") or e.get("ogrn")) else
                                "No Ukrainian sanction is recorded. Ukraine's State Register of Sanctions is matched by identifier, "
                                "and none is on file for it.")
+        zr = e.get("zakupki_review") or {}
+        if zr.get("hits") == 0 and not e.get("government_contracts") and e.get("inn"):
+            d = dt.date.fromisoformat(zr["as_of"]).strftime("%d.%m.%Y")
+            self.limits.append(f"No state contract is on record for it: a search of the state contract register "
+                               f"(zakupki.gov.ru, 44-FZ) for its INN as supplier on {d} found none. Purchases under other "
+                               f"entities or unpublished purchases would not show.")
         if not e.get("foreign_components"):
             self.limits.append("No foreign components in its products are documented.")
         if not e.get("battlefield_evidence"):

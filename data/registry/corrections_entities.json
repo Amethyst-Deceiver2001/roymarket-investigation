@@ -29265,6 +29265,10 @@
           {
             "text": "The company's presentation (page 11) says state institutions in 12 regions trust it; its web page says ten regions, naming eight oblasts, Krasnodar Krai and Khanty-Mansi. No contract is on file for either; zakupki.gov.ru by INN 9721203814 has not been read for this record.",
             "source_id": "L0514"
+          },
+          {
+            "source_id": "L0515",
+            "text": "zakupki.gov.ru (44-ФЗ) has no contract with ООО «ГОУДРОН» as supplier on 26.10.2026 (L0515; 223-ФЗ search L0516 does not test supplier role): which contracts, if any, back the claimed state customers in 10-12 regions? Not checked: purchases under other entities, unpublished (defence) purchases, and ЕИС notices of procurement without a contract card."
           }
         ],
         "products": [
@@ -29607,7 +29611,13 @@
             "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
           }
         ],
-        "tier_basis": "Manufacturer of the «Набат» family of drone detectors, independently confirmed by extensive self-published combat marketing and third-party battlefield-effectiveness testimonials on file (battlefield_evidence[]): soldier reviews from the Bakhmut direction, deployment at the Запорожская АЭС nuclear plant, and field-unit test feedback from the SVO zone. Financial and government-contract records already on file separately corroborate an operating industrial supplier, not a shell entity."
+        "tier_basis": "Manufacturer of the «Набат» family of drone detectors, independently confirmed by extensive self-published combat marketing and third-party battlefield-effectiveness testimonials on file (battlefield_evidence[]): soldier reviews from the Bakhmut direction, deployment at the Запорожская АЭС nuclear plant, and field-unit test feedback from the SVO zone. Financial and government-contract records already on file separately corroborate an operating industrial supplier, not a shell entity.",
+        "zakupki_review": {
+          "as_of": "2026-10-26",
+          "outcome": "closed",
+          "note": "Contract search of 26.10.2026 (44-ФЗ, supplier ИНН 9721203814, morphology on): 'Поиск не дал результатов' (L0515); same as the scan of 05.09.2026 (0 hits). 223-ФЗ search by the ИНН in its subject/customer field: no results (L0516), which does not test the company as a supplier. The pages were fetched through a connection verified against the Russian Trusted Root CA (SHA-256 D2:6D:2D:02:31:B7:C3:9F:92:CC:73:85:12:BA:54:10:35:19:E4:40:5D:68:B5:BD:70:3E:97:88:CA:8E:CF:31). No state contract is on record for the company, so the 'state customers in 12 regions' and ten-regions claims stay unmatched; they may run through intermediaries, other entities or non-published purchases. Nothing wired.",
+          "hits": 0
+        }
       },
       "verified_against": null,
       "why": [
