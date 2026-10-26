@@ -276,8 +276,10 @@ class Page:
                     continue
                 pn = person_names(p.get("fio_ru") or "", p.get("name_latin"))
                 sub = self.person_lines(p)
+                inn = (f' · personal INN <span class="rm-id">{esc(p["inn_personal"])}</span>{self.ref(p["inn_personal_source"])}'
+                       if p.get("inn_personal") and p.get("inn_personal_source") else "")
                 items.append(f'<li><span class="rm-grade {grade}">{"Documented" if grade == "doc" else "Reported"}</span> '
-                             f'{esc(pn["first"])} (<span lang="ru">{esc(pn["fio"])}</span>): {esc(role)}{self.ref(r.get("source_id"))}'
+                             f'{esc(pn["first"])} (<span lang="ru">{esc(pn["fio"])}</span>): {esc(role)}{self.ref(r.get("source_id"))}{inn}'
                              + (f'<ul class="plain sub">{sub}</ul>' if sub else "") + "</li>")
                 if p.get("inn_basis"):
                     self.limits.append(esc(p["inn_basis"]))
