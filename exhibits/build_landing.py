@@ -1180,10 +1180,8 @@ class Landing(Chain):
     def beyond_shop(self):
         """Two of TsBST's own lines on what it does besides the shop."""
         return (
-            f'<p>The front above is where TsBST\'s circle says its goods and recruits go. The next question is what TsBST says '
-            'it does itself, and its own account reaches past the shop. It presents itself as a support body for drone makers, and '
-            'ROY.MARKET as a catalogue; its posts and its board secretary\'s describe more. It says it showed the marketplace at '
-            '«Tsentr-2026», a strategic '
+            '<p>TsBST presents itself as a support body for drone makers, and ROY.MARKET as a catalogue. Its own posts, and those '
+            'of its board secretary, describe more. It says it showed the marketplace at «Tsentr-2026», a strategic '
             'military exercise with delegations from 41 countries, and signed up sellers there:</p>'
             + self.oq("tsentr", f"TsBST, Telegram, 04.10.2026{self.tref('tsentr')}") + self.center_band() +
             f'<p>On 15 October its board secretary, the United Russia official {self.person_pop(SIDYAKIN)}, announced an app '
@@ -1196,13 +1194,14 @@ class Landing(Chain):
             f'{self.pop(MPTM)}, INN 9714068459. The privacy policy on the live site still names it, at a different address from the August '
             f'offer{self.tref("privacy")}. TsBST\'s own report to the Justice Ministry lists the same company as one it has '
             f'taken part in since the day it was registered.</p>{self.masked()}{self.offer_collage()}'
-            '<p class="note"><a href="#h-origin">How the marketplace recruits sellers, and where its products go instead →</a></p>')
+            )
 
     def origin(self):
         """The platform: who launched it, whom it recruits, the operator it hides, and where the products go instead."""
         recruit = self.mclaim(MPTM, "s8854")
         return (
-            f'<p class="lede">In December 2025 Sidyakin wrote that the party, Bank PSB and TsBST had launched a military '
+            f'<p class="lede">The front above is where TsBST\'s circle says its goods and recruits go. The platform TsBST points servicemen to is ROY.MARKET. '
+            f'In December 2025 Sidyakin wrote that the party, Bank PSB and TsBST had launched a military '
             f'marketplace{self.ref("s8847")}. In August 2026 it opened to outside sellers and named the ones it wanted first:</p>'
             + quote_html(recruit["text_ru"], latinize_gloss(recruit["text_en"]),
                          f"ROY.MARKET's announcement, {ru_date(recruit['as_of'])}{self.ref(recruit['source_id'])}", "q-recruit")
@@ -1301,7 +1300,7 @@ def unique_popovers(doc):
 # The chain view's picture viewer, shared rather than copied: everything in chain_view.js from its comment on.
 # The contents bar: (section heading id, short label), in page order.
 TOC_ITEMS = [("h-found", "What we found"), ("h-open", "The strike"), ("h-limits", "Limits"), ("h-hub", "Who stands behind"), ("h-front", "The front"),
-             ("h-beyond", "Beyond the shop"), ("h-origin", "The marketplace"), ("h-chains", "Profiles"), ("h-net", "Network"),
+             ("h-origin", "The marketplace"), ("h-beyond", "Beyond the shop"), ("h-chains", "Profiles"), ("h-net", "Network"),
              ("h-read", "How to read"), ("h-method", "Method"), ("h-sources", "Sources")]
 TOC = ('<nav class="toc" aria-label="Contents"><ol>' + "".join(f'<li><a href="#{i}">{esc(t)}</a></li>' for i, t in TOC_ITEMS)
        + '</ol></nav>')
@@ -1451,16 +1450,16 @@ def render(preview: bool, out: Path):
     {front}
   </section>
 
-  <section class="beyond" aria-labelledby="h-beyond">
-    <h2 class="rm-h2" id="h-beyond">More than a marketplace</h2>
-    {beyond}
-  </section>
-
   <section class="origin" aria-labelledby="h-origin">
     <h2 class="rm-h2" id="h-origin">The marketplace and its sellers</h2>
     {origin}
     <h3 class="rm-h3">The dates</h3>
     {timeline}
+  </section>
+
+  <section class="beyond" aria-labelledby="h-beyond">
+    <h2 class="rm-h2" id="h-beyond">More than a marketplace</h2>
+    {beyond}
   </section>
 
   <section aria-labelledby="h-chains">
