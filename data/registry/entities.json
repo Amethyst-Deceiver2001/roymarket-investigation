@@ -49461,7 +49461,7 @@
     "inn": "5260494520",
     "ogrn": "1245200009075",
     "registered": null,
-    "address": "Нижегородская область, г. Нижний Новгород",
+    "address": "603006, Нижегородская область, г.о. город Нижний Новгород, г. Нижний Новгород, ул. Варварская, д. 32",
     "city": null,
     "okved_code": "30.30",
     "okved_label": "Производство летательных аппаратов, включая космические, и соответствующего оборудования",
@@ -49516,7 +49516,14 @@
         "note": "Full signed ЕГРЮЛ выписка pulled 2026-09-07 (egrul_vypiska_pull.py)."
       }
     ],
-    "address_history": [],
+    "address_history": [
+      {
+        "value": "603006, Нижегородская область, г.о. город Нижний Новгород, г. Нижний Новгород, ул. Варварская, д. 32",
+        "as_of": "2026-07-16",
+        "source_id": "L0468",
+        "note": "ГРН 2265200743510 of 16.07.2026; the address before that is not shown in the extract."
+      }
+    ],
     "name_history": [],
     "facility_type": null,
     "facility_type_history": [],
@@ -49564,7 +49571,20 @@
         "note": "БФО filing (thousands RUB in original: 0 / (-592)), converted to whole rubles here."
       }
     ],
-    "egrul_flags": [],
+    "egrul_flags": [
+      {
+        "flag": "Находится в стадии ликвидации",
+        "date": "02.03.2026",
+        "source_id": "L0468",
+        "note": "ЕГРЮЛ выписка of 26.10.2026: «Состояние: Находится в стадии ликвидации», ГРН 2265200138157 of 02.03.2026 (decision of 19.02.2026, form Р15016 of 20.02.2026; liquidator Костюнин П.А.). «Срок ликвидации» 15.02.2027. Interim liquidation balance entered 15.10.2026 (ГРН 2265200920576). Still in liquidation, not yet removed from the register, on 26.10.2026."
+      },
+      {
+        "flag": "недостоверность сведений о юридическом лице",
+        "date": "06.05.2026",
+        "source_id": "L0468",
+        "note": "Entry ГРН 2265200370180 of 06.05.2026 (results of a check of the register's data). The extract of 26.10.2026 shows no current unreliability mark; the registered address was changed on 16.07.2026 (ГРН 2265200743510). Which item was flagged is not stated in the extract."
+      }
+    ],
     "securing_measures": [],
     "securing_measures_checked_at": "2026-09-06",
     "sanctions": [
