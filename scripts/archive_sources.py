@@ -398,6 +398,14 @@ def posts_on_page(html: bytes, channel: str) -> set[int]:
     return {int(m) for m in re.findall(pat, html, flags=re.I)}
 
 
+def json_or_none(body: bytes):
+    try:
+        j = json.loads(body or b"")
+    except ValueError:
+        return None
+    return j if isinstance(j, dict) else None
+
+
 def spn_keyed(url: str, access: str, secret: str) -> str:
     auth = {"Authorization": f"LOW {access}:{secret}", "Accept": "application/json"}
     form = urllib.parse.urlencode({"url": url, "skip_first_archive": "1",
@@ -405,13 +413,21 @@ def spn_keyed(url: str, access: str, secret: str) -> str:
     status, _, body, _ = http(f"{WAYBACK}/save", data=form, headers=auth)
     if status == 429:
         raise RateLimited()
-    j = json.loads(body or b"{}")
-    if "job_id" not in j:
-        raise RuntimeError(j.get("message") or f"SPN HTTP {status}")
+    j = json_or_none(body)
+    if j and not j.get("job_id") and "same snapshot" in (j.get("message") or ""):
+        hit = cdx_latest(url)  # a fresh copy exists already: record it, no new capture
+        if hit:
+            return hit["timestamp"]
+    if not j or not j.get("job_id"):
+        # an empty or HTML reply is the service's, not the site's: say what came back
+        raise RuntimeError((j or {}).get("message") or
+                           f"SPN HTTP {status}, reply not JSON: {body[:120]!r}")
     for _ in range(40):
         time.sleep(6)
         _, _, sb, _ = http(f"{WAYBACK}/save/status/{j['job_id']}", headers=auth)
-        st = json.loads(sb or b"{}")
+        st = json_or_none(sb)
+        if st is None:
+            continue  # the status endpoint answers with an empty body now and then; ask again
         if st.get("status") == "success":
             return st["timestamp"]
         if st.get("status") == "error":
