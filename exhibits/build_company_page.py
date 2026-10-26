@@ -192,6 +192,20 @@ class Page:
         r = restricted(e, self.src)
         if r:
             rows.append(("Owners and director", f'Hidden in the register since {ru_date(r["as_of"])}{self.ref(r["source_id"])}'))
+        else:
+            for key, label in (("director_history", "Director"), ("founders_history", "Owner")):
+                hs = [h for h in e.get(key) or [] if self.doc(h.get("source_id")) and h.get("value")]
+                if not hs:
+                    continue
+                last = max(h.get("as_of") or "" for h in hs)
+                for h in (x for x in hs if (x.get("as_of") or "") == last):
+                    m = re.match(r"^(.*?)\s+(\d+%)\s*(\(.*\))?$", h["value"])
+                    who, share = (m.group(1), m.group(2)) if m else (h["value"], "")
+                    pn = person_names(who)
+                    rows.append((label, f'{esc(pn["first"])} (<span lang="ru">{esc(who)}</span>)'
+                                        f'{", " + share + " share" if share else ""}, as of {ru_date(h["as_of"])}'
+                                        f'{self.ref(h["source_id"])}'))
+                    self.reg_people = True
         return self.dl(rows)
 
     def unit(self):
@@ -242,6 +256,7 @@ class Page:
     def people_block(self):
         """People tied to the company by a role other than staff; each Latin first with the full ФИО (§2.2)."""
         items, staff = [], 0
+        reg_people = getattr(self, "reg_people", False)
         for p in load("people.json"):
             for r in p.get("roles") or []:
                 if r.get("entity_slug") != self.e["slug"] or r.get("_candidate"):
@@ -260,7 +275,7 @@ class Page:
                              f'{esc(pn["first"])} (<span lang="ru">{esc(pn["fio"])}</span>): {esc(role)}{self.ref(r.get("source_id"))}</li>')
         if staff:
             self.limits.append(f"The dossier names {staff} further staff members. They are not listed here.")
-        return f'<ul class="plain">{"".join(items)}</ul>' if items else "<p>None recorded.</p>"
+        return f'<ul class="plain">{"".join(items)}</ul>' if items else ("" if reg_people else "<p>None recorded.</p>")
 
     def place(self):
         """Where it is: the register address, and slots for the satellite and street views until they are captured."""
@@ -416,7 +431,7 @@ class Page:
                          if s in chains and (p.get("name_ru") or "").startswith(r["name_ru"])), "")
             items.append(f'<li>{esc(name)} <span class="cyr" lang="ru">{esc(p.get("name_ru"))}</span>'
                          f'{self.ref(p.get("source_id"))}{link}</li>')
-        prices = [f'<p class="lead-note">Price list on the product\'s own site, {ru_date(c["as_of"])}: '
+        prices = [f'<p class="lead-note">Price list on the company\'s own site, {ru_date(c["as_of"])}: '
                   f'{orig_line(c["text_ru"], f"price-{i}", latinize_gloss(c.get("text_en") or ""))}{self.ref(c.get("source_id"))}</p>'
                   for i, c in enumerate(self.e.get("marketing_claims") or [], 1) if (c.get("context") or "").startswith("price list")]
         for c in self.e.get("marketing_claims") or []:

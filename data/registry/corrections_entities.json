@@ -29351,7 +29351,7 @@
           ],
           "sites": [
             {
-              "note": "GoDrone -- confirmed via exact director-name match (Козлов Дмитрий Сергеевич) and product match (site describes СТМ детектор дронов «НАБАТ», entity's own products[] lists «Набат v3»).",
+              "note": "GoDrone -- confirmed via exact director-name match (Козлов Дмитрий Сергеевич) and product match (site describes СТМ детектор дронов «НАБАТ», entity's own products[] lists «Набат v3»). Captured 26.10.2026 (L0479, L0482-L0486): requisites page gives ООО «Гоудрон», ИНН 9721203814/КПП 772101001, ОГРН 1237700265846, 111677 Москва, ул. Ухтомского ополчения, д. 2, кв. 131, godronells@gmail.com; the site runs a «Участникам СВО» section, a retail shop, a corporate desk (+7 930 036-94-70, partner@gdrone.ru) and a service centre; it states it works under 44-ФЗ and with state bodies in ten regions. No mention of ЦБСТ on any page read.",
               "url": "https://godrone.ru/"
             },
             {
@@ -29400,6 +29400,34 @@
                 "L0479"
               ]
             }
+          },
+          {
+            "text_ru": "Детектор дронов \"НАБАТ\" был разработан по многочисленным запросам военнослужащих в зоне СВО, которые столкнулись с острой необходимостью в эффективных средствах обнаружения и противодействия вражеским БПЛА.",
+            "text_en": "The «Nabat» drone detector was developed at the many requests of servicemen in the SVO zone, who faced an acute need for effective means of detecting and countering enemy UAVs.",
+            "context": "Company history on its own site (godrone.ru, «О компании»): the detector is said to have been developed at servicemen's requests in the war zone.",
+            "source_id": "L0485",
+            "as_of": "2026-10-26"
+          },
+          {
+            "text_ru": "Среди наших клиентов — участники СВО, волонтерские организации, а также государственные и коммерческие структуры.",
+            "text_en": "Our clients include SVO participants, volunteer organisations, and state and commercial bodies.",
+            "context": "Own site, page for volunteers and SVO participants (godrone.ru/svo/): names the war's participants and volunteer groups among its customers.",
+            "source_id": "L0483",
+            "as_of": "2026-10-26"
+          },
+          {
+            "text_ru": "До конца месяца дрон‑детектор «НАБАТ в.3» доступен по особой цене — всего 90 000 ₽.",
+            "text_en": "By the end of the month the drone detector «Nabat v.3» is available at a special price, only ₽90,000.",
+            "context": "price list: Company site's own promotion «Специальная акция для военнослужащих», posted 23.10.2026, valid to 30.11.2026: «Набат в.3» at ₽90,000 for serving military (against ₽120,000 listed), cash, military ID shown.",
+            "source_id": "L0484",
+            "as_of": "2026-10-23"
+          },
+          {
+            "text_ru": "Первый приоритет: фронтовые подразделения — часть партии уже на пути в зону СВО.",
+            "text_en": "First priority: front-line units. Part of the batch is already on its way to the SVO zone.",
+            "context": "Own news item of 08.12.2025 on the first serial batch of «Набат 3»: the maker says front-line units are first in the shipping order.",
+            "source_id": "L0486",
+            "as_of": "2025-12-08"
           }
         ],
         "battlefield_evidence": [
