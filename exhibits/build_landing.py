@@ -87,6 +87,8 @@ OPENING_SOURCES = {
     # Pictures in the ties diagram (25.10.2026): the credit and licence the photograph needs travel with it.
     "sid_photo": ("Photograph of Aleksandr Sidyakin by Karmaks, 28.09.2016, Wikimedia Commons, licence CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:SidyakinA.G..jpg"),
     "privacy": ("ROI.MARKET privacy policy, revision 2.0, on roimarket.ru, captured 26.10.2026", "https://roimarket.ru/privacy"),
+    "natural_earth": ("Natural Earth, 1:10m rivers and lake centerlines (public domain); the Dnipro's course on the map is drawn from it",
+                      "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-rivers-lake-centerlines/"),
     "deepstate": ("DeepState, the map of the front line, latest state of 23.10.2026 (its own data download); the Russian-held area is drawn from it",
                   "https://deepstatemap.live/en"),
     "emb_sv": ("Small emblem of the Russian Ground Forces (collar insignia), public domain, Wikimedia Commons",
@@ -1125,7 +1127,7 @@ class Landing(Chain):
                 '<span class="rm-label">Map</span> The Russian-held area and the formations this section names, as DeepState marks them. '
                 'The markers are DeepState\'s own estimate, not a document: the brigade is graded on the strength of the film and the '
                 f'Centre for Information Resilience, which put its drones over Beryslav{self.tref("dw_film")}{self.tref("cir")}; the 18th Army is named by '
-                f'the UN{self.tref("un_ga")} and the 49th by a channel that posts the brigade\'s footage{self.tref("osv_27702")}. Map and markers: DeepState{self.tref("deepstate")}.</figcaption></figure>')
+                f'the UN{self.tref("un_ga")} and the 49th by a channel that posts the brigade\'s footage{self.tref("osv_27702")}. Map and markers: DeepState{self.tref("deepstate")}; the river: Natural Earth{self.tref("natural_earth")}. Red is the Russian-held area here, not a sanctions flag.</figcaption></figure>')
 
     def front(self):
         """The Kherson drone campaign: the UN's finding, the circle's own ties to the formations it names, and how the

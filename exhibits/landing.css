@@ -294,3 +294,10 @@ main section > .rm-h2 { margin-top: 0; }
 /* Profiles and stories: three groups, each under its own heading */
 [aria-labelledby="h-chains"] .rm-h3 { margin: var(--space-5) 0 var(--space-3); }
 [aria-labelledby="h-chains"] .note { margin: calc(-1 * var(--space-2)) 0 var(--space-3); }
+/* Front map colours (user, 26.10.2026: the held area in red, the river in blue). The one use of red outside the
+   Sanctioned flag: a map convention, not a finding. */
+:root { --map-held: #f3cfcb; --map-held-line: #b3262e; --map-river: #3b7fc0; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --map-held: #4a2326; --map-held-line: #e06a64; --map-river: #6fb0e6; } }
+:root[data-theme="dark"] { --map-held: #4a2326; --map-held-line: #e06a64; --map-river: #6fb0e6; }
+.front-map .fm-e { font: 700 12px var(--font-sans); fill: var(--ink); letter-spacing: .04em; paint-order: stroke; stroke: var(--panel-2); stroke-width: 3px; }
+.front-map .fm-r { font: italic 600 15px var(--font-serif); fill: var(--map-river); paint-order: stroke; stroke: var(--panel-2); stroke-width: 4px; }

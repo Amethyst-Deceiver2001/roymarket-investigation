@@ -48,6 +48,20 @@ def ring_path(ring):
     return "M" + "L".join(f"{x:.1f} {y:.1f}" for x, y in pts) + "Z"
 
 
+RIVER = REPO / "exhibits" / "images" / "maps" / "dnipro-ne.json"   # the Dnipro in the box: Natural Earth 10m rivers (public domain), cut to the box
+
+
+def river():
+    """The Dnipro as a labelled line (Natural Earth centerlines, including the former Kakhovka reservoir), or nothing if the file is missing."""
+    if not RIVER.exists():
+        return ""
+    ways = json.loads(RIVER.read_text())
+    d = "".join("M" + "L".join(f"{x:.1f} {y:.1f}" for x, y in (xy(lon, lat) for lon, lat in w)) for w in ways)
+    lx, ly = xy(33.0, 46.70)
+    return (f'<path d="{d}" fill="none" stroke="var(--map-river)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>'
+            f'<text x="{lx:.1f}" y="{ly:.1f}" class="fm-r">Dnipro</text>')
+
+
 def main():
     d = json.loads(SRC.read_text())
     feats = d["map"]["features"]
@@ -59,11 +73,12 @@ def main():
     s = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" role="img" class="front-map" '
          f'aria-label="Map of the Kherson area and the Dnipro left bank, with the Russian-held area as of {stamp}">',
          '<defs><pattern id="fm-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">'
-         '<line x1="0" y1="0" x2="0" y2="9" stroke="var(--ink-3)" stroke-width="1.2" opacity=".45"/></pattern>'
+         '<line x1="0" y1="0" x2="0" y2="9" stroke="var(--map-held-line)" stroke-width="1.2" opacity=".35"/></pattern>'
          f'<clipPath id="fm-clip"><rect width="{W}" height="{H}"/></clipPath></defs>',
          f'<rect width="{W}" height="{H}" fill="var(--panel-2)"/>',
-         f'<g clip-path="url(#fm-clip)"><path d="{path}" fill="var(--panel)" stroke="none"/>'
-         f'<path d="{path}" fill="url(#fm-hatch)" stroke="var(--ink)" stroke-width="2.2" stroke-linejoin="round"/></g>']
+         f'<g clip-path="url(#fm-clip)"><path d="{path}" fill="var(--map-held)" stroke="none"/>'
+         f'<path d="{path}" fill="url(#fm-hatch)" stroke="var(--map-held-line)" stroke-width="2.2" stroke-linejoin="round"/></g>']
+    s.append(river())
     for name, lat, lon, side, _ in TOWNS:
         x, y = xy(lon, lat)
         right = side == "ru"
@@ -89,17 +104,22 @@ def main():
         (166, "rep", "98th Airborne Division", "Three of its regiments as DeepState marks them; the", "channel's 24.10.2026 clip carries the division's watermark", [marks["98a"], marks["98b"], marks["98c"]]),
         (242, "doc", "18th Combined Arms Army", "Named in the UN's October 2025 report; DeepState", "has no marker for it in this area", []),
     ]
+    # APP-6 echelon over each hostile frame: X brigade, III regiment, XXXX army; the 49th's marker is its headquarters (staff)
+    ech = {"205": "X", "49": "XXXX", "98a": "III", "98b": "III", "98c": "III"}
     names = {"205": "205th brigade", "49": "49th Army HQ", "98a": "331st (98th Div.)", "98b": "217th (98th Div.)", "98c": "299th (98th Div.)"}
     for k, (px, py) in ((k, marks[k]) for k in ("205", "49", "98a", "98b", "98c")):
         s.append(f'<g transform="translate({px:.1f} {py:.1f})"><rect x="-9" y="-9" width="18" height="18" transform="rotate(45)" fill="var(--panel)" '
-                 'stroke="var(--ink)" stroke-width="2.2"/><path d="M-6 -6L6 6M6 -6L-6 6" stroke="var(--ink)" stroke-width="1.6"/></g>'
-                 f'<text x="{px + 16:.1f}" y="{py + 18:.1f}" class="fm-t">{names[k]}</text>')
+                 'stroke="var(--ink)" stroke-width="2.2"/><path d="M-6 -6L6 6M6 -6L-6 6" stroke="var(--ink)" stroke-width="1.6"/>'
+                 + ('<path d="M-12.7 0L-12.7 22" stroke="var(--ink)" stroke-width="2.2"/>' if k == "49" else "")
+                 + (f'<text x="-15" y="4" text-anchor="end" class="fm-e">{ech[k]}</text></g>' if k == "98c"   # beside, not above: the 331st's label sits there
+                    else f'<text x="0" y="-17" text-anchor="middle" class="fm-e">{ech[k]}</text></g>')
+                 + f'<text x="{px + 16:.1f}" y="{py + 18:.1f}" class="fm-t">{names[k]}</text>')
     for y, g, t, l1, l2, pins in callouts:
         s.append(f'<g><rect x="{cx}" y="{y}" width="{cw}" height="62" rx="4" fill="var(--panel)" stroke="var(--g-{g})" stroke-width="2" '
                  f'stroke-dasharray="{"0" if g == "doc" else "7 4"}"/>'
                  f'<text x="{cx + 12}" y="{y + 21}" class="fm-h">{t}</text>'
                  f'<text x="{cx + 12}" y="{y + 40}" class="fm-n">{l1}</text><text x="{cx + 12}" y="{y + 54}" class="fm-n">{l2}</text></g>')
-    s.append(f'<text x="{W - 12}" y="{H - 12}" text-anchor="end" class="fm-s">Hatched: Russian-held, {stamp}. Diamonds: unit markers. Both from DeepState</text>')
+    s.append(f'<text x="{W - 12}" y="{H - 12}" text-anchor="end" class="fm-s">Red: Russian-held, {stamp}. Diamonds: unit markers (X brigade, III regiment, XXXX army headquarters). Both from DeepState</text>')
     s.append("</svg>")
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(s))
