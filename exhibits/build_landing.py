@@ -89,6 +89,8 @@ OPENING_SOURCES = {
     "privacy": ("ROI.MARKET privacy policy, revision 2.0, on roimarket.ru, captured 26.10.2026", "https://roimarket.ru/privacy"),
     "natural_earth": ("Natural Earth, 1:10m rivers and lake centerlines (public domain); the Dnipro's course on the map is drawn from it",
                       "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-rivers-lake-centerlines/"),
+    "gur_logos": ("War & Sanctions, the database of Ukraine's Defence Intelligence (GUR): company pages, logos as shown there",
+                  "https://war-sanctions.gur.gov.ua/en"),
     "deepstate": ("DeepState, the map of the front line, latest state of 23.10.2026 (its own data download); the Russian-held area is drawn from it",
                   "https://deepstatemap.live/en"),
     "emb_sv": ("Small emblem of the Russian Ground Forces (collar insignia), public domain, Wikimedia Commons",
@@ -1410,6 +1412,11 @@ def render(preview: bool, out: Path):
     own = L.band(own_ms, "Makers in the network show their own products and stands; each tile names the company. "
                  "A product picture is evidence of what a company offers, not of sales.", big=3, owners=True)
     wall = L.wall()
+    # logos taken from GUR's War & Sanctions pages (where the company's own site or channel is not on file) are credited
+    n_gur = sum(1 for m in L.media if m.get("genre") == "logo" and "war-sanctions.gur.gov.ua" in (m.get("original_url") or "")
+                and any(a["id"] in L.tied() for a in m.get("about") or []))
+    gur_note = (f" Most logos come from the organisation's own site or Telegram channel; {n_gur} are as GUR's War &amp; Sanctions "
+                f"database shows them, on pages that print the company's INN{L.tref('gur_logos')}.") if n_gur else ""
     sgrid, undated = L.sanctions_grid()
     revenue, n_rev = L.revenue_bars()
     annex = L.annex()
@@ -1511,7 +1518,7 @@ def render(preview: bool, out: Path):
     <details class="fold"><summary>Show all {n} organisations, with logos and charts</summary>
     <figure class="netfig">{wall}
       <figcaption>Every organisation the registry links to TsBST, with its logo where one is on file. A red flag names
-      the regimes that list it.</figcaption></figure>
+      the regimes that list it.{gur_note}</figcaption></figure>
     <div class="net2">
       <figure class="netfig"><h3 class="rm-h3">When they were listed</h3><div class="sg-scroll">{sgrid}</div>
         <figcaption>Linked organisations first listed by each regime, by year of the listing on file. {undated} listings
