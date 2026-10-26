@@ -21486,12 +21486,11 @@
     "sanctions": [
       {
         "date": null,
-        "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7802942873 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Limited Liability Company Trimix\". Topics: debarment, export.control, sanction. Primary source URLs cited by OpenSanctions: https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=7930; https://war-sanctions.gur.gov.ua/en/sanctions/companies/12685; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026R0695; https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202500389; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=47713. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text.",
+        "note": "Confirmed via OpenSanctions API match, ID-verified (exact ИНН 7802942873 match against the designation record's own innCode/taxNumber field, not a fuzzy name-only match) — 2026-08-24 screening. OpenSanctions caption: \"Limited Liability Company Trimix\". Topics: debarment, export.control, sanction. Primary source URLs cited by OpenSanctions: https://gels-avoirs.dgtresor.gouv.fr/Gels/RegistreDetail?idRegistre=7930; https://war-sanctions.gur.gov.ua/en/sanctions/companies/12685; https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026R0695; https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202500389; https://sanctionssearch.ofac.treas.gov/Details.aspx?id=47713. NOT yet independently read against each underlying primary designation document (OFAC/EU/GUR page) — this is an ID-confirmed aggregator match, one level short of the ooo-tsentr-bespilotnykh-sistem-tula OFAC page verification done earlier this session. Upgrade to full primary-source read before citing in the brief's narrative text. — 26.10.2026: the Ukraine regime is withdrawn from this aggregator entry. GUR's own War & Sanctions page for this company (L0474, companies/12685, which prints ИНН 7802942873) marks sanctions by the US (23.02.2024), EU (24.02.2025), Switzerland (04.03.2025) and Japan (02.10.2026) and shows no Ukrainian sanction; OpenSanctions' 'Ukraine' reflects the company's presence in GUR's database, which is not a sanction. Ukraine's State Register of Sanctions (drs.nsdc.gov.ua) was not searched: it answers automated requests with a Cloudflare challenge.",
         "regime": [
           "Switzerland (SECO, Ukraine-related measures)",
           "EU (Ukraine-related restrictive measures)",
-          "US (OFAC, Russia Harmful Foreign Activities Sanctions)",
-          "Ukraine (Presidential sanctions decree/list)"
+          "US (OFAC, Russia Harmful Foreign Activities Sanctions)"
         ],
         "source_id": "s0795"
       },
@@ -21787,6 +21786,10 @@
       {
         "text": "The museum's post of 17.12.2025 (t.me/vimaivivs/3195) reports a «передача» (handover) of «Булат» v. 4 and «Таир» at a ceremony in the museum, but names no recipient: the museum's collection, the Mikhailovsky Military Artillery Academy, or a unit. Not recorded as a delivery until a document names the recipient. The cooperation agreement with the academy is known only from this post; its text is not on file.",
         "source_id": "L0469"
+      },
+      {
+        "text": "Ukraine's State Register of Sanctions (drs.nsdc.gov.ua) not searched for ИНН 7802942873: the site blocks automated access. GUR's page (companies/12685) shows no Ukrainian sanction as of 26.10.2026. A signed DRS extract, fetched by hand in a browser, would settle it.",
+        "source_id": "L0474"
       }
     ],
     "sources": [],

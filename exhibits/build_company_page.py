@@ -488,7 +488,7 @@ class Page:
                         self._shown.add(md["id"])
                         figs.append(figure_html(md, f"images/media/{name}", esc(latinize_gloss(who)), self.ref(md.get("source_id"))))
             if figs:
-                out.append(f'<div class="rm-gallery">{"".join(figs)}</div>')
+                out.append(f'<div class="rm-gallery even">{"".join(figs)}</div>')
         return "".join(out)
 
     def pictures(self, img_dir):
@@ -520,6 +520,9 @@ class Page:
 
     def gaps(self):
         e = self.e
+        if not any(lab == "Ukraine" for lab, _ in regimes(e)):
+            self.limits.append("No Ukrainian sanction is recorded. Ukraine's State Register of Sanctions has not been searched "
+                               "for it: the register blocks automated requests.")
         if not e.get("foreign_components"):
             self.limits.append("No foreign components in its products are documented.")
         if not e.get("battlefield_evidence"):
@@ -576,6 +579,8 @@ th { font: 600 var(--t-label)/1.4 var(--font-mono); letter-spacing: .06em; text-
 .rm-quote { margin: 0 0 14px; max-width: 760px; }
 .rm-quote .q { white-space: pre-line; display: block; }
 .rm-gallery { max-width: 900px; }
+.rm-gallery.even { grid-template-columns: repeat(2, minmax(0, 1fr)); }   /* one post's photos: two a row, so four never leave one alone */
+@media (max-width: 520px) { .rm-gallery.even { grid-template-columns: minmax(0, 1fr); } }
 .lead-note { font-size: 13.5px; color: var(--ink-2); margin: 0 0 12px; }
 .nolist { font-size: 13px; color: var(--ink-2); margin: 4px 0; }
 ul.plain .nolist { margin: 2px 0 0; }
