@@ -973,17 +973,32 @@
   },
   {
     "slug": "войсковая-часть-55840",
-    "name_ru": "войсковая часть 55840",
-    "unit_type": "unit_designator",
+    "name_ru": "4-я отдельная разведывательная авиационная эскадрилья (в/ч 55840)",
+    "unit_type": "detachment",
     "designation_confidence": "named",
     "parent_grouping": null,
     "sector_direction_history": [],
-    "notes": "Number only. It comes from the round stamp on the thank-you letter in bpryarl/1082 (L0564): the stamp reads «ВОЙСКОВАЯ ЧАСТЬ» and its number is only partly legible in the picture («…840» is clear, the leading digits are blurred and consistent with 55840); the user gives the number as 55840 (26.10.2026), so the name is a lead, not stated. No formation, parent, arm or location is paired with the number in any source on file: open-web searches of 26.10.2026 for «войсковая часть 55840» (ru standard and extended, uk) returned no page naming the number. The letter's signatory heads a launch crew of the Geran-2 UAV; whether the crew belongs to this unit or only the stamp is the unit's is not stated.",
+    "notes": "The squadron is a «отдельная разведывательная авиационная эскадрилья» (a manned reconnaissance aviation unit); the record's unit_type «detachment» is the closest vocabulary type, so the generated English label is not its name. Pairing: the registered local outlet «О чём говорит Смоленск» (smolensk-i.ru, 21.11.2016, L0568, read in full) reports that «в минувшую субботу на взлетной полосе войсковой части 55840 в поселке Шаталово» (Починковский район, Смоленская область) a ceremony handed the Battle Flag «4 отдельной разведывательной авиационной эскадрильи» to the commander, with the commander and servicemen of «войсковой части 55840» present and a Putin commendation read; this is a press report of 2016, not a document, and the unit may have changed since. The 2025 stamp on the БПР ЯРЛ letter (L0564, bpryarl/1082) reads «ВОЙСКОВАЯ ЧАСТЬ» with a partly legible number («…840» clear) and the user gives it as 55840 (26.10.2026); that the stamp is this squadron's rests on the number alone. A crew head of the Geran-2 UAV signs that letter; nothing on file says the crew is part of this squadron. Leads not read in full (search summaries of 26.10.2026): Russian MoD page «Шаталово (Ножницы)» naming the commander of в/ч 55840 as the airfield's senior aviation commander; press reports that the Shatalovo airfield is a launch site for strike drones.",
     "sources": [
-      "L0564"
+      "L0564",
+      "L0568"
     ],
-    "number": 55840,
+    "number": 4,
     "names": [
+      {
+        "form": "post_wording",
+        "value": "4 отдельной разведывательной авиационной эскадрильи",
+        "grade": "stated",
+        "source_id": "L0568",
+        "as_of": "2016-11-19"
+      },
+      {
+        "form": "vch",
+        "value": "войсковой части 55840",
+        "grade": "stated",
+        "source_id": "L0568",
+        "as_of": "2016-11-19"
+      },
       {
         "form": "vch",
         "value": "войсковой части 55840",
@@ -991,6 +1006,7 @@
         "source_id": "L0564",
         "as_of": "2025-08-05"
       }
-    ]
+    ],
+    "arm": "recon"
   }
 ]
