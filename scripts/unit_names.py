@@ -31,6 +31,7 @@ _ABBR = {"тп": ("regiment", "tank"), "дшп": ("regiment", "air_assault"), "�
          "апп": ("regiment", "artillery"), "ап": ("regiment", "artillery"), "дшбр": ("brigade", "air_assault")}
 _NUM = re.compile(r"^(\d{1,4})(?:-[а-я]{1,3})?$")
 _TOKEN = re.compile(r"\d{1,6}(?:-[а-я]{1,3})?|[а-я]+(?:-[а-я]+)*|[a-z]+")
+_PRODUCT_DESIGNATION = re.compile(r"(?<![\d\w-])[а-яa-z]{3,}-\d+(?![\d\w-])")
 _VCH = re.compile(r"(?:войсковая часть|в/ч|вч)\s*№?\s*(\d{5})")
 
 
@@ -75,7 +76,8 @@ def parse(text: str) -> dict:
     """{number, kind, arm, guards, parent} for a phrase; parent is the next numbered formation named."""
     folded = fold(text)
     vch = _VCH.search(folded)
-    tokens = _TOKEN.findall(folded)
+    # a product name such as «Герань-2» is not a unit number
+    tokens = _TOKEN.findall(_PRODUCT_DESIGNATION.sub(" ", folded))
     first = None
     parents = []
     i = 0

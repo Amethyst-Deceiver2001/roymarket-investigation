@@ -41,6 +41,9 @@ def main():
     assert un.parse("237 дшп")["arm"] == "air_assault" and un.parse("3 мсд")["kind"] == "division"
     assert un.parse("76-й бригады ВДВ")["arm"] == "airborne"
     assert un.parse("237 тп, в/ч 91726")["vch"] == "91726"
+    # a product name with a hyphenated number is not a unit number
+    assert un.parse("пусковой расчёт БПЛА «Герань-2»")["number"] is None
+    assert un.parse("2-й батальон, расчёт «Герань-2»")["number"] == 2
     q = un.parse("войсковая часть 33000")
     assert q["number"] is None and q["vch"] == "33000", q  # a five-digit number is a в/ч, not a unit number
 
