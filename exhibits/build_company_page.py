@@ -20,7 +20,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 sys.path.insert(0, str(REPO / "exhibits"))
 from graph_contract import source_grade  # noqa: E402
 import deliveries as dl  # noqa: E402
-from display_helpers import (NAME_JS, design_head, display_name, figure_html, latin_display, latin_text, load_media, media_about, latinize_gloss, name_html, popup_originals, quote_html, sanction_regimes,  # noqa: E402
+from display_helpers import (NAME_JS, design_head, display_name, figure_html, latin_display, latin_text, load_media, media_about, latinize_gloss, name_html, orig_line, popup_originals, quote_html, sanction_regimes,  # noqa: E402
                              person_names, publish_copy, reader_grade, ru_date, translation)
 from build_chain_view import ROLE_EN, describe_source, esc, load, money  # noqa: E402
 
@@ -390,7 +390,10 @@ class Page:
                          if s in chains and (p.get("name_ru") or "").startswith(r["name_ru"])), "")
             items.append(f'<li>{esc(name)} <span class="cyr" lang="ru">{esc(p.get("name_ru"))}</span>'
                          f'{self.ref(p.get("source_id"))}{link}</li>')
-        return f'<ul class="plain">{"".join(items)}</ul>' if items else "<p>No products recorded.</p>"
+        prices = [f'<p class="lead-note">Price list on the product\'s own site, {ru_date(c["as_of"])}: '
+                  f'{orig_line(c["text_ru"], f"price-{i}", latinize_gloss(c.get("text_en") or ""))}{self.ref(c.get("source_id"))}</p>'
+                  for i, c in enumerate(self.e.get("marketing_claims") or [], 1) if (c.get("context") or "").startswith("price list")]
+        return (f'<ul class="plain">{"".join(items)}</ul>' if items else "<p>No products recorded.</p>") + "".join(prices)
 
     def ip_block(self):
         items = []
@@ -444,8 +447,8 @@ class Page:
         lines (phone numbers) are cut and marked, as in the exports."""
         out = []
         for c in sorted(self.e.get("marketing_claims") or [], key=lambda c: c.get("as_of") or ""):
-            if (c.get("context") or "").startswith("third_party"):
-                continue   # someone else's words about the company: reported_by_others()
+            if (c.get("context") or "").startswith(("third_party", "price list")):
+                continue   # someone else's words: reported_by_others(); a price list is not a statement: products_block()
             ru = c.get("text_ru") or ""
             if not ru or not c.get("source_id"):
                 continue

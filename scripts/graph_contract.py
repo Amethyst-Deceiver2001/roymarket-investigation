@@ -76,7 +76,7 @@ SOURCE_PREFIX_GRADE = {
     "ZAKUPKI": "doc", "PATENT": "doc", "TRADEMARK": "doc", "ROSPATENT": "doc", "GISP": "doc", "FNS": "doc",
     "PBNALOG": "doc", "FEDRESURS": "doc", "COURT": "doc", "NSPD": "doc", "RKN": "doc", "MCHS": "doc",
     "FSA": "doc", "PP719": "doc", "CERT": "doc", "PROVERKI": "doc", "ROM": "doc", "DATASET": "doc",
-    "AERONEXT": "doc", "OCR": "doc", "EU": "doc", "OFAC": "doc", "UKAZ": "doc", "SECO": "doc", "UKSL": "doc", "NSDC": "doc", "GUR": "doc", "FUNDNTI": "doc", "MINPROMTORG": "doc",
+    "AERONEXT": "doc", "OCR": "doc", "EU": "doc", "OFAC": "doc", "UKAZ": "doc", "SECO": "doc", "UKSL": "doc", "NSDC": "doc", "DRS": "doc", "GUR": "doc", "FUNDNTI": "doc", "MINPROMTORG": "doc",
     # the press, aggregators and third-party compilations: reported
     "PRESS": "rep", "TRANSCRIPT": "rep", "DOSSIER": "rep", "RUSPROFILE": "rep", "CHECKO": "rep",
     "ALEPH": "rep", "OPENSANCTIONS": "rep", "RUPEP": "rep", "PEP": "rep",
@@ -93,6 +93,8 @@ def source_grade(src: dict | None) -> str:
     """doc / rep / open for one sources.json record (None: no source -> open)."""
     if not src:
         return "open"
+    if src.get("type") == "sanctions_list":
+        return "doc"                      # an official list or notice saved as a web capture (US Federal Register, Japan MOF)
     name = (src.get("path") or "").rsplit("/", 1)[-1]
     if name.startswith("ul-") or name.startswith("ip-"):
         return "doc"
