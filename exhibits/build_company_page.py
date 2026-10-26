@@ -524,8 +524,10 @@ class Page:
     def gaps(self):
         e = self.e
         if not any(lab == "Ukraine" for lab, _ in regimes(e)):
-            self.limits.append("No Ukrainian sanction is recorded. Ukraine's State Register of Sanctions has not been searched "
-                               "for it: the register blocks automated requests.")
+            self.limits.append("No entry in Ukraine's State Register of Sanctions carries its INN or OGRN, in the register's "
+                               "export of 26.10.2026." if (e.get("inn") or e.get("ogrn")) else
+                               "No Ukrainian sanction is recorded. Ukraine's State Register of Sanctions is matched by identifier, "
+                               "and none is on file for it.")
         if not e.get("foreign_components"):
             self.limits.append("No foreign components in its products are documented.")
         if not e.get("battlefield_evidence"):
