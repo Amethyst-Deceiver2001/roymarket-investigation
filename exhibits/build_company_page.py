@@ -125,6 +125,7 @@ class Page:
         self.limits = []
         self.media = load_media()
         self.media_files = []
+        self._shown = set()   # media ids already placed by reported_by_others()
 
     def ref(self, *sids):
         nums = []
@@ -443,6 +444,8 @@ class Page:
         lines (phone numbers) are cut and marked, as in the exports."""
         out = []
         for c in sorted(self.e.get("marketing_claims") or [], key=lambda c: c.get("as_of") or ""):
+            if (c.get("context") or "").startswith("third_party"):
+                continue   # someone else's words about the company: reported_by_others()
             ru = c.get("text_ru") or ""
             if not ru or not c.get("source_id"):
                 continue
@@ -462,12 +465,38 @@ class Page:
             out.append(quote_html(ru, gloss, cite, key=f"claim-{len(out) + 1}"))
         return "".join(out)
 
+    def reported_by_others(self, img_dir):
+        """Another body's post about the company (marketing_claims with a third_party context), quoted, with the
+        pictures from the same post (event photos published by a third party, matched on the post's link)."""
+        out = []
+        for c in sorted(self.e.get("marketing_claims") or [], key=lambda c: c.get("as_of") or ""):
+            if not (c.get("context") or "").startswith("third_party") or not c.get("source_id"):
+                continue
+            m = re.match(r"^\[([^\]]+)\]\s*(.*)$", c.get("text_en") or "", re.S)
+            who, gloss = (m.group(1), m.group(2)) if m else ("", c.get("text_en") or "")
+            when = ru_date(c["as_of"]) if re.match(r"\d{4}-\d{2}-\d{2}", c.get("as_of") or "") else ""
+            cite = f'{esc(latinize_gloss(who))}{", " + when if when else ""}{self.ref(c["source_id"])}'
+            out.append(quote_html(c["text_ru"], latinize_gloss(gloss), cite, key=f"other-{len(out) + 1}"))
+            post = (self.src.get(c["source_id"], {}).get("public_url") or "").rstrip("/")
+            base = post.rsplit("/", 1)[0] + "/" if post else None
+            figs = []
+            for md in media_about(self.media, {("entity", self.e["slug"])}):
+                if base and md.get("asserted_by") == "third_party" and md.get("genre") == "event" and (md.get("original_url") or "").startswith(base):
+                    name = publish_copy(md, img_dir)
+                    if name:
+                        self.media_files.append((f"images/media/{name}", img_dir / name))
+                        self._shown.add(md["id"])
+                        figs.append(figure_html(md, f"images/media/{name}", esc(latinize_gloss(who)), self.ref(md.get("source_id"))))
+            if figs:
+                out.append(f'<div class="rm-gallery">{"".join(figs)}</div>')
+        return "".join(out)
+
     def pictures(self, img_dir):
         """Pictures of the company and its products (not handovers: those sit on the chain view)."""
         keys = {("entity", self.e["slug"])} | {("product", p["slug"]) for p in self.products if p.get("maker") == self.e["slug"]}
         figs = []
         for m in media_about(self.media, keys):
-            if m.get("genre") in ("logo", "handover", "facility") or m.get("publish") == "internal":
+            if m.get("genre") in ("logo", "handover", "facility") or m.get("publish") == "internal" or m["id"] in self._shown:
                 continue
             name = publish_copy(m, img_dir)
             if not name:
@@ -511,8 +540,8 @@ def render(pg, out, chains):
     sections = [("Company register", pg.register()), ("Before the register was closed", pg.before()),
                 ("People", pg.people_block()), ("Where it is", pg.place()), ("Sanctions", pg.sanctions_block()),
                 ("Timeline", pg.timeline()), ("Annual accounts", pg.accounts()),
-                ("Products", pg.products_block(chains)), ("Pictures", pg.pictures(img_dir)),
-                ("In its own words", pg.own_words()), ("Trademarks and patents", pg.ip_block()),
+                ("Products", pg.products_block(chains)), ("Reported by others", pg.reported_by_others(img_dir)),
+                ("Pictures", pg.pictures(img_dir)), ("In its own words", pg.own_words()), ("Trademarks and patents", pg.ip_block()),
                 ("Links to TsBST and the state", pg.network()), ("Sellers of its products", pg.sellers())]
     pg.gaps()
     body = "".join(f'<section class="sec"><h2 class="rm-h2">{t}</h2>{h}</section>' for t, h in sections if h)
