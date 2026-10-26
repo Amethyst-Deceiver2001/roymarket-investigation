@@ -52844,5 +52844,78 @@
         "source_id": "L0542"
       }
     ]
+  },
+  {
+    "_verified": true,
+    "address": null,
+    "birthplace": null,
+    "dob": null,
+    "fio_ru": "Яценко Ангелина Викторовна",
+    "inn_personal": "505603159114",
+    "inn_personal_source": "L0552",
+    "name_latin": "Yatsenko Angelina Viktorovna",
+    "photo": null,
+    "slug": "yatsenko-angelina-viktorovna",
+    "social": [],
+    "roles": [
+      {
+        "entity_name": "ООО «ГОУ ДРОН»",
+        "entity_slug": "ooo-gou-dron",
+        "from": "2025-06-03",
+        "source_id": "L0552",
+        "title": "Генеральный директор / sole owner (100%)",
+        "to": null
+      }
+    ],
+    "notes": "2026-10-26: new record. Sole owner and general director of ООО «ГОУ ДРОН» (ИНН 9725186951) since 03.06.2025 (extract L0552). Date of birth, if wanted, is a lead only: the investigation's research file s3664 gives 19.06.1959 and says she is the mother of Козлов Дмитрий Сергеевич; neither is confirmed by a register document, so the date of birth is not filled. Also a sole proprietor since 20.12.2024 (ОГРНИП 324774600862162, still active on 26.10.2026; extract L0553): main activity 63.12 web portals, further codes include 46.43 wholesale of household electrical appliances.",
+    "other_entities": [
+      {
+        "inn": "9725186951",
+        "ogrn": "1257700251159",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГОУ ДРОН\"",
+        "role": "director",
+        "okved": "46.43",
+        "okved_label": "Торговля оптовая бытовыми электротоварами",
+        "registered": "03.06.2025",
+        "region": "МОСКВА Г.",
+        "source_id": "L0554"
+      },
+      {
+        "inn": "9725186951",
+        "ogrn": "1257700251159",
+        "name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ГОУ ДРОН\"",
+        "role": "founder",
+        "okved": "46.43",
+        "okved_label": "Торговля оптовая бытовыми электротоварами",
+        "registered": "03.06.2025",
+        "region": "МОСКВА Г.",
+        "source_id": "L0554"
+      }
+    ],
+    "other_entities_checked_at": "2026-10-26",
+    "egrip_hits": [
+      {
+        "ogrnip": "324774600862162",
+        "name": "ЯЦЕНКО АНГЕЛИНА ВИКТОРОВНА",
+        "registered": "20.12.2024",
+        "excluded_or_flag": null,
+        "source_id": "L0553",
+        "activity_en": "web portals (main activity) and wholesale of household electrical appliances",
+        "okved_main": "63.12",
+        "email": "IPYATSENKOAV@YANDEX.RU"
+      }
+    ],
+    "egrip_checked_at": "2026-10-26",
+    "disqualification_hits": [],
+    "disqualification_checked_at": "2026-10-26",
+    "contacts": [
+      {
+        "kind": "email",
+        "value": "IPYATSENKOAV@YANDEX.RU",
+        "label": "E-mail on her sole-proprietor register entry",
+        "as_of": "2026-10-26",
+        "source_id": "L0553"
+      }
+    ]
   }
 ]
