@@ -273,7 +273,8 @@ def sections(slug: str, X: Exhibits, ctx: dict, gap_path: Path, gap_as_of: str, 
                  "each list by name before calling it unlisted.")
         L += ["", "| Regime | Status |", "|---|---|"]
         for k in ("eu", "us", "uk", "ch", "ua", "ca", "au", "jp", "nz"):
-            cell = re.sub(r"\[(s[0-9]{4,})\]", lambda m: X.ref(m.group(1)), g.get(k) or "")  # internal ids become exhibits
+            cell = re.sub(r"\[([sL][0-9]{4,}(?:, [sL][0-9]{4,})*)\]",   # internal ids (one or several) become exhibits
+                          lambda m: "[" + ", ".join(X.ref(i)[1:-1] for i in m.group(1).split(", ")) + "]", g.get(k) or "")
             L.append(f"| {REGIME_LABEL[k]} | {cell or unchecked(e, k)} |")
     else:
         L.append("Not in the sanctions-gap table.")
