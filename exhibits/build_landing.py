@@ -1036,7 +1036,7 @@ class Landing(Chain):
             + f'<ol class="flow" aria-label="From the strike report to the order line">{self.flow_html(nodes, joins)}</ol>' +
             f'<p>TsBST\'s post calls the city “occupied”. Zaporizhzhia is held by Ukraine, and the building is the seat of its '
             f'regional government. On 8 October the head of the regional administration reported that an FPV drone had hit the coat '
-            f'of arms on its façade: smoke, no fire, nobody hurt{self.tref("ukrinform")}. ROI.MARKET is a login-only '
+            f'of arms on its façade{self.tref("ukrinform")}. ROI.MARKET is a login-only '
             f'marketplace that, by the post of TsBST\'s board secretary, a United Russia official, TsBST launched with the party '
             f'and Bank PSB{self.ref("s8847")}. '
             + ("" if listed else "No sanctions listing for the maker is on file. ") +
@@ -1195,7 +1195,7 @@ class Landing(Chain):
             + self.un_quote("dnepr", f'UN report A/80/497, para. 40, 21.10.2025{self.tref("un_ga")}')
             + self.front_map() +
             f'<p>The Commission names the 18th Combined Arms Army{self.tref("un_crp")}; it names no brigade. The Centre for Information Resilience '
-            f'and DW named a 205th motor-rifle unit (CIR\'s text says battalion){self.tref("dw_film")} among three units whose drones worked over Beryslav '
+            f'and DW named the 205th motor-rifle brigade{self.tref("dw_film")} among three units whose drones worked over Beryslav '
             f'during the attacks, while saying they could not prove who carried them out{self.tref("cir")}. A channel that posts '
             f'the brigade\'s footage places it in the 49th Army{self.tref("osv_27702")}. A senior '
             f'practitioner at a Kherson city hospital told the Commission:</p>'
