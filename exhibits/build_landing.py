@@ -1481,7 +1481,7 @@ def render(preview: bool, out: Path):
 <meta name="twitter:title" content="TsBST and ROI.MARKET: a Moscow non-profit, its military marketplace, and the drone-war supply around it">
 <meta name="twitter:description" content="Every claim rests on an archived document and is graded by how well that document shows it.">
 <meta name="twitter:image" content="https://amethyst-deceiver2001.github.io/roymarket-investigation/images/social.png">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%274%27 fill=%27%231d4a73%27/%3E%3Cpath d=%27M7 9h18M16 9v15%27 stroke=%27%23fff%27 stroke-width=%273.5%27 fill=%27none%27/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231d4a73'/%3E%3Cg stroke='%23fff' fill='none' stroke-linecap='round'%3E%3Cpath d='M10.5 10.5l11 11M21.5 10.5l-11 11' stroke-width='2.4'/%3E%3Ccircle cx='7.5' cy='7.5' r='4' stroke-width='1.8'/%3E%3Ccircle cx='24.5' cy='7.5' r='4' stroke-width='1.8'/%3E%3Ccircle cx='7.5' cy='24.5' r='4' stroke-width='1.8'/%3E%3Ccircle cx='24.5' cy='24.5' r='4' stroke-width='1.8'/%3E%3C/g%3E%3Crect x='12.5' y='12.5' width='7' height='7' rx='1.8' fill='%23fff'/%3E%3C/svg%3E">
 {design_head((REPO / 'exhibits' / 'landing.css').read_text(), None if preview else 'fonts/fonts.css')}</head>
 <body>
 <div class="hero"{hero_style}><header class="rm-page top">
