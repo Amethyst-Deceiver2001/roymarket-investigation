@@ -253,7 +253,8 @@ class Page:
 
     def pictures(self):
         figs = []
-        for m in self.media:
+        order = ["m0046", "m0049", "m0047"]   # chip, CAD screen, work bench
+        for m in sorted(self.media, key=lambda x: order.index(x["id"]) if x["id"] in order else 99):
             if m.get("genre") in ("logo", "portrait"):
                 continue
             if not any(a.get("type") == "entity" and a.get("id") == SLUG for a in m.get("about") or []):
@@ -330,6 +331,8 @@ ul.plain li { margin: 4px 0; }
 .head-pic.logo img { aspect-ratio: 1; object-fit: cover; border-radius: 50%; }
 .head-pic figcaption { font-size: var(--t-note); color: var(--ink-3); margin-top: 6px; }
 .rm-gallery { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.rm-gallery.row3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 640px) { .rm-gallery.row3 { grid-template-columns: 1fr; } }
 .prose ul { padding-left: 20px; color: var(--ink-2); max-width: var(--measure); }
 @media (max-width: 760px) { .build { grid-template-columns: minmax(0, 1fr); } }
 """
@@ -365,9 +368,8 @@ def render(out: Path):
     <p class="note"><span class="rm-grade rep">Reported</span> The school's, TsBST's and the register's own text, joined by a name. The
     school's tie to TsBST is still not documented.</p></section>
   <section aria-labelledby="h-pics"><h2 class="rm-h2" id="h-pics">Its own pictures</h2>
-    <p>Stills from the project's own posts and videos: the build bench, the airframe in CAD, the flight controller, an
-    observation device it released, and a recruitment video.</p>
-    <div class="rm-gallery">{pics}</div></section>
+    <p>Stills from the project's own posts and videos: the flight controller, the airframe in CAD and the assembly bench.</p>
+    <div class="rm-gallery row3">{pics}</div></section>
   <section aria-labelledby="h-build"><h2 class="rm-h2" id="h-build">What the interceptor is made of</h2>
     <p>The project published a parts list for its interceptor and a 32-minute build video. The parts are off-the-shelf
     hobby components. The drawing marks where each sits; the table says who makes it.</p>

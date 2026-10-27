@@ -1586,6 +1586,8 @@ def render(preview: bool, out: Path):
       document is and links to it where a public copy exists.</li>
       <li>Pictures are evidence only for what they show, and each says who published it. Faces of people taking part
       are shown; nobody is named from a face.</li>
+      <li>The investigation grew out of <a href="https://amethyst-deceiver2001.github.io/wb-watcher/" target="_blank"
+      rel="noopener">WB Watch</a>, a tracker of military goods sold on Wildberries.</li>
     </ul>
     {annex}
   </section>
