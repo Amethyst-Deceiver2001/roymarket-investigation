@@ -139,7 +139,7 @@ def media_about(media: list[dict], refs: set[tuple[str, str]], publishable=True)
     for m in media:
         if not any((a.get("type"), a.get("id")) in refs for a in m.get("about") or []):
             continue
-        if publishable and (m.get("publish") == "internal" or m.get("redact") == "blur_pending"):
+        if publishable and (m.get("publish") == "internal" or m.get("redact") == "blur_pending" or m.get("on_pages") is False):
             continue
         out.append(m)
     return out
@@ -248,14 +248,24 @@ def popup_originals(doc: str) -> str:
     return re.sub(r'\s*<span class="cyr" lang="ru">([^<]+)</span>', pop, doc)
 
 
+def media_caption(m: dict) -> str:
+    """The English line a picture is captioned with: the short `caption_en` where one is written, else `shows_en`."""
+    return m.get("caption_en") or m.get("shows_en") or latinize_gloss(m.get("shows") or "")
+
+
+def on_pages(m: dict) -> bool:
+    """False for a picture kept off reader pages (user rule 27.10.2026: a few good pictures that back the copy)."""
+    return m.get("on_pages") is not False and m.get("publish") != "internal"
+
+
 def figure_html(m: dict, img_src: str, who: str, ref_html: str, video_note: str = "") -> str:
     """One evidence figure. `who` names the publisher for self-published media."""
     import html as _h
     prov = PROVENANCE.get(m.get("asserted_by"), "Source").format(who=who)
     when = ru_date(m.get("published")) or ""
     cls = "rm-fig rm-video" if video_note else "rm-fig"
-    caption = caption_html(m["shows"], "cap-" + str(m.get("id")), m.get("shows_en"))
-    alt = m.get("shows_en") or m["shows"]
+    caption = caption_html(m["shows"], "cap-" + str(m.get("id")), media_caption(m))
+    alt = media_caption(m)
     return (f'<figure class="{cls}"><div class="frame"><img src="{_h.escape(img_src)}" alt="{_h.escape(alt)}"></div>'
             f'<figcaption><span class="rm-prov">{_h.escape(prov)}</span><span>{caption}{ref_html}</span>'
             + (f'<span class="orig">{_h.escape(video_note)}</span>' if video_note else "")

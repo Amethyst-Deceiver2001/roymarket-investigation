@@ -20,7 +20,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 sys.path.insert(0, str(REPO / "exhibits"))
 from graph_contract import source_grade  # noqa: E402
 import deliveries as dl  # noqa: E402
-from display_helpers import (NAME_JS, caption_html, design_head, display_name, figure_html, latin_display, latin_text, load_media, media_about, latinize_gloss, name_html, orig_line, popup_originals, quote_html, sanction_regimes,  # noqa: E402
+from display_helpers import (NAME_JS, caption_html, design_head, display_name, figure_html, latin_display, latin_text, load_media, media_about, media_caption, latinize_gloss, name_html, orig_line, popup_originals, quote_html, sanction_regimes,  # noqa: E402
                              person_names, publish_copy, reader_grade, ru_date, translation)
 from build_chain_view import ROLE_EN, describe_source, esc, load, money  # noqa: E402
 
@@ -365,8 +365,8 @@ class Page:
             self.media_files.append((f"images/media/{name}", self.img_dir / name))
             g, im = m["geo"], m["imagery"]
             geo = f'{g["lat"]:.5f}, {g["lon"]:.5f} · {esc(im["provider"])} · {esc(im["date"])}'
-            return (f'<figure class="rm-fig"><div class="frame"><img src="images/media/{name}" alt="{esc(m.get("shows_en") or m["shows"])}"></div>'
-                    f'<figcaption><span class="rm-prov">{title}</span><span>{caption_html(m["shows"], "cap-" + m["id"], m.get("shows_en"))}'
+            return (f'<figure class="rm-fig"><div class="frame"><img src="images/media/{name}" alt="{esc(media_caption(m))}"></div>'
+                    f'<figcaption><span class="rm-prov">{title}</span><span>{caption_html(m["shows"], "cap-" + m["id"], media_caption(m))}'
                     f'{self.ref(m.get("source_id"))}</span><span class="rm-geo">{geo}</span></figcaption></figure>')
 
         rows = []

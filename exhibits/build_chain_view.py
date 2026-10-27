@@ -39,7 +39,7 @@ from graph_contract import source_grade  # noqa: E402
 import deliveries as dl  # noqa: E402
 from source_citation import cite, reader_terms  # noqa: E402
 from display_helpers import (NAME_JS, design_head, sanction_regimes, display_name, figure_html, kind_icon, latin_display, latin_text,  # noqa: E402
-                             latinize_gloss, load_media, media_about, name_html, orig_line, person_names, popup_originals, publish_copy, quote_html, translation,
+                             latinize_gloss, load_media, media_about, media_caption, name_html, orig_line, person_names, popup_originals, publish_copy, quote_html, translation,
                              reader_grade, ru_date)
 
 CBST = "ano-tsbst-centre-for-unmanned-systems-technologies"
@@ -548,7 +548,7 @@ class Chain:
         out = ""
         if main:
             self.template(main)
-            out += (f'<button class="rm-thumb-main" type="button" data-fig="fig-{main["id"]}" aria-label="{esc(main.get("shows_en") or latinize_gloss(main["shows"]))}">'
+            out += (f'<button class="rm-thumb-main" type="button" data-fig="fig-{main["id"]}" aria-label="{esc(media_caption(main))}">'
                     f'<img class="rm-thumb" src="{esc(self.img(main))}" alt=""></button>'
                     f'<p class="note">Picture: {esc(self.who(main))}{self.ref(main.get("source_id"))}</p>')
         return out + self.strip([m for m in ms if m is not main], by_provenance=True)
@@ -579,7 +579,7 @@ class Chain:
             for m in grp:
                 self.template(m)
                 btns.append(f'<button class="rm-thumb-btn" type="button" data-fig="fig-{m["id"]}" '
-                            f'aria-label="{esc(m.get("shows_en") or latinize_gloss(m["shows"]))}"><img src="{esc(self.img(m))}" alt=""></button>')
+                            f'aria-label="{esc(media_caption(m))}"><img src="{esc(self.img(m))}" alt=""></button>')
             lbl = f'<span class="lbl">{esc(key)} ({len(grp)})</span>' if key else ""
             out.append(f'<div class="rm-thumbs">{lbl}{"".join(btns)}</div>')
         return "".join(out)
@@ -712,7 +712,7 @@ def handover_map(ch):
             'name a place. A dot is a town, or a front direction named after a town; a shaded region is a handover that '
             'names only the region. The recipient may be anywhere along that direction or in that region, and a handover '
             'is not evidence of use in combat. Borders are the internationally recognised ones; the map does not show the '
-            'front line. Each handover and its source is in the chain above. Boundaries: geoBoundaries, © OpenStreetMap '
+            'front line. Boundaries: geoBoundaries, © OpenStreetMap '
             'contributors (ODbL); town positions: Wikidata.</figcaption>'
             + (f'<p class="rm-label">Not placed: no town or region named</p><ul class="unplaced">{rest}</ul>' if rest else "")
             + '</figure></section>')

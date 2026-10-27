@@ -20,7 +20,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "exhibits"))
 sys.path.insert(0, str(REPO / "scripts"))
 from build_chain_view import CBST, Chain, cap, esc, load, money  # noqa: E402
-from display_helpers import NAME_JS, design_head, display_name, guillemets, latin_text, latinize_gloss, media_about, name_html, orig_line, person_names, popup_originals, quote_html, reader_grade, ru_date, sanction_regimes  # noqa: E402
+from display_helpers import NAME_JS, design_head, display_name, guillemets, latin_text, latinize_gloss, media_about, media_caption, name_html, orig_line, person_names, popup_originals, quote_html, reader_grade, ru_date, sanction_regimes  # noqa: E402
 from graph_contract import source_grade  # noqa: E402
 
 MPTM, NP, PSB, SIDYAKIN = "ooo-mptm", "fond-nasha-pravda", "pao-bank-psb", "aleksandr-sidyakin"
@@ -219,16 +219,11 @@ OPENING_QUOTES = {   # key: (channel, post, verbatim Russian, our translation)
 # stills they appear on the private preview only. key: (file in exhibits/images/center2026, what the frame shows,
 # (verbatim Russian, English) of a line printed in it or None)
 CENTER_STILLS = [
-    ("c2605-1.jpg", "The stand under camouflage netting: a roll-up banner with the TsBST and ROI.MARKET logos and a QR code, a "
-     "monitor, a laptop and papers on the table. The face of the man standing at the stand is blurred in the post itself; "
-     "we leave it so.", ("Технологии превосходства", "Technologies of superiority")),
-    ("c2605-2.jpg", "Folded ROI.MARKET leaflets and a red round patch. Each leaflet shows a gimbal camera and is printed "
-     "“3000+” product items.", None),
+    ("c2605-1.jpg", "TsBST's stand at «Tsentr-2026», under a TsBST and ROI.MARKET banner.", None),
 ]
 
 KHERSON_STILLS = {
-    "osv_27702": (27702, "k27702.jpg", "A drone's view down into a ruined house. On the left, the bear emblem with “205 brigade”; "
-                  "bottom right, the caption “settlement of Kazatskoe” and grid coordinates. Still at 0:40.",
+    "osv_27702": (27702, "k27702.jpg", "Still from the video: a ruined house in Kazatskoe, under the “205 brigade” emblem.",
                   "205 бригада 49 ОА ГВ \"Днепр\"", "205th brigade, 49th Combined Arms Army, «Dnepr» Group of Forces"),
     "osv_21384": (21384, "k21384.jpg", "The map posted with the warning: a red zone over the Kherson riverside, both banks of "
                   "the Dnipro and the bridge.",
@@ -252,8 +247,7 @@ KHERSON_STILLS = {
                   "on its side is partly hidden by the trees. Still at 0:10.",
                   "Противник в очередной раз использует кареты скорой помощи для подвоза БК",
                   "Once again the enemy is using ambulances to bring up ammunition"),
-    "osv_38703": (38703, "k38703.jpg", "A drone's approach into a courtyard: a dark van lettered “RITUAL” (funeral services), "
-                  "a yellow minibus beyond it. Watermark “Rodnaya 98 vdd”, the 98th Airborne Division. Still at 0:04.",
+    "osv_38703": (38703, "k38703.jpg", "Still from the video: a van lettered “RITUAL” (funeral services), watermarked by the 98th Airborne Division.",
                   "Расчет Родной выявил технику, которая перемещается по Красной зоне под видом ритуальных услуг.",
                   "The «Rodnoy» crew spotted a vehicle moving through the Red Zone in the guise of funeral services."),
     "osv_34459": (34459, "k34459.jpg", "Title card of the video: “SVO”, the emblem of the «Dnepr» Group of Forces, then "
@@ -847,7 +841,7 @@ class Landing(Chain):
                 f'the goods to units.</figcaption><div class="mdl-wrap">{two}</div></figure>')
 
     # -- pictures: registered media only (media.json), each opening its full figure with caption, date and source ----
-    HERO = "m0085"   # Nasha Pravda's crates and cases by a truck, 24.04.2026: no faces, the supply itself
+    HERO = None   # no background picture: a decorative crop backs no line of the copy (user rule, 27.10.2026)
 
     def pics(self, slugs, genres=None, skip=()):
         """Publishable pictures about any of these entities, oldest first, optionally of some genres only."""
@@ -881,7 +875,7 @@ class Landing(Chain):
             self.template(m)
             if m.get("source_id") not in sids:
                 sids.append(m.get("source_id"))
-            en = m.get("shows_en") or latinize_gloss(m["shows"])
+            en = media_caption(m)
             cap = self.tile_label(en, ru_date(m.get("published")))
             if owners:   # name whose picture it is: the first entity the record is about
                 ent = next((self.ents[a["id"]] for a in m["about"] if a["type"] == "entity" and a["id"] in self.ents), None)
@@ -900,8 +894,9 @@ class Landing(Chain):
         if not m or not self.img(m):
             return "", ""
         self.template(m)
-        credit = (f'<button class="hero-credit" type="button" data-fig="fig-{m["id"]}">Background: crates and cases by a '
-                  f'truck, from a handover post of «Nasha Pravda», {ru_date(m.get("published"))}</button>')
+        what = media_caption(m).rstrip(".")
+        credit = (f'<button class="hero-credit" type="button" data-fig="fig-{m["id"]}">Background: {esc(what[:1].lower() + what[1:])}, '
+                  f'{ru_date(m.get("published"))}</button>')
         return f' style="--hero: url({esc(self.img(m))})"', credit
 
     def tref(self, key):
@@ -1006,15 +1001,13 @@ class Landing(Chain):
             printed = f' Printed on the banner: {orig_line(line[0], f"cs-{n}", line[1])}.' if line else ""
             self.templates[f"c{n}"] = (
                 f'<figure class="rm-fig"><div class="frame"><img src="{esc(rel)}" alt="{esc(shows)}"></div><figcaption>'
-                f'<span class="rm-prov">Posted by TsBST itself, picture {n} of 6 in the album</span><span>{esc(shows)}{printed} '
-                f'The post\'s caption says TsBST presented ROI.MARKET at the main stage of the exercise; it does not '
-                f'describe the pictures.{self.tref("tsentr_pics")}</span><span class="when">04.10.2026</span></figcaption></figure>')
-            tiles.append(self.tile(f"fig-c{n}", rel, shows, self.tile_label(shows, "04.10.2026"), big=len(tiles) < 2))
+                f'<span class="rm-prov">Posted by TsBST itself</span><span>{esc(shows)}{printed}{self.tref("tsentr_pics")}</span>'
+                f'<span class="when">04.10.2026</span></figcaption></figure>')
+            tiles.append(self.tile(f"fig-c{n}", rel, shows, self.tile_label(shows, "04.10.2026"), big=True))
         if not tiles:
             return ""
-        return (f'<figure class="band"><div class="band-grid">{"".join(tiles)}</div><figcaption><span class="rm-label">'
-                f'Pictures · {len(tiles)}</span> TsBST\'s own stall at the exercise, and ROI.MARKET\'s printed booklet and patch. '
-                f'Neither shows a listing on the platform. Each opens with its caption, date and source.</figcaption></figure>')
+        return (f'<figure class="band kstill"><div class="band-grid">{"".join(tiles)}</div>'
+                f'<figcaption>{esc(CENTER_STILLS[0][1])}</figcaption></figure>')
 
     def opening(self):
         """The cold open: a maker's strike footage, re-posted by ЦБСТ with an order line for its marketplace."""
@@ -1044,8 +1037,6 @@ class Landing(Chain):
             + ("" if listed else "No sanctions listing for the maker is on file. ") +
             '</p><p class="note"><span class="rm-grade rep">Reported</span> Both posts are the parties\' own word. The video is '
             'consistent with the report of 8 October, but neither post dates the strike.</p>'
-            + self.band(self.pics(["ooo-gagaring", "ano-dpo-obrazovatelny-tsentr-gagaring"]),
-                        "Gagaring's own: its director at one of its field courses, and graduates of its training centre.", big=2)
             + self.dual_use())
 
     def flow_html(self, nodes, joins):
@@ -1133,9 +1124,8 @@ class Landing(Chain):
                 'aria-label="Gagaring\'s video: a drone flies in over a large government building to a trident coat of arms on '
                 'its façade, then a separate clip of the coat of arms hanging damaged">'
                 '<source src="images/video/gagaring-5142.mp4" type="video/mp4"></video>'
-                '<figcaption><span class="rm-label">Video · 0:25</span> As posted by Gagaring, labelled “Kuznechik/Sova 5.8”: '
-                'a drone flies in over the building to the coat of arms on its façade. The last eight seconds, a separate clip '
-                f'with its own watermark, show the coat of arms hanging damaged{self.tref("gag")}.</figcaption></figure>')
+                '<figcaption><span class="rm-label">Video · 0:25</span> Gagaring\'s video, labelled “Kuznechik/Sova 5.8”: a drone '
+                f'flies in to the coat of arms on the building\'s façade. The last eight seconds are a separate clip{self.tref("gag")}.</figcaption></figure>')
 
     def osv_clip(self):
         """The first 30 seconds of the channel's post 38645, playable, with the post's own words in the caption. Preview
@@ -1159,9 +1149,8 @@ class Landing(Chain):
                 '<source src="images/video/osv-38645.mp4" type="video/mp4"></video>'
                 '<figcaption><span class="rm-label">Video · first 0:30 of 1:19</span> The channel\'s post of 22.10.2026 says '
                 f'<span class="rm-grade rep">Reported</span> {said}{self.tref("osv_38645")}. '
-                'The footage, a pilot\'s controller screen, looks down on a damaged road bridge; a tracking box follows small '
-                'dark shapes near the kerb. At 0:13 a flash, then a small fire on the road. Who or what was there cannot be made '
-                'out; the post itself says a dog was killed. Sound removed.</figcaption></figure>')
+                'The footage is a pilot\'s controller screen over a damaged road bridge, with a strike at 0:13. The post itself says '
+                'a dog was killed. Sound removed.</figcaption></figure>')
 
     def dual_use(self):
         """The label on the order line: the supplier page's own sentence before and after it changed."""
@@ -1186,10 +1175,9 @@ class Landing(Chain):
         if not svg_path.exists():
             return ""
         return ('<figure class="front-map-fig"><div class="front-map-wrap">' + svg_path.read_text() + '</div><figcaption>'
-                '<span class="rm-label">Map</span> The Russian-held area and the formations this section names, as DeepState marks them. '
-                'The markers are DeepState\'s own estimate, not a document: the brigade is graded on the strength of the film and the '
-                f'Centre for Information Resilience, which put its drones over Beryslav{self.tref("dw_film")}{self.tref("cir")}; the 18th Army is named by '
-                f'the UN{self.tref("un_ga")} and the 49th by a channel that posts the brigade\'s footage{self.tref("osv_27702")}. Map and markers: DeepState{self.tref("deepstate")}; the river: Natural Earth{self.tref("natural_earth")}. Red is the Russian-held area here, not a sanctions flag.</figcaption></figure>')
+                '<span class="rm-label">Map</span> The Russian-held area and the formations this section names, as DeepState marks them '
+                f'(an estimate, not a document). Map and markers: DeepState{self.tref("deepstate")}; the river: Natural Earth{self.tref("natural_earth")}. '
+                'Red is the Russian-held area here, not a sanctions flag.</figcaption></figure>')
 
     def front(self):
         """The Kherson drone campaign: the UN's finding, the circle's own ties to the formations it names, and how the
@@ -1237,8 +1225,6 @@ class Landing(Chain):
                'TsBST; it is the circle\'s word and the school\'s.</p>')
             + self.oq("arch_9067", f'«Arkhangel», Telegram, 01.12.2025{self.tref("arch_9067")}')
             + self.oq("arch_10667", f'«Arkhangel», Telegram, 17.08.2026{self.tref("arch_10667")}')
-            + self.band([m for m in self.pics(["proekt-kb-arkhangel"]) if m["id"] in ("m0052", "m0047")],
-                        "The school's own channel: its recruitment video and its assembly bench.", big=2, lead=("m0052", "m0047"))
             + (f'<p class="note"><a href="{esc(MORE[1][3])}">The full «Arkhangel» file: products, parts list, partners and ties →</a></p>'
                if self.preview else "") +
                         '<h3 class="rm-h3">What a front channel says about the targets</h3>'
@@ -1247,12 +1233,11 @@ class Landing(Chain):
             f'205th brigade:</p>'
             + self.oq("osv_27702", f'«From Mariupol to the Carpathians», Telegram, 23.07.2025{self.tref("osv_27702")}') + self.kstill("osv_27702") +
             '<p>Under a video of a van being struck in a residential yard:</p>'
-            + self.oq("osv_19953", f'the same channel, 19.08.2024{self.tref("osv_19953")}') + self.kstill("osv_19953") +
+            + self.oq("osv_19953", f'the same channel, 19.08.2024{self.tref("osv_19953")}') +
             '<p>And under “dual-use”, the label ROI.MARKET used for its sellers’ goods:</p>'
-            + self.oq("osv_36192", f'the same channel, 24.07.2026{self.tref("osv_36192")}') + self.kstill("osv_36192")
+            + self.oq("osv_36192", f'the same channel, 24.07.2026{self.tref("osv_36192")}')
             + self.oq("osv_38703", f'the same channel, 24.10.2026, over a clip watermarked by the 98th Airborne Division{self.tref("osv_38703")}') + self.kstill("osv_38703")
-            + self.kherson_band() +
-            '<p class="note"><span class="rm-grade rep">Reported</span> The ties above are the parties\' own posts. They do not '
+            + '<p class="note"><span class="rm-grade rep">Reported</span> The ties above are the parties\' own posts. They do not '
             'show any item from TsBST\'s circle used against civilians; the UN names no unit below the army.</p>')
 
     def beyond_shop(self):
@@ -1285,7 +1270,6 @@ class Landing(Chain):
             f'In August 2026 it opened to outside sellers and named the ones it wanted first:</p>'
             + quote_html(recruit["text_ru"], latinize_gloss(recruit["text_en"]),
                          f"ROI.MARKET's announcement, {ru_date(recruit['as_of'])}{self.ref(recruit['source_id'])}", "q-recruit")
-            + self.step_shot(3, "ROI.MARKET's page for prospective sellers, 24.10.2026. The catalogue itself is behind a login.")
             + '<h3 class="rm-h3">One outlet among several</h3>'
             '<p>«Bulat», a drone detector shown at Dronnitsa 2025, a showcase TsBST takes part in, is sold through dealers and '
             'sole traders, and a foundation that co-founded TsBST buys it and posts the handovers. No Wildberries seller carries '
@@ -1445,10 +1429,8 @@ def render(preview: bool, out: Path):
     ties = L.ties_diagram()
     n0, _, sanc0 = L.network()
     found = L.found(n0, sanc0)
-    handed = L.pics([NP], {"handover"}, skip={"m0070"})   # m0070: boxes and a crate beside a van, no equipment visible (user, 24.10.2026)
-    handovers = L.band(handed, f"Published by «Nasha Pravda» with its handover posts, {ru_date(handed[0]['published'])} – "
-                       f"{ru_date(handed[-1]['published'])}: deliveries of «Bulat» detectors and other kit to units. A handover "
-                       "does not show use in combat.", big=3, lead=("m0085", "m0083", "m0087")) if handed else ""
+    handed = L.pics([NP], {"handover"})
+    handovers = L.band(handed, "From «Nasha Pravda»'s handover posts. A handover does not show use in combat.", big=3) if handed else ""
     front = L.front()
     beyond, operator = L.beyond_shop(), L.operator()
     origin, timeline = L.origin(), L.timeline()
@@ -1460,8 +1442,8 @@ def render(preview: bool, out: Path):
     # Product, stand and handover pictures that the makers publish of themselves. Showrooms, customer photos, interview
     # stills, documents and a CGI render are left out: they support no line of the story (owner's comment, 25.10.2026).
     own_ms = L.pics([s for s in L.tied() if s != CBST], genres={"marketing", "handover", "event"}, skip=shown | {L.HERO, "m0006"})
-    own = L.band(own_ms, "Makers in the network show their own products and stands; each tile names the company. "
-                 "A product picture is evidence of what a company offers, not of sales.", big=3, owners=True)
+    own = L.band(own_ms, "Pictures the makers publish of their own products and stands. They show what a company offers, not sales.",
+                 big=3, owners=True)
     wall = L.wall()
     # logos taken from GUR's War & Sanctions pages (where the company's own site or channel is not on file) are credited
     n_gur = sum(1 for m in L.media if m.get("genre") == "logo" and "war-sanctions.gur.gov.ua" in (m.get("original_url") or "")
@@ -1470,7 +1452,7 @@ def render(preview: bool, out: Path):
                 f"database shows them, on pages that print the company's INN{L.tref('gur_logos')}.") if n_gur else ""
     sgrid, undated = L.sanctions_grid()
     revenue, n_rev = L.revenue_bars()
-    annex = L.annex()
+    annex = ""   # how the investigation got here: research history, kept off the page (user rule, 27.10.2026)
     restr_date, restr_ref = L.restricted()
     lead_quote = quote_html(f"{qa['text_ru']} […] {qb['text_ru']}",
                             latinize_gloss(f"{qa['text_en']} […] {qb['text_en']}"),

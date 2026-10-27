@@ -19,16 +19,16 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "exhibits"))
 sys.path.insert(0, str(REPO / "scripts"))
 from build_chain_view import CBST, describe_source, esc, load  # noqa: E402
-from display_helpers import (NAME_JS, caption_html, design_head, display_name, figure_html, latin_text,  # noqa: E402
+from display_helpers import (NAME_JS, caption_html, design_head, display_name, figure_html, latin_text, on_pages,  # noqa: E402
                              latinize_gloss, load_media, name_html, person_names, popup_originals, quote_html,
                              reader_grade, ru_date, translation)
 
 SLUG = "proekt-kb-arkhangel"
 LEADER = "filippov-mikhail-gennadevich"
 # the project's own picture for a product box, by a word in its Russian name
-PRODUCT_PIC = {"Дрон-ракета": ("m0097", "Photo in the project's post on the third generation, which says it works with carrier aircraft; the post does not label it"),
+PRODUCT_PIC = {"Дрон-ракета": ("m0097", "The picture in the project's post on its third generation; the post does not name the drone shown"),
                "Ночник": ("m0050", "The project's own picture"),
-               "Слонен": ("m0098", "Frame from the project's video of the complex at EXPO.UAV, 26.03.2026: the radar panel and the camera turret on the vehicle roof", "50% 4%")}
+               "Слонен": ("m0098", "Frame from the project's video of the complex at EXPO.UAV, 26.03.2026", "50% 4%")}
 # The project's own words, grouped by what they show. Keyed by (source, first words of the Russian). Build
 # instructions that only help assemble the device (where to put the payload weight) are left out on purpose.
 GROUPS = [
@@ -258,7 +258,7 @@ class Page:
                 continue
             if not any(a.get("type") == "entity" and a.get("id") == SLUG for a in m.get("about") or []):
                 continue
-            if m.get("publish") not in ("ok", "excerpt"):
+            if m.get("publish") not in ("ok", "excerpt") or not on_pages(m) or m["id"] in {v[0] for v in PRODUCT_PIC.values()}:
                 continue
             src = REPO / (m.get("file") or "")
             if not src.exists():
@@ -372,7 +372,7 @@ def render(out: Path):
     <p>The project published a parts list for its interceptor and a 32-minute build video. The parts are off-the-shelf
     hobby components. The drawing marks where each sits; the table says who makes it.</p>
     <div class="build"><figure style="margin:0">{SILHOUETTE}
-      <figcaption class="sil-note">Silhouette redrawn from the project's own CAD and bench stills above. Not to scale; it states no
+      <figcaption class="sil-note">Silhouette redrawn from the project's own CAD and bench pictures. Not to scale; it states no
       dimension, wiring, print setting or assembly order. Part 6 is the warhead cylinder of the declared combat version.</figcaption></figure>
       <div class="bomwrap"><table class="bom"><thead><tr><th>Part</th><th>Component</th><th>Maker</th><th>How we know</th></tr></thead>
       <tbody>{bom}<tr><td class="no">6</td><td>Warhead cylinder (combat version)</td><td>the project</td><td>its own build post, quoted below</td></tr></tbody></table></div></div></section>
