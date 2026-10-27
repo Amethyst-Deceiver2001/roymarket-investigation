@@ -2031,9 +2031,19 @@
     "npo-kaysant"
    ],
    "tier": 1,
-   "captures": [],
-   "last_attempt": "2026-10-26",
-   "last_error": "save 2026-10-26: Remote end closed connection without response"
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026153307/https://kaysant.ru/",
+     "timestamp": "20261026153307",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "516efc1d556f4f2bfee6f54acdfab141378f5ee5ae7d488e257680ffa2d8a156",
+     "bytes": 52027,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://kbspektr.ru/": {
    "kind": "web",
@@ -2408,9 +2418,19 @@
     "ao-kronshtadt"
    ],
    "tier": 1,
-   "captures": [],
-   "last_attempt": "2026-10-26",
-   "last_error": "save 2026-10-26: SPN HTTP 520"
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20260131073657/https://kronshtadt.ru",
+     "timestamp": "20260131073657",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "c942cb450c66431fdb9fc017f3072efc079a349150dfe892cc96a29e794053ce",
+     "bytes": 52594,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://lenta.ru/news/2023/10/27/muzh-viki-tsyganovoy-obmanyval-zriteley-na-kontsertah-laskovogo-maya/": {
    "kind": "web",
@@ -2538,9 +2558,19 @@
     "ao-neyrorevolyutsiya"
    ],
    "tier": 1,
-   "captures": [],
-   "last_attempt": "2026-10-26",
-   "last_error": "save 2026-10-26: Remote end closed connection without response"
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261026153901/https://neiry.ru/",
+     "timestamp": "20261026153901",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "452b16429edfb688bc4aba9e8c0868d4b5b9f40c71ebceaf9dca0e76a748739b",
+     "bytes": 167521,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://nesiditsa.ru/vacancy/136610779": {
    "kind": "web",
@@ -2561,8 +2591,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1003743. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1009062": {
    "kind": "trademark",
@@ -2574,8 +2604,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1009062. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1032326": {
    "kind": "trademark",
@@ -2587,8 +2617,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1032326. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1032339": {
    "kind": "trademark",
@@ -2600,8 +2630,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1032339. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1048759": {
    "kind": "trademark",
@@ -2613,8 +2643,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1048759. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1050188": {
    "kind": "trademark",
@@ -2626,8 +2656,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1050188. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1065319": {
    "kind": "trademark",
@@ -2639,8 +2669,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1065319. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1074859": {
    "kind": "trademark",
@@ -2652,8 +2682,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error _ssl.c:999: The handshake operation timed out>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1074859. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1081135": {
    "kind": "trademark",
@@ -2665,8 +2695,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1081135. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1085944": {
    "kind": "trademark",
@@ -2678,8 +2708,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1085944. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1086620": {
    "kind": "trademark",
@@ -2692,8 +2722,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1086620. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1088602": {
    "kind": "trademark",
@@ -2705,8 +2735,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1088602. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1090031": {
    "kind": "trademark",
@@ -2718,8 +2748,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1090031. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1092137": {
    "kind": "trademark",
@@ -2731,8 +2761,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1092137. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1104544": {
    "kind": "trademark",
@@ -2744,8 +2774,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1104544. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1105074": {
    "kind": "trademark",
@@ -2757,8 +2787,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1105074. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1121332": {
    "kind": "trademark",
@@ -2770,8 +2800,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1121332. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1124977": {
    "kind": "trademark",
@@ -2783,8 +2813,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1124977. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1125967": {
    "kind": "trademark",
@@ -2796,8 +2826,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1125967. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1143103": {
    "kind": "trademark",
@@ -2831,8 +2861,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1159506. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1159964": {
    "kind": "trademark",
@@ -2855,8 +2885,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1190273. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1190349": {
    "kind": "trademark",
@@ -2868,8 +2898,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1190349. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1203185": {
    "kind": "trademark",
@@ -2881,8 +2911,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1203185. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1208395": {
    "kind": "trademark",
@@ -2905,8 +2935,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1220054. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1225369": {
    "kind": "trademark",
@@ -2918,8 +2948,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1225369. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1229675": {
    "kind": "trademark",
@@ -2931,8 +2961,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1229675. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=1240511": {
    "kind": "trademark",
@@ -2954,8 +2984,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=152023. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=2023815688": {
    "kind": "trademark",
@@ -3003,8 +3033,8 @@
    "cited": true,
    "tier": 2,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server blocks access to https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=282509. (HTTP status=403)"
   },
   "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUTM&DocNumber=376714": {
    "kind": "trademark",
@@ -3857,9 +3887,19 @@
     "npp-elvo-kolskaya-verf"
    ],
    "tier": 1,
-   "captures": [],
-   "last_attempt": "2026-10-26",
-   "last_error": "save 2026-10-26: Remote end closed connection without response"
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261003115936/https://nppelvo.ru/",
+     "timestamp": "20261003115936",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "29e102cf8ad530f7077a89b0d055c1b74ba92c08ca2bc7a42347115f73e87036",
+     "bytes": 36413,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://nvgushkuynik.ru": {
    "kind": "web",
@@ -4292,8 +4332,8 @@
    ],
    "tier": 1,
    "captures": [],
-   "last_attempt": "2026-10-26",
-   "last_error": "save 2026-10-26: SPN HTTP 523"
+   "last_attempt": "2026-10-27",
+   "last_error": "save 2026-10-27: The target server returned a service unavailable error for https://partner.nso.ru/company/33/view/84. (HTTP status=503)"
   },
   "https://piranhafpv.ru/": {
    "kind": "web",
@@ -21426,9 +21466,19 @@
     "ooo-vizionero"
    ],
    "tier": 1,
-   "captures": [],
-   "last_attempt": "2026-10-26",
-   "last_error": "save 2026-10-26: The read operation timed out"
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261003121029/https://visionero.ru/",
+     "timestamp": "20261003121029",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "b22dcd5f0cf41a0a18435625997079cccfd8d17951e0939139436eb892cebc1d",
+     "bytes": 25251,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://visionero.ru/cognitive": {
    "kind": "web",
@@ -22885,8 +22935,8 @@
    ],
    "tier": 1,
    "captures": [],
-   "last_attempt": "2026-10-26",
-   "last_error": "save 2026-10-26: SPN HTTP 520"
+   "last_attempt": "2026-10-27",
+   "last_error": "save 2026-10-27: The target server returned a service unavailable error for https://www.niistt.ru/. (HTTP status=503)"
   },
   "https://www.opensanctions.org/entities/NK-4grV6ATH3pzWsvc8hEeCeU/": {
    "kind": "web",
@@ -23012,9 +23062,19 @@
     "pao-bank-psb"
    ],
    "tier": 1,
-   "captures": [],
-   "last_attempt": "2026-10-26",
-   "last_error": "save 2026-10-26: SPN HTTP 520"
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261011010718/https://www.psbank.ru/",
+     "timestamp": "20261011010718",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "66d3dfaefd09456284a533a0cedf4f1f2176cdc9494cc3b2a55ff14eaa27d759",
+     "bytes": 2635823,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://www.radiofid.ru/": {
    "kind": "web",
@@ -23421,7 +23481,19 @@
     "fond-nasha-pravda"
    ],
    "tier": 1,
-   "captures": []
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20260924161917/https://xn----7sbabalo0evak8f.xn--p1ai/",
+     "timestamp": "20260924161917",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "83104542199aa3ef0bf1c11afb4aa6e2003c069f3377f4a53b4b09d736a492c3",
+     "bytes": 553489,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://xn----etbb2caedho.xn--p1ai": {
    "kind": "web",
@@ -23440,7 +23512,19 @@
     "ooo-ti-es-dzhi-grupp"
    ],
    "tier": 1,
-   "captures": []
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20260417221130/https://xn----etbb2caedho.xn--p1ai/",
+     "timestamp": "20260417221130",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "eb48039dbc71cc986fed388156e69b25664df1acbd0b0045c26e6a737503e102",
+     "bytes": 142078,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://xn--80aaa6amhjw6a9e.xn--p1ai/": {
    "kind": "web",
@@ -23596,7 +23680,19 @@
     "ooo-goudron"
    ],
    "tier": 1,
-   "captures": []
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20260806114222/https://xn--80aac0c2a.xn--p1ai/",
+     "timestamp": "20260806114222",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "817531fc32a4bc65764c72e380949caadb88f4c73d6e798bdf7f544b0c2b6ee8",
+     "bytes": 52904,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://xn--80aaorhk2b.xn--p1ai/": {
    "kind": "web",
@@ -23606,7 +23702,19 @@
     "ooo-tstp-tsifrovaya-transportnaya-platforma"
    ],
    "tier": 1,
-   "captures": []
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20261002005611/https://xn--80aaorhk2b.xn--p1ai/",
+     "timestamp": "20261002005611",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "70fd7a2906230afb57c29166eebe9bb4f7d35ddde34e75f42c2aca9b68308206",
+     "bytes": 228783,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://xn--90a3a1b.xn--p1acf/": {
    "kind": "web",
@@ -23616,7 +23724,19 @@
     "gk-logos"
    ],
    "tier": 1,
-   "captures": []
+   "captures": [
+    {
+     "service": "wayback",
+     "archive_url": "https://web.archive.org/web/20260606164624/https://xn--90a3a1b.xn--p1acf/",
+     "timestamp": "20260606164624",
+     "method": "saved",
+     "checked": "2026-10-26",
+     "sha256": "7f53ff6fdebf072c4cec7096a0b695ac461192f95fed277455a87dab601f2dd2",
+     "bytes": 392595,
+     "wayback_sha1": null
+    }
+   ],
+   "last_attempt": "2026-10-26"
   },
   "https://xn--90a3a1b.xn--p1acf/privacy": {
    "kind": "web",
@@ -23665,8 +23785,8 @@
    "cited": true,
    "tier": 1,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-27",
+   "last_error": "save 2026-10-27: The target server returned a service unavailable error for https://zakon.rada.gov.ua/laws/show/415/2025. (HTTP status=503)"
   },
   "https://zakon.rada.gov.ua/laws/show/447/2026": {
    "kind": "web",
@@ -23676,8 +23796,8 @@
    "cited": true,
    "tier": 1,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
+   "last_attempt": "2026-10-27",
+   "last_error": "save 2026-10-27: The target server didn't respond in time for https://zakon.rada.gov.ua/laws/show/447/2026. Please try again later. (HTTP status=504)"
   },
   "https://zakon.rada.gov.ua/laws/show/472/2025": {
    "kind": "web",
@@ -23687,8 +23807,8 @@
    "cited": true,
    "tier": 1,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: You need to be logged in to use Save Page Now."
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server didn't respond in time for https://zakon.rada.gov.ua/laws/show/472/2025. Please try again later. (HTTP status=504)"
   },
   "https://zakon.rada.gov.ua/laws/show/473/2025": {
    "kind": "web",
@@ -23698,8 +23818,8 @@
    "cited": true,
    "tier": 1,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server didn't respond in time for https://zakon.rada.gov.ua/laws/show/473/2025. Please try again later. (HTTP status=504)"
   },
   "https://zakon.rada.gov.ua/laws/show/554/2025": {
    "kind": "web",
@@ -23709,8 +23829,8 @@
    "cited": true,
    "tier": 1,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: The target server didn't respond in time for https://zakon.rada.gov.ua/laws/show/554/2025. Please try again later. (HTTP status=504)"
   },
   "https://zakupki.gov.ru/epz/contract/contractCard/common-info.html?reestrNumber=0120100010314000034": {
    "kind": "procurement",
@@ -38982,7 +39102,9 @@
     "ooo-opkb-eksplomet"
    ],
    "tier": 1,
-   "captures": []
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Cannot resolve host %D0%B0%D0%BB%D1%8C%D1%84%D0%B0%D0%BC%D0%B0%D1%80%D0%B8%D0%BD.%D1%80%D1%84. If the site is online, it may be blocking access from our service."
   },
   "https://архангел-фпв.рф": {
    "kind": "web",
@@ -38992,7 +39114,9 @@
     "proekt-kb-arkhangel"
    ],
    "tier": 1,
-   "captures": []
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Cannot resolve host %D0%B0%D1%80%D1%85%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB-%D1%84%D0%BF%D0%B2.%D1%80%D1%84. If the site is online, it may be blocking access from our service."
   },
   "https://налетай.рф/product/komplekt_svyazi_dlya_bpla_peppa_s_antennoj_moxon": {
    "kind": "web",
@@ -39002,8 +39126,8 @@
    "cited": true,
    "tier": 1,
    "captures": [],
-   "last_attempt": "2026-10-09",
-   "last_error": "save 2026-10-09: <urlopen error [Errno 111] Connection refused>"
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Cannot resolve host %D0%BD%D0%B0%D0%BB%D0%B5%D1%82%D0%B0%D0%B9.%D1%80%D1%84. If the site is online, it may be blocking access from our service."
   },
   "https://роймаркет.рф": {
    "kind": "web",
@@ -39013,7 +39137,9 @@
     "ooo-mptm"
    ],
    "tier": 1,
-   "captures": []
+   "captures": [],
+   "last_attempt": "2026-10-26",
+   "last_error": "save 2026-10-26: Cannot resolve host %D1%80%D0%BE%D0%B9%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82.%D1%80%D1%84. If the site is online, it may be blocking access from our service."
   },
   "https://рэб.рус": {
    "kind": "web",

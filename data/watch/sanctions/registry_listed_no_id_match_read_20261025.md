@@ -2,7 +2,7 @@
 
 Read in the downloaded list files themselves (`SANCTIONS_EU/US/UK/CH_20261025.xml`, `SANCTIONS_CSL_20261025.csv`), not in OpenSanctions. Lists: EU generated 2026-10-23, US 10/21/2026, UK 16/10/2026, CH 2026-10-20. No registry change follows from any of them.
 
-Two causes account for ten of the thirteen: the watcher compares each regime with the EU consolidated financial sanctions (FSF) list, the OFAC SDN list, the UK list and the Swiss list only, while the registry also records regimes that are not on those files (EU Regulation 833/2014 Annex IV, US Commerce Entity List). The other three are listings that print no identifier at all.
+Three causes: seven cells are regimes the watcher does not scan (the watcher compares only the EU consolidated financial sanctions (FSF) list, the OFAC SDN list, the UK list and the Swiss list, while the registry also records EU Regulation 833/2014 Annex IV and the US Commerce Entity List); one is the EU FSF file lagging a June 2026 decision (ИОНОС); five are name-and-address entries that print no identifier (Kronshtadt EU and UK, Bank PSB UK, Uraldronzavod EU and CH).
 
 | Record | Cell | What the 25.10 list shows | Reading |
 |---|---|---|---|
