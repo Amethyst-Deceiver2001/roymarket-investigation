@@ -102,7 +102,7 @@ def main():
         (14, "rep", "205th motor-rifle brigade", "DeepState's marker. DW and the CIR say its drones", "worked over Beryslav; they could not prove who fired", [marks["205"]]),
         (90, "rep", "49th Army", "DeepState's marker for its headquarters. A channel", "that posts the 205th's footage places the brigade in it", [marks["49"]]),
         (166, "rep", "98th Airborne Division", "Three of its regiments as DeepState marks them; the", "channel's 24.10.2026 clip carries the division's watermark", [marks["98a"], marks["98b"], marks["98c"]]),
-        (242, "doc", "18th Combined Arms Army", "Named in the UN's May 2025 paper; DeepState", "has no marker for it in this area", []),
+        (242, "doc", "18th Combined Arms Army", "Named in the UN's May 2025 paper", "", []),
     ]
     # APP-6 echelon over each hostile frame: X brigade, III regiment, XXXX army; the 49th's marker is its headquarters (staff)
     ech = {"205": "X", "49": "XXXX", "98a": "III", "98b": "III", "98c": "III"}
@@ -115,11 +115,12 @@ def main():
                     else f'<text x="0" y="-17" text-anchor="middle" class="fm-e">{ech[k]}</text></g>')
                  + f'<text x="{px + 16:.1f}" y="{py + 18:.1f}" class="fm-t">{names[k]}</text>')
     for y, g, t, l1, l2, pins in callouts:
-        s.append(f'<g><rect x="{cx}" y="{y}" width="{cw}" height="62" rx="4" fill="var(--panel)" stroke="var(--g-{g})" stroke-width="2" '
+        line2 = f'<text x="{cx + 12}" y="{y + 54}" class="fm-n">{l2}</text>' if l2 else ""
+        s.append(f'<g><rect x="{cx}" y="{y}" width="{cw}" height="{62 if l2 else 46}" rx="4" fill="var(--panel)" stroke="var(--g-{g})" stroke-width="2" '
                  f'stroke-dasharray="{"0" if g == "doc" else "7 4"}"/>'
                  f'<text x="{cx + 12}" y="{y + 21}" class="fm-h">{t}</text>'
-                 f'<text x="{cx + 12}" y="{y + 40}" class="fm-n">{l1}</text><text x="{cx + 12}" y="{y + 54}" class="fm-n">{l2}</text></g>')
-    s.append(f'<text x="{W - 12}" y="{H - 12}" text-anchor="end" class="fm-s">Red: Russian-held, {stamp}. Diamonds: unit markers (X brigade, III regiment, XXXX army headquarters). Both from DeepState</text>')
+                 f'<text x="{cx + 12}" y="{y + 40}" class="fm-n">{l1}</text>{line2}</g>')
+    s.append(f'<text x="{W - 12}" y="{H - 12}" text-anchor="end" class="fm-s">Red: Russian-held, {stamp}. Diamonds: unit markers (X brigade, III regiment, XXXX army headquarters). Map and markers: DeepState; river: Natural Earth</text>')
     s.append("</svg>")
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text("\n".join(s))

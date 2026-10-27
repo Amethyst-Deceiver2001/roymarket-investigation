@@ -1179,10 +1179,8 @@ class Landing(Chain):
         svg_path = REPO / "exhibits" / "images" / "maps" / "kherson-front.svg"
         if not svg_path.exists():
             return ""
-        return ('<figure class="front-map-fig"><div class="front-map-wrap">' + svg_path.read_text() + '</div><figcaption>'
-                '<span class="rm-label">Map</span> The Russian-held area and the formations this section names, as DeepState marks them '
-                f'(an estimate, not a document). Map and markers: DeepState{self.tref("deepstate")}; the river: Natural Earth{self.tref("natural_earth")}. '
-                'Red is the Russian-held area here, not a sanctions flag.</figcaption></figure>')
+        self.tref("deepstate"), self.tref("natural_earth")   # credits stay in the sources list; the map's own footer names them
+        return '<figure class="front-map-fig"><div class="front-map-wrap">' + svg_path.read_text() + '</div></figure>'
 
     def front(self):
         """The Kherson drone campaign: the UN's finding, the circle's own ties to the formations it names, and how the
