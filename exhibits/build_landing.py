@@ -20,7 +20,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "exhibits"))
 sys.path.insert(0, str(REPO / "scripts"))
 from build_chain_view import CBST, Chain, cap, esc, load, money  # noqa: E402
-from display_helpers import NAME_JS, design_head, display_name, guillemets, latin_text, latinize_gloss, media_about, media_caption, name_html, orig_line, person_names, popup_originals, quote_html, reader_grade, ru_date, sanction_regimes  # noqa: E402
+from display_helpers import NAME_JS, support_block_html, design_head, display_name, guillemets, latin_text, latinize_gloss, media_about, media_caption, name_html, orig_line, person_names, popup_originals, quote_html, reader_grade, ru_date, sanction_regimes  # noqa: E402
 from graph_contract import source_grade  # noqa: E402
 
 MPTM, NP, PSB, SIDYAKIN = "ooo-mptm", "fond-nasha-pravda", "pao-bank-psb", "aleksandr-sidyakin"
@@ -1480,6 +1480,7 @@ def render(preview: bool, out: Path):
   <p class="rm-dek">An open-source investigation of ANO «TsBST», a Moscow non-profit for the drone industry, and of the
   companies around it: what they make, who sells it, and which military units receive it. Every claim rests on an
   archived document and is graded by how well that document shows it.</p>
+  <p class="rm-muted byline">By <a href="https://en.wikipedia.org/wiki/Alexey_Kovalev_(journalist)" target="_blank" rel="noopener">Alexey Kovalev</a>, independent reporter · data as of {ru_date(today)}</p>
   {hero_credit}
 </header></div>
 {TOC}
@@ -1599,6 +1600,7 @@ def render(preview: bool, out: Path):
   <section class="rm-prose rm-sources" aria-labelledby="h-sources"><h2 class="rm-h2" id="h-sources">Sources</h2>
     <details class="fold" id="sources-fold"><summary>Full list of sources <span class="count">{len(L.notes)}</span></summary><ol>{L.notes_list()}</ol></details></section>
 </main>
+{support_block_html()}
 {''.join(f'<template id="fig-{k}">{v}</template>' for k, v in L.templates.items())}
 <dialog class="rm-lightbox" id="lightbox" aria-label="Picture"><div class="bar"><button type="button" data-close>Close</button></div><div class="body"></div></dialog>
 <script>{VIEWER_JS}

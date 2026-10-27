@@ -304,3 +304,4 @@ main section > .rm-h2 { margin-top: 0; }
 .front-map .fm-r { font: italic 600 15px var(--font-serif); fill: var(--map-river); paint-order: stroke; stroke: var(--panel-2); stroke-width: 4px; }
 .tile .tl { font: 600 10.5px/1.2 var(--font-mono); letter-spacing: .04em; color: var(--accent); text-decoration: none; }
 .tile .tl:hover, .tile .tl:focus-visible { text-decoration: underline; }
+.top .byline { font-size: var(--t-note); margin: 0 0 var(--space-4); }

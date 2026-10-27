@@ -18,7 +18,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "exhibits"))
 sys.path.insert(0, str(REPO / "scripts"))
 from build_chain_view import CBST, describe_source, esc, load  # noqa: E402
-from display_helpers import (NAME_JS, design_head, display_name, latin_text, name_html, person_names, sanction_regimes,  # noqa: E402
+from display_helpers import (NAME_JS, support_block_html, design_head, display_name, latin_text, name_html, person_names, sanction_regimes,  # noqa: E402
                              popup_originals, reader_grade, ru_date)
 
 DIRECTOR = re.compile(r"директор|director|ceo|руковод|head|председат|chair|президент|president", re.I)
@@ -262,6 +262,7 @@ def render(out: Path):
   </ul></section>
   <section class="prose rm-prose rm-sources"><h2 class="rm-h2">Sources</h2><ol>{M.notes_list()}</ol></section>
 </main>
+{support_block_html()}
 <script>{NAME_JS}
 (() => {{
   const box = document.getElementById('only-tie');

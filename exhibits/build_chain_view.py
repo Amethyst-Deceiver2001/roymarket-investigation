@@ -38,7 +38,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 from graph_contract import source_grade  # noqa: E402
 import deliveries as dl  # noqa: E402
 from source_citation import cite, reader_terms  # noqa: E402
-from display_helpers import (NAME_JS, design_head, sanction_regimes, display_name, figure_html, kind_icon, latin_display, latin_text,  # noqa: E402
+from display_helpers import (NAME_JS, support_block_html, design_head, sanction_regimes, display_name, figure_html, kind_icon, latin_display, latin_text,  # noqa: E402
                              latinize_gloss, load_media, media_about, media_caption, name_html, orig_line, person_names, popup_originals, publish_copy, quote_html, translation,
                              reader_grade, ru_date)
 
@@ -765,6 +765,7 @@ def render(ch, out):
   and handovers are as of the dates shown; {n_list} listings and {n_del} handovers are on file.</p></section>
   <section class="prose rm-prose rm-sources"><h2 class="rm-h2">Sources</h2><ol>{ch.notes_list()}</ol></section>
 </main>
+{support_block_html()}
 {''.join(f'<template id="fig-{k}">{v}</template>' for k, v in ch.templates.items())}
 <dialog class="rm-lightbox" id="lightbox" aria-label="Picture"><div class="bar"><button type="button" data-close>Close</button></div><div class="body"></div></dialog>
 <script>const EDGES={json.dumps(ch.edges, ensure_ascii=False)};

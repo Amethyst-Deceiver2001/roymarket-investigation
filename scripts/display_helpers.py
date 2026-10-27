@@ -497,3 +497,42 @@ def source_type_label(path: str) -> str:
     if prefix in TYPE_LABELS:
         return TYPE_LABELS[prefix]
     return prefix.title() if prefix.isalpha() else "document"
+
+
+# About-and-support block: the same text closes every reader page, so it is written once here.
+# Wallet addresses are the author's, not registry facts.
+_SUPPORT_CSS = (
+    ".rm-support{max-width:var(--measure);margin:var(--space-6) auto 0;padding:var(--space-5) 16px var(--space-6);"
+    "border-top:1px solid var(--rule);color:var(--ink-2);font-size:var(--t-note);line-height:1.55}"
+    ".rm-support h2{font:600 var(--t-label)/1 var(--font-mono);letter-spacing:.09em;text-transform:uppercase;"
+    "color:var(--ink-3);margin:0 0 var(--space-3)}"
+    ".rm-support p{margin:0 0 var(--space-3)}.rm-support ul{margin:0 0 var(--space-3);padding-left:1.2em}"
+    ".rm-support li{margin:0 0 var(--space-2)}"
+    ".rm-support code{font:var(--t-note)/1.4 var(--font-mono);overflow-wrap:anywhere;word-break:break-all;color:var(--ink)}"
+)
+
+
+def support_block_html() -> str:
+    return (
+        f'<style>{_SUPPORT_CSS}</style>\n'
+        '<aside class="rm-support" aria-labelledby="h-support"><h2 id="h-support">About and support</h2>\n'
+        '<p>This is a solo project by <a href="https://en.wikipedia.org/wiki/Alexey_Kovalev_(journalist)" target="_blank" rel="noopener">Alexey Kovalev</a>, '
+        'an independent Russian reporter. I live in exile because I was '
+        '<a href="https://ovd.info/en/express-news/2026/10/13/journalist-alexey-kovalev-has-been-declared-wanted" target="_blank" rel="noopener">declared wanted</a> '
+        'in Russia over my work. I cover Russia\'s invasion of Ukraine for '
+        '<a href="https://foreignpolicy.com/author/alexey-kovalev/" target="_blank" rel="noopener">various outlets</a> and on '
+        '<a href="https://amethyst-deceiver2001.github.io/Mariupol_Urbicide_2026/index.html" target="_blank" rel="noopener">my own blog</a>.</p>\n'
+        '<p>I\'m spending my own time and money on this. If you think the work is important, you can help offset costs '
+        'such as professional services, subscriptions and hosting:</p>\n'
+        '<ul>\n'
+        '<li>PayPal: kovalever@googlemail.com</li>\n'
+        '<li>US-based donors can give through the <a href="https://www.paypal.com/donate/?hosted_button_id=TQ6VZ7CFSHTHW" target="_blank" rel="noopener">Building Democracy Foundation</a>, a registered 501(c)(3) NGO</li>\n'
+        '<li>Revolut: @alexeypklg</li>\n'
+        '<li>Crypto:<ul>\n'
+        '<li>USDC (Ethereum network): <code>0x65a5Fd21ae4f4159F5530C8a54511d4A9DB7a995</code></li>\n'
+        '<li>ETH (Ethereum network): <code>0x8cfc0b75CDe024e519b2770B9EAEaC4B1539d03E</code></li>\n'
+        '<li>BTC (Bitcoin network): <code>3LAptCbJV8iLJSJcGLj9fe6XhRpBYAJHqj</code></li>\n'
+        '<li>SOL (Solana network): <code>CzUZpDJWfpdcQ6ELobq9xUhSKxzeM6tXod6YBhRGfCeJ</code></li>\n'
+        '</ul></li>\n</ul>\n'
+        '<p>To get in touch: kovalever@gmail.com</p>\n</aside>\n'
+    )

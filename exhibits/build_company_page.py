@@ -20,7 +20,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 sys.path.insert(0, str(REPO / "exhibits"))
 from graph_contract import source_grade  # noqa: E402
 import deliveries as dl  # noqa: E402
-from display_helpers import (NAME_JS, caption_html, design_head, display_name, figure_html, latin_display, latin_text, load_media, media_about, media_caption, latinize_gloss, name_html, orig_line, popup_originals, quote_html, sanction_regimes,  # noqa: E402
+from display_helpers import (NAME_JS, support_block_html, caption_html, design_head, display_name, figure_html, latin_display, latin_text, load_media, media_about, media_caption, latinize_gloss, name_html, orig_line, popup_originals, quote_html, sanction_regimes,  # noqa: E402
                              person_names, publish_copy, reader_grade, ru_date, translation)
 from build_chain_view import ROLE_EN, describe_source, esc, load, money  # noqa: E402
 
@@ -841,6 +841,7 @@ ol.tline li:target { background: var(--accent-soft); }
   Reported and named above.</p></section>
   <section class="prose rm-prose rm-sources" id="s-sources"><h2 class="rm-h2">Sources</h2><ol>{notes}</ol></section>
 </div></main>
+{support_block_html()}
 <script>{NAME_JS}</script>
 <script>{TOC_JS}</script>
 </body></html>

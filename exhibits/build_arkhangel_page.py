@@ -19,7 +19,7 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "exhibits"))
 sys.path.insert(0, str(REPO / "scripts"))
 from build_chain_view import CBST, describe_source, esc, load  # noqa: E402
-from display_helpers import (NAME_JS, caption_html, design_head, display_name, figure_html, latin_text, on_pages,  # noqa: E402
+from display_helpers import (NAME_JS, support_block_html, caption_html, design_head, display_name, figure_html, latin_text, on_pages,  # noqa: E402
                              latinize_gloss, load_media, name_html, person_names, popup_originals, quote_html,
                              reader_grade, ru_date, translation)
 
@@ -391,6 +391,7 @@ def render(out: Path):
   </ul></section>
   <section class="prose rm-prose rm-sources"><h2 class="rm-h2">Sources</h2><ol>{P.notes_list()}</ol></section>
 </main>
+{support_block_html()}
 <script>{NAME_JS}</script>
 </body></html>
 """
