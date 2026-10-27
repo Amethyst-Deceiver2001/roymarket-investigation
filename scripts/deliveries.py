@@ -8,7 +8,7 @@ the same handover would be one event with `other_source_ids`.
 Event fields (all in the file; none is optional except where marked):
     id                     stable name, never renamed: media records point at it ('bulat-d05', 'h0025')
     date, donor, co_donors[], donor_people[], carrier, named_deliverer
-    recipient              the wording of the post, Russian; recipient_en its gloss; recipient_unit_slug a unit record or null;
+    recipient              the wording of the post, Russian; recipient_en its gloss; recipient_kind "civilian" where the post names civilian recipients (absent: military); recipient_unit_slug a unit record or null;
                            direction (a front direction the post names) or null
     items[]                {product: product slug|null, version: version slug|null, item: text|null, note|null, id?}
                            a product slug here is what makes the event show on that product's chain view; an item `id`
@@ -29,7 +29,7 @@ REG = Path(__file__).resolve().parent.parent / "data" / "registry"
 PATH = REG / "deliveries.json"
 
 # the fields a product's chain view has always read from a delivery, copied from the event as they are
-SHARED = ("id", "date", "donor", "co_donors", "carrier", "recipient", "recipient_en", "source_channel", "post_id",
+SHARED = ("id", "date", "donor", "co_donors", "carrier", "recipient", "recipient_en", "recipient_kind", "source_channel", "post_id",
           "asserted_by", "credibility", "source_id", "other_source_ids", "note")
 
 

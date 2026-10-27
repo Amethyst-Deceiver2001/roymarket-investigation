@@ -102,7 +102,7 @@ def main():
         (14, "rep", "205th motor-rifle brigade", "DeepState's marker. DW and the CIR say its drones", "worked over Beryslav; they could not prove who fired", [marks["205"]]),
         (90, "rep", "49th Army", "DeepState's marker for its headquarters. A channel", "that posts the 205th's footage places the brigade in it", [marks["49"]]),
         (166, "rep", "98th Airborne Division", "Three of its regiments as DeepState marks them; the", "channel's 24.10.2026 clip carries the division's watermark", [marks["98a"], marks["98b"], marks["98c"]]),
-        (242, "doc", "18th Combined Arms Army", "Named in the UN's October 2025 report; DeepState", "has no marker for it in this area", []),
+        (242, "doc", "18th Combined Arms Army", "Named in the UN's May 2025 paper; DeepState", "has no marker for it in this area", []),
     ]
     # APP-6 echelon over each hostile frame: X brigade, III regiment, XXXX army; the 49th's marker is its headquarters (staff)
     ech = {"205": "X", "49": "XXXX", "98a": "III", "98b": "III", "98c": "III"}

@@ -31,12 +31,12 @@ CHAINS = {"bulat": "https://claude.ai/artifact/6UaTv2jSwdNdfNUCibCwrf",
 STORY = "https://claude.ai/artifact/DfLGJYwQY5mENE31J4tf8u"
 # One line under each company card's name, so a reader knows why to open it. Each line says only what that
 # company file itself sources.
-FILE_LINES = {
-    "ooo-trimiks": "Makes the «Bulat» drone detector, holds a patent on its design and is suing GoDrone over it",
-    "ovod": "Makes the «Ovod» family of FPV strike drones, some of them guided over optical fibre",
-    "ooo-goudron": "Trades as GoDrone and makes the «Nabat» drone detector; Trimiks is suing it over a detector patent",
-    "ooo-skb-piranya": "Makes the «Piranya» FPV strike drones and says it delivers drones directly to recipients in the «LNR» and «DNR»",
-    "csn-bars-sarmat": "Dmitry Rogozin's volunteer drone centre, which he says fights for the commander of the Airborne Forces",
+FILE_LINES = {   # (line, source ids it rests on)
+    "ooo-trimiks": ("Makes the «Bulat» drone detector, holds a patent on its design and is suing GoDrone over it", ("L0567", "L0558")),
+    "ovod": ("Makes the «Ovod» family of FPV strike drones, some of them guided over optical fibre", ("s6456",)),
+    "ooo-goudron": ("Trades as GoDrone and makes the «Nabat» drone detector; Trimiks is suing it over a detector patent", ("L0485", "L0558")),
+    "ooo-skb-piranya": ("Makes the «Piranya» FPV strike drones and says it delivers drones directly to recipients in the «LNR» and «DNR»", ("s1411",)),
+    "csn-bars-sarmat": ("Dmitry Rogozin's volunteer drone centre, which he says fights for the commander of the Airborne Forces", ()),
 }
 # Other preview pages: (kind, title, one line, preview Artifact)
 MORE = [("People", "One person, many companies", "The people who direct or own two or more of the companies on file",
@@ -88,6 +88,7 @@ OPENING_SOURCES = {
     "osv_20993": ("Telegram, @osvedomitell_alex, post 20993, 22.09.2024", "https://t.me/osvedomitell_alex/20993"),
     "osv_21384": ("Telegram, @osvedomitell_alex, post 21384, 06.10.2024, signed @habr_bpla", "https://t.me/osvedomitell_alex/21384"),
     "osv_34459": ("Telegram, @osvedomitell_alex, post 34459, 15.05.2026", "https://t.me/osvedomitell_alex/34459"),
+    "rog_7047": ("Telegram, @rogozin_do (Dmitry Rogozin), post 7047, 22.04.2025", "https://t.me/rogozin_do/7047"),
     "rog_8057": ("Telegram, @rogozin_do (Dmitry Rogozin), post 8057, 19.01.2026", "https://t.me/rogozin_do/8057"),
     "rog_7780": ("Telegram, @rogozin_do (Dmitry Rogozin), post 7780, 12.11.2025", "https://t.me/rogozin_do/7780"),
     "np_280": ("Telegram, @nashapravdafond, post 280, 07.05.2024", "https://t.me/nashapravdafond/280"),
@@ -309,11 +310,11 @@ class Landing(Chain):
                      "the company register lists only those two", self.ref(ur["source_id"]), None))
         sid = self.board_role(SIDYAKIN)
         rows.append((self.person_pop(SIDYAKIN).replace(f'id="nm-{SIDYAKIN}"', f'id="nm-{SIDYAKIN}-l"').replace(f'popovertarget="nm-{SIDYAKIN}"', f'popovertarget="nm-{SIDYAKIN}-l"'), self.g(sid.get("source_id")),
-                     f"secretary of TsBST's supervisory board since {ru_date(sid['from'])}, while head of United Russia's "
+                     f"named by TsBST on {ru_date(sid['from'])} as secretary of its supervisory board and head of United Russia's "
                      "central executive committee", self.ref(sid.get("source_id")), None))
         rows.append((self.ents[NP], self.g(np_f.get("source_id")), f"co-founder of TsBST since its registration on {ru_date(reg)}",
                      self.ref(np_f.get("source_id")), self.ents[CBST]))
-        rows.append((self.ents[PSB], self.g(psb_f.get("source_id")), f"co-founder of TsBST since {ru_date(psb_f.get('as_of'))}",
+        rows.append((self.ents[PSB], self.g(psb_f.get("source_id")), f"co-founder of TsBST since its registration on {ru_date(psb_f.get('as_of'))}",
                      self.ref(psb_f.get("source_id")), self.ents[CBST]))
         sub = next(s for s in c.get("subsidiaries") or [] if s["slug"] == MPTM)
         tie = self.ents[MPTM].get("cbst_tie") or {}
@@ -340,13 +341,17 @@ class Landing(Chain):
                          f"held {n.group(1) if n else 'a stock of'} «Bulat» on {ru_date(stock['as_of'])}, bought for transfer "
                          "to military units, by its audited accounts; the seller is not named",
                          self.ref(stock["source_id"]), None))
-        ds = [d for d in self.p.get("deliveries") or [] if d.get("donor") == NP]
-        if ds:
-            dates = sorted(d["date"] for d in ds if d.get("date"))
-            rows.append((self.ents[NP], reader_grade(ds[0].get("credibility")),
-                         f"reports handing «Bulat» drone detectors to military units {len(ds)} times, "
-                         f"{ru_date(dates[0])} to {ru_date(dates[-1])}; each handover is cited in the chain view",
-                         self.ref(ds[0].get("source_id")), None))
+        # the fund's own posts only: the party's channels re-report some of the same handovers
+        ds = [d for d in self.p.get("deliveries") or [] if d.get("donor") == NP and d.get("source_channel") == "@nashapravdafond"]
+        mil = sorted((d for d in ds if d.get("recipient_kind") != "civilian" and d.get("date")), key=lambda d: d["date"])
+        civ = [d for d in ds if d.get("recipient_kind") == "civilian"]
+        if mil:
+            civ_txt = "".join(f", and once to district heads in Kherson region for power-repair crews ({ru_date(d['date'])})"
+                              for d in civ[:1])
+            rows.append((self.ents[NP], reader_grade(mil[0].get("credibility")),
+                         f"reports handing «Bulat» drone detectors to military units in {len(mil)} of its posts, "
+                         f"{ru_date(mil[0]['date'])} to {ru_date(mil[-1]['date'])}{civ_txt}; each handover is cited in the chain view",
+                         self.ref(mil[0].get("source_id"), *[d.get("source_id") for d in civ[:1]]), None))
         self._ledger_rows = rows
         return rows
 
@@ -702,10 +707,9 @@ class Landing(Chain):
         sub = next(s for s in c.get("subsidiaries") or [] if s["slug"] == MPTM)
         restr = next((h for h in mp.get("founders_history") or [] if "restricted" in (h.get("value") or "")), {})
         oq = next(o for o in mp.get("open_questions") or [] if "masked" in o.get("text", ""))
-        ev = [(np_f["as_of"], "TsBST registered in Moscow, with the Nasha Pravda foundation as founder", np_f.get("source_id"), "doc"),
+        ev = [(np_f["as_of"], "TsBST registered in Moscow, with the Nasha Pravda foundation and Bank PSB as founders", np_f.get("source_id"), "doc"),
               (sub["as_of"], "MPTM registered; TsBST has taken part in it from the same day", sub.get("source_id"), "doc"),
               ("2025-02-15", "The platform starts as a closed pilot, by Kommersant's account", "s8866", "rep"),
-              (psb_f["as_of"], "Bank PSB joins TsBST as co-founder", psb_f.get("source_id"), "doc"),
               ("2025-12-15", "Sidyakin: the party, PSB and TsBST “launched the military marketplace”", "s8847", "rep"),
               (restr.get("as_of"), "The company register starts withholding MPTM's owners", restr.get("source_id"), "doc"),
               ("2026-08-13", "The platform opens to outside sellers, “first of all” those on Wildberries and Ozon", "s8854", "rep"),
@@ -1190,11 +1194,11 @@ class Landing(Chain):
             f'finding to 300 km of the river and three regions, and named the formation the operators serve in:</p>'
             + self.un_quote("dnepr", f'UN report A/80/497, para. 40, 21.10.2025{self.tref("un_ga")}')
             + self.front_map() +
-            f'<p>The Commission names the 18th Combined Arms Army; it names no brigade. The Centre for Information Resilience '
-            f'and DW named the 205th motor-rifle brigade{self.tref("dw_film")} among three units whose drones worked over Beryslav '
+            f'<p>The Commission names the 18th Combined Arms Army{self.tref("un_crp")}; it names no brigade. The Centre for Information Resilience '
+            f'and DW named a 205th motor-rifle unit (CIR\'s text says battalion){self.tref("dw_film")} among three units whose drones worked over Beryslav '
             f'during the attacks, while saying they could not prove who carried them out{self.tref("cir")}. A channel that posts '
             f'the brigade\'s footage places it in the 49th Army{self.tref("osv_27702")}. A senior '
-            f'doctor at a Kherson hospital told the Commission:</p>'
+            f'practitioner at a Kherson city hospital told the Commission:</p>'
             + self.un_quote("safari", f'UN paper A/HRC/59/CRP.2, para. 42, 28.05.2025{self.tref("un_crp")}')
             + self.osv_clip())
         np_ = self.ents[NP]
@@ -1207,7 +1211,7 @@ class Landing(Chain):
              + self.tref("np_280") + ", and a vehicle now used by the 18th Army to move cargo and troops to the front line"
              + self.tref("np_580") + "."),
             (self.ents["ooo-gagaring"], "rep",
-             "the maker of the Kuznechik and Sova posts thanks from 49th Army air-defence crews who use the Sova to intercept "
+             "the maker of the Kuznechik and Sova posts thanks from 49th Army crews who use the Sova to intercept "
              "drone video over the Dnipro" + self.tref("gag_2811") + "."),
         ]
         lis = []
@@ -1222,7 +1226,7 @@ class Landing(Chain):
             + '<h3 class="rm-h3">A school that recruits for the 205th brigade</h3>'
             + ('<p>TsBST\'s own channel says a resident\'s anti-drone simulator runs at the «Arkhangel» drone school\'s training '
                f'centre in Tuapse{self.tref("cbst_1562")}. The school\'s own channel recruits operators for the 205th brigade and '
-               f'says it trains within Bars-Sarmat, Dmitry Rogozin\'s drone centre{self.ref("s6915")}. No document ties the school to '
+               f'Dmitry Rogozin\'s channel says the project is part of the training centre of Bars-Sarmat, his drone centre{self.tref("rog_7047")}. No document ties the school to '
                'TsBST; it is the circle\'s word and the school\'s.</p>')
             + self.oq("arch_9067", f'«Arkhangel», Telegram, 01.12.2025{self.tref("arch_9067")}')
             + self.oq("arch_10667", f'«Arkhangel», Telegram, 17.08.2026{self.tref("arch_10667")}')
@@ -1306,12 +1310,13 @@ class Landing(Chain):
         for slug, url in COMPANY_PAGES.items():
             e = self.ents[slug]
             href = url if preview else None
-            nm = self.name(e, sub=False) + (f'<small>{esc(FILE_LINES[slug])}</small>' if slug in FILE_LINES else "")
+            line, line_src = FILE_LINES.get(slug, ("", ()))
+            line_ref = self.tref("rog_8057") if slug == "csn-bars-sarmat" else self.ref(*line_src)
+            nm = self.name(e, sub=False) + (f'<small>{esc(line)}{line_ref}</small>' if line else "")
             ref = ""
             if href:   # a footnote link inside the name link would nest two <a>: park it after the name instead
-                m = re.search(r'<sup class="rm-ref">.*?</sup>', nm)
-                if m:
-                    ref, nm = m.group(0), nm.replace(m.group(0), "", 1)
+                for m in re.findall(r'<sup class="rm-ref">.*?</sup>', nm):
+                    ref, nm = ref + m, nm.replace(m, "", 1)
             cards.append(f'<article class="rm-card chain-card"><header><span class="rm-kind">Company file</span>{self.logo(slug)}</header>'
                          f'<h3 class="rm-name">{f"<a href={chr(34)}{esc(href)}{chr(34)}>" if href else ""}{nm}'
                          f'{"</a>" if href else ""}{ref}</h3>{self.sanctions(e)}'
@@ -1505,7 +1510,7 @@ def render(preview: bool, out: Path):
     {lead_quote}
     <article class="rm-card hub hub-solo"><header><span class="rm-kind">Hub</span>{L.logo(CBST)}</header>
         <h3 class="rm-name">{cbst_name}</h3>{cbst_sanc}
-        <p class="row">Targeted funding received: {funds}. These are a non-profit's funds, not revenue.</p>
+        <p class="row">Funds received: {funds}. These are a non-profit's funds, not revenue.</p>
         <p class="row"><span class="rm-id">INN {esc(c['inn'])}</span> <span class="rm-id">OGRN {esc(c['ogrn'])}</span></p></article>
     {ties}
     <ul class="ledger ledger-phone" aria-label="Relations">{ledger}</ul>
