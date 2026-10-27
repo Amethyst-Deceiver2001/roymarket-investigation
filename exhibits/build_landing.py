@@ -1106,23 +1106,18 @@ class Landing(Chain):
         return f'<figure class="step-shot">{btn}<figcaption>{esc(caption)}</figcaption></figure>' if btn else ""
 
     def gag_video(self):
-        """The 25-second clip from Gagaring's post, playable. Preview only: the file is not catalogued, and a public
-        page shows key frames plus a link to the archived original."""
+        """The 25-second clip from Gagaring's post, playable, hosted on the site (user decision 27.10.2026). The caption
+        links the original post."""
         src = REPO / "exhibits" / "images" / "video"
         if not (src / "gagaring-5142.mp4").exists():
             return ""
         dest = self.img_dir.parent / "video"
-        for name in (("gagaring-5142.mp4", "gagaring-5142.jpg") if self.preview else ("gagaring-5142.jpg",)):
+        for name in ("gagaring-5142.mp4", "gagaring-5142.jpg"):
             if dest != src:
                 dest.mkdir(parents=True, exist_ok=True)
                 (dest / name).write_bytes((src / name).read_bytes())
             if (f"images/video/{name}", dest / name) not in self.media_files:
                 self.media_files.append((f"images/video/{name}", dest / name))
-        if not self.preview:   # public page: a key frame and the post, not the third party's video file
-            return ('<figure class="clip"><img src="images/video/gagaring-5142.jpg" alt="A frame from Gagaring\'s video: a drone '
-                    'approaching a large government building">'
-                    '<figcaption><span class="rm-label">Video frame</span> A frame from Gagaring\'s video, labelled “Kuznechik/Sova 5.8”: a drone '
-                    f'flies in to the coat of arms on the building\'s façade. The video is in the post{self.tref("gag")}.</figcaption></figure>')
         return ('<figure class="clip"><video controls preload="none" playsinline poster="images/video/gagaring-5142.jpg" '
                 'aria-label="Gagaring\'s video: a drone flies in over a large government building to a trident coat of arms on '
                 'its façade, then a separate clip of the coat of arms hanging damaged">'
@@ -1131,13 +1126,13 @@ class Landing(Chain):
                 f'flies in to the coat of arms on the building\'s façade. The last eight seconds are a separate clip{self.tref("gag")}.</figcaption></figure>')
 
     def osv_clip(self):
-        """The first 30 seconds of the channel's post 38645, playable, with the post's own words in the caption. Preview
-        only: the file is not catalogued, and a public page shows key frames plus a link to the archived original."""
+        """The first 30 seconds of the channel's post 38645, playable, with the post's own words in the caption; hosted on
+        the site (user decision 27.10.2026)."""
         src = REPO / "exhibits" / "images" / "video"
         if not (src / "osv-38645.mp4").exists():
             return ""
         dest = self.img_dir.parent / "video"
-        for name in (("osv-38645.mp4", "osv-38645.jpg") if self.preview else ("osv-38645.jpg",)):
+        for name in ("osv-38645.mp4", "osv-38645.jpg"):
             if dest != src:
                 dest.mkdir(parents=True, exist_ok=True)
                 (dest / name).write_bytes((src / name).read_bytes())
@@ -1146,11 +1141,6 @@ class Landing(Chain):
         chan, msg, ru, en = OPENING_QUOTES["osv_38645"]
         self.verbatim("osv_38645", chan, msg, ru)
         said = name_html("\u201c" + en + "\u201d", ru, key="q-osv_38645", what="Russian original of")
-        if not self.preview:
-            return ('<figure class="clip"><img src="images/video/osv-38645.jpg" alt="A frame of a drone pilot\'s controller screen: a view down onto a damaged road bridge beside a river">'
-                    '<figcaption><span class="rm-label">Video frame</span> The channel\'s post of 22.10.2026 says '
-                    f'<span class="rm-grade rep">Reported</span> {said}{self.tref("osv_38645")}. '
-                    'The footage is a pilot\'s controller screen over a damaged road bridge. The video is in the post.</figcaption></figure>')
         return ('<figure class="clip"><video controls preload="none" playsinline poster="images/video/osv-38645.jpg" '
                 'aria-label="A drone pilot\'s controller screen: a view down onto a damaged road bridge beside a river, with a '
                 'yellow tracking box on small dark shapes near the kerb">'
