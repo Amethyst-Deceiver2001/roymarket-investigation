@@ -572,9 +572,9 @@ def support_block_html() -> str:
         '<p>I\'m spending my own time and money on this. If you think the work is important, you can help offset costs '
         'such as professional services, subscriptions and hosting:</p>\n'
         '<ul>\n'
-        '<li>PayPal: kovalever@googlemail.com</li>\n'
+        '<li>PayPal: <a href="https://paypal.me/yenisei23" target="_blank" rel="noopener">paypal.me/yenisei23</a>, or to kovalever@googlemail.com</li>\n'
         '<li>US-based donors can give through the <a href="https://www.paypal.com/donate/?hosted_button_id=TQ6VZ7CFSHTHW" target="_blank" rel="noopener">Building Democracy Foundation</a>, a registered 501(c)(3) NGO</li>\n'
-        '<li>Revolut: @alexeypklg</li>\n'
+        '<li>Revolut: <a href="https://revolut.me/alexeypklg" target="_blank" rel="noopener">@alexeypklg</a></li>\n'
         '<li>Crypto (scan a code or copy the address):'
         + _wallets_html() +
         '</li>\n</ul>\n'

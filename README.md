@@ -47,7 +47,7 @@ If you are named here and a fact is wrong, or you hold a document that shows oth
 
 ## Support
 
-This is my own time and money. If the work is useful to you, donations help with professional services, subscriptions and hosting: PayPal kovalever@googlemail.com, the [Building Democracy Foundation](https://www.paypal.com/donate/?hosted_button_id=TQ6VZ7CFSHTHW) (US, 501(c)(3)), Revolut @alexeypklg, or crypto from the landing page's "About and support" block.
+This is my own time and money. If the work is useful to you, donations help with professional services, subscriptions and hosting: [PayPal](https://paypal.me/yenisei23) or kovalever@googlemail.com, the [Building Democracy Foundation](https://www.paypal.com/donate/?hosted_button_id=TQ6VZ7CFSHTHW) (US, 501(c)(3)), [Revolut](https://revolut.me/alexeypklg), or crypto from the landing page's "About and support" block.
 
 ## Licence
 
