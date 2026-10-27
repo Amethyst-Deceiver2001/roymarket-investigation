@@ -335,7 +335,7 @@ class Page:
             what = ("Director and founder" if rs >= {"director", "founder"} else "Director" if "director" in rs else "Founder")
             ent = next((x for x in self.ents.values() if x.get("inn") == o.get("inn")), None)
             short = re.sub(r'^ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ\s*"(.*)"$', r"ООО «\1»", (o.get("name") or "").strip())
-            label = self.en(ent) if ent else name_html(latin_text(short), short, key="oe-" + str(o.get("inn")))
+            label = self.en(ent) if ent else name_html(latin_display(short), short, key="oe-" + str(o.get("inn")))
             out.append(f'<li>{what} of {label} (INN {esc(o.get("inn"))}), registered {esc(o.get("registered"))}{self.ref(o["source_id"])}</li>')
         for lab, ss in sanction_regimes(p.get("sanctions")):
             if any(self.doc(s) for s in ss):
@@ -463,7 +463,9 @@ class Page:
                 v = o.get("registered") or ""
                 if o.get("inn") != e.get("inn") and o.get("role") == "director" and o.get("source_id") and re.match(r"\d\d\.\d\d\.\d{4}$", v):
                     ent = next((x for x in self.ents.values() if x.get("inn") == o.get("inn")), None)
-                    ev.append((f"{v[6:]}-{v[3:5]}-{v[:2]}", f"Related company registered: {self.en(ent) if ent else esc(latin_text(o.get('name') or ''))}, "
+                    oname = o.get("name") or ""
+                    rel = self.en(ent) if ent else name_html(latin_display(oname), oname, key="rel-" + str(o.get("inn")))
+                    ev.append((f"{v[6:]}-{v[3:5]}-{v[:2]}", f"Related company registered: {rel}, "
                                                            f"later owned and run by {esc(who)}", o["source_id"]))
             for s in p.get("sanctions") or []:
                 if s.get("date") and re.match(r"\d{4}-\d\d-\d\d$", s["date"]) and any(self.doc(s.get("source_id")) for _ in [0]):

@@ -795,7 +795,7 @@ class Landing(Chain):
                   ("OOO «MPTM», INN 9714068459, address: 109202, Moscow, 1-ya Frezernaya st., 2/1, bldg 2", "ООО «МПТМ», ИНН 9714068459, адрес: 109202, г. Москва, вн. тер. г. муниципальный округ Нижегородский, ул. 1-я Фрезерная, д. 2/1, корп. 2"),
                   self.tref("privacy"), "named"),
                  (ru_date(sub["as_of"]), "TsBST's report to the Justice Ministry, for 2025",
-                  ("OOO \"MPTM\" · OGRN 1257700021468 · 22.01.2025 · as a participant", "ООО \"МПТМ\" · 1257700021468 · 22.01.2025 · в качестве участника"), self.ref(sub.get("source_id")), "named")]
+                  ("OOO «MPTM» · OGRN 1257700021468 · 22.01.2025 · as a participant", "ООО \"МПТМ\" · 1257700021468 · 22.01.2025 · в качестве участника"), self.ref(sub.get("source_id")), "named")]
         return '<div class="docs">' + "".join(
             f'<figure class="doc {c}"><figcaption><span class="rm-label">{esc(d)}</span> {esc(w)}{r}</figcaption>'
             f'<p class="print">{name_html(t[0], t[1], key=f"doc-{i}", what="Line as printed, in Russian:")}</p></figure>' for i, (d, w, t, r, c) in enumerate(cells)) + \
