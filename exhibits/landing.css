@@ -305,3 +305,4 @@ main section > .rm-h2 { margin-top: 0; }
 .tile .tl { font: 600 10.5px/1.2 var(--font-mono); letter-spacing: .04em; color: var(--accent); text-decoration: none; }
 .tile .tl:hover, .tile .tl:focus-visible { text-decoration: underline; }
 .top .byline { font-size: var(--t-note); margin: 0 0 var(--space-4); }
+.clip img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border: 1px solid var(--rule); background: var(--panel-2); }

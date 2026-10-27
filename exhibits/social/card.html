@@ -1,0 +1,25 @@
+<!doctype html><!-- Share card for the landing page and the GitHub repo. Render:
+  firefox --headless --screenshot out.png --window-size=1200,630 file://.../exhibits/social/card.html
+  (--window-size=1280,640 for GitHub's social preview; the card scales by viewport width) -->
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../docs/fonts/fonts.css">
+<style>
+:root{--paper:#eef0f2;--ink:#14181d;--ink-2:#434c57;--ink-3:#5d6873;--rule:#c5ccd4;--accent:#1d4a73;
+--doc:#0b7550;--doc-bg:#e2efe8;--rep:#7a5400;--rep-bg:#f6efdc;--open:#5d6873;--open-bg:#e4e8ec}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;display:flex;flex-direction:column;
+justify-content:space-between;padding:56px 72px 52px;border-left:14px solid var(--accent);overflow:hidden}
+.eyebrow{font:600 20px/1 "IBM Plex Mono",monospace;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
+h1{font:500 76px/1.04 "Spectral",Georgia,serif;margin:22px 0 0;letter-spacing:-.01em}
+h1 span{display:block;font-weight:400;font-size:42px;line-height:1.2;color:var(--ink-2);margin-top:20px}
+.chips{display:flex;gap:14px}
+.chip{font:600 20px/1 "IBM Plex Mono",monospace;letter-spacing:.07em;text-transform:uppercase;padding:11px 16px;border-radius:4px}
+.d{background:var(--doc-bg);color:var(--doc)}.r{background:var(--rep-bg);color:var(--rep)}.o{background:var(--open-bg);color:var(--open)}
+.row{display:flex;justify-content:space-between;align-items:flex-end}
+.by{font-size:24px;color:var(--ink-2);text-align:right;line-height:1.35}
+</style>
+<body>
+<div><div class="eyebrow">Open-source investigation</div>
+<h1>TsBST and ROI.MARKET<span>A Moscow non-profit, its military marketplace, and the drone-war supply around it</span></h1></div>
+<div class="row"><div class="chips"><span class="chip d">Documented</span><span class="chip r">Reported</span><span class="chip o">Not documented</span></div>
+<div class="by">By Alexey Kovalev<br>Every claim graded by its source</div></div>

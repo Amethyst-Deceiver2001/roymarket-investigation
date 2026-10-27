@@ -960,8 +960,6 @@ class Landing(Chain):
 
     def kstill(self, key):
         """One still set right under the quote it belongs to. Preview only: the stills have no media record."""
-        if not self.preview:
-            return ""
         r = self._kreg(key)
         if not r:
             return ""
@@ -972,8 +970,6 @@ class Landing(Chain):
 
     def kherson_band(self):
         """The other stills from the Kherson channel (those not already set under a quote), as a picture band. Preview only."""
-        if not self.preview:
-            return ""
         tiles = []
         for key in KHERSON_STILLS:
             if key in self.k_inline or key in ("osv_21384", "osv_20993", "osv_34459"):   # the channel's own warning map: the page has the front map
@@ -991,8 +987,6 @@ class Landing(Chain):
 
     def center_band(self):
         """ЦБСТ's own album from the «Tsentr-2026» exercise (CENTER_STILLS) as a picture band. Preview only: no media record."""
-        if not self.preview:
-            return ""
         src_dir, dest = REPO / "exhibits" / "images" / "center2026", self.img_dir.parent / "center2026"
         tiles = []
         for n, (name, shows, line) in enumerate(CENTER_STILLS, 1):
@@ -1072,8 +1066,6 @@ class Landing(Chain):
     def shot(self, i):
         """A screenshot for box i of the opening strip, openable like any picture. Preview only: third-party captures
         have no media record."""
-        if not self.preview:
-            return ""
         name, label, shows, key = self.SHOTS[i]
         src_dir, dest = REPO / "exhibits" / "images", self.img_dir.parent
         rel = f"images/{name}"
@@ -1092,7 +1084,7 @@ class Landing(Chain):
         """The two captures of the supplier offer side by side (exhibits/make_offer_collage.py). Preview only: the image
         is a composite of our own captures of third-party pages."""
         name = "opening/offer-collage.png"
-        if not self.preview or not (REPO / "exhibits" / "images" / name).exists():
+        if not (REPO / "exhibits" / "images" / name).exists():
             return ""
         src_dir, dest = REPO / "exhibits" / "images", self.img_dir.parent
         rel = f"images/{name}"
@@ -1116,15 +1108,20 @@ class Landing(Chain):
         """The 25-second clip from Gagaring's post, playable. Preview only: the file is not catalogued, and a public
         page shows key frames plus a link to the archived original."""
         src = REPO / "exhibits" / "images" / "video"
-        if not self.preview or not (src / "gagaring-5142.mp4").exists():
+        if not (src / "gagaring-5142.mp4").exists():
             return ""
         dest = self.img_dir.parent / "video"
-        for name in ("gagaring-5142.mp4", "gagaring-5142.jpg"):
+        for name in (("gagaring-5142.mp4", "gagaring-5142.jpg") if self.preview else ("gagaring-5142.jpg",)):
             if dest != src:
                 dest.mkdir(parents=True, exist_ok=True)
                 (dest / name).write_bytes((src / name).read_bytes())
             if (f"images/video/{name}", dest / name) not in self.media_files:
                 self.media_files.append((f"images/video/{name}", dest / name))
+        if not self.preview:   # public page: a key frame and the post, not the third party's video file
+            return ('<figure class="clip"><img src="images/video/gagaring-5142.jpg" alt="A frame from Gagaring\'s video: a drone '
+                    'approaching a large government building">'
+                    '<figcaption><span class="rm-label">Video frame</span> A frame from Gagaring\'s video, labelled “Kuznechik/Sova 5.8”: a drone '
+                    f'flies in to the coat of arms on the building\'s façade. The video is in the post{self.tref("gag")}.</figcaption></figure>')
         return ('<figure class="clip"><video controls preload="none" playsinline poster="images/video/gagaring-5142.jpg" '
                 'aria-label="Gagaring\'s video: a drone flies in over a large government building to a trident coat of arms on '
                 'its façade, then a separate clip of the coat of arms hanging damaged">'
@@ -1136,10 +1133,10 @@ class Landing(Chain):
         """The first 30 seconds of the channel's post 38645, playable, with the post's own words in the caption. Preview
         only: the file is not catalogued, and a public page shows key frames plus a link to the archived original."""
         src = REPO / "exhibits" / "images" / "video"
-        if not self.preview or not (src / "osv-38645.mp4").exists():
+        if not (src / "osv-38645.mp4").exists():
             return ""
         dest = self.img_dir.parent / "video"
-        for name in ("osv-38645.mp4", "osv-38645.jpg"):
+        for name in (("osv-38645.mp4", "osv-38645.jpg") if self.preview else ("osv-38645.jpg",)):
             if dest != src:
                 dest.mkdir(parents=True, exist_ok=True)
                 (dest / name).write_bytes((src / name).read_bytes())
@@ -1148,6 +1145,11 @@ class Landing(Chain):
         chan, msg, ru, en = OPENING_QUOTES["osv_38645"]
         self.verbatim("osv_38645", chan, msg, ru)
         said = name_html("\u201c" + en + "\u201d", ru, key="q-osv_38645", what="Russian original of")
+        if not self.preview:
+            return ('<figure class="clip"><img src="images/video/osv-38645.jpg" alt="A frame of a drone pilot\'s controller screen: a view down onto a damaged road bridge beside a river">'
+                    '<figcaption><span class="rm-label">Video frame</span> The channel\'s post of 22.10.2026 says '
+                    f'<span class="rm-grade rep">Reported</span> {said}{self.tref("osv_38645")}. '
+                    'The footage is a pilot\'s controller screen over a damaged road bridge. The video is in the post.</figcaption></figure>')
         return ('<figure class="clip"><video controls preload="none" playsinline poster="images/video/osv-38645.jpg" '
                 'aria-label="A drone pilot\'s controller screen: a view down onto a damaged road bridge beside a river, with a '
                 'yellow tracking box on small dark shapes near the kerb">'
@@ -1471,7 +1473,15 @@ def render(preview: bool, out: Path):
 <meta property="og:type" content="article"><meta property="og:site_name" content="ROI.MARKET Investigation">
 <meta property="og:title" content="TsBST and ROI.MARKET: a Moscow non-profit, its military marketplace, and the drone-war supply around it">
 <meta property="og:description" content="Every claim rests on an archived document and is graded by how well that document shows it.">
-<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://amethyst-deceiver2001.github.io/roymarket-investigation/">
+<meta property="og:url" content="https://amethyst-deceiver2001.github.io/roymarket-investigation/">
+<meta property="og:image" content="https://amethyst-deceiver2001.github.io/roymarket-investigation/images/social.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TsBST and ROI.MARKET: an open-source investigation. Claims graded Documented, Reported or Not documented.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TsBST and ROI.MARKET: a Moscow non-profit, its military marketplace, and the drone-war supply around it">
+<meta name="twitter:description" content="Every claim rests on an archived document and is graded by how well that document shows it.">
+<meta name="twitter:image" content="https://amethyst-deceiver2001.github.io/roymarket-investigation/images/social.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%274%27 fill=%27%231d4a73%27/%3E%3Cpath d=%27M7 9h18M16 9v15%27 stroke=%27%23fff%27 stroke-width=%273.5%27 fill=%27none%27/%3E%3C/svg%3E">
 {design_head((REPO / 'exhibits' / 'landing.css').read_text(), None if preview else 'fonts/fonts.css')}</head>
 <body>
 <div class="hero"{hero_style}><header class="rm-page top">
