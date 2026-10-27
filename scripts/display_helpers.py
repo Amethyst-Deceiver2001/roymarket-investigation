@@ -508,8 +508,35 @@ _SUPPORT_CSS = (
     "color:var(--ink-3);margin:0 0 var(--space-3)}"
     ".rm-support p{margin:0 0 var(--space-3)}.rm-support ul{margin:0 0 var(--space-3);padding-left:1.2em}"
     ".rm-support li{margin:0 0 var(--space-2)}"
+    ".rm-support .wallets{list-style:none;padding:0;margin:var(--space-3) 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:var(--space-4)}"
+    ".rm-support .wallets li{display:flex;gap:var(--space-3);align-items:flex-start;margin:0;min-width:0}"
+    ".rm-support .wallets img{flex:none;width:96px;height:96px;border:1px solid var(--rule);border-radius:var(--radius);background:#fff}"
+    ".rm-support .wallets div{min-width:0}"
     ".rm-support code{font:var(--t-note)/1.4 var(--font-mono);overflow-wrap:anywhere;word-break:break-all;color:var(--ink)}"
 )
+
+
+_WALLETS = (
+    ("USDC", "Ethereum network", "0x65a5Fd21ae4f4159F5530C8a54511d4A9DB7a995", "usdc"),
+    ("ETH", "Ethereum network", "0x8cfc0b75CDe024e519b2770B9EAEaC4B1539d03E", "eth"),
+    ("BTC", "Bitcoin network", "3LAptCbJV8iLJSJcGLj9fe6XhRpBYAJHqj", "btc"),
+    ("SOL", "Solana network", "CzUZpDJWfpdcQ6ELobq9xUhSKxzeM6tXod6YBhRGfCeJ", "sol"),
+)
+
+
+def _qr_uri(key: str) -> str:
+    """QR code for one wallet address: static SVG made once from the address (exhibits/images/support/), inlined."""
+    import base64
+    svg = (Path(__file__).resolve().parent.parent / "exhibits" / "images" / "support" / f"qr-{key}.svg").read_bytes()
+    return "data:image/svg+xml;base64," + base64.b64encode(svg).decode()
+
+
+def _wallets_html() -> str:
+    items = "".join(
+        f'<li><img src="{_qr_uri(k)}" alt="QR code for the {sym} address" width="96" height="96">'
+        f'<div><b>{sym}</b> ({net})<br><code>{addr}</code></div></li>\n'
+        for sym, net, addr, k in _WALLETS)
+    return f'<ul class="wallets">\n{items}</ul>'
 
 
 def support_block_html() -> str:
@@ -528,11 +555,8 @@ def support_block_html() -> str:
         '<li>PayPal: kovalever@googlemail.com</li>\n'
         '<li>US-based donors can give through the <a href="https://www.paypal.com/donate/?hosted_button_id=TQ6VZ7CFSHTHW" target="_blank" rel="noopener">Building Democracy Foundation</a>, a registered 501(c)(3) NGO</li>\n'
         '<li>Revolut: @alexeypklg</li>\n'
-        '<li>Crypto:<ul>\n'
-        '<li>USDC (Ethereum network): <code>0x65a5Fd21ae4f4159F5530C8a54511d4A9DB7a995</code></li>\n'
-        '<li>ETH (Ethereum network): <code>0x8cfc0b75CDe024e519b2770B9EAEaC4B1539d03E</code></li>\n'
-        '<li>BTC (Bitcoin network): <code>3LAptCbJV8iLJSJcGLj9fe6XhRpBYAJHqj</code></li>\n'
-        '<li>SOL (Solana network): <code>CzUZpDJWfpdcQ6ELobq9xUhSKxzeM6tXod6YBhRGfCeJ</code></li>\n'
-        '</ul></li>\n</ul>\n'
+        '<li>Crypto (scan a code or copy the address):'
+        + _wallets_html() +
+        '</li>\n</ul>\n'
         '<p>To get in touch: kovalever@gmail.com</p>\n</aside>\n'
     )
