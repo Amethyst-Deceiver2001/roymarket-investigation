@@ -17,7 +17,7 @@ import html
 import re
 from pathlib import Path
 
-CITE_VERSION = 11
+CITE_VERSION = 12
 REPO = Path(__file__).resolve().parent.parent
 
 
@@ -219,9 +219,44 @@ def reader_terms(title: str) -> str:
     return title
 
 
+_MARKET_HOSTS = {"WILDBERRIES": "wildberries.ru", "OZON": "ozon.ru", "NALETAY": "xn--80aaorhk2b.xn--p1ai"}
+_LISTING_URLS = None
+
+
+def _listing_urls() -> dict:
+    """source id -> the one page URL a registry marketplace listing gives for that capture.
+
+    A marketplace capture (API JSON, HAR) carries no canonical link, but the listing or seller record built
+    from it states the page it was taken from. Used only where exactly one URL is recorded for the id."""
+    global _LISTING_URLS
+    if _LISTING_URLS is None:
+        import json
+        seen: dict[str, set] = {}
+        def add(o):
+            if isinstance(o, dict) and o.get("source_id") and isinstance(o.get("url"), str):
+                seen.setdefault(o["source_id"], set()).add(o["url"])
+        try:
+            for e in json.loads((REPO / "data/registry/entities.json").read_text(encoding="utf-8")):
+                for m in (e.get("web") or {}).get("marketplace_listings") or []:
+                    add(m)
+            prods = json.loads((REPO / "data/registry/products.json").read_text(encoding="utf-8"))
+            for p in (prods if isinstance(prods, list) else prods.values()):
+                for l in p.get("listings") or []:
+                    add(l)
+        except (OSError, ValueError):
+            pass
+        _LISTING_URLS = {k: next(iter(v)) for k, v in seen.items() if len(v) == 1}
+    return _LISTING_URLS
+
+
 def cite(s: dict, f: dict | None) -> tuple[str, str | None]:
     """(title, public_url) for one sources.json record."""
     title, url = _cite(s, f)
+    host = _MARKET_HOSTS.get(Path(s["path"]).name.split("_", 1)[0])
+    if not url and host:
+        cand = _listing_urls().get(s.get("id"))
+        if cand and host in cand:
+            url = cand
     title = reader_terms(title)
     name = Path(s["path"]).name
     if name.startswith("TGPOST_") and "tie-evidence" in name:  # our transcript of the database text, not a page capture
