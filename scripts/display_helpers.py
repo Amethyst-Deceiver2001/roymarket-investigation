@@ -512,6 +512,9 @@ _SUPPORT_CSS = (
     ".rm-support .wallets li{display:flex;gap:var(--space-3);align-items:flex-start;margin:0;min-width:0}"
     ".rm-support .wallets img{flex:none;width:96px;height:96px;border:1px solid var(--rule);border-radius:var(--radius);background:#fff}"
     ".rm-support .wallets div{min-width:0}"
+    ".rm-support .copy{display:inline-block;margin-top:var(--space-2);font:600 var(--t-label)/1 var(--font-mono);letter-spacing:.06em;text-transform:uppercase;"
+    "color:var(--accent);background:var(--panel);border:1px solid var(--rule);border-radius:var(--radius);padding:8px 12px;min-height:32px;cursor:pointer}"
+    ".rm-support .copy:hover{border-color:var(--accent)}.rm-support .copy:focus-visible{outline:2px solid var(--accent);outline-offset:2px}"
     ".rm-support code{font:var(--t-note)/1.4 var(--font-mono);overflow-wrap:anywhere;word-break:break-all;color:var(--ink)}"
 )
 
@@ -531,12 +534,29 @@ def _qr_uri(key: str) -> str:
     return "data:image/svg+xml;base64," + base64.b64encode(svg).decode()
 
 
+_COPY_JS = '''document.querySelectorAll(".rm-support .copy").forEach(b => {
+  b.hidden = false;
+  b.addEventListener("click", async () => {
+    const t = b.dataset.copy, was = b.textContent;
+    let ok = false;
+    try { await navigator.clipboard.writeText(t); ok = true; } catch (e) {
+      const r = document.createRange(); r.selectNodeContents(b.parentNode.querySelector("code"));
+      const g = getSelection(); g.removeAllRanges(); g.addRange(r);
+      try { ok = document.execCommand("copy"); } catch (e2) {}
+    }
+    b.textContent = ok ? "Copied" : "Press Ctrl/Cmd+C";
+    setTimeout(() => { b.textContent = was; }, 2000);
+  });
+});'''
+
+
 def _wallets_html() -> str:
     items = "".join(
         f'<li><img src="{_qr_uri(k)}" alt="QR code for the {sym} address" width="96" height="96">'
-        f'<div><b>{sym}</b> ({net})<br><code>{addr}</code></div></li>\n'
+        f'<div><b>{sym}</b> ({net})<br><code>{addr}</code><br>'
+        f'<button type="button" class="copy" data-copy="{addr}" hidden>Copy address</button></div></li>\n'
         for sym, net, addr, k in _WALLETS)
-    return f'<ul class="wallets">\n{items}</ul>'
+    return f'<ul class="wallets">\n{items}</ul>\n<script>{_COPY_JS}</script>'
 
 
 def support_block_html() -> str:
