@@ -63,6 +63,21 @@ FONT_LINK = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
              '&family=IBM+Plex+Sans:wght@400;600&family=Spectral:wght@400;500&subset=cyrillic&display=swap">')
 
 
+SITE_URL = "https://amethyst-deceiver2001.github.io/roymarket-investigation/"
+
+
+def share_meta_html(title: str, description: str, filename: str) -> str:
+    """description, canonical and share-card tags for a page that is served from docs/ (public builds only)."""
+    import html as _h
+    t, d = _h.escape(title), _h.escape(re.sub(r"<[^>]+>", "", description))[:300]
+    url = SITE_URL + filename
+    return (f'<meta name="description" content="{d}">\n<link rel="canonical" href="{url}">\n'
+            f'<meta property="og:type" content="article"><meta property="og:site_name" content="TsBST and ROI.MARKET: an open-source investigation">\n'
+            f'<meta property="og:title" content="{t}"><meta property="og:description" content="{d}">\n'
+            f'<meta property="og:url" content="{url}"><meta property="og:image" content="{SITE_URL}images/social.png">\n'
+            '<meta name="twitter:card" content="summary_large_image">')
+
+
 # A drone seen from above, white on the accent blue; one line in every reader page's head.
 FAVICON_LINK = """<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231d4a73'/%3E%3Cg stroke='%23fff' fill='none' stroke-linecap='round'%3E%3Cpath d='M10.5 10.5l11 11M21.5 10.5l-11 11' stroke-width='2.4'/%3E%3Ccircle cx='7.5' cy='7.5' r='4' stroke-width='1.8'/%3E%3Ccircle cx='24.5' cy='7.5' r='4' stroke-width='1.8'/%3E%3Ccircle cx='7.5' cy='24.5' r='4' stroke-width='1.8'/%3E%3Ccircle cx='24.5' cy='24.5' r='4' stroke-width='1.8'/%3E%3C/g%3E%3Crect x='12.5' y='12.5' width='7' height='7' rx='1.8' fill='%23fff'/%3E%3C/svg%3E">"""
 

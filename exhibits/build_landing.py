@@ -41,7 +41,7 @@ FILE_LINES = {   # (line, source ids it rests on)
 # Other preview pages: (kind, title, one line, preview Artifact)
 MORE = [("People", "One person, many companies", "The people who direct or own two or more of the companies on file",
          "https://claude.ai/artifact/RDUCMFfzWc5G6f62sV9dTT", None),
-        ("Project file", "«Arkhangel»", "A drone school that trains operators for the army and publishes an armed interceptor's parts list",
+        ("Project file", "«Arkhangel»", "A drone school that trains operators for the army and publishes an interceptor drone's parts list",
          "https://claude.ai/artifact/RABnZkrCUwktU5b91cNZTn", "proekt-kb-arkhangel")]
 
 # The opening (24.10.2026). These posts were read in full and saved as TGPOST files on a machine without the source
@@ -1231,8 +1231,8 @@ class Landing(Chain):
                'TsBST; it is the circle\'s word and the school\'s.</p>')
             + self.oq("arch_9067", f'«Arkhangel», Telegram, 01.12.2025{self.tref("arch_9067")}')
             + self.oq("arch_10667", f'«Arkhangel», Telegram, 17.08.2026{self.tref("arch_10667")}')
-            + (f'<p class="note"><a href="{esc(MORE[1][3])}">The full «Arkhangel» file: products, parts list, partners and ties →</a></p>'
-               if self.preview else "") +
+            + (f'<p class="note"><a href="{esc(MORE[1][3] if self.preview else "arkhangel.html")}">The full «Arkhangel» file: products, parts list, partners and ties →</a></p>'
+               if self.preview or (self.out_dir / "arkhangel.html").exists() else "") +
                         '<h3 class="rm-h3">What a front channel says about the targets</h3>'
             f'<p>The Commission reproduces posts of a Kherson-front channel, «From Mariupol to the Carpathians», as figures in '
             f'its paper{self.tref("un_crp")}. The channel signs its strike videos with the units\' names. Under footage of the '
