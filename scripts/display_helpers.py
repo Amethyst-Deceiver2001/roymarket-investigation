@@ -235,6 +235,8 @@ def popup_originals(doc: str) -> str:
     Card name blocks use `<small class="cyr">` and are left as they are (the Cyrillic stays visible beside the Latin)."""
     import html as _h
     n = [0]
+    # notes cited side by side share one marker: "22,23", never two numbers run together as "2223"
+    doc = doc.replace('</a></sup><sup class="rm-ref"><a href', '</a>,<a href')
 
     def pop(m):
         n[0] += 1

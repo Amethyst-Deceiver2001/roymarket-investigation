@@ -219,7 +219,7 @@ OPENING_QUOTES = {   # key: (channel, post, verbatim Russian, our translation)
 # stills they appear on the private preview only. key: (file in exhibits/images/center2026, what the frame shows,
 # (verbatim Russian, English) of a line printed in it or None)
 CENTER_STILLS = [
-    ("c2605-1.jpg", "TsBST's stand at «Tsentr-2026», under a TsBST and ROI.MARKET banner.", None),
+    ("c2605-1.jpg", "TsBST's stand at «Tsentr-2026».", None),
 ]
 
 KHERSON_STILLS = {
@@ -879,7 +879,8 @@ class Landing(Chain):
             cap = self.tile_label(en, ru_date(m.get("published")))
             if owners:   # name whose picture it is: the first entity the record is about
                 ent = next((self.ents[a["id"]] for a in m["about"] if a["type"] == "entity" and a["id"] in self.ents), None)
-                cap = f"{display_name(ent)['latin']}: {cap}" if ent else cap
+                dn = display_name(ent) if ent else None
+                cap = f"{dn['head'] if dn['legal'] else dn['latin']}: {cap}" if ent else cap
             tiles.append(self.tile(f"fig-{m['id']}", self.img(m), en, cap, big=i < big))
         shown, rest = tiles[:limit], tiles[limit:]
         more = (f'<details class="more"><summary>Show all {len(tiles)} pictures</summary>'
