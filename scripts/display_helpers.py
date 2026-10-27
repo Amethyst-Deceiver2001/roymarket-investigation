@@ -264,13 +264,20 @@ def on_pages(m: dict) -> bool:
     return m.get("on_pages") is not False and m.get("publish") != "internal"
 
 
+def _mostly_cyrillic(text: str) -> bool:
+    cyr = len(re.findall(r"[А-Яа-яЁё]", text or ""))
+    lat = len(re.findall(r"[A-Za-z]", text or ""))
+    return cyr > 0 and cyr >= lat
+
+
 def figure_html(m: dict, img_src: str, who: str, ref_html: str, video_note: str = "") -> str:
     """One evidence figure. `who` names the publisher for self-published media."""
     import html as _h
     prov = PROVENANCE.get(m.get("asserted_by"), "Source").format(who=who)
     when = ru_date(m.get("published")) or ""
     cls = "rm-fig rm-video" if video_note else "rm-fig"
-    caption = caption_html(m["shows"], "cap-" + str(m.get("id")), media_caption(m))
+    orig = m.get("caption_ru") or (m["shows"] if _mostly_cyrillic(m["shows"]) else None)   # an English analyst note is never shown as the "original"
+    caption = caption_html(orig, "cap-" + str(m.get("id")), media_caption(m)) if orig else _h.escape(media_caption(m))
     alt = media_caption(m)
     return (f'<figure class="{cls}"><div class="frame"><img src="{_h.escape(img_src)}" alt="{_h.escape(alt)}"></div>'
             f'<figcaption><span class="rm-prov">{_h.escape(prov)}</span><span>{caption}{ref_html}</span>'

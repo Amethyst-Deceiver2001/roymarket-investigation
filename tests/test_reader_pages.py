@@ -22,6 +22,8 @@ PAGES = [
     ("chain_bulat.html", ["build_chain_view.py", "bulat"]),
     ("chain_kapyushon.html", ["build_chain_view.py", "kapyushon"]),
     ("company_ooo-trimiks.html", ["build_company_page.py", "ooo-trimiks"]),
+    ("company_ooo-goudron.html", ["build_company_page.py", "ooo-goudron"]),
+    ("company_ooo-goudron_public.html", ["build_company_page.py", "ooo-goudron", "--public"]),
     ("landing_preview.html", ["build_landing.py", "--preview"]),
     ("landing.html", ["build_landing.py"]),
     ("people_matrix.html", ["build_people_matrix.py"]),

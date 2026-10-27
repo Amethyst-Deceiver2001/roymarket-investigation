@@ -276,6 +276,7 @@ class Landing(Chain):
         self.graph = json.loads((REPO / "data" / "registry" / "relationship_graph.json").read_text())
         self.img_dir = REPO / "exhibits" / "images" / "media"
         self.preview = False
+        self.out_dir = REPO / "exhibits"
         self.k_inline = set()   # Kherson stills already set under a quote
         people = json.loads((REPO / "data" / "registry" / "people.json").read_text())
         self.people = {x["slug"]: x for x in (people if isinstance(people, list) else people.get("people", []))}
@@ -608,8 +609,8 @@ class Landing(Chain):
 
     def file_link(self, slug):
         """(url, label) of the profile page for an organisation, where one exists. Preview only: the pages are private."""
-        if not self.preview:
-            return None
+        if not self.preview:   # public: the file is linked once it sits beside the landing
+            return (f"company_{slug}.html", "Company file") if (self.out_dir / f"company_{slug}.html").exists() else None
         from build_company_page import COMPANY_PAGES   # noqa: E402
         if slug in COMPANY_PAGES:
             return COMPANY_PAGES[slug], "Company file"
@@ -1309,7 +1310,7 @@ class Landing(Chain):
         cards = []
         for slug, url in COMPANY_PAGES.items():
             e = self.ents[slug]
-            href = url if preview else None
+            href = url if preview else (f"company_{slug}.html" if (self.out_dir / f"company_{slug}.html").exists() else None)
             line, line_src = FILE_LINES.get(slug, ("", ()))
             line_ref = self.tref("rog_8057") if slug == "csn-bars-sarmat" else self.ref(*line_src)
             nm = self.name(e, sub=False) + (f'<small>{esc(line)}{line_ref}</small>' if line else "")
@@ -1421,6 +1422,7 @@ def render(preview: bool, out: Path):
     L = Landing()
     L.img_dir = out.parent / "images" / "media"
     L.preview = preview
+    L.out_dir = out.parent
     c = L.ents[CBST]
     today = dt.date.today().isoformat()
     # Called in page order, so footnotes number from the top.
