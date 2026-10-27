@@ -221,6 +221,7 @@ OPENING_QUOTES = {   # key: (channel, post, verbatim Russian, our translation)
 # (verbatim Russian, English) of a line printed in it or None)
 CENTER_STILLS = [
     ("c2605-1.jpg", "TsBST's stand at «Tsentr-2026».", None),
+    ("c2605-2.jpg", "ROI.MARKET's printed leaflets and patch.", None),
 ]
 
 KHERSON_STILLS = {
@@ -1011,8 +1012,7 @@ class Landing(Chain):
             tiles.append(self.tile(f"fig-c{n}", rel, shows, self.tile_label(shows, "04.10.2026"), big=True))
         if not tiles:
             return ""
-        return (f'<figure class="band kstill"><div class="band-grid">{"".join(tiles)}</div>'
-                f'<figcaption>{esc(CENTER_STILLS[0][1])}</figcaption></figure>')
+        return f'<figure class="band"><div class="band-grid">{"".join(tiles)}</div></figure>'
 
     def opening(self):
         """The cold open: a maker's strike footage, re-posted by ЦБСТ with an order line for its marketplace."""
