@@ -63,11 +63,15 @@ FONT_LINK = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
              '&family=IBM+Plex+Sans:wght@400;600&family=Spectral:wght@400;500&subset=cyrillic&display=swap">')
 
 
+# A drone seen from above, white on the accent blue; one line in every reader page's head.
+FAVICON_LINK = """<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%231d4a73'/%3E%3Cg stroke='%23fff' fill='none' stroke-linecap='round'%3E%3Cpath d='M10.5 10.5l11 11M21.5 10.5l-11 11' stroke-width='2.4'/%3E%3Ccircle cx='7.5' cy='7.5' r='4' stroke-width='1.8'/%3E%3Ccircle cx='24.5' cy='7.5' r='4' stroke-width='1.8'/%3E%3Ccircle cx='7.5' cy='24.5' r='4' stroke-width='1.8'/%3E%3Ccircle cx='24.5' cy='24.5' r='4' stroke-width='1.8'/%3E%3C/g%3E%3Crect x='12.5' y='12.5' width='7' height='7' rx='1.8' fill='%23fff'/%3E%3C/svg%3E">"""
+
+
 def design_head(page_css: str = "", fonts_href: str | None = None) -> str:
     """Font link plus the design system CSS and a page's own CSS, inlined in that order.
     fonts_href: a self-hosted fonts.css (public pages, from design/fetch_fonts.py) in place of Google Fonts."""
     link = f'<link rel="stylesheet" href="{fonts_href}">' if fonts_href else FONT_LINK
-    return f"{link}\n<style>{DESIGN_CSS.read_text()}\n{page_css}</style>"
+    return f"{FAVICON_LINK}\n{link}\n<style>{DESIGN_CSS.read_text()}\n{page_css}</style>"
 
 
 # Reader grades (design/README.md). Every registry confidence vocabulary maps here, in one table,
