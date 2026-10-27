@@ -20,6 +20,6 @@ Three causes: seven cells are regimes the watcher does not scan (the watcher com
 | ООО «Уралдронзавод» (uraldronzavod) | EU | EU.12595.62, designated 16.12.2024 (Regulation 2024/3183), no identifier; Yekaterinburg, Akademika Sakharova 41-118. | Name and address only, as recorded. The address is the one on the OFAC entry that prints this ИНН. |
 | ООО «Уралдронзавод» | CH | SSID 86586, listed 20.12.2024, amended 18.2.2025, no identifier; postcode 620105. | Name and address only, as recorded. |
 
-## Found while reading, not yet in the registry
+## Found while reading: АО «Стратим», ИНН printed wrongly on the EU entry (resolved 27.10.2026)
 
-- **АО «Стратим» (ao-stratim), ИНН discrepancy.** EU.13073.69 prints ОГРН 1237700447324 (this record's) but "National fiscal code" **7726030449**; the record's ИНН is 7720901379, and Annex IV entry 763 (L0409) prints 7720901379. The FSF entry matches on ОГРН only; the two ИНН are different numbers. One of the lists has the ИНН wrong, or the entry is about a different registration. To be checked against the ЕГРЮЛ extract and the Official Journal act 2025/933 before anything leans on the EU FSF entry for this company.
+EU.13073.69 prints ОГРН 1237700447324 (ao-stratim's) and «National fiscal code» 7726030449; the record's ИНН is 7720901379. Read in the Official Journal text of Implementing Regulation (EU) 2025/933, entry 572: the act itself prints 7726030449. The ЕГРЮЛ open search of 27.10.2026 returns 7726030449 for АО «НРК-Р.О.С.Т.» (a registrar, ОГРН 1027739216757) and 7720901379 for ОГРН 1237700447324. So the ИНН on the EU entry is an error in the act; Annex IV entry 763 prints the correct one. Recorded in `ao-stratim` `sanctions[]`.
