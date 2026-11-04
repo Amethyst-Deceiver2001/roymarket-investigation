@@ -33,6 +33,7 @@ PAGES = [
     ("arkhangel.html", ["build_arkhangel_page.py"]),
     ("story_01.html", ["build_story.py", "--fixture"]),
     ("aid_ru.html", ["build_aid_ru.py"]),
+    ("landing_ru.html", ["build_landing_ru.py"]),
 ]
 
 

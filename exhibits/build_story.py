@@ -342,7 +342,7 @@ def structure_diagram(F, S) -> str:
         node(0, 30, 170, 84, [("Legal entities and", "n"), ("individuals", "n"), ("not named in the accounts", "m"), (f"RUB 1.10bn · {donors:.1f}%", "m")]),
         node(0, 150, 170, 84, [("DAR and Gradislava", "r"), ("the two founding foundations", "m"), ("RUB 59m · 4.8%", "m")]),
         node(230, 90, 180, 110, [("Nasha Pravda", "r"), ("Nasha Pravda Foundation", "m"), (f"received RUB {got:.2f}bn", "m"), (f"booked {aid:.1f}% as aid", "m")]),
-        node(540, 4, 200, 52, [("Bank PSB", "r"), ("in the register since 01.04.2025", "m")]),
+        node(540, 4, 200, 52, [("Bank PSB", "r"), ("in the register since 27.02.2024", "m")]),
         node(540, 90, 200, 110, [("TsBST", "r"), ("registered 27.02.2024", "m"), ("2024: RUB 269.8m received,", "m"), ("all as «other receipts»", "m")], hub=True),
         node(540, 252, 200, 66, [("United Russia", "r"), ("a founder by TsBST's own site;", "m"), ("not in the register", "m")]),
         node(820, 90, 180, 110, [("MPTM", "r"), ("operates ROI.MARKET", "m"), ("share not stated;", "m"), ("owners withheld", "m")]),
@@ -654,8 +654,8 @@ def render(out: Path):
 <section class="chapter" aria-labelledby="c5">
   <p class="rm-eyebrow">5 of 9 · The centre</p>
   <h2 class="rm-h2" id="c5">TsBST's accounts book all of its money as «other receipts»</h2>
-  <p>TsBST, the autonomous non-profit (ANO) {pop('Centre for Unmanned Systems and Technologies', 'Центр беспилотных систем и технологий')}, was registered in Moscow on 27 February 2024. The register names two founders: the foundation from the
-  start, and Bank PSB from 1 April 2025.{S.ref("s0228")} Its registered main activity is market research.
+  <p>TsBST, the autonomous non-profit (ANO) {pop('Centre for Unmanned Systems and Technologies', 'Центр беспилотных систем и технологий')}, was registered in Moscow on 27 February 2024. The register names two founders, the foundation and Bank PSB, both
+  from registration.{S.ref("s0228")} Its registered main activity is market research.
   The register lists publishing, software development, research and conference organising beside it, and nothing coded to defence.</p>
   <article class="post" aria-label="Excerpts from the TsBST website">
     <header><span>cbst.ru</span><span>{ru_date(q_site2['date'])}</span><span>TsBST's own website{S.ref("s8867")}</span></header>
