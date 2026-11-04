@@ -83,6 +83,9 @@ SOURCES = {
     "emb_vdv": ("Малая эмблема Воздушно-десантных войск России, общественное достояние, Wikimedia Commons", "https://commons.wikimedia.org/wiki/File:Small_emblem_of_the_Russian_Airborne_Forces.svg", []),
     "emb_gru": ("Эмблема подразделений специального назначения ГРУ в том виде, как она ходит (не официальная), общественное достояние, Wikimedia Commons", "https://commons.wikimedia.org/wiki/File:Spetsnaz_emblem.svg", []),
     "rupep_eli": ("Профиль Ильи Елисеева на RUPEP.org (англоязычная версия, распечатан 04.11.2026)", "https://rupep.org/en/person/3421", ["L0577"]),
+    "rupep_mikh": ("Профиль Леонида Михельсона на RUPEP.org (англоязычная версия, распечатан 04.11.2026)", "https://rupep.org/en/", ["L0579"]),
+    "rupep_yak": ("Профиль Владимира Якушева на RUPEP.org (англоязычная версия, распечатан 04.11.2026)", "https://rupep.org/en/", ["L0581"]),
+    "dossier_eli": ("PEPS, Центр «Досье»: профиль Ильи Елисеева, страница сохранена 04.11.2026", "https://peps.dossier.center/person/eliseev-ilya-vladimirovich/", ["L0583"]),
     "eu": ("Сводный список финансовых санкций ЕС, выгрузка от 25.10.2026", None, ["L0354"]),
     "np_post_656": ("Telegram, @nashapravdafond, пост от 10.08.2026", "https://t.me/nashapravdafond/656", ["s9229"]),
     "np_post_448": ("Telegram, @nashapravdafond, пост от 09.06.2025", "https://t.me/nashapravdafond/448", ["s8898"]),
@@ -213,7 +216,7 @@ def data_uri(path: Path) -> str:
     return f"data:{mime};base64," + base64.b64encode(path.read_bytes()).decode()
 
 
-PREVIEW_ONLY = {"m0159"}   # a picture with no licence cleared: this page may not be written under docs/ while it is in
+PREVIEW_ONLY = {"m0159", "m0160", "m0161"}   # a picture with no licence cleared: this page may not be written under docs/ while it is in
 
 
 def media_file(media: dict, mid: str) -> Path:
@@ -266,24 +269,28 @@ def diagram_html(ctx) -> str:
 
     A, B, C, D = 0, 320, 700, 1040
     # links first, so the boxes sit on top of their ends
-    edge("open", "M320 44 C200 44 115 70 115 112"); lab(10, 20, "ФБК, 2017: «ДАР» и «Градислава» — сеть фондов", "start")
+    edge("open", "M320 60 C290 60 270 120 262 170"); lab(334, 104, "ФБК, 2017:", "start"); lab(334, 117, "сеть фондов", "start")
+    edge("doc", "M130 93 L130 130"); lab(140, 116, "владелец основателя", "start")
     edge("rep", "M600 44 L700 44"); lab(650, 36, "возглавляет")
     edge("rep", "M450 100 L450 150"); lab(460, 130, "«по поручению» (Сидякин)", "start")
     edge("rep", "M830 100 L830 150"); lab(840, 130, "учредитель по сайту ЦБСТ", "start")
-    edge("doc", "M260 415 L320 262")
-    edge("doc", "M230 150 L320 190"); edge("doc", "M230 290 L320 240"); lab(275, 232, "директора", "middle"); lab(275, 246, "в совете", "middle")
+    edge("doc", "M260 190 L320 190"); edge("doc", "M260 300 L320 240")
+    edge("doc", "M260 425 L320 262")
     edge("doc", "M580 210 L700 210"); lab(640, 202, "соучредитель")
-    edge("rep", "M960 190 L1040 190"); lab(1000, 166, "секретарь"); lab(1000, 179, "совета")
+    edge("rep", "M960 175 L1040 175"); lab(1000, 152, "председатель"); lab(1000, 165, "совета")
+    edge("rep", "M960 265 L1040 265"); lab(1000, 242, "секретарь"); lab(1000, 255, "совета")
     edge("rep", "M450 290 L450 370"); lab(460, 335, "21 передача, по словам фонда", "start")
 
     node(B, 0, 280, "Дмитрий Медведев", "глава «Единой России»", img=ctx["med"], kind="circle", name_class="dn")
     node(C, 0, 260, "«Единая Россия»", "партия", img=ctx["er"])
-    node(A, 112, 230, "«ДАР»", None, [f"основатель — ООО «ЛЕВИТ»", f"получил {ctx['dar']} млрд ₽ в 2024"])
-    node(A, 250, 230, "«Градислава»", None, [f"получила {ctx['grad']} млрд ₽ в 2023"])
+    node(A, 0, 260, "Леонид Михельсон", "владелец ЛЕВИТ (78,29%)", ["по выписке из ЕГРЮЛ"], img=ctx["mikh"], kind="circle", name_class="dn")
+    node(A, 130, 260, "«ДАР»", None, ["основатель — ООО «ЛЕВИТ»", f"получил {ctx['dar']} млрд ₽ в 2024", "директор — в совете «Нашей Правды»"])
+    node(A, 258, 260, "«Градислава»", None, [f"получила {ctx['grad']} млрд ₽ в 2023", "директор — в совете «Нашей Правды»"])
+    node(A, 380, 260, "Илья Елисеев", "член совета фонда", ["под санкциями шести стран"], img=ctx["eli"], kind="circle", name_class="dn")
     node(B, 150, 260, "«Наша Правда»", "фонд", [f"получила {ctx['got']} млрд ₽ в 2024:", f"{ctx['donors']}% — доноры не названы", "в списке Украины с 01.05.2025"], img=ctx["np"])
     node(C, 150, 260, "ЦБСТ", "центр беспилотных систем", ["по реестру основатели:", "«Наша Правда» и Банк ПСБ", "в списке Украины с 16.08.2025"], img=ctx["cbst"], hub=True)
-    node(A, 370, 260, "Илья Елисеев", "член совета фонда", ["под санкциями шести стран"], img=ctx["eli"], kind="circle", name_class="dn")
-    node(D, 150, 250, "Александр Сидякин", "руководитель ЦИК «ЕР»", ["секретарь совета ЦБСТ"], img=ctx["sid"], kind="circle", name_class="dn")
+    node(D, 130, 250, "Владимир Якушев", "председатель совета ЦБСТ", ["секретарь Генсовета «ЕР»"], img=ctx["yak"], kind="circle", name_class="dn")
+    node(D, 250, 250, "Александр Сидякин", "руководитель ЦИК «ЕР»", ["секретарь совета ЦБСТ"], img=ctx["sid"], kind="circle", name_class="dn")
     # recipients, with the kinds of unit the posts name
     out.append('<rect class="nd" x="320" y="370" width="640" height="104" rx="4"/>')
     out.append('<text class="dn" x="334" y="400">Войска и гражданские службы</text>')
@@ -300,7 +307,7 @@ def diagram_html(ctx) -> str:
               f'<li>{ln("open")} <span class="rm-grade open">Версия</span> утверждение, документа нет</li></ul>')
     names = ", ".join(n for n, _ in ctx["arms"])
     cap = (f'<p class="note">Эмблемы справа внизу — виды частей, которые названы получателями в постах: {names}; они не показывают, какая часть что получила.{ctx["refs"]} '
-           f'Портреты: Медведев — Kremlin.ru, 2024, CC BY 4.0; Сидякин — Karmaks, 2016, CC BY-SA 4.0 (фото десятилетней давности); Елисеев — снимок из профиля на RUPEP.org, автор и дата в профиле не указаны.{ctx["refs2"]} Логотипы — с сайтов организаций и из «Википедии». '
+           f'Портреты: Медведев — Kremlin.ru, 2024, CC BY 4.0; Сидякин — Karmaks, 2016, CC BY-SA 4.0 (фото десятилетней давности); Елисеев, Михельсон и Якушев — снимки из их профилей на RUPEP.org, автор и дата в профилях не указаны.{ctx["refs2"]} Логотипы — с сайтов организаций и из «Википедии». '
            f'Без картинки остались те, чьих изображений в наших источниках нет.</p>')
     return f'<figure class="mapfig"><div class="mapscroll">{svg}</div><figcaption>{legend}{cap}</figcaption></figure>'
 
@@ -390,6 +397,17 @@ def render(out: Path):
                  "Мы убеждены, что обе эти яхты", "Мы считаем это очередным доказательством",
                  "Он самое доверенное лицо премьер-министра"])
 
+    dossier = REPO / "data" / "sources" / "WEBCAPTURE_20261104_dossier-peps-eliseev-ilya-vladimirovich.html"
+    want = ["будучи бывшим однокурсником Дмитрия Медведева, является доверенным лицом премьер-министра и управляющим его активами",
+            "По информации из открытых источников", "подозревается", "могут содержаться признаки"]
+    if dossier.exists():
+        import html as _h
+        dt_ = " ".join(_h.unescape(re.sub(r"<[^>]+>", " ", dossier.read_text(encoding="utf-8"))).split())
+        for ph in want:
+            assert ph in dt_, f"not on the PEPS page: {ph[:50]}"
+            P.checked += 1
+    else:
+        P.skipped += len(want)
     r = P.ref
     first, last = events[0]["date"], events[-1]["date"]
     assert first.startswith("2024-07") and last.startswith("2026-05")
@@ -403,11 +421,13 @@ def render(out: Path):
     arms = [(name, data_uri(REPO / "exhibits" / "images" / "emblems" / f"{fn}.svg")) for fn, name, rx in ARMS if re.search(rx, recip, re.I)]
     assert arms, "no recipient names a kind of unit"
     diagram = diagram_html({"med": data_uri(media_file(media, "m0158")), "sid": data_uri(media_file(media, "m0092")),
-                            "er": data_uri(media_file(media, "m0093")), "eli": (lambda f: data_uri(f) if f else None)(media_file(media, "m0159")), "np": data_uri(media_file(media, "m0002")), "cbst": data_uri(media_file(media, "m0001")),
+                            "er": data_uri(media_file(media, "m0093")), "eli": (lambda f: data_uri(f) if f else None)(media_file(media, "m0159")),
+                            "mikh": (lambda f: data_uri(f) if f else None)(media_file(media, "m0160")),
+                            "yak": (lambda f: data_uri(f) if f else None)(media_file(media, "m0161")), "np": data_uri(media_file(media, "m0002")), "cbst": data_uri(media_file(media, "m0001")),
                             "arms": arms, "dar": rub_bn(fd["2024"]["funds_received"]), "grad": rub_bn(fg["2023"]["funds_received"]),
                             "got": rub_bn(recv24 * 1000), "donors": pct(donor_share),
-                            "refs": r("emb_sv", "emb_vdv", "emb_gru", "med_photo", "sid_photo"), "refs2": r("rupep_eli")})
-    assert "docs" not in out.resolve().parts, "this page carries a preview-only picture (m0159): do not write it under docs/"
+                            "refs": r("emb_sv", "emb_vdv", "emb_gru", "med_photo", "sid_photo"), "refs2": r("rupep_eli", "rupep_mikh", "rupep_yak")})
+    assert "docs" not in out.resolve().parts, "this page carries preview-only pictures (m0159-m0161): do not write it under docs/"
     split_bar = stack_bar([("безымянные доноры", RECEIVED_2024[0][2], "s1"), ("«ДАР» и «Градислава»", RECEIVED_2024[1][2], "s2"),
                            ("то же, второй раз", RECEIVED_2024[2][2], "s3"), ("доход от деятельности", RECEIVED_2024[3][2], "s4")],
                           "Доли поступлений 2024 года по строкам отчётности")
@@ -553,6 +573,9 @@ def render(out: Path):
   списком, а не независимое установление личности.</p>
   <p>ФБК описывает Елисеева как «вице-президент Газпромбанка, однокурсник, друг и бизнес-партнер Медведева» и пишет: «Он самое доверенное лицо премьер-министра».{r("fbk")}
   Что он сидит в совете «Нашей Правды», подтверждает отчётность фонда. Остальное — {chip("rep", "версия ФБК")}</p>
+  <p>Тот же тезис повторяет проект PEPS Центра «Досье»: Елисеев, «будучи бывшим однокурсником Дмитрия Медведева, является доверенным лицом премьер-министра и управляющим его активами», причём
+  «по информации из открытых источников».{r("dossier_eli")} Это пересказ ФБК и прессы, а не независимое подтверждение, и сама страница оговаривается: Елисеев на ней «подозревается», а в его действиях «могут содержаться признаки»
+  преступлений. {chip("rep", "Версия")}</p>
   <p>Остальных семерых членов советов мы сверили с десятью списками (ЕС, США, Великобритании, Швейцарии, Японии, Австралии, Новой Зеландии, Канады, Совета Безопасности ООН
   и реестра санкций Украины): совпадений по имени и отчеству нет. Единственное созвучное имя в украинском реестре — Тихонов Сергій Сергійович, 1991 года рождения; у члена попечительского
   совета другое отчество, так что это однофамилец. Отсутствие совпадения не равно чистой справке: списки сверялись по написанию имени.</p>

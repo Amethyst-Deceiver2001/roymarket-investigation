@@ -3609,7 +3609,9 @@
             "to": null,
             "source_id": "s6810"
           }
-        ]
+        ],
+        "dob_source": "L0579",
+        "inn_personal_source": "L0579"
       },
       "verified_against": "ФНС «Прозрачный бизнес» director/founder cross-reference (pb.nalog.ru search-proc.json, scripts/screen_upr_uchr.py, run 2026-09-07) -- exact ИНН match (6330030244) as учредитель of ooo-levit, an entity already on file.",
       "why": [
@@ -5160,7 +5162,9 @@
             "s9108",
             "s9117"
           ]
-        }
+        },
+        "dob_source": "L0581",
+        "inn_personal_source": "L0581"
       },
       "why": [
         "2026-08-25: patronymic correction + DOB fill via OSINT research pass -- resolves the biggest identifying-detail gap on the network's most senior figure.",
