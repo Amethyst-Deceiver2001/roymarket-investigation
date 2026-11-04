@@ -27,7 +27,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 sys.path.insert(0, str(REPO / "exhibits"))
 from display_helpers import design_head, ru_date  # noqa: E402
 from build_story import (BUCKETS, CBST_LINES, CONTRIBUTIONS, STATED_VALUE, USED_2024, RECEIVED_2024,  # noqa: E402
-                         PRINTED_USED_2024, handover_events, handover_timeline, stack_bar)
+                         PRINTED_USED_2024, handover_events, handover_timeline, stack_bar, ln)
 
 REG = REPO / "data" / "registry"
 esc = html.escape
@@ -71,6 +71,8 @@ SOURCES = {
     "ca": ("Консолидированный санкционный список Канады (SEMA), PDF от 25.10.2026", "https://www.international.gc.ca/world-monde/assets/pdfs/international_relations-relations_internationales/sanctions/sema-lmes.pdf", ["L0424"]),
     "au": ("Консолидированный санкционный список Австралии (DFAT), выгрузка от 25.10.2026", "https://www.dfat.gov.au/sites/default/files/Australian_Sanctions_Consolidated_List.xlsx", ["L0422"]),
     "nz": ("Реестр санкций Новой Зеландии против России (MFAT), выгрузка от 25.10.2026", "https://www.mfat.govt.nz/assets/Countries-and-Regions/Europe/Ukraine/Russia-Sanctions-Register.xlsx", ["L0423"]),
+    "ua": ("Государственный реестр санкций Украины (СНБО), выгрузка физических лиц от 26.10.2026", "https://drs.nsdc.gov.ua/", ["L0477"]),
+    "ua_legal": ("Государственный реестр санкций Украины (СНБО), выгрузка юридических лиц от 26.10.2026", "https://drs.nsdc.gov.ua/", ["L0475"]),
     "eu": ("Сводный список финансовых санкций ЕС, выгрузка от 25.10.2026", None, ["L0354"]),
     "np_post_656": ("Telegram, @nashapravdafond, пост от 10.08.2026", "https://t.me/nashapravdafond/656", ["s9229"]),
     "np_post_448": ("Telegram, @nashapravdafond, пост от 09.06.2025", "https://t.me/nashapravdafond/448", ["s8898"]),
@@ -196,6 +198,43 @@ def image_uri(path: Path) -> str:
     return "data:image/jpeg;base64," + base64.b64encode(path.read_bytes()).decode() if path.exists() else BLANK
 
 
+def diagram_html(dar_bn, grad_bn, got_bn, donor_share) -> str:
+    """Who is tied to whom, drawn by how well each link is documented: solid, a document shows it; dashed, one party's
+    own word; dotted, an allegation no document shows."""
+    def node(x, y, w, h, lines, hub=False):
+        t, yy = [], y + 22
+        for txt, kind in lines:
+            t.append(f'<text class="{kind}" x="{x + 12}" y="{yy}">{esc(txt)}</text>')
+            yy += 18 if kind != "dm" else 16
+        return f'<rect class="nd{" hub" if hub else ""}" x="{x}" y="{y}" width="{w}" height="{h}" rx="4"/>' + "".join(t)
+
+    edge = lambda g, d: f'<path class="rm-ln {g}" d="{d}"/>'
+    lab = lambda x, y, txt, a="middle": f'<text class="el" x="{x}" y="{y}" text-anchor="{a}">{esc(txt)}</text>'
+    svg = ['<svg class="map" viewBox="0 0 1000 400" role="img" aria-label="Схема: кто с кем связан, по степени подтверждённости связи">']
+    svg += [
+        edge("open", "M300 30 L130 70"), lab(60, 36, "ФБК, 2017: «ДАР» и «Градислава» — сеть фондов", "start"),
+        edge("rep", "M410 56 L410 110"), lab(420, 88, "«по поручению» (Сидякин)", "start"),
+        edge("rep", "M520 28 L620 28"), lab(570, 20, "возглавляет"),
+        edge("doc", "M210 130 L300 150"), edge("doc", "M210 240 L300 200"), lab(255, 196, "директора", "middle"), lab(255, 208, "в совете", "middle"),
+        edge("doc", "M520 170 L620 170"), lab(570, 162, "соучредитель"),
+        edge("rep", "M720 56 L720 110"), lab(730, 88, "учредитель по сайту ЦБСТ", "start"),
+        edge("rep", "M410 230 L410 300"), lab(420, 268, "21 передача, по словам фонда", "start"),
+        node(0, 70, 210, 96, [("«ДАР»", "dr"), ("основатель — ООО «ЛЕВИТ»", "dm"), (f"получил {dar_bn} млрд ₽ в 2024", "dm")]),
+        node(0, 200, 210, 80, [("«Градислава»", "dr"), (f"получила {grad_bn} млрд ₽ в 2023", "dm")]),
+        node(300, 0, 220, 56, [("Дмитрий Медведев", "dn"), ("председатель «Единой России»", "dm")]),
+        node(300, 110, 220, 120, [("«Наша Правда»", "dr"), (f"получила {got_bn} млрд ₽ в 2024:", "dm"), (f"{donor_share} % — доноры не названы", "dm"), ("в списке Украины с 01.05.2025", "dm")]),
+        node(620, 0, 200, 56, [("«Единая Россия»", "dr"), ("партия", "dm")]),
+        node(620, 110, 200, 120, [("ЦБСТ", "dr"), ("в списке Украины с 16.08.2025", "dm"), ("по реестру основатели:", "dm"), ("«Наша Правда» и Банк ПСБ", "dm")], hub=True),
+        node(300, 300, 520, 70, [("Войска и гражданские службы", "dn"), ("передачи «Булата» и «Капюшона», июль 2024 — май 2026", "dm")]),
+    ]
+    svg.append("</svg>")
+    legend = ('<ul class="rm-legend">'
+              f'<li>{ln("doc")} <span class="rm-grade doc">Документ</span> связь показывает документ</li>'
+              f'<li>{ln("rep")} <span class="rm-grade rep">Со слов сторон</span> слова одной из сторон</li>'
+              f'<li>{ln("open")} <span class="rm-grade open">Версия</span> утверждение, документа нет</li></ul>')
+    return f'<figure class="mapfig"><div class="mapscroll">{"".join(svg)}</div><figcaption>{legend}</figcaption></figure>'
+
+
 def render(out: Path):
     P = Page()
     today = dt.date.today().isoformat()
@@ -242,6 +281,12 @@ def render(out: Path):
     assert any(s.get("date") == "2022-09-26" for s in el) and any(s.get("date") == "2022-09-29" for s in el)
     med = ppl["dmitriy-medvedev"]["sanctions"]
     assert any("EU" in str(s.get("regime")) for s in med) and any(s.get("date") == "2022-03-15" for s in med)
+    for who in ("eliseev-ilya-vladimirovich", "dmitriy-medvedev"):
+        assert any(x.get("source_id") == "L0477" and "Ukraine (NSDC" in str(x.get("regime")) for x in ppl[who]["sanctions"]), who
+    assert any(x.get("source_id") == "L0475" and x.get("date") == "2025-05-01" for x in np_["sanctions"]), "Наша Правда: no NSDC entry of 01.05.2025"
+    cbst_ent = P.ents["ano-tsbst-centre-for-unmanned-systems-technologies"]
+    assert any(x.get("source_id") == "L0475" and x.get("date") == "2025-08-16" for x in cbst_ent["sanctions"]), "ЦБСТ: no NSDC entry of 16.08.2025"
+    assert any("269/2025" in str(x.get("regime")) for x in np_["sanctions"]) and any("599/2025" in str(x.get("regime")) for x in cbst_ent["sanctions"])
     sid_roles = " ".join(r.get("title") or "" for r in ppl["aleksandr-sidyakin"]["roles"])
     assert "Secretary of the Supervisory Board" in sid_roles
 
@@ -282,6 +327,7 @@ def render(out: Path):
     timeline = timeline.replace("Twenty-one handovers by date, by product", "Двадцать одна передача по датам и изделиям")
     for en, ru in MONTHS.items():
         timeline = timeline.replace(">" + en + " ", ">" + ru + " ")
+    diagram = diagram_html(rub_bn(fd['2024']['funds_received']), rub_bn(fg['2023']['funds_received']), rub_bn(recv24 * 1000), pct(donor_share))
     split_bar = stack_bar([("безымянные доноры", RECEIVED_2024[0][2], "s1"), ("«ДАР» и «Градислава»", RECEIVED_2024[1][2], "s2"),
                            ("то же, второй раз", RECEIVED_2024[2][2], "s3"), ("доход от деятельности", RECEIVED_2024[3][2], "s4")],
                           "Доли поступлений 2024 года по строкам отчётности")
@@ -317,11 +363,13 @@ def render(out: Path):
   <p class="note">Алексей Ковалёв, независимый журналист · данные на {ru_date(today)}</p>
 </header>
 
+{diagram}
+
 <section class="chapter" aria-labelledby="c0">
   <p class="rm-eyebrow">Коротко</p>
   <h2 class="rm-h2" id="c0">Что установлено, а что нет</h2>
   <table class="verdict"><tbody>
-    <tr><td>{chip("doc", "Документ")}</td><td>«Наша Правда» заявляет на своём сайте, что она — совместный проект «ДАР» и «Градиславы». Руководители обоих фондов входят в её наблюдательный совет. В нём же — Илья Елисеев, имя и дата рождения которого совпадают с записями в санкционных списках США, Великобритании, Канады, Австралии и Новой Зеландии.</td></tr>
+    <tr><td>{chip("doc", "Документ")}</td><td>Реестр санкций Украины (СНБО) содержит и «Нашу Правду» (указ № 269/2025 от 01.05.2025), и ЦБСТ (указ № 599/2025 от 16.08.2025); у фонда совпадает ИНН. «Наша Правда» заявляет на своём сайте, что она — совместный проект «ДАР» и «Градиславы». Руководители обоих фондов входят в её наблюдательный совет. В нём же — Илья Елисеев, имя и дата рождения которого совпадают с записями в санкционных списках США, Великобритании, Канады, Австралии и Новой Зеландии.</td></tr>
     <tr><td>{chip("rep", "Со слов сторон")}</td><td>Секретарь наблюдательного совета ЦБСТ и руководитель центрального исполкома «Единой России» Александр Сидякин пишет, что фонд создан «по поручению Председателя Партии Дмитрия Анатольевича Медведева». Сам ЦБСТ сообщает, что Медведев лично передал бойцам технику, купленную, по словам ЦБСТ, «за счёт средств фонда «Наша правда»». Сам фонд сообщает не меньше чем о {len(events)} передачах двух изделий с июля 2024 по май 2026 года.</td></tr>
     <tr><td>{chip("rep", "Версия ФБК")}</td><td>«ДАР» и «Градислава» — часть сети некоммерческих фондов, через которые, по утверждению ФБК (2017), Медведев распоряжался имуществом. Документа, который это подтверждает или опровергает, у нас нет.</td></tr>
     <tr><td>{chip("open", "Не показано")}</td><td>Что деньги «ДАР» и «Градиславы» оплатили эти передачи. Что какое-либо изделие применялось против гражданских.</td></tr>
@@ -417,6 +465,7 @@ def render(out: Path):
   <ul class="qa">
     <li><b>США</b> (OFAC, список SDN): Ilya Vladimirovich YELISEYEV, программа RUSSIA-EO14024.{r("us")}</li>
     <li><b>Великобритания:</b> Ilya Vladimirovich Eliseev, внесён 26.09.2022 как «involved person» — лицо, вовлечённое в получение выгоды от правительства России или в его поддержку.{r("uk")}</li>
+    <li><b>Украина</b> (Государственный реестр санкций СНБО): Єлисеєв Ілля Володимирович, указ № 82/2023 от 19.02.2023.{r("ua")}</li>
     <li><b>Канада:</b> Илья Владимирович Елисеев, 29.09.2022.{r("ca")}</li>
     <li><b>Австралия и Новая Зеландия:</b> тот же человек; в списке Новой Зеландии (01.03.2024) указано: «Member of the Board of Directors of Gazprombank JSC».{r("au", "nz")}</li>
   </ul>
@@ -424,8 +473,9 @@ def render(out: Path):
   списком, а не независимое установление личности.</p>
   <p>ФБК описывает Елисеева как «вице-президент Газпромбанка, однокурсник, друг и бизнес-партнер Медведева» и пишет: «Он самое доверенное лицо премьер-министра».{r("fbk")}
   Что он сидит в совете «Нашей Правды», подтверждает отчётность фонда. Остальное — {chip("rep", "версия ФБК")}</p>
-  <p>Остальных семерых членов советов мы сверили с девятью списками (ЕС, США, Великобритании, Швейцарии, Японии, Австралии, Новой Зеландии, Канады и Совета Безопасности ООН):
-  совпадений по имени и отчеству нет. Украинский список СНБО среди них не был, а отсутствие совпадения — не чистая справка.</p>
+  <p>Остальных семерых членов советов мы сверили с десятью списками (ЕС, США, Великобритании, Швейцарии, Японии, Австралии, Новой Зеландии, Канады, Совета Безопасности ООН
+  и реестра санкций Украины): совпадений по имени и отчеству нет. Единственное созвучное имя в украинском реестре — Тихонов Сергій Сергійович, 1991 года рождения; у члена попечительского
+  совета другое отчество, так что это однофамилец. Отсутствие совпадения не равно чистой справке: списки сверялись по написанию имени.</p>
 </section>
 
 <section class="chapter" aria-labelledby="c6">
@@ -443,7 +493,7 @@ def render(out: Path):
   {P.bq(q59["text_ru"], "Telegram, @asidyakin, 07.08.2026")}
   <p>Что здесь документ, а что нет. Тексты — собственные слова сторон, и других свидетелей у нас нет. Они не показывают, что Медведев лично владеет или распоряжается фондом:
   «по поручению» и «держит на контроле» — слова партийного функционера о главе партии. Зато они показывают, что связь с Медведевым фонд и ЦБСТ не скрывают, а используют.</p>
-  <p>Сам Медведев находится в списках ЕС и Великобритании (в британском — с 15.03.2022; дата первого внесения в список ЕС в выгрузке не указана).{r("eu", "uk")} Обоснование британского внесения начинается словами «Dmitry Anatolyevich MEDVEDEV is Vice President of the Russian Security Council»;
+  <p>Сам Медведев находится в списках ЕС и Великобритании (в британском — с 15.03.2022; дата первого внесения в список ЕС в выгрузке не указана) и в реестре санкций Украины.{r("eu", "uk", "ua")} Обоснование британского внесения начинается словами «Dmitry Anatolyevich MEDVEDEV is Vice President of the Russian Security Council»;
   ЦБСТ в своём посте пишет о нём: «заместитель председателя Совета безопасности РФ». Должность та же, так что речь об одном человеке.</p>
   <p>Вот Так в сентябре 2026 года писал, что представители ЦБСТ называют Медведева «вдохновителем» РОЙ.МАРКЕТ. Кто именно это сказал, статья не уточняет, и эту строчку мы не используем.{r("vot_tak")}</p>
 </section>
@@ -471,7 +521,7 @@ def render(out: Path):
   <p class="rm-eyebrow">8 · Центр</p>
   <h2 class="rm-h2" id="c8">ЦБСТ, который фонд ставит рядом с собой</h2>
   <p>ЦБСТ зарегистрирован 27 февраля 2024 года. Основатели по реестру — «Наша Правда» и ПАО «Банк ПСБ» (с 1 апреля 2025 года).{r("cbst_egrul")} На своём сайте ЦБСТ называет учредителем и «Единую Россию».{r("cbst_site")}
-  Сидякин — секретарь его наблюдательного совета.{r("cbst_post_934")}</p>
+  Сидякин — секретарь его наблюдательного совета.{r("cbst_post_934")} Реестр санкций Украины содержит ЦБСТ с 16 августа 2025 года (указ № 599/2025); совпадают ОГРН и ИНН.{r("ua_legal")} {chip("doc", "Документ")}</p>
   <p>В примечаниях «Нашей Правды» за 2024 год ЦБСТ назван «{esc(q_sub["text_ru"])}», а под этой строкой перечислены пять соглашений на {rub_m(contrib_total)} млн рублей, с 22 августа по 23 декабря 2024 года.
   Получатель в примечаниях не указан.{r("np_accounts24")} В собственной отчётности ЦБСТ за тот же год все {rub_m(CBST_LINES[1][2] * 1000)} млн рублей записаны как «прочие поступления», так что две отчётности не сопоставить.{r("cbst_accounts")}</p>
   <p>15 декабря 2025 года Сидякин написал в своём канале:{r("sid_post_618")}</p>
