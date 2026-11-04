@@ -82,6 +82,7 @@ SOURCES = {
     "emb_sv": ("Малая эмблема Сухопутных войск России (петличная), общественное достояние, Wikimedia Commons", "https://commons.wikimedia.org/wiki/File:Small_emblem_of_the_Russian_Ground_Forces.svg", []),
     "emb_vdv": ("Малая эмблема Воздушно-десантных войск России, общественное достояние, Wikimedia Commons", "https://commons.wikimedia.org/wiki/File:Small_emblem_of_the_Russian_Airborne_Forces.svg", []),
     "emb_gru": ("Эмблема подразделений специального назначения ГРУ в том виде, как она ходит (не официальная), общественное достояние, Wikimedia Commons", "https://commons.wikimedia.org/wiki/File:Spetsnaz_emblem.svg", []),
+    "rupep_eli": ("Профиль Ильи Елисеева на RUPEP.org (англоязычная версия, распечатан 04.11.2026)", "https://rupep.org/en/person/3421", ["L0577"]),
     "eu": ("Сводный список финансовых санкций ЕС, выгрузка от 25.10.2026", None, ["L0354"]),
     "np_post_656": ("Telegram, @nashapravdafond, пост от 10.08.2026", "https://t.me/nashapravdafond/656", ["s9229"]),
     "np_post_448": ("Telegram, @nashapravdafond, пост от 09.06.2025", "https://t.me/nashapravdafond/448", ["s8898"]),
@@ -212,10 +213,15 @@ def data_uri(path: Path) -> str:
     return f"data:{mime};base64," + base64.b64encode(path.read_bytes()).decode()
 
 
+PREVIEW_ONLY = {"m0159"}   # a picture with no licence cleared: this page may not be written under docs/ while it is in
+
+
 def media_file(media: dict, mid: str) -> Path:
     m = media[mid]
-    assert m["publish"] == "ok" and m.get("redact") in (None, "none_needed"), mid
+    assert (m["publish"] == "ok" or (m["publish"] == "internal" and mid in PREVIEW_ONLY)) and m.get("redact") in (None, "none_needed"), mid
     path = REPO / m["file"]
+    if mid in PREVIEW_ONLY and not path.exists():
+        return None   # kept out of the public repo: a clone without the file draws the box without a picture
     assert path.exists(), f"{mid}: {path} is missing"
     return path
 
@@ -264,6 +270,7 @@ def diagram_html(ctx) -> str:
     edge("rep", "M600 44 L700 44"); lab(650, 36, "возглавляет")
     edge("rep", "M450 100 L450 150"); lab(460, 130, "«по поручению» (Сидякин)", "start")
     edge("rep", "M830 100 L830 150"); lab(840, 130, "учредитель по сайту ЦБСТ", "start")
+    edge("doc", "M260 415 L320 262")
     edge("doc", "M230 150 L320 190"); edge("doc", "M230 290 L320 240"); lab(275, 232, "директора", "middle"); lab(275, 246, "в совете", "middle")
     edge("doc", "M580 210 L700 210"); lab(640, 202, "соучредитель")
     edge("rep", "M960 190 L1040 190"); lab(1000, 166, "секретарь"); lab(1000, 179, "совета")
@@ -275,6 +282,7 @@ def diagram_html(ctx) -> str:
     node(A, 250, 230, "«Градислава»", None, [f"получила {ctx['grad']} млрд ₽ в 2023"])
     node(B, 150, 260, "«Наша Правда»", "фонд", [f"получила {ctx['got']} млрд ₽ в 2024:", f"{ctx['donors']}% — доноры не названы", "в списке Украины с 01.05.2025"], img=ctx["np"])
     node(C, 150, 260, "ЦБСТ", "центр беспилотных систем", ["по реестру основатели:", "«Наша Правда» и Банк ПСБ", "в списке Украины с 16.08.2025"], img=ctx["cbst"], hub=True)
+    node(A, 370, 260, "Илья Елисеев", "член совета фонда", ["под санкциями шести стран"], img=ctx["eli"], kind="circle", name_class="dn")
     node(D, 150, 250, "Александр Сидякин", "руководитель ЦИК «ЕР»", ["секретарь совета ЦБСТ"], img=ctx["sid"], kind="circle", name_class="dn")
     # recipients, with the kinds of unit the posts name
     out.append('<rect class="nd" x="320" y="370" width="640" height="104" rx="4"/>')
@@ -292,7 +300,7 @@ def diagram_html(ctx) -> str:
               f'<li>{ln("open")} <span class="rm-grade open">Версия</span> утверждение, документа нет</li></ul>')
     names = ", ".join(n for n, _ in ctx["arms"])
     cap = (f'<p class="note">Эмблемы справа внизу — виды частей, которые названы получателями в постах: {names}; они не показывают, какая часть что получила.{ctx["refs"]} '
-           f'Портреты: Медведев — Kremlin.ru, 2024, CC BY 4.0; Сидякин — Karmaks, 2016, CC BY-SA 4.0 (фото десятилетней давности). Логотипы — с сайтов организаций и из «Википедии». '
+           f'Портреты: Медведев — Kremlin.ru, 2024, CC BY 4.0; Сидякин — Karmaks, 2016, CC BY-SA 4.0 (фото десятилетней давности); Елисеев — снимок из профиля на RUPEP.org, автор и дата в профиле не указаны.{ctx["refs2"]} Логотипы — с сайтов организаций и из «Википедии». '
            f'Без картинки остались те, чьих изображений в наших источниках нет.</p>')
     return f'<figure class="mapfig"><div class="mapscroll">{svg}</div><figcaption>{legend}{cap}</figcaption></figure>'
 
@@ -340,6 +348,7 @@ def render(out: Path):
     regimes = " ".join(str(s.get("regime")) for s in el)
     for need in ("OFAC", "UK Russia", "Canada", "New Zealand", "Australia"):
         assert need in regimes, f"Елисеев: no {need} entry in the registry"
+    assert len({str(x.get("regime")) for x in el if x.get("regime")}) >= 6, "Елисеев: fewer than six listings"
     assert any(s.get("date") == "2022-09-26" for s in el) and any(s.get("date") == "2022-09-29" for s in el)
     med = ppl["dmitriy-medvedev"]["sanctions"]
     assert any("EU" in str(s.get("regime")) for s in med) and any(s.get("date") == "2022-03-15" for s in med)
@@ -394,10 +403,11 @@ def render(out: Path):
     arms = [(name, data_uri(REPO / "exhibits" / "images" / "emblems" / f"{fn}.svg")) for fn, name, rx in ARMS if re.search(rx, recip, re.I)]
     assert arms, "no recipient names a kind of unit"
     diagram = diagram_html({"med": data_uri(media_file(media, "m0158")), "sid": data_uri(media_file(media, "m0092")),
-                            "er": data_uri(media_file(media, "m0093")), "np": data_uri(media_file(media, "m0002")), "cbst": data_uri(media_file(media, "m0001")),
+                            "er": data_uri(media_file(media, "m0093")), "eli": (lambda f: data_uri(f) if f else None)(media_file(media, "m0159")), "np": data_uri(media_file(media, "m0002")), "cbst": data_uri(media_file(media, "m0001")),
                             "arms": arms, "dar": rub_bn(fd["2024"]["funds_received"]), "grad": rub_bn(fg["2023"]["funds_received"]),
                             "got": rub_bn(recv24 * 1000), "donors": pct(donor_share),
-                            "refs": r("emb_sv", "emb_vdv", "emb_gru", "med_photo", "sid_photo")})
+                            "refs": r("emb_sv", "emb_vdv", "emb_gru", "med_photo", "sid_photo"), "refs2": r("rupep_eli")})
+    assert "docs" not in out.resolve().parts, "this page carries a preview-only picture (m0159): do not write it under docs/"
     split_bar = stack_bar([("безымянные доноры", RECEIVED_2024[0][2], "s1"), ("«ДАР» и «Градислава»", RECEIVED_2024[1][2], "s2"),
                            ("то же, второй раз", RECEIVED_2024[2][2], "s3"), ("доход от деятельности", RECEIVED_2024[3][2], "s4")],
                           "Доли поступлений 2024 года по строкам отчётности")
