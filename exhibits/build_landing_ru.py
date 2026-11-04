@@ -26,7 +26,8 @@ from string import Template
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 sys.path.insert(0, str(REPO / "exhibits"))
-from build_landing import OPENING_QUOTES, OPENING_SOURCES, SUPPLIER_LINES, UN_QUOTES, Landing  # noqa: E402
+from build_landing import OPENING_QUOTES, OPENING_SOURCES, SUPPLIER_LINES, UN_QUOTES  # noqa: E402
+from landing_ru_blocks import LandingRu  # noqa: E402
 from display_helpers import (design_head, ru_date, share_meta_html, _SUPPORT_CSS, _wallets_html)  # noqa: E402
 
 REG = REPO / "data" / "registry"
@@ -57,6 +58,11 @@ main.rm-page p { font-size: 17px; line-height: 1.62; margin: 0; }
 .clip { margin: 0; max-width: 760px; }
 .clip video { width: 100%; border-radius: var(--radius); background: #000; }
 .clip figcaption { font-size: var(--t-note); color: var(--ink-2); margin-top: 8px; }
+.tile .tn .br { display: block; font-weight: 600; }
+.tile .tn small.cyr { font: inherit; }
+.tile .tn .br + small.cyr { display: block; font: 400 11px/1.3 var(--font-sans); color: var(--ink-3); margin-top: 2px; }
+.tile .tl { font-size: 11px; }
+.fold > summary { cursor: pointer; font-weight: 600; }
 .pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-4); max-width: 900px; }
 .pair .rm-quote { margin: 0; }
 .tl-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
@@ -84,6 +90,15 @@ RU_LABELS = {
     "rm_now": "Та же страница на 24.10.2026",
     "un_crp": "Независимая международная комиссия ООН по расследованию событий в Украине, «“They are hunting us”: systematic drone attacks targeting civilians in Kherson», документ A/HRC/59/CRP.2, 28.05.2025",
     "un_ga": "Независимая международная комиссия ООН по расследованию событий в Украине, доклад Генеральной Ассамблее A/80/497, 21.10.2025",
+    "sid_photo": "Фотография Александра Сидякина, автор Karmaks, 28.09.2016, Wikimedia Commons, лицензия CC BY-SA 4.0",
+    "er_logo": "Логотип «Единой России» с русской «Википедии», где он приписан официальному сайту партии",
+    "rm_logo": "Логотип РОЙ.МАРКЕТ с сайта платформы, roimarket.ru",
+    "natural_earth": "Natural Earth, линии рек и озёр в масштабе 1:10 млн (общественное достояние); по ним нарисован ход Днепра на карте",
+    "gur_logos": "«Война и санкции», база данных Главного управления разведки Минобороны Украины: страницы компаний, логотипы в том виде, как они показаны там",
+    "deepstate": "DeepState, карта линии фронта, состояние на 23.10.2026 (собственная выгрузка данных); по ней нарисована занятая российскими войсками территория",
+    "emb_sv": "Малая эмблема Сухопутных войск России (петличный знак), общественное достояние, Wikimedia Commons",
+    "emb_vdv": "Малая эмблема Воздушно-десантных войск России, общественное достояние, Wikimedia Commons",
+    "emb_gru": "Эмблема подразделений специального назначения ГРУ в том виде, как она ходит в обороте (не официальная), общественное достояние, Wikimedia Commons",
     "cir": "Centre for Information Resilience совместно с DW, «Tracing the Russian units responsible for drone attacks in Kherson», 2024",
 }
 REG_LABELS = {   # registry sources that are not a plain post or a standard extract: Russian label
@@ -110,6 +125,8 @@ def ru_label(text: str) -> str:
     m = re.match(r"Annual accounts filed with the Federal Tax Service, ИНН (\d+), FY (\d{4})", text)
     if m:
         return f"Годовая бухгалтерская отчётность, ИНН {m.group(1)}, за {m.group(2)} год (ФНС)"
+    if re.match(r"«[^«»]*(«[^«»]*»[^«»]*)*», [\w.-]+\.\w+, \d\d\.\d\d\.\d{4}$", text):   # a Russian press title, already in Russian
+        return text
     raise SystemExit(f"no Russian label for source title: {text}")
 
 
@@ -180,7 +197,10 @@ def render(out: Path):
     ppl = {p["slug"]: p for p in load("people.json")}
     qs = {q["id"]: q for q in load("quotes.json")}
     today = dt.date.today().isoformat()
-    L = Landing()
+    L = LandingRu()
+    L.img_dir = out.parent / "images" / "media"
+    L.preview = False
+    L.out_dir = out.parent
     n_org, by, n_sanc = L.network()
     assert by["doc"] + by["rep"] == n_org
 
@@ -294,6 +314,7 @@ $q_site
 $q_sid
 <p>Сколько денег прошло через ЦБСТ, видно только по отчётности, да и то неполно: в 2024 году он получил $m24 млн рублей целевых средств,$ref_a24 в 2025-м — $m25 млн.$ref_a25
 Это средства некоммерческой организации, а не выручка. В отчёте за 2024 год вся сумма записана одной строкой — «прочие поступления».</p>
+$ties
 <h3 class="rm-h3">Что здесь документ, а что слова</h3>
 <ul>
 <li>Фонд «Наша Правда» и банк ПСБ — учредители ЦБСТ с момента регистрации. $doc</li>
@@ -308,7 +329,7 @@ $q_sid
 </section>""").substitute(
         ref_reg=r("s0228"), doc=DOC, rep=REP, q_site=quote(q_site2["text_ru"], "ЦБСТ, cbst.ru, 13.08.2026" + r("s8867")),
         ref_role=r("s8699"), q_sid=quote(q_sid1215["text_ru"] + " […] " + qs["q045"]["text_ru"], "Александр Сидякин, Telegram, 15.12.2025" + r("s8847"), strong=True),
-        m24=f"{269_835_000 / 1e6:.1f}".replace(".", ","), m25=f"{137_105_000 / 1e6:.1f}".replace(".", ","), ref_a24=r("s0382"), ref_a25=r("s0385"),
+        m24=f"{269_835_000 / 1e6:.1f}".replace(".", ","), m25=f"{137_105_000 / 1e6:.1f}".replace(".", ","), ref_a24=r("s0382"), ref_a25=r("s0385"), ties=L.ties_ru(r),
         ref_row=r("s0207"), ref_offer=r("s8817"),
         story=href(STORY_FILE) if here(STORY_FILE) else "#h-dossiers", story_note="" if in_docs else " <i>(пока в частном просмотре)</i>")
 
@@ -325,6 +346,7 @@ $q_sid
 больниц Херсона рассказал комиссии:</p>
 <blockquote class="rm-quote"><span class="q">«Военнослужащие Российской Федерации ведут себя так, будто это сафари […]; они просто преследуют и охотятся на мирных жителей, которые идут на работу или выгуливают собак» <i>(перевод наш)</i></span>
 <cite>документ ООН A/HRC/59/CRP.2, п. 42, 28.05.2025 (оригинал: «$un_safari»)$ref_crp</cite></blockquote>
+$map
 $osv_clip
 <h3 class="rm-h3">Что круг ЦБСТ сам говорит об этом фронте</h3>
 <ul>
@@ -367,7 +389,7 @@ $still_38703
                     + ' На видео — экран пульта оператора над разрушенным автомобильным мостом, удар на 0:13. Сам пост сообщает, что погибла собака. Звук удалён.</figcaption></figure>')
     front_html = front.substitute(
         ref_crp=r("un_crp"), ref_ga=r("un_ga"), un_dnepr=esc(uq["dnepr"]), un_safari=esc(uq["safari"]), ref_dw=r("dw_film"), ref_cir=r("cir"), ref_osv=r("osv_27702"),
-        osv_clip=osv_clip, rep=REP, ref_rog=r("rog_8057", "rog_7780"), ref_np280=r("np_280"), ref_np580=r("np_580"), ref_gag2811=r("gag_2811"),
+        osv_clip=osv_clip, map=L.map_ru(r), rep=REP, ref_rog=r("rog_8057", "rog_7780"), ref_np280=r("np_280"), ref_np580=r("np_580"), ref_gag2811=r("gag_2811"),
         ref_1562=r("cbst_1562"), ref_rog7047=r("rog_7047"),
         q_9067=oq("arch_9067", "«Архангел», Telegram, 01.12.2025" + r("arch_9067")), q_10667=oq("arch_10667", "«Архангел», Telegram, 17.08.2026" + r("arch_10667")),
         arkh=href("arkhangel.html") if here("arkhangel.html") else "#h-dossiers",
@@ -465,12 +487,30 @@ $cards
         card("ООО «СКБ Пиранья»", "Делает ударные FPV-дроны «Пиранья» и пишет, что доставляет их получателям в «ЛНР» и «ДНР» напрямую.", None),
         card("«Барс-Сармат»", "Добровольческий центр беспилотников Дмитрия Рогозина, который, по его словам, воюет за командующего ВДВ.", None)]))
 
+    def tile_link(slug):
+        f = f"company_{slug}.html"
+        if f in PREVIEW_LINKS and here(f):
+            return f'<a class="tl" href="{href(f)}">Досье →</a>'
+        return ""
+    wall = L.wall_ru(tile_link)
+    sgrid, undated = L.grid_ru()
+    revenue, n_rev = L.revenue_ru(r)
     network = Template("""
 <section aria-labelledby="h-net"><h2 class="rm-h2" id="h-net">Сеть, которая есть в документах</h2>
 <p>С ЦБСТ связаны $n организации: $d — через документ (запись в ЕГРЮЛ, контракт, собственные посты ЦБСТ), $p — только по собственным словам или по сообщениям прессы. $s из них находятся
 хотя бы в одном санкционном списке.</p>
-<p class="note">Сетка логотипов всех $n организаций, график санкционных списков по годам и выручка компаний собираются в английской версии страницы; в русскую они ещё не перенесены.</p>
-</section>""").substitute(n=n_org, d=by["doc"], p=by["rep"], s=n_sanc)
+<details class="fold"><summary>Показать все $n организаций: логотипы и графики</summary>
+<figure class="netfig">$wall
+<figcaption>Все организации, которые реестр связывает с ЦБСТ; логотип — там, где он есть в деле. Красная плашка называет режимы, по которым организация внесена в список. Часть логотипов взята со страниц базы «Война и санкции» Главного управления разведки Украины, где напечатан ИНН компании$ref_gur.</figcaption></figure>
+<div class="net2">
+<figure class="netfig"><h3 class="rm-h3">Когда их внесли в списки</h3><div class="sg-scroll">$sgrid</div>
+<figcaption>Связанные организации, впервые внесённые в список каждого режима, по году внесения, как он записан в деле. $undated записей без даты не нанесены.</figcaption></figure>
+<figure class="netfig"><h3 class="rm-h3">Какие они по размеру</h3>$revenue
+<figcaption>Выручка по годовой отчётности каждой компании, последний год в деле; бледная полоса — год до него. Полоса «со слов прессы» взята из публикации, которая ссылается на базу отчётности, а не из самой отчётности. Отчётность есть у $n_rev из $n организаций. Целевые средства НКО — не выручка и сюда не входят.</figcaption></figure>
+</div>
+</details>
+</section>""").substitute(n=n_org, d=by["doc"], p=by["rep"], s=n_sanc, wall=wall, sgrid=sgrid, undated=undated, revenue=revenue, n_rev=n_rev,
+                         ref_gur=r("gur_logos"))
 
     method = Template("""
 <section aria-labelledby="h-read"><h2 class="rm-h2" id="h-read">Как читать доказательства</h2>
