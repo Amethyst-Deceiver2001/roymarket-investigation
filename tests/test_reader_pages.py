@@ -32,6 +32,7 @@ PAGES = [
     ("people_matrix.html", ["build_people_matrix.py"]),
     ("arkhangel.html", ["build_arkhangel_page.py"]),
     ("story_01.html", ["build_story.py", "--fixture"]),
+    ("aid_ru.html", ["build_aid_ru.py"]),
 ]
 
 
@@ -86,6 +87,10 @@ def test_checker_catches_what_it_is_for():
             f.write_text(f"<html><body>{body}</body></html>", encoding="utf-8")
             errors, _ = check(f, reg)
             assert any(e.startswith(kind) for e in errors), f"{label}: expected a {kind} error, got {errors}"
+        f = OUT / "ru.html"   # a page that declares lang="ru" may carry Cyrillic; the other checks still run
+        f.write_text('<html lang="ru"><body><p>Фонд «Наша Правда»</p><p>см. s0389</p></body></html>', encoding="utf-8")
+        errors, _ = check(f, reg)
+        assert errors and all(e.startswith("notation") for e in errors), errors
         f = OUT / "ok.html"
         f.write_text(f"<html><body>{ok}</body></html>", encoding="utf-8")
         errors, _ = check(f, reg)

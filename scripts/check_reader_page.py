@@ -3,7 +3,7 @@
 
 check_registry.py checks the registry; this checks what a page actually shows, before it leaves private preview:
 
-- **english-first**: Cyrillic in visible text outside an RU popover, a card's registered name (`small.cyr`) or the
+- **english-first** (skipped on a page that declares `<html lang="ru">`): Cyrillic in visible text outside an RU popover, a card's registered name (`small.cyr`) or the
   source list (titles stay as published), and Cyrillic in alt text or aria labels (STYLE_GUIDE §2.1).
 - **references**: every `#anchor` link and every popover control points at an element that exists; popover ids
   are unique (two equal ids open the wrong original).
@@ -109,15 +109,16 @@ def check(path: Path, reg: Registry) -> tuple[list[str], list[str]]:
         t = " ".join(t.split())
         return t if len(t) <= 90 else t[:87] + "..."
 
-    # english-first
+    # english-first (a page declared lang="ru" is written in Russian on purpose; every other check still runs)
+    ru_page = (soup.html or soup).get("lang", "").lower().startswith("ru") if soup.html else False
     cyr = []
-    for el in soup.find_all(string=CYR):
+    for el in ([] if ru_page else soup.find_all(string=CYR)):
         if id(el) in allowed or isinstance(el, Comment) or not el.strip():
             continue
         cyr.append(snip(str(el)))
     for t in cyr:
         errors.append(f"english-first: Cyrillic outside an RU control: {t!r}")
-    for el in soup.find_all(True):
+    for el in ([] if ru_page else soup.find_all(True)):
         if id(el) in allowed:
             continue
         for attr in ("alt", "aria-label", "title"):
