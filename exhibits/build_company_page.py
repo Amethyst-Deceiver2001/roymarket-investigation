@@ -193,12 +193,17 @@ class Page:
         if r:
             rows.append(("Owners and director", f'Hidden in the register since {ru_date(r["as_of"])}{self.ref(r["source_id"])}'))
         else:
-            for key, label in (("director_history", "Director"), ("founders_history", "Owner")):
+            npo = (e.get("legal_form") or "").upper().startswith(("АНО", "НКО")) or (e.get("name_ru") or "").startswith(("АНО", "Фонд"))
+            for key, label in (("director_history", "Director"), ("founders_history", "Founder" if npo else "Owner")):
                 hs = [h for h in e.get(key) or [] if self.doc(h.get("source_id")) and h.get("value")]
                 if not hs:
                     continue
                 last = max(h.get("as_of") or "" for h in hs)
                 for h in (x for x in hs if (x.get("as_of") or "") == last):
+                    if key == "founders_history" and " / " in h["value"]:   # several legal-entity founders: one row each
+                        for j, part in enumerate(h["value"].split(" / ")):
+                            rows.append((label, f'{self.founder_html(part, j)}, as of {ru_date(h["as_of"])}{self.ref(h["source_id"])}'))
+                        continue
                     m = re.match(r"^(.*?)\s+(\d+%)\s*(\(.*\))?$", h["value"])
                     who, share = (m.group(1), m.group(2)) if m else (h["value"], "")
                     pn = person_names(who)
@@ -207,6 +212,62 @@ class Page:
                                         f'{self.ref(h["source_id"])}'))
                     self.reg_people = True
         return self.dl(rows)
+
+    def founder_html(self, part, j):
+        """A legal-entity founder, in the register's own name: a state body translated, anything else with its legal form
+        abbreviated and its name transliterated, the register's original under RU."""
+        import html as _h
+        part = re.sub(r"\s+", " ", part).strip()
+        tr = translation(part)
+        if tr:
+            return name_html(tr["en"], part, key=f"fd-{j}", what="Official name in Russian:")
+        s = part.lower() if part == part.upper() else part
+        s = re.sub(r"\w+", lambda m: m.group(0).capitalize() if part == part.upper() else m.group(0), s)
+        s = re.sub(r"(?<=\w)- (?=\w)", "-", s)
+        return name_html(latin_display(s), part, key=f"fd-{j}", what="Registered name in Russian:")
+
+    def supplier_contract(self, gc):
+        return "procuring organi" not in (gc.get("customer") or "")
+
+    def customer_en(self, gc):
+        import html as _h
+        c = (gc.get("customer") or "").strip()
+        tr = translation(c)
+        return esc(tr["en"]) if tr else esc(latinize_gloss(c))
+
+    def contracts(self):
+        """The company's own state contracts: as supplier, each one; as the buyer of its own equipment, a summary.
+        The subject line is the contract's, in English with the Russian under RU."""
+        gcs = [g for g in self.e.get("government_contracts") or [] if g.get("source_id")]
+        sup = sorted((g for g in gcs if self.supplier_contract(g)), key=lambda g: g.get("date") or "")
+        buy = [g for g in gcs if not self.supplier_contract(g)]
+        out = []
+        for n, g in enumerate(sup, 1):
+            c = (g.get("customer") or "").strip()
+            tr = translation(c)
+            who = name_html(tr["en"], c, key=f"cust-{n}", what="Customer in Russian:") if tr else name_html(latin_display(c), c, key=f"cust-{n}", what="Customer in Russian:")
+            subj = ""
+            if g.get("items_en") and g.get("items"):
+                ru = re.split(r"\s+—\s+", g["items"])[0].strip()
+                subj = f' Subject, as the contract prints it: {orig_line(ru, f"subj-{n}", g["items_en"])}'
+            when = ru_date(g["date"]) if re.match(r"\d{4}-\d{2}-\d{2}$", g.get("date") or "") else esc(g.get("date") or "")
+            rid = f' <span class="rm-id">{esc(g["reg_number"])}</span>' if g.get("reg_number") else ""
+            out.append(f'<li>{when}: {who}, {money(g.get("value_rub"))}.{subj} Contract register no.{rid}{self.ref(g["source_id"])}</li>')
+        html = f'<h3 class="rm-h3">As supplier</h3><ul class="plain">{"".join(out)}</ul>' if out else ""
+        if buy:
+            start = sum(g.get("value_rub") or 0 for g in buy)
+            signed = [g for g in buy if g.get("signed_value_rub")]
+            sums = sum(g["signed_value_rub"] for g in signed)
+            refs = self.ref(*[g["source_id"] for g in buy])
+            ds = sorted(f"{g['date'][6:]}-{g['date'][3:5]}" for g in buy if re.match(r"\d\d\.\d\d\.\d{4}$", g.get("date") or ""))
+            mon = lambda ym: dt.date(int(ym[:4]), int(ym[5:7]), 1).strftime("%B %Y")
+            period = ("in " + mon(ds[0])) if ds and ds[0] == ds[-1] else (f"from {mon(ds[0])} to {mon(ds[-1])}" if ds else "")
+            law = " under Law 223-FZ" if all("223" in (g.get("customer") or "") for g in buy) else ""
+            centre = " for its shared-use centre" if all("Центр коллективного пользования" in (g.get("items") or "") for g in buy) else ""
+            html += (f'<h3 class="rm-h3">As buyer</h3><p>It ran {len(buy)} tenders of its own{law}{" " + period if period else ""}, for equipment{centre}; '
+                     f'the starting prices add up to {money(start)}. A signed price is on file for {len(signed)} of them, {money(sums)} in all.{refs}</p>')
+            self.limits.append("A tender's start price is not a contract price, and a tender run under 223-FZ by a non-profit is not a state purchase.")
+        return html
 
     def unit(self):
         return (self.e.get("legal_form") or "").lower() == "military unit"
@@ -266,6 +327,8 @@ class Page:
                     role = "Staff member"
                 m = re.match(r"co-inventor \(patent (\w+)\)", t)
                 role = role if t.startswith("Сотрудник") else (f"Inventor on patent {m.group(1)}" if m else ROLE_TITLE_EN.get(t))
+                if not role and t.startswith("Генеральный директор"):   # a title with a note after it (co-organiser of ...): the register role is the director's
+                    role = "Director general"
                 mf = re.fullmatch(r"(Директор и учредитель|Учредитель) \((\d+)%\)", t)
                 if mf:
                     role = f'{"Director and founder" if mf.group(1).startswith("Директор") else "Founder"} ({mf.group(2)}%)'
@@ -343,7 +406,8 @@ class Page:
         return "".join(out)
 
     ADDR_KIND = {"registered": "Registered address (register)", "legal-own-site": "Legal address (its own site)",
-                 "actual": "Actual address (showroom)"}
+                 "actual": "Actual address (showroom)", "production-site": "Production site",
+                 "procurement-committee": "Procurement committee (tender notice)", "delivery": "Delivery address (tender notice)"}
     CONTACT_KIND = (("phone", "Phones"), ("email", "E-mail"), ("messenger", "Messengers"))
 
     def place(self):
@@ -369,6 +433,11 @@ class Page:
                     f'{self.ref(m.get("source_id"))}</span><span class="rm-geo">{geo}</span></figcaption></figure>')
 
         rows = []
+        reg_h = sorted((h for h in hist if h.get("kind", "registered") == "registered"), key=lambda h: h.get("as_of") or "", reverse=True)
+        if len(reg_h) > 1:   # one registered address: the latest, with the notes of the others that say the same place
+            keep = dict(reg_h[0])
+            keep["also"] = list(keep.get("also") or []) + [h.get("source_id") for h in reg_h[1:] if h.get("source_id")]
+            hist = [h for h in hist if h.get("kind", "registered") != "registered"] + [keep]
         for n, h in enumerate(sorted(hist, key=lambda h: list(self.ADDR_KIND).index(h.get("kind", "registered")))):
             lab = self.ADDR_KIND.get(h.get("kind", "registered"), "Address")
             rows.append((lab, f'{name_html(latin_text(h["value"]), h["value"], key=f"addr-h{n}", what="Address in Russian:")}'
@@ -401,9 +470,12 @@ class Page:
         """Dated events from the record, each footnoted; graded events say so."""
         e, ev = self.e, []
         reg_src = egrul_source(e, self.src)
-        if e.get("registered") and reg_src:
+        reg_iso = ""
+        if e.get("registered"):
             d, mth, y = e["registered"].split(".")
-            ev.append((f"{y}-{mth}-{d}", "Registered in the company register", reg_src))
+            reg_iso = f"{y}-{mth}-{d}"   # also bounds the related-company rows when no register extract is typed
+            if reg_src:
+                ev.append((reg_iso, "Registered in the company register", reg_src))
         for t in e.get("trademarks") or []:
             for k, verb in (("filed", "filed"), ("registered", "registered")):
                 v = t.get(k) or ""
@@ -432,6 +504,9 @@ class Page:
                                                                        for p in self.products)]
                 if prods and gc.get("date"):
                     ev.append((gc["date"], f'State contract for {money(gc.get("value_rub"))}, supplied by {self.en(owner)}', gc.get("source_id")))
+        for gc in e.get("government_contracts") or []:
+            if self.supplier_contract(gc) and re.match(r"\d{4}-\d{2}-\d{2}$", gc.get("date") or ""):
+                ev.append((gc["date"], f'State contract for {money(gc.get("value_rub"))}, as supplier to {self.customer_en(gc)}', gc.get("source_id")))
         for part in e.get("participations") or []:
             ev.append((part["as_of"], f'Showed its products at {esc(latin_text(self.programs.get(part["event"], {}).get("name_ru")))}',
                        part.get("source_id")))
@@ -461,7 +536,8 @@ class Page:
                             ev.append((f"{v[6:]}-{v[3:5]}-{v[:2]}", f"Sole-proprietor registration of {esc(who)} {verb}", h["source_id"]))
             for o in p.get("other_entities") or []:
                 v = o.get("registered") or ""
-                if o.get("inn") != e.get("inn") and o.get("role") == "director" and o.get("source_id") and re.match(r"\d\d\.\d\d\.\d{4}$", v):
+                if (o.get("inn") != e.get("inn") and o.get("role") == "director" and o.get("source_id") and re.match(r"\d\d\.\d\d\.\d{4}$", v)
+                        and f"{v[6:]}-{v[3:5]}-{v[:2]}" >= reg_iso):   # a company registered before this one existed is not an event of its life
                     ent = next((x for x in self.ents.values() if x.get("inn") == o.get("inn")), None)
                     oname = o.get("name") or ""
                     rel = self.en(ent) if ent else name_html(latin_display(oname), oname, key="rel-" + str(o.get("inn")))
@@ -533,6 +609,9 @@ class Page:
             if unread:
                 self.limits.append(f"The {esc(lab)} listing rests on a sanctions aggregator's match by tax number. "
                                    "The official list entry has not yet been read.")
+        for x in self.e.get("sanctions") or []:   # a caveat a reader needs that the entry's own note (internal) does not carry
+            if x.get("reader_note") and x["reader_note"] not in self.limits:
+                self.limits.append(esc(x["reader_note"]))
         out.append(list_mark(self.e, self.ref).replace('class="row nolist"', 'class="nolist"'))
         return "".join(out)
 
@@ -540,10 +619,17 @@ class Page:
         fin = sorted(self.e.get("financials") or [], key=lambda f: str(f.get("year")))
         if not fin:
             return "<p>No annual accounts are on file.</p>"
+        figs = [f for f in fin if f.get("revenue") is not None or f.get("profit") is not None]
         rows = "".join(f'<tr><td>{esc(f.get("year"))}</td><td class="num">{money(f.get("revenue"))}</td>'
-                       f'<td class="num">{money(f.get("profit"))}</td><td>{self.ref(f.get("source_id"))}</td></tr>' for f in fin)
-        return (f'<div class="tbl"><table><thead><tr><th>Year</th><th class="num">Revenue</th><th class="num">Net profit</th>'
-                f'<th></th></tr></thead><tbody>{rows}</tbody></table></div>')
+                       f'<td class="num">{money(f.get("profit"))}</td><td>{self.ref(f.get("source_id"))}</td></tr>' for f in figs)
+        out = (f'<div class="tbl"><table><thead><tr><th>Year</th><th class="num">Revenue</th><th class="num">Net profit or loss</th>'
+               f'<th></th></tr></thead><tbody>{rows}</tbody></table></div>') if figs else ""
+        # a non-profit's targeted funds are not revenue: said in its own words, never in the table
+        funds = [f for f in fin if f.get("funds_received") is not None and f.get("revenue") is None]
+        if funds:
+            out += "".join(f'<p class="lead-note">{esc(f["year"])}: funds received {money(f["funds_received"])}, used {money(f.get("funds_used"))}'
+                           f'{self.ref(f.get("source_id"))}. A non-profit\'s targeted funds, not revenue.</p>' for f in funds)
+        return out
 
     def products_block(self, chains):
         recs = {p["slug"]: p for p in self.products if p.get("maker") == self.e["slug"]}
@@ -760,7 +846,7 @@ def render(pg, out, chains, public=False):
     sections = [("Company register", pg.register()), ("Command" if pg.unit() else "Before the register was closed", pg.before()),
                 ("People", pg.people_block()), ("Where it is", pg.place()), ("Sanctions", pg.sanctions_block()),
                 ("Timeline", pg.timeline()), ("Annual accounts", pg.accounts()),
-                ("Products", pg.products_block(chains)), ("Handovers it reports", pg.handovers()), ("Public appearances", pg.appearances()), ("Reported by others", pg.reported_by_others(img_dir)),
+                ("Products", pg.products_block(chains)), ("State contracts", pg.contracts()), ("Handovers it reports", pg.handovers()), ("Public appearances", pg.appearances()), ("Reported by others", pg.reported_by_others(img_dir)),
                 ("Pictures", pg.pictures(img_dir)), ("In its own words", pg.own_words()), ("Trademarks and patents", pg.ip_block()),
                 ("Links to TsBST and the state", pg.network()), ("Sellers of its products", pg.sellers())]
     pg.gaps()

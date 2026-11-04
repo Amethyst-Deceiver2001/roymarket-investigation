@@ -1336,7 +1336,7 @@
               "European Union"
             ],
             "source_id": "s9107",
-            "note": "EU consolidated list of 02.10.2026, entry EU.13089.32 (Official Journal 2025/933): Alexey Viktorovich CHADAYEV / Алексей Викторович ЧАДАЕВ, DOB 30.9.1978, function 'Director of Scientific-Research Centre «Ushkuynik»'. Matched to this record by name, patronymic and function; no ИНН is printed and the record holds none. The act itself was not read."
+            "note": "EU consolidated list of 02.10.2026, entry EU.13089.32 (Official Journal 2025/933): Alexey Viktorovich CHADAYEV / Алексей Викторович ЧАДАЕВ, DOB 30.9.1978, function 'Director of Scientific-Research Centre «Ushkuynik»'. Matched to this record by name, patronymic and function; no ИНН is printed and the record holds none. Act read 28.10.2026 (L0572, Council Implementing Regulation (EU) 2025/933): entry 1944, listed 20.5.2025, «Alexey Viktorovich CHADAYEV / Алексей Викторович ЧАДАЕВ», function «Director of Scientific-Research Centre «Ushkuynik»», DOB 30.9.1978; the reasons name the same centre as the maker of the UAV «Kniaz Vandal Novgorodskiy» (KVN). The act prints no ИНН. Identity rests on the name, patronymic and function matching the register's director of АНО «НПЦ «Ушкуйник»» (ИНН 5300010714, L0574), which the same act lists as entry 582, not on an identifier."
           },
           {
             "date": null,
@@ -1364,7 +1364,9 @@
             "s9107",
             "s9117"
           ]
-        }
+        },
+        "dob": "1978-09-30",
+        "dob_source": "L0572"
       },
       "why": [
         "2026-08-24: the pre-existing `_candidate` role on this person pointed at the wrong entity -- \"ООО «Ушкуйник»\" (npts-ushkuynik, the flagship UAV maker itself, whose own `director` field is null) rather than \"АНО «НПЦ «Ушкуйник»»\" (ano-npts-ushkuynik, a separate registry entity whose `director` field already reads \"Чадаев Алексей Викторович\", sourced to an EGRUL pull s0947). Corrected the entity_slug/entity_name to the АНО and attached that same s0947 source, dropping `_candidate` since it now matches an independently EGRUL-sourced field exactly. Corroborated further by leader-id.ru, which self-reports the same employer (full legal name match) and position \"Генеральный директор\", Москва. NOT the same person as «Чадаев Ю.А.» (leader of АНО «НПЦ БАС «ТулаДрон»», per the parked npc_bas_technopark_network memory) -- different patronymic, different organization.",

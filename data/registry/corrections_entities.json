@@ -12086,13 +12086,15 @@
             "as_of": "2025-12-17",
             "note": "PRIMARY SOURCE, not per-source-only: this is the entity's own 223-ФЗ tender notice (Извещение, еис № 32515497957, published on utp.sberbank-ast.ru, PDF/DOC obtained directly from smolin.info's own embedded evidence files and independently re-downloaded/archived here). Confirms the address exactly. Supersedes the earlier 'per smolin.info, not independently corroborated' caveat.",
             "source_id": "s5302",
-            "value": "173003, Новгородская обл., г. Великий Новгород, ул. Большая Санкт-Петербургская, д.64 -- закупочная комиссия (место открытия доступа к заявкам и рассмотрения/оценки заявок), 17.12.2025"
+            "value": "173003, Новгородская обл., г. Великий Новгород, ул. Большая Санкт-Петербургская, д.64 -- закупочная комиссия (место открытия доступа к заявкам и рассмотрения/оценки заявок), 17.12.2025",
+            "kind": "procurement-committee"
           },
           {
             "as_of": "2025-12-17",
             "note": "PRIMARY SOURCE: same 223-ФЗ tender notice, item 8 ('Место поставки товара'). Confirmed by a second document, the evaluation Протокол (s5303, 17.12.2025): sole bidder Степанов Дмитрий Александрович (ИНН 164809949104, г. Зеленодольск, Татарстан) won the ₽6,332,500 contract for SDM-mounting equipment (банк питателей, трафаретный принтер, резчик печатных плат, миксер для паяльной пасты), delivery deadline 31.03.2026; signed by чадаев А.В. (chair), Живова Е.В. (secretary), Елисеев Д.Н. (member) -- confirms all three named leadership figures' committee roles directly, in their own signatures. Supersedes the earlier 'per smolin.info, not independently corroborated' caveat.",
             "source_id": "s5302",
-            "value": "Новгородская обл., г. Старая Русса, ул. Минеральная, д.24 -- место поставки товара (3D-принтеры, SDM-монтажные линии и др.), per the same tender documents"
+            "value": "Новгородская обл., г. Старая Русса, ул. Минеральная, д.24 -- место поставки товара (3D-принтеры, SDM-монтажные линии и др.), per the same tender documents",
+            "kind": "delivery"
           },
           {
             "as_of": "2025-12-18",
@@ -12104,13 +12106,15 @@
             "as_of": "2026-06-08",
             "note": "Per smolin.info investigation (s5288), NOT independently corroborated against ЕГРН/satellite imagery yet. Distinct from the registered ул. Лазаревская, 11 address — a genuine second production site if confirmed.",
             "source_id": "s5288",
-            "value": "Новгородская обл., г. Старая Русса, ул. Минеральная, д. 24 — производственная площадка на территории бывшего Старорусского приборостроительного завода ('центр коллективного доступа')"
+            "value": "Новгородская обл., г. Старая Русса, ул. Минеральная, д. 24 — производственная площадка на территории бывшего Старорусского приборостроительного завода ('центр коллективного доступа')",
+            "kind": "production-site"
           },
           {
             "as_of": "2026-06-08",
             "note": "Per smolin.info investigation (s5288), procurement-commission address, distinct from registered address. Not independently corroborated.",
             "source_id": "s5288",
-            "value": "Новгородская обл., г. Великий Новгород, ул. Большая Санкт-Петербургская, д. 64 — адрес закупочной комиссии"
+            "value": "Новгородская обл., г. Великий Новгород, ул. Большая Санкт-Петербургская, д. 64 — адрес закупочной комиссии",
+            "kind": "procurement-committee"
           }
         ],
         "director": "Чадаев Алексей Викторович",
@@ -12143,7 +12147,8 @@
             "items": "Поставка беспилотных летательных аппаратов для нужд проведения специальной военной операции и выполнения специальных задач по обеспечению обороны и безопасности государства — contract text explicitly states SVO purpose.",
             "reg_number": "2532103798924000157",
             "source_id": "s3402",
-            "value_rub": 4250000
+            "value_rub": 4250000,
+            "items_en": "Supply of unmanned aerial vehicles for the needs of conducting the special military operation and performing special tasks to ensure the defence and security of the state"
           },
           {
             "customer": "ГОКУ «Управление защиты населения от ЧС и по обеспечению пожарной безопасности Новгородской области»",
@@ -12151,7 +12156,8 @@
             "items": "Поставка беспилотных летательных аппаратов и станций для их управления для нужд проведения специальной военной операции и выполнения специальных задач по обеспечению обороны и безопасности государства.",
             "reg_number": "2532103798925000183",
             "source_id": "s3403",
-            "value_rub": 3110000
+            "value_rub": 3110000,
+            "items_en": "Supply of unmanned aerial vehicles and control stations for them for the needs of conducting the special military operation and performing special tasks to ensure the defence and security of the state"
           },
           {
             "customer": "АНО «НПЦ «Ушкуйник»» (as procuring organization, 223-ФЗ)",
@@ -12389,7 +12395,8 @@
               "Canada (Special Economic Measures Act, Schedule 1 Part 2, item 838; name only)"
             ],
             "source_id": "s9117",
-            "note": "Read in Canada's consolidated list of 04.10.2026 (s9117): item 838, «ANO NPC Ushkuynik», with aliases that include the full Russian-language name of the autonomous non-profit and «ООО НПЦ Ушкуйник», listed 2026-06-12. No ИНН, ОГРН or address. The alias «ООО НПЦ Ушкуйник» uses the legal form of the separate company ООО «Ушкуйник» (npts-ushkuynik, ИНН 5300013923); which of the two the entry designates is not shown."
+            "note": "Read in Canada's consolidated list of 04.10.2026 (s9117): item 838, «ANO NPC Ushkuynik», with aliases that include the full Russian-language name of the autonomous non-profit and «ООО НПЦ Ушкуйник», listed 2026-06-12. No ИНН, ОГРН or address. The alias «ООО НПЦ Ушкуйник» uses the legal form of the separate company ООО «Ушкуйник» (npts-ushkuynik, ИНН 5300013923); which of the two the entry designates is not shown.",
+            "reader_note": "The Canada entry prints no tax number or address. It names ANO NPC Ushkuynik with aliases that include the company form of the name, so it is not shown whether it designates this non-profit or the separate company OOO Ushkuynik (tax number 5300013923)."
           },
           {
             "date": "2025-07-08",
@@ -12398,6 +12405,22 @@
             ],
             "source_id": "L0475",
             "note": "Read in Ukraine's State Register of Sanctions export of 26.10.2026 (subject 31909, status «active»): «Автономна некомерційна організація «Науково-виробничий центр випробувань та компетенцій у сфері розробки безпілотних авіаційних систем та засобів захисту від їх незаконного використання «Ушкуйник»»; identifiers on the entry match this record (inn 5300010714). Actions: applied by decree 473/2025 of 2025-07-08 (appendix 2, position 15). Term: Десять років, until 2035-07-08."
+          },
+          {
+            "date": "2025-05-20",
+            "regime": [
+              "EU (Council Implementing Regulation (EU) 2025/933, Annex I to Regulation 269/2014: asset freeze)"
+            ],
+            "source_id": "L0572",
+            "note": "Read in the Official Journal act (L0572, 28.10.2026, through CELLAR): Annex entry 582, «Автономная Некоммерческая организация … ‘Ушкуйник’» (a.k.a. АНО «НПЦ ‘Ушкуйник’»), address 173003, Veliky Novgorod, Lazarevskaya 11, registration number 1235300003685, tax identification number 5300010714; date of listing 20.5.2025. Stated reasons: «a company producing unmanned aerial vehicles (UAVs) to the benefit of the Russian military», main product the UAV «Kniaz Vandal Novgorodskiy» (KVN), and «permission from the Russian Government to unite and coordinate the efforts of UAV engineers and construction companies … in Veliky Novgorod». The same entry matches by ИНН in the EU list download of 25.10.2026 (L0354, entry EU.13083.38). The director is listed in the same act (entry 1944 among the persons)."
+          },
+          {
+            "date": "2025-06-03",
+            "regime": [
+              "Switzerland (SECO sanctions list, Ukraine-related measures)"
+            ],
+            "source_id": "L0355",
+            "note": "Swiss list download of 25.10.2026 (L0355), entry ssid 92836: ИНН 5300010714 is printed on the entry (match by identifier). Dates on the entry: enacted 02.06.2025, effective 03.06.2025; amended 31.03.2026, effective 01.04.2026. The entry text was not read beyond its identifiers."
           }
         ],
         "state_programs": [
@@ -12626,7 +12649,8 @@
             "as_of": "2024-09-06",
             "note": "Agreement with АНО «ЦБСТ» signed by Чадаев and Рубинштейн at Дронница 2024; confirmed by ЦБСТ post 109 (s8837). The agreement text is not yet found."
           }
-        ]
+        ],
+        "ogrn": "1235300003685"
       },
       "verified_against": "egrul.nalog.ru open API, 2026-08-24 | 04.10.2026: s9117 (official list file of 02.10.2026)",
       "why": [

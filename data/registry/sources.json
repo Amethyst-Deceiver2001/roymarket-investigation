@@ -81267,7 +81267,7 @@
   },
   {
     "id": "s9117",
-    "type": null,
+    "type": "sanctions_list",
     "path": "data/sources/SANCTIONSLISTS_20261004_canada-sema/SANCTIONS_CA_20261004.xml",
     "url": null,
     "captured_date": "2026-10-04",
@@ -195421,7 +195421,7 @@
   },
   {
     "id": "L0354",
-    "type": null,
+    "type": "sanctions_list",
     "path": "data/sources/SANCTIONS_EU_20261025.xml",
     "url": null,
     "captured_date": null,
@@ -195441,7 +195441,7 @@
   },
   {
     "id": "L0355",
-    "type": null,
+    "type": "sanctions_list",
     "path": "data/sources/SANCTIONS_CH_20261025.xml",
     "url": null,
     "captured_date": null,
@@ -196521,7 +196521,7 @@
   },
   {
     "id": "L0409",
-    "type": null,
+    "type": "sanctions_list",
     "path": "data/sources/WEBCAPTURE_20261025_eu-council-regulation-2025-932-ojl-20052025.xhtml",
     "url": null,
     "captured_date": null,
@@ -199912,7 +199912,7 @@
   },
   {
     "id": "L0572",
-    "type": null,
+    "type": "sanctions_list",
     "path": "data/sources/WEBCAPTURE_20261027_eu-council-implementing-regulation-2025-933-ojl-20052025.xhtml",
     "url": null,
     "captured_date": "2026-10-27",
@@ -199952,6 +199952,28 @@
     "_origin": "local-mac",
     "_local": true,
     "title": "ЕГРЮЛ open search by ИНН 7726030449, result of 27.10.2026: АО «НРК-Р.О.С.Т.»",
+    "public_url": null
+  },
+  {
+    "id": "L0574",
+    "type": null,
+    "path": "data/sources/EGRULAPI_5300010714_20261028_search-by-inn-ano-npts-ushkuynik.json",
+    "url": null,
+    "captured_date": "2026-10-28",
+    "fiscal_year": null,
+    "as_of": null,
+    "as_of_method": null,
+    "supersedes": null,
+    "superseded_by": null,
+    "inns": [
+      "5300010714"
+    ],
+    "entities": [],
+    "sha256": "8d41c3b5755dda79da671580c84acb5f7b289bd9ff467ca0eb5705f82c5cb602",
+    "_verified": false,
+    "_origin": "local-mac",
+    "_local": true,
+    "title": "ЕГРЮЛ open search by ИНН 5300010714, result of 28.10.2026: АНО «НПЦ «Ушкуйник»»",
     "public_url": null
   }
 ]

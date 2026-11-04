@@ -93,6 +93,8 @@ def fold(s):
 def money(v):
     if v is None:
         return ""
+    if v < 0:
+        return "\u2212" + money(-v)
     if v >= 1e9:
         return f"₽{v / 1e9:.2f}bn"
     if v >= 1e6:
