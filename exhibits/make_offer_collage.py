@@ -80,6 +80,26 @@ h1{{font-size:24px;margin:0 0 4px}}p.sub{{margin:0 0 18px;color:#555;max-width:1
 <div class="col"><h2>25.10.2026</h2><div class="d">roimarket.ru/legal/supplier-offer, our own captures of 25.10.2026 (offer) and 26.10.2026 (privacy policy)</div>{''.join(right)}</div>
 </div>
 <p class="foot">Quoted from the three saved page captures. Green: unchanged, still public. «Защищённый документ для Поставщиков» is the page's own label; the starred fields are as printed.</p>"""
-out = REPO / "exhibits" / "offer_collage.html"
+import sys
+RU = {"Revision, date, status": "Редакция, дата, статус", "Page header: the operator named": "Шапка страницы: оператор назван",
+      "What the page says it is": "Что страница сообщает о себе", "Full text and downloads": "Полный текст и загрузки",
+      "Section 17, the operator's details": "Раздел 17, реквизиты оператора",
+      "Section 17 becomes «Реквизиты в публичной версии»": "Раздел 17 становится «Реквизиты в публичной версии»",
+      "Same site, privacy policy (revision 2.0), 26.10.2026: the operator is still named": "Тот же сайт, политика конфиденциальности (редакция 2.0), 26.10.2026: оператор по-прежнему назван",
+      "<em>no line</em>": "<em>строки нет</em>", "Supplier offer, two captures": "Оферта для поставщиков, два снимка",
+      "The supplier offer, 22 August against 25 October 2026": "Оферта для поставщиков: 22 августа и 25 октября 2026 года",
+      "Same document, same revision 3.0 dated 1 August 2026. On 22 August the whole text was public and named the operator. By 25 October the page is a login wall and the operator's details are starred out. The privacy policy on the same site still names it, at its new registered address.":
+      "Тот же документ, та же редакция 3.0 от 1 августа 2026 года. 22 августа весь текст был открыт и называл оператора. К 25 октября страница стала стеной входа, а реквизиты оператора закрыты звёздочками. Политика конфиденциальности на том же сайте по-прежнему называет его, по новому юридическому адресу.",
+      "on 22.08, gone by 25.10": "было 22.08, пропало к 25.10", "on 25.10, new": "появилось 25.10",
+      "roimarket.ru/legal/supplier-offer, Internet Archive capture of 22.08.2026 09:13": "roimarket.ru/legal/supplier-offer, копия Internet Archive от 22.08.2026 09:13",
+      "roimarket.ru/legal/supplier-offer, our own captures of 25.10.2026 (offer) and 26.10.2026 (privacy policy)": "roimarket.ru/legal/supplier-offer, наши снимки от 25.10.2026 (оферта) и 26.10.2026 (политика конфиденциальности)",
+      "Quoted from the three saved page captures. Green: unchanged, still public. «Защищённый документ для Поставщиков» is the page's own label; the starred fields are as printed.":
+      "Цитаты из трёх сохранённых копий страниц. Зелёным — без изменений, по-прежнему открыто. «Защищённый документ для Поставщиков» — собственное название на странице; закрытые звёздочками поля напечатаны так."}
+if "ru" in sys.argv[1:]:
+    for k, v in RU.items():
+        k2 = k if k in page else k.replace("'", "&#x27;")
+        assert k2 in page, k
+        page = page.replace(k2, v)
+out = REPO / "exhibits" / ("offer_collage_ru.html" if "ru" in sys.argv[1:] else "offer_collage.html")
 out.write_text(page)
 print(out)

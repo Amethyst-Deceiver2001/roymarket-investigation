@@ -27,7 +27,10 @@ REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "scripts"))
 sys.path.insert(0, str(REPO / "exhibits"))
 from build_landing import OPENING_QUOTES, OPENING_SOURCES, SUPPLIER_LINES, UN_QUOTES  # noqa: E402
-from landing_ru_blocks import LandingRu  # noqa: E402
+from landing_ru_blocks import Page, GRADE_RU  # noqa: E402
+from display_helpers import display_name  # noqa: E402
+from build_landing import (ln, TOC_ITEMS, FOLD_JS, TOC_JS, VIEWER_JS, CHAINS, MORE)  # noqa: E402
+from display_helpers import NAME_JS  # noqa: E402
 from display_helpers import (design_head, ru_date, share_meta_html, _SUPPORT_CSS, _wallets_html)  # noqa: E402
 
 REG = REPO / "data" / "registry"
@@ -40,44 +43,15 @@ PREVIEW_LINKS = {"aid_ru.html": "https://claude.ai/artifact/5K3R57G7co4x2Ru5j2MX
                  "company_ooo-goudron.html": "https://claude.ai/artifact/3rMXcnJ8DZ66WmvcTFk9Yi"}
 
 PAGE_CSS = """
-.top h1 { max-width: 22ch; }
-.byline { font: 400 var(--t-note)/1.4 var(--font-sans); color: var(--ink-3); margin: var(--space-3) 0 0; }
-main.rm-page section { display: flex; flex-direction: column; gap: var(--space-4); }
-main.rm-page p, main.rm-page li { max-width: var(--measure); }
-main.rm-page p { font-size: 17px; line-height: 1.62; margin: 0; }
-.finds { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); }
-.finds li { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 4px 14px; align-items: baseline; padding-top: 12px; border-top: 1px solid var(--rule-soft); }
-.finds b { font: 600 17px/1.35 var(--font-serif); }
-.finds span.t { color: var(--ink-2); font-size: 16px; line-height: 1.5; }
-.found-n { color: var(--ink-2); }
 .rm-quote .q { white-space: pre-line; }
-.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.steps li { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 4px 14px; padding-top: 10px; border-top: 1px solid var(--rule-soft); font-size: 16px; line-height: 1.5; }
-.steps .when { font: 600 12px/1.5 var(--font-mono); letter-spacing: .05em; text-transform: uppercase; color: var(--ink-3); }
-.steps .gap { color: var(--ink-3); font-style: italic; padding-left: 9rem; border-top: 0; padding-top: 0; }
-.clip { margin: 0; max-width: 760px; }
-.clip video { width: 100%; border-radius: var(--radius); background: #000; }
-.clip figcaption { font-size: var(--t-note); color: var(--ink-2); margin-top: 8px; }
+@media (min-width: 900px) { .found-list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .tile .tn .br { display: block; font-weight: 600; }
 .tile .tn small.cyr { font: inherit; }
 .tile .tn .br + small.cyr { display: block; font: 400 11px/1.3 var(--font-sans); color: var(--ink-3); margin-top: 2px; }
 .tile .tl { font-size: 11px; }
 .fold > summary { cursor: pointer; font-weight: 600; }
-.pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-4); max-width: 900px; }
-.pair .rm-quote { margin: 0; }
-.tl-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
-.tl-list li { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr) auto; gap: 4px 14px; align-items: baseline; padding-top: 8px; border-top: 1px solid var(--rule-soft); font-size: 16px; line-height: 1.5; }
-.tl-list .d { font: 600 13px/1.5 var(--font-mono); color: var(--ink-3); }
-.cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--space-4); }
-.cards li { max-width: none; padding: var(--space-4); border: 1px solid var(--rule); border-radius: var(--radius); background: var(--panel); display: flex; flex-direction: column; gap: 6px; }
-.cards b { font: 600 17px/1.3 var(--font-serif); }
-.cards .st { color: var(--ink-3); font-size: var(--t-note); }
-.note { font-size: var(--t-note) !important; color: var(--ink-2); }
-.stills { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-4); max-width: 900px; }
-.stills figure { margin: 0; }
-.stills img { width: 100%; height: auto; border-radius: var(--radius); display: block; }
-.stills figcaption { font-size: var(--t-note); color: var(--ink-2); margin-top: 6px; }
-@media (max-width: 720px) { .finds li, .steps li, .tl-list li { grid-template-columns: minmax(0, 1fr); } .steps .gap { padding-left: 0; } }
+.clip { margin: 0 0 var(--space-4); max-width: 760px; }
+.clip video { width: 100%; border-radius: var(--radius); background: #000; }
 """
 
 # --- sources -----------------------------------------------------------------------------------------------
@@ -99,6 +73,8 @@ RU_LABELS = {
     "emb_sv": "Малая эмблема Сухопутных войск России (петличный знак), общественное достояние, Wikimedia Commons",
     "emb_vdv": "Малая эмблема Воздушно-десантных войск России, общественное достояние, Wikimedia Commons",
     "emb_gru": "Эмблема подразделений специального назначения ГРУ в том виде, как она ходит в обороте (не официальная), общественное достояние, Wikimedia Commons",
+    "privacy": "Политика конфиденциальности РОЙ.МАРКЕТ, редакция 2.0, на roimarket.ru, копия от 26.10.2026",
+    "tsentr_pics": "Telegram, @ANO_CBST, посты 2605–2610 (один альбом из шести картинок, подпись под 2610), 04.10.2026",
     "cir": "Centre for Information Resilience совместно с DW, «Tracing the Russian units responsible for drone attacks in Kherson», 2024",
 }
 REG_LABELS = {   # registry sources that are not a plain post or a standard extract: Russian label
@@ -114,20 +90,38 @@ REG_LABELS = {   # registry sources that are not a plain post or a standard extr
 }
 
 
+MISSING: list[str] = []
+
+
 def ru_label(text: str) -> str:
     m = re.match(r"Telegram, @(\S+?)(?: \(([^)]*)\))?, post (\d+), (\d\d\.\d\d\.\d{4})(, signed @\S+)?$", text)
     if m:
         who = f"@{m.group(1)}" + (f" ({m.group(2)})" if m.group(2) else "")
         return f"Telegram, {who}, пост от {m.group(4)}"
-    m = re.match(r"Company register extract \(ЕГРЮЛ, Federal Tax Service\) for (ОГРН|ИНН) (\d+), (\d\d\.\d\d\.\d{4})", text)
+    m = re.match(r"Company register extract \((?:ЕГРЮЛ|EGRUL), Federal Tax Service\) for (ОГРН|ИНН|OGRN|INN) (\d+)(?:, (\d\d\.\d\d\.\d{4}))?", text)
     if m:
-        return f"Выписка из ЕГРЮЛ, {m.group(1)} {m.group(2)}, от {m.group(3)}"
+        kind = {"OGRN": "ОГРН", "INN": "ИНН"}.get(m.group(1), m.group(1))
+        return f"Выписка из ЕГРЮЛ, {kind} {m.group(2)}" + (f", от {m.group(3)}" if m.group(3) else "")
     m = re.match(r"Annual accounts filed with the Federal Tax Service, ИНН (\d+), FY (\d{4})", text)
     if m:
         return f"Годовая бухгалтерская отчётность, ИНН {m.group(1)}, за {m.group(2)} год (ФНС)"
     if re.match(r"«[^«»]*(«[^«»]*»[^«»]*)*», [\w.-]+\.\w+, \d\d\.\d\d\.\d{4}$", text):   # a Russian press title, already in Russian
         return text
-    raise SystemExit(f"no Russian label for source title: {text}")
+    m = re.match(r"Picture posted on Telegram, @(\S+?), message (\d+), (\d\d\.\d\d\.\d{4})$", text)
+    if m:
+        return f"Картинка из Telegram, @{m.group(1)}, сообщение {m.group(2)}, {m.group(3)}"
+    m = re.match(r"Telegram, @(\S+?), post (\d+) \(photo in the album of post (\d+), (\d\d\.\d\d\.\d{4})\), as served on its public page, captured (\d\d\.\d\d\.\d{4})$", text)
+    if m:
+        return f"Telegram, @{m.group(1)}, пост {m.group(2)} (фото в альбоме поста {m.group(3)}, {m.group(4)}), как показано на публичной странице, снято {m.group(5)}"
+    for en, ru in (("Ozon marketplace page", "Страница маркетплейса Ozon"), ("Wildberries seller page", "Страница продавца Wildberries"), ("Web page", "Веб-страница")):
+        m = re.match(re.escape(en) + r", archived (\d\d\.\d\d\.\d{4})$", text)
+        if m:
+            return f"{ru}, архивная копия от {m.group(1)}"
+    m = re.match(r"(«.*»), web page on (\S+), archived (\d\d\.\d\d\.\d{4})$", text)
+    if m:
+        return f"{m.group(1)}, веб-страница на {m.group(2)}, архивная копия от {m.group(3)}"
+    MISSING.append(text)
+    return text
 
 
 def load(name):
@@ -156,8 +150,8 @@ class Notes:
                 self.order.append((k, label, url))
                 ident = len(self.order) - 1
             self.uses += 1
-            out.append(f'<a href="#n{ident + 1}" id="r{self.uses}">{ident + 1}</a>')
-        return '<sup class="fn">' + ",".join(out) + "</sup>"
+            out.append(ident + 1)
+        return '<sup class="rm-ref">' + ",".join(f'<a href="#n{n}">{n}</a>' for n in sorted(set(out))) + "</sup>"
 
     def list_html(self) -> str:
         items = []
@@ -186,8 +180,10 @@ def verify(chan: str, msg: int, parts: list[str], counters: dict):
 
 
 def quote(ru: str, cite: str, strong: bool = False) -> str:
-    cls = "rm-quote key" if strong else "rm-quote"
-    return f'<blockquote class="{cls}"><span class="q" lang="ru">{esc(ru)}</span><cite>{cite}</cite></blockquote>'
+    if strong:
+        return (f'<blockquote class="rm-quote key"><span class="rm-label">Их собственные слова <span class="rm-grade rep">Со слов сторон</span></span>'
+                f'<span class="q" lang="ru">{esc(ru)}</span><cite>{cite}</cite></blockquote>')
+    return f'<blockquote class="rm-quote"><span class="q" lang="ru">{esc(ru)}</span><cite>{cite}</cite></blockquote>'
 
 
 def render(out: Path):
@@ -197,7 +193,8 @@ def render(out: Path):
     ppl = {p["slug"]: p for p in load("people.json")}
     qs = {q["id"]: q for q in load("quotes.json")}
     today = dt.date.today().isoformat()
-    L = LandingRu()
+    L = Page()
+    L.N = N
     L.img_dir = out.parent / "images" / "media"
     L.preview = False
     L.out_dir = out.parent
@@ -261,6 +258,11 @@ def render(out: Path):
     here = lambda f: (out.parent / f).exists() if in_docs else f in PREVIEW_LINKS
     href = lambda f: f if in_docs else PREVIEW_LINKS[f]
 
+    FLOW_NODES = [("8 октября", "Запорожье", "Глава областной администрации сообщает, что FPV-дрон попал в герб на здании администрации.", "rep"),
+                  ("19 октября", "«Гагаринг»", "Производитель публикует видео «результатов работы» своих «Кузнечика» и «Совы 5.8».", "rep"),
+                  ("20 октября", "ЦБСТ", "Перепощивает его как «кадры удара» от своего «резидента» и называет оба изделия.", "rep"),
+                  ("Где заказать", "РОЙ.МАРКЕТ", "ЦБСТ пишет, что военнослужащие могут заказать оба изделия там. Каталог закрыт логином: пост — единственное свидетельство, что изделия в нём есть.", "rep")]
+    FLOW_JOINS = [("open", "ни один пост не датирует удар"), ("rep", "то же видео"), ("rep", "строчка о продаже")]
     # -- the opening -------------------------------------------------------------------------------------------
     gag_clip = ""
     if have_video:
@@ -270,42 +272,37 @@ def render(out: Path):
                     '<figcaption><span class="rm-label">Видео · 0:25</span> Ролик «Гагаринга» с пометкой «Кузнечик/Сова 5.8»: дрон влетает в герб на фасаде здания. '
                     'Последние восемь секунд — отдельный фрагмент.' + r("gag") + "</figcaption></figure>")
     opening = Template("""
-<section aria-labelledby="h-open"><h2 class="rm-h2" id="h-open">Ролик с ударом и строчка о продажах</h2>
+<section class="open" aria-labelledby="h-open"><h2 class="rm-h2" id="h-open">Ролик с ударом и строчка о продажах</h2>
 $clip
 <p>19 октября 2026 года ООО «Гагаринг», краснодарский производитель электроники для дронов, выложил в своём телеграм-канале короткое видео:</p>
 $q_gag
 <p>На следующее утро ЦБСТ, у которого «Гагаринг» числится в «резидентах»$ref_tie, выложил то же видео под своим заголовком, назвал оба изделия
 и закончил пост строчкой о том, где их можно купить:</p>
 $q_cbst
-<ol class="steps" aria-label="От сообщения об ударе до строчки о заказе">
-  <li><span class="when">8 октября</span><span><b>Запорожье.</b> Глава областной администрации сообщает, что FPV-дрон попал в герб на здании администрации. $rep</span></li>
-  <li class="gap">ни один из постов не датирует удар</li>
-  <li><span class="when">19 октября</span><span><b>«Гагаринг».</b> Производитель публикует видео «результатов работы» своих «Кузнечика» и «Совы 5.8». $rep</span></li>
-  <li class="gap">то же видео</li>
-  <li><span class="when">20 октября</span><span><b>ЦБСТ.</b> Перепощивает его как «кадры удара» от своего «резидента» и называет оба изделия. $rep</span></li>
-  <li class="gap">строчка о продажах</li>
-  <li><span class="when">Где заказать</span><span><b>РОЙ.МАРКЕТ.</b> ЦБСТ пишет, что военнослужащие могут заказать оба изделия там. Каталог закрыт логином, так что пост — единственное свидетельство того, что они там есть. $rep</span></li>
-</ol>
+<ol class="flow" aria-label="От сообщения об ударе до строчки о заказе">$flow</ol>
 <p>В том же посте ЦБСТ пишет об «администрации оккупированного Запорожья». Запорожье под контролем Украины, а здание — резиденция областной власти: 8 октября глава
 областной администрации сообщил, что FPV-дрон попал в герб на его фасаде.$ref_ukr РОЙ.МАРКЕТ — маркетплейс, в который можно войти только по логину; по словам секретаря
 наблюдательного совета ЦБСТ, функционера «Единой России», запустили его сам ЦБСТ вместе с партией и банком ПСБ.$ref_sid</p>
 <p class="note">$rep Оба поста — собственные слова сторон. Видео не противоречит сообщению от 8 октября, но ни один из постов не называет дату удара.</p>
 <p>«Двойное назначение» в посте ЦБСТ — ярлык самой платформы. С августа 2026 года её страница для будущих продавцов начиналась словами «$dual»;$ref_aug в копии от 12 октября эта фраза
 ещё была на месте.$ref_oct К 24 октября та же страница говорила иначе: «$special»$ref_now В публичной оферте и договоре для покупателей нет ни той, ни другой формулировки.</p>
-<h3 class="rm-h3">Чего это не доказывает</h3>
+</section>""").substitute(
+        flow=L.flow_ru(FLOW_NODES, FLOW_JOINS), clip=gag_clip, q_gag=oq("gag", "«Гагаринг», Telegram, 19.10.2026" + r("gag")), ref_tie=r(g_tie_sid),
+        q_cbst=oq("cbst", "ЦБСТ, Telegram, 20.10.2026" + r("cbst")), rep=REP, ref_ukr=r("ukrinform"), ref_sid=r("s8847"),
+        dual=SUPPLIER_LINES["dual"][0], special=SUPPLIER_LINES["special"][0], ref_aug=r("rm_aug"), ref_oct=r("rm_oct"), ref_now=r("rm_now"))
+
+    limits_html = Template('''<section class="limits" aria-labelledby="h-limits">
+<details open><summary><h2 class="rm-h2" id="h-limits">Чего это не доказывает</h2></summary>
 <ul>
 <li>Передача чего-либо воинской части не означает, что это применялось в бою. Среди получателей есть и тыловые подразделения.</li>
 <li>Размер доли ЦБСТ в компании, которая управляет РОЙ.МАРКЕТ, не указан ни в одном собранном документе, а с 15.07.2026 ЕГРЮЛ скрывает, кому эта компания принадлежит.</li>
 <li>Американская санкционная запись под похожим названием относится к другой компании, зарегистрированной в Туле. Сам ЦБСТ в списках США не значится.</li>
 </ul>
-</section>""").substitute(
-        clip=gag_clip, q_gag=oq("gag", "«Гагаринг», Telegram, 19.10.2026" + r("gag")), ref_tie=r(g_tie_sid),
-        q_cbst=oq("cbst", "ЦБСТ, Telegram, 20.10.2026" + r("cbst")), rep=REP, ref_ukr=r("ukrinform"), ref_sid=r("s8847"),
-        dual=SUPPLIER_LINES["dual"][0], special=SUPPLIER_LINES["special"][0], ref_aug=r("rm_aug"), ref_oct=r("rm_oct"), ref_now=r("rm_now"))
-
+<p>Красным отмечено только присутствие в санкционных списках, и всегда с названием режима. Названия приведены так, как они записаны в реестре; компания, известная под маркой, показана под маркой, а зарегистрированное название — под ней.</p>
+</details></section>''').substitute(doc=DOC, rep=REP, open=OPEN)
     # -- who stands behind ЦБСТ -------------------------------------------------------------------------------
     who = Template("""
-<section aria-labelledby="h-hub"><h2 class="rm-h2" id="h-hub">Кто стоит за ЦБСТ</h2>
+<section class="hub" aria-labelledby="h-hub"><h2 class="rm-h2" id="h-hub">Кто стоит за ЦБСТ</h2>
 <p>Формально ЦБСТ — отраслевая организация, которая объединяет разработчиков дронов. А по ЕГРЮЛ его учредители — донорский фонд и государственный банк:
 фонд «Наша Правда» и ПАО «Банк ПСБ», с даты регистрации, 27 февраля 2024 года.$ref_reg $doc Третьим учредителем ЦБСТ на своём сайте называет правящую партию:</p>
 $q_site
@@ -314,29 +311,28 @@ $q_site
 $q_sid
 <p>Сколько денег прошло через ЦБСТ, видно только по отчётности, да и то неполно: в 2024 году он получил $m24 млн рублей целевых средств,$ref_a24 в 2025-м — $m25 млн.$ref_a25
 Это средства некоммерческой организации, а не выручка. В отчёте за 2024 год вся сумма записана одной строкой — «прочие поступления».</p>
+<article class="rm-card hub hub-solo"><header><span class="rm-kind">Центр</span>$cbst_logo</header>
+<h3 class="rm-name">ЦБСТ<small class="cyr" lang="ru">АНО «Центр беспилотных систем и технологий»</small></h3>
+<p class="row">Получено целевых средств: ₽$m24 млн в 2024 году, ₽$m25 млн в 2025-м. Это средства некоммерческой организации, а не выручка.</p>
+<p class="row"><span class="rm-id">ИНН $cbst_inn</span> <span class="rm-id">ОГРН $cbst_ogrn</span></p></article>
 $ties
-<h3 class="rm-h3">Что здесь документ, а что слова</h3>
-<ul>
-<li>Фонд «Наша Правда» и банк ПСБ — учредители ЦБСТ с момента регистрации. $doc</li>
-<li>«Единая Россия» — учредитель по словам самого ЦБСТ; в ЕГРЮЛ её нет. $rep</li>
-<li>Александр Сидякин — секретарь наблюдательного совета и руководитель ЦИК «Единой России», как об этом пишет ЦБСТ.$ref_role $rep</li>
-<li>В отчёте за 2025 год ЦБСТ указывает ООО «МПТМ» среди компаний, в которых участвует, с 22.01.2025; размер доли не назван.$ref_row $doc</li>
-<li>ООО «МПТМ» — оператор РОЙ.МАРКЕТ по собственной оферте платформы для поставщиков.$ref_offer $rep</li>
-</ul>
+<ul class="ledger ledger-phone" aria-label="Связи">$ledger</ul>
+<details class="fold ledger-desk"><summary>Связи списком, с примечаниями</summary><ul class="ledger" aria-label="Связи">$ledger</ul></details>
+$handovers
 <p>«Наша Правда» — тот самый донорский фонд, о котором дальше идёт отдельный материал: ему принадлежит часть передач на фронт, а его собственный сайт называет его
 совместным проектом ещё двух фондов. Один из руководителей ЦБСТ пишет, что фонд создан «по поручению» Дмитрия Медведева. Это слова одной из сторон, документа за ними нет.
 <a href="$story">Как фонды, связанные с Дмитрием Медведевым, снабжают российскую армию →</a>$story_note</p>
 </section>""").substitute(
         ref_reg=r("s0228"), doc=DOC, rep=REP, q_site=quote(q_site2["text_ru"], "ЦБСТ, cbst.ru, 13.08.2026" + r("s8867")),
         ref_role=r("s8699"), q_sid=quote(q_sid1215["text_ru"] + " […] " + qs["q045"]["text_ru"], "Александр Сидякин, Telegram, 15.12.2025" + r("s8847"), strong=True),
-        m24=f"{269_835_000 / 1e6:.1f}".replace(".", ","), m25=f"{137_105_000 / 1e6:.1f}".replace(".", ","), ref_a24=r("s0382"), ref_a25=r("s0385"), ties=L.ties_ru(r),
+        m24=f"{269_835_000 / 1e6:.1f}".replace(".", ","), m25=f"{137_105_000 / 1e6:.1f}".replace(".", ","), ref_a24=r("s0382"), ref_a25=r("s0385"), ties=L.ties_ru(r), ledger=L.ledger_ru(), handovers=L.band_ru(L.pics([NP], {"handover"}), "Из постов фонда «Наша Правда» о передачах. Передача не означает применения в бою.", big=3), cbst_logo=re.sub(r'alt="[^"]*"', 'alt="Логотип ЦБСТ"', L.logo(CBST)), cbst_inn=esc(cbst['inn']), cbst_ogrn=esc(cbst['ogrn']),
         ref_row=r("s0207"), ref_offer=r("s8817"),
         story=href(STORY_FILE) if here(STORY_FILE) else "#h-dossiers", story_note="" if in_docs else " <i>(пока в частном просмотре)</i>")
 
     # -- the front ------------------------------------------------------------------------------------------
     uq = UN_QUOTES
     front = Template("""
-<section aria-labelledby="h-front"><h2 class="rm-h2" id="h-front">Фронт, который он снабжает</h2>
+<section class="front-sec" aria-labelledby="h-front"><h2 class="rm-h2" id="h-front">Фронт, который он снабжает</h2>
 <p>В мае 2025 года Независимая международная комиссия ООН по расследованию событий в Украине пришла к выводу, что российские операторы дронов на левом берегу Днепра десять месяцев
 нападали на мирных жителей Херсона и что эти нападения — преступление против человечности, убийство.$ref_crp В октябре комиссия распространила этот вывод на 300 километров реки и три области и назвала объединение, в котором служат операторы:</p>
 <blockquote class="rm-quote"><span class="q">«Они связаны с различными армейскими частями, все из которых входят в группировку войск “Днепр”» <i>(перевод наш)</i></span>
@@ -349,10 +345,10 @@ $ties
 $map
 $osv_clip
 <h3 class="rm-h3">Что круг ЦБСТ сам говорит об этом фронте</h3>
-<ul>
-<li><b>«Барс-Сармат».</b> Его командир Дмитрий Рогозин пишет, что центр выполняет боевые задачи командующего ВДВ и что армейские подразделения группировки «Днепр» ставят его боеприпасы на свои ударные дроны.$ref_rog $rep</li>
-<li><b>Фонд «Наша Правда»</b> сообщает, что в мае 2024 года передал 100 ударных дронов бойцам 49-й армии на херсонском направлении,$ref_np280 а также автомобиль, на котором 18-я армия теперь возит грузы и людей к линии фронта.$ref_np580 $rep</li>
-<li><b>ООО «Гагаринг»</b>, производитель «Кузнечика» и «Совы», публикует благодарности от расчётов 49-й армии, которые «Совой» перехватывают видеосигнал дронов над Днепром.$ref_gag2811 $rep</li>
+<ul class="ledger front" aria-label="Связи с частями, которые называет ООН">
+<li><span class="from">«Барс-Сармат»</span>$ln_rep<span class="what">Его командир Дмитрий Рогозин пишет, что центр выполняет боевые задачи командующего ВДВ и что армейские подразделения группировки «Днепр» ставят его боеприпасы на свои ударные дроны.$ref_rog</span>$rep</li>
+<li><span class="from">Фонд «Наша Правда»</span>$ln_rep<span class="what">сообщает, что в мае 2024 года передал 100 ударных дронов бойцам 49-й армии на херсонском направлении,$ref_np280 а также автомобиль, на котором 18-я армия теперь возит грузы и людей к линии фронта.$ref_np580</span>$rep</li>
+<li><span class="from">ООО «Гагаринг»</span>$ln_rep<span class="what">производитель «Кузнечика» и «Совы», публикует благодарности от расчётов 49-й армии, которые «Совой» перехватывают видеосигнал дронов над Днепром.$ref_gag2811</span>$rep</li>
 </ul>
 <h3 class="rm-h3">Школа, которая набирает в 205-ю бригаду</h3>
 <p>Канал самого ЦБСТ пишет, что противодронный тренажёр одного из «резидентов» работает в новом учебном центре школы дронов «Архангел» в Туапсе.$ref_1562 Канал школы набирает операторов в 205-ю бригаду, а канал Дмитрия Рогозина
@@ -372,12 +368,6 @@ $q_38703
 $still_38703
 <p class="note">$rep Все связи выше — собственные посты сторон. Они не показывают, что какое-либо изделие из круга ЦБСТ применялось против гражданских; ООН не называет ни одной части ниже уровня армии.</p>
 </section>""")
-    st1 = st2 = ""
-    if still_ok:
-        st1 = ('<figure class="stills"><figure><img src="images/kherson/k27702.jpg" alt="Кадр из видео: разрушенный дом в Казацком под эмблемой «205 бригада»" loading="lazy">'
-               '<figcaption>Кадр из видео: разрушенный дом в Казацком, под эмблемой «205 бригада».</figcaption></figure></figure>')
-        st2 = ('<figure class="stills"><figure><img src="images/kherson/k38703.jpg" alt="Кадр из видео: фургон с надписью «РИТУАЛ»" loading="lazy">'
-               '<figcaption>Кадр из видео: фургон с надписью «РИТУАЛ», водяной знак 98-й воздушно-десантной дивизии.</figcaption></figure></figure>')
     osv_clip = ""
     if have_osv:
         chan, msg, ru, _ = OPENING_QUOTES["osv_38645"]
@@ -389,13 +379,13 @@ $still_38703
                     + ' На видео — экран пульта оператора над разрушенным автомобильным мостом, удар на 0:13. Сам пост сообщает, что погибла собака. Звук удалён.</figcaption></figure>')
     front_html = front.substitute(
         ref_crp=r("un_crp"), ref_ga=r("un_ga"), un_dnepr=esc(uq["dnepr"]), un_safari=esc(uq["safari"]), ref_dw=r("dw_film"), ref_cir=r("cir"), ref_osv=r("osv_27702"),
-        osv_clip=osv_clip, map=L.map_ru(r), rep=REP, ref_rog=r("rog_8057", "rog_7780"), ref_np280=r("np_280"), ref_np580=r("np_580"), ref_gag2811=r("gag_2811"),
+        osv_clip=osv_clip, map=L.map_ru(r), ln_rep=ln('rep'),  rep=REP, ref_rog=r("rog_8057", "rog_7780"), ref_np280=r("np_280"), ref_np580=r("np_580"), ref_gag2811=r("gag_2811"),
         ref_1562=r("cbst_1562"), ref_rog7047=r("rog_7047"),
         q_9067=oq("arch_9067", "«Архангел», Telegram, 01.12.2025" + r("arch_9067")), q_10667=oq("arch_10667", "«Архангел», Telegram, 17.08.2026" + r("arch_10667")),
         arkh=href("arkhangel.html") if here("arkhangel.html") else "#h-dossiers",
-        q_27702=oq("osv_27702", "«От Мариуполя до Карпат», Telegram, 23.07.2025" + r("osv_27702")), still_27702=st1,
+        q_27702=oq("osv_27702", "«От Мариуполя до Карпат», Telegram, 23.07.2025" + r("osv_27702")), still_27702=L.kstill_ru('osv_27702'),
         q_19953=oq("osv_19953", "тот же канал, 19.08.2024" + r("osv_19953")), q_36192=oq("osv_36192", "тот же канал, 24.07.2026" + r("osv_36192")),
-        q_38703=oq("osv_38703", "тот же канал, 24.10.2026, на видео с водяным знаком 98-й воздушно-десантной дивизии" + r("osv_38703")), still_38703=st2)
+        q_38703=oq("osv_38703", "тот же канал, 24.10.2026, на видео с водяным знаком 98-й воздушно-десантной дивизии" + r("osv_38703")), still_38703=L.kstill_ru('osv_38703'))
     assert OPENING_QUOTES["rog_8057"][1] == 8057 and OPENING_QUOTES["np_580"][1] == 580   # the posts the ledger rests on
     for key in ("rog_8057", "rog_7780", "np_580", "gag_2811", "cbst_1562"):
         chan, msg, ru, _ = OPENING_QUOTES[key]
@@ -403,7 +393,7 @@ $still_38703
 
     # -- the marketplace -------------------------------------------------------------------------------------
     market = Template("""
-<section aria-labelledby="h-market"><h2 class="rm-h2" id="h-market">Маркетплейс и его продавцы</h2>
+<section class="origin" aria-labelledby="h-origin"><h2 class="rm-h2" id="h-origin">Маркетплейс и его продавцы</h2>
 <p>Фронт, описанный выше, — то место, куда, по словам круга ЦБСТ, идут его товары и его новобранцы. Платформа, куда ЦБСТ отправляет военных, — РОЙ.МАРКЕТ. В августе 2026 года она открылась для сторонних
 продавцов и прямо назвала, кого ждёт в первую очередь:</p>
 $q_ann
@@ -417,81 +407,74 @@ $q_pilot
 $q_tech
 <p class="note">$rep Это заявления сторон. Ни одного заказа воинской части среди собранных документов нет.</p>
 
-<h3 class="rm-h3">Маркетплейс скрывает, кто им управляет. Старая копия — нет</h3>
-<p>В публичной оферте платформы оператор значится как «ООО «****»». Копия, сохранённая в архиве 22.08.2026, его называет: ООО «МПТМ», ИНН 9714068459. Собственный отчёт ЦБСТ в Минюст указывает ту же компанию
-как ту, в которой ЦБСТ участвует со дня её регистрации. Реестр же с 15 июля 2026 года скрывает, кому она принадлежит: это раньше обеих версий оферты.$ref_restr</p>
-<div class="pair">
-$q_op
-$q_mask
-</div>
-$q_row
-$q_restr
-<p class="note">$doc Строки напечатаны в том виде, в каком они стоят в каждом документе. В версии с маской реквизиты видны только после входа; почему и когда их скрыли, документально не известно.</p>
-
-<h3 class="rm-h3">Хронология</h3>
-<ol class="tl-list">$timeline</ol>
+<h3 class="rm-h3">Один из нескольких каналов сбыта</h3>
+<p>«Булат», детектор дронов, показанный на «Дроннице-2025», витрине, в которой участвует ЦБСТ, продаётся через дилеров и ИП, а фонд-соучредитель ЦБСТ покупает его и публикует передачи. Ни у одного продавца на Wildberries нет ИНН производителя, поэтому санкционный скрининг по этому идентификатору не находит никого из них.</p>
+$blind
+$model
+<h3 class="rm-h3">Даты</h3>
+$timeline
+<h3 class="rm-h3" id="h-operator">Маркетплейс скрывает, кто им управляет. Старая копия — нет</h3>
+<p>В публичной оферте платформы оператор значится как «ООО «****»». Копия, сохранённая в архиве 22.08.2026, его называет: ООО «МПТМ», ИНН 9714068459. Политика конфиденциальности на действующем сайте по-прежнему называет его, но по другому адресу, чем августовская оферта.$ref_priv Собственный отчёт ЦБСТ в Минюст указывает ту же компанию как ту, в которой ЦБСТ участвует со дня её регистрации. Реестр же с 15 июля 2026 года скрывает, кому она принадлежит.$ref_restr</p>
+$masked
+$offer
 </section>""")
-    tl = [
-        ("27.02.2024", "ЦБСТ зарегистрирован в Москве; учредители — фонд «Наша Правда» и банк ПСБ", "s0228", DOC),
-        ("22.01.2025", "зарегистрировано ООО «МПТМ»; ЦБСТ участвует в нём с того же дня", "s0207", DOC),
-        ("начало 2025", "платформа запускается как закрытый пилот, по сообщению «Коммерсанта»", "s8866", REP),
-        ("15.12.2025", "Сидякин: партия, ПСБ и ЦБСТ «запустили военный маркетплейс»", "s8847", REP),
-        ("15.07.2026", "ЕГРЮЛ начинает скрывать владельцев ООО «МПТМ»", "s0230", DOC),
-        ("13.08.2026", "платформа открывается для сторонних продавцов, «в первую очередь» с Wildberries и Ozon", "s8854", REP),
-        ("22.08.2026", "архивная копия оферты для поставщиков называет оператором ООО «МПТМ»", "s8817", DOC),
-        ("02.09.2026", "3mx пишет покупателю, что «Булат» продают только сама компания и её дилеры", "s8860", REP),
-        ("01.10.2026", "действующая оферта указывает оператора как «ООО «****»»", "s8822", DOC),
-    ]
-    timeline = "".join(f'<li><span class="d">{d}</span><span>{esc(t)}{r(s)}</span>{g}</li>' for d, t, s, g in tl)
     market_html = market.substitute(
         q_ann=quote(announce, "ЦБСТ, Telegram, 13.08.2026" + r("s8854")), q_spec=quote(q_spec["text_ru"], "КБ «СПЕКТР», Telegram, 06.07.2026" + r("s8737")),
         q_3mx=quote(q_3mx["text_ru"], "3mx, чат клиентов, 02.09.2026" + r("s8860")),
         q_pilot=quote(q_pilot["text_ru"], "Сидякин, Telegram, 05.08.2026" + r("s8851")), q_tech=quote(q_tech["text_ru"], "ЦБСТ, Telegram, 06.08.2026" + r("s8852")),
-        rep=REP, ref_restr=r("s0230"), q_op=quote(q_op["text_ru"], "оферта для поставщиков, копия от 22.08.2026" + r("s8817")),
-        q_mask=quote(q_mask["text_ru"], "оферта для поставщиков, на сайте 01.10.2026" + r("s8822")),
-        q_row=quote(q_row["text_ru"], "отчёт ЦБСТ в Минюст за 2025 год, раздел 2.2, строка ООО «МПТМ»"),
-        q_restr=quote(q_restr["text_ru"], "выписка из ЕГРЮЛ на ООО «МПТМ» от 14.08.2026, раздел «Сведения об участниках / учредителях юридического лица»"),
-        doc=DOC, timeline=timeline)
+        rep=REP, ref_restr=r("s0230"), ref_priv=r("privacy"), blind=L.blind_ru(), model=L.model_ru(), timeline=L.timeline_ru(),
+        masked=L.masked_ru(), offer=L.offer_ru())
 
     # -- more than a marketplace ---------------------------------------------------------------------------------
     beyond = Template("""
-<section aria-labelledby="h-beyond"><h2 class="rm-h2" id="h-beyond">Больше, чем маркетплейс</h2>
+<section class="beyond" aria-labelledby="h-beyond"><h2 class="rm-h2" id="h-beyond">Больше, чем маркетплейс</h2>
 <p>ЦБСТ представляет себя организацией поддержки разработчиков дронов, а РОЙ.МАРКЕТ — каталогом. Его собственные посты и посты секретаря его наблюдательного совета описывают нечто большее. ЦБСТ пишет, что показывал
 маркетплейс на «Центре-2026» — стратегических военных учениях — и набирал там продавцов:</p>
 $q_tsentr
+$center
 <p>15 октября Сидякин объявил о приложении, которое распределяет летящие украинские дроны между мобильными огневыми группами в Курской области, — и вписал его в систему ЦБСТ:</p>
 $q_yakim
 <p class="note">$rep И то и другое — собственные заявления сторон; ни один из собранных документов не показывает, что система действительно используется.</p>
 </section>""").substitute(
-        q_tsentr=oq("tsentr", "ЦБСТ, Telegram, 04.10.2026" + r("tsentr")), q_yakim=oq("yakim", "Сидякин, Telegram, 15.10.2026" + r("yakim")), rep=REP)
+        q_tsentr=oq("tsentr", "ЦБСТ, Telegram, 04.10.2026" + r("tsentr")), center=L.center_ru(), q_yakim=oq("yakim", "Сидякин, Telegram, 15.10.2026" + r("yakim")), rep=REP)
 
-    # -- dossiers -------------------------------------------------------------------------------------------------
-    def card(title, line, file, wait="Досье на проверке."):
-        link = f'<a href="{href(file)}">Открыть →</a>' if file and here(file) else f'<span class="st">{wait}</span>'
-        return f"<li><b>{title}</b><span>{line}</span>{link}</li>"
-
+    # -- profiles and stories ------------------------------------------------------------------------------------
+    from build_company_page import COMPANY_PAGES   # noqa: E402
+    display_name_head = lambda e: display_name(e)['head']
+    FILE_RU = {"ooo-trimiks": "Делает детектор «Булат», владеет патентом на его конструкцию и судится из-за него с GoDrone",
+               "ovod": "Делает семейство ударных FPV-дронов «Овод», часть из них — с управлением по оптоволокну",
+               "ooo-goudron": "Торгует под маркой GoDrone, делает детектор дронов «Набат»; «Тримикс» судится с ним из-за патента на детектор",
+               "ooo-skb-piranya": "Делает ударные FPV-дроны «Пиранья» и пишет, что доставляет дроны получателям в «ЛНР» и «ДНР» напрямую",
+               "csn-bars-sarmat": "Добровольческий центр беспилотников Дмитрия Рогозина, который, по его словам, воюет за командующего ВДВ"}
+    chain_cards = "".join(L.chain_card_ru(sl, url if not in_docs else (f"chain_{sl}.html" if here(f"chain_{sl}.html") else None)) for sl, url in CHAINS.items())
+    file_cards = "".join(
+        L.file_card_ru("Досье компании", display_name_head(ents[sl]), FILE_RU.get(sl, ""), url if not in_docs else None, sl)
+        for sl, url in COMPANY_PAGES.items())
+    file_cards += L.file_card_ru("Люди", "Один человек — много компаний", "Люди, которые руководят двумя и более компаниями из дела или владеют ими", MORE[0][3])
+    file_cards += L.file_card_ru("Досье проекта", "«Архангел»", "Школа дронов, которая готовит операторов для армии и публикует список деталей дрона-перехватчика",
+                                 MORE[1][3], "proekt-kb-arkhangel")
+    story_cards = L.file_card_ru("История", "Как фонды, связанные с Дмитрием Медведевым, снабжают российскую армию",
+                                 "Как «Наша Правда» собирает деньги, стала соучредителем ЦБСТ и передаёт технику частям", href(STORY_FILE) if here(STORY_FILE) else None, NP)
     dossiers = Template("""
-<section aria-labelledby="h-dossiers"><h2 class="rm-h2" id="h-dossiers">Досье и истории</h2>
-<p>Длинные материалы расследования — каждый на своей странице: цепочка одного изделия, досье компании, проекта или группы людей, сюжетные истории. Они пока на английском.</p>
-<ul class="cards">
-$cards
-</ul>
-<p class="note">Страницы-досье и цепочки написаны по-английски и открываются по ссылкам, как только лежат рядом с этой страницей.</p>
-</section>""").substitute(cards="".join([
-        card("«Булат» от ЦБСТ до линии фронта", "Портативный детектор БПЛА производства 3mx (ООО «Тримикс»): цепочка от ЦБСТ к производителю, продавцам, госзаказчикам и частям.", "chain_bulat.html", "Цепочка на проверке."),
-        card("«Капюшон»", "Семейство станций РЭБ производства ООО «НПО «Киловатт»».", None, "Цепочка на проверке и пока не опубликована."),
-        card("3mx (ООО «Тримикс»)", "Делает детектор «Булат», владеет патентом на его конструкцию и судится из-за него с GoDrone.", "company_ooo-trimiks.html"),
-        card("ООО «ГОУДРОН»", "Торгует под маркой GoDrone, делает детектор дронов «Набат»; «Тримикс» судится с ним из-за патента.", "company_ooo-goudron.html"),
-        card("«Архангел»", "Школа дронов, которая готовит операторов для армии и публикует список деталей перехватчика.", "arkhangel.html"),
-        card("«Овод»", "Семейство ударных FPV-дронов, в том числе на оптоволокне.", None),
-        card("ООО «СКБ Пиранья»", "Делает ударные FPV-дроны «Пиранья» и пишет, что доставляет их получателям в «ЛНР» и «ДНР» напрямую.", None),
-        card("«Барс-Сармат»", "Добровольческий центр беспилотников Дмитрия Рогозина, который, по его словам, воюет за командующего ВДВ.", None)]))
+<section aria-labelledby="h-chains"><h2 class="rm-h2" id="h-chains">Досье и истории</h2>
+<p class="lede">Длинные материалы расследования — каждый на своей странице: цепочка изделия, досье компании, проекта или группы людей и сюжетные истории. Они пока на английском.</p>
+<h3 class="rm-h3">Проследить изделие</h3>
+<p class="note">Цепочка ведёт одно изделие от ЦБСТ и его мероприятий к производителю, магазинам и дилерам, которые его продают, госзаказчикам, которые его покупают, и частям, которые его получают. Каждая линия нарисована в стиле своего доказательства.</p>
+<div class="chains">$chains</div>
+<h3 class="rm-h3">Досье компаний, проектов и людей</h3>
+<div class="chains">$files</div>
+<h3 class="rm-h3">Истории</h3>
+<div class="chains">$stories</div>
+</section>""").substitute(chains=chain_cards, files=file_cards, stories=story_cards)
 
     def tile_link(slug):
         f = f"company_{slug}.html"
         if f in PREVIEW_LINKS and here(f):
             return f'<a class="tl" href="{href(f)}">Досье →</a>'
         return ""
+    shown_ms = {m["id"] for m in L.pics(["ooo-gagaring", "ano-dpo-obrazovatelny-tsentr-gagaring", NP, "csn-bars-sarmat", "proekt-kb-arkhangel"])}
+    own_ms = L.pics([x for x in L.tied() if x != CBST], genres={"marketing", "handover", "event"}, skip=shown_ms | {L.HERO, "m0006"})
+    own = L.band_ru(own_ms, "Картинки, которые производители публикуют о своих изделиях и стендах. Они показывают, что компания предлагает, а не что продала.", big=3, owners=True)
     wall = L.wall_ru(tile_link)
     sgrid, undated = L.grid_ru()
     revenue, n_rev = L.revenue_ru(r)
@@ -499,6 +482,7 @@ $cards
 <section aria-labelledby="h-net"><h2 class="rm-h2" id="h-net">Сеть, которая есть в документах</h2>
 <p>С ЦБСТ связаны $n организации: $d — через документ (запись в ЕГРЮЛ, контракт, собственные посты ЦБСТ), $p — только по собственным словам или по сообщениям прессы. $s из них находятся
 хотя бы в одном санкционном списке.</p>
+$own
 <details class="fold"><summary>Показать все $n организаций: логотипы и графики</summary>
 <figure class="netfig">$wall
 <figcaption>Все организации, которые реестр связывает с ЦБСТ; логотип — там, где он есть в деле. Красная плашка называет режимы, по которым организация внесена в список. Часть логотипов взята со страниц базы «Война и санкции» Главного управления разведки Украины, где напечатан ИНН компании$ref_gur.</figcaption></figure>
@@ -509,25 +493,25 @@ $cards
 <figcaption>Выручка по годовой отчётности каждой компании, последний год в деле; бледная полоса — год до него. Полоса «со слов прессы» взята из публикации, которая ссылается на базу отчётности, а не из самой отчётности. Отчётность есть у $n_rev из $n организаций. Целевые средства НКО — не выручка и сюда не входят.</figcaption></figure>
 </div>
 </details>
-</section>""").substitute(n=n_org, d=by["doc"], p=by["rep"], s=n_sanc, wall=wall, sgrid=sgrid, undated=undated, revenue=revenue, n_rev=n_rev,
+</section>""").substitute(n=n_org, d=by["doc"], p=by["rep"], s=n_sanc, own=own, wall=wall, sgrid=sgrid, undated=undated, revenue=revenue, n_rev=n_rev,
                          ref_gur=r("gur_logos"))
 
     method = Template("""
-<section aria-labelledby="h-read"><h2 class="rm-h2" id="h-read">Как читать доказательства</h2>
-<ul>
-<li>$doc Это показывает первичный документ: выписка из ЕГРЮЛ, госконтракт, годовая отчётность, запись о товарном знаке или патенте.</li>
-<li>$rep Собственные слова одной из сторон (её посты, сайт, объявления) или пресса. Посты доноров о передачах в части остаются в этой категории, пока их не подтвердит второй источник.</li>
-<li>$open Связь нарисована, чтобы картина была полной, но ни один из собранных документов её не показывает; в примечании к линии сказано, чего не хватает.</li>
+<section class="read" aria-labelledby="h-read"><h2 class="rm-h2" id="h-read">Как читать доказательства</h2>
+<ul class="rm-legend">
+<li>$ln_doc $doc <span>Это показывает первичный документ: выписка из ЕГРЮЛ, госконтракт, годовая отчётность, запись о товарном знаке или патенте.</span></li>
+<li>$ln_rep $rep <span>Собственные слова одной из сторон (её посты, сайт, объявления) или пресса. Посты доноров о передачах в части остаются в этой категории, пока их не подтвердит второй источник.</span></li>
+<li>$ln_open $open <span>Связь нарисована, чтобы картина была полной, но ни один из собранных документов её не показывает; в примечании к линии сказано, чего не хватает.</span></li>
 </ul>
-<p>Красным на сайте отмечено только присутствие в санкционных списках, и всегда с названием режима.</p>
-<h2 class="rm-h2" id="h-how">Как это сделано</h2>
+</section>
+<section class="rm-prose" aria-labelledby="h-method"><h2 class="rm-h2" id="h-method">Как это сделано</h2>
 <ul>
 <li>Факты берутся из оригинальных документов, прочитанных целиком на языке оригинала, чаще всего по-русски: выписок из ЕГРЮЛ, годовой отчётности, данных о госзакупках и товарных знаках, судебных актов, собственных телеграм-постов и сайтов сторон. Пересказы и машинные переводы — только зацепки, не источники.</li>
 <li>Каждый документ при сборе архивируется и хешируется. Каждое примечание в конце страницы говорит, что это за документ, и ведёт на него, если есть публичная копия.</li>
 <li>Снимки — доказательство только того, что на них видно, и у каждого указано, кто его опубликовал. Лица участников показаны; никого не опознают по лицу.</li>
-<li>Расследование выросло из WB Watch — трекера военных товаров, которые продаются на Wildberries.</li>
+<li>Расследование выросло из <a href="https://amethyst-deceiver2001.github.io/wb-watcher/" target="_blank" rel="noopener">WB Watch</a> — трекера военных товаров, которые продаются на Wildberries.</li>
 </ul>
-</section>""").substitute(doc=DOC, rep=REP, open=OPEN)
+</section>""").substitute(doc=DOC, rep=REP, open=OPEN, ln_doc=ln("doc", 34), ln_rep=ln("rep", 34), ln_open=ln("open", 34))
 
     support = (
         f'<style>{_SUPPORT_CSS}</style>\n'
@@ -550,22 +534,26 @@ $cards
         (REP, "Правящая партия — в учредителях и в совете", "#h-hub", "Сам ЦБСТ называет «Единую Россию» третьим учредителем, а секретарь его наблюдательного совета — руководитель центрального исполкома партии."),
         (REP, "Фонд, созданный «по поручению» Медведева", "#h-hub", "Сидякин пишет, что фонд, который передаёт войскам технику вместе с партией, создан по поручению её председателя. Фонд называет себя проектом двух фондов, которых ФБК в 2017 году связал с Медведевым. Документов, которые подтвердили бы эту связь, нет."),
         (REP, "Поставки на фронт, о котором пишет ООН", "#h-front", "Круг ЦБСТ снабжает и вербует для частей той самой группировки, которую ООН называет в выводах о нападениях дронов на жителей Херсона. Ни один документ не показывает, что какое-либо изделие применялось против гражданских."),
-        (DOC, "Платформа, которая скрывает оператора", "#h-market", "В публичной оферте РОЙ.МАРКЕТ оператор значится как «****». В архивной копии он назван: ООО «МПТМ» — компания, которую ЦБСТ сам указывает в отчёте в Минюст."),
+        (DOC, "Платформа, которая скрывает оператора", "#h-operator", "В публичной оферте РОЙ.МАРКЕТ оператор значится как «****». В архивной копии он назван: ООО «МПТМ» — компания, которую ЦБСТ сам указывает в отчёте в Минюст."),
     ]
-    found = ('<section aria-labelledby="h-found"><h2 class="rm-h2" id="h-found">Что мы нашли</h2><ul class="finds">'
-             + "".join(f'<li>{g}<span><b><a href="{h}">{esc(t)}</a></b><br><span class="t">{esc(x)}</span></span></li>' for g, t, h, x in found_items)
-             + f'</ul><p class="found-n">С ЦБСТ на сегодня связаны <b>{n_org}</b> организации; <b>{n_sanc}</b> из них находятся хотя бы в одном санкционном списке.</p></section>')
-
-    title = "ЦБСТ и РОЙ.МАРКЕТ: московская НКО и военный маркетплейс, который поставляет дроны на войну"
-    body = f"""<header class="rm-page top">
-<p class="rm-eyebrow">Расследование с открытым кодом · черновик русской версии · {ru_date(today)}</p>
-<h1 class="rm-h1">ЦБСТ и РОЙ.МАРКЕТ</h1>
-<p class="rm-dek">Московская НКО, которая называет себя центром поддержки беспилотной отрасли, и закрытый «военный маркетплейс», который она запустила вместе с правящей партией и государственным банком.
-Здесь — как эта цепочка устроена: что производят компании вокруг ЦБСТ, кто это продаёт и какие воинские части это получают. Каждое утверждение опирается на сохранённый документ и помечено тем, насколько твёрдо этот документ его подтверждает.</p>
-<p class="byline">Алексей Ковалёв, независимый журналист · данные на {ru_date(today)}</p></header>
+    found = ('<section class="found" aria-labelledby="h-found"><h2 class="rm-h2" id="h-found">Что мы нашли</h2><ol class="found-list">'
+             + "".join(f'<li class="rm-card">{g}<h3><a href="{h}">{esc(t)}</a></h3><p>{esc(x)}</p></li>' for g, t, h, x in found_items)
+             + f'</ol><p class="found-n"><b>{n_org}</b> организации связаны с ЦБСТ в деле; <b>{n_sanc}</b> из них внесены хотя бы в один санкционный список.</p></section>')
+    toc_ru = {"h-found": "Что мы нашли", "h-open": "Удар", "h-limits": "Границы", "h-hub": "Кто стоит за ЦБСТ", "h-front": "Фронт", "h-origin": "Маркетплейс",
+              "h-beyond": "Не только магазин", "h-chains": "Досье", "h-net": "Сеть", "h-read": "Как читать", "h-method": "Метод", "h-sources": "Источники"}
+    assert set(toc_ru) == {i for i, _ in TOC_ITEMS}
+    toc = '<nav class="toc" aria-label="Содержание"><ol>' + "".join(f'<li><a href="#{i}">{esc(toc_ru[i])}</a></li>' for i, _ in TOC_ITEMS) + '</ol></nav>'
+    body = f"""<div class="hero"><header class="rm-page top">
+<p class="rm-eyebrow">Черновик · {ru_date(today)}</p>
+<h1 class="rm-h1">ЦБСТ и РОЙ.МАРКЕТ <span class="rm-muted">московская НКО, её военный маркетплейс и снабжение дронами вокруг них</span></h1>
+<p class="rm-dek">Расследование с открытым кодом о АНО «Центр беспилотных систем и технологий» (ЦБСТ), московской НКО для отрасли дронов, и о компаниях вокруг неё: что они делают, кто это продаёт и какие воинские части это получают. Каждое утверждение опирается на архивный документ и помечено тем, насколько твёрдо этот документ его подтверждает.</p>
+<p class="rm-muted byline">Автор — <a href="https://en.wikipedia.org/wiki/Alexey_Kovalev_(journalist)" target="_blank" rel="noopener">Алексей Ковалёв</a>, независимый журналист · данные на {ru_date(today)}</p>
+</header></div>
+{toc}
 <main class="rm-page">
 {found}
 {opening}
+{limits_html}
 {who}
 {front_html}
 {market_html}
@@ -573,9 +561,15 @@ $cards
 {dossiers}
 {network}
 {method}
-<section aria-label="Источники"><h2 class="rm-h2">Источники</h2><ol class="rm-sources">@@NOTES@@</ol></section>
+<section class="rm-prose rm-sources" aria-labelledby="h-sources"><h2 class="rm-h2" id="h-sources">Источники</h2>
+<details class="fold" id="sources-fold"><summary>Полный список источников <span class="count">{len(N.order)}</span></summary><ol>@@NOTES@@</ol></details></section>
 </main>
-{support}"""
+{support}
+{"".join(f'<template id="fig-{k}">{v}</template>' for k, v in L.templates.items())}
+<dialog class="rm-lightbox" id="lightbox" aria-label="Картинка"><div class="bar"><button type="button" data-close>Закрыть</button></div><div class="body"></div></dialog>
+<script>{VIEWER_JS}
+{FOLD_JS}
+{TOC_JS}</script>"""
     body = body.replace("@@NOTES@@", N.list_html())
     doc = f"""<!doctype html>
 <!-- Generated by exhibits/build_landing_ru.py from data/registry on {today}. Do not edit by hand. -->
@@ -587,15 +581,8 @@ $cards
 {body}
 </body></html>
 """
-    seen_ids: set[str] = set()   # a reference string reused in a template repeats its id: keep the first, drop the rest
-
-    def drop_dupe(m):
-        if m.group(1) in seen_ids:
-            return ""
-        seen_ids.add(m.group(1))
-        return m.group(0)
-
-    doc = re.sub(r' id="(r\d+)"', drop_dupe, doc)
+    if MISSING:
+        raise SystemExit('no Russian label for source titles:\n' + '\n'.join(sorted(set(MISSING))))
     out.write_text(doc, encoding="utf-8")
     print(f"wrote {out.relative_to(REPO) if out.is_relative_to(REPO) else out}: {len(doc) // 1024} KB; {len(N.order)} sources; "
           f"{cnt['checked']} quotation checks passed, {cnt['skipped']} skipped for want of a local text")
