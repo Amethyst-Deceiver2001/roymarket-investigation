@@ -83,8 +83,8 @@ SOURCES = {
     "emb_vdv": ("Малая эмблема Воздушно-десантных войск России, общественное достояние, Wikimedia Commons", "https://commons.wikimedia.org/wiki/File:Small_emblem_of_the_Russian_Airborne_Forces.svg", []),
     "emb_gru": ("Эмблема подразделений специального назначения ГРУ в том виде, как она ходит (не официальная), общественное достояние, Wikimedia Commons", "https://commons.wikimedia.org/wiki/File:Spetsnaz_emblem.svg", []),
     "rupep_eli": ("Профиль Ильи Елисеева на RUPEP.org (англоязычная версия, распечатан 04.11.2026)", "https://rupep.org/en/person/3421", ["L0577"]),
-    "rupep_mikh": ("Профиль Леонида Михельсона на RUPEP.org (англоязычная версия, распечатан 04.11.2026)", "https://rupep.org/en/", ["L0579"]),
-    "rupep_yak": ("Профиль Владимира Якушева на RUPEP.org (англоязычная версия, распечатан 04.11.2026)", "https://rupep.org/en/", ["L0581"]),
+    "mikh_photo": ("Фотография Леонида Михельсона, council.gov.ru, 11.03.2020, Wikimedia Commons, лицензия CC BY 4.0", "https://commons.wikimedia.org/wiki/File:11-03-2020_Leonid_Mikhelson.png", ["L0584"]),
+    "yak_photo": ("Официальный портрет Владимира Якушева с сайта Kremlin.ru, Wikimedia Commons, лицензия CC BY 4.0", "https://commons.wikimedia.org/wiki/File:Vladimir_Yakushev_kremlin.jpg", ["L0586"]),
     "dossier_eli": ("PEPS, Центр «Досье»: профиль Ильи Елисеева, страница сохранена 04.11.2026", "https://peps.dossier.center/person/eliseev-ilya-vladimirovich/", ["L0583"]),
     "eu": ("Сводный список финансовых санкций ЕС, выгрузка от 25.10.2026", None, ["L0354"]),
     "np_post_656": ("Telegram, @nashapravdafond, пост от 10.08.2026", "https://t.me/nashapravdafond/656", ["s9229"]),
@@ -216,7 +216,7 @@ def data_uri(path: Path) -> str:
     return f"data:{mime};base64," + base64.b64encode(path.read_bytes()).decode()
 
 
-PREVIEW_ONLY = {"m0159", "m0160", "m0161"}   # a picture with no licence cleared: this page may not be written under docs/ while it is in
+PREVIEW_ONLY = {"m0159"}   # a picture with no licence cleared: this page may not be written under docs/ while it is in
 
 
 def media_file(media: dict, mid: str) -> Path:
@@ -307,7 +307,7 @@ def diagram_html(ctx) -> str:
               f'<li>{ln("open")} <span class="rm-grade open">Версия</span> утверждение, документа нет</li></ul>')
     names = ", ".join(n for n, _ in ctx["arms"])
     cap = (f'<p class="note">Эмблемы справа внизу — виды частей, которые названы получателями в постах: {names}; они не показывают, какая часть что получила.{ctx["refs"]} '
-           f'Портреты: Медведев — Kremlin.ru, 2024, CC BY 4.0; Сидякин — Karmaks, 2016, CC BY-SA 4.0 (фото десятилетней давности); Елисеев, Михельсон и Якушев — снимки из их профилей на RUPEP.org, автор и дата в профилях не указаны.{ctx["refs2"]} Логотипы — с сайтов организаций и из «Википедии». '
+           f'Портреты: Медведев — Kremlin.ru, 2024; Михельсон — council.gov.ru, 2020; Якушев — Kremlin.ru, год не указан, не раньше 2020 (все CC BY 4.0); Сидякин — Karmaks, 2016, CC BY-SA 4.0 (фото десятилетней давности); Елисеев — снимок из его профиля на RUPEP.org, автор и дата в профиле не указаны.{ctx["refs2"]} Логотипы — с сайтов организаций и из «Википедии». '
            f'Без картинки остались те, чьих изображений в наших источниках нет.</p>')
     return f'<figure class="mapfig"><div class="mapscroll">{svg}</div><figcaption>{legend}{cap}</figcaption></figure>'
 
@@ -422,12 +422,12 @@ def render(out: Path):
     assert arms, "no recipient names a kind of unit"
     diagram = diagram_html({"med": data_uri(media_file(media, "m0158")), "sid": data_uri(media_file(media, "m0092")),
                             "er": data_uri(media_file(media, "m0093")), "eli": (lambda f: data_uri(f) if f else None)(media_file(media, "m0159")),
-                            "mikh": (lambda f: data_uri(f) if f else None)(media_file(media, "m0160")),
-                            "yak": (lambda f: data_uri(f) if f else None)(media_file(media, "m0161")), "np": data_uri(media_file(media, "m0002")), "cbst": data_uri(media_file(media, "m0001")),
+                            "mikh": data_uri(media_file(media, "m0160")),
+                            "yak": data_uri(media_file(media, "m0161")), "np": data_uri(media_file(media, "m0002")), "cbst": data_uri(media_file(media, "m0001")),
                             "arms": arms, "dar": rub_bn(fd["2024"]["funds_received"]), "grad": rub_bn(fg["2023"]["funds_received"]),
                             "got": rub_bn(recv24 * 1000), "donors": pct(donor_share),
-                            "refs": r("emb_sv", "emb_vdv", "emb_gru", "med_photo", "sid_photo"), "refs2": r("rupep_eli", "rupep_mikh", "rupep_yak")})
-    assert "docs" not in out.resolve().parts, "this page carries preview-only pictures (m0159-m0161): do not write it under docs/"
+                            "refs": r("emb_sv", "emb_vdv", "emb_gru", "med_photo", "sid_photo"), "refs2": r("rupep_eli", "mikh_photo", "yak_photo")})
+    assert "docs" not in out.resolve().parts, "this page carries a preview-only picture (m0159): do not write it under docs/"
     split_bar = stack_bar([("безымянные доноры", RECEIVED_2024[0][2], "s1"), ("«ДАР» и «Градислава»", RECEIVED_2024[1][2], "s2"),
                            ("то же, второй раз", RECEIVED_2024[2][2], "s3"), ("доход от деятельности", RECEIVED_2024[3][2], "s4")],
                           "Доли поступлений 2024 года по строкам отчётности")
