@@ -44,6 +44,10 @@ PAGE_CSS = """
 .story .lines td:not(:first-child), .story .lines th:not(:first-child) { text-align: right; font-variant-numeric: tabular-nums; }
 .story .lines.board td:not(:first-child), .story .lines.board th:not(:first-child) { text-align: left; }
 .story .lines td.hl { font-weight: 600; }
+.mapfig { width: min(1240px, calc(100vw - 32px)); margin-left: 50%; transform: translateX(-50%); }
+svg.map { max-width: none; }
+svg.map .fr { fill: #fff; stroke: var(--rule); }
+svg.map .ring { fill: none; stroke: var(--rule); stroke-width: 1; }
 .note { max-width: var(--measure); font-size: var(--t-note); color: var(--ink-2); margin: 0; }
 .qa { max-width: var(--measure); display: grid; gap: 6px; padding-left: 20px; margin: 0; font-size: 17px; line-height: 1.55; }
 .draftnote { font: 600 11px/1.3 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
@@ -73,6 +77,11 @@ SOURCES = {
     "nz": ("Реестр санкций Новой Зеландии против России (MFAT), выгрузка от 25.10.2026", "https://www.mfat.govt.nz/assets/Countries-and-Regions/Europe/Ukraine/Russia-Sanctions-Register.xlsx", ["L0423"]),
     "ua": ("Государственный реестр санкций Украины (СНБО), выгрузка физических лиц от 26.10.2026", "https://drs.nsdc.gov.ua/", ["L0477"]),
     "ua_legal": ("Государственный реестр санкций Украины (СНБО), выгрузка юридических лиц от 26.10.2026", "https://drs.nsdc.gov.ua/", ["L0475"]),
+    "med_photo": ("Фотография Дмитрия Медведева, Kremlin.ru, 25.05.2024, Wikimedia Commons, лицензия CC BY 4.0", "https://commons.wikimedia.org/wiki/File:Dmitry_Medvedev_(2024-05-25).jpg", ["L0575"]),
+    "sid_photo": ("Фотография Александра Сидякина, автор Karmaks, 28.09.2016, Wikimedia Commons, лицензия CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:SidyakinA.G..jpg", ["L0405"]),
+    "emb_sv": ("Малая эмблема Сухопутных войск России (петличная), общественное достояние, Wikimedia Commons", "https://commons.wikimedia.org/wiki/File:Small_emblem_of_the_Russian_Ground_Forces.svg", []),
+    "emb_vdv": ("Малая эмблема Воздушно-десантных войск России, общественное достояние, Wikimedia Commons", "https://commons.wikimedia.org/wiki/File:Small_emblem_of_the_Russian_Airborne_Forces.svg", []),
+    "emb_gru": ("Эмблема подразделений специального назначения ГРУ в том виде, как она ходит (не официальная), общественное достояние, Wikimedia Commons", "https://commons.wikimedia.org/wiki/File:Spetsnaz_emblem.svg", []),
     "eu": ("Сводный список финансовых санкций ЕС, выгрузка от 25.10.2026", None, ["L0354"]),
     "np_post_656": ("Telegram, @nashapravdafond, пост от 10.08.2026", "https://t.me/nashapravdafond/656", ["s9229"]),
     "np_post_448": ("Telegram, @nashapravdafond, пост от 09.06.2025", "https://t.me/nashapravdafond/448", ["s8898"]),
@@ -198,41 +207,94 @@ def image_uri(path: Path) -> str:
     return "data:image/jpeg;base64," + base64.b64encode(path.read_bytes()).decode() if path.exists() else BLANK
 
 
-def diagram_html(dar_bn, grad_bn, got_bn, donor_share) -> str:
-    """Who is tied to whom, drawn by how well each link is documented: solid, a document shows it; dashed, one party's
-    own word; dotted, an allegation no document shows."""
-    def node(x, y, w, h, lines, hub=False):
-        t, yy = [], y + 22
-        for txt, kind in lines:
-            t.append(f'<text class="{kind}" x="{x + 12}" y="{yy}">{esc(txt)}</text>')
-            yy += 18 if kind != "dm" else 16
-        return f'<rect class="nd{" hub" if hub else ""}" x="{x}" y="{y}" width="{w}" height="{h}" rx="4"/>' + "".join(t)
+def data_uri(path: Path) -> str:
+    mime = {".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".svg": "image/svg+xml", ".webp": "image/webp"}[path.suffix.lower()]
+    return f"data:{mime};base64," + base64.b64encode(path.read_bytes()).decode()
 
-    edge = lambda g, d: f'<path class="rm-ln {g}" d="{d}"/>'
-    lab = lambda x, y, txt, a="middle": f'<text class="el" x="{x}" y="{y}" text-anchor="{a}">{esc(txt)}</text>'
-    svg = ['<svg class="map" viewBox="0 0 1000 400" role="img" aria-label="Схема: кто с кем связан, по степени подтверждённости связи">']
-    svg += [
-        edge("open", "M300 30 L130 70"), lab(60, 36, "ФБК, 2017: «ДАР» и «Градислава» — сеть фондов", "start"),
-        edge("rep", "M410 56 L410 110"), lab(420, 88, "«по поручению» (Сидякин)", "start"),
-        edge("rep", "M520 28 L620 28"), lab(570, 20, "возглавляет"),
-        edge("doc", "M210 130 L300 150"), edge("doc", "M210 240 L300 200"), lab(255, 196, "директора", "middle"), lab(255, 208, "в совете", "middle"),
-        edge("doc", "M520 170 L620 170"), lab(570, 162, "соучредитель"),
-        edge("rep", "M720 56 L720 110"), lab(730, 88, "учредитель по сайту ЦБСТ", "start"),
-        edge("rep", "M410 230 L410 300"), lab(420, 268, "21 передача, по словам фонда", "start"),
-        node(0, 70, 210, 96, [("«ДАР»", "dr"), ("основатель — ООО «ЛЕВИТ»", "dm"), (f"получил {dar_bn} млрд ₽ в 2024", "dm")]),
-        node(0, 200, 210, 80, [("«Градислава»", "dr"), (f"получила {grad_bn} млрд ₽ в 2023", "dm")]),
-        node(300, 0, 220, 56, [("Дмитрий Медведев", "dn"), ("председатель «Единой России»", "dm")]),
-        node(300, 110, 220, 120, [("«Наша Правда»", "dr"), (f"получила {got_bn} млрд ₽ в 2024:", "dm"), (f"{donor_share} % — доноры не названы", "dm"), ("в списке Украины с 01.05.2025", "dm")]),
-        node(620, 0, 200, 56, [("«Единая Россия»", "dr"), ("партия", "dm")]),
-        node(620, 110, 200, 120, [("ЦБСТ", "dr"), ("в списке Украины с 16.08.2025", "dm"), ("по реестру основатели:", "dm"), ("«Наша Правда» и Банк ПСБ", "dm")], hub=True),
-        node(300, 300, 520, 70, [("Войска и гражданские службы", "dn"), ("передачи «Булата» и «Капюшона», июль 2024 — май 2026", "dm")]),
-    ]
-    svg.append("</svg>")
+
+def media_file(media: dict, mid: str) -> Path:
+    m = media[mid]
+    assert m["publish"] == "ok" and m.get("redact") in (None, "none_needed"), mid
+    path = REPO / m["file"]
+    assert path.exists(), f"{mid}: {path} is missing"
+    return path
+
+
+ARMS = [("ground-forces", "сухопутные войска", r"мотострелк|ОМСБР|армия|армии|армей|разведк|разведотряд"),
+        ("airborne-forces", "десантно-штурмовые части", r"десантн|ВДВ|воздушно-десант"),
+        ("spetsnaz-gru", "спецназ", r"спецназ|специального назначения")]
+
+
+def diagram_html(ctx) -> str:
+    """Who is tied to whom, drawn by how well each link is documented: solid, a document shows it; dashed, one party's
+    own word; dotted, an allegation no document shows. Pictures are only those the registry holds with a source."""
+    out = []
+
+    def head(x, y, img, kind):
+        if not img:
+            return 0
+        if kind == "circle":
+            cid = f"clip{x}{y}"
+            out.append(f'<clipPath id="{cid}"><circle cx="{x + 36}" cy="{y + 36}" r="26"/></clipPath>'
+                       f'<image href="{img}" x="{x + 8}" y="{y + 6}" width="56" height="70" preserveAspectRatio="xMidYMin slice" clip-path="url(#{cid})"/>'
+                       f'<circle cx="{x + 36}" cy="{y + 36}" r="26" class="ring"/>')
+        else:
+            out.append(f'<image href="{img}" x="{x + 10}" y="{y + 12}" width="56" height="48" preserveAspectRatio="xMidYMid meet"/>')
+        return 72
+
+    def node(x, y, w, title, sub, body=(), img=None, kind="logo", hub=False, name_class="dr"):
+        h = 20 + (50 if (img or sub) else 22) + 17 * len(body) + 6
+        out.append(f'<rect class="nd{" hub" if hub else ""}" x="{x}" y="{y}" width="{w}" height="{h}" rx="4"/>')
+        off = head(x, y, img, kind)
+        out.append(f'<text class="{name_class}" x="{x + 14 + off}" y="{y + 30}">{esc(title)}</text>')
+        if sub:
+            out.append(f'<text class="dm" x="{x + 14 + off}" y="{y + 50}">{esc(sub)}</text>')
+        yy = y + (78 if (img or sub) else 52)
+        for line in body:
+            out.append(f'<text class="dm" x="{x + 14}" y="{yy}">{esc(line)}</text>')
+            yy += 17
+        return h
+
+    edge = lambda g, d: out.append(f'<path class="rm-ln {g}" d="{d}"/>')
+    lab = lambda x, y, txt, a="middle": out.append(f'<text class="el" x="{x}" y="{y}" text-anchor="{a}">{esc(txt)}</text>')
+
+    A, B, C, D = 0, 320, 700, 1040
+    # links first, so the boxes sit on top of their ends
+    edge("open", "M320 44 C200 44 115 70 115 112"); lab(10, 20, "ФБК, 2017: «ДАР» и «Градислава» — сеть фондов", "start")
+    edge("rep", "M600 44 L700 44"); lab(650, 36, "возглавляет")
+    edge("rep", "M450 100 L450 150"); lab(460, 130, "«по поручению» (Сидякин)", "start")
+    edge("rep", "M830 100 L830 150"); lab(840, 130, "учредитель по сайту ЦБСТ", "start")
+    edge("doc", "M230 150 L320 190"); edge("doc", "M230 290 L320 240"); lab(275, 232, "директора", "middle"); lab(275, 246, "в совете", "middle")
+    edge("doc", "M580 210 L700 210"); lab(640, 202, "соучредитель")
+    edge("rep", "M960 190 L1040 190"); lab(1000, 166, "секретарь"); lab(1000, 179, "совета")
+    edge("rep", "M450 290 L450 370"); lab(460, 335, "21 передача, по словам фонда", "start")
+
+    node(B, 0, 280, "Дмитрий Медведев", "глава «Единой России»", img=ctx["med"], kind="circle", name_class="dn")
+    node(C, 0, 260, "«Единая Россия»", "партия", img=ctx["er"])
+    node(A, 112, 230, "«ДАР»", None, [f"основатель — ООО «ЛЕВИТ»", f"получил {ctx['dar']} млрд ₽ в 2024"])
+    node(A, 250, 230, "«Градислава»", None, [f"получила {ctx['grad']} млрд ₽ в 2023"])
+    node(B, 150, 260, "«Наша Правда»", "фонд", [f"получила {ctx['got']} млрд ₽ в 2024:", f"{ctx['donors']}% — доноры не названы", "в списке Украины с 01.05.2025"], img=ctx["np"])
+    node(C, 150, 260, "ЦБСТ", "центр беспилотных систем", ["по реестру основатели:", "«Наша Правда» и Банк ПСБ", "в списке Украины с 16.08.2025"], img=ctx["cbst"], hub=True)
+    node(D, 150, 250, "Александр Сидякин", "руководитель ЦИК «ЕР»", ["секретарь совета ЦБСТ"], img=ctx["sid"], kind="circle", name_class="dn")
+    # recipients, with the kinds of unit the posts name
+    out.append('<rect class="nd" x="320" y="370" width="640" height="104" rx="4"/>')
+    out.append('<text class="dn" x="334" y="400">Войска и гражданские службы</text>')
+    out.append('<text class="dm" x="334" y="420">передачи «Булата» и «Капюшона»,</text><text class="dm" x="334" y="437">июль 2024 — май 2026</text>')
+    for i, (name, img) in enumerate(ctx["arms"]):
+        x = 960 - 14 - 74 * (len(ctx["arms"]) - i)
+        out.append(f'<g><title>{esc(name)}</title><rect x="{x}" y="386" width="66" height="56" rx="5" class="fr"/>'
+                   f'<image href="{img}" x="{x + 4}" y="390" width="58" height="48" preserveAspectRatio="xMidYMid meet"/></g>')
+    svg = ('<svg class="map" viewBox="0 0 1300 490" role="img" aria-label="Схема: кто с кем связан, по степени подтверждённости связи">'
+           + "".join(out) + "</svg>")
     legend = ('<ul class="rm-legend">'
               f'<li>{ln("doc")} <span class="rm-grade doc">Документ</span> связь показывает документ</li>'
               f'<li>{ln("rep")} <span class="rm-grade rep">Со слов сторон</span> слова одной из сторон</li>'
               f'<li>{ln("open")} <span class="rm-grade open">Версия</span> утверждение, документа нет</li></ul>')
-    return f'<figure class="mapfig"><div class="mapscroll">{"".join(svg)}</div><figcaption>{legend}</figcaption></figure>'
+    names = ", ".join(n for n, _ in ctx["arms"])
+    cap = (f'<p class="note">Эмблемы справа внизу — виды частей, которые названы получателями в постах: {names}; они не показывают, какая часть что получила.{ctx["refs"]} '
+           f'Портреты: Медведев — Kremlin.ru, 2024, CC BY 4.0; Сидякин — Karmaks, 2016, CC BY-SA 4.0 (фото десятилетней давности). Логотипы — с сайтов организаций и из «Википедии». '
+           f'Без картинки остались те, чьих изображений в наших источниках нет.</p>')
+    return f'<figure class="mapfig"><div class="mapscroll">{svg}</div><figcaption>{legend}{cap}</figcaption></figure>'
 
 
 def render(out: Path):
@@ -327,7 +389,15 @@ def render(out: Path):
     timeline = timeline.replace("Twenty-one handovers by date, by product", "Двадцать одна передача по датам и изделиям")
     for en, ru in MONTHS.items():
         timeline = timeline.replace(">" + en + " ", ">" + ru + " ")
-    diagram = diagram_html(rub_bn(fd['2024']['funds_received']), rub_bn(fg['2023']['funds_received']), rub_bn(recv24 * 1000), pct(donor_share))
+    media = {m["id"]: m for m in load("media.json")}
+    recip = " | ".join(d.get("recipient") or "" for d in load("deliveries.json"))
+    arms = [(name, data_uri(REPO / "exhibits" / "images" / "emblems" / f"{fn}.svg")) for fn, name, rx in ARMS if re.search(rx, recip, re.I)]
+    assert arms, "no recipient names a kind of unit"
+    diagram = diagram_html({"med": data_uri(media_file(media, "m0158")), "sid": data_uri(media_file(media, "m0092")),
+                            "er": data_uri(media_file(media, "m0093")), "np": data_uri(media_file(media, "m0002")), "cbst": data_uri(media_file(media, "m0001")),
+                            "arms": arms, "dar": rub_bn(fd["2024"]["funds_received"]), "grad": rub_bn(fg["2023"]["funds_received"]),
+                            "got": rub_bn(recv24 * 1000), "donors": pct(donor_share),
+                            "refs": r("emb_sv", "emb_vdv", "emb_gru", "med_photo", "sid_photo")})
     split_bar = stack_bar([("безымянные доноры", RECEIVED_2024[0][2], "s1"), ("«ДАР» и «Градислава»", RECEIVED_2024[1][2], "s2"),
                            ("то же, второй раз", RECEIVED_2024[2][2], "s3"), ("доход от деятельности", RECEIVED_2024[3][2], "s4")],
                           "Доли поступлений 2024 года по строкам отчётности")
